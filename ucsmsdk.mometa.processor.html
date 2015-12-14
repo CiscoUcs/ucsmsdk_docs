@@ -1,0 +1,1591 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.processor package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.qosclass package" href="ucsmsdk.mometa.qosclass.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.proc package" href="ucsmsdk.mometa.proc.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.processor package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.processor.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-processor-package">
+<h1>ucsmsdk.mometa.processor package<a class="headerlink" href="#ucsmsdk-mometa-processor-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorCore">
+<span id="ucsmsdk-mometa-processor-processorcore-module"></span><h2>ucsmsdk.mometa.processor.ProcessorCore module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorCore" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorCore ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorCore.</code><code class="descname">ProcessorCore</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorCore.html#ProcessorCore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorCore class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorCore.ProcessorCoreConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'rn': 'rn', 'id': 'id', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16610a750&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16610ab10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16610a550&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16610a8d0&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x16610a510&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16610ab90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCore.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorCore.ProcessorCoreConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorCore.</code><code class="descname">ProcessorCoreConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorCore.html#ProcessorCoreConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorCore.ProcessorCoreConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorEnvStats">
+<span id="ucsmsdk-mometa-processor-processorenvstats-module"></span><h2>ucsmsdk.mometa.processor.ProcessorEnvStats module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorEnvStats" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorEnvStats ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorEnvStats.</code><code class="descname">ProcessorEnvStats</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorEnvStats.html#ProcessorEnvStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorEnvStats class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'temperature': 'temperature', 'inputCurrentMax': 'input_current_max', 'sacl': 'sacl', 'temperatureMax': 'temperature_max', 'temperatureAvg': 'temperature_avg', 'thresholded': 'thresholded', 'update': 'update', 'intervals': 'intervals', 'suspect': 'suspect', 'inputCurrentMin': 'input_current_min', 'inputCurrent': 'input_current', 'timeCollected': 'time_collected', 'temperatureMin': 'temperature_min', 'inputCurrentAvg': 'input_current_avg', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1cd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1910&gt;, 'temperature': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1190&gt;, 'input_current_min': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1650&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1ed0&gt;, 'temperature_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a13d0&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1610&gt;, 'update': &lt;ucscoremeta.MoPropertyMeta object at 0x161e5ca10&gt;, 'temperature_max': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1d90&gt;, 'intervals': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1110&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1750&gt;, 'input_current_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1a50&gt;, 'input_current': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1a10&gt;, 'input_current_max': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1710&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1dd0&gt;, 'temperature_min': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1d50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1652a1990&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStats.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorEnvStats.</code><code class="descname">ProcessorEnvStatsConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorEnvStats.html#ProcessorEnvStatsConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_AVG_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_AVG_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_AVG_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_MAX_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_MAX_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_MAX_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_MIN_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_MIN_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_MIN_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.INPUT_CURRENT_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_FALSE">
+<code class="descname">SUSPECT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_NO">
+<code class="descname">SUSPECT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_TRUE">
+<code class="descname">SUSPECT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_YES">
+<code class="descname">SUSPECT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStats.ProcessorEnvStatsConsts.SUSPECT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorEnvStatsHist">
+<span id="ucsmsdk-mometa-processor-processorenvstatshist-module"></span><h2>ucsmsdk.mometa.processor.ProcessorEnvStatsHist module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorEnvStatsHist" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorEnvStatsHist ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorEnvStatsHist.</code><code class="descname">ProcessorEnvStatsHist</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorEnvStatsHist.html#ProcessorEnvStatsHist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorEnvStatsHist class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'temperature': 'temperature', 'rn': 'rn', 'inputCurrentMax': 'input_current_max', 'sacl': 'sacl', 'temperatureMax': 'temperature_max', 'temperatureAvg': 'temperature_avg', 'thresholded': 'thresholded', 'mostRecent': 'most_recent', 'suspect': 'suspect', 'inputCurrentMin': 'input_current_min', 'inputCurrent': 'input_current', 'timeCollected': 'time_collected', 'temperatureMin': 'temperature_min', 'inputCurrentAvg': 'input_current_avg', 'id': 'id', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71590&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570d50&gt;, 'temperature': &lt;ucscoremeta.MoPropertyMeta object at 0x16c5705d0&gt;, 'input_current_min': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71490&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570190&gt;, 'temperature_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570a10&gt;, 'temperature_max': &lt;ucscoremeta.MoPropertyMeta object at 0x16c5703d0&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570250&gt;, 'most_recent': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca711d0&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570950&gt;, 'input_current_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca712d0&gt;, 'input_current': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71410&gt;, 'input_current_max': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71150&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570990&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71a10&gt;, 'temperature_min': &lt;ucscoremeta.MoPropertyMeta object at 0x16c5700d0&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71350&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca71ad0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHist.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorEnvStatsHist.</code><code class="descname">ProcessorEnvStatsHistConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorEnvStatsHist.html#ProcessorEnvStatsHistConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_AVG_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_AVG_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_AVG_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_MAX_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_MAX_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_MAX_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_MIN_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_MIN_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_MIN_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_NOT_APPLICABLE">
+<code class="descname">INPUT_CURRENT_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.INPUT_CURRENT_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_FALSE">
+<code class="descname">MOST_RECENT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_NO">
+<code class="descname">MOST_RECENT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_TRUE">
+<code class="descname">MOST_RECENT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_YES">
+<code class="descname">MOST_RECENT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.MOST_RECENT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_FALSE">
+<code class="descname">SUSPECT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_NO">
+<code class="descname">SUSPECT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_TRUE">
+<code class="descname">SUSPECT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_YES">
+<code class="descname">SUSPECT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorEnvStatsHist.ProcessorEnvStatsHistConsts.SUSPECT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorErrorStats">
+<span id="ucsmsdk-mometa-processor-processorerrorstats-module"></span><h2>ucsmsdk.mometa.processor.ProcessorErrorStats module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorErrorStats" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorErrorStats ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorErrorStats.</code><code class="descname">ProcessorErrorStats</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorErrorStats.html#ProcessorErrorStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorErrorStats class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'status': 'status', 'suspect': 'suspect', 'smiLinkCorrErrors1DayH': 'smi_link_corr_errors1_day_h', 'sparingErrors15Min': 'sparing_errors15_min', 'smiLinkUncorrErrors2Weeks': 'smi_link_uncorr_errors2_weeks', 'smiLinkUncorrErrors2WeeksH': 'smi_link_uncorr_errors2_weeks_h', 'sacl': 'sacl', 'mirroringIntraSockErrors2Weeks': 'mirroring_intra_sock_errors2_weeks', 'mirroringIntraSockErrors1Day': 'mirroring_intra_sock_errors1_day', 'sparingErrors1Hour': 'sparing_errors1_hour', 'sparingErrors1HourH': 'sparing_errors1_hour_h', 'sparingErrors2Weeks': 'sparing_errors2_weeks', 'intervals': 'intervals', 'mirroringInterSockErrors15Min': 'mirroring_inter_sock_errors15_min', 'mirroringInterSockErrors1Day': 'mirroring_inter_sock_errors1_day', 'smiLinkUncorrErrors1Week': 'smi_link_uncorr_errors1_week', 'mirroringInterSockErrors1Hour': 'mirroring_inter_sock_errors1_hour', 'sparingErrors1Day': 'sparing_errors1_day', 'mirroringInterSockErrors2Weeks': 'mirroring_inter_sock_errors2_weeks', 'smiLinkUncorrErrors1HourH': 'smi_link_uncorr_errors1_hour_h', 'mirroringIntraSockErrors1DayH': 'mirroring_intra_sock_errors1_day_h', 'mirroringIntraSockErrors1HourH': 'mirroring_intra_sock_errors1_hour_h', 'mirroringIntraSockErrors2WeeksH': 'mirroring_intra_sock_errors2_weeks_h', 'smiLinkCorrErrors2Weeks': 'smi_link_corr_errors2_weeks', 'mirroringInterSockErrors2WeeksH': 'mirroring_inter_sock_errors2_weeks_h', 'mirroringIntraSockErrors15Min': 'mirroring_intra_sock_errors15_min', 'smiLinkUncorrErrors15MinH': 'smi_link_uncorr_errors15_min_h', 'thresholded': 'thresholded', 'smiLinkCorrErrors1HourH': 'smi_link_corr_errors1_hour_h', 'mirroringInterSockErrors1DayH': 'mirroring_inter_sock_errors1_day_h', 'mirroringInterSockErrors1Week': 'mirroring_inter_sock_errors1_week', 'smiLinkUncorrErrors': 'smi_link_uncorr_errors', 'rn': 'rn', 'mirroringInterSockErrors1WeekH': 'mirroring_inter_sock_errors1_week_h', 'smiLinkUncorrErrors1Hour': 'smi_link_uncorr_errors1_hour', 'smiLinkCorrErrors1WeekH': 'smi_link_corr_errors1_week_h', 'dn': 'dn', 'sparingErrors1WeekH': 'sparing_errors1_week_h', 'smiLinkCorrErrors1Hour': 'smi_link_corr_errors1_hour', 'smiLinkUncorrErrors1Day': 'smi_link_uncorr_errors1_day', 'smiLinkCorrErrors1Week': 'smi_link_corr_errors1_week', 'mirroringIntraSockErrors1Week': 'mirroring_intra_sock_errors1_week', 'smiLinkCorrErrors': 'smi_link_corr_errors', 'sparingErrors1Week': 'sparing_errors1_week', 'update': 'update', 'mirroringInterSockErrors15MinH': 'mirroring_inter_sock_errors15_min_h', 'smiLinkUncorrErrors1WeekH': 'smi_link_uncorr_errors1_week_h', 'sparingErrors15MinH': 'sparing_errors15_min_h', 'smiLinkCorrErrors15MinH': 'smi_link_corr_errors15_min_h', 'mirroringIntraSockErrors': 'mirroring_intra_sock_errors', 'smiLinkCorrErrors15Min': 'smi_link_corr_errors15_min', 'mirroringInterSockErrors': 'mirroring_inter_sock_errors', 'childAction': 'child_action', 'sparingErrors2WeeksH': 'sparing_errors2_weeks_h', 'mirroringIntraSockErrors1Hour': 'mirroring_intra_sock_errors1_hour', 'mirroringIntraSockErrors1WeekH': 'mirroring_intra_sock_errors1_week_h', 'smiLinkUncorrErrors15Min': 'smi_link_uncorr_errors15_min', 'sparingErrors': 'sparing_errors', 'smiLinkCorrErrors2WeeksH': 'smi_link_corr_errors2_weeks_h', 'smiLinkCorrErrors1Day': 'smi_link_corr_errors1_day', 'mirroringIntraSockErrors15MinH': 'mirroring_intra_sock_errors15_min_h', 'smiLinkUncorrErrors1DayH': 'smi_link_uncorr_errors1_day_h', 'timeCollected': 'time_collected', 'sparingErrors1DayH': 'sparing_errors1_day_h', 'mirroringInterSockErrors1HourH': 'mirroring_inter_sock_errors1_hour_h'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'mirroring_inter_sock_errors1_hour': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87af90&gt;, 'smi_link_corr_errors': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81510&gt;, 'mirroring_intra_sock_errors2_weeks_h': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81250&gt;, 'mirroring_inter_sock_errors2_weeks': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87af50&gt;, 'mirroring_intra_sock_errors1_day_h': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81210&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81950&gt;, 'mirroring_inter_sock_errors1_day': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a410&gt;, 'smi_link_corr_errors1_week_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6350&gt;, 'mirroring_intra_sock_errors': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a4d0&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x161f874d0&gt;, 'mirroring_inter_sock_errors1_day_h': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a950&gt;, 'mirroring_inter_sock_errors15_min': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87ab10&gt;, 'intervals': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca67390&gt;, 'smi_link_uncorr_errors1_week_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6310&gt;, 'mirroring_intra_sock_errors1_hour_h': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81390&gt;, 'mirroring_intra_sock_errors15_min_h': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81fd0&gt;, 'smi_link_uncorr_errors15_min_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f63d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca673d0&gt;, 'sparing_errors15_min_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6b50&gt;, 'smi_link_uncorr_errors1_week': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6cd0&gt;, 'smi_link_corr_errors15_min_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6810&gt;, 'smi_link_corr_errors1_hour_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6710&gt;, 'smi_link_corr_errors1_week': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f69d0&gt;, 'sparing_errors': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6dd0&gt;, 'mirroring_intra_sock_errors1_week': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81110&gt;, 'mirroring_inter_sock_errors': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a610&gt;, 'mirroring_intra_sock_errors1_day': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81790&gt;, 'sparing_errors1_hour_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6f10&gt;, 'mirroring_intra_sock_errors1_week_h': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81d10&gt;, 'sparing_errors1_hour': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6550&gt;, 'sparing_errors1_week': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6d90&gt;, 'smi_link_uncorr_errors1_hour_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f60d0&gt;, 'mirroring_inter_sock_errors2_weeks_h': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87ad50&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x161f87110&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81290&gt;, 'smi_link_corr_errors2_weeks_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6a50&gt;, 'sparing_errors15_min': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6c50&gt;, 'mirroring_inter_sock_errors1_hour_h': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a3d0&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15ca67b90&gt;, 'sparing_errors1_day_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6450&gt;, 'mirroring_inter_sock_errors1_week': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a5d0&gt;, 'sparing_errors2_weeks': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6fd0&gt;, 'smi_link_corr_errors2_weeks': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6890&gt;, 'smi_link_corr_errors1_hour': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6c10&gt;, 'smi_link_corr_errors15_min': &lt;ucscoremeta.MoPropertyMeta object at 0x165c81ed0&gt;, 'update': &lt;ucscoremeta.MoPropertyMeta object at 0x161f87350&gt;, 'smi_link_corr_errors1_day': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6e90&gt;, 'smi_link_uncorr_errors15_min': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6090&gt;, 'mirroring_intra_sock_errors1_hour': &lt;ucscoremeta.MoPropertyMeta object at 0x165c812d0&gt;, 'sparing_errors1_day': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6390&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x161f87290&gt;, 'smi_link_uncorr_errors1_hour': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6e10&gt;, 'smi_link_uncorr_errors1_day_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6690&gt;, 'mirroring_inter_sock_errors15_min_h': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a250&gt;, 'mirroring_inter_sock_errors1_week_h': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87a050&gt;, 'smi_link_uncorr_errors': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f65d0&gt;, 'smi_link_uncorr_errors2_weeks_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6ad0&gt;, 'smi_link_uncorr_errors1_day': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6210&gt;, 'sparing_errors2_weeks_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6a10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x161f87e90&gt;, 'mirroring_intra_sock_errors2_weeks': &lt;ucscoremeta.MoPropertyMeta object at 0x165c814d0&gt;, 'mirroring_intra_sock_errors15_min': &lt;ucscoremeta.MoPropertyMeta object at 0x15d87add0&gt;, 'smi_link_corr_errors1_day_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6490&gt;, 'sparing_errors1_week_h': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6990&gt;, 'smi_link_uncorr_errors2_weeks': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6f6110&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStats.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorErrorStats.</code><code class="descname">ProcessorErrorStatsConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorErrorStats.html#ProcessorErrorStatsConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_FALSE">
+<code class="descname">SUSPECT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_NO">
+<code class="descname">SUSPECT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_TRUE">
+<code class="descname">SUSPECT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_YES">
+<code class="descname">SUSPECT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorErrorStats.ProcessorErrorStatsConsts.SUSPECT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorQual">
+<span id="ucsmsdk-mometa-processor-processorqual-module"></span><h2>ucsmsdk.mometa.processor.ProcessorQual module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorQual" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorQual ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorQual.</code><code class="descname">ProcessorQual</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorQual.html#ProcessorQual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorQual class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'model': 'model', 'maxThreads': 'max_threads', 'minProcs': 'min_procs', 'sacl': 'sacl', 'stepping': 'stepping', 'arch': 'arch', 'maxCores': 'max_cores', 'childAction': 'child_action', 'speed': 'speed', 'minThreads': 'min_threads', 'minCores': 'min_cores', 'status': 'status', 'maxProcs': 'max_procs', 'rn': 'rn'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5ed0&gt;, 'max_procs': &lt;ucscoremeta.MoPropertyMeta object at 0x16442aa90&gt;, 'max_threads': &lt;ucscoremeta.MoPropertyMeta object at 0x16442abd0&gt;, 'min_procs': &lt;ucscoremeta.MoPropertyMeta object at 0x16442a350&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16689c3d0&gt;, 'max_cores': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5450&gt;, 'stepping': &lt;ucscoremeta.MoPropertyMeta object at 0x16689c550&gt;, 'min_cores': &lt;ucscoremeta.MoPropertyMeta object at 0x16442a850&gt;, 'arch': &lt;ucscoremeta.MoPropertyMeta object at 0x160e4ded0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16689c310&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x160e4db90&gt;, 'min_threads': &lt;ucscoremeta.MoPropertyMeta object at 0x16689ce90&gt;, 'speed': &lt;ucscoremeta.MoPropertyMeta object at 0x16689cfd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16689c290&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x16689c390&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQual.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorQual.</code><code class="descname">ProcessorQualConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorQual.html#ProcessorQualConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_ANY">
+<code class="descname">ARCH_ANY</code><em class="property"> = 'any'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_ANY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_DUAL_CORE_OPTERON">
+<code class="descname">ARCH_DUAL_CORE_OPTERON</code><em class="property"> = 'Dual-Core_Opteron'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_DUAL_CORE_OPTERON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_INTEL_P4_C">
+<code class="descname">ARCH_INTEL_P4_C</code><em class="property"> = 'Intel_P4_C'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_INTEL_P4_C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_OPTERON">
+<code class="descname">ARCH_OPTERON</code><em class="property"> = 'Opteron'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_OPTERON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_PENTIUM_4">
+<code class="descname">ARCH_PENTIUM_4</code><em class="property"> = 'Pentium_4'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_PENTIUM_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_TURION_64">
+<code class="descname">ARCH_TURION_64</code><em class="property"> = 'Turion_64'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_TURION_64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_XEON">
+<code class="descname">ARCH_XEON</code><em class="property"> = 'Xeon'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_XEON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_XEON_MP">
+<code class="descname">ARCH_XEON_MP</code><em class="property"> = 'Xeon_MP'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.ARCH_XEON_MP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MAX_CORES_UNSPECIFIED">
+<code class="descname">MAX_CORES_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MAX_CORES_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MAX_PROCS_UNSPECIFIED">
+<code class="descname">MAX_PROCS_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MAX_PROCS_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MAX_THREADS_UNSPECIFIED">
+<code class="descname">MAX_THREADS_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MAX_THREADS_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MIN_CORES_UNSPECIFIED">
+<code class="descname">MIN_CORES_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MIN_CORES_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MIN_PROCS_UNSPECIFIED">
+<code class="descname">MIN_PROCS_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MIN_PROCS_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MIN_THREADS_UNSPECIFIED">
+<code class="descname">MIN_THREADS_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.MIN_THREADS_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.SPEED_UNSPECIFIED">
+<code class="descname">SPEED_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.SPEED_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.STEPPING_UNSPECIFIED">
+<code class="descname">STEPPING_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorQual.ProcessorQualConsts.STEPPING_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorRuntime">
+<span id="ucsmsdk-mometa-processor-processorruntime-module"></span><h2>ucsmsdk.mometa.processor.ProcessorRuntime module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorRuntime" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorRuntime ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorRuntime.</code><code class="descname">ProcessorRuntime</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorRuntime.html#ProcessorRuntime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorRuntime class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'load': 'load', 'sacl': 'sacl', 'update': 'update', 'intervals': 'intervals', 'loadMin': 'load_min', 'loadMax': 'load_max', 'childAction': 'child_action', 'status': 'status', 'uptime': 'uptime', 'thresholded': 'thresholded', 'loadAvg': 'load_avg', 'suspect': 'suspect', 'timeCollected': 'time_collected', 'rn': 'rn'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x166a38750&gt;, 'load': &lt;ucscoremeta.MoPropertyMeta object at 0x166a38490&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x166058150&gt;, 'update': &lt;ucscoremeta.MoPropertyMeta object at 0x166058a50&gt;, 'intervals': &lt;ucscoremeta.MoPropertyMeta object at 0x166a38450&gt;, 'load_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x166058190&gt;, 'load_min': &lt;ucscoremeta.MoPropertyMeta object at 0x166058b50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x166a38350&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x166058710&gt;, 'uptime': &lt;ucscoremeta.MoPropertyMeta object at 0x166058050&gt;, 'load_max': &lt;ucscoremeta.MoPropertyMeta object at 0x166058610&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x166058950&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x1660582d0&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x1660583d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1660589d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntime.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorRuntime.</code><code class="descname">ProcessorRuntimeConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorRuntime.html#ProcessorRuntimeConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_FALSE">
+<code class="descname">SUSPECT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_NO">
+<code class="descname">SUSPECT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_TRUE">
+<code class="descname">SUSPECT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_YES">
+<code class="descname">SUSPECT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntime.ProcessorRuntimeConsts.SUSPECT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorRuntimeHist">
+<span id="ucsmsdk-mometa-processor-processorruntimehist-module"></span><h2>ucsmsdk.mometa.processor.ProcessorRuntimeHist module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorRuntimeHist" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorRuntimeHist ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorRuntimeHist.</code><code class="descname">ProcessorRuntimeHist</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorRuntimeHist.html#ProcessorRuntimeHist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorRuntimeHist class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'load': 'load', 'sacl': 'sacl', 'mostRecent': 'most_recent', 'loadAvg': 'load_avg', 'loadMin': 'load_min', 'loadMax': 'load_max', 'id': 'id', 'childAction': 'child_action', 'thresholded': 'thresholded', 'status': 'status', 'timeCollected': 'time_collected', 'suspect': 'suspect', 'rn': 'rn'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14f90&gt;, 'load': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14a50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14e90&gt;, 'load_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14210&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e5fd0&gt;, 'load_min': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14410&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14e10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed148d0&gt;, 'load_max': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14310&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed143d0&gt;, 'most_recent': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14610&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14e50&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1bed14b10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHist.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorRuntimeHist.</code><code class="descname">ProcessorRuntimeHistConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorRuntimeHist.html#ProcessorRuntimeHistConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_FALSE">
+<code class="descname">MOST_RECENT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_NO">
+<code class="descname">MOST_RECENT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_TRUE">
+<code class="descname">MOST_RECENT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_YES">
+<code class="descname">MOST_RECENT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.MOST_RECENT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_FALSE">
+<code class="descname">SUSPECT_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_NO">
+<code class="descname">SUSPECT_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_TRUE">
+<code class="descname">SUSPECT_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_YES">
+<code class="descname">SUSPECT_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorRuntimeHist.ProcessorRuntimeHistConsts.SUSPECT_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorThread">
+<span id="ucsmsdk-mometa-processor-processorthread-module"></span><h2>ucsmsdk.mometa.processor.ProcessorThread module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorThread" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorThread ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorThread.</code><code class="descname">ProcessorThread</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorThread.html#ProcessorThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorThread class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorThread.ProcessorThreadConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'rn': 'rn', 'id': 'id', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1648563d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x164856410&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x164856e50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x164856810&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x164856e10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThread.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorThread.ProcessorThreadConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorThread.</code><code class="descname">ProcessorThreadConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorThread.html#ProcessorThreadConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorThread.ProcessorThreadConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorUnit">
+<span id="ucsmsdk-mometa-processor-processorunit-module"></span><h2>ucsmsdk.mometa.processor.ProcessorUnit module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorUnit" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorUnit ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorUnit.</code><code class="descname">ProcessorUnit</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorUnit.html#ProcessorUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorUnit class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'status': 'status', 'operState': 'oper_state', 'presence': 'presence', 'sacl': 'sacl', 'thermal': 'thermal', 'operability': 'operability', 'stepping': 'stepping', 'serial': 'serial', 'speed': 'speed', 'id': 'id', 'perf': 'perf', 'socketDesignation': 'socket_designation', 'rn': 'rn', 'locationDn': 'location_dn', 'revision': 'revision', 'dn': 'dn', 'vendor': 'vendor', 'power': 'power', 'visibility': 'visibility', 'operQualifierReason': 'oper_qualifier_reason', 'threads': 'threads', 'arch': 'arch', 'childAction': 'child_action', 'coresEnabled': 'cores_enabled', 'cores': 'cores', 'model': 'model', 'voltage': 'voltage'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2a50&gt;, 'presence': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2850&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2410&gt;, 'thermal': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb28d0&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2590&gt;, 'operability': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2710&gt;, 'stepping': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2310&gt;, 'serial': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2110&gt;, 'speed': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2790&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659d10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659610&gt;, 'oper_qualifier_reason': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659290&gt;, 'location_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659a10&gt;, 'cores_enabled': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659b50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2690&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2d50&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659e50&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2cd0&gt;, 'power': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2a10&gt;, 'visibility': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2190&gt;, 'threads': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2150&gt;, 'cores': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659250&gt;, 'arch': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659550&gt;, 'perf': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2b90&gt;, 'socket_designation': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2990&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659f10&gt;, 'voltage': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2950&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnit.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorUnit.</code><code class="descname">ProcessorUnitConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorUnit.html#ProcessorUnitConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_ANY">
+<code class="descname">ARCH_ANY</code><em class="property"> = 'any'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_ANY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_DUAL_CORE_OPTERON">
+<code class="descname">ARCH_DUAL_CORE_OPTERON</code><em class="property"> = 'Dual-Core_Opteron'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_DUAL_CORE_OPTERON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_INTEL_P4_C">
+<code class="descname">ARCH_INTEL_P4_C</code><em class="property"> = 'Intel_P4_C'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_INTEL_P4_C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_OPTERON">
+<code class="descname">ARCH_OPTERON</code><em class="property"> = 'Opteron'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_OPTERON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_PENTIUM_4">
+<code class="descname">ARCH_PENTIUM_4</code><em class="property"> = 'Pentium_4'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_PENTIUM_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_TURION_64">
+<code class="descname">ARCH_TURION_64</code><em class="property"> = 'Turion_64'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_TURION_64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_XEON">
+<code class="descname">ARCH_XEON</code><em class="property"> = 'Xeon'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_XEON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_XEON_MP">
+<code class="descname">ARCH_XEON_MP</code><em class="property"> = 'Xeon_MP'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.ARCH_XEON_MP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.CORES_ENABLED_UNSPECIFIED">
+<code class="descname">CORES_ENABLED_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.CORES_ENABLED_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.CORES_UNSPECIFIED">
+<code class="descname">CORES_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.CORES_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_ACCESSIBILITY_PROBLEM">
+<code class="descname">OPERABILITY_ACCESSIBILITY_PROBLEM</code><em class="property"> = 'accessibility-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_ACCESSIBILITY_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_AUTO_UPGRADE">
+<code class="descname">OPERABILITY_AUTO_UPGRADE</code><em class="property"> = 'auto-upgrade'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_AUTO_UPGRADE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_BIOS_POST_TIMEOUT">
+<code class="descname">OPERABILITY_BIOS_POST_TIMEOUT</code><em class="property"> = 'bios-post-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_BIOS_POST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_CHASSIS_LIMIT_EXCEEDED">
+<code class="descname">OPERABILITY_CHASSIS_LIMIT_EXCEEDED</code><em class="property"> = 'chassis-limit-exceeded'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_CHASSIS_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_CONFIG">
+<code class="descname">OPERABILITY_CONFIG</code><em class="property"> = 'config'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DECOMISSIONING">
+<code class="descname">OPERABILITY_DECOMISSIONING</code><em class="property"> = 'decomissioning'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DECOMISSIONING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DEGRADED">
+<code class="descname">OPERABILITY_DEGRADED</code><em class="property"> = 'degraded'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DEGRADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DISABLED">
+<code class="descname">OPERABILITY_DISABLED</code><em class="property"> = 'disabled'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DISCOVERY">
+<code class="descname">OPERABILITY_DISCOVERY</code><em class="property"> = 'discovery'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DISCOVERY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DISCOVERY_FAILED">
+<code class="descname">OPERABILITY_DISCOVERY_FAILED</code><em class="property"> = 'discovery-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_DISCOVERY_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_EQUIPMENT_PROBLEM">
+<code class="descname">OPERABILITY_EQUIPMENT_PROBLEM</code><em class="property"> = 'equipment-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_EQUIPMENT_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_FABRIC_CONN_PROBLEM">
+<code class="descname">OPERABILITY_FABRIC_CONN_PROBLEM</code><em class="property"> = 'fabric-conn-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_FABRIC_CONN_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_FABRIC_UNSUPPORTED_CONN">
+<code class="descname">OPERABILITY_FABRIC_UNSUPPORTED_CONN</code><em class="property"> = 'fabric-unsupported-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_FABRIC_UNSUPPORTED_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_IDENTIFY">
+<code class="descname">OPERABILITY_IDENTIFY</code><em class="property"> = 'identify'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_IDENTIFY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_IDENTITY_UNESTABLISHABLE">
+<code class="descname">OPERABILITY_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_INOPERABLE">
+<code class="descname">OPERABILITY_INOPERABLE</code><em class="property"> = 'inoperable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_INOPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_LINK_ACTIVATE_BLOCKED">
+<code class="descname">OPERABILITY_LINK_ACTIVATE_BLOCKED</code><em class="property"> = 'link-activate-blocked'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_LINK_ACTIVATE_BLOCKED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_MALFORMED_FRU">
+<code class="descname">OPERABILITY_MALFORMED_FRU</code><em class="property"> = 'malformed-fru'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_MALFORMED_FRU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_NOT_SUPPORTED">
+<code class="descname">OPERABILITY_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_OPERABLE">
+<code class="descname">OPERABILITY_OPERABLE</code><em class="property"> = 'operable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_OPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_PEER_COMM_PROBLEM">
+<code class="descname">OPERABILITY_PEER_COMM_PROBLEM</code><em class="property"> = 'peer-comm-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_PEER_COMM_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_PERFORMANCE_PROBLEM">
+<code class="descname">OPERABILITY_PERFORMANCE_PROBLEM</code><em class="property"> = 'performance-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_PERFORMANCE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_POST_FAILURE">
+<code class="descname">OPERABILITY_POST_FAILURE</code><em class="property"> = 'post-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_POST_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_POWERED_OFF">
+<code class="descname">OPERABILITY_POWERED_OFF</code><em class="property"> = 'powered-off'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_POWERED_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_POWER_PROBLEM">
+<code class="descname">OPERABILITY_POWER_PROBLEM</code><em class="property"> = 'power-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_POWER_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_REMOVED">
+<code class="descname">OPERABILITY_REMOVED</code><em class="property"> = 'removed'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_REMOVED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_THERMAL_PROBLEM">
+<code class="descname">OPERABILITY_THERMAL_PROBLEM</code><em class="property"> = 'thermal-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_THERMAL_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_UNKNOWN">
+<code class="descname">OPERABILITY_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_UPGRADE_PROBLEM">
+<code class="descname">OPERABILITY_UPGRADE_PROBLEM</code><em class="property"> = 'upgrade-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_UPGRADE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_VOLTAGE_PROBLEM">
+<code class="descname">OPERABILITY_VOLTAGE_PROBLEM</code><em class="property"> = 'voltage-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPERABILITY_VOLTAGE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_ACCESSIBILITY_PROBLEM">
+<code class="descname">OPER_STATE_ACCESSIBILITY_PROBLEM</code><em class="property"> = 'accessibility-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_ACCESSIBILITY_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_AUTO_UPGRADE">
+<code class="descname">OPER_STATE_AUTO_UPGRADE</code><em class="property"> = 'auto-upgrade'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_AUTO_UPGRADE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_BIOS_POST_TIMEOUT">
+<code class="descname">OPER_STATE_BIOS_POST_TIMEOUT</code><em class="property"> = 'bios-post-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_BIOS_POST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_CHASSIS_LIMIT_EXCEEDED">
+<code class="descname">OPER_STATE_CHASSIS_LIMIT_EXCEEDED</code><em class="property"> = 'chassis-limit-exceeded'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_CHASSIS_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_CONFIG">
+<code class="descname">OPER_STATE_CONFIG</code><em class="property"> = 'config'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DECOMISSIONING">
+<code class="descname">OPER_STATE_DECOMISSIONING</code><em class="property"> = 'decomissioning'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DECOMISSIONING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DEGRADED">
+<code class="descname">OPER_STATE_DEGRADED</code><em class="property"> = 'degraded'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DEGRADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DISABLED">
+<code class="descname">OPER_STATE_DISABLED</code><em class="property"> = 'disabled'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DISCOVERY">
+<code class="descname">OPER_STATE_DISCOVERY</code><em class="property"> = 'discovery'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DISCOVERY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DISCOVERY_FAILED">
+<code class="descname">OPER_STATE_DISCOVERY_FAILED</code><em class="property"> = 'discovery-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_DISCOVERY_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_EQUIPMENT_PROBLEM">
+<code class="descname">OPER_STATE_EQUIPMENT_PROBLEM</code><em class="property"> = 'equipment-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_EQUIPMENT_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_FABRIC_CONN_PROBLEM">
+<code class="descname">OPER_STATE_FABRIC_CONN_PROBLEM</code><em class="property"> = 'fabric-conn-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_FABRIC_CONN_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_FABRIC_UNSUPPORTED_CONN">
+<code class="descname">OPER_STATE_FABRIC_UNSUPPORTED_CONN</code><em class="property"> = 'fabric-unsupported-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_FABRIC_UNSUPPORTED_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_IDENTIFY">
+<code class="descname">OPER_STATE_IDENTIFY</code><em class="property"> = 'identify'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_IDENTIFY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_IDENTITY_UNESTABLISHABLE">
+<code class="descname">OPER_STATE_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_INOPERABLE">
+<code class="descname">OPER_STATE_INOPERABLE</code><em class="property"> = 'inoperable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_INOPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_LINK_ACTIVATE_BLOCKED">
+<code class="descname">OPER_STATE_LINK_ACTIVATE_BLOCKED</code><em class="property"> = 'link-activate-blocked'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_LINK_ACTIVATE_BLOCKED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_MALFORMED_FRU">
+<code class="descname">OPER_STATE_MALFORMED_FRU</code><em class="property"> = 'malformed-fru'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_MALFORMED_FRU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_NOT_SUPPORTED">
+<code class="descname">OPER_STATE_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_OPERABLE">
+<code class="descname">OPER_STATE_OPERABLE</code><em class="property"> = 'operable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_OPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_PEER_COMM_PROBLEM">
+<code class="descname">OPER_STATE_PEER_COMM_PROBLEM</code><em class="property"> = 'peer-comm-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_PEER_COMM_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_PERFORMANCE_PROBLEM">
+<code class="descname">OPER_STATE_PERFORMANCE_PROBLEM</code><em class="property"> = 'performance-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_PERFORMANCE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_POST_FAILURE">
+<code class="descname">OPER_STATE_POST_FAILURE</code><em class="property"> = 'post-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_POST_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_POWERED_OFF">
+<code class="descname">OPER_STATE_POWERED_OFF</code><em class="property"> = 'powered-off'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_POWERED_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_POWER_PROBLEM">
+<code class="descname">OPER_STATE_POWER_PROBLEM</code><em class="property"> = 'power-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_POWER_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_REMOVED">
+<code class="descname">OPER_STATE_REMOVED</code><em class="property"> = 'removed'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_REMOVED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_THERMAL_PROBLEM">
+<code class="descname">OPER_STATE_THERMAL_PROBLEM</code><em class="property"> = 'thermal-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_THERMAL_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_UNKNOWN">
+<code class="descname">OPER_STATE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_UPGRADE_PROBLEM">
+<code class="descname">OPER_STATE_UPGRADE_PROBLEM</code><em class="property"> = 'upgrade-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_UPGRADE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_VOLTAGE_PROBLEM">
+<code class="descname">OPER_STATE_VOLTAGE_PROBLEM</code><em class="property"> = 'voltage-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.OPER_STATE_VOLTAGE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_LOWER_CRITICAL">
+<code class="descname">PERF_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_LOWER_NON_CRITICAL">
+<code class="descname">PERF_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_LOWER_NON_RECOVERABLE">
+<code class="descname">PERF_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_NOT_SUPPORTED">
+<code class="descname">PERF_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_OK">
+<code class="descname">PERF_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UNKNOWN">
+<code class="descname">PERF_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UPPER_CRITICAL">
+<code class="descname">PERF_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UPPER_NON_CRITICAL">
+<code class="descname">PERF_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UPPER_NON_RECOVERABLE">
+<code class="descname">PERF_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PERF_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_DEGRADED">
+<code class="descname">POWER_DEGRADED</code><em class="property"> = 'degraded'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_DEGRADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_ERROR">
+<code class="descname">POWER_ERROR</code><em class="property"> = 'error'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_FAILED">
+<code class="descname">POWER_FAILED</code><em class="property"> = 'failed'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_NOT_SUPPORTED">
+<code class="descname">POWER_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OFF">
+<code class="descname">POWER_OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OFFDUTY">
+<code class="descname">POWER_OFFDUTY</code><em class="property"> = 'offduty'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OFFDUTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OFFLINE">
+<code class="descname">POWER_OFFLINE</code><em class="property"> = 'offline'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OFFLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OK">
+<code class="descname">POWER_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_ON">
+<code class="descname">POWER_ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_ONLINE">
+<code class="descname">POWER_ONLINE</code><em class="property"> = 'online'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_ONLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_POWER_SAVE">
+<code class="descname">POWER_POWER_SAVE</code><em class="property"> = 'power-save'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_POWER_SAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_TEST">
+<code class="descname">POWER_TEST</code><em class="property"> = 'test'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_TEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_UNKNOWN">
+<code class="descname">POWER_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.POWER_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EMPTY">
+<code class="descname">PRESENCE_EMPTY</code><em class="property"> = 'empty'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EMPTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED">
+<code class="descname">PRESENCE_EQUIPPED</code><em class="property"> = 'equipped'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_DEPRECATED">
+<code class="descname">PRESENCE_EQUIPPED_DEPRECATED</code><em class="property"> = 'equipped-deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE">
+<code class="descname">PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'equipped-identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_NOT_PRIMARY">
+<code class="descname">PRESENCE_EQUIPPED_NOT_PRIMARY</code><em class="property"> = 'equipped-not-primary'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_NOT_PRIMARY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_SLAVE">
+<code class="descname">PRESENCE_EQUIPPED_SLAVE</code><em class="property"> = 'equipped-slave'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_SLAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_UNSUPPORTED">
+<code class="descname">PRESENCE_EQUIPPED_UNSUPPORTED</code><em class="property"> = 'equipped-unsupported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_UNSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_WITH_MALFORMED_FRU">
+<code class="descname">PRESENCE_EQUIPPED_WITH_MALFORMED_FRU</code><em class="property"> = 'equipped-with-malformed-fru'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_EQUIPPED_WITH_MALFORMED_FRU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_INACCESSIBLE">
+<code class="descname">PRESENCE_INACCESSIBLE</code><em class="property"> = 'inaccessible'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_INACCESSIBLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISMATCH">
+<code class="descname">PRESENCE_MISMATCH</code><em class="property"> = 'mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE">
+<code class="descname">PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'mismatch-identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISMATCH_SLAVE">
+<code class="descname">PRESENCE_MISMATCH_SLAVE</code><em class="property"> = 'mismatch-slave'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISMATCH_SLAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISSING">
+<code class="descname">PRESENCE_MISSING</code><em class="property"> = 'missing'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISSING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISSING_SLAVE">
+<code class="descname">PRESENCE_MISSING_SLAVE</code><em class="property"> = 'missing-slave'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_MISSING_SLAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_NOT_SUPPORTED">
+<code class="descname">PRESENCE_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_UNAUTHORIZED">
+<code class="descname">PRESENCE_UNAUTHORIZED</code><em class="property"> = 'unauthorized'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_UNAUTHORIZED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_UNKNOWN">
+<code class="descname">PRESENCE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.PRESENCE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.SPEED_UNSPECIFIED">
+<code class="descname">SPEED_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.SPEED_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.STEPPING_UNSPECIFIED">
+<code class="descname">STEPPING_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.STEPPING_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_LOWER_CRITICAL">
+<code class="descname">THERMAL_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_LOWER_NON_CRITICAL">
+<code class="descname">THERMAL_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_LOWER_NON_RECOVERABLE">
+<code class="descname">THERMAL_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_NOT_SUPPORTED">
+<code class="descname">THERMAL_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_OK">
+<code class="descname">THERMAL_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UNKNOWN">
+<code class="descname">THERMAL_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UPPER_CRITICAL">
+<code class="descname">THERMAL_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UPPER_NON_CRITICAL">
+<code class="descname">THERMAL_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UPPER_NON_RECOVERABLE">
+<code class="descname">THERMAL_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THERMAL_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THREADS_UNSPECIFIED">
+<code class="descname">THREADS_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.THREADS_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VISIBILITY_NO">
+<code class="descname">VISIBILITY_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VISIBILITY_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VISIBILITY_UNKNOWN">
+<code class="descname">VISIBILITY_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VISIBILITY_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VISIBILITY_YES">
+<code class="descname">VISIBILITY_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VISIBILITY_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_LOWER_CRITICAL">
+<code class="descname">VOLTAGE_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_LOWER_NON_CRITICAL">
+<code class="descname">VOLTAGE_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_LOWER_NON_RECOVERABLE">
+<code class="descname">VOLTAGE_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_NOT_SUPPORTED">
+<code class="descname">VOLTAGE_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_OK">
+<code class="descname">VOLTAGE_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UNKNOWN">
+<code class="descname">VOLTAGE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UPPER_CRITICAL">
+<code class="descname">VOLTAGE_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UPPER_NON_CRITICAL">
+<code class="descname">VOLTAGE_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UPPER_NON_RECOVERABLE">
+<code class="descname">VOLTAGE_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnit.ProcessorUnitConsts.VOLTAGE_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor.ProcessorUnitAssocCtx">
+<span id="ucsmsdk-mometa-processor-processorunitassocctx-module"></span><h2>ucsmsdk.mometa.processor.ProcessorUnitAssocCtx module<a class="headerlink" href="#module-ucsmsdk.mometa.processor.ProcessorUnitAssocCtx" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ProcessorUnitAssocCtx ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.</code><code class="descname">ProcessorUnitAssocCtx</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorUnitAssocCtx.html#ProcessorUnitAssocCtx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is ProcessorUnitAssocCtx class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtxConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'stepping': 'stepping', 'rn': 'rn', 'fruCapDn': 'fru_cap_dn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1b250&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1bf50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1bad0&gt;, 'stepping': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1bc10&gt;, 'fru_cap_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1bc50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1bc90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x168c1b850&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtx.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtxConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.</code><code class="descname">ProcessorUnitAssocCtxConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/processor/ProcessorUnitAssocCtx.html#ProcessorUnitAssocCtxConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtxConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtxConsts.STEPPING_UNSPECIFIED">
+<code class="descname">STEPPING_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.processor.ProcessorUnitAssocCtx.ProcessorUnitAssocCtxConsts.STEPPING_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.processor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.processor" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.qosclass.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.qosclass package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.proc.html" class="btn btn-neutral" title="ucsmsdk.mometa.proc package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

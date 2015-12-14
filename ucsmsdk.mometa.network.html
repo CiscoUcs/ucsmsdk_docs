@@ -1,0 +1,870 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.network package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.nfs package" href="ucsmsdk.mometa.nfs.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.mgmt package" href="ucsmsdk.mometa.mgmt.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.network package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.network.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-network-package">
+<h1>ucsmsdk.mometa.network package<a class="headerlink" href="#ucsmsdk-mometa-network-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkElement">
+<span id="ucsmsdk-mometa-network-networkelement-module"></span><h2>ucsmsdk.mometa.network.NetworkElement module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkElement" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkElement ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElement">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkElement.</code><code class="descname">NetworkElement</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkElement.html#NetworkElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkElement class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElement.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElement.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElement.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElement.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElement.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElement.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElement.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'inbandIfIp': 'inband_if_ip', 'oobIfGw': 'oob_if_gw', 'operEvacState': 'oper_evac_state', 'minActiveFan': 'min_active_fan', 'totalMemory': 'total_memory', 'thermal': 'thermal', 'operability': 'operability', 'serial': 'serial', 'id': 'id', 'oobIfIp': 'oob_if_ip', 'oobIfMac': 'oob_if_mac', 'diffMemory': 'diff_memory', 'sacl': 'sacl', 'rn': 'rn', 'inbandIfVnet': 'inband_if_vnet', 'revision': 'revision', 'dn': 'dn', 'vendor': 'vendor', 'adminEvacState': 'admin_evac_state', 'oobIfMask': 'oob_if_mask', 'forceEvac': 'force_evac', 'expectedMemory': 'expected_memory', 'childAction': 'child_action', 'shutdownFanRemoveal': 'shutdown_fan_removeal', 'fltAggr': 'flt_aggr', 'inbandIfGw': 'inband_if_gw', 'status': 'status', 'inventoryStatus': 'inventory_status', 'model': 'model', 'inbandIfMask': 'inband_if_mask', 'adminInbandIfState': 'admin_inband_if_state'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElement.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElement.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x157fadc50&gt;, 'force_evac': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbc27d0&gt;, 'total_memory': &lt;ucscoremeta.MoPropertyMeta object at 0x157fad690&gt;, 'thermal': &lt;ucscoremeta.MoPropertyMeta object at 0x157fad410&gt;, 'inband_if_vnet': &lt;ucscoremeta.MoPropertyMeta object at 0x15fb9f490&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1598c03d0&gt;, 'min_active_fan': &lt;ucscoremeta.MoPropertyMeta object at 0x15fb9ffd0&gt;, 'inband_if_ip': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbc2610&gt;, 'inband_if_mask': &lt;ucscoremeta.MoPropertyMeta object at 0x15fb9f150&gt;, 'operability': &lt;ucscoremeta.MoPropertyMeta object at 0x15c9854d0&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x157fad7d0&gt;, 'serial': &lt;ucscoremeta.MoPropertyMeta object at 0x1598c0450&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbc2650&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x159e52e10&gt;, 'admin_evac_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15a58f7d0&gt;, 'diff_memory': &lt;ucscoremeta.MoPropertyMeta object at 0x159e526d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15c985c90&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x15c985d10&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x159e52610&gt;, 'oob_if_ip': &lt;ucscoremeta.MoPropertyMeta object at 0x15c985810&gt;, 'oob_if_mac': &lt;ucscoremeta.MoPropertyMeta object at 0x15c985d90&gt;, 'inventory_status': &lt;ucscoremeta.MoPropertyMeta object at 0x15fb9fbd0&gt;, 'flt_aggr': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbc2310&gt;, 'oper_evac_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15c985d50&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x15fb9f0d0&gt;, 'admin_inband_if_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15a81b510&gt;, 'inband_if_gw': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbc2750&gt;, 'expected_memory': &lt;ucscoremeta.MoPropertyMeta object at 0x159e52b50&gt;, 'oob_if_gw': &lt;ucscoremeta.MoPropertyMeta object at 0x15c963490&gt;, 'oob_if_mask': &lt;ucscoremeta.MoPropertyMeta object at 0x15c985e10&gt;, 'shutdown_fan_removeal': &lt;ucscoremeta.MoPropertyMeta object at 0x157fadbd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElement.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkElement.</code><code class="descname">NetworkElementConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkElement.html#NetworkElementConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_EVAC_STATE_DRAIN">
+<code class="descname">ADMIN_EVAC_STATE_DRAIN</code><em class="property"> = 'drain'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_EVAC_STATE_DRAIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_EVAC_STATE_FILL">
+<code class="descname">ADMIN_EVAC_STATE_FILL</code><em class="property"> = 'fill'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_EVAC_STATE_FILL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_EVAC_STATE_UNKNOWN">
+<code class="descname">ADMIN_EVAC_STATE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_EVAC_STATE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_INBAND_IF_STATE_DISABLE">
+<code class="descname">ADMIN_INBAND_IF_STATE_DISABLE</code><em class="property"> = 'disable'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_INBAND_IF_STATE_DISABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_INBAND_IF_STATE_ENABLE">
+<code class="descname">ADMIN_INBAND_IF_STATE_ENABLE</code><em class="property"> = 'enable'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ADMIN_INBAND_IF_STATE_ENABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_FALSE">
+<code class="descname">FORCE_EVAC_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_NO">
+<code class="descname">FORCE_EVAC_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_TRUE">
+<code class="descname">FORCE_EVAC_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_YES">
+<code class="descname">FORCE_EVAC_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.FORCE_EVAC_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ID_A">
+<code class="descname">ID_A</code><em class="property"> = 'A'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ID_A" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ID_B">
+<code class="descname">ID_B</code><em class="property"> = 'B'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ID_B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ID_NONE">
+<code class="descname">ID_NONE</code><em class="property"> = 'NONE'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.ID_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_DEPRECATED">
+<code class="descname">OPERABILITY_DEPRECATED</code><em class="property"> = 'deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_INOPERABLE">
+<code class="descname">OPERABILITY_INOPERABLE</code><em class="property"> = 'inoperable'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_INOPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_OPERABLE">
+<code class="descname">OPERABILITY_OPERABLE</code><em class="property"> = 'operable'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_OPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_REMOVED">
+<code class="descname">OPERABILITY_REMOVED</code><em class="property"> = 'removed'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_REMOVED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_UNKNOWN">
+<code class="descname">OPERABILITY_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPERABILITY_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPER_EVAC_STATE_DRAIN">
+<code class="descname">OPER_EVAC_STATE_DRAIN</code><em class="property"> = 'drain'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPER_EVAC_STATE_DRAIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPER_EVAC_STATE_FILL">
+<code class="descname">OPER_EVAC_STATE_FILL</code><em class="property"> = 'fill'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPER_EVAC_STATE_FILL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPER_EVAC_STATE_UNKNOWN">
+<code class="descname">OPER_EVAC_STATE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.OPER_EVAC_STATE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_FALSE">
+<code class="descname">SHUTDOWN_FAN_REMOVEAL_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_NO">
+<code class="descname">SHUTDOWN_FAN_REMOVEAL_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_TRUE">
+<code class="descname">SHUTDOWN_FAN_REMOVEAL_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_YES">
+<code class="descname">SHUTDOWN_FAN_REMOVEAL_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.SHUTDOWN_FAN_REMOVEAL_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_LOWER_CRITICAL">
+<code class="descname">THERMAL_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_LOWER_NON_CRITICAL">
+<code class="descname">THERMAL_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_LOWER_NON_RECOVERABLE">
+<code class="descname">THERMAL_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_NOT_SUPPORTED">
+<code class="descname">THERMAL_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_OK">
+<code class="descname">THERMAL_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UNKNOWN">
+<code class="descname">THERMAL_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UPPER_CRITICAL">
+<code class="descname">THERMAL_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UPPER_NON_CRITICAL">
+<code class="descname">THERMAL_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UPPER_NON_RECOVERABLE">
+<code class="descname">THERMAL_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkElement.NetworkElementConsts.THERMAL_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkIfStats">
+<span id="ucsmsdk-mometa-network-networkifstats-module"></span><h2>ucsmsdk.mometa.network.NetworkIfStats module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkIfStats" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkIfStats ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkIfStats.</code><code class="descname">NetworkIfStats</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>units</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkIfStats.html#NetworkIfStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkIfStats class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'units', u'type'])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'rin': 'rin', 'status': 'status', 'in': 'r_in', 'units': 'units', 'sacl': 'sacl', 'rn': 'rn', 'out': 'out', 'type': 'type', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x13fea5850&gt;, 'rin': &lt;ucscoremeta.MoPropertyMeta object at 0x13fea53d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x12a1d3490&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf710&gt;, 'units': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf810&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x129228290&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x13fea5b50&gt;, 'out': &lt;ucscoremeta.MoPropertyMeta object at 0x13fea50d0&gt;, 'r_in': &lt;ucscoremeta.MoPropertyMeta object at 0x13fea59d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x13fea5650&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStats.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkIfStats.</code><code class="descname">NetworkIfStatsConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkIfStats.html#NetworkIfStatsConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_BROADCAST">
+<code class="descname">TYPE_BROADCAST</code><em class="property"> = 'broadcast'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_BROADCAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_GENERIC">
+<code class="descname">TYPE_GENERIC</code><em class="property"> = 'generic'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_GENERIC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_MULTICAST">
+<code class="descname">TYPE_MULTICAST</code><em class="property"> = 'multicast'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_MULTICAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_TOTAL">
+<code class="descname">TYPE_TOTAL</code><em class="property"> = 'total'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_TOTAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_UNICAST">
+<code class="descname">TYPE_UNICAST</code><em class="property"> = 'unicast'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.TYPE_UNICAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.UNITS_OCTETS">
+<code class="descname">UNITS_OCTETS</code><em class="property"> = 'octets'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.UNITS_OCTETS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.UNITS_PACKETS">
+<code class="descname">UNITS_PACKETS</code><em class="property"> = 'packets'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.UNITS_PACKETS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.UNITS_RAW">
+<code class="descname">UNITS_RAW</code><em class="property"> = 'raw'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkIfStats.NetworkIfStatsConsts.UNITS_RAW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkLanNeighborEntry">
+<span id="ucsmsdk-mometa-network-networklanneighborentry-module"></span><h2>ucsmsdk.mometa.network.NetworkLanNeighborEntry module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkLanNeighborEntry" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkLanNeighborEntry ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLanNeighborEntry.</code><code class="descname">NetworkLanNeighborEntry</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>local_interface</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLanNeighborEntry.html#NetworkLanNeighborEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkLanNeighborEntry class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntryConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'localInterface'])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'ipV4Address': 'ip_v4_address', 'sacl': 'sacl', 'serialNumber': 'serial_number', 'status': 'status', 'systemName': 'system_name', 'capabilities': 'capabilities', 'remoteInterface': 'remote_interface', 'platform': 'platform', 'fiPortDn': 'fi_port_dn', 'deviceId': 'device_id', 'nativeVlan': 'native_vlan', 'rn': 'rn', 'localInterface': 'local_interface', 'ipV4MgmtAddress': 'ip_v4_mgmt_address', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x125513e90&gt;, 'native_vlan': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb850&gt;, 'system_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1421ebad0&gt;, 'ip_v4_mgmt_address': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb550&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1421ebf10&gt;, 'fi_port_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb990&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1421ebb90&gt;, 'capabilities': &lt;ucscoremeta.MoPropertyMeta object at 0x15f78a1d0&gt;, 'platform': &lt;ucscoremeta.MoPropertyMeta object at 0x1421ebc50&gt;, 'ip_v4_address': &lt;ucscoremeta.MoPropertyMeta object at 0x1421ebb50&gt;, 'serial_number': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb050&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb450&gt;, 'device_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15f78ac10&gt;, 'local_interface': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb4d0&gt;, 'remote_interface': &lt;ucscoremeta.MoPropertyMeta object at 0x1421eb590&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15f78ad50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntry.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntryConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLanNeighborEntry.</code><code class="descname">NetworkLanNeighborEntryConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLanNeighborEntry.html#NetworkLanNeighborEntryConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighborEntry.NetworkLanNeighborEntryConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkLanNeighbors">
+<span id="ucsmsdk-mometa-network-networklanneighbors-module"></span><h2>ucsmsdk.mometa.network.NetworkLanNeighbors module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkLanNeighbors" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkLanNeighbors ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLanNeighbors.</code><code class="descname">NetworkLanNeighbors</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLanNeighbors.html#NetworkLanNeighbors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkLanNeighbors class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighborsConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'sacl': 'sacl', 'rn': 'rn', 'status': 'status', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x157fdda90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x157fdda10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x157fdddd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x157fdd8d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x157fdd990&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighbors.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighborsConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLanNeighbors.</code><code class="descname">NetworkLanNeighborsConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLanNeighbors.html#NetworkLanNeighborsConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLanNeighbors.NetworkLanNeighborsConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkLldpNeighborEntry">
+<span id="ucsmsdk-mometa-network-networklldpneighborentry-module"></span><h2>ucsmsdk.mometa.network.NetworkLldpNeighborEntry module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkLldpNeighborEntry" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkLldpNeighborEntry ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLldpNeighborEntry.</code><code class="descname">NetworkLldpNeighborEntry</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>local_interface</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLldpNeighborEntry.html#NetworkLldpNeighborEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkLldpNeighborEntry class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntryConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'localInterface'])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'localInterface': 'local_interface', 'enabledCapabilities': 'enabled_capabilities', 'remoteIfDesc': 'remote_if_desc', 'sacl': 'sacl', 'systemName': 'system_name', 'capabilities': 'capabilities', 'remoteInterface': 'remote_interface', 'status': 'status', 'chassisId': 'chassis_id', 'fiPortDn': 'fi_port_dn', 'systemDesc': 'system_desc', 'nativeVlan': 'native_vlan', 'rn': 'rn', 'ipV4MgmtAddress': 'ip_v4_mgmt_address', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11a377ad0&gt;, 'native_vlan': &lt;ucscoremeta.MoPropertyMeta object at 0x15c98aa50&gt;, 'system_desc': &lt;ucscoremeta.MoPropertyMeta object at 0x159f66c10&gt;, 'remote_if_desc': &lt;ucscoremeta.MoPropertyMeta object at 0x15c98a690&gt;, 'ip_v4_mgmt_address': &lt;ucscoremeta.MoPropertyMeta object at 0x15a7f0110&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15bd5ff50&gt;, 'fi_port_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15a7f0b50&gt;, 'capabilities': &lt;ucscoremeta.MoPropertyMeta object at 0x12e5df650&gt;, 'system_name': &lt;ucscoremeta.MoPropertyMeta object at 0x159f66b50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15bd5fe90&gt;, 'chassis_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11a377210&gt;, 'enabled_capabilities': &lt;ucscoremeta.MoPropertyMeta object at 0x11a377250&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15c98aa10&gt;, 'local_interface': &lt;ucscoremeta.MoPropertyMeta object at 0x15c98ae50&gt;, 'remote_interface': &lt;ucscoremeta.MoPropertyMeta object at 0x15c98a990&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11a377450&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntry.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntryConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLldpNeighborEntry.</code><code class="descname">NetworkLldpNeighborEntryConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLldpNeighborEntry.html#NetworkLldpNeighborEntryConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighborEntry.NetworkLldpNeighborEntryConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkLldpNeighbors">
+<span id="ucsmsdk-mometa-network-networklldpneighbors-module"></span><h2>ucsmsdk.mometa.network.NetworkLldpNeighbors module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkLldpNeighbors" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkLldpNeighbors ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLldpNeighbors.</code><code class="descname">NetworkLldpNeighbors</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLldpNeighbors.html#NetworkLldpNeighbors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkLldpNeighbors class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighborsConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'sacl': 'sacl', 'rn': 'rn', 'status': 'status', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14a1ab310&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14a1abfd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14a1abc90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13d554610&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14a1ab110&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighbors.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighborsConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkLldpNeighbors.</code><code class="descname">NetworkLldpNeighborsConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkLldpNeighbors.html#NetworkLldpNeighborsConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkLldpNeighbors.NetworkLldpNeighborsConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkOperLevel">
+<span id="ucsmsdk-mometa-network-networkoperlevel-module"></span><h2>ucsmsdk.mometa.network.NetworkOperLevel module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkOperLevel" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkOperLevel ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkOperLevel.</code><code class="descname">NetworkOperLevel</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkOperLevel.html#NetworkOperLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkOperLevel class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'maxSecVlanPerPrimaryVlanCount': 'max_sec_vlan_per_primary_vlan_count', 'rn': 'rn', 'maxPrimaryVlanCount': 'max_primary_vlan_count', 'secondaryVlanCountStatus': 'secondary_vlan_count_status', 'sacl': 'sacl', 'vifCountStatus': 'vif_count_status', 'vifCount': 'vif_count', 'status': 'status', 'primaryVlanCount': 'primary_vlan_count', 'secondaryVlanCount': 'secondary_vlan_count', 'maxVifCount': 'max_vif_count', 'primaryVlanCountStatus': 'primary_vlan_count_status', 'id': 'id', 'maxSecondaryVlanCount': 'max_secondary_vlan_count', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15f7af5d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1596a7710&gt;, 'max_primary_vlan_count': &lt;ucscoremeta.MoPropertyMeta object at 0x15bd54e50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1596a7a10&gt;, 'primary_vlan_count': &lt;ucscoremeta.MoPropertyMeta object at 0x15c977590&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1596a7650&gt;, 'max_vif_count': &lt;ucscoremeta.MoPropertyMeta object at 0x15c977550&gt;, 'secondary_vlan_count_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1596a7fd0&gt;, 'secondary_vlan_count': &lt;ucscoremeta.MoPropertyMeta object at 0x1596a7a90&gt;, 'vif_count': &lt;ucscoremeta.MoPropertyMeta object at 0x1596a7510&gt;, 'max_secondary_vlan_count': &lt;ucscoremeta.MoPropertyMeta object at 0x15c977690&gt;, 'vif_count_status': &lt;ucscoremeta.MoPropertyMeta object at 0x159f7dcd0&gt;, 'max_sec_vlan_per_primary_vlan_count': &lt;ucscoremeta.MoPropertyMeta object at 0x15bd54dd0&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15bd54f50&gt;, 'primary_vlan_count_status': &lt;ucscoremeta.MoPropertyMeta object at 0x15c977750&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15b7c2d90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevel.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkOperLevel.</code><code class="descname">NetworkOperLevelConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkOperLevel.html#NetworkOperLevelConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.ID_A">
+<code class="descname">ID_A</code><em class="property"> = 'A'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.ID_A" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.ID_B">
+<code class="descname">ID_B</code><em class="property"> = 'B'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.ID_B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.ID_NONE">
+<code class="descname">ID_NONE</code><em class="property"> = 'NONE'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.ID_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.PRIMARY_VLAN_COUNT_STATUS_ABOVE_LIMIT">
+<code class="descname">PRIMARY_VLAN_COUNT_STATUS_ABOVE_LIMIT</code><em class="property"> = 'above-limit'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.PRIMARY_VLAN_COUNT_STATUS_ABOVE_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.PRIMARY_VLAN_COUNT_STATUS_WITHIN_LIMIT">
+<code class="descname">PRIMARY_VLAN_COUNT_STATUS_WITHIN_LIMIT</code><em class="property"> = 'within-limit'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.PRIMARY_VLAN_COUNT_STATUS_WITHIN_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.SECONDARY_VLAN_COUNT_STATUS_ABOVE_LIMIT">
+<code class="descname">SECONDARY_VLAN_COUNT_STATUS_ABOVE_LIMIT</code><em class="property"> = 'above-limit'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.SECONDARY_VLAN_COUNT_STATUS_ABOVE_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.SECONDARY_VLAN_COUNT_STATUS_WITHIN_LIMIT">
+<code class="descname">SECONDARY_VLAN_COUNT_STATUS_WITHIN_LIMIT</code><em class="property"> = 'within-limit'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.SECONDARY_VLAN_COUNT_STATUS_WITHIN_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.VIF_COUNT_STATUS_ABOVE_LIMIT">
+<code class="descname">VIF_COUNT_STATUS_ABOVE_LIMIT</code><em class="property"> = 'above-limit'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.VIF_COUNT_STATUS_ABOVE_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.VIF_COUNT_STATUS_WITHIN_LIMIT">
+<code class="descname">VIF_COUNT_STATUS_WITHIN_LIMIT</code><em class="property"> = 'within-limit'</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkOperLevel.NetworkOperLevelConsts.VIF_COUNT_STATUS_WITHIN_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkSanNeighborEntry">
+<span id="ucsmsdk-mometa-network-networksanneighborentry-module"></span><h2>ucsmsdk.mometa.network.NetworkSanNeighborEntry module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkSanNeighborEntry" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkSanNeighborEntry ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkSanNeighborEntry.</code><code class="descname">NetworkSanNeighborEntry</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>local_interface</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkSanNeighborEntry.html#NetworkSanNeighborEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkSanNeighborEntry class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntryConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'localInterface'])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'localInterface': 'local_interface', 'portVsan': 'port_vsan', 'sacl': 'sacl', 'myNwwn': 'my_nwwn', 'fabricPwwn': 'fabric_pwwn', 'childAction': 'child_action', 'status': 'status', 'myPwwn': 'my_pwwn', 'fiPortDn': 'fi_port_dn', 'fabricNwwn': 'fabric_nwwn', 'rn': 'rn', 'fabricMgmtAddr': 'fabric_mgmt_addr'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x12379f950&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9ab590&gt;, 'fabric_mgmt_addr': &lt;ucscoremeta.MoPropertyMeta object at 0x12379fd90&gt;, 'fi_port_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x12379fe10&gt;, 'fabric_nwwn': &lt;ucscoremeta.MoPropertyMeta object at 0x12379f0d0&gt;, 'port_vsan': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9ab690&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x12379f710&gt;, 'my_nwwn': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9ab090&gt;, 'my_pwwn': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9ab110&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9abe10&gt;, 'fabric_pwwn': &lt;ucscoremeta.MoPropertyMeta object at 0x12379f9d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9abe90&gt;, 'local_interface': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9ab290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntry.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntryConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkSanNeighborEntry.</code><code class="descname">NetworkSanNeighborEntryConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkSanNeighborEntry.html#NetworkSanNeighborEntryConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighborEntry.NetworkSanNeighborEntryConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network.NetworkSanNeighbors">
+<span id="ucsmsdk-mometa-network-networksanneighbors-module"></span><h2>ucsmsdk.mometa.network.NetworkSanNeighbors module<a class="headerlink" href="#module-ucsmsdk.mometa.network.NetworkSanNeighbors" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for NetworkSanNeighbors ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkSanNeighbors.</code><code class="descname">NetworkSanNeighbors</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkSanNeighbors.html#NetworkSanNeighbors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is NetworkSanNeighbors class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighborsConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'sacl': 'sacl', 'rn': 'rn', 'status': 'status', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11a7b2e50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14451c710&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14451ce10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14451cd90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11a7b2910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighbors.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighborsConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.network.NetworkSanNeighbors.</code><code class="descname">NetworkSanNeighborsConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/network/NetworkSanNeighbors.html#NetworkSanNeighborsConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.network.NetworkSanNeighbors.NetworkSanNeighborsConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.network">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.network" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.nfs.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.nfs package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.mgmt.html" class="btn btn-neutral" title="ucsmsdk.mometa.mgmt package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

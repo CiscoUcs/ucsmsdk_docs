@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.utils package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk package" href="ucsmsdk.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="readme.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.vnic package" href="ucsmsdk.mometa.vnic.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ucsmsdk.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils.ccoimage">ucsmsdk.utils.ccoimage module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils.converttopython">ucsmsdk.utils.converttopython module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils.ucsbackup">ucsmsdk.utils.ucsbackup module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils.ucsguilaunch">ucsmsdk.utils.ucsguilaunch module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils.ucskvmlaunch">ucsmsdk.utils.ucskvmlaunch module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils.ucstechsupport">ucsmsdk.utils.ucstechsupport module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+    <li>ucsmsdk.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.utils.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-utils-package">
+<h1>ucsmsdk.utils package<a class="headerlink" href="#ucsmsdk-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.utils.ccoimage">
+<span id="ucsmsdk-utils-ccoimage-module"></span><h2>ucsmsdk.utils.ccoimage module<a class="headerlink" href="#module-ucsmsdk.utils.ccoimage" title="Permalink to this headline">¶</a></h2>
+<p>This module is responsible to download the ccoimage.</p>
+<dl class="class">
+<dt id="ucsmsdk.utils.ccoimage.UcsCcoImage">
+<em class="property">class </em><code class="descclassname">ucsmsdk.utils.ccoimage.</code><code class="descname">UcsCcoImage</code><a class="reference internal" href="_modules/ucsmsdk/utils/ccoimage.html#UcsCcoImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ccoimage.UcsCcoImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Describes the cco image</p>
+<dl class="method">
+<dt id="ucsmsdk.utils.ccoimage.UcsCcoImage.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ccoimage.html#UcsCcoImage.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ccoimage.UcsCcoImage.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overridden str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ucsmsdk.utils.ccoimage.get_ucs_cco_image">
+<code class="descclassname">ucsmsdk.utils.ccoimage.</code><code class="descname">get_ucs_cco_image</code><span class="sig-paren">(</span><em>image</em>, <em>file_dir</em>, <em>proxy=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ccoimage.html#get_ucs_cco_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ccoimage.get_ucs_cco_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the cco image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>image</strong> (<em>object</em>) &#8211; object of type UcsCcoImage</li>
+<li><strong>file_dir</strong> (<em>str</em>) &#8211; directory to download image</li>
+<li><strong>proxy</strong> (<em>str</em>) &#8211; proxy used for connection</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>image_list = get_ucs_cco_image_list(&#8220;username&#8221;, &#8220;password&#8221;)</p>
+<p>get_ucs_cco_image(image=image_list[0], file_dir=&#8221;/home/user/images&#8221;)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ucsmsdk.utils.ccoimage.get_ucs_cco_image_list">
+<code class="descclassname">ucsmsdk.utils.ccoimage.</code><code class="descname">get_ucs_cco_image_list</code><span class="sig-paren">(</span><em>username=None</em>, <em>password=None</em>, <em>mdf_id_list=None</em>, <em>proxy=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ccoimage.html#get_ucs_cco_image_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ccoimage.get_ucs_cco_image_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of available cco images</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>username</strong> (<em>str</em>) &#8211; username to connect to image server</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; password to connect to image server</li>
+<li><strong>mdf_id_list</strong> (<em>list</em>) &#8211; list of mdf id</li>
+<li><strong>proxy</strong> (<em>str</em>) &#8211; proxy used for connection</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">List of UcsCcoImage objects</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>image_list = get_ucs_cco_image_list(&#8220;username&#8221;, &#8220;password&#8221;)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.utils.converttopython">
+<span id="ucsmsdk-utils-converttopython-module"></span><h2>ucsmsdk.utils.converttopython module<a class="headerlink" href="#module-ucsmsdk.utils.converttopython" title="Permalink to this headline">¶</a></h2>
+<p>This module generated the python script using UCS GUI, GUI logs and xml
+request.</p>
+<dl class="function">
+<dt id="ucsmsdk.utils.converttopython.convert_to_ucs_python">
+<code class="descclassname">ucsmsdk.utils.converttopython.</code><code class="descname">convert_to_ucs_python</code><span class="sig-paren">(</span><em>log_path=None</em>, <em>xml=False</em>, <em>request=None</em>, <em>gui_log=False</em>, <em>path=None</em>, <em>literal_path=None</em>, <em>dump_to_file=False</em>, <em>dump_file_path=None</em>, <em>dump_xml=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/converttopython.html#convert_to_ucs_python"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.converttopython.convert_to_ucs_python" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation generates python script from ucsm gui using ucsm logs
+or directly from ucs logfile or xml request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>log_path</strong> (<em>str</em>) &#8211; ucsm guilog path, if code unable to find the ucsm
+guilog path you can specify the path using this parameter.</li>
+<li><strong>xml</strong> (<em>bool</em>) &#8211; if True, generates python script using xml request.</li>
+<li><strong>request</strong> (<em>str</em>) &#8211; xml request</li>
+<li><strong>gui_log</strong> (<em>bool</em>) &#8211; if True, generates python script using ucsm logfile</li>
+<li><strong>path</strong> (<em>str</em>) &#8211; path of the file containing xml request or ucsm logfile</li>
+<li><strong>literal_path</strong> (<em>str</em>) &#8211; path of the file containing xml request or
+ucsm logfile</li>
+<li><strong>dump_to_file</strong> (<em>bool</em>) &#8211; if True, dump the code to file</li>
+<li><strong>dump_file_path</strong> (<em>str</em>) &#8211; path of file where to dump generated code.</li>
+<li><strong>dump_xml</strong> (<em>bool</em>) &#8211; if True, display the xml extracted for generating
+code</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<ul>
+<li><p class="first">Optional in all param set - dump_to_file, dump_file_path, dump_xml</p>
+</li>
+<li><dl class="first docutils">
+<dt>param set 1:</dt>
+<dd><p class="first">convert_to_ucs_python()</p>
+<p>convert_to_ucs_python(dump_xml=True)</p>
+<p>file_path = r&#8221;/home/user/pythoncode.py&#8221;</p>
+<dl class="last docutils">
+<dt>convert_to_ucs_python(dump_to_file=True,</dt>
+<dd><p class="first last">dump_file_path=file_path,
+dump_xml=True)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>param set 2:</dt>
+<dd><dl class="first docutils">
+<dt>xml_str=&#8217;&#8216;&#8217;</dt>
+<dd><p class="first last">&lt;configConfRename
+dn=&#8221;org-root/ls-ra1&#8221;
+inNewName=&#8221;ra2&#8221;
+inHierarchical=&#8221;false&#8221;&gt;
+&lt;/configConfRename&gt;&#8217;&#8216;&#8217;</p>
+</dd>
+</dl>
+<p>convert_to_ucs_python(xml=True, request=xml_str)</p>
+<p>file_path = &#8220;homeuserucsmxmlconfigrequest.xml&#8221;</p>
+<p class="last">convert_to_ucs_python(xml=True, path=file_path)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>param set 3:</dt>
+<dd><p class="first">file_path = &#8220;homeuserucsmlogcentrale_14804.log&#8221;</p>
+<p class="last">convert_to_ucs_python(gui_log=True, path=file_path)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.utils.ucsbackup">
+<span id="ucsmsdk-utils-ucsbackup-module"></span><h2>ucsmsdk.utils.ucsbackup module<a class="headerlink" href="#module-ucsmsdk.utils.ucsbackup" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the api used to take backup of ucs and import the backup.</p>
+<dl class="function">
+<dt id="ucsmsdk.utils.ucsbackup.backup_ucs">
+<code class="descclassname">ucsmsdk.utils.ucsbackup.</code><code class="descname">backup_ucs</code><span class="sig-paren">(</span><em>handle</em>, <em>backup_type</em>, <em>file_dir</em>, <em>file_name</em>, <em>timeout_in_sec=600</em>, <em>preserve_pooled_values=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ucsbackup.html#backup_ucs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ucsbackup.backup_ucs" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation creates and download the backup of ucs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>(UcsHandle)</strong> (<em>handle</em>) &#8211; </li>
+<li><strong>backup_type</strong> (<em>str</em>) &#8211; specifies the type of backup
+i.e. fullstate/config-logical/config-system/
+config-all</li>
+<li><strong>file_dir</strong> (<em>str</em>) &#8211; directory to download ucs backup file</li>
+<li><strong>file_name</strong> (<em>str</em>) &#8211; backup file name to be imported</li>
+<li><strong>timeout_in_sec</strong> (<em>number</em>) &#8211; time in seconds for which method waits
+for the backUp file to generate else exit.</li>
+<li><strong>preserve_pooled_values</strong> (<em>boolean</em>) &#8211; by default False</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>file_dir = &#8220;/home/user/backup&#8221;</p>
+<p>file_name = &#8220;config_backup.xml&#8221;</p>
+<dl class="docutils">
+<dt>backup_ucs(handle, backup_type=&#8221;config-logical&#8221;,</dt>
+<dd>file_dir=test_support, file_name=file_name)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ucsmsdk.utils.ucsbackup.import_ucs_backup">
+<code class="descclassname">ucsmsdk.utils.ucsbackup.</code><code class="descname">import_ucs_backup</code><span class="sig-paren">(</span><em>handle</em>, <em>file_dir</em>, <em>file_name</em>, <em>merge=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ucsbackup.html#import_ucs_backup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ucsbackup.import_ucs_backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation will upload the UCSM backup taken earlier via GUI
+or backup_ucs operation for all configuration, system configuration,
+and logical configuration files. User can perform an import while the
+system is up and running.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>(UcsHandle)</strong> (<em>handle</em>) &#8211; </li>
+<li><strong>file_dir</strong> (<em>str</em>) &#8211; directory contains ucs backup file</li>
+<li><strong>file_name</strong> (<em>str</em>) &#8211; backup file name to be imported</li>
+<li><strong>merge</strong> (<em>boolean</em>) &#8211; specifies whether to merge the backup
+configuration with the existing UCSM configuration</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>file_dir = &#8220;/home/user/backup&#8221;</p>
+<p>file_name = &#8220;config_backup.xml&#8221;</p>
+<p>import_ucs_backup(handle, file_dir=file_dir, file_name=file_name)</p>
+<dl class="docutils">
+<dt>import_ucs_backup(handle, file_dir=file_dir, file_name=file_name,</dt>
+<dd>merge=True)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.utils.ucsguilaunch">
+<span id="ucsmsdk-utils-ucsguilaunch-module"></span><h2>ucsmsdk.utils.ucsguilaunch module<a class="headerlink" href="#module-ucsmsdk.utils.ucsguilaunch" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the api used to launch ucs gui.</p>
+<dl class="function">
+<dt id="ucsmsdk.utils.ucsguilaunch.ucs_gui_launch">
+<code class="descclassname">ucsmsdk.utils.ucsguilaunch.</code><code class="descname">ucs_gui_launch</code><span class="sig-paren">(</span><em>handle</em>, <em>need_url=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ucsguilaunch.html#ucs_gui_launch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ucsguilaunch.ucs_gui_launch" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation launch ucs gui.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>(UcsHandle)</strong> (<em>handle</em>) &#8211; </li>
+<li><strong>need_url</strong> (<em>bool</em>) &#8211; if true, it returns url to launch gui and will not
+launch gui</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>ucs_gui_launch(handle)</p>
+<p>ucs_gui_launch(handle, need_url=True)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.utils.ucskvmlaunch">
+<span id="ucsmsdk-utils-ucskvmlaunch-module"></span><h2>ucsmsdk.utils.ucskvmlaunch module<a class="headerlink" href="#module-ucsmsdk.utils.ucskvmlaunch" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the api used to launch ucs kvm.</p>
+<dl class="function">
+<dt id="ucsmsdk.utils.ucskvmlaunch.ucs_kvm_launch">
+<code class="descclassname">ucsmsdk.utils.ucskvmlaunch.</code><code class="descname">ucs_kvm_launch</code><span class="sig-paren">(</span><em>handle</em>, <em>service_profile=None</em>, <em>blade=None</em>, <em>rack_unit=None</em>, <em>frame_title=None</em>, <em>need_url=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ucskvmlaunch.html#ucs_kvm_launch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ucskvmlaunch.ucs_kvm_launch" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation launch ucs kvm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>(UcsHandle)</strong> (<em>handle</em>) &#8211; </li>
+<li><strong>(LsServer)</strong> (<em>service_profile</em>) &#8211; </li>
+<li><strong>(ComputeBlade)</strong> (<em>blade</em>) &#8211; </li>
+<li><strong>(ComputeRackUnit)</strong> (<em>rack_unit</em>) &#8211; </li>
+<li><strong>frame_title</strong> (<em>str</em>) &#8211; title of launched frame</li>
+<li><strong>need_url</strong> (<em>bool</em>) &#8211; if true, it returns url to launch kvm and will not
+launch kvm session</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>sp is LsServer object</p>
+<p>ucs_kvm_launch(handle, service_profile=sp)</p>
+<p>ucs_kvm_launch(handle, service_profile=sp, frame_title=&#8221;using sp&#8221;)</p>
+<p>ucs_kvm_launch(handle, service_profile=sp, need_url=True)</p>
+<p>blade1 is ComputeBlade object</p>
+<p>ucs_kvm_launch(handle, blade=blade1)</p>
+<p>rack1 is ComputeRackUnit object</p>
+<p>ucs_kvm_launch(handle, rack_unit=rack1)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.utils.ucstechsupport">
+<span id="ucsmsdk-utils-ucstechsupport-module"></span><h2>ucsmsdk.utils.ucstechsupport module<a class="headerlink" href="#module-ucsmsdk.utils.ucstechsupport" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the api used to create and download tech_support file.</p>
+<dl class="function">
+<dt id="ucsmsdk.utils.ucstechsupport.get_ucs_tech_support">
+<code class="descclassname">ucsmsdk.utils.ucstechsupport.</code><code class="descname">get_ucs_tech_support</code><span class="sig-paren">(</span><em>handle</em>, <em>ucs_manager=False</em>, <em>ucs_mgmt=False</em>, <em>chassis_id=None</em>, <em>cimc_id=None</em>, <em>adapter_id=None</em>, <em>iom_id=None</em>, <em>fex_id=None</em>, <em>rack_server_id=None</em>, <em>rack_adapter_id=None</em>, <em>remove_from_ucs=False</em>, <em>download_techsupp=True</em>, <em>file_dir=None</em>, <em>file_name=None</em>, <em>timeout_in_sec=600</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/utils/ucstechsupport.html#get_ucs_tech_support"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.utils.ucstechsupport.get_ucs_tech_support" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation creates and downloads the technical support data for
+the respective UCSM.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>(UcsHandle)</strong> (<em>handle</em>) &#8211; </li>
+<li><strong>ucs_manager</strong> (<em>bool</em>) &#8211; by default False, if provided as True then
+technical support data for the entire UCSM
+instance will be created and downloaded.</li>
+<li><strong>ucs_mgmt</strong> (<em>bool</em>) &#8211; by default False,  if provided as True then
+technical support data for the entire UCSM
+management services(excluding fabric
+interconnects) will be created and downloaded.</li>
+<li><strong>chassis_id</strong> (<em>int</em>) &#8211; chassis id.</li>
+<li><strong>cimc_id</strong> (<em>int</em>) &#8211; for a specific chassis. Can be &#8216;all&#8217; also.</li>
+<li><strong>adapter_id</strong> (<em>int</em>) &#8211; for a specific chassis. Can be &#8216;all&#8217; also.</li>
+<li><strong>iom_id</strong> (<em>int</em>) &#8211; for a specific chassis. Can be &#8216;all&#8217; also.</li>
+<li><strong>fex_id</strong> (<em>int</em>) &#8211; id of a fabric extender.</li>
+<li><strong>rack_server_id</strong> (<em>int</em>) &#8211; id of a rack server.</li>
+<li><strong>rack_adapter_id</strong> (<em>int</em>) &#8211; adaptor_id for a specific rack server.
+Can be &#8216;all&#8217; also.</li>
+<li><strong>remove_from_ucs</strong> (<em>bool</em>) &#8211; by default False, if specified as True
+then the technical support data file will
+be removed from the UCS.</li>
+<li><strong>download_techsupp</strong> (<em>bool</em>) &#8211; by default True, if True suggests to
+download the tech support file.</li>
+<li><strong>file_dir</strong> (<em>str</em>) &#8211; directory to download tech support file</li>
+<li><strong>file_name</strong> (<em>str</em>) &#8211; name of the download tech support file</li>
+<li><strong>timeout_in_sec</strong> (<em>int</em>) &#8211; specifies the time in seconds after that
+the operation will terminate.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<ul>
+<li><p class="first">M - Manadatory, O - Optional</p>
+</li>
+<li><p class="first">Note:
+Mandatory in ALL param sets: file_dir, file_name
+Optional in ALL param sets: timeout_in_sec, remove_from_ucs,</p>
+<blockquote>
+<div><p>download_techsupp</p>
+</div></blockquote>
+</li>
+<li><p class="first">param set 1:</p>
+</li>
+<li><p class="first">M - ucs_manager</p>
+</li>
+</ul>
+<p>file_dir = &#8220;/home/user/techsupp&#8221;
+file_name = &#8220;techsupp_ucs_manager.tar&#8221;
+get_ucs_tech_support(handle,</p>
+<blockquote>
+<div>file_dir=file_dir,
+file_name=file_name,
+ucs_manager=True)</div></blockquote>
+<dl class="docutils">
+<dt>get_ucs_tech_support(handle,</dt>
+<dd>file_dir=file_dir,
+file_name=file_name,
+ucs_manager=True,
+timeout_in_sec=300,
+remove_from_ucs=True)</dd>
+</dl>
+<ul class="simple">
+<li>param set 2:</li>
+<li>M - ucs_manager</li>
+</ul>
+<p>file_dir = &#8220;/home/user/techsupp&#8221;
+file_name = &#8220;techsupp_ucs_mgmt.tar&#8221;
+get_ucs_tech_support(handle,</p>
+<blockquote>
+<div>file_dir=file_dir,
+file_name=file_name,
+ucs_mgmt=True)</div></blockquote>
+<ul class="simple">
+<li>param set 3:</li>
+<li>M - chassis_id, cimc_id</li>
+<li>O - adapter_id</li>
+</ul>
+<p>file_dir = &#8220;/home/user/techsupp&#8221;
+file_name = &#8220;techsupp_ucs_mgmt.tar&#8221;
+get_ucs_tech_support(handle,</p>
+<blockquote>
+<div>file_dir=file_dir,
+file_name=file_name,
+chassis_id=1,
+cimc_id=1,
+adapter_id=1)</div></blockquote>
+<ul class="simple">
+<li>param set 4:</li>
+<li>M - chassis_id, iom_id</li>
+</ul>
+<p>file_dir = &#8220;/home/user/techsupp&#8221;
+file_name = &#8220;techsupp_ucs_mgmt.tar&#8221;
+get_ucs_tech_support(handle,</p>
+<blockquote>
+<div>file_dir=file_dir,
+file_name=file_name,
+chassis_id=1,
+iom_id=1)</div></blockquote>
+<ul class="simple">
+<li>param set 5:</li>
+<li>M - fex_id</li>
+</ul>
+<p>file_dir = &#8220;/home/user/techsupp&#8221;
+file_name = &#8220;techsupp_ucs_mgmt.tar&#8221;
+get_ucs_tech_support(handle,</p>
+<blockquote>
+<div>file_dir=file_dir,
+file_name=file_name,
+fex_id=1)</div></blockquote>
+<ul class="simple">
+<li>param set 6:</li>
+<li>M - rack_server_id</li>
+<li>O - rack_adapter_id</li>
+</ul>
+<p>file_dir = &#8220;/home/user/techsupp&#8221;
+file_name = &#8220;techsupp_ucs_mgmt.tar&#8221;
+get_ucs_tech_support(handle,</p>
+<blockquote>
+<div>file_dir=file_dir,
+file_name=file_name,
+rack_server_id=1,
+rack_adapter_id=1)</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="readme.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.vnic.html" class="btn btn-neutral" title="ucsmsdk.mometa.vnic package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.equipment.EquipmentSlotArray &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.equipment.EquipmentSlotArray</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.mometa.equipment.EquipmentSlotArray</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;This module contains the general information for EquipmentSlotArray ManagedObject.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+
+
+<div class="viewcode-block" id="EquipmentSlotArrayConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.equipment.html#ucsmsdk.mometa.equipment.EquipmentSlotArray.EquipmentSlotArrayConsts">[docs]</a><span class="k">class</span> <span class="nc">EquipmentSlotArrayConsts</span><span class="p">():</span>
+    <span class="n">DEVICE_SLOT_OFFSET_UNDEFINED</span> <span class="o">=</span> <span class="s">&quot;undefined&quot;</span>
+    <span class="n">HEIGHT_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">HORIZONTAL_START_OFFSET_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">INLINE_GROUP_SEPARATION_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">INLINE_OFFSET_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">INT_ID_NONE</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span>
+    <span class="n">LOCATION_BACK</span> <span class="o">=</span> <span class="s">&quot;back&quot;</span>
+    <span class="n">LOCATION_BOTTOM</span> <span class="o">=</span> <span class="s">&quot;bottom&quot;</span>
+    <span class="n">LOCATION_FRONT</span> <span class="o">=</span> <span class="s">&quot;front&quot;</span>
+    <span class="n">LOCATION_LEFT</span> <span class="o">=</span> <span class="s">&quot;left&quot;</span>
+    <span class="n">LOCATION_RIGHT</span> <span class="o">=</span> <span class="s">&quot;right&quot;</span>
+    <span class="n">LOCATION_TOP</span> <span class="o">=</span> <span class="s">&quot;top&quot;</span>
+    <span class="n">LOCATION_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+    <span class="n">ORIENTATION_HORIZONTAL</span> <span class="o">=</span> <span class="s">&quot;horizontal&quot;</span>
+    <span class="n">ORIENTATION_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+    <span class="n">ORIENTATION_VERTICAL</span> <span class="o">=</span> <span class="s">&quot;vertical&quot;</span>
+    <span class="n">POLICY_OWNER_LOCAL</span> <span class="o">=</span> <span class="s">&quot;local&quot;</span>
+    <span class="n">POLICY_OWNER_PENDING_POLICY</span> <span class="o">=</span> <span class="s">&quot;pending-policy&quot;</span>
+    <span class="n">POLICY_OWNER_POLICY</span> <span class="o">=</span> <span class="s">&quot;policy&quot;</span>
+    <span class="n">SELECTOR_BLADE</span> <span class="o">=</span> <span class="s">&quot;blade&quot;</span>
+    <span class="n">SELECTOR_COM_PORT</span> <span class="o">=</span> <span class="s">&quot;com_port&quot;</span>
+    <span class="n">SELECTOR_DISK_SLOT</span> <span class="o">=</span> <span class="s">&quot;disk_slot&quot;</span>
+    <span class="n">SELECTOR_DRIVE_SLOT</span> <span class="o">=</span> <span class="s">&quot;drive_slot&quot;</span>
+    <span class="n">SELECTOR_DVI_PORT</span> <span class="o">=</span> <span class="s">&quot;dvi_port&quot;</span>
+    <span class="n">SELECTOR_ETHERNET_PORT</span> <span class="o">=</span> <span class="s">&quot;ethernet_port&quot;</span>
+    <span class="n">SELECTOR_FAN</span> <span class="o">=</span> <span class="s">&quot;fan&quot;</span>
+    <span class="n">SELECTOR_GEM</span> <span class="o">=</span> <span class="s">&quot;gem&quot;</span>
+    <span class="n">SELECTOR_IOCARD</span> <span class="o">=</span> <span class="s">&quot;iocard&quot;</span>
+    <span class="n">SELECTOR_KEYBOARD_PORT</span> <span class="o">=</span> <span class="s">&quot;keyboard_port&quot;</span>
+    <span class="n">SELECTOR_MOUSE_PORT</span> <span class="o">=</span> <span class="s">&quot;mouse_port&quot;</span>
+    <span class="n">SELECTOR_PAR_PORT</span> <span class="o">=</span> <span class="s">&quot;par_port&quot;</span>
+    <span class="n">SELECTOR_PSU</span> <span class="o">=</span> <span class="s">&quot;psu&quot;</span>
+    <span class="n">SELECTOR_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+    <span class="n">SELECTOR_USB_PORT</span> <span class="o">=</span> <span class="s">&quot;usb_port&quot;</span>
+    <span class="n">SELECTOR_VGA_PORT</span> <span class="o">=</span> <span class="s">&quot;vga_port&quot;</span>
+    <span class="n">SUB_OEM_ID_UNDEFINED</span> <span class="o">=</span> <span class="s">&quot;undefined&quot;</span>
+    <span class="n">TRANSVERSE_GROUP_SEPARATION_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">TRANSVERSE_OFFSET_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">VERTICAL_START_OFFSET_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+    <span class="n">WIDTH_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
+
+</div>
+<div class="viewcode-block" id="EquipmentSlotArray"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.equipment.html#ucsmsdk.mometa.equipment.EquipmentSlotArray.EquipmentSlotArray">[docs]</a><span class="k">class</span> <span class="nc">EquipmentSlotArray</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is EquipmentSlotArray class.&quot;&quot;&quot;</span>
+
+    <span class="n">consts</span> <span class="o">=</span> <span class="n">EquipmentSlotArrayConsts</span><span class="p">()</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">u&#39;selector&#39;</span><span class="p">])</span>
+
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;EquipmentSlotArray&quot;</span><span class="p">,</span> <span class="s">&quot;equipmentSlotArray&quot;</span><span class="p">,</span> <span class="s">&quot;[selector]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x1ff</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;diagSrvCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentBladeCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentCatalogCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentChassisCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentDbgPluginCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentMgmtCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentMgmtExtCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentRackUnitCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentServerUnitCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentSwitchCapProvider&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentSystemFruCapProvider&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;Get&quot;</span><span class="p">])</span>
+
+    <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;descr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;descr&quot;</span><span class="p">,</span> <span class="s">&quot;descr&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[ !#$%&amp;\(\)\*\+,\-\./:;\?@\[\]_\{\|\}~a-zA-Z0-9]{0,256}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;device_slot_offset&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;device_slot_offset&quot;</span><span class="p">,</span> <span class="s">&quot;deviceSlotOffset&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version224b</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;undefined&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;first_index&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;first_index&quot;</span><span class="p">,</span> <span class="s">&quot;firstIndex&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;height&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span> <span class="s">&quot;height&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;horizontal_start_offset&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;horizontal_start_offset&quot;</span><span class="p">,</span> <span class="s">&quot;horizontalStartOffset&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;inline_group_separation&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;inline_group_separation&quot;</span><span class="p">,</span> <span class="s">&quot;inlineGroupSeparation&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;inline_group_size&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;inline_group_size&quot;</span><span class="p">,</span> <span class="s">&quot;inlineGroupSize&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;inline_offset&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;inline_offset&quot;</span><span class="p">,</span> <span class="s">&quot;inlineOffset&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;int_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;int_id&quot;</span><span class="p">,</span> <span class="s">&quot;intId&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;none&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;location&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;location&quot;</span><span class="p">,</span> <span class="s">&quot;location&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;back&quot;</span><span class="p">,</span> <span class="s">&quot;bottom&quot;</span><span class="p">,</span> <span class="s">&quot;front&quot;</span><span class="p">,</span> <span class="s">&quot;left&quot;</span><span class="p">,</span> <span class="s">&quot;right&quot;</span><span class="p">,</span> <span class="s">&quot;top&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[\-\.:_a-zA-Z0-9]{0,16}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;number_of_onboard_disks&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;number_of_onboard_disks&quot;</span><span class="p">,</span> <span class="s">&quot;numberOfOnboardDisks&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;number_of_slots&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;number_of_slots&quot;</span><span class="p">,</span> <span class="s">&quot;numberOfSlots&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;onboard_disk_base_port_no&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;onboard_disk_base_port_no&quot;</span><span class="p">,</span> <span class="s">&quot;onboardDiskBasePortNo&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;onboard_disk_first_index&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;onboard_disk_first_index&quot;</span><span class="p">,</span> <span class="s">&quot;onboardDiskFirstIndex&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;orientation&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;orientation&quot;</span><span class="p">,</span> <span class="s">&quot;orientation&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;horizontal&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;vertical&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;policy_level&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;policy_level&quot;</span><span class="p">,</span> <span class="s">&quot;policyLevel&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;policy_owner&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;policy_owner&quot;</span><span class="p">,</span> <span class="s">&quot;policyOwner&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x20</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;local&quot;</span><span class="p">,</span> <span class="s">&quot;pending-policy&quot;</span><span class="p">,</span> <span class="s">&quot;policy&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x40</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;selector&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;selector&quot;</span><span class="p">,</span> <span class="s">&quot;selector&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x80</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;blade&quot;</span><span class="p">,</span> <span class="s">&quot;com_port&quot;</span><span class="p">,</span> <span class="s">&quot;disk_slot&quot;</span><span class="p">,</span> <span class="s">&quot;drive_slot&quot;</span><span class="p">,</span> <span class="s">&quot;dvi_port&quot;</span><span class="p">,</span> <span class="s">&quot;ethernet_port&quot;</span><span class="p">,</span> <span class="s">&quot;fan&quot;</span><span class="p">,</span> <span class="s">&quot;gem&quot;</span><span class="p">,</span> <span class="s">&quot;iocard&quot;</span><span class="p">,</span> <span class="s">&quot;keyboard_port&quot;</span><span class="p">,</span> <span class="s">&quot;mouse_port&quot;</span><span class="p">,</span> <span class="s">&quot;par_port&quot;</span><span class="p">,</span> <span class="s">&quot;psu&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;usb_port&quot;</span><span class="p">,</span> <span class="s">&quot;vga_port&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;slots_per_line&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;slots_per_line&quot;</span><span class="p">,</span> <span class="s">&quot;slotsPerLine&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x100</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;storage_bios_mode&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;storage_bios_mode&quot;</span><span class="p">,</span> <span class="s">&quot;storageBiosMode&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version224b</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sub_oem_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sub_oem_id&quot;</span><span class="p">,</span> <span class="s">&quot;subOemId&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version224b</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;undefined&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;transverse_group_separation&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;transverse_group_separation&quot;</span><span class="p">,</span> <span class="s">&quot;transverseGroupSeparation&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;transverse_group_size&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;transverse_group_size&quot;</span><span class="p">,</span> <span class="s">&quot;transverseGroupSize&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;transverse_offset&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;transverse_offset&quot;</span><span class="p">,</span> <span class="s">&quot;transverseOffset&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;vertical_start_offset&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;vertical_start_offset&quot;</span><span class="p">,</span> <span class="s">&quot;verticalStartOffset&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;width&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span> <span class="s">&quot;width&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;not-applicable&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+    <span class="p">}</span>
+
+    <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;descr&quot;</span><span class="p">:</span> <span class="s">&quot;descr&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;deviceSlotOffset&quot;</span><span class="p">:</span> <span class="s">&quot;device_slot_offset&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;firstIndex&quot;</span><span class="p">:</span> <span class="s">&quot;first_index&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;height&quot;</span><span class="p">:</span> <span class="s">&quot;height&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;horizontalStartOffset&quot;</span><span class="p">:</span> <span class="s">&quot;horizontal_start_offset&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;inlineGroupSeparation&quot;</span><span class="p">:</span> <span class="s">&quot;inline_group_separation&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;inlineGroupSize&quot;</span><span class="p">:</span> <span class="s">&quot;inline_group_size&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;inlineOffset&quot;</span><span class="p">:</span> <span class="s">&quot;inline_offset&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;intId&quot;</span><span class="p">:</span> <span class="s">&quot;int_id&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;location&quot;</span><span class="p">:</span> <span class="s">&quot;location&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;numberOfOnboardDisks&quot;</span><span class="p">:</span> <span class="s">&quot;number_of_onboard_disks&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;numberOfSlots&quot;</span><span class="p">:</span> <span class="s">&quot;number_of_slots&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;onboardDiskBasePortNo&quot;</span><span class="p">:</span> <span class="s">&quot;onboard_disk_base_port_no&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;onboardDiskFirstIndex&quot;</span><span class="p">:</span> <span class="s">&quot;onboard_disk_first_index&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;orientation&quot;</span><span class="p">:</span> <span class="s">&quot;orientation&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;policyLevel&quot;</span><span class="p">:</span> <span class="s">&quot;policy_level&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;policyOwner&quot;</span><span class="p">:</span> <span class="s">&quot;policy_owner&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;selector&quot;</span><span class="p">:</span> <span class="s">&quot;selector&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;slotsPerLine&quot;</span><span class="p">:</span> <span class="s">&quot;slots_per_line&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;storageBiosMode&quot;</span><span class="p">:</span> <span class="s">&quot;storage_bios_mode&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;subOemId&quot;</span><span class="p">:</span> <span class="s">&quot;sub_oem_id&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;transverseGroupSeparation&quot;</span><span class="p">:</span> <span class="s">&quot;transverse_group_separation&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;transverseGroupSize&quot;</span><span class="p">:</span> <span class="s">&quot;transverse_group_size&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;transverseOffset&quot;</span><span class="p">:</span> <span class="s">&quot;transverse_offset&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;verticalStartOffset&quot;</span><span class="p">:</span> <span class="s">&quot;vertical_start_offset&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;width&quot;</span><span class="p">:</span> <span class="s">&quot;width&quot;</span><span class="p">,</span> 
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="n">selector</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selector</span> <span class="o">=</span> <span class="n">selector</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">descr</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device_slot_offset</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_index</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_start_offset</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inline_group_separation</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inline_group_size</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inline_offset</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">int_id</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_onboard_disks</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_slots</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">onboard_disk_base_port_no</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">onboard_disk_first_index</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">policy_level</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">policy_owner</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sacl</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slots_per_line</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_bios_mode</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sub_oem_id</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transverse_group_separation</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transverse_group_size</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transverse_offset</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertical_start_offset</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;EquipmentSlotArray&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

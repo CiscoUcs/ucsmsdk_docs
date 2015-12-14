@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.ucsfilter &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.ucsfilter</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.ucsfilter</h1><div class="highlight"><pre>
+<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c">#</span>
+<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c"># you may not use this file except in compliance with the License.</span>
+<span class="c"># You may obtain a copy of the License at</span>
+<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c">#</span>
+<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c"># See the License for the specific language governing permissions and</span>
+<span class="c"># limitations under the License.</span>
+
+
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">pyparsing</span> <span class="kn">as</span> <span class="nn">pp</span>
+
+<span class="kn">import</span> <span class="nn">ucsgenutils</span>
+<span class="kn">import</span> <span class="nn">ucscoreutils</span>
+<span class="kn">from</span> <span class="nn">ucsfiltertype</span> <span class="kn">import</span> <span class="n">OrFilter</span><span class="p">,</span> <span class="n">AndFilter</span><span class="p">,</span> <span class="n">NotFilter</span>
+<span class="kn">from</span> <span class="nn">ucsbasetype</span> <span class="kn">import</span> <span class="n">FilterFilter</span>
+
+<span class="n">types</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;eq&quot;</span><span class="p">:</span> <span class="s">&quot;EqFilter&quot;</span><span class="p">,</span>
+         <span class="s">&quot;ne&quot;</span><span class="p">:</span> <span class="s">&quot;NeFilter&quot;</span><span class="p">,</span>
+         <span class="s">&quot;ge&quot;</span><span class="p">:</span> <span class="s">&quot;GeFilter&quot;</span><span class="p">,</span>
+         <span class="s">&quot;gt&quot;</span><span class="p">:</span> <span class="s">&quot;GtFilter&quot;</span><span class="p">,</span>
+         <span class="s">&quot;le&quot;</span><span class="p">:</span> <span class="s">&quot;LeFilter&quot;</span><span class="p">,</span>
+         <span class="s">&quot;lt&quot;</span><span class="p">:</span> <span class="s">&quot;LtFilter&quot;</span><span class="p">,</span>
+         <span class="s">&quot;re&quot;</span><span class="p">:</span> <span class="s">&quot;WcardFilter&quot;</span>
+         <span class="p">}</span>
+
+
+<div class="viewcode-block" id="ParseFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.ParseFilter">[docs]</a><span class="k">class</span> <span class="nc">ParseFilter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Supporting class to parse filter expression.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">class_id</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">is_meta_classid</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ParseFilter.parse_filter_obj"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.ParseFilter.parse_filter_obj">[docs]</a>    <span class="k">def</span> <span class="nf">parse_filter_obj</span><span class="p">(</span><span class="n">sstr</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">toks</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Supporting class to parse filter expression.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># print toks[0] #logger</span>
+
+        <span class="n">prop_</span> <span class="o">=</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&quot;prop&quot;</span><span class="p">]</span>
+        <span class="n">value_</span> <span class="o">=</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&quot;value&quot;</span><span class="p">]</span>
+
+        <span class="n">type_</span> <span class="o">=</span> <span class="s">&quot;re&quot;</span>
+        <span class="k">if</span> <span class="s">&quot;type_exp&quot;</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">type_</span> <span class="o">=</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&quot;type_exp&quot;</span><span class="p">][</span><span class="s">&quot;types&quot;</span><span class="p">]</span>
+
+        <span class="n">flag_</span> <span class="o">=</span> <span class="s">&quot;C&quot;</span>
+        <span class="k">if</span> <span class="s">&quot;flag_exp&quot;</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">flag_</span> <span class="o">=</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&quot;flag_exp&quot;</span><span class="p">][</span><span class="s">&quot;flags&quot;</span><span class="p">]</span>
+
+        <span class="c"># print prop_, value_, type_, flag_ #logger</span>
+
+        <span class="k">if</span> <span class="n">flag_</span> <span class="o">==</span> <span class="s">&quot;I&quot;</span><span class="p">:</span>
+            <span class="n">value_</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r&quot;[a-zA-Z]&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">&quot;[&quot;</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;]&quot;</span><span class="p">,</span> <span class="n">value_</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">ParseFilter</span><span class="o">.</span><span class="n">is_meta_classid</span><span class="p">:</span>
+            <span class="n">class_obj</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">load_class</span><span class="p">(</span><span class="n">ParseFilter</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span>
+            <span class="n">prop_mo_meta</span> <span class="o">=</span> <span class="n">class_obj</span><span class="o">.</span><span class="n">prop_meta</span><span class="p">[</span><span class="n">prop_</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">prop_mo_meta</span><span class="p">:</span>
+                <span class="n">prop_</span> <span class="o">=</span> <span class="n">prop_mo_meta</span><span class="o">.</span><span class="n">xml_attribute</span>
+
+        <span class="n">sub_filter</span> <span class="o">=</span> <span class="n">create_basic_filter</span><span class="p">(</span><span class="n">types</span><span class="p">[</span><span class="n">type_</span><span class="p">],</span>
+                                         <span class="n">class_</span><span class="o">=</span><span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_l</span><span class="p">(</span>
+                                             <span class="n">ParseFilter</span><span class="o">.</span><span class="n">class_id</span><span class="p">),</span>
+                                         <span class="nb">property</span><span class="o">=</span><span class="n">prop_</span><span class="p">,</span>
+                                         <span class="n">value</span><span class="o">=</span><span class="n">value_</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sub_filter</span>
+</div>
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ParseFilter.and_operator"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.ParseFilter.and_operator">[docs]</a>    <span class="k">def</span> <span class="nf">and_operator</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">toks</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        method to support logical &#39;and&#39; operator expression</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># print  str, loc, toks</span>
+        <span class="c"># print toks[0][0::2]</span>
+        <span class="n">and_filter</span> <span class="o">=</span> <span class="n">AndFilter</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">op_filter</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="n">and_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">op_filter</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">and_filter</span>
+</div>
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ParseFilter.or_operator"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.ParseFilter.or_operator">[docs]</a>    <span class="k">def</span> <span class="nf">or_operator</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">toks</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        method to support logical &#39;or&#39; operator expression</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># print  str, loc, toks</span>
+        <span class="c"># print toks[0][0::2]</span>
+        <span class="n">or_filter</span> <span class="o">=</span> <span class="n">OrFilter</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">op_filter</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="n">or_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">op_filter</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">or_filter</span>
+</div>
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ParseFilter.not_operator"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.ParseFilter.not_operator">[docs]</a>    <span class="k">def</span> <span class="nf">not_operator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str_</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">toks</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        method to support logical &#39;and&#39; operator expression</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">print</span> <span class="n">str_</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">toks</span>
+        <span class="k">print</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">not_filter</span> <span class="o">=</span> <span class="n">NotFilter</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">op_filter</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">not_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">op_filter</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">not_filter</span>
+
+</div></div>
+<span class="n">prop</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">WordStart</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">pp</span><span class="o">.</span><span class="n">Word</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">alphanums</span><span class="p">)</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;prop&quot;</span><span class="p">)</span>
+<span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">QuotedString</span><span class="p">(</span><span class="s">&quot;&#39;&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">pp</span><span class="o">.</span><span class="n">QuotedString</span><span class="p">(</span><span class="s">&#39;&quot;&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">pp</span><span class="o">.</span><span class="n">Word</span><span class="p">(</span>
+    <span class="n">pp</span><span class="o">.</span><span class="n">printables</span><span class="p">,</span> <span class="n">excludeChars</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+<span class="n">types_</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">oneOf</span><span class="p">(</span><span class="s">&quot;re eq ne gt ge lt le&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;types&quot;</span><span class="p">)</span>
+<span class="n">flags</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">oneOf</span><span class="p">(</span><span class="s">&quot;C I&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;flags&quot;</span><span class="p">)</span>
+<span class="n">comma</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">quote</span> <span class="o">=</span> <span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&quot;&#39;&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&#39;&quot;&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;quote&quot;</span><span class="p">)</span>
+
+<span class="n">type_exp</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span>
+    <span class="s">&quot;=&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">quote</span> <span class="o">+</span> <span class="n">types_</span> <span class="o">+</span> <span class="n">quote</span><span class="p">)</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;type_exp&quot;</span><span class="p">)</span>
+<span class="n">flag_exp</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&quot;flag&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span>
+    <span class="s">&quot;=&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">quote</span> <span class="o">+</span> <span class="n">flags</span> <span class="o">+</span> <span class="n">quote</span><span class="p">)</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;flag_exp&quot;</span><span class="p">)</span>
+
+<span class="n">semi_expression</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">Forward</span><span class="p">()</span>
+<span class="n">semi_expression</span> <span class="o">&lt;&lt;</span> <span class="n">pp</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&quot;(&quot;</span><span class="p">)</span> <span class="o">+</span>
+                            <span class="n">prop</span> <span class="o">+</span> <span class="n">comma</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span>
+                            <span class="n">pp</span><span class="o">.</span><span class="n">Optional</span><span class="p">(</span><span class="n">comma</span> <span class="o">+</span> <span class="n">type_exp</span><span class="p">)</span> <span class="o">+</span>
+                            <span class="n">pp</span><span class="o">.</span><span class="n">Optional</span><span class="p">(</span><span class="n">comma</span> <span class="o">+</span> <span class="n">flag_exp</span><span class="p">)</span> <span class="o">+</span>
+                            <span class="n">pp</span><span class="o">.</span><span class="n">Literal</span><span class="p">(</span><span class="s">&quot;)&quot;</span><span class="p">)</span>
+                            <span class="p">)</span><span class="o">.</span><span class="n">setParseAction</span><span class="p">(</span>
+    <span class="n">ParseFilter</span><span class="o">.</span><span class="n">parse_filter_obj</span><span class="p">)</span><span class="o">.</span><span class="n">setResultsName</span><span class="p">(</span><span class="s">&quot;semi_expression&quot;</span><span class="p">)</span>
+
+<span class="n">expr</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">Forward</span><span class="p">()</span>
+<span class="n">expr</span> <span class="o">&lt;&lt;</span> <span class="n">pp</span><span class="o">.</span><span class="n">operatorPrecedence</span><span class="p">(</span><span class="n">semi_expression</span><span class="p">,</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s">&quot;not&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pp</span><span class="o">.</span><span class="n">opAssoc</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">,</span> <span class="n">ParseFilter</span><span class="o">.</span><span class="n">not_operator</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">&quot;and&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">pp</span><span class="o">.</span><span class="n">opAssoc</span><span class="o">.</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">ParseFilter</span><span class="o">.</span><span class="n">and_operator</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">&quot;or&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">pp</span><span class="o">.</span><span class="n">opAssoc</span><span class="o">.</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">ParseFilter</span><span class="o">.</span><span class="n">or_operator</span><span class="p">)</span>
+<span class="p">])</span>
+
+
+<div class="viewcode-block" id="generate_infilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.generate_infilter">[docs]</a><span class="k">def</span> <span class="nf">generate_infilter</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">filter_str</span><span class="p">,</span> <span class="n">is_meta_class_id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create FilterFilter object</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        class_id (str): class_id</span>
+<span class="sd">        filter_str (str): filter expression</span>
+<span class="sd">        is_meta_class_id (bool)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True on successful connect</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        generate_infilter(&quot;LsServer&quot;, &#39;(&quot;usr_lbl, &quot;mysp&quot;, type=&quot;eq&quot;, flag=&quot;I)&#39;, True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">ParseFilter</span><span class="o">.</span><span class="n">class_id</span> <span class="o">=</span> <span class="n">class_id</span>
+    <span class="n">ParseFilter</span><span class="o">.</span><span class="n">is_meta_classid</span> <span class="o">=</span> <span class="n">is_meta_class_id</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="n">filter_str</span><span class="p">)</span>
+    <span class="n">in_filter</span> <span class="o">=</span> <span class="n">FilterFilter</span><span class="p">()</span>
+    <span class="n">in_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">in_filter</span>
+
+</div>
+<div class="viewcode-block" id="handle_filter_max_component_limit"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.handle_filter_max_component_limit">[docs]</a><span class="k">def</span> <span class="nf">handle_filter_max_component_limit</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">l_filter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Method checks the filter count and if the filter count exceeds</span>
+<span class="sd">    the max_components(number of filters), then the given filter</span>
+<span class="sd">    objects get distributed among small groups and then again binded</span>
+<span class="sd">    together in complex filters(like and , or) so that the</span>
+<span class="sd">    count of filters can be reduced.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">from</span> <span class="nn">ucscore</span> <span class="kn">import</span> <span class="n">AbstractFilter</span>
+    <span class="kn">from</span> <span class="nn">ucsfiltertype</span> <span class="kn">import</span> <span class="n">AndFilter</span><span class="p">,</span> <span class="n">OrFilter</span>
+
+    <span class="n">max_components</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">if</span> <span class="n">l_filter</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">l_filter</span><span class="o">.</span><span class="n">child_count</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">max_components</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">l_filter</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">l_filter</span><span class="p">,</span> <span class="n">AndFilter</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">l_filter</span><span class="p">,</span>
+                                                              <span class="n">OrFilter</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">l_filter</span>
+
+    <span class="n">result_filter</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">l_filter</span><span class="p">,</span> <span class="n">AndFilter</span><span class="p">):</span>
+        <span class="n">parent_filter</span> <span class="o">=</span> <span class="n">AndFilter</span><span class="p">()</span>
+        <span class="n">child_filter</span> <span class="o">=</span> <span class="n">AndFilter</span><span class="p">()</span>
+        <span class="n">parent_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">child_filter</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">childf</span> <span class="ow">in</span> <span class="n">l_filter</span><span class="o">.</span><span class="n">GetChild</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">childf</span><span class="p">,</span> <span class="n">AbstractFilter</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">child_filter</span><span class="o">.</span><span class="n">child_count</span><span class="p">()</span> <span class="o">==</span> <span class="n">max_components</span><span class="p">:</span>
+                    <span class="n">child_filter</span> <span class="o">=</span> <span class="n">AndFilter</span><span class="p">()</span>
+                    <span class="n">parent_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">child_filter</span><span class="p">)</span>
+                <span class="n">child_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">childf</span><span class="p">)</span>
+        <span class="n">result_filter</span> <span class="o">=</span> <span class="n">parent_filter</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">parent_filter</span> <span class="o">=</span> <span class="n">OrFilter</span><span class="p">()</span>
+        <span class="n">child_filter</span> <span class="o">=</span> <span class="n">OrFilter</span><span class="p">()</span>
+        <span class="n">parent_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">child_filter</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">childf</span> <span class="ow">in</span> <span class="n">l_filter</span><span class="o">.</span><span class="n">GetChild</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">childf</span><span class="p">,</span> <span class="n">AbstractFilter</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">child_filter</span><span class="o">.</span><span class="n">child_count</span><span class="p">()</span> <span class="o">==</span> <span class="n">max_components</span><span class="p">:</span>
+                    <span class="n">child_filter</span> <span class="o">=</span> <span class="n">OrFilter</span><span class="p">()</span>
+                    <span class="n">parent_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">child_filter</span><span class="p">)</span>
+                <span class="n">child_filter</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">childf</span><span class="p">)</span>
+        <span class="n">result_filter</span> <span class="o">=</span> <span class="n">parent_filter</span>
+    <span class="k">return</span> <span class="n">handle_filter_max_component_limit</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">result_filter</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="create_basic_filter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfilter.create_basic_filter">[docs]</a><span class="k">def</span> <span class="nf">create_basic_filter</span><span class="p">(</span><span class="n">filter_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Loads filter class</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">ucsmeta</span>
+    <span class="n">fq_module_name</span> <span class="o">=</span> <span class="n">ucsmeta</span><span class="o">.</span><span class="n">OTHER_TYPE_CLASS_ID</span><span class="p">[</span><span class="n">filter_name</span><span class="p">]</span>
+    <span class="n">module_import</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">fq_module_name</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">(),</span>
+                               <span class="p">[</span><span class="n">filter_name</span><span class="p">])</span>
+    <span class="n">filter_obj</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module_import</span><span class="p">,</span> <span class="n">filter_name</span><span class="p">)()</span>
+    <span class="n">filter_obj</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filter_obj</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

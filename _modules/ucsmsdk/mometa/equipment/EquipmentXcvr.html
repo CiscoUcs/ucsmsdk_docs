@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.equipment.EquipmentXcvr &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.equipment.EquipmentXcvr</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.mometa.equipment.EquipmentXcvr</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;This module contains the general information for EquipmentXcvr ManagedObject.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+
+
+<div class="viewcode-block" id="EquipmentXcvrConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.equipment.html#ucsmsdk.mometa.equipment.EquipmentXcvr.EquipmentXcvrConsts">[docs]</a><span class="k">class</span> <span class="nc">EquipmentXcvrConsts</span><span class="p">():</span>
+    <span class="n">TYPE_1000BASECX</span> <span class="o">=</span> <span class="s">&quot;1000basecx&quot;</span>
+    <span class="n">TYPE_1000BASELH</span> <span class="o">=</span> <span class="s">&quot;1000baselh&quot;</span>
+    <span class="n">TYPE_1000BASELX</span> <span class="o">=</span> <span class="s">&quot;1000baselx&quot;</span>
+    <span class="n">TYPE_1000BASESX</span> <span class="o">=</span> <span class="s">&quot;1000basesx&quot;</span>
+    <span class="n">TYPE_1000BASET</span> <span class="o">=</span> <span class="s">&quot;1000baset&quot;</span>
+    <span class="n">TYPE_1000BASEUNKNOWN</span> <span class="o">=</span> <span class="s">&quot;1000baseunknown&quot;</span>
+    <span class="n">TYPE_1000BASEVX</span> <span class="o">=</span> <span class="s">&quot;1000basevx&quot;</span>
+    <span class="n">TYPE_1000BASEX</span> <span class="o">=</span> <span class="s">&quot;1000basex&quot;</span>
+    <span class="n">TYPE_1000BASEZX</span> <span class="o">=</span> <span class="s">&quot;1000basezx&quot;</span>
+    <span class="n">TYPE_10GBASEER</span> <span class="o">=</span> <span class="s">&quot;10gbaseer&quot;</span>
+    <span class="n">TYPE_10GBASELR</span> <span class="o">=</span> <span class="s">&quot;10gbaselr&quot;</span>
+    <span class="n">TYPE_10GBASELRM</span> <span class="o">=</span> <span class="s">&quot;10gbaselrm&quot;</span>
+    <span class="n">TYPE_10GBASESR</span> <span class="o">=</span> <span class="s">&quot;10gbasesr&quot;</span>
+    <span class="n">TYPE_10GBASEZR</span> <span class="o">=</span> <span class="s">&quot;10gbasezr&quot;</span>
+    <span class="n">TYPE_CWDM1471</span> <span class="o">=</span> <span class="s">&quot;cwdm1471&quot;</span>
+    <span class="n">TYPE_CWDM1531</span> <span class="o">=</span> <span class="s">&quot;cwdm1531&quot;</span>
+    <span class="n">TYPE_CWDM1551</span> <span class="o">=</span> <span class="s">&quot;cwdm1551&quot;</span>
+    <span class="n">TYPE_DWDMSFP</span> <span class="o">=</span> <span class="s">&quot;dwdmsfp&quot;</span>
+    <span class="n">TYPE_FET</span> <span class="o">=</span> <span class="s">&quot;fet&quot;</span>
+    <span class="n">TYPE_H10GACU10M</span> <span class="o">=</span> <span class="s">&quot;h10gacu10m&quot;</span>
+    <span class="n">TYPE_H10GACU15M</span> <span class="o">=</span> <span class="s">&quot;h10gacu15m&quot;</span>
+    <span class="n">TYPE_H10GACU1M</span> <span class="o">=</span> <span class="s">&quot;h10gacu1m&quot;</span>
+    <span class="n">TYPE_H10GACU3M</span> <span class="o">=</span> <span class="s">&quot;h10gacu3m&quot;</span>
+    <span class="n">TYPE_H10GACU5M</span> <span class="o">=</span> <span class="s">&quot;h10gacu5m&quot;</span>
+    <span class="n">TYPE_H10GACU7M</span> <span class="o">=</span> <span class="s">&quot;h10gacu7m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC10M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc10m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC15M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc15m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC1M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc1m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC2M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc2m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC3M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc3m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC5M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc5m&quot;</span>
+    <span class="n">TYPE_H10GACUAOC7M</span> <span class="o">=</span> <span class="s">&quot;h10gacuaoc7m&quot;</span>
+    <span class="n">TYPE_H10GAOC10M</span> <span class="o">=</span> <span class="s">&quot;h10gaoc10m&quot;</span>
+    <span class="n">TYPE_H10GAOC1M</span> <span class="o">=</span> <span class="s">&quot;h10gaoc1m&quot;</span>
+    <span class="n">TYPE_H10GAOC2M</span> <span class="o">=</span> <span class="s">&quot;h10gaoc2m&quot;</span>
+    <span class="n">TYPE_H10GAOC3M</span> <span class="o">=</span> <span class="s">&quot;h10gaoc3m&quot;</span>
+    <span class="n">TYPE_H10GAOC5M</span> <span class="o">=</span> <span class="s">&quot;h10gaoc5m&quot;</span>
+    <span class="n">TYPE_H10GAOC7M</span> <span class="o">=</span> <span class="s">&quot;h10gaoc7m&quot;</span>
+    <span class="n">TYPE_H10GCU10M</span> <span class="o">=</span> <span class="s">&quot;h10gcu10m&quot;</span>
+    <span class="n">TYPE_H10GCU1M</span> <span class="o">=</span> <span class="s">&quot;h10gcu1m&quot;</span>
+    <span class="n">TYPE_H10GCU2M</span> <span class="o">=</span> <span class="s">&quot;h10gcu2m&quot;</span>
+    <span class="n">TYPE_H10GCU3M</span> <span class="o">=</span> <span class="s">&quot;h10gcu3m&quot;</span>
+    <span class="n">TYPE_H10GCU5M</span> <span class="o">=</span> <span class="s">&quot;h10gcu5m&quot;</span>
+    <span class="n">TYPE_H10GCU7M</span> <span class="o">=</span> <span class="s">&quot;h10gcu7m&quot;</span>
+    <span class="n">TYPE_H10GLRMSM</span> <span class="o">=</span> <span class="s">&quot;h10glrmsm&quot;</span>
+    <span class="n">TYPE_H10GUSR</span> <span class="o">=</span> <span class="s">&quot;h10gusr&quot;</span>
+    <span class="n">TYPE_QSFP40GCR4</span> <span class="o">=</span> <span class="s">&quot;qsfp40gcr4&quot;</span>
+    <span class="n">TYPE_QSFP40GCSR4</span> <span class="o">=</span> <span class="s">&quot;qsfp40gcsr4&quot;</span>
+    <span class="n">TYPE_QSFP40GFET</span> <span class="o">=</span> <span class="s">&quot;qsfp40gfet&quot;</span>
+    <span class="n">TYPE_QSFP40GLR4</span> <span class="o">=</span> <span class="s">&quot;qsfp40glr4&quot;</span>
+    <span class="n">TYPE_QSFP40GSR4</span> <span class="o">=</span> <span class="s">&quot;qsfp40gsr4&quot;</span>
+    <span class="n">TYPE_QSFP40GSRBD</span> <span class="o">=</span> <span class="s">&quot;qsfp40gsrbd&quot;</span>
+    <span class="n">TYPE_QSFP4SFP10GCU1M</span> <span class="o">=</span> <span class="s">&quot;qsfp4sfp10gcu1m&quot;</span>
+    <span class="n">TYPE_QSFP4SFP10GCU2M</span> <span class="o">=</span> <span class="s">&quot;qsfp4sfp10gcu2m&quot;</span>
+    <span class="n">TYPE_QSFP4SFP10GCU3M</span> <span class="o">=</span> <span class="s">&quot;qsfp4sfp10gcu3m&quot;</span>
+    <span class="n">TYPE_QSFP4SFP10GCU5M</span> <span class="o">=</span> <span class="s">&quot;qsfp4sfp10gcu5m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0C10M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0c10m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0C1M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0c1m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0C2M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0c2m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0C3M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0c3m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0C5M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0c5m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0C7M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0c7m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GA0CUNKNOWN</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10ga0cunknown&quot;</span>
+    <span class="n">TYPE_QSFP4X10GAC10M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10gac10m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GAC1M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10gac1m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GAC3M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10gac3m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GAC5M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10gac5m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GAC7M</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10gac7m&quot;</span>
+    <span class="n">TYPE_QSFP4X10GLR</span> <span class="o">=</span> <span class="s">&quot;qsfp4x10glr&quot;</span>
+    <span class="n">TYPE_QSFPH40GACU10M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gacu10m&quot;</span>
+    <span class="n">TYPE_QSFPH40GACU1M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gacu1m&quot;</span>
+    <span class="n">TYPE_QSFPH40GACU3M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gacu3m&quot;</span>
+    <span class="n">TYPE_QSFPH40GACU5M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gacu5m&quot;</span>
+    <span class="n">TYPE_QSFPH40GACU7M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gacu7m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC10M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc10m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC15M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc15m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC1M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc1m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC2M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc2m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC3M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc3m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC5M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc5m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOC7M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaoc7m&quot;</span>
+    <span class="n">TYPE_QSFPH40GAOCUNKNOWN</span> <span class="o">=</span> <span class="s">&quot;qsfph40gaocunknown&quot;</span>
+    <span class="n">TYPE_QSFPH40GCU1M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gcu1m&quot;</span>
+    <span class="n">TYPE_QSFPH40GCU2M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gcu2m&quot;</span>
+    <span class="n">TYPE_QSFPH40GCU3M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gcu3m&quot;</span>
+    <span class="n">TYPE_QSFPH40GCU5M</span> <span class="o">=</span> <span class="s">&quot;qsfph40gcu5m&quot;</span>
+    <span class="n">TYPE_QSFPLOOP</span> <span class="o">=</span> <span class="s">&quot;qsfploop&quot;</span>
+    <span class="n">TYPE_QSFPQSA</span> <span class="o">=</span> <span class="s">&quot;qsfpqsa&quot;</span>
+    <span class="n">TYPE_QSFPUNKNOWN</span> <span class="o">=</span> <span class="s">&quot;qsfpunknown&quot;</span>
+    <span class="n">TYPE_SFP</span> <span class="o">=</span> <span class="s">&quot;sfp&quot;</span>
+    <span class="n">TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+    <span class="n">TYPE_X2</span> <span class="o">=</span> <span class="s">&quot;x2&quot;</span>
+
+</div>
+<div class="viewcode-block" id="EquipmentXcvr"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.equipment.html#ucsmsdk.mometa.equipment.EquipmentXcvr.EquipmentXcvr">[docs]</a><span class="k">class</span> <span class="nc">EquipmentXcvr</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is EquipmentXcvr class.&quot;&quot;&quot;</span>
+
+    <span class="n">consts</span> <span class="o">=</span> <span class="n">EquipmentXcvrConsts</span><span class="p">()</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([])</span>
+
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;EquipmentXcvr&quot;</span><span class="p">,</span> <span class="s">&quot;equipmentXcvr&quot;</span><span class="p">,</span> <span class="s">&quot;transceiver&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x1f</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;etherPIo&#39;</span><span class="p">,</span> <span class="s">u&#39;etherServerIntFIo&#39;</span><span class="p">,</span> <span class="s">u&#39;etherSwitchIntFIo&#39;</span><span class="p">,</span> <span class="s">u&#39;fcPIo&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;Get&quot;</span><span class="p">])</span>
+
+    <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;1-128&quot;</span><span class="p">]),</span> 
+        <span class="s">&quot;model&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;model&quot;</span><span class="p">,</span> <span class="s">&quot;model&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;revision&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;revision&quot;</span><span class="p">,</span> <span class="s">&quot;revision&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;serial&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;serial&quot;</span><span class="p">,</span> <span class="s">&quot;serial&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;ts&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;ts&quot;</span><span class="p">,</span> <span class="s">&quot;ts&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;([0-9]){4}-([0-9]){2}-([0-9]){2}T([0-9]){2}:([0-9]){2}:([0-9]){2}((\.([0-9]){3})){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;1000basecx&quot;</span><span class="p">,</span> <span class="s">&quot;1000baselh&quot;</span><span class="p">,</span> <span class="s">&quot;1000baselx&quot;</span><span class="p">,</span> <span class="s">&quot;1000basesx&quot;</span><span class="p">,</span> <span class="s">&quot;1000baset&quot;</span><span class="p">,</span> <span class="s">&quot;1000baseunknown&quot;</span><span class="p">,</span> <span class="s">&quot;1000basevx&quot;</span><span class="p">,</span> <span class="s">&quot;1000basex&quot;</span><span class="p">,</span> <span class="s">&quot;1000basezx&quot;</span><span class="p">,</span> <span class="s">&quot;10gbaseer&quot;</span><span class="p">,</span> <span class="s">&quot;10gbaselr&quot;</span><span class="p">,</span> <span class="s">&quot;10gbaselrm&quot;</span><span class="p">,</span> <span class="s">&quot;10gbasesr&quot;</span><span class="p">,</span> <span class="s">&quot;10gbasezr&quot;</span><span class="p">,</span> <span class="s">&quot;cwdm1471&quot;</span><span class="p">,</span> <span class="s">&quot;cwdm1531&quot;</span><span class="p">,</span> <span class="s">&quot;cwdm1551&quot;</span><span class="p">,</span> <span class="s">&quot;dwdmsfp&quot;</span><span class="p">,</span> <span class="s">&quot;fet&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacu10m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacu15m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacu1m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacu3m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacu5m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacu7m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc10m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc15m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc1m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc2m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc3m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc5m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gacuaoc7m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gaoc10m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gaoc1m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gaoc2m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gaoc3m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gaoc5m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gaoc7m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gcu10m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gcu1m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gcu2m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gcu3m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gcu5m&quot;</span><span class="p">,</span> <span class="s">&quot;h10gcu7m&quot;</span><span class="p">,</span> <span class="s">&quot;h10glrmsm&quot;</span><span class="p">,</span> <span class="s">&quot;h10gusr&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp40gcr4&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp40gcsr4&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp40gfet&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp40glr4&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp40gsr4&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp40gsrbd&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4sfp10gcu1m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4sfp10gcu2m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4sfp10gcu3m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4sfp10gcu5m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0c10m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0c1m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0c2m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0c3m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0c5m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0c7m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10ga0cunknown&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10gac10m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10gac1m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10gac3m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10gac5m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10gac7m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfp4x10glr&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gacu10m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gacu1m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gacu3m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gacu5m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gacu7m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc10m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc15m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc1m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc2m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc3m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc5m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaoc7m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gaocunknown&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gcu1m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gcu2m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gcu3m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfph40gcu5m&quot;</span><span class="p">,</span> <span class="s">&quot;qsfploop&quot;</span><span class="p">,</span> <span class="s">&quot;qsfpqsa&quot;</span><span class="p">,</span> <span class="s">&quot;qsfpunknown&quot;</span><span class="p">,</span> <span class="s">&quot;sfp&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;x2&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;vendor&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;vendor&quot;</span><span class="p">,</span> <span class="s">&quot;vendor&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+    <span class="p">}</span>
+
+    <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;id&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;model&quot;</span><span class="p">:</span> <span class="s">&quot;model&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;revision&quot;</span><span class="p">:</span> <span class="s">&quot;revision&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;serial&quot;</span><span class="p">:</span> <span class="s">&quot;serial&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;ts&quot;</span><span class="p">:</span> <span class="s">&quot;ts&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;vendor&quot;</span><span class="p">:</span> <span class="s">&quot;vendor&quot;</span><span class="p">,</span> 
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">revision</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sacl</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ts</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vendor</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;EquipmentXcvr&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

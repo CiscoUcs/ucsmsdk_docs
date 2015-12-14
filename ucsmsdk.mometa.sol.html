@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.sol package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.stats package" href="ucsmsdk.mometa.stats.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.security package" href="ucsmsdk.mometa.security.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.sol package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.sol.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-sol-package">
+<h1>ucsmsdk.mometa.sol package<a class="headerlink" href="#ucsmsdk-mometa-sol-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.sol.SolConfig">
+<span id="ucsmsdk-mometa-sol-solconfig-module"></span><h2>ucsmsdk.mometa.sol.SolConfig module<a class="headerlink" href="#module-ucsmsdk.mometa.sol.SolConfig" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for SolConfig ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfig">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sol.SolConfig.</code><code class="descname">SolConfig</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sol/SolConfig.html#SolConfig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is SolConfig class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfig.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.sol.SolConfig.SolConfigConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfig.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfig.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfig.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfig.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfig.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfig.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'policyLevel': 'policy_level', 'sacl': 'sacl', 'policyOwner': 'policy_owner', 'intId': 'int_id', 'speed': 'speed', 'childAction': 'child_action', 'name': 'name', 'descr': 'descr', 'adminState': 'admin_state', 'rn': 'rn'}</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfig.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfig.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x164478a50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x164478590&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x164478950&gt;, 'admin_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1644788d0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x164478410&gt;, 'speed': &lt;ucscoremeta.MoPropertyMeta object at 0x164478f10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x164478650&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x164478710&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x164478e10&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1644780d0&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x164478d10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x164478c90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfig.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sol.SolConfig.</code><code class="descname">SolConfigConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/sol/SolConfig.html#SolConfigConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.ADMIN_STATE_DISABLE">
+<code class="descname">ADMIN_STATE_DISABLE</code><em class="property"> = 'disable'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.ADMIN_STATE_DISABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.ADMIN_STATE_ENABLE">
+<code class="descname">ADMIN_STATE_ENABLE</code><em class="property"> = 'enable'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.ADMIN_STATE_ENABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.INT_ID_NONE">
+<code class="descname">INT_ID_NONE</code><em class="property"> = 'none'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.INT_ID_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.POLICY_OWNER_LOCAL">
+<code class="descname">POLICY_OWNER_LOCAL</code><em class="property"> = 'local'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.POLICY_OWNER_LOCAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.POLICY_OWNER_PENDING_POLICY">
+<code class="descname">POLICY_OWNER_PENDING_POLICY</code><em class="property"> = 'pending-policy'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.POLICY_OWNER_PENDING_POLICY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.POLICY_OWNER_POLICY">
+<code class="descname">POLICY_OWNER_POLICY</code><em class="property"> = 'policy'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.POLICY_OWNER_POLICY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_115200">
+<code class="descname">SPEED_115200</code><em class="property"> = '115200'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_115200" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_19200">
+<code class="descname">SPEED_19200</code><em class="property"> = '19200'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_19200" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_38400">
+<code class="descname">SPEED_38400</code><em class="property"> = '38400'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_38400" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_57600">
+<code class="descname">SPEED_57600</code><em class="property"> = '57600'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_57600" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_9600">
+<code class="descname">SPEED_9600</code><em class="property"> = '9600'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolConfig.SolConfigConsts.SPEED_9600" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.sol.SolIf">
+<span id="ucsmsdk-mometa-sol-solif-module"></span><h2>ucsmsdk.mometa.sol.SolIf module<a class="headerlink" href="#module-ucsmsdk.mometa.sol.SolIf" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for SolIf ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIf">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sol.SolIf.</code><code class="descname">SolIf</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sol/SolIf.html#SolIf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is SolIf class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIf.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.sol.SolIf.SolIfConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIf.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIf.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIf.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIf.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIf.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIf.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'policyLevel': 'policy_level', 'sacl': 'sacl', 'policyOwner': 'policy_owner', 'intId': 'int_id', 'speed': 'speed', 'childAction': 'child_action', 'name': 'name', 'descr': 'descr', 'adminState': 'admin_state', 'rn': 'rn'}</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIf.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIf.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7810&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7e50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7ed0&gt;, 'admin_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15d872110&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb73d0&gt;, 'speed': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7a50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15d872f90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7390&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15d872410&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7990&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7710&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7a90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIf.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sol.SolIf.</code><code class="descname">SolIfConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/sol/SolIf.html#SolIfConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.ADMIN_STATE_DISABLE">
+<code class="descname">ADMIN_STATE_DISABLE</code><em class="property"> = 'disable'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.ADMIN_STATE_DISABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.ADMIN_STATE_ENABLE">
+<code class="descname">ADMIN_STATE_ENABLE</code><em class="property"> = 'enable'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.ADMIN_STATE_ENABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.INT_ID_NONE">
+<code class="descname">INT_ID_NONE</code><em class="property"> = 'none'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.INT_ID_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.POLICY_OWNER_LOCAL">
+<code class="descname">POLICY_OWNER_LOCAL</code><em class="property"> = 'local'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.POLICY_OWNER_LOCAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.POLICY_OWNER_PENDING_POLICY">
+<code class="descname">POLICY_OWNER_PENDING_POLICY</code><em class="property"> = 'pending-policy'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.POLICY_OWNER_PENDING_POLICY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.POLICY_OWNER_POLICY">
+<code class="descname">POLICY_OWNER_POLICY</code><em class="property"> = 'policy'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.POLICY_OWNER_POLICY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_115200">
+<code class="descname">SPEED_115200</code><em class="property"> = '115200'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_115200" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_19200">
+<code class="descname">SPEED_19200</code><em class="property"> = '19200'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_19200" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_38400">
+<code class="descname">SPEED_38400</code><em class="property"> = '38400'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_38400" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_57600">
+<code class="descname">SPEED_57600</code><em class="property"> = '57600'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_57600" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_9600">
+<code class="descname">SPEED_9600</code><em class="property"> = '9600'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolIf.SolIfConsts.SPEED_9600" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.sol.SolPolicy">
+<span id="ucsmsdk-mometa-sol-solpolicy-module"></span><h2>ucsmsdk.mometa.sol.SolPolicy module<a class="headerlink" href="#module-ucsmsdk.mometa.sol.SolPolicy" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for SolPolicy ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicy">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sol.SolPolicy.</code><code class="descname">SolPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sol/SolPolicy.html#SolPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is SolPolicy class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicy.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicy.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicy.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicy.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicy.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicy.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'propAcl': 'prop_acl', 'policyLevel': 'policy_level', 'sacl': 'sacl', 'policyOwner': 'policy_owner', 'intId': 'int_id', 'speed': 'speed', 'childAction': 'child_action', 'name': 'name', 'descr': 'descr', 'adminState': 'admin_state', 'rn': 'rn'}</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicy.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicy.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c850&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c4d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c390&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c310&gt;, 'admin_state': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c750&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c9d0&gt;, 'speed': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9ce50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9cf10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c250&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c3d0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c2d0&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c210&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x160c9c110&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sol.SolPolicy.</code><code class="descname">SolPolicyConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/sol/SolPolicy.html#SolPolicyConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.ADMIN_STATE_DISABLE">
+<code class="descname">ADMIN_STATE_DISABLE</code><em class="property"> = 'disable'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.ADMIN_STATE_DISABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.ADMIN_STATE_ENABLE">
+<code class="descname">ADMIN_STATE_ENABLE</code><em class="property"> = 'enable'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.ADMIN_STATE_ENABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.INT_ID_NONE">
+<code class="descname">INT_ID_NONE</code><em class="property"> = 'none'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.INT_ID_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.POLICY_OWNER_LOCAL">
+<code class="descname">POLICY_OWNER_LOCAL</code><em class="property"> = 'local'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.POLICY_OWNER_LOCAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.POLICY_OWNER_PENDING_POLICY">
+<code class="descname">POLICY_OWNER_PENDING_POLICY</code><em class="property"> = 'pending-policy'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.POLICY_OWNER_PENDING_POLICY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.POLICY_OWNER_POLICY">
+<code class="descname">POLICY_OWNER_POLICY</code><em class="property"> = 'policy'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.POLICY_OWNER_POLICY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_115200">
+<code class="descname">SPEED_115200</code><em class="property"> = '115200'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_115200" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_19200">
+<code class="descname">SPEED_19200</code><em class="property"> = '19200'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_19200" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_38400">
+<code class="descname">SPEED_38400</code><em class="property"> = '38400'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_38400" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_57600">
+<code class="descname">SPEED_57600</code><em class="property"> = '57600'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_57600" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_9600">
+<code class="descname">SPEED_9600</code><em class="property"> = '9600'</em><a class="headerlink" href="#ucsmsdk.mometa.sol.SolPolicy.SolPolicyConsts.SPEED_9600" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.sol">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.sol" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.stats.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.stats package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.security.html" class="btn btn-neutral" title="ucsmsdk.mometa.security package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,877 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.security package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.sol package" href="ucsmsdk.mometa.sol.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.queryresult package" href="ucsmsdk.mometa.queryresult.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.security package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.security.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-security-package">
+<h1>ucsmsdk.mometa.security package<a class="headerlink" href="#ucsmsdk-mometa-security-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.security.SecurityUnit">
+<span id="ucsmsdk-mometa-security-securityunit-module"></span><h2>ucsmsdk.mometa.security.SecurityUnit module<a class="headerlink" href="#module-ucsmsdk.mometa.security.SecurityUnit" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for SecurityUnit ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnit">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.security.SecurityUnit.</code><code class="descname">SecurityUnit</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/security/SecurityUnit.html#SecurityUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is SecurityUnit class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'id'])</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'status': 'status', 'operState': 'oper_state', 'vid': 'vid', 'presence': 'presence', 'sacl': 'sacl', 'thermal': 'thermal', 'operability': 'operability', 'serial': 'serial', 'id': 'id', 'perf': 'perf', 'rn': 'rn', 'locationDn': 'location_dn', 'revision': 'revision', 'dn': 'dn', 'vendor': 'vendor', 'power': 'power', 'operQualifierReason': 'oper_qualifier_reason', 'pciAddr': 'pci_addr', 'model': 'model', 'childAction': 'child_action', 'pciSlot': 'pci_slot', 'partNumber': 'part_number', 'voltage': 'voltage'}</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d090&gt;, 'vid': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d150&gt;, 'presence': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d850&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d690&gt;, 'thermal': &lt;ucscoremeta.MoPropertyMeta object at 0x16044dd10&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d190&gt;, 'operability': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d610&gt;, 'serial': &lt;ucscoremeta.MoPropertyMeta object at 0x16044dd90&gt;, 'pci_slot': &lt;ucscoremeta.MoPropertyMeta object at 0x16044dc10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d910&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d390&gt;, 'oper_qualifier_reason': &lt;ucscoremeta.MoPropertyMeta object at 0x16044de90&gt;, 'location_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16044dc50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d810&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d350&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16044da50&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d790&gt;, 'power': &lt;ucscoremeta.MoPropertyMeta object at 0x16044da90&gt;, 'pci_addr': &lt;ucscoremeta.MoPropertyMeta object at 0x16044dfd0&gt;, 'perf': &lt;ucscoremeta.MoPropertyMeta object at 0x16044df10&gt;, 'part_number': &lt;ucscoremeta.MoPropertyMeta object at 0x16044db90&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d4d0&gt;, 'voltage': &lt;ucscoremeta.MoPropertyMeta object at 0x16044d290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnit.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.security.SecurityUnit.</code><code class="descname">SecurityUnitConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/security/SecurityUnit.html#SecurityUnitConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_ACCESSIBILITY_PROBLEM">
+<code class="descname">OPERABILITY_ACCESSIBILITY_PROBLEM</code><em class="property"> = 'accessibility-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_ACCESSIBILITY_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_AUTO_UPGRADE">
+<code class="descname">OPERABILITY_AUTO_UPGRADE</code><em class="property"> = 'auto-upgrade'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_AUTO_UPGRADE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_BIOS_POST_TIMEOUT">
+<code class="descname">OPERABILITY_BIOS_POST_TIMEOUT</code><em class="property"> = 'bios-post-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_BIOS_POST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_CHASSIS_LIMIT_EXCEEDED">
+<code class="descname">OPERABILITY_CHASSIS_LIMIT_EXCEEDED</code><em class="property"> = 'chassis-limit-exceeded'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_CHASSIS_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_CONFIG">
+<code class="descname">OPERABILITY_CONFIG</code><em class="property"> = 'config'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DECOMISSIONING">
+<code class="descname">OPERABILITY_DECOMISSIONING</code><em class="property"> = 'decomissioning'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DECOMISSIONING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DEGRADED">
+<code class="descname">OPERABILITY_DEGRADED</code><em class="property"> = 'degraded'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DEGRADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DISABLED">
+<code class="descname">OPERABILITY_DISABLED</code><em class="property"> = 'disabled'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DISCOVERY">
+<code class="descname">OPERABILITY_DISCOVERY</code><em class="property"> = 'discovery'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DISCOVERY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DISCOVERY_FAILED">
+<code class="descname">OPERABILITY_DISCOVERY_FAILED</code><em class="property"> = 'discovery-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_DISCOVERY_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_EQUIPMENT_PROBLEM">
+<code class="descname">OPERABILITY_EQUIPMENT_PROBLEM</code><em class="property"> = 'equipment-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_EQUIPMENT_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_FABRIC_CONN_PROBLEM">
+<code class="descname">OPERABILITY_FABRIC_CONN_PROBLEM</code><em class="property"> = 'fabric-conn-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_FABRIC_CONN_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_FABRIC_UNSUPPORTED_CONN">
+<code class="descname">OPERABILITY_FABRIC_UNSUPPORTED_CONN</code><em class="property"> = 'fabric-unsupported-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_FABRIC_UNSUPPORTED_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_IDENTIFY">
+<code class="descname">OPERABILITY_IDENTIFY</code><em class="property"> = 'identify'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_IDENTIFY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_IDENTITY_UNESTABLISHABLE">
+<code class="descname">OPERABILITY_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_INOPERABLE">
+<code class="descname">OPERABILITY_INOPERABLE</code><em class="property"> = 'inoperable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_INOPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_LINK_ACTIVATE_BLOCKED">
+<code class="descname">OPERABILITY_LINK_ACTIVATE_BLOCKED</code><em class="property"> = 'link-activate-blocked'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_LINK_ACTIVATE_BLOCKED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_MALFORMED_FRU">
+<code class="descname">OPERABILITY_MALFORMED_FRU</code><em class="property"> = 'malformed-fru'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_MALFORMED_FRU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_NOT_SUPPORTED">
+<code class="descname">OPERABILITY_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_OPERABLE">
+<code class="descname">OPERABILITY_OPERABLE</code><em class="property"> = 'operable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_OPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_PEER_COMM_PROBLEM">
+<code class="descname">OPERABILITY_PEER_COMM_PROBLEM</code><em class="property"> = 'peer-comm-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_PEER_COMM_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_PERFORMANCE_PROBLEM">
+<code class="descname">OPERABILITY_PERFORMANCE_PROBLEM</code><em class="property"> = 'performance-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_PERFORMANCE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_POST_FAILURE">
+<code class="descname">OPERABILITY_POST_FAILURE</code><em class="property"> = 'post-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_POST_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_POWERED_OFF">
+<code class="descname">OPERABILITY_POWERED_OFF</code><em class="property"> = 'powered-off'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_POWERED_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_POWER_PROBLEM">
+<code class="descname">OPERABILITY_POWER_PROBLEM</code><em class="property"> = 'power-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_POWER_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_REMOVED">
+<code class="descname">OPERABILITY_REMOVED</code><em class="property"> = 'removed'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_REMOVED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_THERMAL_PROBLEM">
+<code class="descname">OPERABILITY_THERMAL_PROBLEM</code><em class="property"> = 'thermal-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_THERMAL_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_UNKNOWN">
+<code class="descname">OPERABILITY_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_UPGRADE_PROBLEM">
+<code class="descname">OPERABILITY_UPGRADE_PROBLEM</code><em class="property"> = 'upgrade-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_UPGRADE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_VOLTAGE_PROBLEM">
+<code class="descname">OPERABILITY_VOLTAGE_PROBLEM</code><em class="property"> = 'voltage-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPERABILITY_VOLTAGE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_ACCESSIBILITY_PROBLEM">
+<code class="descname">OPER_STATE_ACCESSIBILITY_PROBLEM</code><em class="property"> = 'accessibility-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_ACCESSIBILITY_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_AUTO_UPGRADE">
+<code class="descname">OPER_STATE_AUTO_UPGRADE</code><em class="property"> = 'auto-upgrade'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_AUTO_UPGRADE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_BIOS_POST_TIMEOUT">
+<code class="descname">OPER_STATE_BIOS_POST_TIMEOUT</code><em class="property"> = 'bios-post-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_BIOS_POST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_CHASSIS_LIMIT_EXCEEDED">
+<code class="descname">OPER_STATE_CHASSIS_LIMIT_EXCEEDED</code><em class="property"> = 'chassis-limit-exceeded'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_CHASSIS_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_CONFIG">
+<code class="descname">OPER_STATE_CONFIG</code><em class="property"> = 'config'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DECOMISSIONING">
+<code class="descname">OPER_STATE_DECOMISSIONING</code><em class="property"> = 'decomissioning'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DECOMISSIONING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DEGRADED">
+<code class="descname">OPER_STATE_DEGRADED</code><em class="property"> = 'degraded'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DEGRADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DISABLED">
+<code class="descname">OPER_STATE_DISABLED</code><em class="property"> = 'disabled'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DISCOVERY">
+<code class="descname">OPER_STATE_DISCOVERY</code><em class="property"> = 'discovery'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DISCOVERY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DISCOVERY_FAILED">
+<code class="descname">OPER_STATE_DISCOVERY_FAILED</code><em class="property"> = 'discovery-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_DISCOVERY_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_EQUIPMENT_PROBLEM">
+<code class="descname">OPER_STATE_EQUIPMENT_PROBLEM</code><em class="property"> = 'equipment-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_EQUIPMENT_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_FABRIC_CONN_PROBLEM">
+<code class="descname">OPER_STATE_FABRIC_CONN_PROBLEM</code><em class="property"> = 'fabric-conn-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_FABRIC_CONN_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_FABRIC_UNSUPPORTED_CONN">
+<code class="descname">OPER_STATE_FABRIC_UNSUPPORTED_CONN</code><em class="property"> = 'fabric-unsupported-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_FABRIC_UNSUPPORTED_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_IDENTIFY">
+<code class="descname">OPER_STATE_IDENTIFY</code><em class="property"> = 'identify'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_IDENTIFY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_IDENTITY_UNESTABLISHABLE">
+<code class="descname">OPER_STATE_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_INOPERABLE">
+<code class="descname">OPER_STATE_INOPERABLE</code><em class="property"> = 'inoperable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_INOPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_LINK_ACTIVATE_BLOCKED">
+<code class="descname">OPER_STATE_LINK_ACTIVATE_BLOCKED</code><em class="property"> = 'link-activate-blocked'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_LINK_ACTIVATE_BLOCKED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_MALFORMED_FRU">
+<code class="descname">OPER_STATE_MALFORMED_FRU</code><em class="property"> = 'malformed-fru'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_MALFORMED_FRU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_NOT_SUPPORTED">
+<code class="descname">OPER_STATE_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_OPERABLE">
+<code class="descname">OPER_STATE_OPERABLE</code><em class="property"> = 'operable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_OPERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_PEER_COMM_PROBLEM">
+<code class="descname">OPER_STATE_PEER_COMM_PROBLEM</code><em class="property"> = 'peer-comm-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_PEER_COMM_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_PERFORMANCE_PROBLEM">
+<code class="descname">OPER_STATE_PERFORMANCE_PROBLEM</code><em class="property"> = 'performance-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_PERFORMANCE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_POST_FAILURE">
+<code class="descname">OPER_STATE_POST_FAILURE</code><em class="property"> = 'post-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_POST_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_POWERED_OFF">
+<code class="descname">OPER_STATE_POWERED_OFF</code><em class="property"> = 'powered-off'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_POWERED_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_POWER_PROBLEM">
+<code class="descname">OPER_STATE_POWER_PROBLEM</code><em class="property"> = 'power-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_POWER_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_REMOVED">
+<code class="descname">OPER_STATE_REMOVED</code><em class="property"> = 'removed'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_REMOVED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_THERMAL_PROBLEM">
+<code class="descname">OPER_STATE_THERMAL_PROBLEM</code><em class="property"> = 'thermal-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_THERMAL_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_UNKNOWN">
+<code class="descname">OPER_STATE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_UPGRADE_PROBLEM">
+<code class="descname">OPER_STATE_UPGRADE_PROBLEM</code><em class="property"> = 'upgrade-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_UPGRADE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_VOLTAGE_PROBLEM">
+<code class="descname">OPER_STATE_VOLTAGE_PROBLEM</code><em class="property"> = 'voltage-problem'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.OPER_STATE_VOLTAGE_PROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_LOWER_CRITICAL">
+<code class="descname">PERF_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_LOWER_NON_CRITICAL">
+<code class="descname">PERF_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_LOWER_NON_RECOVERABLE">
+<code class="descname">PERF_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_NOT_SUPPORTED">
+<code class="descname">PERF_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_OK">
+<code class="descname">PERF_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UNKNOWN">
+<code class="descname">PERF_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UPPER_CRITICAL">
+<code class="descname">PERF_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UPPER_NON_CRITICAL">
+<code class="descname">PERF_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UPPER_NON_RECOVERABLE">
+<code class="descname">PERF_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PERF_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_DEGRADED">
+<code class="descname">POWER_DEGRADED</code><em class="property"> = 'degraded'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_DEGRADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_ERROR">
+<code class="descname">POWER_ERROR</code><em class="property"> = 'error'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_FAILED">
+<code class="descname">POWER_FAILED</code><em class="property"> = 'failed'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_NOT_SUPPORTED">
+<code class="descname">POWER_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OFF">
+<code class="descname">POWER_OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OFFDUTY">
+<code class="descname">POWER_OFFDUTY</code><em class="property"> = 'offduty'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OFFDUTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OFFLINE">
+<code class="descname">POWER_OFFLINE</code><em class="property"> = 'offline'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OFFLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OK">
+<code class="descname">POWER_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_ON">
+<code class="descname">POWER_ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_ONLINE">
+<code class="descname">POWER_ONLINE</code><em class="property"> = 'online'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_ONLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_POWER_SAVE">
+<code class="descname">POWER_POWER_SAVE</code><em class="property"> = 'power-save'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_POWER_SAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_TEST">
+<code class="descname">POWER_TEST</code><em class="property"> = 'test'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_TEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_UNKNOWN">
+<code class="descname">POWER_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.POWER_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EMPTY">
+<code class="descname">PRESENCE_EMPTY</code><em class="property"> = 'empty'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EMPTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED">
+<code class="descname">PRESENCE_EQUIPPED</code><em class="property"> = 'equipped'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_DEPRECATED">
+<code class="descname">PRESENCE_EQUIPPED_DEPRECATED</code><em class="property"> = 'equipped-deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE">
+<code class="descname">PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'equipped-identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_NOT_PRIMARY">
+<code class="descname">PRESENCE_EQUIPPED_NOT_PRIMARY</code><em class="property"> = 'equipped-not-primary'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_NOT_PRIMARY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_SLAVE">
+<code class="descname">PRESENCE_EQUIPPED_SLAVE</code><em class="property"> = 'equipped-slave'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_SLAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_UNSUPPORTED">
+<code class="descname">PRESENCE_EQUIPPED_UNSUPPORTED</code><em class="property"> = 'equipped-unsupported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_UNSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_WITH_MALFORMED_FRU">
+<code class="descname">PRESENCE_EQUIPPED_WITH_MALFORMED_FRU</code><em class="property"> = 'equipped-with-malformed-fru'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_EQUIPPED_WITH_MALFORMED_FRU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_INACCESSIBLE">
+<code class="descname">PRESENCE_INACCESSIBLE</code><em class="property"> = 'inaccessible'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_INACCESSIBLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISMATCH">
+<code class="descname">PRESENCE_MISMATCH</code><em class="property"> = 'mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE">
+<code class="descname">PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE</code><em class="property"> = 'mismatch-identity-unestablishable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISMATCH_SLAVE">
+<code class="descname">PRESENCE_MISMATCH_SLAVE</code><em class="property"> = 'mismatch-slave'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISMATCH_SLAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISSING">
+<code class="descname">PRESENCE_MISSING</code><em class="property"> = 'missing'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISSING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISSING_SLAVE">
+<code class="descname">PRESENCE_MISSING_SLAVE</code><em class="property"> = 'missing-slave'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_MISSING_SLAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_NOT_SUPPORTED">
+<code class="descname">PRESENCE_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_UNAUTHORIZED">
+<code class="descname">PRESENCE_UNAUTHORIZED</code><em class="property"> = 'unauthorized'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_UNAUTHORIZED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_UNKNOWN">
+<code class="descname">PRESENCE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.PRESENCE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_LOWER_CRITICAL">
+<code class="descname">THERMAL_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_LOWER_NON_CRITICAL">
+<code class="descname">THERMAL_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_LOWER_NON_RECOVERABLE">
+<code class="descname">THERMAL_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_NOT_SUPPORTED">
+<code class="descname">THERMAL_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_OK">
+<code class="descname">THERMAL_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UNKNOWN">
+<code class="descname">THERMAL_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UPPER_CRITICAL">
+<code class="descname">THERMAL_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UPPER_NON_CRITICAL">
+<code class="descname">THERMAL_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UPPER_NON_RECOVERABLE">
+<code class="descname">THERMAL_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.THERMAL_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_LOWER_CRITICAL">
+<code class="descname">VOLTAGE_LOWER_CRITICAL</code><em class="property"> = 'lower-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_LOWER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_LOWER_NON_CRITICAL">
+<code class="descname">VOLTAGE_LOWER_NON_CRITICAL</code><em class="property"> = 'lower-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_LOWER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_LOWER_NON_RECOVERABLE">
+<code class="descname">VOLTAGE_LOWER_NON_RECOVERABLE</code><em class="property"> = 'lower-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_LOWER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_NOT_SUPPORTED">
+<code class="descname">VOLTAGE_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_OK">
+<code class="descname">VOLTAGE_OK</code><em class="property"> = 'ok'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UNKNOWN">
+<code class="descname">VOLTAGE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UPPER_CRITICAL">
+<code class="descname">VOLTAGE_UPPER_CRITICAL</code><em class="property"> = 'upper-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UPPER_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UPPER_NON_CRITICAL">
+<code class="descname">VOLTAGE_UPPER_NON_CRITICAL</code><em class="property"> = 'upper-non-critical'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UPPER_NON_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UPPER_NON_RECOVERABLE">
+<code class="descname">VOLTAGE_UPPER_NON_RECOVERABLE</code><em class="property"> = 'upper-non-recoverable'</em><a class="headerlink" href="#ucsmsdk.mometa.security.SecurityUnit.SecurityUnitConsts.VOLTAGE_UPPER_NON_RECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.security">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.security" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.sol.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.sol package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.queryresult.html" class="btn btn-neutral" title="ucsmsdk.mometa.queryresult package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

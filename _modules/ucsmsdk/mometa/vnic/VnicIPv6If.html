@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.vnic.VnicIPv6If &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.vnic.VnicIPv6If</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.mometa.vnic.VnicIPv6If</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;This module contains the general information for VnicIPv6If ManagedObject.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+
+
+<div class="viewcode-block" id="VnicIPv6IfConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.vnic.html#ucsmsdk.mometa.vnic.VnicIPv6If.VnicIPv6IfConsts">[docs]</a><span class="k">class</span> <span class="nc">VnicIPv6IfConsts</span><span class="p">():</span>
+    <span class="n">OPER_STATE_DOWN</span> <span class="o">=</span> <span class="s">&quot;down&quot;</span>
+    <span class="n">OPER_STATE_FAILED</span> <span class="o">=</span> <span class="s">&quot;failed&quot;</span>
+    <span class="n">OPER_STATE_INDETERMINATE</span> <span class="o">=</span> <span class="s">&quot;indeterminate&quot;</span>
+    <span class="n">OPER_STATE_UP</span> <span class="o">=</span> <span class="s">&quot;up&quot;</span>
+    <span class="n">OWNER_CONN_POLICY</span> <span class="o">=</span> <span class="s">&quot;conn_policy&quot;</span>
+    <span class="n">OWNER_INITIATOR_POLICY</span> <span class="o">=</span> <span class="s">&quot;initiator_policy&quot;</span>
+    <span class="n">OWNER_LOGICAL</span> <span class="o">=</span> <span class="s">&quot;logical&quot;</span>
+    <span class="n">OWNER_PHYSICAL</span> <span class="o">=</span> <span class="s">&quot;physical&quot;</span>
+    <span class="n">OWNER_POLICY</span> <span class="o">=</span> <span class="s">&quot;policy&quot;</span>
+    <span class="n">OWNER_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+    <span class="n">SHARING_COMMUNITY</span> <span class="o">=</span> <span class="s">&quot;community&quot;</span>
+    <span class="n">SHARING_ISOLATED</span> <span class="o">=</span> <span class="s">&quot;isolated&quot;</span>
+    <span class="n">SHARING_NONE</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span>
+    <span class="n">SHARING_PRIMARY</span> <span class="o">=</span> <span class="s">&quot;primary&quot;</span>
+    <span class="n">SWITCH_ID_A</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span>
+    <span class="n">SWITCH_ID_B</span> <span class="o">=</span> <span class="s">&quot;B&quot;</span>
+    <span class="n">SWITCH_ID_NONE</span> <span class="o">=</span> <span class="s">&quot;NONE&quot;</span>
+    <span class="n">TYPE_ETHER</span> <span class="o">=</span> <span class="s">&quot;ether&quot;</span>
+    <span class="n">TYPE_FC</span> <span class="o">=</span> <span class="s">&quot;fc&quot;</span>
+    <span class="n">TYPE_IPC</span> <span class="o">=</span> <span class="s">&quot;ipc&quot;</span>
+    <span class="n">TYPE_SCSI</span> <span class="o">=</span> <span class="s">&quot;scsi&quot;</span>
+    <span class="n">TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+
+</div>
+<div class="viewcode-block" id="VnicIPv6If"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.vnic.html#ucsmsdk.mometa.vnic.VnicIPv6If.VnicIPv6If">[docs]</a><span class="k">class</span> <span class="nc">VnicIPv6If</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is VnicIPv6If class.&quot;&quot;&quot;</span>
+
+    <span class="n">consts</span> <span class="o">=</span> <span class="n">VnicIPv6IfConsts</span><span class="p">()</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([])</span>
+
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;VnicIPv6If&quot;</span><span class="p">,</span> <span class="s">&quot;vnicIPv6If&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x3f</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;admin&quot;</span><span class="p">,</span> <span class="s">&quot;ls-compute&quot;</span><span class="p">,</span> <span class="s">&quot;ls-config&quot;</span><span class="p">,</span> <span class="s">&quot;ls-network&quot;</span><span class="p">,</span> <span class="s">&quot;ls-server&quot;</span><span class="p">,</span> <span class="s">&quot;ls-storage&quot;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="s">u&#39;vnicIpV6StaticAddr&#39;</span><span class="p">],</span> <span class="p">[</span><span class="bp">None</span><span class="p">])</span>
+
+    <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;addr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;addr&quot;</span><span class="p">,</span> <span class="s">&quot;addr&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;config_qualifier&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;config_qualifier&quot;</span><span class="p">,</span> <span class="s">&quot;configQualifier&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((defaultValue|not-applicable|adaptor-protected-eth-capability|vif-resources-overprovisioned|ungrouped-domain|unsupported-nvgre|unresolved-remote-vlan-name|invalid-wwn|service-profile-virtualization-conflict|unsupported-roce-netflow|unsupported-vxlan-netflow|fcoe-capacity|wwpn-derivation-virtualized-port|unresolved-vlan-name|vnic-virtualization-netflow-conflict|unsupported-vxlan-usnic|pinning-vlan-mismatch|adaptor-requirement|vnic-not-ha-ready|missing-ipv4-inband-mgmt-addr|unsupported-nvgre-dynamic-vnic|unresolved-remote-vsan-name|mac-derivation-virtualized-port|vnic-virtualization-conflict|unsupported-roce|unsupported-nvgre-netflow|vnic-vlan-assignment-error|insufficient-vhba-capacity|inaccessible-vlan|unable-to-update-ucsm|soft-pinning-vlan-mismatch|unsupported-nvgre-vmq|connection-placement|vnic-vcon-provisioning-change|missing-ipv6-inband-mgmt-addr|unsupported-nvgre-usnic|missing-primary-vlan|adaptor-fcoe-capability|vfc-vnic-pvlan-conflict|virtualization-not-supported|unsupported-vxlan|unresolved-vsan-name|insufficient-vnic-capacity|unassociated-vlan|unsupported-roce-vmq|unsupported-vxlan-vmq|dynamic-vf-vnic|wwpn-assignment|missing-ipv4-addr|unsupported-vxlan-dynamic-vnic|pinned-target-misconfig),){0,50}(defaultValue|not-applicable|adaptor-protected-eth-capability|vif-resources-overprovisioned|ungrouped-domain|unsupported-nvgre|unresolved-remote-vlan-name|invalid-wwn|service-profile-virtualization-conflict|unsupported-roce-netflow|unsupported-vxlan-netflow|fcoe-capacity|wwpn-derivation-virtualized-port|unresolved-vlan-name|vnic-virtualization-netflow-conflict|unsupported-vxlan-usnic|pinning-vlan-mismatch|adaptor-requirement|vnic-not-ha-ready|missing-ipv4-inband-mgmt-addr|unsupported-nvgre-dynamic-vnic|unresolved-remote-vsan-name|mac-derivation-virtualized-port|vnic-virtualization-conflict|unsupported-roce|unsupported-nvgre-netflow|vnic-vlan-assignment-error|insufficient-vhba-capacity|inaccessible-vlan|unable-to-update-ucsm|soft-pinning-vlan-mismatch|unsupported-nvgre-vmq|connection-placement|vnic-vcon-provisioning-change|missing-ipv6-inband-mgmt-addr|unsupported-nvgre-usnic|missing-primary-vlan|adaptor-fcoe-capability|vfc-vnic-pvlan-conflict|virtualization-not-supported|unsupported-vxlan|unresolved-vsan-name|insufficient-vnic-capacity|unassociated-vlan|unsupported-roce-vmq|unsupported-vxlan-vmq|dynamic-vf-vnic|wwpn-assignment|missing-ipv4-addr|unsupported-vxlan-dynamic-vnic|pinned-target-misconfig){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[\-\.:_a-zA-Z0-9]{0,16}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;oper_primary_vnet_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_primary_vnet_dn&quot;</span><span class="p">,</span> <span class="s">&quot;operPrimaryVnetDn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;oper_primary_vnet_name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_primary_vnet_name&quot;</span><span class="p">,</span> <span class="s">&quot;operPrimaryVnetName&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;oper_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_state&quot;</span><span class="p">,</span> <span class="s">&quot;operState&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;down&quot;</span><span class="p">,</span> <span class="s">&quot;failed&quot;</span><span class="p">,</span> <span class="s">&quot;indeterminate&quot;</span><span class="p">,</span> <span class="s">&quot;up&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;oper_vnet_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_vnet_dn&quot;</span><span class="p">,</span> <span class="s">&quot;operVnetDn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;oper_vnet_name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_vnet_name&quot;</span><span class="p">,</span> <span class="s">&quot;operVnetName&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;owner&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;owner&quot;</span><span class="p">,</span> <span class="s">&quot;owner&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;conn_policy&quot;</span><span class="p">,</span> <span class="s">&quot;initiator_policy&quot;</span><span class="p">,</span> <span class="s">&quot;logical&quot;</span><span class="p">,</span> <span class="s">&quot;physical&quot;</span><span class="p">,</span> <span class="s">&quot;policy&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;pub_nw_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;pub_nw_id&quot;</span><span class="p">,</span> <span class="s">&quot;pubNwId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sharing&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sharing&quot;</span><span class="p">,</span> <span class="s">&quot;sharing&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;community&quot;</span><span class="p">,</span> <span class="s">&quot;isolated&quot;</span><span class="p">,</span> <span class="s">&quot;none&quot;</span><span class="p">,</span> <span class="s">&quot;primary&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x20</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;switch_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;switch_id&quot;</span><span class="p">,</span> <span class="s">&quot;switchId&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="s">&quot;NONE&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ether&quot;</span><span class="p">,</span> <span class="s">&quot;fc&quot;</span><span class="p">,</span> <span class="s">&quot;ipc&quot;</span><span class="p">,</span> <span class="s">&quot;scsi&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;vnet&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;vnet&quot;</span><span class="p">,</span> <span class="s">&quot;vnet&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;1-4093&quot;</span><span class="p">]),</span> 
+    <span class="p">}</span>
+
+    <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;addr&quot;</span><span class="p">:</span> <span class="s">&quot;addr&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;configQualifier&quot;</span><span class="p">:</span> <span class="s">&quot;config_qualifier&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;operPrimaryVnetDn&quot;</span><span class="p">:</span> <span class="s">&quot;oper_primary_vnet_dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;operPrimaryVnetName&quot;</span><span class="p">:</span> <span class="s">&quot;oper_primary_vnet_name&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;operState&quot;</span><span class="p">:</span> <span class="s">&quot;oper_state&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;operVnetDn&quot;</span><span class="p">:</span> <span class="s">&quot;oper_vnet_dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;operVnetName&quot;</span><span class="p">:</span> <span class="s">&quot;oper_vnet_name&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;owner&quot;</span><span class="p">:</span> <span class="s">&quot;owner&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;pubNwId&quot;</span><span class="p">:</span> <span class="s">&quot;pub_nw_id&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sharing&quot;</span><span class="p">:</span> <span class="s">&quot;sharing&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;switchId&quot;</span><span class="p">:</span> <span class="s">&quot;switch_id&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;vnet&quot;</span><span class="p">:</span> <span class="s">&quot;vnet&quot;</span><span class="p">,</span> 
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addr</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_qualifier</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oper_primary_vnet_dn</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oper_primary_vnet_name</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oper_state</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oper_vnet_dn</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oper_vnet_name</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pub_nw_id</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sacl</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sharing</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">switch_id</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vnet</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;VnicIPv6If&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

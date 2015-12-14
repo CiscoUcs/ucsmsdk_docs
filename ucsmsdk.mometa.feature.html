@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.feature package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.firmware package" href="ucsmsdk.mometa.firmware.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.fcpool package" href="ucsmsdk.mometa.fcpool.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.feature package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.feature.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-feature-package">
+<h1>ucsmsdk.mometa.feature package<a class="headerlink" href="#ucsmsdk-mometa-feature-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureContextEp">
+<span id="ucsmsdk-mometa-feature-featurecontextep-module"></span><h2>ucsmsdk.mometa.feature.FeatureContextEp module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureContextEp" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureContextEp ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureContextEp.</code><code class="descname">FeatureContextEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureContextEp.html#FeatureContextEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureContextEp class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEpConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'sacl': 'sacl', 'rn': 'rn', 'status': 'status', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x142cba850&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x142cbadd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x142cbafd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x142cba550&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x142cba650&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEpConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureContextEp.</code><code class="descname">FeatureContextEpConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureContextEp.html#FeatureContextEpConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureContextEp.FeatureContextEpConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureDefinition">
+<span id="ucsmsdk-mometa-feature-featuredefinition-module"></span><h2>ucsmsdk.mometa.feature.FeatureDefinition module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureDefinition" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureDefinition ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureDefinition.</code><code class="descname">FeatureDefinition</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>revision</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureDefinition.html#FeatureDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureDefinition class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinitionConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name', u'revision'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'description': 'description', 'name': 'name', 'sacl': 'sacl', 'rn': 'rn', 'revision': 'revision', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7d450&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7d4d0&gt;, 'description': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7ded0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7d9d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7dfd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7d790&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7d610&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14da7de10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinition.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinitionConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureDefinition.</code><code class="descname">FeatureDefinitionConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureDefinition.html#FeatureDefinitionConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinition.FeatureDefinitionConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureDefinitionInstance">
+<span id="ucsmsdk-mometa-feature-featuredefinitioninstance-module"></span><h2>ucsmsdk.mometa.feature.FeatureDefinitionInstance module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureDefinitionInstance" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureDefinitionInstance ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureDefinitionInstance.</code><code class="descname">FeatureDefinitionInstance</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>revision</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureDefinitionInstance.html#FeatureDefinitionInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureDefinitionInstance class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name', u'revision'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'name': 'name', 'supportability': 'supportability', 'sacl': 'sacl', 'rn': 'rn', 'revision': 'revision', 'targetDn': 'target_dn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e210&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e390&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e050&gt;, 'supportability': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98ecd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98ee50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98edd0&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e990&gt;, 'target_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98ed50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e4d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstance.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureDefinitionInstance.</code><code class="descname">FeatureDefinitionInstanceConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureDefinitionInstance.html#FeatureDefinitionInstanceConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts.SUPPORTABILITY_DEPRECATED">
+<code class="descname">SUPPORTABILITY_DEPRECATED</code><em class="property"> = 'deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts.SUPPORTABILITY_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts.SUPPORTABILITY_NOT_SUPPORTED">
+<code class="descname">SUPPORTABILITY_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts.SUPPORTABILITY_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts.SUPPORTABILITY_SUPPORTED">
+<code class="descname">SUPPORTABILITY_SUPPORTED</code><em class="property"> = 'supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionInstance.FeatureDefinitionInstanceConsts.SUPPORTABILITY_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureDefinitionRef">
+<span id="ucsmsdk-mometa-feature-featuredefinitionref-module"></span><h2>ucsmsdk.mometa.feature.FeatureDefinitionRef module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureDefinitionRef" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureDefinitionRef ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureDefinitionRef.</code><code class="descname">FeatureDefinitionRef</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>revision</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureDefinitionRef.html#FeatureDefinitionRef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureDefinitionRef class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name', u'revision'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'name': 'name', 'supportability': 'supportability', 'sacl': 'sacl', 'rn': 'rn', 'revision': 'revision', 'targetDn': 'target_dn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x120581290&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x12a23b650&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1205815d0&gt;, 'supportability': &lt;ucscoremeta.MoPropertyMeta object at 0x12a23b090&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1244d8650&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x120581250&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x120581890&gt;, 'target_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x12a23b390&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x12832a1d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRef.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureDefinitionRef.</code><code class="descname">FeatureDefinitionRefConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureDefinitionRef.html#FeatureDefinitionRefConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts.SUPPORTABILITY_DEPRECATED">
+<code class="descname">SUPPORTABILITY_DEPRECATED</code><em class="property"> = 'deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts.SUPPORTABILITY_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts.SUPPORTABILITY_NOT_SUPPORTED">
+<code class="descname">SUPPORTABILITY_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts.SUPPORTABILITY_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts.SUPPORTABILITY_SUPPORTED">
+<code class="descname">SUPPORTABILITY_SUPPORTED</code><em class="property"> = 'supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureDefinitionRef.FeatureDefinitionRefConsts.SUPPORTABILITY_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureFruCapProviderInstance">
+<span id="ucsmsdk-mometa-feature-featurefrucapproviderinstance-module"></span><h2>ucsmsdk.mometa.feature.FeatureFruCapProviderInstance module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureFruCapProviderInstance" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureFruCapProviderInstance ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.</code><code class="descname">FeatureFruCapProviderInstance</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>vendor</em>, <em>model</em>, <em>revision</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureFruCapProviderInstance.html#FeatureFruCapProviderInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureFruCapProviderInstance class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'model', u'vendor', u'revision'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'targetDn': 'target_dn', 'vendor': 'vendor', 'supportability': 'supportability', 'sacl': 'sacl', 'model': 'model', 'revision': 'revision', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98eb90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98eb50&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e450&gt;, 'target_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e110&gt;, 'supportability': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98eb10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e2d0&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98ea50&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98e890&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d98ea90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x12a09fb10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstance.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.</code><code class="descname">FeatureFruCapProviderInstanceConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureFruCapProviderInstance.html#FeatureFruCapProviderInstanceConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts.SUPPORTABILITY_DEPRECATED">
+<code class="descname">SUPPORTABILITY_DEPRECATED</code><em class="property"> = 'deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts.SUPPORTABILITY_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts.SUPPORTABILITY_NOT_SUPPORTED">
+<code class="descname">SUPPORTABILITY_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts.SUPPORTABILITY_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts.SUPPORTABILITY_SUPPORTED">
+<code class="descname">SUPPORTABILITY_SUPPORTED</code><em class="property"> = 'supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderInstance.FeatureFruCapProviderInstanceConsts.SUPPORTABILITY_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureFruCapProviderRef">
+<span id="ucsmsdk-mometa-feature-featurefrucapproviderref-module"></span><h2>ucsmsdk.mometa.feature.FeatureFruCapProviderRef module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureFruCapProviderRef" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureFruCapProviderRef ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureFruCapProviderRef.</code><code class="descname">FeatureFruCapProviderRef</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>vendor</em>, <em>model</em>, <em>revision</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureFruCapProviderRef.html#FeatureFruCapProviderRef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureFruCapProviderRef class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'model', u'vendor', u'revision'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'targetDn': 'target_dn', 'vendor': 'vendor', 'supportability': 'supportability', 'sacl': 'sacl', 'model': 'model', 'revision': 'revision', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x12506ba10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x138984bd0&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x138984350&gt;, 'target_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x138984290&gt;, 'supportability': &lt;ucscoremeta.MoPropertyMeta object at 0x138984190&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x129936510&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x12506b790&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x12506be10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1299367d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x12506b690&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRef.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureFruCapProviderRef.</code><code class="descname">FeatureFruCapProviderRefConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureFruCapProviderRef.html#FeatureFruCapProviderRefConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts.SUPPORTABILITY_DEPRECATED">
+<code class="descname">SUPPORTABILITY_DEPRECATED</code><em class="property"> = 'deprecated'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts.SUPPORTABILITY_DEPRECATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts.SUPPORTABILITY_NOT_SUPPORTED">
+<code class="descname">SUPPORTABILITY_NOT_SUPPORTED</code><em class="property"> = 'not-supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts.SUPPORTABILITY_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts.SUPPORTABILITY_SUPPORTED">
+<code class="descname">SUPPORTABILITY_SUPPORTED</code><em class="property"> = 'supported'</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureFruCapProviderRef.FeatureFruCapProviderRefConsts.SUPPORTABILITY_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureProvider">
+<span id="ucsmsdk-mometa-feature-featureprovider-module"></span><h2>ucsmsdk.mometa.feature.FeatureProvider module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureProvider" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureProvider ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureProvider.</code><code class="descname">FeatureProvider</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureProvider.html#FeatureProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureProvider class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureProvider.FeatureProviderConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'name': 'name', 'sacl': 'sacl', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x13cbbe150&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13cbbef90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x13cbbe9d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x13cbbec50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x13cbbef10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x13cbbe750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProvider.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureProvider.FeatureProviderConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureProvider.</code><code class="descname">FeatureProviderConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureProvider.html#FeatureProviderConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProvider.FeatureProviderConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature.FeatureProviderInstance">
+<span id="ucsmsdk-mometa-feature-featureproviderinstance-module"></span><h2>ucsmsdk.mometa.feature.FeatureProviderInstance module<a class="headerlink" href="#module-ucsmsdk.mometa.feature.FeatureProviderInstance" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for FeatureProviderInstance ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureProviderInstance.</code><code class="descname">FeatureProviderInstance</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureProviderInstance.html#FeatureProviderInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is FeatureProviderInstance class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstanceConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'name': 'name', 'sacl': 'sacl', 'operProviderDn': 'oper_provider_dn', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e380c10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14e3807d0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x14e380750&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14e380850&gt;, 'oper_provider_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e380310&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e380910&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14e380110&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstance.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstanceConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.feature.FeatureProviderInstance.</code><code class="descname">FeatureProviderInstanceConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/feature/FeatureProviderInstance.html#FeatureProviderInstanceConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.feature.FeatureProviderInstance.FeatureProviderInstanceConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.feature">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.feature" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.firmware.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.firmware package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.fcpool.html" class="btn btn-neutral" title="ucsmsdk.mometa.fcpool package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

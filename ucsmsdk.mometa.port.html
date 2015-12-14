@@ -1,0 +1,1553 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.port package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.power package" href="ucsmsdk.mometa.power.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.policy package" href="ucsmsdk.mometa.policy.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.port package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.port.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-port-package">
+<h1>ucsmsdk.mometa.port package<a class="headerlink" href="#ucsmsdk-mometa-port-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortDomainEp">
+<span id="ucsmsdk-mometa-port-portdomainep-module"></span><h2>ucsmsdk.mometa.port.PortDomainEp module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortDomainEp" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortDomainEp ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEp">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortDomainEp.</code><code class="descname">PortDomainEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortDomainEp.html#PortDomainEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortDomainEp class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'ifType': 'if_type', 'ifRole': 'if_role', 'locale': 'locale', 'sacl': 'sacl', 'peerDn': 'peer_dn', 'transport': 'transport', 'childAction': 'child_action', 'epDn': 'ep_dn', 'name': 'name', 'rn': 'rn', 'type': 'type'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1653578d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6d7c90&gt;, 'locale': &lt;ucscoremeta.MoPropertyMeta object at 0x165357cd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6d7d10&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x165357910&gt;, 'transport': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6d7b90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x165357310&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x165357c10&gt;, 'peer_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x165357210&gt;, 'if_type': &lt;ucscoremeta.MoPropertyMeta object at 0x165357890&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165357390&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x17b6d7e90&gt;, 'if_role': &lt;ucscoremeta.MoPropertyMeta object at 0x165357290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortDomainEp.</code><code class="descname">PortDomainEpConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortDomainEp.html#PortDomainEpConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_DIAG">
+<code class="descname">IF_ROLE_DIAG</code><em class="property"> = 'diag'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_DIAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_FCOE_NAS_STORAGE">
+<code class="descname">IF_ROLE_FCOE_NAS_STORAGE</code><em class="property"> = 'fcoe-nas-storage'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_FCOE_NAS_STORAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_FCOE_STORAGE">
+<code class="descname">IF_ROLE_FCOE_STORAGE</code><em class="property"> = 'fcoe-storage'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_FCOE_STORAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_FCOE_UPLINK">
+<code class="descname">IF_ROLE_FCOE_UPLINK</code><em class="property"> = 'fcoe-uplink'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_FCOE_UPLINK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_MGMT">
+<code class="descname">IF_ROLE_MGMT</code><em class="property"> = 'mgmt'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_MGMT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_MONITOR">
+<code class="descname">IF_ROLE_MONITOR</code><em class="property"> = 'monitor'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_MONITOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_NAS_STORAGE">
+<code class="descname">IF_ROLE_NAS_STORAGE</code><em class="property"> = 'nas-storage'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_NAS_STORAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_NETWORK">
+<code class="descname">IF_ROLE_NETWORK</code><em class="property"> = 'network'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_NETWORK_FCOE_UPLINK">
+<code class="descname">IF_ROLE_NETWORK_FCOE_UPLINK</code><em class="property"> = 'network-fcoe-uplink'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_NETWORK_FCOE_UPLINK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_SERVER">
+<code class="descname">IF_ROLE_SERVER</code><em class="property"> = 'server'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_SERVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_SERVICE">
+<code class="descname">IF_ROLE_SERVICE</code><em class="property"> = 'service'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_SERVICE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_STORAGE">
+<code class="descname">IF_ROLE_STORAGE</code><em class="property"> = 'storage'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_STORAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_UNKNOWN">
+<code class="descname">IF_ROLE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_ROLE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_AGGREGATION">
+<code class="descname">IF_TYPE_AGGREGATION</code><em class="property"> = 'aggregation'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_AGGREGATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_PHYSICAL">
+<code class="descname">IF_TYPE_PHYSICAL</code><em class="property"> = 'physical'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_PHYSICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_UNKNOWN">
+<code class="descname">IF_TYPE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_VIRTUAL">
+<code class="descname">IF_TYPE_VIRTUAL</code><em class="property"> = 'virtual'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortDomainEp.PortDomainEpConsts.IF_TYPE_VIRTUAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortGroup">
+<span id="ucsmsdk-mometa-port-portgroup-module"></span><h2>ucsmsdk.mometa.port.PortGroup module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortGroup" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortGroup ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroup">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortGroup.</code><code class="descname">PortGroup</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortGroup.html#PortGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortGroup class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroup.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortGroup.PortGroupConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroup.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroup.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroup.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroup.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'type'])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroup.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroup.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'name': 'name', 'locale': 'locale', 'sacl': 'sacl', 'rn': 'rn', 'type': 'type', 'transport': 'transport', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroup.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroup.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2550&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2490&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2350&gt;, 'locale': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2810&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2290&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb22d0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2e50&gt;, 'transport': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcb2fd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x160ef0910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroup.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortGroup.</code><code class="descname">PortGroupConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortGroup.html#PortGroupConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_ADAPTOR_EXT">
+<code class="descname">TYPE_ADAPTOR_EXT</code><em class="property"> = 'adaptor-ext'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_ADAPTOR_EXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_ADAPTOR_PC">
+<code class="descname">TYPE_ADAPTOR_PC</code><em class="property"> = 'adaptor-pc'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_ADAPTOR_PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_FABRIC">
+<code class="descname">TYPE_FABRIC</code><em class="property"> = 'fabric'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_FABRIC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_FABRIC_PC">
+<code class="descname">TYPE_FABRIC_PC</code><em class="property"> = 'fabric-pc'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_FABRIC_PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_HOST">
+<code class="descname">TYPE_HOST</code><em class="property"> = 'host'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_HOST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_HOST_PC">
+<code class="descname">TYPE_HOST_PC</code><em class="property"> = 'host-pc'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_HOST_PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_SERVER_PC">
+<code class="descname">TYPE_SERVER_PC</code><em class="property"> = 'server-pc'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_SERVER_PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_SWITCH_ETHER">
+<code class="descname">TYPE_SWITCH_ETHER</code><em class="property"> = 'switch-ether'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_SWITCH_ETHER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_SWITCH_FC">
+<code class="descname">TYPE_SWITCH_FC</code><em class="property"> = 'switch-fc'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortGroup.PortGroupConsts.TYPE_SWITCH_FC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortPIoFsm">
+<span id="ucsmsdk-mometa-port-portpiofsm-module"></span><h2>ucsmsdk.mometa.port.PortPIoFsm module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortPIoFsm" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortPIoFsm ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortPIoFsm.</code><code class="descname">PortPIoFsm</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortPIoFsm.html#PortPIoFsm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortPIoFsm class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'fsmStatus': 'fsm_status', 'instanceId': 'instance_id', 'sacl': 'sacl', 'completionTime': 'completion_time', 'rn': 'rn', 'childAction': 'child_action', 'descr': 'descr', 'currentFsm': 'current_fsm', 'rmtErrCode': 'rmt_err_code', 'rmtRslt': 'rmt_rslt', 'progress': 'progress', 'rmtErrDescr': 'rmt_err_descr'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x164bafd90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15bb41f50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15bb41f10&gt;, 'rmt_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x164bafd10&gt;, 'completion_time': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540690&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x164baf5d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540650&gt;, 'rmt_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x164baf350&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540f90&gt;, 'current_fsm': &lt;ucscoremeta.MoPropertyMeta object at 0x16c5405d0&gt;, 'rmt_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x164bafcd0&gt;, 'instance_id': &lt;ucscoremeta.MoPropertyMeta object at 0x164baf510&gt;, 'progress': &lt;ucscoremeta.MoPropertyMeta object at 0x164bafe10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15bb41c10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortPIoFsm.</code><code class="descname">PortPIoFsmConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortPIoFsm.html#PortPIoFsmConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.COMPLETION_TIME_">
+<code class="descname">COMPLETION_TIME_</code><em class="property"> = ''</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.COMPLETION_TIME_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.CURRENT_FSM_IN_COMPAT_SFP_PRESENCE">
+<code class="descname">CURRENT_FSM_IN_COMPAT_SFP_PRESENCE</code><em class="property"> = 'InCompatSfpPresence'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.CURRENT_FSM_IN_COMPAT_SFP_PRESENCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.CURRENT_FSM_IN_COMPAT_SFP_REPLACED">
+<code class="descname">CURRENT_FSM_IN_COMPAT_SFP_REPLACED</code><em class="property"> = 'InCompatSfpReplaced'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.CURRENT_FSM_IN_COMPAT_SFP_REPLACED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.CURRENT_FSM_NOP">
+<code class="descname">CURRENT_FSM_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.CURRENT_FSM_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_FAIL">
+<code class="descname">FSM_STATUS_FAIL</code><em class="property"> = 'fail'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_IN_PROGRESS">
+<code class="descname">FSM_STATUS_IN_PROGRESS</code><em class="property"> = 'inProgress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_NOP">
+<code class="descname">FSM_STATUS_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_PENDING">
+<code class="descname">FSM_STATUS_PENDING</code><em class="property"> = 'pending'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_PENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_SKIP">
+<code class="descname">FSM_STATUS_SKIP</code><em class="property"> = 'skip'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_SKIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_SUCCESS">
+<code class="descname">FSM_STATUS_SUCCESS</code><em class="property"> = 'success'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_THROTTLED">
+<code class="descname">FSM_STATUS_THROTTLED</code><em class="property"> = 'throttled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.FSM_STATUS_THROTTLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_2FA_AUTH_RETRY">
+<code class="descname">RMT_ERR_CODE_ERR_2FA_AUTH_RETRY</code><em class="property"> = 'ERR-2fa-auth-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_2FA_AUTH_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR</code><em class="property"> = 'ERR-aaa-config-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACCT_REALM_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_ACCT_REALM_SET_ERROR</code><em class="property"> = 'ERR-acct-realm-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACCT_REALM_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_FAILED">
+<code class="descname">RMT_ERR_CODE_ERR_ACTIVATE_FAILED</code><em class="property"> = 'ERR-ACTIVATE-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS</code><em class="property"> = 'ERR-ACTIVATE-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_RETRY">
+<code class="descname">RMT_ERR_CODE_ERR_ACTIVATE_RETRY</code><em class="property"> = 'ERR-ACTIVATE-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ADMIN_PASSWD_SET">
+<code class="descname">RMT_ERR_CODE_ERR_ADMIN_PASSWD_SET</code><em class="property"> = 'ERR-admin-passwd-set'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ADMIN_PASSWD_SET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTHENTICATION">
+<code class="descname">RMT_ERR_CODE_ERR_AUTHENTICATION</code><em class="property"> = 'ERR-authentication'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTHENTICATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTHORIZATION_REQUIRED">
+<code class="descname">RMT_ERR_CODE_ERR_AUTHORIZATION_REQUIRED</code><em class="property"> = 'ERR-authorization-required'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTHORIZATION_REQUIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTH_ISSUE">
+<code class="descname">RMT_ERR_CODE_ERR_AUTH_ISSUE</code><em class="property"> = 'ERR-auth-issue'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTH_ISSUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_AUTH_REALM_GET_ERROR</code><em class="property"> = 'ERR-auth-realm-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_AUTH_REALM_SET_ERROR</code><em class="property"> = 'ERR-auth-realm-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND">
+<code class="descname">RMT_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND</code><em class="property"> = 'ERR-BIOS-network-boot-order-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS">
+<code class="descname">RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS</code><em class="property"> = 'ERR-BIOS-TOKENS-OLD-BIOS'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC">
+<code class="descname">RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC</code><em class="property"> = 'ERR-BIOS-TOKENS-OLD-CIMC'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE">
+<code class="descname">RMT_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE</code><em class="property"> = 'ERR-BOARDCTRLUPDATE-ignore'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED">
+<code class="descname">RMT_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED</code><em class="property"> = 'ERR-cli-session-limit-reached'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_KEYRING">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_KEYRING</code><em class="property"> = 'ERR-create-keyring'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_KEYRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_LOCALE</code><em class="property"> = 'ERR-create-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_ROLE</code><em class="property"> = 'ERR-create-role'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_TP">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_TP</code><em class="property"> = 'ERR-create-tp'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_TP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_USER">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_USER</code><em class="property"> = 'ERR-create-user'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_CREATE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_LOCALE</code><em class="property"> = 'ERR-delete-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_ROLE</code><em class="property"> = 'ERR-delete-role'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_SESSION">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_SESSION</code><em class="property"> = 'ERR-delete-session'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_SESSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_USER">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_USER</code><em class="property"> = 'ERR-delete-user'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DELETE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-memtest-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-network-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAG_CANCELLED">
+<code class="descname">RMT_ERR_CODE_ERR_DIAG_CANCELLED</code><em class="property"> = 'ERR-DIAG-cancelled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAG_CANCELLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAG_FSM_RESTARTED">
+<code class="descname">RMT_ERR_CODE_ERR_DIAG_FSM_RESTARTED</code><em class="property"> = 'ERR-DIAG-fsm-restarted'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAG_FSM_RESTARTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAG_TEST_FAILED">
+<code class="descname">RMT_ERR_CODE_ERR_DIAG_TEST_FAILED</code><em class="property"> = 'ERR-DIAG-test-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DIAG_TEST_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE</code><em class="property"> = 'ERR-DNLD-authentication-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH</code><em class="property"> = 'ERR-DNLD-hostkey-mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_INVALID_IMAGE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_INVALID_IMAGE</code><em class="property"> = 'ERR-DNLD-invalid-image'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_INVALID_IMAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_FILE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_NO_FILE</code><em class="property"> = 'ERR-DNLD-no-file'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_SPACE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_NO_SPACE</code><em class="property"> = 'ERR-DNLD-no-space'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_SPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_USB_UNMOUNTED">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_USB_UNMOUNTED</code><em class="property"> = 'ERR-DNLD-usb-unmounted'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNLD_USB_UNMOUNTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNS_DELETE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_DNS_DELETE_ERROR</code><em class="property"> = 'ERR-DNS-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNS_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNS_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_DNS_GET_ERROR</code><em class="property"> = 'ERR-DNS-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_DNS_SET_ERROR</code><em class="property"> = 'ERR-DNS-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DNS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DOWNGRADE_FAIL">
+<code class="descname">RMT_ERR_CODE_ERR_DOWNGRADE_FAIL</code><em class="property"> = 'ERR-downgrade-fail'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_DOWNGRADE_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS</code><em class="property"> = 'ERR-efi-Diagnostics--in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ENABLE_MGMT_CONN">
+<code class="descname">RMT_ERR_CODE_ERR_ENABLE_MGMT_CONN</code><em class="property"> = 'ERR-enable-mgmt-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ENABLE_MGMT_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_EP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_EP_SET_ERROR</code><em class="property"> = 'ERR-ep-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_EP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT">
+<code class="descname">RMT_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT</code><em class="property"> = 'ERR-FILTER-illegal-format'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_FSM_NO_SUCH_STATE">
+<code class="descname">RMT_ERR_CODE_ERR_FSM_NO_SUCH_STATE</code><em class="property"> = 'ERR-FSM-no-such-state'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_FSM_NO_SUCH_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS">
+<code class="descname">RMT_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS</code><em class="property"> = 'ERR-get-max-http-user-sessions'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH">
+<code class="descname">RMT_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH</code><em class="property"> = 'ERR-HOST-fru-identity-mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HTTPS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_HTTPS_SET_ERROR</code><em class="property"> = 'ERR-HTTPS-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HTTPS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HTTP_INITIALIZING">
+<code class="descname">RMT_ERR_CODE_ERR_HTTP_INITIALIZING</code><em class="property"> = 'ERR-http-initializing'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HTTP_INITIALIZING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HTTP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_HTTP_SET_ERROR</code><em class="property"> = 'ERR-HTTP-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_HTTP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS</code><em class="property"> = 'ERR-IBMC-analyze-results'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR</code><em class="property"> = 'ERR-IBMC-connector-info-retrieval-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECT_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_CONNECT_ERROR</code><em class="property"> = 'ERR-IBMC-connect-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECT_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR</code><em class="property"> = 'ERR-IBMC-fru-retrieval-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG</code><em class="property"> = 'ERR-IBMC-invalid-end-point-config'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY</code><em class="property"> = 'ERR-IBMC-results-not-ready'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED">
+<code class="descname">RMT_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED</code><em class="property"> = 'ERR-insufficiently-equipped'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_INTERNAL_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_INTERNAL_ERROR</code><em class="property"> = 'ERR-internal-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_INTERNAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_DELETE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_DELETE_ERROR</code><em class="property"> = 'ERR-ldap-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_GET_ERROR</code><em class="property"> = 'ERR-ldap-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR</code><em class="property"> = 'ERR-ldap-group-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR</code><em class="property"> = 'ERR-ldap-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_SET_ERROR</code><em class="property"> = 'ERR-ldap-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LDAP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LOCALE_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LOCALE_SET_ERROR</code><em class="property"> = 'ERR-locale-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_LOCALE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR</code><em class="property"> = 'ERR-MAX-subscriptions-allowed-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED">
+<code class="descname">RMT_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED</code><em class="property"> = 'ERR-max-userid-sessions-reached'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MISSING_METHOD">
+<code class="descname">RMT_ERR_CODE_ERR_MISSING_METHOD</code><em class="property"> = 'ERR-missing-method'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MISSING_METHOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_LOCALE</code><em class="property"> = 'ERR-modify-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_ROLE</code><em class="property"> = 'ERR-modify-role'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_USER</code><em class="property"> = 'ERR-modify-user'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_USER_LOCALE</code><em class="property"> = 'ERR-modify-user-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_USER_ROLE</code><em class="property"> = 'ERR-modify-user-role'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ACCESS_DENIED">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ACCESS_DENIED</code><em class="property"> = 'ERR-MO-access-denied'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ACCESS_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED">
+<code class="descname">RMT_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED</code><em class="property"> = 'ERR-MO-CONFIG-child-object-cant-be-configured'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION</code><em class="property"> = 'ERR-MO-deletion-rule-violation'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_DUPLICATE_OBJECT">
+<code class="descname">RMT_ERR_CODE_ERR_MO_DUPLICATE_OBJECT</code><em class="property"> = 'ERR-MO-duplicate-object'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_DUPLICATE_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT</code><em class="property"> = 'ERR-MO-illegal-containment'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CREATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_CREATION</code><em class="property"> = 'ERR-MO-illegal-creation'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CREATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE</code><em class="property"> = 'ERR-MO-illegal-iterator-state'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION</code><em class="property"> = 'ERR-MO-illegal-object-lifecycle-transition'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS">
+<code class="descname">RMT_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS</code><em class="property"> = 'ERR-MO-META-no-such-object-class'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION</code><em class="property"> = 'ERR-MO-naming-rule-violation'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND">
+<code class="descname">RMT_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND</code><em class="property"> = 'ERR-MO-object-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY">
+<code class="descname">RMT_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY</code><em class="property"> = 'ERR-MO-PROPERTY-no-such-property'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE">
+<code class="descname">RMT_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE</code><em class="property"> = 'ERR-MO-PROPERTY-value-out-of-range'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION</code><em class="property"> = 'ERR-MO-resource-allocation'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_NTP_DELETE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_NTP_DELETE_ERROR</code><em class="property"> = 'ERR-NTP-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_NTP_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_NTP_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_NTP_GET_ERROR</code><em class="property"> = 'ERR-NTP-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_NTP_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_NTP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_NTP_SET_ERROR</code><em class="property"> = 'ERR-NTP-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_NTP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED">
+<code class="descname">RMT_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED</code><em class="property"> = 'ERR-POWER-CAP-UNSUPPORTED'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS</code><em class="property"> = 'ERR-POWER-PROFILE-IN-PROGRESS'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR</code><em class="property"> = 'ERR-provider-group-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR</code><em class="property"> = 'ERR-provider-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_GET_ERROR</code><em class="property"> = 'ERR-radius-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR</code><em class="property"> = 'ERR-radius-global-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR</code><em class="property"> = 'ERR-radius-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_SET_ERROR</code><em class="property"> = 'ERR-radius-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RADIUS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_REQUEST_TIMEOUT">
+<code class="descname">RMT_ERR_CODE_ERR_REQUEST_TIMEOUT</code><em class="property"> = 'ERR-request-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_REQUEST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RESET_ADAPTER">
+<code class="descname">RMT_ERR_CODE_ERR_RESET_ADAPTER</code><em class="property"> = 'ERR-reset-adapter'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_RESET_ADAPTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ROLE_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_ROLE_SET_ERROR</code><em class="property"> = 'ERR-role-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_ROLE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SECONDARY_NODE">
+<code class="descname">RMT_ERR_CODE_ERR_SECONDARY_NODE</code><em class="property"> = 'ERR-secondary-node'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SECONDARY_NODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SERVER_MIS_CONNECT">
+<code class="descname">RMT_ERR_CODE_ERR_SERVER_MIS_CONNECT</code><em class="property"> = 'ERR-SERVER-mis-connect'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SERVER_MIS_CONNECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SERVICE_NOT_READY">
+<code class="descname">RMT_ERR_CODE_ERR_SERVICE_NOT_READY</code><em class="property"> = 'ERR-service-not-ready'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SERVICE_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SESSION_CACHE_FULL">
+<code class="descname">RMT_ERR_CODE_ERR_SESSION_CACHE_FULL</code><em class="property"> = 'ERR-session-cache-full'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SESSION_CACHE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SESSION_NOT_FOUND">
+<code class="descname">RMT_ERR_CODE_ERR_SESSION_NOT_FOUND</code><em class="property"> = 'ERR-session-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SESSION_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SET_NETWORK">
+<code class="descname">RMT_ERR_CODE_ERR_SET_NETWORK</code><em class="property"> = 'ERR-set-network'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SET_NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK">
+<code class="descname">RMT_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK</code><em class="property"> = 'ERR-set-password-strength-check'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SET_PORT_CHANNEL">
+<code class="descname">RMT_ERR_CODE_ERR_SET_PORT_CHANNEL</code><em class="property"> = 'ERR-set-port-channel'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SET_PORT_CHANNEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG">
+<code class="descname">RMT_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG</code><em class="property"> = 'ERR-store-pre-login-banner-msg'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG">
+<code class="descname">RMT_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG</code><em class="property"> = 'ERR-SWITCH-invalid-if-config'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_ENABLE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_ENABLE_ERROR</code><em class="property"> = 'ERR-tacacs-enable-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_ENABLE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR</code><em class="property"> = 'ERR-tacacs-global-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR</code><em class="property"> = 'ERR-tacacs-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR</code><em class="property"> = 'ERR-tacacs-plus-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_SET_ERROR</code><em class="property"> = 'ERR-tacacs-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TACACS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_1">
+<code class="descname">RMT_ERR_CODE_ERR_TEST_ERROR_1</code><em class="property"> = 'ERR-test-error-1'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_2">
+<code class="descname">RMT_ERR_CODE_ERR_TEST_ERROR_2</code><em class="property"> = 'ERR-test-error-2'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TIMEZONE_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TIMEZONE_SET_ERROR</code><em class="property"> = 'ERR-timezone-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TIMEZONE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TOKEN_REQUEST_DENIED">
+<code class="descname">RMT_ERR_CODE_ERR_TOKEN_REQUEST_DENIED</code><em class="property"> = 'ERR-TOKEN-request-denied'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_TOKEN_REQUEST_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS">
+<code class="descname">RMT_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS</code><em class="property"> = 'ERR-UNABLE-TO-FETCH-BIOS-SETTINGS'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UPDATE_FAILED">
+<code class="descname">RMT_ERR_CODE_ERR_UPDATE_FAILED</code><em class="property"> = 'ERR-UPDATE-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UPDATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UPDATE_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_UPDATE_IN_PROGRESS</code><em class="property"> = 'ERR-UPDATE-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UPDATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UPDATE_RETRY">
+<code class="descname">RMT_ERR_CODE_ERR_UPDATE_RETRY</code><em class="property"> = 'ERR-UPDATE-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_UPDATE_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED">
+<code class="descname">RMT_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED</code><em class="property"> = 'ERR-user-account-expired'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_USER_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_USER_SET_ERROR</code><em class="property"> = 'ERR-user-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_USER_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_XML_PARSE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_XML_PARSE_ERROR</code><em class="property"> = 'ERR-xml-parse-error'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_ERR_XML_PARSE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_NONE">
+<code class="descname">RMT_ERR_CODE_NONE</code><em class="property"> = 'none'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsm.PortPIoFsmConsts.RMT_ERR_CODE_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortPIoFsmStage">
+<span id="ucsmsdk-mometa-port-portpiofsmstage-module"></span><h2>ucsmsdk.mometa.port.PortPIoFsmStage module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortPIoFsmStage" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortPIoFsmStage ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortPIoFsmStage.</code><code class="descname">PortPIoFsmStage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortPIoFsmStage.html#PortPIoFsmStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortPIoFsmStage class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'lastUpdateTime': 'last_update_time', 'sacl': 'sacl', 'childAction': 'child_action', 'retry': 'retry', 'name': 'name', 'descr': 'descr', 'stageStatus': 'stage_status', 'rn': 'rn', 'order': 'order'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1699fdcd0&gt;, 'last_update_time': &lt;ucscoremeta.MoPropertyMeta object at 0x165d63450&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165d63f50&gt;, 'stage_status': &lt;ucscoremeta.MoPropertyMeta object at 0x165d637d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x168938e90&gt;, 'retry': &lt;ucscoremeta.MoPropertyMeta object at 0x165d63a90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x165d63090&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15e659e10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165d63f90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165d632d0&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x165d63990&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortPIoFsmStage.</code><code class="descname">PortPIoFsmStageConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortPIoFsmStage.html#PortPIoFsmStageConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.LAST_UPDATE_TIME_">
+<code class="descname">LAST_UPDATE_TIME_</code><em class="property"> = ''</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.LAST_UPDATE_TIME_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_BEGIN">
+<code class="descname">NAME_IN_COMPAT_SFP_PRESENCE_BEGIN</code><em class="property"> = 'InCompatSfpPresenceBegin'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_BEGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_FAIL">
+<code class="descname">NAME_IN_COMPAT_SFP_PRESENCE_FAIL</code><em class="property"> = 'InCompatSfpPresenceFail'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_SHUTDOWN">
+<code class="descname">NAME_IN_COMPAT_SFP_PRESENCE_SHUTDOWN</code><em class="property"> = 'InCompatSfpPresenceShutdown'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_SHUTDOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_SUCCESS">
+<code class="descname">NAME_IN_COMPAT_SFP_PRESENCE_SUCCESS</code><em class="property"> = 'InCompatSfpPresenceSuccess'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_PRESENCE_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_BEGIN">
+<code class="descname">NAME_IN_COMPAT_SFP_REPLACED_BEGIN</code><em class="property"> = 'InCompatSfpReplacedBegin'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_BEGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_ENABLE_PORT">
+<code class="descname">NAME_IN_COMPAT_SFP_REPLACED_ENABLE_PORT</code><em class="property"> = 'InCompatSfpReplacedEnablePort'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_ENABLE_PORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_FAIL">
+<code class="descname">NAME_IN_COMPAT_SFP_REPLACED_FAIL</code><em class="property"> = 'InCompatSfpReplacedFail'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_SUCCESS">
+<code class="descname">NAME_IN_COMPAT_SFP_REPLACED_SUCCESS</code><em class="property"> = 'InCompatSfpReplacedSuccess'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_IN_COMPAT_SFP_REPLACED_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_NOP">
+<code class="descname">NAME_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.NAME_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_FAIL">
+<code class="descname">STAGE_STATUS_FAIL</code><em class="property"> = 'fail'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_IN_PROGRESS">
+<code class="descname">STAGE_STATUS_IN_PROGRESS</code><em class="property"> = 'inProgress'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_NOP">
+<code class="descname">STAGE_STATUS_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_PENDING">
+<code class="descname">STAGE_STATUS_PENDING</code><em class="property"> = 'pending'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_PENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_SKIP">
+<code class="descname">STAGE_STATUS_SKIP</code><em class="property"> = 'skip'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_SKIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_SUCCESS">
+<code class="descname">STAGE_STATUS_SUCCESS</code><em class="property"> = 'success'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_THROTTLED">
+<code class="descname">STAGE_STATUS_THROTTLED</code><em class="property"> = 'throttled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmStage.PortPIoFsmStageConsts.STAGE_STATUS_THROTTLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortPIoFsmTask">
+<span id="ucsmsdk-mometa-port-portpiofsmtask-module"></span><h2>ucsmsdk.mometa.port.PortPIoFsmTask module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortPIoFsmTask" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortPIoFsmTask ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortPIoFsmTask.</code><code class="descname">PortPIoFsmTask</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>item</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortPIoFsmTask.html#PortPIoFsmTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortPIoFsmTask class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'item'])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'completion': 'completion', 'dn': 'dn', 'seqId': 'seq_id', 'flags': 'flags', 'item': 'item', 'sacl': 'sacl', 'rn': 'rn', 'status': 'status', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucscoremeta.MoPropertyMeta object at 0x16a5665d0&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16a566250&gt;, 'flags': &lt;ucscoremeta.MoPropertyMeta object at 0x16a566510&gt;, 'item': &lt;ucscoremeta.MoPropertyMeta object at 0x16a566410&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16a566a90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16a566ad0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16a5663d0&gt;, 'seq_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16a5668d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16a566810&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortPIoFsmTask.</code><code class="descname">PortPIoFsmTaskConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortPIoFsmTask.html#PortPIoFsmTaskConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_CANCELLED">
+<code class="descname">COMPLETION_CANCELLED</code><em class="property"> = 'cancelled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_CANCELLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_COMPLETED">
+<code class="descname">COMPLETION_COMPLETED</code><em class="property"> = 'completed'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_COMPLETED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_PROCESSING">
+<code class="descname">COMPLETION_PROCESSING</code><em class="property"> = 'processing'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_PROCESSING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_SCHEDULED">
+<code class="descname">COMPLETION_SCHEDULED</code><em class="property"> = 'scheduled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.COMPLETION_SCHEDULED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.ITEM_IN_COMPAT_SFP_PRESENCE">
+<code class="descname">ITEM_IN_COMPAT_SFP_PRESENCE</code><em class="property"> = 'InCompatSfpPresence'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.ITEM_IN_COMPAT_SFP_PRESENCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.ITEM_IN_COMPAT_SFP_REPLACED">
+<code class="descname">ITEM_IN_COMPAT_SFP_REPLACED</code><em class="property"> = 'InCompatSfpReplaced'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.ITEM_IN_COMPAT_SFP_REPLACED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.ITEM_NOP">
+<code class="descname">ITEM_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortPIoFsmTask.PortPIoFsmTaskConsts.ITEM_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortSubGroup">
+<span id="ucsmsdk-mometa-port-portsubgroup-module"></span><h2>ucsmsdk.mometa.port.PortSubGroup module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortSubGroup" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortSubGroup ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroup">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortSubGroup.</code><code class="descname">PortSubGroup</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>aggr_port_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortSubGroup.html#PortSubGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortSubGroup class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'aggrPortId'])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'locale': 'locale', 'sacl': 'sacl', 'configState': 'config_state', 'slotId': 'slot_id', 'switchId': 'switch_id', 'licGP': 'lic_gp', 'transport': 'transport', 'childAction': 'child_action', 'licState': 'lic_state', 'name': 'name', 'aggrPortId': 'aggr_port_id', 'rn': 'rn', 'type': 'type'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'config_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1696646d0&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1696641d0&gt;, 'locale': &lt;ucscoremeta.MoPropertyMeta object at 0x169664250&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x169664310&gt;, 'lic_gp': &lt;ucscoremeta.MoPropertyMeta object at 0x169664f10&gt;, 'switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1660585d0&gt;, 'aggr_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169664d10&gt;, 'transport': &lt;ucscoremeta.MoPropertyMeta object at 0x166058690&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x169664150&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x169664510&gt;, 'slot_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169664c10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x166058390&gt;, 'lic_state': &lt;ucscoremeta.MoPropertyMeta object at 0x169664650&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x169664190&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x166058c50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroup.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortSubGroup.</code><code class="descname">PortSubGroupConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortSubGroup.html#PortSubGroupConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.CONFIG_STATE_DISABLED">
+<code class="descname">CONFIG_STATE_DISABLED</code><em class="property"> = 'disabled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.CONFIG_STATE_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.CONFIG_STATE_ENABLED">
+<code class="descname">CONFIG_STATE_ENABLED</code><em class="property"> = 'enabled'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.CONFIG_STATE_ENABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_EXPIRED">
+<code class="descname">LIC_STATE_LICENSE_EXPIRED</code><em class="property"> = 'license-expired'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_EXPIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_GRACEPERIOD">
+<code class="descname">LIC_STATE_LICENSE_GRACEPERIOD</code><em class="property"> = 'license-graceperiod'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_GRACEPERIOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_INSUFFICIENT">
+<code class="descname">LIC_STATE_LICENSE_INSUFFICIENT</code><em class="property"> = 'license-insufficient'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_INSUFFICIENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_OK">
+<code class="descname">LIC_STATE_LICENSE_OK</code><em class="property"> = 'license-ok'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_LICENSE_OK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_NOT_APPLICABLE">
+<code class="descname">LIC_STATE_NOT_APPLICABLE</code><em class="property"> = 'not-applicable'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_NOT_APPLICABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_UNKNOWN">
+<code class="descname">LIC_STATE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.LIC_STATE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.SWITCH_ID_A">
+<code class="descname">SWITCH_ID_A</code><em class="property"> = 'A'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.SWITCH_ID_A" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.SWITCH_ID_B">
+<code class="descname">SWITCH_ID_B</code><em class="property"> = 'B'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.SWITCH_ID_B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.SWITCH_ID_NONE">
+<code class="descname">SWITCH_ID_NONE</code><em class="property"> = 'NONE'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortSubGroup.PortSubGroupConsts.SWITCH_ID_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port.PortTrustMode">
+<span id="ucsmsdk-mometa-port-porttrustmode-module"></span><h2>ucsmsdk.mometa.port.PortTrustMode module<a class="headerlink" href="#module-ucsmsdk.mometa.port.PortTrustMode" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for PortTrustMode ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustMode">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortTrustMode.</code><code class="descname">PortTrustMode</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortTrustMode.html#PortTrustMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is PortTrustMode class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'state': 'state', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16996fb50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16996f9d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16996f090&gt;, 'state': &lt;ucscoremeta.MoPropertyMeta object at 0x16996fdd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16996f410&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16996f850&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustMode.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.port.PortTrustMode.</code><code class="descname">PortTrustModeConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/port/PortTrustMode.html#PortTrustModeConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts.STATE_TRUSTED">
+<code class="descname">STATE_TRUSTED</code><em class="property"> = 'trusted'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts.STATE_TRUSTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts.STATE_UNTRUSTED">
+<code class="descname">STATE_UNTRUSTED</code><em class="property"> = 'untrusted'</em><a class="headerlink" href="#ucsmsdk.mometa.port.PortTrustMode.PortTrustModeConsts.STATE_UNTRUSTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.port">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.port" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.power.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.power package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.policy.html" class="btn btn-neutral" title="ucsmsdk.mometa.policy package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

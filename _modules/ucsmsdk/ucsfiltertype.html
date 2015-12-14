@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.ucsfiltertype &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.ucsfiltertype</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.ucsfiltertype</h1><div class="highlight"><pre>
+<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c">#</span>
+<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c"># you may not use this file except in compliance with the License.</span>
+<span class="c"># You may obtain a copy of the License at</span>
+<span class="c"># http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c">#</span>
+<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c"># See the License for the specific language governing permissions and</span>
+<span class="c"># limitations under the License.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is an auto-generated module.</span>
+<span class="sd">It contains supporting classes for Filter and External Method.</span>
+
+<span class="sd">ClassFactory Method: It returns the object of type ManagedObject, ExternalMethod</span>
+<span class="sd">or supporting classes available in this module for a given className.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">ucscore</span> <span class="kn">import</span> <span class="n">AbstractFilter</span>
+
+
+<div class="viewcode-block" id="AllbitsFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.AllbitsFilter">[docs]</a><span class="k">class</span> <span class="nc">AllbitsFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is AllbitsFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;AllbitsFilter&quot;</span><span class="p">,</span> <span class="s">&quot;allbits&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="AllbitsFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.AllbitsFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="AndFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.AndFilter">[docs]</a><span class="k">class</span> <span class="nc">AndFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is AndFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;AndFilter&quot;</span><span class="p">,</span> <span class="s">&quot;and&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="AndFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.AndFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+</div></div>
+<div class="viewcode-block" id="AnybitFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.AnybitFilter">[docs]</a><span class="k">class</span> <span class="nc">AnybitFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is AnybitFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;AnybitFilter&quot;</span><span class="p">,</span> <span class="s">&quot;anybit&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="AnybitFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.AnybitFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="BwFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.BwFilter">[docs]</a><span class="k">class</span> <span class="nc">BwFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is BwFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;BwFilter&quot;</span><span class="p">,</span> <span class="s">&quot;bw&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_value</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">second_value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="BwFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.BwFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;first_value&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">second_value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;second_value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="EqFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.EqFilter">[docs]</a><span class="k">class</span> <span class="nc">EqFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is EqFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;EqFilter&quot;</span><span class="p">,</span> <span class="s">&quot;eq&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="EqFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.EqFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="GeFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.GeFilter">[docs]</a><span class="k">class</span> <span class="nc">GeFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is GeFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;GeFilter&quot;</span><span class="p">,</span> <span class="s">&quot;ge&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="GeFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.GeFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="GtFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.GtFilter">[docs]</a><span class="k">class</span> <span class="nc">GtFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is GtFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;GtFilter&quot;</span><span class="p">,</span> <span class="s">&quot;gt&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="GtFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.GtFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="LeFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.LeFilter">[docs]</a><span class="k">class</span> <span class="nc">LeFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is LeFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;LeFilter&quot;</span><span class="p">,</span> <span class="s">&quot;le&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="LeFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.LeFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="LtFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.LtFilter">[docs]</a><span class="k">class</span> <span class="nc">LtFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is LtFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;LtFilter&quot;</span><span class="p">,</span> <span class="s">&quot;lt&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="LtFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.LtFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="NeFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.NeFilter">[docs]</a><span class="k">class</span> <span class="nc">NeFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is NeFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;NeFilter&quot;</span><span class="p">,</span> <span class="s">&quot;ne&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="NeFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.NeFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+
+</div></div>
+<div class="viewcode-block" id="NotFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.NotFilter">[docs]</a><span class="k">class</span> <span class="nc">NotFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is NotFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;NotFilter&quot;</span><span class="p">,</span> <span class="s">&quot;not&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="NotFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.NotFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+</div></div>
+<div class="viewcode-block" id="OrFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.OrFilter">[docs]</a><span class="k">class</span> <span class="nc">OrFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is OrFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;OrFilter&quot;</span><span class="p">,</span> <span class="s">&quot;or&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="OrFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.OrFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+</div></div>
+<div class="viewcode-block" id="WcardFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.WcardFilter">[docs]</a><span class="k">class</span> <span class="nc">WcardFilter</span><span class="p">(</span><span class="n">AbstractFilter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is WcardFilter class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">AbstractFilter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;WcardFilter&quot;</span><span class="p">,</span> <span class="s">&quot;wcard&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+
+<div class="viewcode-block" id="WcardFilter.create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsfiltertype.WcardFilter.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method populate the attribute of filter object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;class_&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;property&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+</pre></div></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.firmware.FirmwareDependency &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.firmware.FirmwareDependency</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.mometa.firmware.FirmwareDependency</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;This module contains the general information for FirmwareDependency ManagedObject.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+
+
+<div class="viewcode-block" id="FirmwareDependencyConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.firmware.html#ucsmsdk.mometa.firmware.FirmwareDependency.FirmwareDependencyConsts">[docs]</a><span class="k">class</span> <span class="nc">FirmwareDependencyConsts</span><span class="p">():</span>
+    <span class="n">EP_ADAPTOR</span> <span class="o">=</span> <span class="s">&quot;adaptor&quot;</span>
+    <span class="n">EP_BLADE_BIOS</span> <span class="o">=</span> <span class="s">&quot;blade-bios&quot;</span>
+    <span class="n">EP_BLADE_CONTROLLER</span> <span class="o">=</span> <span class="s">&quot;blade-controller&quot;</span>
+    <span class="n">EP_BOARD_CONTROLLER</span> <span class="o">=</span> <span class="s">&quot;board-controller&quot;</span>
+    <span class="n">EP_CATALOG</span> <span class="o">=</span> <span class="s">&quot;catalog&quot;</span>
+    <span class="n">EP_CMC</span> <span class="o">=</span> <span class="s">&quot;cmc&quot;</span>
+    <span class="n">EP_DEBUG_PLUG_IN</span> <span class="o">=</span> <span class="s">&quot;debug-plug-in&quot;</span>
+    <span class="n">EP_DIAG</span> <span class="o">=</span> <span class="s">&quot;diag&quot;</span>
+    <span class="n">EP_FEX</span> <span class="o">=</span> <span class="s">&quot;fex&quot;</span>
+    <span class="n">EP_FLEXFLASH_CONTROLLER</span> <span class="o">=</span> <span class="s">&quot;flexflash-controller&quot;</span>
+    <span class="n">EP_GRAPHICS_CARD</span> <span class="o">=</span> <span class="s">&quot;graphics-card&quot;</span>
+    <span class="n">EP_HOST_HBA</span> <span class="o">=</span> <span class="s">&quot;host-hba&quot;</span>
+    <span class="n">EP_HOST_HBA_OPTIONROM</span> <span class="o">=</span> <span class="s">&quot;host-hba-optionrom&quot;</span>
+    <span class="n">EP_HOST_NIC</span> <span class="o">=</span> <span class="s">&quot;host-nic&quot;</span>
+    <span class="n">EP_HOST_NIC_OPTIONROM</span> <span class="o">=</span> <span class="s">&quot;host-nic-optionrom&quot;</span>
+    <span class="n">EP_IOCARD</span> <span class="o">=</span> <span class="s">&quot;iocard&quot;</span>
+    <span class="n">EP_LOCAL_DISK</span> <span class="o">=</span> <span class="s">&quot;local-disk&quot;</span>
+    <span class="n">EP_MGMT_EXT</span> <span class="o">=</span> <span class="s">&quot;mgmt-ext&quot;</span>
+    <span class="n">EP_PSU</span> <span class="o">=</span> <span class="s">&quot;psu&quot;</span>
+    <span class="n">EP_SAS_EXPANDER</span> <span class="o">=</span> <span class="s">&quot;sas-expander&quot;</span>
+    <span class="n">EP_STORAGE_CONTROLLER</span> <span class="o">=</span> <span class="s">&quot;storage-controller&quot;</span>
+    <span class="n">EP_STORAGE_DEV_BRIDGE</span> <span class="o">=</span> <span class="s">&quot;storage-dev-bridge&quot;</span>
+    <span class="n">EP_STORAGE_NODE_CONTROLLER</span> <span class="o">=</span> <span class="s">&quot;storage-node-controller&quot;</span>
+    <span class="n">EP_SWITCH</span> <span class="o">=</span> <span class="s">&quot;switch&quot;</span>
+    <span class="n">EP_SWITCH_KERNEL</span> <span class="o">=</span> <span class="s">&quot;switch-kernel&quot;</span>
+    <span class="n">EP_SWITCH_SOFTWARE</span> <span class="o">=</span> <span class="s">&quot;switch-software&quot;</span>
+    <span class="n">EP_SYSTEM</span> <span class="o">=</span> <span class="s">&quot;system&quot;</span>
+    <span class="n">EP_UNSPECIFIED</span> <span class="o">=</span> <span class="s">&quot;unspecified&quot;</span>
+    <span class="n">RELATIONSHIP_ANCESTOR</span> <span class="o">=</span> <span class="s">&quot;ancestor&quot;</span>
+    <span class="n">RELATIONSHIP_DESCENDENT</span> <span class="o">=</span> <span class="s">&quot;descendent&quot;</span>
+    <span class="n">RELATIONSHIP_SPECIAL</span> <span class="o">=</span> <span class="s">&quot;special&quot;</span>
+    <span class="n">SCOPE_BLADE</span> <span class="o">=</span> <span class="s">&quot;blade&quot;</span>
+    <span class="n">SCOPE_CHASSIS</span> <span class="o">=</span> <span class="s">&quot;chassis&quot;</span>
+    <span class="n">SCOPE_GLOBAL</span> <span class="o">=</span> <span class="s">&quot;global&quot;</span>
+    <span class="n">SCOPE_SWITCH</span> <span class="o">=</span> <span class="s">&quot;switch&quot;</span>
+    <span class="n">SCOPE_SYSTEM</span> <span class="o">=</span> <span class="s">&quot;system&quot;</span>
+    <span class="n">SCOPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
+    <span class="n">SENSITIVITY_FABRIC</span> <span class="o">=</span> <span class="s">&quot;fabric&quot;</span>
+    <span class="n">SENSITIVITY_GLOBAL</span> <span class="o">=</span> <span class="s">&quot;global&quot;</span>
+    <span class="n">SENSITIVITY_PATH</span> <span class="o">=</span> <span class="s">&quot;path&quot;</span>
+
+</div>
+<div class="viewcode-block" id="FirmwareDependency"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.firmware.html#ucsmsdk.mometa.firmware.FirmwareDependency.FirmwareDependency">[docs]</a><span class="k">class</span> <span class="nc">FirmwareDependency</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is FirmwareDependency class.&quot;&quot;&quot;</span>
+
+    <span class="n">consts</span> <span class="o">=</span> <span class="n">FirmwareDependencyConsts</span><span class="p">()</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">u&#39;ep&#39;</span><span class="p">,</span> <span class="s">u&#39;invTag&#39;</span><span class="p">,</span> <span class="s">u&#39;hwVendor&#39;</span><span class="p">,</span> <span class="s">u&#39;hwModel&#39;</span><span class="p">,</span> <span class="s">u&#39;hwRevision&#39;</span><span class="p">])</span>
+
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;FirmwareDependency&quot;</span><span class="p">,</span> <span class="s">&quot;firmwareDependency&quot;</span><span class="p">,</span> <span class="s">&quot;dep-[ep]-[inv_tag]-[hw_vendor]|[hw_model]|[hw_revision]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x3ff</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;firmwareType&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;Get&quot;</span><span class="p">])</span>
+
+    <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;ep&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;ep&quot;</span><span class="p">,</span> <span class="s">&quot;ep&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;adaptor&quot;</span><span class="p">,</span> <span class="s">&quot;blade-bios&quot;</span><span class="p">,</span> <span class="s">&quot;blade-controller&quot;</span><span class="p">,</span> <span class="s">&quot;board-controller&quot;</span><span class="p">,</span> <span class="s">&quot;catalog&quot;</span><span class="p">,</span> <span class="s">&quot;cmc&quot;</span><span class="p">,</span> <span class="s">&quot;debug-plug-in&quot;</span><span class="p">,</span> <span class="s">&quot;diag&quot;</span><span class="p">,</span> <span class="s">&quot;fex&quot;</span><span class="p">,</span> <span class="s">&quot;flexflash-controller&quot;</span><span class="p">,</span> <span class="s">&quot;graphics-card&quot;</span><span class="p">,</span> <span class="s">&quot;host-hba&quot;</span><span class="p">,</span> <span class="s">&quot;host-hba-optionrom&quot;</span><span class="p">,</span> <span class="s">&quot;host-nic&quot;</span><span class="p">,</span> <span class="s">&quot;host-nic-optionrom&quot;</span><span class="p">,</span> <span class="s">&quot;iocard&quot;</span><span class="p">,</span> <span class="s">&quot;local-disk&quot;</span><span class="p">,</span> <span class="s">&quot;mgmt-ext&quot;</span><span class="p">,</span> <span class="s">&quot;psu&quot;</span><span class="p">,</span> <span class="s">&quot;sas-expander&quot;</span><span class="p">,</span> <span class="s">&quot;storage-controller&quot;</span><span class="p">,</span> <span class="s">&quot;storage-dev-bridge&quot;</span><span class="p">,</span> <span class="s">&quot;storage-node-controller&quot;</span><span class="p">,</span> <span class="s">&quot;switch&quot;</span><span class="p">,</span> <span class="s">&quot;switch-kernel&quot;</span><span class="p">,</span> <span class="s">&quot;switch-software&quot;</span><span class="p">,</span> <span class="s">&quot;system&quot;</span><span class="p">,</span> <span class="s">&quot;unspecified&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;hw_model&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;hw_model&quot;</span><span class="p">,</span> <span class="s">&quot;hwModel&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;hw_revision&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;hw_revision&quot;</span><span class="p">,</span> <span class="s">&quot;hwRevision&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x20</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;hw_vendor&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;hw_vendor&quot;</span><span class="p">,</span> <span class="s">&quot;hwVendor&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x40</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;inv_tag&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;inv_tag&quot;</span><span class="p">,</span> <span class="s">&quot;invTag&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x80</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;max_ver&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;max_ver&quot;</span><span class="p">,</span> <span class="s">&quot;maxVer&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;min_ver&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;min_ver&quot;</span><span class="p">,</span> <span class="s">&quot;minVer&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;relationship&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;relationship&quot;</span><span class="p">,</span> <span class="s">&quot;relationship&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ancestor&quot;</span><span class="p">,</span> <span class="s">&quot;descendent&quot;</span><span class="p">,</span> <span class="s">&quot;special&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x100</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;scope&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;scope&quot;</span><span class="p">,</span> <span class="s">&quot;scope&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;blade&quot;</span><span class="p">,</span> <span class="s">&quot;chassis&quot;</span><span class="p">,</span> <span class="s">&quot;global&quot;</span><span class="p">,</span> <span class="s">&quot;switch&quot;</span><span class="p">,</span> <span class="s">&quot;system&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sensitivity&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sensitivity&quot;</span><span class="p">,</span> <span class="s">&quot;sensitivity&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;fabric&quot;</span><span class="p">,</span> <span class="s">&quot;global&quot;</span><span class="p">,</span> <span class="s">&quot;path&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x200</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+    <span class="p">}</span>
+
+    <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;ep&quot;</span><span class="p">:</span> <span class="s">&quot;ep&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;hwModel&quot;</span><span class="p">:</span> <span class="s">&quot;hw_model&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;hwRevision&quot;</span><span class="p">:</span> <span class="s">&quot;hw_revision&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;hwVendor&quot;</span><span class="p">:</span> <span class="s">&quot;hw_vendor&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;invTag&quot;</span><span class="p">:</span> <span class="s">&quot;inv_tag&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;maxVer&quot;</span><span class="p">:</span> <span class="s">&quot;max_ver&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;minVer&quot;</span><span class="p">:</span> <span class="s">&quot;min_ver&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;relationship&quot;</span><span class="p">:</span> <span class="s">&quot;relationship&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;scope&quot;</span><span class="p">:</span> <span class="s">&quot;scope&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sensitivity&quot;</span><span class="p">:</span> <span class="s">&quot;sensitivity&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="n">ep</span><span class="p">,</span> <span class="n">inv_tag</span><span class="p">,</span> <span class="n">hw_vendor</span><span class="p">,</span> <span class="n">hw_model</span><span class="p">,</span> <span class="n">hw_revision</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ep</span> <span class="o">=</span> <span class="n">ep</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inv_tag</span> <span class="o">=</span> <span class="n">inv_tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hw_vendor</span> <span class="o">=</span> <span class="n">hw_vendor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hw_model</span> <span class="o">=</span> <span class="n">hw_model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hw_revision</span> <span class="o">=</span> <span class="n">hw_revision</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_ver</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_ver</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relationship</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sacl</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scope</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sensitivity</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;FirmwareDependency&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

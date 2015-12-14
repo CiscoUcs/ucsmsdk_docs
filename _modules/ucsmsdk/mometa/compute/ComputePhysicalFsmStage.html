@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.compute.ComputePhysicalFsmStage &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.compute.ComputePhysicalFsmStage</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ucsmsdk.mometa.compute.ComputePhysicalFsmStage</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;This module contains the general information for ComputePhysicalFsmStage ManagedObject.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+
+
+<div class="viewcode-block" id="ComputePhysicalFsmStageConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.compute.html#ucsmsdk.mometa.compute.ComputePhysicalFsmStage.ComputePhysicalFsmStageConsts">[docs]</a><span class="k">class</span> <span class="nc">ComputePhysicalFsmStageConsts</span><span class="p">():</span>
+    <span class="n">LAST_UPDATE_TIME_</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_ACTIVATE_LOCAL</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorActivateLocal&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_ACTIVATE_PEER</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorActivatePeer&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorBegin&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_DEASSERT_RESET_BYPASS</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorDeassertResetBypass&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_FAIL</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorFail&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorPowerDeployWait&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorPowerOn&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_RESET</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorReset&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorSuccess&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSACTIVATE</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSActivate&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSBEGIN</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSBegin&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSCHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSCLEAR</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSClear&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSFAIL</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSFail&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSPOLL_ACTIVATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSPollActivateStatus&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSPOLL_CLEAR_STATUS</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSPollClearStatus&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSPOWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSPowerDeployWait&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSPOWER_OFF</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSPowerOff&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSPOWER_ON</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSPowerOn&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSSUCCESS</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSSuccess&quot;</span>
+    <span class="n">NAME_ACTIVATE_BIOSUPDATE_TOKENS</span> <span class="o">=</span> <span class="s">&quot;ActivateBIOSUpdateTokens&quot;</span>
+    <span class="n">NAME_ASSOCIATE_ACTIVATE_ADAPTOR_NW_FW_LOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateActivateAdaptorNwFwLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_ACTIVATE_ADAPTOR_NW_FW_PEER</span> <span class="o">=</span> <span class="s">&quot;AssociateActivateAdaptorNwFwPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_ACTIVATE_BIOS</span> <span class="o">=</span> <span class="s">&quot;AssociateActivateBios&quot;</span>
+    <span class="n">NAME_ASSOCIATE_ACTIVATE_IBMCFW</span> <span class="o">=</span> <span class="s">&quot;AssociateActivateIBMCFw&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BEGIN</span> <span class="o">=</span> <span class="s">&quot;AssociateBegin&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BIOS_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateBiosImgUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BIOS_POST_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;AssociateBiosPostCompletion&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BLADE_POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;AssociateBladePowerOff&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BMC_CONFIG_PNU_OS</span> <span class="o">=</span> <span class="s">&quot;AssociateBmcConfigPnuOS&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BMC_PRECONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateBmcPreconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BMC_PRECONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateBmcPreconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BMC_UNCONFIG_PNU_OS</span> <span class="o">=</span> <span class="s">&quot;AssociateBmcUnconfigPnuOS&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BMC_UPDATE_HOST_PRE_BOOT</span> <span class="o">=</span> <span class="s">&quot;AssociateBmcUpdateHostPreBoot&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BOOT_HOST</span> <span class="o">=</span> <span class="s">&quot;AssociateBootHost&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BOOT_PNUOS</span> <span class="o">=</span> <span class="s">&quot;AssociateBootPnuos&quot;</span>
+    <span class="n">NAME_ASSOCIATE_BOOT_WAIT</span> <span class="o">=</span> <span class="s">&quot;AssociateBootWait&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CALCULATE_VLAN_GROUP_FOR_HOST_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateCalculateVlanGroupForHostOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CALCULATE_VLAN_GROUP_FOR_HOST_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateCalculateVlanGroupForHostOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;AssociateCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CLEAR_BIOS_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateClearBiosUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_CIMC_VMEDIA</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigCimcVMedia&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_EXT_MGMT_GW</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigExtMgmtGw&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_EXT_MGMT_RULES</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigExtMgmtRules&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_FAN_SPEED</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigFanSpeed&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_FLEX_FLASH</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigFlexFlash&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_SO_L</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigSoL&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_USER_ACCESS</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigUserAccess&quot;</span>
+    <span class="n">NAME_ASSOCIATE_CONFIG_UUID</span> <span class="o">=</span> <span class="s">&quot;AssociateConfigUuid&quot;</span>
+    <span class="n">NAME_ASSOCIATE_COPY_REMOTE</span> <span class="o">=</span> <span class="s">&quot;AssociateCopyRemote&quot;</span>
+    <span class="n">NAME_ASSOCIATE_DEASSERT_RESET_BYPASS</span> <span class="o">=</span> <span class="s">&quot;AssociateDeassertResetBypass&quot;</span>
+    <span class="n">NAME_ASSOCIATE_DELETE_CURL_DOWNLOADED_IMAGES</span> <span class="o">=</span> <span class="s">&quot;AssociateDeleteCurlDownloadedImages&quot;</span>
+    <span class="n">NAME_ASSOCIATE_DELETE_IMAGES_REMOTE</span> <span class="o">=</span> <span class="s">&quot;AssociateDeleteImagesRemote&quot;</span>
+    <span class="n">NAME_ASSOCIATE_DOWNLOAD_IMAGES</span> <span class="o">=</span> <span class="s">&quot;AssociateDownloadImages&quot;</span>
+    <span class="n">NAME_ASSOCIATE_FAIL</span> <span class="o">=</span> <span class="s">&quot;AssociateFail&quot;</span>
+    <span class="n">NAME_ASSOCIATE_GRAPHICS_IMAGE_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateGraphicsImageUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HAG_HOST_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;AssociateHagHostOSConnect&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HAG_PNU_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;AssociateHagPnuOSConnect&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HAG_PNU_OSDISCONNECT</span> <span class="o">=</span> <span class="s">&quot;AssociateHagPnuOSDisconnect&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HBA_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateHbaImgUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HOST_OSCONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociateHostOSConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HOST_OSIDENT</span> <span class="o">=</span> <span class="s">&quot;AssociateHostOSIdent&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HOST_OSPOLICY</span> <span class="o">=</span> <span class="s">&quot;AssociateHostOSPolicy&quot;</span>
+    <span class="n">NAME_ASSOCIATE_HOST_OSVALIDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateHostOSValidate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_LOCAL_DISK_FW_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateLocalDiskFwUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_MARK_ADAPTER_FOR_REBOOT</span> <span class="o">=</span> <span class="s">&quot;AssociateMarkAdapterForReboot&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_HOST_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigHostOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_HOST_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigHostOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_PARAMS_HOST_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigParamsHostOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_PARAMS_HOST_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigParamsHostOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_SERVICE_INFRA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigServiceInfraLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_CONFIG_SERVICE_INFRA_PEER</span> <span class="o">=</span> <span class="s">&quot;AssociateNicConfigServiceInfraPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateNicImgUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_UNCONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateNicUnconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_NIC_UNCONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateNicUnconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_OOB_STORAGE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociateOobStorageConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_OOB_STORAGE_INVENTORY</span> <span class="o">=</span> <span class="s">&quot;AssociateOobStorageInventory&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSCATALOG</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSCatalog&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSCONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSIDENT</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSIdent&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSINVENTORY</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSInventory&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSLOCAL_DISK_CONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSLocalDiskConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSPOLICY</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSPolicy&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSSELF_TEST</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSSelfTest&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSUNLOAD_DRIVERS</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSUnloadDrivers&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PNU_OSVALIDATE</span> <span class="o">=</span> <span class="s">&quot;AssociatePnuOSValidate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POLL_BIOS_ACTIVATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;AssociatePollBiosActivateStatus&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POLL_BIOS_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;AssociatePollBiosUpdateStatus&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POLL_BOARD_CTRL_POWER_CYCLE</span> <span class="o">=</span> <span class="s">&quot;AssociatePollBoardCtrlPowerCycle&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POLL_BOARD_CTRL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;AssociatePollBoardCtrlUpdateStatus&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POLL_CLEAR_BIOS_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;AssociatePollClearBiosUpdateStatus&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POWER_CYCLE_BOARD</span> <span class="o">=</span> <span class="s">&quot;AssociatePowerCycleBoard&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;AssociatePowerDeployWait&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;AssociatePowerOn&quot;</span>
+    <span class="n">NAME_ASSOCIATE_POWER_ON_PRE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociatePowerOnPreConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;AssociatePreSanitize&quot;</span>
+    <span class="n">NAME_ASSOCIATE_PREPARE_FOR_BOOT</span> <span class="o">=</span> <span class="s">&quot;AssociatePrepareForBoot&quot;</span>
+    <span class="n">NAME_ASSOCIATE_RESET_IBMC</span> <span class="o">=</span> <span class="s">&quot;AssociateResetIBMC&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;AssociateSanitize&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SAS_EXPANDER_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateSasExpanderImgUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SERIAL_DEBUG_PNU_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;AssociateSerialDebugPnuOSConnect&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SERIAL_DEBUG_PNU_OSDISCONNECT</span> <span class="o">=</span> <span class="s">&quot;AssociateSerialDebugPnuOSDisconnect&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SOL_REDIRECT_DISABLE</span> <span class="o">=</span> <span class="s">&quot;AssociateSolRedirectDisable&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SOL_REDIRECT_ENABLE</span> <span class="o">=</span> <span class="s">&quot;AssociateSolRedirectEnable&quot;</span>
+    <span class="n">NAME_ASSOCIATE_STORAGE_CTLR_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateStorageCtlrImgUpdate&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;AssociateSuccess&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_HOST_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigHostOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_HOST_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigHostOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_PORT_NIV_LOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigPortNivLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_PORT_NIV_PEER</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigPortNivPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_SERVICE_INFRA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigServiceInfraLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_CONFIG_SERVICE_INFRA_PEER</span> <span class="o">=</span> <span class="s">&quot;AssociateSwConfigServiceInfraPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_UNCONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateSwUnconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SW_UNCONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;AssociateSwUnconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_SYNC_POWER_STATE</span> <span class="o">=</span> <span class="s">&quot;AssociateSyncPowerState&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UNCONFIG_CIMC_VMEDIA</span> <span class="o">=</span> <span class="s">&quot;AssociateUnconfigCimcVMedia&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UNCONFIG_EXT_MGMT_GW</span> <span class="o">=</span> <span class="s">&quot;AssociateUnconfigExtMgmtGw&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UNCONFIG_EXT_MGMT_RULES</span> <span class="o">=</span> <span class="s">&quot;AssociateUnconfigExtMgmtRules&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UNLOCK_FIRMWARE_IMAGE</span> <span class="o">=</span> <span class="s">&quot;AssociateUnlockFirmwareImage&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UPDATE_ADAPTOR_NW_FW_LOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateUpdateAdaptorNwFwLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UPDATE_ADAPTOR_NW_FW_PEER</span> <span class="o">=</span> <span class="s">&quot;AssociateUpdateAdaptorNwFwPeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UPDATE_BIOS_REQUEST</span> <span class="o">=</span> <span class="s">&quot;AssociateUpdateBiosRequest&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UPDATE_BOARD_CTRL_REQUEST</span> <span class="o">=</span> <span class="s">&quot;AssociateUpdateBoardCtrlRequest&quot;</span>
+    <span class="n">NAME_ASSOCIATE_UPDATE_IBMCFW</span> <span class="o">=</span> <span class="s">&quot;AssociateUpdateIBMCFw&quot;</span>
+    <span class="n">NAME_ASSOCIATE_VERIFY_FC_ZONE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociateVerifyFcZoneConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_VERIFY_REMOTE_STORAGE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;AssociateVerifyRemoteStorageConfig&quot;</span>
+    <span class="n">NAME_ASSOCIATE_WAIT_FOR_ADAPTOR_NW_FW_UPDATE_LOCAL</span> <span class="o">=</span> <span class="s">&quot;AssociateWaitForAdaptorNwFwUpdateLocal&quot;</span>
+    <span class="n">NAME_ASSOCIATE_WAIT_FOR_ADAPTOR_NW_FW_UPDATE_PEER</span> <span class="o">=</span> <span class="s">&quot;AssociateWaitForAdaptorNwFwUpdatePeer&quot;</span>
+    <span class="n">NAME_ASSOCIATE_WAIT_FOR_IBMCFW_UPDATE</span> <span class="o">=</span> <span class="s">&quot;AssociateWaitForIBMCFwUpdate&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_BEGIN</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryBegin&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_CLEANUP</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryCleanup&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_FAIL</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryFail&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryPowerDeployWait&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryPreSanitize&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_RESET</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryReset&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;BiosRecoverySanitize&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_SETUP_VMEDIA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;BiosRecoverySetupVmediaLocal&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_SETUP_VMEDIA_PEER</span> <span class="o">=</span> <span class="s">&quot;BiosRecoverySetupVmediaPeer&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_SHUTDOWN</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryShutdown&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_START</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryStart&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_STOP_VMEDIA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryStopVMediaLocal&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_STOP_VMEDIA_PEER</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryStopVMediaPeer&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;BiosRecoverySuccess&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_TEARDOWN_VMEDIA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryTeardownVmediaLocal&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_TEARDOWN_VMEDIA_PEER</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryTeardownVmediaPeer&quot;</span>
+    <span class="n">NAME_BIOS_RECOVERY_WAIT</span> <span class="o">=</span> <span class="s">&quot;BiosRecoveryWait&quot;</span>
+    <span class="n">NAME_CIMC_SESSION_DELETE_BEGIN</span> <span class="o">=</span> <span class="s">&quot;CimcSessionDeleteBegin&quot;</span>
+    <span class="n">NAME_CIMC_SESSION_DELETE_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;CimcSessionDeleteExecute&quot;</span>
+    <span class="n">NAME_CIMC_SESSION_DELETE_FAIL</span> <span class="o">=</span> <span class="s">&quot;CimcSessionDeleteFail&quot;</span>
+    <span class="n">NAME_CIMC_SESSION_DELETE_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;CimcSessionDeleteSuccess&quot;</span>
+    <span class="n">NAME_CMOS_RESET_BEGIN</span> <span class="o">=</span> <span class="s">&quot;CmosResetBegin&quot;</span>
+    <span class="n">NAME_CMOS_RESET_BLADE_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;CmosResetBladePowerOn&quot;</span>
+    <span class="n">NAME_CMOS_RESET_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;CmosResetCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_CMOS_RESET_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;CmosResetExecute&quot;</span>
+    <span class="n">NAME_CMOS_RESET_FAIL</span> <span class="o">=</span> <span class="s">&quot;CmosResetFail&quot;</span>
+    <span class="n">NAME_CMOS_RESET_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;CmosResetPowerDeployWait&quot;</span>
+    <span class="n">NAME_CMOS_RESET_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;CmosResetPreSanitize&quot;</span>
+    <span class="n">NAME_CMOS_RESET_RECONFIG_BIOS</span> <span class="o">=</span> <span class="s">&quot;CmosResetReconfigBios&quot;</span>
+    <span class="n">NAME_CMOS_RESET_RECONFIG_UUID</span> <span class="o">=</span> <span class="s">&quot;CmosResetReconfigUuid&quot;</span>
+    <span class="n">NAME_CMOS_RESET_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;CmosResetSanitize&quot;</span>
+    <span class="n">NAME_CMOS_RESET_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;CmosResetSuccess&quot;</span>
+    <span class="n">NAME_CONFIG_BOARD_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ConfigBoardBegin&quot;</span>
+    <span class="n">NAME_CONFIG_BOARD_CONFIG_MEMORY_POLICY</span> <span class="o">=</span> <span class="s">&quot;ConfigBoardConfigMemoryPolicy&quot;</span>
+    <span class="n">NAME_CONFIG_BOARD_FAIL</span> <span class="o">=</span> <span class="s">&quot;ConfigBoardFail&quot;</span>
+    <span class="n">NAME_CONFIG_BOARD_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ConfigBoardSuccess&quot;</span>
+    <span class="n">NAME_CONFIG_SO_LBEGIN</span> <span class="o">=</span> <span class="s">&quot;ConfigSoLBegin&quot;</span>
+    <span class="n">NAME_CONFIG_SO_LEXECUTE</span> <span class="o">=</span> <span class="s">&quot;ConfigSoLExecute&quot;</span>
+    <span class="n">NAME_CONFIG_SO_LFAIL</span> <span class="o">=</span> <span class="s">&quot;ConfigSoLFail&quot;</span>
+    <span class="n">NAME_CONFIG_SO_LSUCCESS</span> <span class="o">=</span> <span class="s">&quot;ConfigSoLSuccess&quot;</span>
+    <span class="n">NAME_DECOMMISSION_BEGIN</span> <span class="o">=</span> <span class="s">&quot;DecommissionBegin&quot;</span>
+    <span class="n">NAME_DECOMMISSION_CLEANUP_CIMC</span> <span class="o">=</span> <span class="s">&quot;DecommissionCleanupCIMC&quot;</span>
+    <span class="n">NAME_DECOMMISSION_CLEANUP_PORT_CONFIG_LOCAL</span> <span class="o">=</span> <span class="s">&quot;DecommissionCleanupPortConfigLocal&quot;</span>
+    <span class="n">NAME_DECOMMISSION_CLEANUP_PORT_CONFIG_PEER</span> <span class="o">=</span> <span class="s">&quot;DecommissionCleanupPortConfigPeer&quot;</span>
+    <span class="n">NAME_DECOMMISSION_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;DecommissionExecute&quot;</span>
+    <span class="n">NAME_DECOMMISSION_FAIL</span> <span class="o">=</span> <span class="s">&quot;DecommissionFail&quot;</span>
+    <span class="n">NAME_DECOMMISSION_PRECLEANUP_PORT_CONFIG</span> <span class="o">=</span> <span class="s">&quot;DecommissionPrecleanupPortConfig&quot;</span>
+    <span class="n">NAME_DECOMMISSION_STOP_VMEDIA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;DecommissionStopVMediaLocal&quot;</span>
+    <span class="n">NAME_DECOMMISSION_STOP_VMEDIA_PEER</span> <span class="o">=</span> <span class="s">&quot;DecommissionStopVMediaPeer&quot;</span>
+    <span class="n">NAME_DECOMMISSION_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;DecommissionSuccess&quot;</span>
+    <span class="n">NAME_DECOMMISSION_UNCONFIG_EXT_MGMT_GW</span> <span class="o">=</span> <span class="s">&quot;DecommissionUnconfigExtMgmtGw&quot;</span>
+    <span class="n">NAME_DECOMMISSION_UNCONFIG_EXT_MGMT_RULES</span> <span class="o">=</span> <span class="s">&quot;DecommissionUnconfigExtMgmtRules&quot;</span>
+    <span class="n">NAME_DIAGNOSTIC_INTERRUPT_BEGIN</span> <span class="o">=</span> <span class="s">&quot;DiagnosticInterruptBegin&quot;</span>
+    <span class="n">NAME_DIAGNOSTIC_INTERRUPT_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;DiagnosticInterruptExecute&quot;</span>
+    <span class="n">NAME_DIAGNOSTIC_INTERRUPT_FAIL</span> <span class="o">=</span> <span class="s">&quot;DiagnosticInterruptFail&quot;</span>
+    <span class="n">NAME_DIAGNOSTIC_INTERRUPT_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;DiagnosticInterruptSuccess&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BEGIN</span> <span class="o">=</span> <span class="s">&quot;DisassociateBegin&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BIOS_POST_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;DisassociateBiosPostCompletion&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BMC_CONFIG_PNU_OS</span> <span class="o">=</span> <span class="s">&quot;DisassociateBmcConfigPnuOS&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BMC_PRECONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateBmcPreconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BMC_PRECONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateBmcPreconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BMC_UNCONFIG_PNU_OS</span> <span class="o">=</span> <span class="s">&quot;DisassociateBmcUnconfigPnuOS&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BOOT_PNUOS</span> <span class="o">=</span> <span class="s">&quot;DisassociateBootPnuos&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_BOOT_WAIT</span> <span class="o">=</span> <span class="s">&quot;DisassociateBootWait&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;DisassociateCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_CONFIG_BIOS</span> <span class="o">=</span> <span class="s">&quot;DisassociateConfigBios&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_CONFIG_FLEX_FLASH_SCRUB</span> <span class="o">=</span> <span class="s">&quot;DisassociateConfigFlexFlashScrub&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_CONFIG_KVM_MGMT_DEFAULT_SETTING</span> <span class="o">=</span> <span class="s">&quot;DisassociateConfigKvmMgmtDefaultSetting&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_CONFIG_USER_ACCESS</span> <span class="o">=</span> <span class="s">&quot;DisassociateConfigUserAccess&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_DEASSERT_RESET_BYPASS</span> <span class="o">=</span> <span class="s">&quot;DisassociateDeassertResetBypass&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_FAIL</span> <span class="o">=</span> <span class="s">&quot;DisassociateFail&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_HAG_PNU_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;DisassociateHagPnuOSConnect&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_HAG_PNU_OSDISCONNECT</span> <span class="o">=</span> <span class="s">&quot;DisassociateHagPnuOSDisconnect&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_HANDLE_POOLING</span> <span class="o">=</span> <span class="s">&quot;DisassociateHandlePooling&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_CONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicConfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_CONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicConfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_UNCONFIG_HOST_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicUnconfigHostOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_UNCONFIG_HOST_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicUnconfigHostOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_UNCONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicUnconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_UNCONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicUnconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_UNCONFIG_SERVICE_INFRA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicUnconfigServiceInfraLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_NIC_UNCONFIG_SERVICE_INFRA_PEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateNicUnconfigServiceInfraPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_OOB_DISK_SCRUB</span> <span class="o">=</span> <span class="s">&quot;DisassociateOobDiskScrub&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSCATALOG</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSCatalog&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSIDENT</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSIdent&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSPOLICY</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSPolicy&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSSCRUB</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSScrub&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSSELF_TEST</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSSelfTest&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSUNCONFIG</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSUnconfig&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PNU_OSVALIDATE</span> <span class="o">=</span> <span class="s">&quot;DisassociatePnuOSValidate&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;DisassociatePowerDeployWait&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;DisassociatePowerOn&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;DisassociatePreSanitize&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_RESET_SECURE_BOOT_CONFIG</span> <span class="o">=</span> <span class="s">&quot;DisassociateResetSecureBootConfig&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;DisassociateSanitize&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SERIAL_DEBUG_PNU_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;DisassociateSerialDebugPnuOSConnect&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SERIAL_DEBUG_PNU_OSDISCONNECT</span> <span class="o">=</span> <span class="s">&quot;DisassociateSerialDebugPnuOSDisconnect&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SHUTDOWN</span> <span class="o">=</span> <span class="s">&quot;DisassociateShutdown&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SOL_REDIRECT_DISABLE</span> <span class="o">=</span> <span class="s">&quot;DisassociateSolRedirectDisable&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SOL_REDIRECT_ENABLE</span> <span class="o">=</span> <span class="s">&quot;DisassociateSolRedirectEnable&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;DisassociateSuccess&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_CONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwConfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_CONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwConfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_CONFIG_PORT_NIV_LOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwConfigPortNivLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_CONFIG_PORT_NIV_PEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwConfigPortNivPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_UNCONFIG_HOST_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwUnconfigHostOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_UNCONFIG_HOST_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwUnconfigHostOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_UNCONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwUnconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_SW_UNCONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;DisassociateSwUnconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_BIOS</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigBios&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_CIMC_VMEDIA</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigCimcVMedia&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_EXT_MGMT_GW</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigExtMgmtGw&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_EXT_MGMT_RULES</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigExtMgmtRules&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_FLEX_FLASH</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigFlexFlash&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_SO_L</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigSoL&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_UNCONFIG_UUID</span> <span class="o">=</span> <span class="s">&quot;DisassociateUnconfigUuid&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_VERIFY_FC_ZONE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;DisassociateVerifyFcZoneConfig&quot;</span>
+    <span class="n">NAME_DISASSOCIATE_WAIT_FOR_UN_CONFIG_APPLIANCES</span> <span class="o">=</span> <span class="s">&quot;DisassociateWaitForUnConfigAppliances&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_ACTIVATE</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootActivate&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_BEGIN</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootBegin&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_FAIL</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootFail&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootPollUpdateStatus&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_RESET</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootReset&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootSuccess&quot;</span>
+    <span class="n">NAME_ENABLE_CIMC_SECURE_BOOT_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;EnableCimcSecureBootUpdateRequest&quot;</span>
+    <span class="n">NAME_FLASH_CONTROLLER_BEGIN</span> <span class="o">=</span> <span class="s">&quot;FlashControllerBegin&quot;</span>
+    <span class="n">NAME_FLASH_CONTROLLER_FAIL</span> <span class="o">=</span> <span class="s">&quot;FlashControllerFail&quot;</span>
+    <span class="n">NAME_FLASH_CONTROLLER_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;FlashControllerSuccess&quot;</span>
+    <span class="n">NAME_FLASH_CONTROLLER_UPDATE_FLASH_LIFE</span> <span class="o">=</span> <span class="s">&quot;FlashControllerUpdateFlashLife&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_ACTIVATE_ADAPTOR_NW_FW_LOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeActivateAdaptorNwFwLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_ACTIVATE_ADAPTOR_NW_FW_PEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeActivateAdaptorNwFwPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_ACTIVATE_BIOS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeActivateBios&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_ACTIVATE_IBMCFW</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeActivateIBMCFw&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BEGIN</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBegin&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BIOS_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBiosImgUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BIOS_POST_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBiosPostCompletion&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BLADE_POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBladePowerOff&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BMC_CONFIG_PNU_OS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBmcConfigPnuOS&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BMC_PRECONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBmcPreconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BMC_PRECONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBmcPreconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BMC_UNCONFIG_PNU_OS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBmcUnconfigPnuOS&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BOOT_PNUOS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBootPnuos&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_BOOT_WAIT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeBootWait&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_CLEAR_BIOS_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeClearBiosUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_COPY_REMOTE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeCopyRemote&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_DEASSERT_RESET_BYPASS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeDeassertResetBypass&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_DELETE_CURL_DOWNLOADED_IMAGES</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeDeleteCurlDownloadedImages&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_DELETE_IMAGES_REMOTE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeDeleteImagesRemote&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_DOWNLOAD_IMAGES</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeDownloadImages&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_FAIL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeFail&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_GRAPHICS_IMAGE_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeGraphicsImageUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_HAG_PNU_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeHagPnuOSConnect&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_HAG_PNU_OSDISCONNECT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeHagPnuOSDisconnect&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_HBA_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeHbaImgUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_LOCAL_DISK_FW_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeLocalDiskFwUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_NIC_CONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeNicConfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_NIC_CONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeNicConfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_NIC_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeNicImgUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_NIC_UNCONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeNicUnconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_NIC_UNCONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeNicUnconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_OOB_STORAGE_INVENTORY</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeOobStorageInventory&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSCATALOG</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSCatalog&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSCONFIG</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSConfig&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSIDENT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSIdent&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSINVENTORY</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSInventory&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSPOLICY</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSPolicy&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSSELF_TEST</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSSelfTest&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSUNLOAD_DRIVERS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSUnloadDrivers&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PNU_OSVALIDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePnuOSValidate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POLL_BIOS_ACTIVATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePollBiosActivateStatus&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POLL_BIOS_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePollBiosUpdateStatus&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POLL_BOARD_CTRL_POWER_CYCLE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePollBoardCtrlPowerCycle&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POLL_BOARD_CTRL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePollBoardCtrlUpdateStatus&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POLL_CLEAR_BIOS_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePollClearBiosUpdateStatus&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POWER_CYCLE_BOARD</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePowerCycleBoard&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePowerDeployWait&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePowerOn&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradePreSanitize&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_RESET_IBMC</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeResetIBMC&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSanitize&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SAS_EXPANDER_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSasExpanderImgUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SERIAL_DEBUG_PNU_OSCONNECT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSerialDebugPnuOSConnect&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SERIAL_DEBUG_PNU_OSDISCONNECT</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSerialDebugPnuOSDisconnect&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SHUTDOWN</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeShutdown&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SOL_REDIRECT_DISABLE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSolRedirectDisable&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SOL_REDIRECT_ENABLE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSolRedirectEnable&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_STORAGE_CTLR_IMG_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeStorageCtlrImgUpdate&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSuccess&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SW_CONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSwConfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SW_CONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSwConfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SW_CONFIG_PORT_NIV_LOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSwConfigPortNivLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SW_CONFIG_PORT_NIV_PEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSwConfigPortNivPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SW_UNCONFIG_PNU_OSLOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSwUnconfigPnuOSLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_SW_UNCONFIG_PNU_OSPEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeSwUnconfigPnuOSPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UNCONFIG_CIMC_VMEDIA</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUnconfigCimcVMedia&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UNCONFIG_EXT_MGMT_GW</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUnconfigExtMgmtGw&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UNCONFIG_EXT_MGMT_RULES</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUnconfigExtMgmtRules&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UNLOCK_FIRMWARE_IMAGE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUnlockFirmwareImage&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UPDATE_ADAPTOR_NW_FW_LOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUpdateAdaptorNwFwLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UPDATE_ADAPTOR_NW_FW_PEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUpdateAdaptorNwFwPeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UPDATE_BIOS_REQUEST</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUpdateBiosRequest&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UPDATE_BOARD_CTRL_REQUEST</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUpdateBoardCtrlRequest&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_UPDATE_IBMCFW</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeUpdateIBMCFw&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_WAIT_FOR_ADAPTOR_NW_FW_UPDATE_LOCAL</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeWaitForAdaptorNwFwUpdateLocal&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_WAIT_FOR_ADAPTOR_NW_FW_UPDATE_PEER</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeWaitForAdaptorNwFwUpdatePeer&quot;</span>
+    <span class="n">NAME_FW_UPGRADE_WAIT_FOR_IBMCFW_UPDATE</span> <span class="o">=</span> <span class="s">&quot;FwUpgradeWaitForIBMCFwUpdate&quot;</span>
+    <span class="n">NAME_HARD_SHUTDOWN_BEGIN</span> <span class="o">=</span> <span class="s">&quot;HardShutdownBegin&quot;</span>
+    <span class="n">NAME_HARD_SHUTDOWN_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;HardShutdownExecute&quot;</span>
+    <span class="n">NAME_HARD_SHUTDOWN_FAIL</span> <span class="o">=</span> <span class="s">&quot;HardShutdownFail&quot;</span>
+    <span class="n">NAME_HARD_SHUTDOWN_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;HardShutdownSuccess&quot;</span>
+    <span class="n">NAME_HARDRESET_BEGIN</span> <span class="o">=</span> <span class="s">&quot;HardresetBegin&quot;</span>
+    <span class="n">NAME_HARDRESET_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;HardresetCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_HARDRESET_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;HardresetExecute&quot;</span>
+    <span class="n">NAME_HARDRESET_FAIL</span> <span class="o">=</span> <span class="s">&quot;HardresetFail&quot;</span>
+    <span class="n">NAME_HARDRESET_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;HardresetPowerDeployWait&quot;</span>
+    <span class="n">NAME_HARDRESET_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;HardresetPreSanitize&quot;</span>
+    <span class="n">NAME_HARDRESET_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;HardresetSanitize&quot;</span>
+    <span class="n">NAME_HARDRESET_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;HardresetSuccess&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigBegin&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_BOOT_HOST</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigBootHost&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_BOOT_WAIT</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigBootWait&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigFail&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_OOB_STORAGE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigOobStorageConfig&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_OOB_STORAGE_INVENTORY</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigOobStorageInventory&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigPreSanitize&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigSanitize&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_SHUTDOWN</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigShutdown&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigSuccess&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_TEAR_DOWN_VMEDIA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigTearDownVMediaLocal&quot;</span>
+    <span class="n">NAME_OOB_STORAGE_ADMIN_CONFIG_TEAR_DOWN_VMEDIA_PEER</span> <span class="o">=</span> <span class="s">&quot;OobStorageAdminConfigTearDownVMediaPeer&quot;</span>
+    <span class="n">NAME_POWER_CAP_BEGIN</span> <span class="o">=</span> <span class="s">&quot;PowerCapBegin&quot;</span>
+    <span class="n">NAME_POWER_CAP_CONFIG</span> <span class="o">=</span> <span class="s">&quot;PowerCapConfig&quot;</span>
+    <span class="n">NAME_POWER_CAP_FAIL</span> <span class="o">=</span> <span class="s">&quot;PowerCapFail&quot;</span>
+    <span class="n">NAME_POWER_CAP_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;PowerCapSuccess&quot;</span>
+    <span class="n">NAME_POWERCYCLE_BEGIN</span> <span class="o">=</span> <span class="s">&quot;PowercycleBegin&quot;</span>
+    <span class="n">NAME_POWERCYCLE_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;PowercycleCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_POWERCYCLE_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;PowercycleExecute&quot;</span>
+    <span class="n">NAME_POWERCYCLE_FAIL</span> <span class="o">=</span> <span class="s">&quot;PowercycleFail&quot;</span>
+    <span class="n">NAME_POWERCYCLE_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;PowercyclePowerDeployWait&quot;</span>
+    <span class="n">NAME_POWERCYCLE_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;PowercyclePreSanitize&quot;</span>
+    <span class="n">NAME_POWERCYCLE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;PowercycleSanitize&quot;</span>
+    <span class="n">NAME_POWERCYCLE_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;PowercycleSuccess&quot;</span>
+    <span class="n">NAME_RESET_BMC_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ResetBmcBegin&quot;</span>
+    <span class="n">NAME_RESET_BMC_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;ResetBmcExecute&quot;</span>
+    <span class="n">NAME_RESET_BMC_FAIL</span> <span class="o">=</span> <span class="s">&quot;ResetBmcFail&quot;</span>
+    <span class="n">NAME_RESET_BMC_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ResetBmcSuccess&quot;</span>
+    <span class="n">NAME_RESET_IPMI_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ResetIpmiBegin&quot;</span>
+    <span class="n">NAME_RESET_IPMI_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;ResetIpmiExecute&quot;</span>
+    <span class="n">NAME_RESET_IPMI_FAIL</span> <span class="o">=</span> <span class="s">&quot;ResetIpmiFail&quot;</span>
+    <span class="n">NAME_RESET_IPMI_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ResetIpmiSuccess&quot;</span>
+    <span class="n">NAME_RESET_KVM_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ResetKvmBegin&quot;</span>
+    <span class="n">NAME_RESET_KVM_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;ResetKvmExecute&quot;</span>
+    <span class="n">NAME_RESET_KVM_FAIL</span> <span class="o">=</span> <span class="s">&quot;ResetKvmFail&quot;</span>
+    <span class="n">NAME_RESET_KVM_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ResetKvmSuccess&quot;</span>
+    <span class="n">NAME_RESET_MEMORY_ERRORS_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ResetMemoryErrorsBegin&quot;</span>
+    <span class="n">NAME_RESET_MEMORY_ERRORS_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;ResetMemoryErrorsExecute&quot;</span>
+    <span class="n">NAME_RESET_MEMORY_ERRORS_FAIL</span> <span class="o">=</span> <span class="s">&quot;ResetMemoryErrorsFail&quot;</span>
+    <span class="n">NAME_RESET_MEMORY_ERRORS_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ResetMemoryErrorsSuccess&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeployBegin&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_FAIL</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeployFail&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_NIC_CONFIG_LOCAL</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeployNicConfigLocal&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_NIC_CONFIG_PEER</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeployNicConfigPeer&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeploySuccess&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_SW_CONFIG_LOCAL</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeploySwConfigLocal&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_DEPLOY_SW_CONFIG_PEER</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraDeploySwConfigPeer&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawBegin&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_FAIL</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawFail&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_NIC_UN_CONFIG_LOCAL</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawNicUnConfigLocal&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_NIC_UN_CONFIG_PEER</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawNicUnConfigPeer&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawSuccess&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_SW_UN_CONFIG_LOCAL</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawSwUnConfigLocal&quot;</span>
+    <span class="n">NAME_SERVICE_INFRA_WITHDRAW_SW_UN_CONFIG_PEER</span> <span class="o">=</span> <span class="s">&quot;ServiceInfraWithdrawSwUnConfigPeer&quot;</span>
+    <span class="n">NAME_SOFT_SHUTDOWN_BEGIN</span> <span class="o">=</span> <span class="s">&quot;SoftShutdownBegin&quot;</span>
+    <span class="n">NAME_SOFT_SHUTDOWN_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;SoftShutdownExecute&quot;</span>
+    <span class="n">NAME_SOFT_SHUTDOWN_FAIL</span> <span class="o">=</span> <span class="s">&quot;SoftShutdownFail&quot;</span>
+    <span class="n">NAME_SOFT_SHUTDOWN_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;SoftShutdownSuccess&quot;</span>
+    <span class="n">NAME_SOFTRESET_BEGIN</span> <span class="o">=</span> <span class="s">&quot;SoftresetBegin&quot;</span>
+    <span class="n">NAME_SOFTRESET_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;SoftresetCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_SOFTRESET_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;SoftresetExecute&quot;</span>
+    <span class="n">NAME_SOFTRESET_FAIL</span> <span class="o">=</span> <span class="s">&quot;SoftresetFail&quot;</span>
+    <span class="n">NAME_SOFTRESET_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;SoftresetPowerDeployWait&quot;</span>
+    <span class="n">NAME_SOFTRESET_PRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;SoftresetPreSanitize&quot;</span>
+    <span class="n">NAME_SOFTRESET_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;SoftresetSanitize&quot;</span>
+    <span class="n">NAME_SOFTRESET_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;SoftresetSuccess&quot;</span>
+    <span class="n">NAME_SW_CONN_UPD_A</span> <span class="o">=</span> <span class="s">&quot;SwConnUpdA&quot;</span>
+    <span class="n">NAME_SW_CONN_UPD_B</span> <span class="o">=</span> <span class="s">&quot;SwConnUpdB&quot;</span>
+    <span class="n">NAME_SW_CONN_UPD_BEGIN</span> <span class="o">=</span> <span class="s">&quot;SwConnUpdBegin&quot;</span>
+    <span class="n">NAME_SW_CONN_UPD_FAIL</span> <span class="o">=</span> <span class="s">&quot;SwConnUpdFail&quot;</span>
+    <span class="n">NAME_SW_CONN_UPD_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;SwConnUpdSuccess&quot;</span>
+    <span class="n">NAME_TURNUP_BEGIN</span> <span class="o">=</span> <span class="s">&quot;TurnupBegin&quot;</span>
+    <span class="n">NAME_TURNUP_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;TurnupCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_TURNUP_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;TurnupExecute&quot;</span>
+    <span class="n">NAME_TURNUP_FAIL</span> <span class="o">=</span> <span class="s">&quot;TurnupFail&quot;</span>
+    <span class="n">NAME_TURNUP_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;TurnupPowerDeployWait&quot;</span>
+    <span class="n">NAME_TURNUP_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;TurnupSuccess&quot;</span>
+    <span class="n">NAME_UNCONFIG_SO_LBEGIN</span> <span class="o">=</span> <span class="s">&quot;UnconfigSoLBegin&quot;</span>
+    <span class="n">NAME_UNCONFIG_SO_LEXECUTE</span> <span class="o">=</span> <span class="s">&quot;UnconfigSoLExecute&quot;</span>
+    <span class="n">NAME_UNCONFIG_SO_LFAIL</span> <span class="o">=</span> <span class="s">&quot;UnconfigSoLFail&quot;</span>
+    <span class="n">NAME_UNCONFIG_SO_LSUCCESS</span> <span class="o">=</span> <span class="s">&quot;UnconfigSoLSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorBegin&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorFail&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_POLL_UPDATE_STATUS_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorPollUpdateStatusLocal&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_POLL_UPDATE_STATUS_PEER</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorPollUpdateStatusPeer&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorPowerDeployWait&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorPowerOff&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorPowerOn&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_UPDATE_REQUEST_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorUpdateRequestLocal&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_UPDATE_REQUEST_PEER</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorUpdateRequestPeer&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSBEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSBegin&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSCLEAR</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSClear&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSFAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSFail&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSPOLL_CLEAR_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSPollClearStatus&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSSUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_BIOSUPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateBIOSUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerBegin&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_CHECK_POWER_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerCheckPowerAvailability&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerFail&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POLL_BOARD_CTRL_POWER_CYCLE</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPollBoardCtrlPowerCycle&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POWER_CYCLE_BOARD</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPowerCycleBoard&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POWER_DEPLOY_WAIT</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPowerDeployWait&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_PREPARE_FOR_UPDATE</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPrepareForUpdate&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SERVER_POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerServerPowerOff&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SERVER_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerServerPowerOn&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerUpdateRequest&quot;</span>
+    <span class="n">NAME_CLEAR_TPMBEGIN</span> <span class="o">=</span> <span class="s">&quot;clearTPMBegin&quot;</span>
+    <span class="n">NAME_CLEAR_TPMBIOS_POST_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;clearTPMBiosPostCompletion&quot;</span>
+    <span class="n">NAME_CLEAR_TPMBLADE_POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;clearTPMBladePowerOff&quot;</span>
+    <span class="n">NAME_CLEAR_TPMBLADE_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;clearTPMBladePowerOn&quot;</span>
+    <span class="n">NAME_CLEAR_TPMBOOT_HOST</span> <span class="o">=</span> <span class="s">&quot;clearTPMBootHost&quot;</span>
+    <span class="n">NAME_CLEAR_TPMCLEAR</span> <span class="o">=</span> <span class="s">&quot;clearTPMClear&quot;</span>
+    <span class="n">NAME_CLEAR_TPMFAIL</span> <span class="o">=</span> <span class="s">&quot;clearTPMFail&quot;</span>
+    <span class="n">NAME_CLEAR_TPMPRE_SANITIZE</span> <span class="o">=</span> <span class="s">&quot;clearTPMPreSanitize&quot;</span>
+    <span class="n">NAME_CLEAR_TPMREAD_SM_BIOS</span> <span class="o">=</span> <span class="s">&quot;clearTPMReadSmBios&quot;</span>
+    <span class="n">NAME_CLEAR_TPMRECONFIG_BIOS</span> <span class="o">=</span> <span class="s">&quot;clearTPMReconfigBios&quot;</span>
+    <span class="n">NAME_CLEAR_TPMSANITIZE</span> <span class="o">=</span> <span class="s">&quot;clearTPMSanitize&quot;</span>
+    <span class="n">NAME_CLEAR_TPMSETUP_VMEDIA</span> <span class="o">=</span> <span class="s">&quot;clearTPMSetupVmedia&quot;</span>
+    <span class="n">NAME_CLEAR_TPMSTOP_VMEDIA_LOCAL</span> <span class="o">=</span> <span class="s">&quot;clearTPMStopVMediaLocal&quot;</span>
+    <span class="n">NAME_CLEAR_TPMSTOP_VMEDIA_PEER</span> <span class="o">=</span> <span class="s">&quot;clearTPMStopVMediaPeer&quot;</span>
+    <span class="n">NAME_CLEAR_TPMSUCCESS</span> <span class="o">=</span> <span class="s">&quot;clearTPMSuccess&quot;</span>
+    <span class="n">NAME_CLEAR_TPMUNCONFIG_VMEDIA</span> <span class="o">=</span> <span class="s">&quot;clearTPMUnconfigVmedia&quot;</span>
+    <span class="n">NAME_NOP</span> <span class="o">=</span> <span class="s">&quot;nop&quot;</span>
+    <span class="n">NAME_UPDATE_EXT_USERS_BEGIN</span> <span class="o">=</span> <span class="s">&quot;updateExtUsersBegin&quot;</span>
+    <span class="n">NAME_UPDATE_EXT_USERS_DEPLOY</span> <span class="o">=</span> <span class="s">&quot;updateExtUsersDeploy&quot;</span>
+    <span class="n">NAME_UPDATE_EXT_USERS_FAIL</span> <span class="o">=</span> <span class="s">&quot;updateExtUsersFail&quot;</span>
+    <span class="n">NAME_UPDATE_EXT_USERS_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;updateExtUsersSuccess&quot;</span>
+    <span class="n">STAGE_STATUS_FAIL</span> <span class="o">=</span> <span class="s">&quot;fail&quot;</span>
+    <span class="n">STAGE_STATUS_IN_PROGRESS</span> <span class="o">=</span> <span class="s">&quot;inProgress&quot;</span>
+    <span class="n">STAGE_STATUS_NOP</span> <span class="o">=</span> <span class="s">&quot;nop&quot;</span>
+    <span class="n">STAGE_STATUS_PENDING</span> <span class="o">=</span> <span class="s">&quot;pending&quot;</span>
+    <span class="n">STAGE_STATUS_SKIP</span> <span class="o">=</span> <span class="s">&quot;skip&quot;</span>
+    <span class="n">STAGE_STATUS_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;success&quot;</span>
+    <span class="n">STAGE_STATUS_THROTTLED</span> <span class="o">=</span> <span class="s">&quot;throttled&quot;</span>
+
+</div>
+<div class="viewcode-block" id="ComputePhysicalFsmStage"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.compute.html#ucsmsdk.mometa.compute.ComputePhysicalFsmStage.ComputePhysicalFsmStage">[docs]</a><span class="k">class</span> <span class="nc">ComputePhysicalFsmStage</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is ComputePhysicalFsmStage class.&quot;&quot;&quot;</span>
+
+    <span class="n">consts</span> <span class="o">=</span> <span class="n">ComputePhysicalFsmStageConsts</span><span class="p">()</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">u&#39;name&#39;</span><span class="p">])</span>
+
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;ComputePhysicalFsmStage&quot;</span><span class="p">,</span> <span class="s">&quot;computePhysicalFsmStage&quot;</span><span class="p">,</span> <span class="s">&quot;stage-[name]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="s">&quot;OutputOnly&quot;</span><span class="p">,</span> <span class="mh">0xf</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;computePhysicalFsm&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="bp">None</span><span class="p">])</span>
+
+    <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;descr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;descr&quot;</span><span class="p">,</span> <span class="s">&quot;descr&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[ !#$%&amp;\(\)\*\+,\-\./:;\?@\[\]_\{\|\}~a-zA-Z0-9]{0,256}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;last_update_time&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;last_update_time&quot;</span><span class="p">,</span> <span class="s">&quot;lastUpdateTime&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;([0-9]){4}-([0-9]){2}-([0-9]){2}T([0-9]){2}:([0-9]){2}:([0-9]){2}((\.([0-9]){3})){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ActivateAdaptorActivateLocal&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorActivatePeer&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorDeassertResetBypass&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorFail&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorPowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorReset&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSActivate&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSClear&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSFail&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSPollActivateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSPollClearStatus&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSPowerOff&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSPowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBIOSUpdateTokens&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateActivateAdaptorNwFwLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateActivateAdaptorNwFwPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateActivateBios&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateActivateIBMCFw&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBegin&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBiosImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBiosPostCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBladePowerOff&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBmcConfigPnuOS&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBmcPreconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBmcPreconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBmcUnconfigPnuOS&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBmcUpdateHostPreBoot&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBootHost&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBootPnuos&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateBootWait&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateCalculateVlanGroupForHostOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateCalculateVlanGroupForHostOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateClearBiosUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigCimcVMedia&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigExtMgmtGw&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigExtMgmtRules&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigFanSpeed&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigFlexFlash&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigSoL&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigUserAccess&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateConfigUuid&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateCopyRemote&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateDeassertResetBypass&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateDeleteCurlDownloadedImages&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateDeleteImagesRemote&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateDownloadImages&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateFail&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateGraphicsImageUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHagHostOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHagPnuOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHagPnuOSDisconnect&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHbaImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHostOSConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHostOSIdent&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHostOSPolicy&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateHostOSValidate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateLocalDiskFwUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateMarkAdapterForReboot&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigHostOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigHostOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigParamsHostOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigParamsHostOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigServiceInfraLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicConfigServiceInfraPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicUnconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateNicUnconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateOobStorageConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateOobStorageInventory&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSCatalog&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSIdent&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSInventory&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSLocalDiskConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSPolicy&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSSelfTest&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSUnloadDrivers&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePnuOSValidate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePollBiosActivateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePollBiosUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePollBoardCtrlPowerCycle&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePollBoardCtrlUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePollClearBiosUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePowerCycleBoard&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePowerOnPreConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;AssociatePrepareForBoot&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateResetIBMC&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSasExpanderImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSerialDebugPnuOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSerialDebugPnuOSDisconnect&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSolRedirectDisable&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSolRedirectEnable&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateStorageCtlrImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigHostOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigHostOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigPortNivLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigPortNivPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigServiceInfraLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwConfigServiceInfraPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwUnconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSwUnconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateSyncPowerState&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUnconfigCimcVMedia&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUnconfigExtMgmtGw&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUnconfigExtMgmtRules&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUnlockFirmwareImage&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUpdateAdaptorNwFwLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUpdateAdaptorNwFwPeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUpdateBiosRequest&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUpdateBoardCtrlRequest&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateUpdateIBMCFw&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateVerifyFcZoneConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateVerifyRemoteStorageConfig&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateWaitForAdaptorNwFwUpdateLocal&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateWaitForAdaptorNwFwUpdatePeer&quot;</span><span class="p">,</span> <span class="s">&quot;AssociateWaitForIBMCFwUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryBegin&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryCleanup&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryFail&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryPreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryReset&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoverySanitize&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoverySetupVmediaLocal&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoverySetupVmediaPeer&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryShutdown&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryStart&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryStopVMediaLocal&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryStopVMediaPeer&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoverySuccess&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryTeardownVmediaLocal&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryTeardownVmediaPeer&quot;</span><span class="p">,</span> <span class="s">&quot;BiosRecoveryWait&quot;</span><span class="p">,</span> <span class="s">&quot;CimcSessionDeleteBegin&quot;</span><span class="p">,</span> <span class="s">&quot;CimcSessionDeleteExecute&quot;</span><span class="p">,</span> <span class="s">&quot;CimcSessionDeleteFail&quot;</span><span class="p">,</span> <span class="s">&quot;CimcSessionDeleteSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetBegin&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetBladePowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetExecute&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetFail&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetPreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetReconfigBios&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetReconfigUuid&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;CmosResetSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigBoardBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigBoardConfigMemoryPolicy&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigBoardFail&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigBoardSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigSoLBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigSoLExecute&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigSoLFail&quot;</span><span class="p">,</span> <span class="s">&quot;ConfigSoLSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionBegin&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionCleanupCIMC&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionCleanupPortConfigLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionCleanupPortConfigPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionExecute&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionFail&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionPrecleanupPortConfig&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionStopVMediaLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionStopVMediaPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionUnconfigExtMgmtGw&quot;</span><span class="p">,</span> <span class="s">&quot;DecommissionUnconfigExtMgmtRules&quot;</span><span class="p">,</span> <span class="s">&quot;DiagnosticInterruptBegin&quot;</span><span class="p">,</span> <span class="s">&quot;DiagnosticInterruptExecute&quot;</span><span class="p">,</span> <span class="s">&quot;DiagnosticInterruptFail&quot;</span><span class="p">,</span> <span class="s">&quot;DiagnosticInterruptSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBegin&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBiosPostCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBmcConfigPnuOS&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBmcPreconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBmcPreconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBmcUnconfigPnuOS&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBootPnuos&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateBootWait&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateConfigBios&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateConfigFlexFlashScrub&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateConfigKvmMgmtDefaultSetting&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateConfigUserAccess&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateDeassertResetBypass&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateFail&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateHagPnuOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateHagPnuOSDisconnect&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateHandlePooling&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicConfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicConfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicUnconfigHostOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicUnconfigHostOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicUnconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicUnconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicUnconfigServiceInfraLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateNicUnconfigServiceInfraPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateOobDiskScrub&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSCatalog&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSIdent&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSPolicy&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSScrub&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSSelfTest&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSUnconfig&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePnuOSValidate&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociatePreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateResetSecureBootConfig&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSerialDebugPnuOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSerialDebugPnuOSDisconnect&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateShutdown&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSolRedirectDisable&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSolRedirectEnable&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwConfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwConfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwConfigPortNivLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwConfigPortNivPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwUnconfigHostOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwUnconfigHostOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwUnconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateSwUnconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigBios&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigCimcVMedia&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigExtMgmtGw&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigExtMgmtRules&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigFlexFlash&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigSoL&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateUnconfigUuid&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateVerifyFcZoneConfig&quot;</span><span class="p">,</span> <span class="s">&quot;DisassociateWaitForUnConfigAppliances&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootActivate&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootBegin&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootFail&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootReset&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;EnableCimcSecureBootUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;FlashControllerBegin&quot;</span><span class="p">,</span> <span class="s">&quot;FlashControllerFail&quot;</span><span class="p">,</span> <span class="s">&quot;FlashControllerSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;FlashControllerUpdateFlashLife&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeActivateAdaptorNwFwLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeActivateAdaptorNwFwPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeActivateBios&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeActivateIBMCFw&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBegin&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBiosImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBiosPostCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBladePowerOff&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBmcConfigPnuOS&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBmcPreconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBmcPreconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBmcUnconfigPnuOS&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBootPnuos&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeBootWait&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeClearBiosUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeCopyRemote&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeDeassertResetBypass&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeDeleteCurlDownloadedImages&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeDeleteImagesRemote&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeDownloadImages&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeFail&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeGraphicsImageUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeHagPnuOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeHagPnuOSDisconnect&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeHbaImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeLocalDiskFwUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeNicConfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeNicConfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeNicImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeNicUnconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeNicUnconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeOobStorageInventory&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSCatalog&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSConfig&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSIdent&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSInventory&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSPolicy&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSSelfTest&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSUnloadDrivers&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePnuOSValidate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePollBiosActivateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePollBiosUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePollBoardCtrlPowerCycle&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePollBoardCtrlUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePollClearBiosUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePowerCycleBoard&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradePreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeResetIBMC&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSasExpanderImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSerialDebugPnuOSConnect&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSerialDebugPnuOSDisconnect&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeShutdown&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSolRedirectDisable&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSolRedirectEnable&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeStorageCtlrImgUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSwConfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSwConfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSwConfigPortNivLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSwConfigPortNivPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSwUnconfigPnuOSLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeSwUnconfigPnuOSPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUnconfigCimcVMedia&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUnconfigExtMgmtGw&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUnconfigExtMgmtRules&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUnlockFirmwareImage&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUpdateAdaptorNwFwLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUpdateAdaptorNwFwPeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUpdateBiosRequest&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUpdateBoardCtrlRequest&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeUpdateIBMCFw&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeWaitForAdaptorNwFwUpdateLocal&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeWaitForAdaptorNwFwUpdatePeer&quot;</span><span class="p">,</span> <span class="s">&quot;FwUpgradeWaitForIBMCFwUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;HardShutdownBegin&quot;</span><span class="p">,</span> <span class="s">&quot;HardShutdownExecute&quot;</span><span class="p">,</span> <span class="s">&quot;HardShutdownFail&quot;</span><span class="p">,</span> <span class="s">&quot;HardShutdownSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetBegin&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetExecute&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetFail&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetPreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;HardresetSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigBootHost&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigBootWait&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigOobStorageConfig&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigOobStorageInventory&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigPreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigShutdown&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigTearDownVMediaLocal&quot;</span><span class="p">,</span> <span class="s">&quot;OobStorageAdminConfigTearDownVMediaPeer&quot;</span><span class="p">,</span> <span class="s">&quot;PowerCapBegin&quot;</span><span class="p">,</span> <span class="s">&quot;PowerCapConfig&quot;</span><span class="p">,</span> <span class="s">&quot;PowerCapFail&quot;</span><span class="p">,</span> <span class="s">&quot;PowerCapSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;PowercycleBegin&quot;</span><span class="p">,</span> <span class="s">&quot;PowercycleCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;PowercycleExecute&quot;</span><span class="p">,</span> <span class="s">&quot;PowercycleFail&quot;</span><span class="p">,</span> <span class="s">&quot;PowercyclePowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;PowercyclePreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;PowercycleSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;PowercycleSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ResetBmcBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ResetBmcExecute&quot;</span><span class="p">,</span> <span class="s">&quot;ResetBmcFail&quot;</span><span class="p">,</span> <span class="s">&quot;ResetBmcSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ResetIpmiBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ResetIpmiExecute&quot;</span><span class="p">,</span> <span class="s">&quot;ResetIpmiFail&quot;</span><span class="p">,</span> <span class="s">&quot;ResetIpmiSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ResetKvmBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ResetKvmExecute&quot;</span><span class="p">,</span> <span class="s">&quot;ResetKvmFail&quot;</span><span class="p">,</span> <span class="s">&quot;ResetKvmSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ResetMemoryErrorsBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ResetMemoryErrorsExecute&quot;</span><span class="p">,</span> <span class="s">&quot;ResetMemoryErrorsFail&quot;</span><span class="p">,</span> <span class="s">&quot;ResetMemoryErrorsSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeployBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeployFail&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeployNicConfigLocal&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeployNicConfigPeer&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeploySuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeploySwConfigLocal&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraDeploySwConfigPeer&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawFail&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawNicUnConfigLocal&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawNicUnConfigPeer&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawSwUnConfigLocal&quot;</span><span class="p">,</span> <span class="s">&quot;ServiceInfraWithdrawSwUnConfigPeer&quot;</span><span class="p">,</span> <span class="s">&quot;SoftShutdownBegin&quot;</span><span class="p">,</span> <span class="s">&quot;SoftShutdownExecute&quot;</span><span class="p">,</span> <span class="s">&quot;SoftShutdownFail&quot;</span><span class="p">,</span> <span class="s">&quot;SoftShutdownSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetBegin&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetExecute&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetFail&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetPreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;SoftresetSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;SwConnUpdA&quot;</span><span class="p">,</span> <span class="s">&quot;SwConnUpdB&quot;</span><span class="p">,</span> <span class="s">&quot;SwConnUpdBegin&quot;</span><span class="p">,</span> <span class="s">&quot;SwConnUpdFail&quot;</span><span class="p">,</span> <span class="s">&quot;SwConnUpdSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;TurnupBegin&quot;</span><span class="p">,</span> <span class="s">&quot;TurnupCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;TurnupExecute&quot;</span><span class="p">,</span> <span class="s">&quot;TurnupFail&quot;</span><span class="p">,</span> <span class="s">&quot;TurnupPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;TurnupSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UnconfigSoLBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UnconfigSoLExecute&quot;</span><span class="p">,</span> <span class="s">&quot;UnconfigSoLFail&quot;</span><span class="p">,</span> <span class="s">&quot;UnconfigSoLSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorPollUpdateStatusLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorPollUpdateStatusPeer&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorPowerOff&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorPowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorUpdateRequestLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorUpdateRequestPeer&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSClear&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSPollClearStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBIOSUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerCheckPowerAvailability&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPollBoardCtrlPowerCycle&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPowerCycleBoard&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPowerDeployWait&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPrepareForUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerServerPowerOff&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerServerPowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMBegin&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMBiosPostCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMBladePowerOff&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMBladePowerOn&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMBootHost&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMClear&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMFail&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMPreSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMReadSmBios&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMReconfigBios&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMSanitize&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMSetupVmedia&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMStopVMediaLocal&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMStopVMediaPeer&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;clearTPMUnconfigVmedia&quot;</span><span class="p">,</span> <span class="s">&quot;nop&quot;</span><span class="p">,</span> <span class="s">&quot;updateExtUsersBegin&quot;</span><span class="p">,</span> <span class="s">&quot;updateExtUsersDeploy&quot;</span><span class="p">,</span> <span class="s">&quot;updateExtUsersFail&quot;</span><span class="p">,</span> <span class="s">&quot;updateExtUsersSuccess&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;order&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;order&quot;</span><span class="p">,</span> <span class="s">&quot;order&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;retry&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;retry&quot;</span><span class="p">,</span> <span class="s">&quot;retry&quot;</span><span class="p">,</span> <span class="s">&quot;byte&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;stage_status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;stage_status&quot;</span><span class="p">,</span> <span class="s">&quot;stageStatus&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;fail&quot;</span><span class="p">,</span> <span class="s">&quot;inProgress&quot;</span><span class="p">,</span> <span class="s">&quot;nop&quot;</span><span class="p">,</span> <span class="s">&quot;pending&quot;</span><span class="p">,</span> <span class="s">&quot;skip&quot;</span><span class="p">,</span> <span class="s">&quot;success&quot;</span><span class="p">,</span> <span class="s">&quot;throttled&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+    <span class="p">}</span>
+
+    <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;descr&quot;</span><span class="p">:</span> <span class="s">&quot;descr&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;lastUpdateTime&quot;</span><span class="p">:</span> <span class="s">&quot;last_update_time&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;order&quot;</span><span class="p">:</span> <span class="s">&quot;order&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;retry&quot;</span><span class="p">:</span> <span class="s">&quot;retry&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;stageStatus&quot;</span><span class="p">:</span> <span class="s">&quot;stage_status&quot;</span><span class="p">,</span> 
+        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">descr</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_update_time</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sacl</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stage_status</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;ComputePhysicalFsmStage&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

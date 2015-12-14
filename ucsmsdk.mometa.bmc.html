@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ucsmsdk.mometa.bmc package &mdash; ucsmsdk 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
+        <link rel="next" title="ucsmsdk.mometa.callhome package" href="ucsmsdk.mometa.callhome.html"/>
+        <link rel="prev" title="ucsmsdk.mometa.bios package" href="ucsmsdk.mometa.bios.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ucsmsdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ucsmsdk</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
+      
+          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
+      
+    <li>ucsmsdk.mometa.bmc package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ucsmsdk.mometa.bmc.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ucsmsdk-mometa-bmc-package">
+<h1>ucsmsdk.mometa.bmc package<a class="headerlink" href="#ucsmsdk-mometa-bmc-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ucsmsdk.mometa.bmc.BmcSELCounter">
+<span id="ucsmsdk-mometa-bmc-bmcselcounter-module"></span><h2>ucsmsdk.mometa.bmc.BmcSELCounter module<a class="headerlink" href="#module-ucsmsdk.mometa.bmc.BmcSELCounter" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for BmcSELCounter ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.bmc.BmcSELCounter.</code><code class="descname">BmcSELCounter</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>local_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/bmc/BmcSELCounter.html#BmcSELCounter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<p>This is BmcSELCounter class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'localId'])</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'pcLocalId': 'pc_local_id', 'eqptInstId': 'eqpt_inst_id', 'pcGlobalId': 'pc_global_id', 'contInstId': 'cont_inst_id', 'globalId': 'global_id', 'value': 'value', 'eqptInstIdPropId': 'eqpt_inst_id_prop_id', 'contClassId': 'cont_class_id', 'statsPropId': 'stats_prop_id', 'collInterval': 'coll_interval', 'bitmask': 'bitmask', 'localId': 'local_id', 'sacl': 'sacl', 'threshold': 'threshold', 'eqptClassId': 'eqpt_class_id', 'contInstIdPropId': 'cont_inst_id_prop_id', 'statsClassId': 'stats_class_id', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84090&gt;, 'cont_inst_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84710&gt;, 'stats_class_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84290&gt;, 'eqpt_inst_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84ad0&gt;, 'cont_inst_id_prop_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84190&gt;, 'value': &lt;ucscoremeta.MoPropertyMeta object at 0x11e5c7610&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84950&gt;, 'eqpt_inst_id_prop_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84c90&gt;, 'eqpt_class_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84e50&gt;, 'global_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf843d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x11e5c7c90&gt;, 'bitmask': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84490&gt;, 'local_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84c10&gt;, 'stats_prop_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11e5c7210&gt;, 'pc_global_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84f90&gt;, 'threshold': &lt;ucscoremeta.MoPropertyMeta object at 0x11e5c7150&gt;, 'cont_class_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf840d0&gt;, 'coll_interval': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84a90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84110&gt;, 'pc_local_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11bf84590&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11be34b90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounter.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.bmc.BmcSELCounter.</code><code class="descname">BmcSELCounterConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/bmc/BmcSELCounter.html#BmcSELCounterConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_COMPUTE_BOARD">
+<code class="descname">CONT_CLASS_ID_COMPUTE_BOARD</code><em class="property"> = 'compute:Board'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_COMPUTE_BOARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_MEMORY_UNIT">
+<code class="descname">CONT_CLASS_ID_MEMORY_UNIT</code><em class="property"> = 'memory:Unit'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_MEMORY_UNIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_PROCESSOR_UNIT">
+<code class="descname">CONT_CLASS_ID_PROCESSOR_UNIT</code><em class="property"> = 'processor:Unit'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_PROCESSOR_UNIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_UNSPECIFIED">
+<code class="descname">CONT_CLASS_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_CLASS_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_PROP_ID_MEMORY_UNIT_ID">
+<code class="descname">CONT_INST_ID_PROP_ID_MEMORY_UNIT_ID</code><em class="property"> = 'memory:Unit:id'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_PROP_ID_MEMORY_UNIT_ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_PROP_ID_PROCESSOR_UNIT_ID">
+<code class="descname">CONT_INST_ID_PROP_ID_PROCESSOR_UNIT_ID</code><em class="property"> = 'processor:Unit:id'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_PROP_ID_PROCESSOR_UNIT_ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_PROP_ID_UNSPECIFIED">
+<code class="descname">CONT_INST_ID_PROP_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_PROP_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_UNSPECIFIED">
+<code class="descname">CONT_INST_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.CONT_INST_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_COMPUTE_BOARD">
+<code class="descname">EQPT_CLASS_ID_COMPUTE_BOARD</code><em class="property"> = 'compute:Board'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_COMPUTE_BOARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_MEMORY_UNIT">
+<code class="descname">EQPT_CLASS_ID_MEMORY_UNIT</code><em class="property"> = 'memory:Unit'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_MEMORY_UNIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_PROCESSOR_UNIT">
+<code class="descname">EQPT_CLASS_ID_PROCESSOR_UNIT</code><em class="property"> = 'processor:Unit'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_PROCESSOR_UNIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_UNSPECIFIED">
+<code class="descname">EQPT_CLASS_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_CLASS_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_PROP_ID_MEMORY_UNIT_ID">
+<code class="descname">EQPT_INST_ID_PROP_ID_MEMORY_UNIT_ID</code><em class="property"> = 'memory:Unit:id'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_PROP_ID_MEMORY_UNIT_ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_PROP_ID_PROCESSOR_UNIT_ID">
+<code class="descname">EQPT_INST_ID_PROP_ID_PROCESSOR_UNIT_ID</code><em class="property"> = 'processor:Unit:id'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_PROP_ID_PROCESSOR_UNIT_ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_PROP_ID_UNSPECIFIED">
+<code class="descname">EQPT_INST_ID_PROP_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_PROP_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_UNSPECIFIED">
+<code class="descname">EQPT_INST_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.EQPT_INST_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.PC_GLOBAL_ID_NO_ERRORS">
+<code class="descname">PC_GLOBAL_ID_NO_ERRORS</code><em class="property"> = 'No Errors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.PC_GLOBAL_ID_NO_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.PC_LOCAL_ID_NO_ERRORS">
+<code class="descname">PC_LOCAL_ID_NO_ERRORS</code><em class="property"> = 'No Errors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.PC_LOCAL_ID_NO_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS">
+<code class="descname">STATS_CLASS_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS</code><em class="property"> = 'compute:PCIeFatalCompletionStats'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS">
+<code class="descname">STATS_CLASS_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS</code><em class="property"> = 'compute:PCIeFatalProtocolStats'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS">
+<code class="descname">STATS_CLASS_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS</code><em class="property"> = 'compute:PCIeFatalReceiveStats'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_STATS">
+<code class="descname">STATS_CLASS_ID_COMPUTE_PCIE_FATAL_STATS</code><em class="property"> = 'compute:PCIeFatalStats'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_COMPUTE_PCIE_FATAL_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_MEMORY_ERROR_STATS">
+<code class="descname">STATS_CLASS_ID_MEMORY_ERROR_STATS</code><em class="property"> = 'memory:ErrorStats'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_MEMORY_ERROR_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_PROCESSOR_ERROR_STATS">
+<code class="descname">STATS_CLASS_ID_PROCESSOR_ERROR_STATS</code><em class="property"> = 'processor:ErrorStats'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_PROCESSOR_ERROR_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_UNSPECIFIED">
+<code class="descname">STATS_CLASS_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_CLASS_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_ABORT_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_ABORT_ERRORS</code><em class="property"> = 'compute:PCIeFatalCompletionStats:AbortErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_ABORT_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_TIMEOUT_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_TIMEOUT_ERRORS</code><em class="property"> = 'compute:PCIeFatalCompletionStats:TimeoutErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_TIMEOUT_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_UNEXPECTED_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_UNEXPECTED_ERRORS</code><em class="property"> = 'compute:PCIeFatalCompletionStats:unexpectedErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_COMPLETION_STATS_UNEXPECTED_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS_DLLP_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS_DLLP_ERRORS</code><em class="property"> = 'compute:PCIeFatalProtocolStats:dllpErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS_DLLP_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS_FLOW_CONTROL_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS_FLOW_CONTROL_ERRORS</code><em class="property"> = 'compute:PCIeFatalProtocolStats:flowControlErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_PROTOCOL_STATS_FLOW_CONTROL_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_BUFFER_OVERFLOW_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_BUFFER_OVERFLOW_ERRORS</code><em class="property"> = 'compute:PCIeFatalReceiveStats:bufferOverflowErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_BUFFER_OVERFLOW_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_ERR_FATAL_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_ERR_FATAL_ERRORS</code><em class="property"> = 'compute:PCIeFatalReceiveStats:errFatalErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_ERR_FATAL_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_ERR_NON_FATAL_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_ERR_NON_FATAL_ERRORS</code><em class="property"> = 'compute:PCIeFatalReceiveStats:errNonFatalErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_ERR_NON_FATAL_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_UNSUPPORTED_REQUEST_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_UNSUPPORTED_REQUEST_ERRORS</code><em class="property"> = 'compute:PCIeFatalReceiveStats:unsupportedRequestErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_RECEIVE_STATS_UNSUPPORTED_REQUEST_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_ACS_VIOLATION_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_ACS_VIOLATION_ERRORS</code><em class="property"> = 'compute:PCIeFatalStats:acsViolationErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_ACS_VIOLATION_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_MALFORMED_TLPERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_MALFORMED_TLPERRORS</code><em class="property"> = 'compute:PCIeFatalStats:malformedTLPErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_MALFORMED_TLPERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_POISONED_TLPERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_POISONED_TLPERRORS</code><em class="property"> = 'compute:PCIeFatalStats:poisonedTLPErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_POISONED_TLPERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_SURPRISE_LINK_DOWN_ERRORS">
+<code class="descname">STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_SURPRISE_LINK_DOWN_ERRORS</code><em class="property"> = 'compute:PCIeFatalStats:surpriseLinkDownErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_COMPUTE_PCIE_FATAL_STATS_SURPRISE_LINK_DOWN_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_ADDRESS_PARITY_ERRORS">
+<code class="descname">STATS_PROP_ID_MEMORY_ERROR_STATS_ADDRESS_PARITY_ERRORS</code><em class="property"> = 'memory:ErrorStats:addressParityErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_ADDRESS_PARITY_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_ECC_MULTIBIT_ERRORS">
+<code class="descname">STATS_PROP_ID_MEMORY_ERROR_STATS_ECC_MULTIBIT_ERRORS</code><em class="property"> = 'memory:ErrorStats:eccMultibitErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_ECC_MULTIBIT_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_ECC_SINGLEBIT_ERRORS">
+<code class="descname">STATS_PROP_ID_MEMORY_ERROR_STATS_ECC_SINGLEBIT_ERRORS</code><em class="property"> = 'memory:ErrorStats:eccSinglebitErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_ECC_SINGLEBIT_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_MISMATCH_ERRORS">
+<code class="descname">STATS_PROP_ID_MEMORY_ERROR_STATS_MISMATCH_ERRORS</code><em class="property"> = 'memory:ErrorStats:mismatchErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_MEMORY_ERROR_STATS_MISMATCH_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_MIRRORING_INTER_SOCK_ERRORS">
+<code class="descname">STATS_PROP_ID_PROCESSOR_ERROR_STATS_MIRRORING_INTER_SOCK_ERRORS</code><em class="property"> = 'processor:ErrorStats:mirroringInterSockErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_MIRRORING_INTER_SOCK_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_MIRRORING_INTRA_SOCK_ERRORS">
+<code class="descname">STATS_PROP_ID_PROCESSOR_ERROR_STATS_MIRRORING_INTRA_SOCK_ERRORS</code><em class="property"> = 'processor:ErrorStats:mirroringIntraSockErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_MIRRORING_INTRA_SOCK_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_SMI_LINK_CORR_ERRORS">
+<code class="descname">STATS_PROP_ID_PROCESSOR_ERROR_STATS_SMI_LINK_CORR_ERRORS</code><em class="property"> = 'processor:ErrorStats:smiLinkCorrErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_SMI_LINK_CORR_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_SMI_LINK_UNCORR_ERRORS">
+<code class="descname">STATS_PROP_ID_PROCESSOR_ERROR_STATS_SMI_LINK_UNCORR_ERRORS</code><em class="property"> = 'processor:ErrorStats:smiLinkUncorrErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_SMI_LINK_UNCORR_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_SPARING_ERRORS">
+<code class="descname">STATS_PROP_ID_PROCESSOR_ERROR_STATS_SPARING_ERRORS</code><em class="property"> = 'processor:ErrorStats:sparingErrors'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_PROCESSOR_ERROR_STATS_SPARING_ERRORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_UNSPECIFIED">
+<code class="descname">STATS_PROP_ID_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.bmc.BmcSELCounter.BmcSELCounterConsts.STATS_PROP_ID_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.bmc">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.bmc" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucsmsdk.mometa.callhome.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.callhome package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ucsmsdk.mometa.bios.html" class="btn btn-neutral" title="ucsmsdk.mometa.bios package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Cisco.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
