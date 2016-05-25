@@ -1,271 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.fabric.FabricChassisEp &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
-        <link rel="up" title="Module code" href="../../../index.html"/> 
-
-  
-  <script src="../../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.fabric.FabricChassisEp &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.fabric.FabricChassisEp</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.mometa.fabric.FabricChassisEp</h1><div class="highlight"><pre>
-<span class="sd">&quot;&quot;&quot;This module contains the general information for FabricChassisEp ManagedObject.&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the general information for FabricChassisEp ManagedObject.&quot;&quot;&quot;</span>
 
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
-<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
-<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
-<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">...ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">...ucscoremeta</span> <span class="kn">import</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">...ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
 
 
-<div class="viewcode-block" id="FabricChassisEpConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.fabric.html#ucsmsdk.mometa.fabric.FabricChassisEp.FabricChassisEpConsts">[docs]</a><span class="k">class</span> <span class="nc">FabricChassisEpConsts</span><span class="p">():</span>
-    <span class="n">ADMIN_STATE_DISABLED</span> <span class="o">=</span> <span class="s">&quot;disabled&quot;</span>
-    <span class="n">ADMIN_STATE_ENABLED</span> <span class="o">=</span> <span class="s">&quot;enabled&quot;</span>
-    <span class="n">AUTO_NEGOTIATE_FALSE</span> <span class="o">=</span> <span class="s">&quot;false&quot;</span>
-    <span class="n">AUTO_NEGOTIATE_NO</span> <span class="o">=</span> <span class="s">&quot;no&quot;</span>
-    <span class="n">AUTO_NEGOTIATE_TRUE</span> <span class="o">=</span> <span class="s">&quot;true&quot;</span>
-    <span class="n">AUTO_NEGOTIATE_YES</span> <span class="o">=</span> <span class="s">&quot;yes&quot;</span>
-    <span class="n">CHASSIS_ID_N_A</span> <span class="o">=</span> <span class="s">&quot;N/A&quot;</span>
-    <span class="n">IF_ROLE_DIAG</span> <span class="o">=</span> <span class="s">&quot;diag&quot;</span>
-    <span class="n">IF_ROLE_FCOE_NAS_STORAGE</span> <span class="o">=</span> <span class="s">&quot;fcoe-nas-storage&quot;</span>
-    <span class="n">IF_ROLE_FCOE_STORAGE</span> <span class="o">=</span> <span class="s">&quot;fcoe-storage&quot;</span>
-    <span class="n">IF_ROLE_FCOE_UPLINK</span> <span class="o">=</span> <span class="s">&quot;fcoe-uplink&quot;</span>
-    <span class="n">IF_ROLE_MGMT</span> <span class="o">=</span> <span class="s">&quot;mgmt&quot;</span>
-    <span class="n">IF_ROLE_MONITOR</span> <span class="o">=</span> <span class="s">&quot;monitor&quot;</span>
-    <span class="n">IF_ROLE_NAS_STORAGE</span> <span class="o">=</span> <span class="s">&quot;nas-storage&quot;</span>
-    <span class="n">IF_ROLE_NETWORK</span> <span class="o">=</span> <span class="s">&quot;network&quot;</span>
-    <span class="n">IF_ROLE_NETWORK_FCOE_UPLINK</span> <span class="o">=</span> <span class="s">&quot;network-fcoe-uplink&quot;</span>
-    <span class="n">IF_ROLE_SERVER</span> <span class="o">=</span> <span class="s">&quot;server&quot;</span>
-    <span class="n">IF_ROLE_SERVICE</span> <span class="o">=</span> <span class="s">&quot;service&quot;</span>
-    <span class="n">IF_ROLE_STORAGE</span> <span class="o">=</span> <span class="s">&quot;storage&quot;</span>
-    <span class="n">IF_ROLE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">IF_TYPE_AGGREGATION</span> <span class="o">=</span> <span class="s">&quot;aggregation&quot;</span>
-    <span class="n">IF_TYPE_PHYSICAL</span> <span class="o">=</span> <span class="s">&quot;physical&quot;</span>
-    <span class="n">IF_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">IF_TYPE_VIRTUAL</span> <span class="o">=</span> <span class="s">&quot;virtual&quot;</span>
-    <span class="n">LIC_STATE_LICENSE_EXPIRED</span> <span class="o">=</span> <span class="s">&quot;license-expired&quot;</span>
-    <span class="n">LIC_STATE_LICENSE_GRACEPERIOD</span> <span class="o">=</span> <span class="s">&quot;license-graceperiod&quot;</span>
-    <span class="n">LIC_STATE_LICENSE_INSUFFICIENT</span> <span class="o">=</span> <span class="s">&quot;license-insufficient&quot;</span>
-    <span class="n">LIC_STATE_LICENSE_OK</span> <span class="o">=</span> <span class="s">&quot;license-ok&quot;</span>
-    <span class="n">LIC_STATE_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s">&quot;not-applicable&quot;</span>
-    <span class="n">LIC_STATE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">OPER_STATE_DOWN</span> <span class="o">=</span> <span class="s">&quot;down&quot;</span>
-    <span class="n">OPER_STATE_ERROR_MISCONFIGURED</span> <span class="o">=</span> <span class="s">&quot;error-misconfigured&quot;</span>
-    <span class="n">OPER_STATE_ERROR_UNSUPPORTED_MINI_SERVER_PORT</span> <span class="o">=</span> <span class="s">&quot;error-unsupported-mini-server-port&quot;</span>
-    <span class="n">OPER_STATE_FAILED</span> <span class="o">=</span> <span class="s">&quot;failed&quot;</span>
-    <span class="n">OPER_STATE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">OPER_STATE_UP</span> <span class="o">=</span> <span class="s">&quot;up&quot;</span>
-    <span class="n">PEER_CHASSIS_ID_N_A</span> <span class="o">=</span> <span class="s">&quot;N/A&quot;</span>
-    <span class="n">SWITCH_ID_A</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span>
-    <span class="n">SWITCH_ID_B</span> <span class="o">=</span> <span class="s">&quot;B&quot;</span>
-    <span class="n">SWITCH_ID_NONE</span> <span class="o">=</span> <span class="s">&quot;NONE&quot;</span>
+<div class="viewcode-block" id="FabricChassisEpConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.fabric.html#ucsmsdk.mometa.fabric.FabricChassisEp.FabricChassisEpConsts">[docs]</a><span class="k">class</span> <span class="nc">FabricChassisEpConsts</span><span class="p">:</span>
+    <span class="n">ADMIN_STATE_DISABLED</span> <span class="o">=</span> <span class="s2">&quot;disabled&quot;</span>
+    <span class="n">ADMIN_STATE_ENABLED</span> <span class="o">=</span> <span class="s2">&quot;enabled&quot;</span>
+    <span class="n">AUTO_NEGOTIATE_FALSE</span> <span class="o">=</span> <span class="s2">&quot;false&quot;</span>
+    <span class="n">AUTO_NEGOTIATE_NO</span> <span class="o">=</span> <span class="s2">&quot;no&quot;</span>
+    <span class="n">AUTO_NEGOTIATE_TRUE</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
+    <span class="n">AUTO_NEGOTIATE_YES</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span>
+    <span class="n">CHASSIS_ID_N_A</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+    <span class="n">IF_ROLE_DIAG</span> <span class="o">=</span> <span class="s2">&quot;diag&quot;</span>
+    <span class="n">IF_ROLE_FCOE_NAS_STORAGE</span> <span class="o">=</span> <span class="s2">&quot;fcoe-nas-storage&quot;</span>
+    <span class="n">IF_ROLE_FCOE_STORAGE</span> <span class="o">=</span> <span class="s2">&quot;fcoe-storage&quot;</span>
+    <span class="n">IF_ROLE_FCOE_UPLINK</span> <span class="o">=</span> <span class="s2">&quot;fcoe-uplink&quot;</span>
+    <span class="n">IF_ROLE_MGMT</span> <span class="o">=</span> <span class="s2">&quot;mgmt&quot;</span>
+    <span class="n">IF_ROLE_MONITOR</span> <span class="o">=</span> <span class="s2">&quot;monitor&quot;</span>
+    <span class="n">IF_ROLE_NAS_STORAGE</span> <span class="o">=</span> <span class="s2">&quot;nas-storage&quot;</span>
+    <span class="n">IF_ROLE_NETWORK</span> <span class="o">=</span> <span class="s2">&quot;network&quot;</span>
+    <span class="n">IF_ROLE_NETWORK_FCOE_UPLINK</span> <span class="o">=</span> <span class="s2">&quot;network-fcoe-uplink&quot;</span>
+    <span class="n">IF_ROLE_SERVER</span> <span class="o">=</span> <span class="s2">&quot;server&quot;</span>
+    <span class="n">IF_ROLE_SERVICE</span> <span class="o">=</span> <span class="s2">&quot;service&quot;</span>
+    <span class="n">IF_ROLE_STORAGE</span> <span class="o">=</span> <span class="s2">&quot;storage&quot;</span>
+    <span class="n">IF_ROLE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">IF_TYPE_AGGREGATION</span> <span class="o">=</span> <span class="s2">&quot;aggregation&quot;</span>
+    <span class="n">IF_TYPE_PHYSICAL</span> <span class="o">=</span> <span class="s2">&quot;physical&quot;</span>
+    <span class="n">IF_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">IF_TYPE_VIRTUAL</span> <span class="o">=</span> <span class="s2">&quot;virtual&quot;</span>
+    <span class="n">LIC_STATE_LICENSE_EXPIRED</span> <span class="o">=</span> <span class="s2">&quot;license-expired&quot;</span>
+    <span class="n">LIC_STATE_LICENSE_GRACEPERIOD</span> <span class="o">=</span> <span class="s2">&quot;license-graceperiod&quot;</span>
+    <span class="n">LIC_STATE_LICENSE_INSUFFICIENT</span> <span class="o">=</span> <span class="s2">&quot;license-insufficient&quot;</span>
+    <span class="n">LIC_STATE_LICENSE_OK</span> <span class="o">=</span> <span class="s2">&quot;license-ok&quot;</span>
+    <span class="n">LIC_STATE_NOT_APPLICABLE</span> <span class="o">=</span> <span class="s2">&quot;not-applicable&quot;</span>
+    <span class="n">LIC_STATE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">OPER_STATE_DOWN</span> <span class="o">=</span> <span class="s2">&quot;down&quot;</span>
+    <span class="n">OPER_STATE_ERROR_MISCONFIGURED</span> <span class="o">=</span> <span class="s2">&quot;error-misconfigured&quot;</span>
+    <span class="n">OPER_STATE_ERROR_UNSUPPORTED_MINI_SERVER_PORT</span> <span class="o">=</span> <span class="s2">&quot;error-unsupported-mini-server-port&quot;</span>
+    <span class="n">OPER_STATE_FAILED</span> <span class="o">=</span> <span class="s2">&quot;failed&quot;</span>
+    <span class="n">OPER_STATE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">OPER_STATE_UP</span> <span class="o">=</span> <span class="s2">&quot;up&quot;</span>
+    <span class="n">PEER_CHASSIS_ID_N_A</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+    <span class="n">SWITCH_ID_A</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+    <span class="n">SWITCH_ID_B</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span>
+    <span class="n">SWITCH_ID_NONE</span> <span class="o">=</span> <span class="s2">&quot;NONE&quot;</span></div>
 
-</div>
+
 <div class="viewcode-block" id="FabricChassisEp"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.fabric.html#ucsmsdk.mometa.fabric.FabricChassisEp.FabricChassisEp">[docs]</a><span class="k">class</span> <span class="nc">FabricChassisEp</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This is FabricChassisEp class.&quot;&quot;&quot;</span>
 
     <span class="n">consts</span> <span class="o">=</span> <span class="n">FabricChassisEpConsts</span><span class="p">()</span>
-    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">u&#39;chassisId&#39;</span><span class="p">])</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">u&#39;chassisId&#39;</span><span class="p">])</span>
 
-    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;FabricChassisEp&quot;</span><span class="p">,</span> <span class="s">&quot;fabricChassisEp&quot;</span><span class="p">,</span> <span class="s">&quot;chassis-[chassis_id]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x1ff</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;fabricDceSrv&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;fabricCartridgeSlotEp&#39;</span><span class="p">,</span> <span class="s">u&#39;fabricComputeSlotEp&#39;</span><span class="p">,</span> <span class="s">u&#39;fabricEnclosureSlotEp&#39;</span><span class="p">,</span> <span class="s">u&#39;faultInst&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;Get&quot;</span><span class="p">])</span>
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s2">&quot;FabricChassisEp&quot;</span><span class="p">,</span> <span class="s2">&quot;fabricChassisEp&quot;</span><span class="p">,</span> <span class="s2">&quot;chassis-[chassis_id]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s2">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x1ff</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s1">u&#39;fabricDceSrv&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">u&#39;fabricCartridgeSlotEp&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricComputeSlotEp&#39;</span><span class="p">,</span> <span class="s1">u&#39;faultInst&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Get&quot;</span><span class="p">])</span>
 
     <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;admin_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;admin_state&quot;</span><span class="p">,</span> <span class="s">&quot;adminState&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;disabled&quot;</span><span class="p">,</span> <span class="s">&quot;enabled&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;aggr_port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;aggr_port_id&quot;</span><span class="p">,</span> <span class="s">&quot;aggrPortId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;auto_negotiate&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;auto_negotiate&quot;</span><span class="p">,</span> <span class="s">&quot;autoNegotiate&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;false&quot;</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">,</span> <span class="s">&quot;true&quot;</span><span class="p">,</span> <span class="s">&quot;yes&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;chassis_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;chassis_dn&quot;</span><span class="p">,</span> <span class="s">&quot;chassisDn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;chassis_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;chassis_id&quot;</span><span class="p">,</span> <span class="s">&quot;chassisId&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;N/A&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;1-255&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x20</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;ep_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;ep_dn&quot;</span><span class="p">,</span> <span class="s">&quot;epDn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;flt_aggr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;flt_aggr&quot;</span><span class="p">,</span> <span class="s">&quot;fltAggr&quot;</span><span class="p">,</span> <span class="s">&quot;ulong&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version201m</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;if_role&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;if_role&quot;</span><span class="p">,</span> <span class="s">&quot;ifRole&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;diag&quot;</span><span class="p">,</span> <span class="s">&quot;fcoe-nas-storage&quot;</span><span class="p">,</span> <span class="s">&quot;fcoe-storage&quot;</span><span class="p">,</span> <span class="s">&quot;fcoe-uplink&quot;</span><span class="p">,</span> <span class="s">&quot;mgmt&quot;</span><span class="p">,</span> <span class="s">&quot;monitor&quot;</span><span class="p">,</span> <span class="s">&quot;nas-storage&quot;</span><span class="p">,</span> <span class="s">&quot;network&quot;</span><span class="p">,</span> <span class="s">&quot;network-fcoe-uplink&quot;</span><span class="p">,</span> <span class="s">&quot;server&quot;</span><span class="p">,</span> <span class="s">&quot;service&quot;</span><span class="p">,</span> <span class="s">&quot;storage&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;if_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;if_type&quot;</span><span class="p">,</span> <span class="s">&quot;ifType&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;aggregation&quot;</span><span class="p">,</span> <span class="s">&quot;physical&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;virtual&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;lic_gp&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;lic_gp&quot;</span><span class="p">,</span> <span class="s">&quot;licGP&quot;</span><span class="p">,</span> <span class="s">&quot;ulong&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;lic_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;lic_state&quot;</span><span class="p">,</span> <span class="s">&quot;licState&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;license-expired&quot;</span><span class="p">,</span> <span class="s">&quot;license-graceperiod&quot;</span><span class="p">,</span> <span class="s">&quot;license-insufficient&quot;</span><span class="p">,</span> <span class="s">&quot;license-ok&quot;</span><span class="p">,</span> <span class="s">&quot;not-applicable&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;locale&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;locale&quot;</span><span class="p">,</span> <span class="s">&quot;locale&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((defaultValue|unknown|server|chassis|internal|external),){0,5}(defaultValue|unknown|server|chassis|internal|external){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;model&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;model&quot;</span><span class="p">,</span> <span class="s">&quot;model&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x40</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[\-\.:_a-zA-Z0-9]{0,16}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;oper_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_state&quot;</span><span class="p">,</span> <span class="s">&quot;operState&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version201m</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;down&quot;</span><span class="p">,</span> <span class="s">&quot;error-misconfigured&quot;</span><span class="p">,</span> <span class="s">&quot;error-unsupported-mini-server-port&quot;</span><span class="p">,</span> <span class="s">&quot;failed&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;up&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;oper_state_reason&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_state_reason&quot;</span><span class="p">,</span> <span class="s">&quot;operStateReason&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version201m</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;peer_aggr_port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;peer_aggr_port_id&quot;</span><span class="p">,</span> <span class="s">&quot;peerAggrPortId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;peer_chassis_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;peer_chassis_id&quot;</span><span class="p">,</span> <span class="s">&quot;peerChassisId&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;N/A&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-255&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;peer_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;peer_dn&quot;</span><span class="p">,</span> <span class="s">&quot;peerDn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;peer_port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;peer_port_id&quot;</span><span class="p">,</span> <span class="s">&quot;peerPortId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;peer_slot_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;peer_slot_id&quot;</span><span class="p">,</span> <span class="s">&quot;peerSlotId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;port_id&quot;</span><span class="p">,</span> <span class="s">&quot;portId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;1-48&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;revision&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;revision&quot;</span><span class="p">,</span> <span class="s">&quot;revision&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x80</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;serial&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;serial&quot;</span><span class="p">,</span> <span class="s">&quot;serial&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;slot_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;slot_id&quot;</span><span class="p">,</span> <span class="s">&quot;slotId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;1-4&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x100</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;switch_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;switch_id&quot;</span><span class="p">,</span> <span class="s">&quot;switchId&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="s">&quot;NONE&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;transport&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;transport&quot;</span><span class="p">,</span> <span class="s">&quot;transport&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((defaultValue|unknown|ether|dce|fc),){0,4}(defaultValue|unknown|ether|dce|fc){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((defaultValue|unknown|lan|san|ipc),){0,4}(defaultValue|unknown|lan|san|ipc){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;vendor&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;vendor&quot;</span><span class="p">,</span> <span class="s">&quot;vendor&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;admin_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;admin_state&quot;</span><span class="p">,</span> <span class="s2">&quot;adminState&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span> <span class="s2">&quot;enabled&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;aggr_port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;aggr_port_id&quot;</span><span class="p">,</span> <span class="s2">&quot;aggrPortId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;auto_negotiate&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;auto_negotiate&quot;</span><span class="p">,</span> <span class="s2">&quot;autoNegotiate&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version311e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;no&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="s2">&quot;yes&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;chassis_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;chassis_dn&quot;</span><span class="p">,</span> <span class="s2">&quot;chassisDn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;chassis_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;chassis_id&quot;</span><span class="p">,</span> <span class="s2">&quot;chassisId&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;N/A&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;1-255&quot;</span><span class="p">]),</span> 
+        <span class="s2">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;child_action&quot;</span><span class="p">,</span> <span class="s2">&quot;childAction&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;ep_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;ep_dn&quot;</span><span class="p">,</span> <span class="s2">&quot;epDn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;flt_aggr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;flt_aggr&quot;</span><span class="p">,</span> <span class="s2">&quot;fltAggr&quot;</span><span class="p">,</span> <span class="s2">&quot;ulong&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version201m</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;if_role&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;if_role&quot;</span><span class="p">,</span> <span class="s2">&quot;ifRole&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;diag&quot;</span><span class="p">,</span> <span class="s2">&quot;fcoe-nas-storage&quot;</span><span class="p">,</span> <span class="s2">&quot;fcoe-storage&quot;</span><span class="p">,</span> <span class="s2">&quot;fcoe-uplink&quot;</span><span class="p">,</span> <span class="s2">&quot;mgmt&quot;</span><span class="p">,</span> <span class="s2">&quot;monitor&quot;</span><span class="p">,</span> <span class="s2">&quot;nas-storage&quot;</span><span class="p">,</span> <span class="s2">&quot;network&quot;</span><span class="p">,</span> <span class="s2">&quot;network-fcoe-uplink&quot;</span><span class="p">,</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="s2">&quot;service&quot;</span><span class="p">,</span> <span class="s2">&quot;storage&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;if_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;if_type&quot;</span><span class="p">,</span> <span class="s2">&quot;ifType&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;aggregation&quot;</span><span class="p">,</span> <span class="s2">&quot;physical&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;virtual&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;lic_gp&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;lic_gp&quot;</span><span class="p">,</span> <span class="s2">&quot;licGP&quot;</span><span class="p">,</span> <span class="s2">&quot;ulong&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;lic_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;lic_state&quot;</span><span class="p">,</span> <span class="s2">&quot;licState&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;license-expired&quot;</span><span class="p">,</span> <span class="s2">&quot;license-graceperiod&quot;</span><span class="p">,</span> <span class="s2">&quot;license-insufficient&quot;</span><span class="p">,</span> <span class="s2">&quot;license-ok&quot;</span><span class="p">,</span> <span class="s2">&quot;not-applicable&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;locale&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;locale&quot;</span><span class="p">,</span> <span class="s2">&quot;locale&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((defaultValue|unknown|server|chassis|internal|external),){0,5}(defaultValue|unknown|server|chassis|internal|external){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;[\-\.:_a-zA-Z0-9]{0,16}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;oper_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;oper_state&quot;</span><span class="p">,</span> <span class="s2">&quot;operState&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version201m</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;down&quot;</span><span class="p">,</span> <span class="s2">&quot;error-misconfigured&quot;</span><span class="p">,</span> <span class="s2">&quot;error-unsupported-mini-server-port&quot;</span><span class="p">,</span> <span class="s2">&quot;failed&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;oper_state_reason&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;oper_state_reason&quot;</span><span class="p">,</span> <span class="s2">&quot;operStateReason&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version201m</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;peer_aggr_port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;peer_aggr_port_id&quot;</span><span class="p">,</span> <span class="s2">&quot;peerAggrPortId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;peer_chassis_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;peer_chassis_id&quot;</span><span class="p">,</span> <span class="s2">&quot;peerChassisId&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version141i</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;N/A&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;0-255&quot;</span><span class="p">]),</span> 
+        <span class="s2">&quot;peer_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;peer_dn&quot;</span><span class="p">,</span> <span class="s2">&quot;peerDn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;peer_port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;peer_port_id&quot;</span><span class="p">,</span> <span class="s2">&quot;peerPortId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;peer_slot_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;peer_slot_id&quot;</span><span class="p">,</span> <span class="s2">&quot;peerSlotId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;port_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;port_id&quot;</span><span class="p">,</span> <span class="s2">&quot;portId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;1-48&quot;</span><span class="p">]),</span> 
+        <span class="s2">&quot;revision&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;revision&quot;</span><span class="p">,</span> <span class="s2">&quot;revision&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;serial&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;serial&quot;</span><span class="p">,</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;slot_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;slot_id&quot;</span><span class="p">,</span> <span class="s2">&quot;slotId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;1-4&quot;</span><span class="p">]),</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x100</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;switch_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;switch_id&quot;</span><span class="p">,</span> <span class="s2">&quot;switchId&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;NONE&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;transport&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;transport&quot;</span><span class="p">,</span> <span class="s2">&quot;transport&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((defaultValue|unknown|ether|dce|fc),){0,4}(defaultValue|unknown|ether|dce|fc){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((defaultValue|unknown|lan|san|ipc),){0,4}(defaultValue|unknown|lan|san|ipc){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;vendor&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;vendor&quot;</span><span class="p">,</span> <span class="s2">&quot;vendor&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
     <span class="p">}</span>
 
     <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;adminState&quot;</span><span class="p">:</span> <span class="s">&quot;admin_state&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;aggrPortId&quot;</span><span class="p">:</span> <span class="s">&quot;aggr_port_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;autoNegotiate&quot;</span><span class="p">:</span> <span class="s">&quot;auto_negotiate&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;chassisDn&quot;</span><span class="p">:</span> <span class="s">&quot;chassis_dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;chassisId&quot;</span><span class="p">:</span> <span class="s">&quot;chassis_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;epDn&quot;</span><span class="p">:</span> <span class="s">&quot;ep_dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;fltAggr&quot;</span><span class="p">:</span> <span class="s">&quot;flt_aggr&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;ifRole&quot;</span><span class="p">:</span> <span class="s">&quot;if_role&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;ifType&quot;</span><span class="p">:</span> <span class="s">&quot;if_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;licGP&quot;</span><span class="p">:</span> <span class="s">&quot;lic_gp&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;licState&quot;</span><span class="p">:</span> <span class="s">&quot;lic_state&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;locale&quot;</span><span class="p">:</span> <span class="s">&quot;locale&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;model&quot;</span><span class="p">:</span> <span class="s">&quot;model&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;operState&quot;</span><span class="p">:</span> <span class="s">&quot;oper_state&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;operStateReason&quot;</span><span class="p">:</span> <span class="s">&quot;oper_state_reason&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;peerAggrPortId&quot;</span><span class="p">:</span> <span class="s">&quot;peer_aggr_port_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;peerChassisId&quot;</span><span class="p">:</span> <span class="s">&quot;peer_chassis_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;peerDn&quot;</span><span class="p">:</span> <span class="s">&quot;peer_dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;peerPortId&quot;</span><span class="p">:</span> <span class="s">&quot;peer_port_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;peerSlotId&quot;</span><span class="p">:</span> <span class="s">&quot;peer_slot_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;portId&quot;</span><span class="p">:</span> <span class="s">&quot;port_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;revision&quot;</span><span class="p">:</span> <span class="s">&quot;revision&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;serial&quot;</span><span class="p">:</span> <span class="s">&quot;serial&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;slotId&quot;</span><span class="p">:</span> <span class="s">&quot;slot_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;switchId&quot;</span><span class="p">:</span> <span class="s">&quot;switch_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;transport&quot;</span><span class="p">:</span> <span class="s">&quot;transport&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;vendor&quot;</span><span class="p">:</span> <span class="s">&quot;vendor&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;adminState&quot;</span><span class="p">:</span> <span class="s2">&quot;admin_state&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;aggrPortId&quot;</span><span class="p">:</span> <span class="s2">&quot;aggr_port_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;autoNegotiate&quot;</span><span class="p">:</span> <span class="s2">&quot;auto_negotiate&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;chassisDn&quot;</span><span class="p">:</span> <span class="s2">&quot;chassis_dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;chassisId&quot;</span><span class="p">:</span> <span class="s2">&quot;chassis_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;childAction&quot;</span><span class="p">:</span> <span class="s2">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;epDn&quot;</span><span class="p">:</span> <span class="s2">&quot;ep_dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;fltAggr&quot;</span><span class="p">:</span> <span class="s2">&quot;flt_aggr&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;ifRole&quot;</span><span class="p">:</span> <span class="s2">&quot;if_role&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;ifType&quot;</span><span class="p">:</span> <span class="s2">&quot;if_type&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;licGP&quot;</span><span class="p">:</span> <span class="s2">&quot;lic_gp&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;licState&quot;</span><span class="p">:</span> <span class="s2">&quot;lic_state&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;locale&quot;</span><span class="p">:</span> <span class="s2">&quot;locale&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;operState&quot;</span><span class="p">:</span> <span class="s2">&quot;oper_state&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;operStateReason&quot;</span><span class="p">:</span> <span class="s2">&quot;oper_state_reason&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;peerAggrPortId&quot;</span><span class="p">:</span> <span class="s2">&quot;peer_aggr_port_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;peerChassisId&quot;</span><span class="p">:</span> <span class="s2">&quot;peer_chassis_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;peerDn&quot;</span><span class="p">:</span> <span class="s2">&quot;peer_dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;peerPortId&quot;</span><span class="p">:</span> <span class="s2">&quot;peer_port_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;peerSlotId&quot;</span><span class="p">:</span> <span class="s2">&quot;peer_slot_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;portId&quot;</span><span class="p">:</span> <span class="s2">&quot;port_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;revision&quot;</span><span class="p">:</span> <span class="s2">&quot;revision&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;serial&quot;</span><span class="p">:</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;slotId&quot;</span><span class="p">:</span> <span class="s2">&quot;slot_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;switchId&quot;</span><span class="p">:</span> <span class="s2">&quot;switch_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;transport&quot;</span><span class="p">:</span> <span class="s2">&quot;transport&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;vendor&quot;</span><span class="p">:</span> <span class="s2">&quot;vendor&quot;</span><span class="p">,</span> 
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="n">chassis_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -303,65 +207,47 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vendor</span> <span class="o">=</span> <span class="bp">None</span>
 
-        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;FabricChassisEp&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</pre></div></div>
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;FabricChassisEp&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

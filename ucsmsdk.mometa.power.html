@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.power package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.proc package" href="ucsmsdk.mometa.proc.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.port package" href="ucsmsdk.mometa.port.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.power package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.proc package" href="ucsmsdk.mometa.proc.html" />
+    <link rel="prev" title="ucsmsdk.mometa.port package" href="ucsmsdk.mometa.port.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.power package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.power.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-power-package">
 <h1>ucsmsdk.mometa.power package<a class="headerlink" href="#ucsmsdk-mometa-power-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerBudget.PowerBudget">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerBudget.</code><code class="descname">PowerBudget</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerBudget.html#PowerBudget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerBudget.PowerBudget" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerBudget class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerBudget.PowerBudget.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerBudget.PowerBudget.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerBudget.PowerBudget.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerBudget.PowerBudget.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerBudget.PowerBudget.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10690&gt;, 'oper_committed': &lt;ucscoremeta.MoPropertyMeta object at 0x167648850&gt;, 'update_time': &lt;ucscoremeta.MoPropertyMeta object at 0x167648d10&gt;, 'oper_peak': &lt;ucscoremeta.MoPropertyMeta object at 0x167648fd0&gt;, 'oper_fp_lock_state': &lt;ucscoremeta.MoPropertyMeta object at 0x167648110&gt;, 'prio': &lt;ucscoremeta.MoPropertyMeta object at 0x167648150&gt;, 'psu_line_mode': &lt;ucscoremeta.MoPropertyMeta object at 0x167648350&gt;, 'admin_committed': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10d90&gt;, 'psu_capacity': &lt;ucscoremeta.MoPropertyMeta object at 0x167648750&gt;, 'group_name': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10090&gt;, 'prof_method': &lt;ucscoremeta.MoPropertyMeta object at 0x167648a10&gt;, 'profiling': &lt;ucscoremeta.MoPropertyMeta object at 0x167648710&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x167648250&gt;, 'oper_prof_method': &lt;ucscoremeta.MoPropertyMeta object at 0x1676481d0&gt;, 'power_deploy_state': &lt;ucscoremeta.MoPropertyMeta object at 0x167648450&gt;, 'boot_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf103d0&gt;, 'oper_min': &lt;ucscoremeta.MoPropertyMeta object at 0x167648b10&gt;, 'psu_state': &lt;ucscoremeta.MoPropertyMeta object at 0x167648090&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1676485d0&gt;, 'scaled_wt': &lt;ucscoremeta.MoPropertyMeta object at 0x167648b50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf102d0&gt;, 'admin_peak_new': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10d10&gt;, 'style': &lt;ucscoremeta.MoPropertyMeta object at 0x1676484d0&gt;, 'weight': &lt;ucscoremeta.MoPropertyMeta object at 0x167648c10&gt;, 'ch_rsrvd_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10710&gt;, 'current_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10310&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1676482d0&gt;, 'idle_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10050&gt;, 'catalog_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10550&gt;, 'cap_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10510&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x167648bd0&gt;, 'fan_speed': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10250&gt;, 'admin_peak': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10450&gt;, 'power_avail_state': &lt;ucscoremeta.MoPropertyMeta object at 0x167648690&gt;, 'max_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf107d0&gt;, 'min_power': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10e50&gt;, 'dyn_realloc': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10150&gt;, 'power_on_deploy': &lt;ucscoremeta.MoPropertyMeta object at 0x167648610&gt;, 'admin_fp_lock_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15cf10410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerBudget.PowerBudget.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2ee10&gt;, 'oper_committed': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e6d0&gt;, 'update_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf310&gt;, 'oper_peak': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128152150&gt;, 'oper_fp_lock_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e490&gt;, 'prio': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafdd0&gt;, 'psu_line_mode': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf090&gt;, 'admin_committed': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e2d0&gt;, 'psu_capacity': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf2d0&gt;, 'group_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e410&gt;, 'prof_method': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf990&gt;, 'profiling': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf810&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafcd0&gt;, 'oper_prof_method': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf890&gt;, 'power_deploy_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf5d0&gt;, 'boot_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e510&gt;, 'oper_min': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2ef90&gt;, 'psu_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafe50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafb90&gt;, 'scaled_wt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafa90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2eb50&gt;, 'admin_peak_new': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e350&gt;, 'style': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafe10&gt;, 'weight': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf350&gt;, 'ch_rsrvd_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2ef50&gt;, 'current_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e7d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafb10&gt;, 'idle_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e850&gt;, 'catalog_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e450&gt;, 'cap_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e990&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafad0&gt;, 'fan_speed': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e590&gt;, 'admin_peak': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e110&gt;, 'power_avail_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccafed0&gt;, 'max_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2eb90&gt;, 'min_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e3d0&gt;, 'dyn_realloc': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e710&gt;, 'power_on_deploy': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ccaf410&gt;, 'admin_fp_lock_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd2e910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerBudget.PowerBudget.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -617,7 +488,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerChassisMember.</code><code class="descname">PowerChassisMember</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerChassisMember.html#PowerChassisMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerChassisMember class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.consts">
@@ -626,7 +497,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -641,7 +512,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x164c60890&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15d9a7e90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15d9a7b10&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15d9a7e50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15d9a7d10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x164c60410&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x164c60190&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148ced0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148ca10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148cc50&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148cd50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148cf10&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148cd10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1811b4250&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerChassisMember.PowerChassisMember.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -688,7 +559,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerEp.PowerEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerEp.</code><code class="descname">PowerEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerEp.html#PowerEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerEp.PowerEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerEp.PowerEp.consts">
@@ -697,7 +568,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerEp.PowerEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerEp.PowerEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerEp.PowerEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -712,7 +583,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerEp.PowerEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x164baf590&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92fd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x164baf190&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92a90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16442a0d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerEp.PowerEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18067bf50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18067b610&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18067bed0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18067be50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18067bb90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerEp.PowerEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -729,7 +600,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerGroup.PowerGroup">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerGroup.</code><code class="descname">PowerGroup</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerGroup.html#PowerGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroup.PowerGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerGroup class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroup.PowerGroup.consts">
@@ -738,7 +609,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroup.PowerGroup.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroup.PowerGroup.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroup.PowerGroup.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -753,7 +624,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroup.PowerGroup.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'cur_req_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16525d250&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa290&gt;, 'oper_peak': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa090&gt;, 'min_req_power': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa250&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16525dcd0&gt;, 'oper_committed': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa990&gt;, 'current_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16525d390&gt;, 'admin_committed': &lt;ucscoremeta.MoPropertyMeta object at 0x16525dc50&gt;, 'flt_aggr': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa410&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa5d0&gt;, 'qualifier': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aabd0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa690&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aaf10&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aab50&gt;, 'admin_peak': &lt;ucscoremeta.MoPropertyMeta object at 0x16525d0d0&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aad90&gt;, 'realloc': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa590&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aa810&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aaa10&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1654aac50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16525d090&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroup.PowerGroup.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'cur_req_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1811d0550&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c350&gt;, 'oper_peak': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f1e5050&gt;, 'min_req_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180ee8f90&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1811d0c90&gt;, 'oper_committed': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1811b4e10&gt;, 'current_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1811d0c50&gt;, 'admin_committed': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6d3f90&gt;, 'flt_aggr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180ee8410&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3610&gt;, 'qualifier': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3fd0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180ee8590&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3c10&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3c50&gt;, 'admin_peak': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6d3950&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180e256d0&gt;, 'realloc': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3c90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3590&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3350&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180ee8e90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1811d0350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroup.PowerGroup.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -835,7 +706,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerGroupAdditionPolicy.</code><code class="descname">PowerGroupAdditionPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerGroupAdditionPolicy.html#PowerGroupAdditionPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerGroupAdditionPolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.consts">
@@ -844,7 +715,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -859,7 +730,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7cd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16696e410&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7d50&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb77d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7690&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7410&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7ad0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb78d0&gt;, 'action': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7610&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb7550&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x160fb76d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b85d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8f50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b82d0&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8ad0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8850&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8d90&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8290&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8f10&gt;, 'action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8e90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8dd0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupAdditionPolicy.PowerGroupAdditionPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -911,7 +782,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerGroupQual.</code><code class="descname">PowerGroupQual</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>group_name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerGroupQual.html#PowerGroupQual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerGroupQual class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.consts">
@@ -920,7 +791,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -935,7 +806,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x17758e610&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165e925d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92090&gt;, 'group_name': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92710&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92610&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x17758e5d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f339cd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168ed94d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f339bd0&gt;, 'group_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f339f50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f339850&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f339550&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupQual.PowerGroupQual.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -952,7 +823,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerGroupStats.</code><code class="descname">PowerGroupStats</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerGroupStats.html#PowerGroupStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerGroupStats class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.consts">
@@ -961,7 +832,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -976,7 +847,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x160a6c090&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7290&gt;, 'power': &lt;ucscoremeta.MoPropertyMeta object at 0x160a6c950&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7a10&gt;, 'power_min': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7a50&gt;, 'update': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7690&gt;, 'intervals': &lt;ucscoremeta.MoPropertyMeta object at 0x160a6c410&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x160a6c310&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7d90&gt;, 'power_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x160a6c8d0&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7150&gt;, 'power_max': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7b50&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c71d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1628c7a90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc249d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5790&gt;, 'power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b59d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5650&gt;, 'power_min': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5150&gt;, 'update': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5390&gt;, 'intervals': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5110&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc24f90&gt;, 'thresholded': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5cd0&gt;, 'power_avg': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b56d0&gt;, 'suspect': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5c10&gt;, 'power_max': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5bd0&gt;, 'time_collected': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5690&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b57d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStats.PowerGroupStats.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1013,7 +884,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerGroupStatsHist.</code><code class="descname">PowerGroupStatsHist</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerGroupStatsHist.html#PowerGroupStatsHist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerGroupStatsHist class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.consts">
@@ -1022,7 +893,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1037,7 +908,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540790&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16c5402d0&gt;, 'power': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540a90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540fd0&gt;, 'power_min': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540910&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540dd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540290&gt;, 'thresholded': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540550&gt;, 'most_recent': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540a10&gt;, 'power_avg': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540c50&gt;, 'suspect': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540610&gt;, 'power_max': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540950&gt;, 'time_collected': &lt;ucscoremeta.MoPropertyMeta object at 0x16c540850&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16c5406d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181921650&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a510&gt;, 'power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a250&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a090&gt;, 'power_min': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a350&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181921050&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181921290&gt;, 'thresholded': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a190&gt;, 'most_recent': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a290&gt;, 'power_avg': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97ad90&gt;, 'suspect': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97aed0&gt;, 'power_max': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a5d0&gt;, 'time_collected': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97ab50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e97a850&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerGroupStatsHist.PowerGroupStatsHist.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1094,7 +965,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerMgmtPolicy.</code><code class="descname">PowerMgmtPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerMgmtPolicy.html#PowerMgmtPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerMgmtPolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.consts">
@@ -1103,7 +974,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1118,7 +989,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7550&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x160e3e490&gt;, 'profiling': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7090&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7950&gt;, 'skip_power_deploy_check': &lt;ucscoremeta.MoPropertyMeta object at 0x160e3e710&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7f90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7a50&gt;, 'style': &lt;ucscoremeta.MoPropertyMeta object at 0x160e3ec10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7cd0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7fd0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7790&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7710&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1651c7f10&gt;, 'skip_power_check': &lt;ucscoremeta.MoPropertyMeta object at 0x160e3e410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc24e50&gt;, 'profiling': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546a10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc243d0&gt;, 'skip_power_deploy_check': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc24c10&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546550&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546390&gt;, 'style': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc24090&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546a50&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546f10&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546410&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546790&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc24d50&gt;, 'skip_power_check': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fc24f50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerMgmtPolicy.PowerMgmtPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1225,7 +1096,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerPlacement.PowerPlacement">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerPlacement.</code><code class="descname">PowerPlacement</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerPlacement.html#PowerPlacement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPlacement.PowerPlacement" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerPlacement class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.consts">
@@ -1234,7 +1105,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1249,7 +1120,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9690&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9a90&gt;, 'pg_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9b50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9610&gt;, 'self_req_conflict': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9c10&gt;, 'peer_req_conflict': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9910&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9c90&gt;, 'prio_share': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9fd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9f50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9d10&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9c50&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9250&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b9e50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1640b99d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12050&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12750&gt;, 'pg_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12510&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12d10&gt;, 'self_req_conflict': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d129d0&gt;, 'peer_req_conflict': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12f90&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12cd0&gt;, 'prio_share': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12b10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12bd0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12210&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12850&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12590&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12610&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d12710&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPlacement.PowerPlacement.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1321,7 +1192,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerPolicy.PowerPolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerPolicy.</code><code class="descname">PowerPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerPolicy.html#PowerPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPolicy.PowerPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerPolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.consts">
@@ -1330,7 +1201,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1345,7 +1216,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e6e4490&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59a10&gt;, 'prio': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59510&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x166e593d0&gt;, 'oper_prio': &lt;ucscoremeta.MoPropertyMeta object at 0x166e591d0&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x166e598d0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59050&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15e6e4d50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59910&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15e6e47d0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59a50&gt;, 'fan_speed': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59590&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59190&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x166e59650&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17aeb5990&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17bfd6810&gt;, 'prio': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17bfd6350&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17bfd6c10&gt;, 'oper_prio': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12204dc90&gt;, 'prop_acl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17bfd6250&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12204d690&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17aeb52d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12204da50&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17aeb5690&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17bfd6e10&gt;, 'fan_speed': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12204de50&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12204dd50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17bfd6bd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPolicy.PowerPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1452,7 +1323,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerPrioWght.</code><code class="descname">PowerPrioWght</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>prio</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerPrioWght.html#PowerPrioWght"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerPrioWght class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.consts">
@@ -1461,7 +1332,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1476,7 +1347,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1652687d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165268250&gt;, 'weight': &lt;ucscoremeta.MoPropertyMeta object at 0x165268290&gt;, 'prio': &lt;ucscoremeta.MoPropertyMeta object at 0x165268dd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165268f10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165268450&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x165268410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6edd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6e3d0&gt;, 'weight': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6e510&gt;, 'prio': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6e290&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6ed50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6e950&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181d6eb50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerPrioWght.PowerPrioWght.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1503,7 +1374,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerProfiledPower.</code><code class="descname">PowerProfiledPower</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerProfiledPower.html#PowerProfiledPower"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerProfiledPower class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.consts">
@@ -1512,7 +1383,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1527,7 +1398,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16439ff10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x164058810&gt;, 'max_app_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439fa50&gt;, 'profile_run_time': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f150&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x164058750&gt;, 'min_app_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f5d0&gt;, 'profiled_boot': &lt;ucscoremeta.MoPropertyMeta object at 0x164058690&gt;, 'abs_min_post_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f450&gt;, 'skip_profiling': &lt;ucscoremeta.MoPropertyMeta object at 0x1640588d0&gt;, 'profiled_min': &lt;ucscoremeta.MoPropertyMeta object at 0x164058450&gt;, 'pre_discovery_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f190&gt;, 'min_norm_post_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f2d0&gt;, 'min_post_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f650&gt;, 'profiled_max': &lt;ucscoremeta.MoPropertyMeta object at 0x1640585d0&gt;, 'max_post_power': &lt;ucscoremeta.MoPropertyMeta object at 0x16439f550&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x164058990&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16439fed0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f1abbd0&gt;, 'max_app_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d60d0&gt;, 'profile_run_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6ad0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f1ab9d0&gt;, 'min_app_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6590&gt;, 'profiled_boot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6710&gt;, 'abs_min_post_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546190&gt;, 'skip_profiling': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f1abb90&gt;, 'profiled_min': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6d10&gt;, 'pre_discovery_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d66d0&gt;, 'min_norm_post_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d63d0&gt;, 'min_post_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d62d0&gt;, 'profiled_max': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6bd0&gt;, 'max_post_power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d6190&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17b4d68d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546c10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerProfiledPower.PowerProfiledPower.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1614,7 +1485,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.power.PowerRackUnitMember.</code><code class="descname">PowerRackUnitMember</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/power/PowerRackUnitMember.html#PowerRackUnitMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is PowerRackUnitMember class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.consts">
@@ -1623,7 +1494,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1638,7 +1509,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5dd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5310&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5f50&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5550&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5bd0&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5ad0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e5b50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168edafd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168edab10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eda5d0&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eda8d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168edaa10&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168edac50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168edacd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.power.PowerRackUnitMember.PowerRackUnitMember.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1685,71 +1556,81 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.proc.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.proc package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.port.html" class="btn btn-neutral" title="ucsmsdk.mometa.port package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.power package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerBudget">ucsmsdk.mometa.power.PowerBudget module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerChassisMember">ucsmsdk.mometa.power.PowerChassisMember module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerEp">ucsmsdk.mometa.power.PowerEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerGroup">ucsmsdk.mometa.power.PowerGroup module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerGroupAdditionPolicy">ucsmsdk.mometa.power.PowerGroupAdditionPolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerGroupQual">ucsmsdk.mometa.power.PowerGroupQual module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerGroupStats">ucsmsdk.mometa.power.PowerGroupStats module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerGroupStatsHist">ucsmsdk.mometa.power.PowerGroupStatsHist module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerMgmtPolicy">ucsmsdk.mometa.power.PowerMgmtPolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerPlacement">ucsmsdk.mometa.power.PowerPlacement module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerPolicy">ucsmsdk.mometa.power.PowerPolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerPrioWght">ucsmsdk.mometa.power.PowerPrioWght module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerProfiledPower">ucsmsdk.mometa.power.PowerProfiledPower module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power.PowerRackUnitMember">ucsmsdk.mometa.power.PowerRackUnitMember module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.power">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.port.html" title="previous chapter">ucsmsdk.mometa.port package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.proc.html" title="next chapter">ucsmsdk.mometa.proc package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.power.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.power.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

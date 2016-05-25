@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.vm package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.vnic package" href="ucsmsdk.mometa.vnic.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.version package" href="ucsmsdk.mometa.version.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.vm package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.vnic package" href="ucsmsdk.mometa.vnic.html" />
+    <link rel="prev" title="ucsmsdk.mometa.version package" href="ucsmsdk.mometa.version.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.vm package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.vm.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-vm-package">
 <h1>ucsmsdk.mometa.vm package<a class="headerlink" href="#ucsmsdk-mometa-vm-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmComputeEp.</code><code class="descname">VmComputeEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>uuid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmComputeEp.html#VmComputeEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmComputeEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21ad0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21690&gt;, 'pn_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21e10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade219d0&gt;, 'compute_ep_vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21910&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21110&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21b50&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21e50&gt;, 'status_change_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21810&gt;, 'ls_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21750&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21fd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade216d0&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade213d0&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade214d0&gt;, 'v_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21a90&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21990&gt;, 'dvs_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21b90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade217d0&gt;, 'cl_inst_type': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21090&gt;, 'host_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21f90&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21490&gt;, 'dvs_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ade21c90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148cb90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148cb10&gt;, 'pn_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3ca990&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684d2890&gt;, 'compute_ep_vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168afd9d0&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c2d0&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f11c710&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3caa10&gt;, 'status_change_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c210&gt;, 'ls_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3cac50&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3ca950&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3ca710&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f11cf10&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684a1490&gt;, 'v_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b579f50&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3cab10&gt;, 'dvs_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3ca8d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3ca6d0&gt;, 'cl_inst_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684d2950&gt;, 'host_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3caad0&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3cafd0&gt;, 'dvs_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f11c110&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmComputeEp.VmComputeEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -337,7 +208,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmDC.VmDC">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmDC.</code><code class="descname">VmDC</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmDC.html#VmDC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDC.VmDC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmDC class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmDC.VmDC.consts">
@@ -346,7 +217,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmDC.VmDC.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDC.VmDC.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDC.VmDC.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -361,7 +232,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmDC.VmDC.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x167a13b10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13de61990&gt;, 'own': &lt;ucscoremeta.MoPropertyMeta object at 0x13de61050&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x13de61110&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x167a130d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x186f6ab10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x167a13990&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x167a13ad0&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x13de61690&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x13de61250&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x13de617d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x13de61710&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDC.VmDC.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042310&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e8ec90&gt;, 'own': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042890&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e8e7d0&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042a50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167226b50&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042290&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042dd0&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e8efd0&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042190&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166042e90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684a1410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDC.VmDC.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -408,7 +279,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmDCOrg.</code><code class="descname">VmDCOrg</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmDCOrg.html#VmDCOrg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmDCOrg class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.consts">
@@ -417,7 +288,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -432,7 +303,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x166391150&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x166391f50&gt;, 'own': &lt;ucscoremeta.MoPropertyMeta object at 0x166391890&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x166391250&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1663914d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x166391910&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x166391ed0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x166391990&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x166391490&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1663910d0&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1663917d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x166391590&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48dc10&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48d890&gt;, 'own': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48de90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48dd10&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48db10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48df50&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48d150&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48d110&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48ddd0&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48dd90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48d190&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b48d710&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmDCOrg.VmDCOrg.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -479,7 +350,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmEp.VmEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmEp.</code><code class="descname">VmEp</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmEp.html#VmEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmEp.VmEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmEp.VmEp.consts">
@@ -488,7 +359,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmEp.VmEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmEp.VmEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmEp.VmEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -503,7 +374,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmEp.VmEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5bd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5990&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5490&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5c90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1640d5410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmEp.VmEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd44a50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd44990&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd44790&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd44c10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17cd44b10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmEp.VmEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -520,7 +391,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmHba.VmHba">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmHba.</code><code class="descname">VmHba</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmHba.html#VmHba"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHba.VmHba" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmHba class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmHba.VmHba.consts">
@@ -529,7 +400,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmHba.VmHba.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHba.VmHba.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHba.VmHba.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -544,7 +415,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmHba.VmHba.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4610&gt;, 'dvs_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4850&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f40d0&gt;, 'profile_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4690&gt;, 'switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1680eec10&gt;, 'ph_switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4990&gt;, 'profile_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f42d0&gt;, 'owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4410&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4110&gt;, 'wwnn': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee810&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x1680eea10&gt;, 'vif_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee710&gt;, 'status_change_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee590&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4450&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1680eed90&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4ed0&gt;, 'dvs_gen_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4e90&gt;, 'vmnd_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee110&gt;, 'v_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee550&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f44d0&gt;, 'host_if_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f49d0&gt;, 'vmnd_guid': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee7d0&gt;, 'dvs_switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1675f4e10&gt;, 'wwpn': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee050&gt;, 'vc_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee8d0&gt;, 'vnic_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1680ee350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHba.VmHba.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e2d0&gt;, 'dvs_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08eb90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e590&gt;, 'profile_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08ed50&gt;, 'switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08ef90&gt;, 'ph_switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e950&gt;, 'profile_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08ee50&gt;, 'owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e090&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1781ef050&gt;, 'wwnn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00d390&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08ea90&gt;, 'vif_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00df50&gt;, 'status_change_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e810&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e5d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e550&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1781efad0&gt;, 'dvs_gen_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1781ef090&gt;, 'vmnd_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00d410&gt;, 'v_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e110&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08e0d0&gt;, 'host_if_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08ee10&gt;, 'vmnd_guid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00d6d0&gt;, 'dvs_switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a08ed10&gt;, 'wwpn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00db50&gt;, 'vc_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00dad0&gt;, 'vnic_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16a00da90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHba.VmHba.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -661,7 +532,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmHv.VmHv">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmHv.</code><code class="descname">VmHv</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>uuid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmHv.html#VmHv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHv.VmHv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmHv class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmHv.VmHv.consts">
@@ -670,7 +541,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmHv.VmHv.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHv.VmHv.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHv.VmHv.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -685,7 +556,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmHv.VmHv.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c80d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8790&gt;, 'pn_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8c10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8550&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8410&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8150&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8d50&gt;, 'status_change_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8390&gt;, 'ls_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8b90&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8f10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8990&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8fd0&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x16d30f3d0&gt;, 'flt_aggr': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8450&gt;, 'v_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8210&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8590&gt;, 'dvs_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8290&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8050&gt;, 'hv_type': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c87d0&gt;, 'cl_inst_type': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8e50&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8e90&gt;, 'dvs_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1697c8c90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHv.VmHv.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696cea10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696ce310&gt;, 'pn_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696ce750&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b790&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696ce190&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2bc50&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696cef90&gt;, 'status_change_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696ce450&gt;, 'ls_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b390&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696cedd0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696cea90&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2bc10&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696ce290&gt;, 'flt_aggr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b350&gt;, 'v_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696cee50&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b150&gt;, 'dvs_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b650&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b7d0&gt;, 'hv_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b550&gt;, 'cl_inst_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2bb90&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2b450&gt;, 'dvs_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169c2bf50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmHv.VmHv.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -842,7 +713,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmInstance.VmInstance">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmInstance.</code><code class="descname">VmInstance</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>uuid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmInstance.html#VmInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmInstance.VmInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmInstance class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmInstance.VmInstance.consts">
@@ -851,7 +722,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmInstance.VmInstance.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmInstance.VmInstance.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmInstance.VmInstance.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -866,7 +737,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmInstance.VmInstance.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41710&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41550&gt;, 'pn_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x166108690&gt;, 'hv_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1661083d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16745e210&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x167b413d0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16745e150&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41450&gt;, 'status_change_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41510&gt;, 'ls_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x166108810&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41190&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41110&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16745ef10&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x167b419d0&gt;, 'flt_aggr': &lt;ucscoremeta.MoPropertyMeta object at 0x166108a50&gt;, 'v_status': &lt;ucscoremeta.MoPropertyMeta object at 0x167b41bd0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1661088d0&gt;, 'dvs_name': &lt;ucscoremeta.MoPropertyMeta object at 0x166108910&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x166108050&gt;, 'hv_type': &lt;ucscoremeta.MoPropertyMeta object at 0x166108750&gt;, 'cl_inst_type': &lt;ucscoremeta.MoPropertyMeta object at 0x16745e290&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x166108350&gt;, 'hv_uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x166108250&gt;, 'dvs_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x166108d90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmInstance.VmInstance.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d37290&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d374d0&gt;, 'pn_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136ded0&gt;, 'hv_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x156f1c6d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e80d310&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d37190&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e80dc50&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136d9d0&gt;, 'status_change_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d37850&gt;, 'ls_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136db90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136d4d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d37a90&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x156f1c8d0&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d376d0&gt;, 'flt_aggr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x156f1c7d0&gt;, 'v_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d371d0&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136d950&gt;, 'dvs_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x156f1cf50&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136da90&gt;, 'hv_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x156f1c250&gt;, 'cl_inst_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e80d850&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136de50&gt;, 'hv_uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14136dc50&gt;, 'dvs_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x156f1c810&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmInstance.VmInstance.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1023,7 +894,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmLifeCyclePolicy.</code><code class="descname">VmLifeCyclePolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmLifeCyclePolicy.html#VmLifeCyclePolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmLifeCyclePolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.consts">
@@ -1032,7 +903,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1047,7 +918,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'fsm_stage_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fb50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fc90&gt;, 'fsm_try': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fb90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5ff50&gt;, 'fsm_rmt_inv_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fe10&gt;, 'fsm_prev': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fb10&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5f8d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15dbba810&gt;, 'fsm_stamp': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fad0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15dbbab90&gt;, 'fsm_progr': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5ff90&gt;, 'vnic_retention': &lt;ucscoremeta.MoPropertyMeta object at 0x1973df550&gt;, 'fsm_rmt_inv_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fd50&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fd10&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5f710&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fa10&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15dbba790&gt;, 'vm_retention': &lt;ucscoremeta.MoPropertyMeta object at 0x1973df910&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5f4d0&gt;, 'fsm_rmt_inv_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5fd90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x169c5f9d0&gt;, 'fsm_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15dbbac90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'fsm_stage_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b56db90&gt;, 'fsm_try': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7ebe90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b56dc10&gt;, 'fsm_rmt_inv_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb490&gt;, 'fsm_prev': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb890&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eba90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169a12190&gt;, 'fsm_stamp': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb790&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16726f810&gt;, 'fsm_progr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7ebc10&gt;, 'vnic_retention': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b56d5d0&gt;, 'fsm_rmt_inv_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb390&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb550&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb250&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b56d0d0&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16726f9d0&gt;, 'vm_retention': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b56dcd0&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb690&gt;, 'fsm_rmt_inv_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7ebc50&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e7eb0d0&gt;, 'fsm_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16726ff90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicy.VmLifeCyclePolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1824,7 +1695,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.</code><code class="descname">VmLifeCyclePolicyFsm</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmLifeCyclePolicyFsm.html#VmLifeCyclePolicyFsm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmLifeCyclePolicyFsm class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.consts">
@@ -1833,7 +1704,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1848,7 +1719,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16c705fd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16596b690&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16596bc90&gt;, 'rmt_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16596b650&gt;, 'completion_time': &lt;ucscoremeta.MoPropertyMeta object at 0x16c705d90&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x16596ba50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16c705cd0&gt;, 'rmt_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x16596bf10&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16c705d10&gt;, 'current_fsm': &lt;ucscoremeta.MoPropertyMeta object at 0x16c705f10&gt;, 'rmt_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x16596bed0&gt;, 'instance_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16596be90&gt;, 'progress': &lt;ucscoremeta.MoPropertyMeta object at 0x16596b790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16596b190&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d78e550&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795f190&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795fc90&gt;, 'rmt_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795f410&gt;, 'completion_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1804a0750&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d78efd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15ade5a90&gt;, 'rmt_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795fd90&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d78e050&gt;, 'current_fsm': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d78e210&gt;, 'rmt_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795f4d0&gt;, 'instance_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d78eed0&gt;, 'progress': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795f850&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15795f910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm.VmLifeCyclePolicyFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2560,7 +2431,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.</code><code class="descname">VmLifeCyclePolicyFsmStage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmLifeCyclePolicyFsmStage.html#VmLifeCyclePolicyFsmStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmLifeCyclePolicyFsmStage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.consts">
@@ -2569,7 +2440,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2584,7 +2455,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15d72e690&gt;, 'last_update_time': &lt;ucscoremeta.MoPropertyMeta object at 0x15b4eebd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x169683550&gt;, 'stage_status': &lt;ucscoremeta.MoPropertyMeta object at 0x169683710&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16768a150&gt;, 'retry': &lt;ucscoremeta.MoPropertyMeta object at 0x169683b50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x16b8a9750&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16768a250&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1689b1610&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x169683390&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x16b8a9950&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0f850&gt;, 'last_update_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0ff50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0f4d0&gt;, 'stage_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142a56c50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0f310&gt;, 'retry': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0f950&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0fb50&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0f890&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142a56210&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0f490&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ed0fb90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage.VmLifeCyclePolicyFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2671,7 +2542,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.</code><code class="descname">VmLifeCyclePolicyFsmTask</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>item</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmLifeCyclePolicyFsmTask.html#VmLifeCyclePolicyFsmTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmLifeCyclePolicyFsmTask class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.consts">
@@ -2680,7 +2551,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2695,7 +2566,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucscoremeta.MoPropertyMeta object at 0x16501bc90&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16501b590&gt;, 'flags': &lt;ucscoremeta.MoPropertyMeta object at 0x16501b510&gt;, 'item': &lt;ucscoremeta.MoPropertyMeta object at 0x16501b190&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16501bb50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16501b310&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16501bc10&gt;, 'seq_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16501be10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16501bb10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151b7cc50&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151b7c710&gt;, 'flags': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c352f10&gt;, 'item': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c352790&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c352210&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c352650&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c352f50&gt;, 'seq_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c352a50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151b7c590&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask.VmLifeCyclePolicyFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2742,7 +2613,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmNic.VmNic">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmNic.</code><code class="descname">VmNic</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmNic.html#VmNic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmNic.VmNic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmNic class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmNic.VmNic.consts">
@@ -2751,7 +2622,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmNic.VmNic.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmNic.VmNic.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmNic.VmNic.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2766,7 +2637,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmNic.VmNic.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe5d0&gt;, 'dvs_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169491550&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe8d0&gt;, 'profile_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbea90&gt;, 'switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe190&gt;, 'ph_switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbed50&gt;, 'profile_name': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe350&gt;, 'owner': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbef50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x169491150&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbec90&gt;, 'vif_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe910&gt;, 'status_change_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbec50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe450&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe090&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169491a90&gt;, 'dvs_gen_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1694913d0&gt;, 'vmnd_name': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe9d0&gt;, 'v_status': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbeb50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x169491290&gt;, 'host_if_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169491990&gt;, 'vmnd_guid': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe2d0&gt;, 'dvs_switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x169491610&gt;, 'mac_addr': &lt;ucscoremeta.MoPropertyMeta object at 0x1694917d0&gt;, 'vc_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe150&gt;, 'vnic_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169bbe510&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmNic.VmNic.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5450&gt;, 'dvs_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1bd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b52d0&gt;, 'profile_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5090&gt;, 'switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5190&gt;, 'ph_switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5a90&gt;, 'profile_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b54d0&gt;, 'owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1f10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1150&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb30d0&gt;, 'vif_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb34d0&gt;, 'status_change_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5310&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f5b5990&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb3f50&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1790&gt;, 'dvs_gen_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1e50&gt;, 'vmnd_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb3cd0&gt;, 'v_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb3450&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1550&gt;, 'host_if_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1d50&gt;, 'vmnd_guid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb3510&gt;, 'dvs_switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1b90&gt;, 'mac_addr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fab1ed0&gt;, 'vc_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb3390&gt;, 'vnic_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168eb3750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmNic.VmNic.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2883,7 +2754,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmOrg.VmOrg">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmOrg.</code><code class="descname">VmOrg</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmOrg.html#VmOrg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmOrg.VmOrg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmOrg class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmOrg.VmOrg.consts">
@@ -2892,7 +2763,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmOrg.VmOrg.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmOrg.VmOrg.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmOrg.VmOrg.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2907,7 +2778,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmOrg.VmOrg.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1676e9f50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x167fdc390&gt;, 'own': &lt;ucscoremeta.MoPropertyMeta object at 0x1676e9e90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x167fdc7d0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1676e9650&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1676e9fd0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1676e9190&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1676e9f90&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x167fdcb50&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x167fdca50&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x167fdc790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x167fdc2d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmOrg.VmOrg.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183a50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488810&gt;, 'own': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183510&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488b10&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1571837d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183990&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183050&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183810&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488b50&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488e90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183e10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1804880d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmOrg.VmOrg.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2954,7 +2825,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmSwitch.VmSwitch">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmSwitch.</code><code class="descname">VmSwitch</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmSwitch.html#VmSwitch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmSwitch.VmSwitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmSwitch class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmSwitch.VmSwitch.consts">
@@ -2963,7 +2834,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmSwitch.VmSwitch.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmSwitch.VmSwitch.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmSwitch.VmSwitch.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2978,7 +2849,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmSwitch.VmSwitch.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5e90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5190&gt;, 'uuid': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5d10&gt;, 'own': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e58d0&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e59d0&gt;, 'ext_key': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5810&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5050&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5310&gt;, 'flt_aggr': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5910&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5410&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5cd0&gt;, 'manager': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5890&gt;, 'admin_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1add8bed0&gt;, 'key_inst': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e56d0&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5490&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5250&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5e10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5c90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab3e5d50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmSwitch.VmSwitch.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e864d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e490&gt;, 'uuid': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e1d0&gt;, 'own': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e8d0&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797ea10&gt;, 'ext_key': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e86190&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e86450&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e3d0&gt;, 'flt_aggr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e86550&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797ed90&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e250&gt;, 'manager': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e410&gt;, 'admin_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e86690&gt;, 'key_inst': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e610&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797ec10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797e210&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797ea90&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15797ec50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e86310&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmSwitch.VmSwitch.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3070,7 +2941,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmVif.VmVif">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmVif.</code><code class="descname">VmVif</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>ph_switch_id</em>, <em>vif_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmVif.html#VmVif"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVif.VmVif" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmVif class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVif.VmVif.consts">
@@ -3079,7 +2950,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVif.VmVif.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVif.VmVif.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVif.VmVif.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -3094,7 +2965,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVif.VmVif.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x165267050&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165267390&gt;, 'vc_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x161f0f2d0&gt;, 'v_status': &lt;ucscoremeta.MoPropertyMeta object at 0x161f0f110&gt;, 'phs_access_card_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1652671d0&gt;, 'phs_border_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165267bd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165267410&gt;, 'vif_id': &lt;ucscoremeta.MoPropertyMeta object at 0x161f0f250&gt;, 'phs_access_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1652676d0&gt;, 'state_qual': &lt;ucscoremeta.MoPropertyMeta object at 0x165267e90&gt;, 'link_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1652674d0&gt;, 'ph_switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165267490&gt;, 'status_change_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x161f0f210&gt;, 'cookie': &lt;ucscoremeta.MoPropertyMeta object at 0x165267ed0&gt;, 'phs_border_aggr_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165267890&gt;, 'phs_access_aggr_port_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165267550&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x165267350&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165267b10&gt;, 'adp_vif_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1652672d0&gt;, 'phs_border_card_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165267250&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x165267f50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVif.VmVif.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78850&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78e90&gt;, 'vc_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78a90&gt;, 'v_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78410&gt;, 'phs_access_card_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78d90&gt;, 'phs_border_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78690&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78b50&gt;, 'vif_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78dd0&gt;, 'phs_access_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78510&gt;, 'state_qual': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78c90&gt;, 'link_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78890&gt;, 'ph_switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78310&gt;, 'status_change_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e780d0&gt;, 'cookie': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78bd0&gt;, 'phs_border_aggr_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e785d0&gt;, 'phs_access_aggr_port_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78710&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78a50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78490&gt;, 'adp_vif_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78150&gt;, 'phs_border_card_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78c50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e78290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVif.VmVif.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3211,7 +3082,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmVlan.VmVlan">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmVlan.</code><code class="descname">VmVlan</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmVlan.html#VmVlan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVlan.VmVlan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmVlan class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVlan.VmVlan.consts">
@@ -3220,7 +3091,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVlan.VmVlan.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVlan.VmVlan.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVlan.VmVlan.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -3235,7 +3106,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVlan.VmVlan.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x168090590&gt;, 'locale': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2690&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x168090b50&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2410&gt;, 'assoc_primary_vlan_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2510&gt;, 'pub_nw_name': &lt;ucscoremeta.MoPropertyMeta object at 0x168090d10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2210&gt;, 'transport': &lt;ucscoremeta.MoPropertyMeta object at 0x168090050&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2090&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1680909d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1680906d0&gt;, 'pub_nw_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x168090e10&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x168090fd0&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2e90&gt;, 'sharing': &lt;ucscoremeta.MoPropertyMeta object at 0x168090890&gt;, 'pub_nw_id': &lt;ucscoremeta.MoPropertyMeta object at 0x168090dd0&gt;, 'switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x168090090&gt;, 'assoc_primary_vlan_switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2e50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c28d0&gt;, 'peer_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x168090650&gt;, 'overlap_state_for_a': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2390&gt;, 'overlap_state_for_b': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2050&gt;, 'if_type': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2250&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c20d0&gt;, 'if_role': &lt;ucscoremeta.MoPropertyMeta object at 0x15d7c2a10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVlan.VmVlan.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b290&gt;, 'locale': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703ba50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bd50&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b7d0&gt;, 'assoc_primary_vlan_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b2d0&gt;, 'pub_nw_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bc90&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b510&gt;, 'transport': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703be50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bb90&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b690&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bad0&gt;, 'pub_nw_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b210&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b9d0&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b990&gt;, 'sharing': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b710&gt;, 'pub_nw_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b350&gt;, 'switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bc10&gt;, 'assoc_primary_vlan_switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b150&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bf50&gt;, 'peer_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bbd0&gt;, 'overlap_state_for_a': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bdd0&gt;, 'overlap_state_for_b': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b310&gt;, 'if_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703bb50&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b790&gt;, 'if_role': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15703b5d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVlan.VmVlan.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3487,7 +3358,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmVnicProfCl.</code><code class="descname">VmVnicProfCl</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmVnicProfCl.html#VmVnicProfCl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmVnicProfCl class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.consts">
@@ -3496,7 +3367,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -3511,7 +3382,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dc_name': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255390&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x164ec6090&gt;, 'org_path': &lt;ucscoremeta.MoPropertyMeta object at 0x164ec62d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16557bad0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x164ec60d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255190&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x164ec6fd0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255f10&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255a50&gt;, 'sw_name': &lt;ucscoremeta.MoPropertyMeta object at 0x16b209050&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16557ba90&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x15c2556d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16557ba50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dc_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x148273710&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x148273250&gt;, 'org_path': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b52f250&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e811e50&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b52f850&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x148273ed0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b52f9d0&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x148273750&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e811650&gt;, 'sw_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b5a9ed0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e811e90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b52ff10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15e811250&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfCl.VmVnicProfCl.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3548,7 +3419,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmVnicProfInst.</code><code class="descname">VmVnicProfInst</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmVnicProfInst.html#VmVnicProfInst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmVnicProfInst class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.consts">
@@ -3557,7 +3428,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -3572,7 +3443,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e0568d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x19c4303d0&gt;, 'profile_type': &lt;ucscoremeta.MoPropertyMeta object at 0x168b44550&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x19c430e10&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056090&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056390&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x15e0565d0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056790&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056c10&gt;, 'max_ports': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056d50&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x15e0564d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x19c430b10&gt;, 'prof_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056dd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274050&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b2747d0&gt;, 'profile_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274210&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274f90&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b2748d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274150&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274e10&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b2746d0&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274890&gt;, 'max_ports': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274c50&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b2743d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274a90&gt;, 'prof_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16b274190&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVnicProfInst.VmVnicProfInst.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3619,7 +3490,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.vm.VmVsan.VmVsan">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.vm.VmVsan.</code><code class="descname">VmVsan</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/vm/VmVsan.html#VmVsan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVsan.VmVsan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is VmVsan class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVsan.VmVsan.consts">
@@ -3628,7 +3499,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVsan.VmVsan.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVsan.VmVsan.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVsan.VmVsan.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -3643,7 +3514,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.vm.VmVsan.VmVsan.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255590&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8f90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x162cd0a10&gt;, 'peer_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8a50&gt;, 'locale': &lt;ucscoremeta.MoPropertyMeta object at 0x162cd0250&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8110&gt;, 'fcoe_vlan': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255110&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15c255f50&gt;, 'switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8a90&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8550&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x162cd0410&gt;, 'if_type': &lt;ucscoremeta.MoPropertyMeta object at 0x162cd0dd0&gt;, 'zoning_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8250&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8d50&gt;, 'if_role': &lt;ucscoremeta.MoPropertyMeta object at 0x162cd0750&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f8e10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x162cd0490&gt;, 'transport': &lt;ucscoremeta.MoPropertyMeta object at 0x1772f85d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x167d0f9d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVsan.VmVsan.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x176968150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1c90&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1910&gt;, 'peer_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1650&gt;, 'locale': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1050&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1710&gt;, 'fcoe_vlan': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1890&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17e96c650&gt;, 'switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b5a9090&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1790&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f19d0&gt;, 'if_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1fd0&gt;, 'zoning_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b5a9590&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1750&gt;, 'if_role': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1f90&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b5a9750&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1e90&gt;, 'transport': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b5a9c10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1769687d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.vm.VmVsan.VmVsan.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3800,71 +3671,86 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.vnic.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.vnic package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.version.html" class="btn btn-neutral" title="ucsmsdk.mometa.version package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.vm package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmComputeEp">ucsmsdk.mometa.vm.VmComputeEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmDC">ucsmsdk.mometa.vm.VmDC module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmDCOrg">ucsmsdk.mometa.vm.VmDCOrg module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmEp">ucsmsdk.mometa.vm.VmEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmHba">ucsmsdk.mometa.vm.VmHba module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmHv">ucsmsdk.mometa.vm.VmHv module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmInstance">ucsmsdk.mometa.vm.VmInstance module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmLifeCyclePolicy">ucsmsdk.mometa.vm.VmLifeCyclePolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm">ucsmsdk.mometa.vm.VmLifeCyclePolicyFsm module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage">ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmStage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask">ucsmsdk.mometa.vm.VmLifeCyclePolicyFsmTask module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmNic">ucsmsdk.mometa.vm.VmNic module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmOrg">ucsmsdk.mometa.vm.VmOrg module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmSwitch">ucsmsdk.mometa.vm.VmSwitch module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmVif">ucsmsdk.mometa.vm.VmVif module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmVlan">ucsmsdk.mometa.vm.VmVlan module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmVnicProfCl">ucsmsdk.mometa.vm.VmVnicProfCl module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmVnicProfInst">ucsmsdk.mometa.vm.VmVnicProfInst module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm.VmVsan">ucsmsdk.mometa.vm.VmVsan module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.vm">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.version.html" title="previous chapter">ucsmsdk.mometa.version package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.vnic.html" title="next chapter">ucsmsdk.mometa.vnic package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.vm.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.vm.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

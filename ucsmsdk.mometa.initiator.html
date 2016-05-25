@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.initiator package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.ip package" href="ucsmsdk.mometa.ip.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.imgsec package" href="ucsmsdk.mometa.imgsec.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.initiator package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.ip package" href="ucsmsdk.mometa.ip.html" />
+    <link rel="prev" title="ucsmsdk.mometa.imgsec package" href="ucsmsdk.mometa.imgsec.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.initiator package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.initiator.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-initiator-package">
 <h1>ucsmsdk.mometa.initiator package<a class="headerlink" href="#ucsmsdk-mometa-initiator-package" title="Permalink to this headline">¶</a></h1>
@@ -180,8 +51,8 @@
 <p>This module contains the general information for InitiatorFcInitiatorEp ManagedObject.</p>
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp">
-<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.</code><code class="descname">InitiatorFcInitiatorEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>wwpn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorFcInitiatorEp.html#InitiatorFcInitiatorEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.</code><code class="descname">InitiatorFcInitiatorEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorFcInitiatorEp.html#InitiatorFcInitiatorEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorFcInitiatorEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.consts">
@@ -190,12 +61,12 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.naming_props">
-<code class="descname">naming_props</code><em class="property"> = set([u'wwpn'])</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.naming_props" title="Permalink to this definition">¶</a></dt>
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.naming_props" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14daaf490&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14451cc10&gt;, 'pref': &lt;ucscoremeta.MoPropertyMeta object at 0x14451cb50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14451cf10&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15565cf90&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x14daaf7d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14daafa50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x14daafbd0&gt;, 'prot': &lt;ucscoremeta.MoPropertyMeta object at 0x14451c090&gt;, 'wwpn': &lt;ucscoremeta.MoPropertyMeta object at 0x14451c4d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14451ca90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1509aa1d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbde10&gt;, 'pref': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1250&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbded0&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1509aab50&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1509aacd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1509aa390&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1509aa090&gt;, 'prot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca12d0&gt;, 'wwpn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbdad0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1210&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp.InitiatorFcInitiatorEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -247,7 +118,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorGroupEp.</code><code class="descname">InitiatorGroupEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorGroupEp.html#InitiatorGroupEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorGroupEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.consts">
@@ -256,7 +127,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -271,7 +142,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf550&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14db6e790&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14db6ed50&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cfed0&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cff50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf750&gt;, 'lc': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cfbd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf090&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf510&gt;, 'pol_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf790&gt;, 'rmt_disk_cfg_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1549cf350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892790&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1458929d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892890&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892250&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892e10&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892110&gt;, 'lc': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892a90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1458928d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892690&gt;, 'pol_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1458925d0&gt;, 'rmt_disk_cfg_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145892350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorGroupEp.InitiatorGroupEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -307,8 +178,8 @@
 <p>This module contains the general information for InitiatorIScsiInitiatorEp ManagedObject.</p>
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp">
-<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.</code><code class="descname">InitiatorIScsiInitiatorEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>iqn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorIScsiInitiatorEp.html#InitiatorIScsiInitiatorEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.</code><code class="descname">InitiatorIScsiInitiatorEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorIScsiInitiatorEp.html#InitiatorIScsiInitiatorEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorIScsiInitiatorEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.consts">
@@ -317,12 +188,12 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.naming_props">
-<code class="descname">naming_props</code><em class="property"> = set([u'iqn'])</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.naming_props" title="Permalink to this definition">¶</a></dt>
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.naming_props" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -332,7 +203,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fed10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fea50&gt;, 'pref': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fe850&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fea90&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fee50&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fe610&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fedd0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fec10&gt;, 'prot': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fe250&gt;, 'iqn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fe150&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e4fe310&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81dd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145730bd0&gt;, 'pref': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81350&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81f50&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81b50&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81c90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e812d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81550&gt;, 'prot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81ad0&gt;, 'iqn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81850&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81fd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp.InitiatorIScsiInitiatorEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -374,7 +245,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorLunEp.</code><code class="descname">InitiatorLunEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorLunEp.html#InitiatorLunEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorLunEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.consts">
@@ -383,7 +254,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -398,7 +269,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15482b510&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15482b5d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15482bbd0&gt;, 'bootable': &lt;ucscoremeta.MoPropertyMeta object at 0x15482ba50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15482bd10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15482b250&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15482b150&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15482b450&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141c086d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1451e6850&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141c08050&gt;, 'bootable': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141c08b10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1451e67d0&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141c08510&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141c08410&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141c08c10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorLunEp.InitiatorLunEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -440,7 +311,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorMemberEp.</code><code class="descname">InitiatorMemberEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorMemberEp.html#InitiatorMemberEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorMemberEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.consts">
@@ -449,7 +320,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -464,7 +335,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1f9d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1ff10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1f050&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1ff90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1f210&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1f450&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x151c1fb50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1455edf90&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13ca249d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13ca24950&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1455ed750&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13ca24310&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1455ed2d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1455ed810&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorMemberEp.InitiatorMemberEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -481,7 +352,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorRequestorEp.</code><code class="descname">InitiatorRequestorEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>sys_id</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorRequestorEp.html#InitiatorRequestorEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorRequestorEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.consts">
@@ -490,7 +361,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -505,7 +376,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14453b990&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14453b0d0&gt;, 'sys_id': &lt;ucscoremeta.MoPropertyMeta object at 0x14453b790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14453be90&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x14453ba10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14453bd10&gt;, 'alloc_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1558c3410&gt;, 'sys_name': &lt;ucscoremeta.MoPropertyMeta object at 0x14453b150&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14453bfd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1558c31d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45050&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c456d0&gt;, 'sys_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45710&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c455d0&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45ed0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45a10&gt;, 'alloc_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45550&gt;, 'sys_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45790&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45890&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45b50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorEp.InitiatorRequestorEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -542,7 +413,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.</code><code class="descname">InitiatorRequestorGrpEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorRequestorGrpEp.html#InitiatorRequestorGrpEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorRequestorGrpEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.consts">
@@ -551,7 +422,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -566,7 +437,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4550&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4450&gt;, 'pol_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4150&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4f90&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4110&gt;, 'alloc_state': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4a10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4e90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4210&gt;, 'lc': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4c50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4f50&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1542a4350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691750&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691d90&gt;, 'pol_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1436910d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691c50&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691910&gt;, 'alloc_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146748b90&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691c10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691390&gt;, 'lc': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x143691590&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1436919d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1436911d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp.InitiatorRequestorGrpEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -638,7 +509,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorStoreEp.</code><code class="descname">InitiatorStoreEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorStoreEp.html#InitiatorStoreEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorStoreEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.consts">
@@ -647,7 +518,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -662,7 +533,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x155216dd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x155216850&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x155216f90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x155216810&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x155216b90&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x155216ed0&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x155216f50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x155216750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45610&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45cd0&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c452d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45450&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c459d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45d50&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x132c45e10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x131f0c810&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorStoreEp.InitiatorStoreEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -699,7 +570,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.initiator.InitiatorUnitEp.</code><code class="descname">InitiatorUnitEp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/initiator/InitiatorUnitEp.html#InitiatorUnitEp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is InitiatorUnitEp class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.consts">
@@ -708,7 +579,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -723,7 +594,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3610&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3a10&gt;, 'item_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3450&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3a50&gt;, 'ep_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3b10&gt;, 'ha': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3310&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3690&gt;, 'lc': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae30d0&gt;, 'phy_id': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3890&gt;, 'prot': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3710&gt;, 'boot': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3cd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae34d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x154ae3d90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d990&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d150&gt;, 'item_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d790&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d050&gt;, 'ep_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d190&gt;, 'ha': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d7d0&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d610&gt;, 'lc': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12dd50&gt;, 'phy_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12da90&gt;, 'prot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d710&gt;, 'boot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12dd10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12dad0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13c12d350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.initiator.InitiatorUnitEp.InitiatorUnitEp.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -805,71 +676,76 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.ip.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.ip package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.imgsec.html" class="btn btn-neutral" title="ucsmsdk.mometa.imgsec package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.initiator package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp">ucsmsdk.mometa.initiator.InitiatorFcInitiatorEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorGroupEp">ucsmsdk.mometa.initiator.InitiatorGroupEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp">ucsmsdk.mometa.initiator.InitiatorIScsiInitiatorEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorLunEp">ucsmsdk.mometa.initiator.InitiatorLunEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorMemberEp">ucsmsdk.mometa.initiator.InitiatorMemberEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorRequestorEp">ucsmsdk.mometa.initiator.InitiatorRequestorEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp">ucsmsdk.mometa.initiator.InitiatorRequestorGrpEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorStoreEp">ucsmsdk.mometa.initiator.InitiatorStoreEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator.InitiatorUnitEp">ucsmsdk.mometa.initiator.InitiatorUnitEp module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.initiator">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.imgsec.html" title="previous chapter">ucsmsdk.mometa.imgsec package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.ip.html" title="next chapter">ucsmsdk.mometa.ip package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.initiator.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.initiator.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

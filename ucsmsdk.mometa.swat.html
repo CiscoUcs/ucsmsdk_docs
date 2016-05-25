@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.swat package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.synthetic package" href="ucsmsdk.mometa.synthetic.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.sw package" href="ucsmsdk.mometa.sw.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.swat package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.synthetic package" href="ucsmsdk.mometa.synthetic.html" />
+    <link rel="prev" title="ucsmsdk.mometa.sw package" href="ucsmsdk.mometa.sw.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.swat package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.swat.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-swat-package">
 <h1>ucsmsdk.mometa.swat package<a class="headerlink" href="#ucsmsdk-mometa-swat-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.swat.SwatAction.SwatAction">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.swat.SwatAction.</code><code class="descname">SwatAction</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/swat/SwatAction.html#SwatAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatAction.SwatAction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SwatAction class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatAction.SwatAction.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatAction.SwatAction.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatAction.SwatAction.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatAction.SwatAction.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatAction.SwatAction.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169029ad0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16587e590&gt;, 'evaluation_method': &lt;ucscoremeta.MoPropertyMeta object at 0x16860b350&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16587ea10&gt;, 'instance_mod': &lt;ucscoremeta.MoPropertyMeta object at 0x16860b110&gt;, 'max_hits': &lt;ucscoremeta.MoPropertyMeta object at 0x16860b550&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ac9d8210&gt;, 'sleep_delay': &lt;ucscoremeta.MoPropertyMeta object at 0x16587eb90&gt;, 'interval': &lt;ucscoremeta.MoPropertyMeta object at 0x16860b1d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1658aabd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14512ff50&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x16587ea50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatAction.SwatAction.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1660fd890&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168910fd0&gt;, 'evaluation_method': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1660fd910&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1681edbd0&gt;, 'instance_mod': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1666d5590&gt;, 'max_hits': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168d7bc90&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168d7bd90&gt;, 'sleep_delay': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168910950&gt;, 'interval': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x148265c50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168d7bcd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168708590&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169ad6450&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatAction.SwatAction.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -262,7 +133,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.swat.SwatCondition.SwatCondition">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.swat.SwatCondition.</code><code class="descname">SwatCondition</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>var_name</em>, <em>operation</em>, <em>var_value</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/swat/SwatCondition.html#SwatCondition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatCondition.SwatCondition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SwatCondition class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatCondition.SwatCondition.consts">
@@ -271,7 +142,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatCondition.SwatCondition.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatCondition.SwatCondition.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatCondition.SwatCondition.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -286,7 +157,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatCondition.SwatCondition.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x162caaf50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x162caa6d0&gt;, 'var_name': &lt;ucscoremeta.MoPropertyMeta object at 0x162cb5bd0&gt;, 'var_value': &lt;ucscoremeta.MoPropertyMeta object at 0x162cb5c90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x162caab90&gt;, 'operation': &lt;ucscoremeta.MoPropertyMeta object at 0x162caa650&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x162caab50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x162caaa90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatCondition.SwatCondition.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166557910&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166557810&gt;, 'var_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1665571d0&gt;, 'var_value': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166557b10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166557490&gt;, 'operation': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166557690&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x166557050&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1665576d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatCondition.SwatCondition.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -333,7 +204,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.swat.SwatInjection.SwatInjection">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.swat.SwatInjection.</code><code class="descname">SwatInjection</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/swat/SwatInjection.html#SwatInjection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatInjection.SwatInjection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SwatInjection class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatInjection.SwatInjection.consts">
@@ -342,7 +213,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatInjection.SwatInjection.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatInjection.SwatInjection.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatInjection.SwatInjection.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -357,7 +228,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatInjection.SwatInjection.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ac6ea410&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1acf78e90&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x16c853850&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1acf78510&gt;, 'serial': &lt;ucscoremeta.MoPropertyMeta object at 0x1acf78dd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ad1825d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1ac6eaa90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ac6eaed0&gt;, 'pool_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ac6eaf10&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x1ac6ea710&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x167d6c690&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatInjection.SwatInjection.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16828a290&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15788ded0&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15788d990&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169ac4610&gt;, 'serial': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15788df90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169ac48d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16828e190&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16828a490&gt;, 'pool_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16828aa10&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16828a850&gt;, 'revision': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169ac4890&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatInjection.SwatInjection.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -374,7 +245,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.swat.SwatResultstats.</code><code class="descname">SwatResultstats</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/swat/SwatResultstats.html#SwatResultstats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SwatResultstats class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.consts">
@@ -383,7 +254,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -398,7 +269,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f490&gt;, 'false_hits': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f750&gt;, 'true_hits': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40fe90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f1d0&gt;, 'total_passes': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40fd90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f690&gt;, 'activity_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f650&gt;, 'label': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f6d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40fe10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1ab40f0d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x153977050&gt;, 'false_hits': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x153977350&gt;, 'true_hits': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1e10&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1690&gt;, 'total_passes': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1c10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1ed0&gt;, 'activity_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x153977950&gt;, 'label': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1b90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1789f1a90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x153977e90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatResultstats.SwatResultstats.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -415,7 +286,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.swat.SwatTarget.SwatTarget">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.swat.SwatTarget.</code><code class="descname">SwatTarget</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>var_name</em>, <em>var_value</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/swat/SwatTarget.html#SwatTarget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTarget.SwatTarget" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SwatTarget class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatTarget.SwatTarget.consts">
@@ -424,7 +295,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatTarget.SwatTarget.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTarget.SwatTarget.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTarget.SwatTarget.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -439,7 +310,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatTarget.SwatTarget.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaa590&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x166fd2fd0&gt;, 'var_value': &lt;ucscoremeta.MoPropertyMeta object at 0x166fd2e50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x166fd2e90&gt;, 'var_name': &lt;ucscoremeta.MoPropertyMeta object at 0x166fd2f90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x166fd2f50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaa5d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTarget.SwatTarget.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac71e90&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac71d90&gt;, 'var_value': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac71c10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac714d0&gt;, 'var_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac71f10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac71b50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ac715d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTarget.SwatTarget.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -456,7 +327,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.swat.SwatTrigger.</code><code class="descname">SwatTrigger</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/swat/SwatTrigger.html#SwatTrigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SwatTrigger class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.consts">
@@ -465,7 +336,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -480,7 +351,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056910&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15e0561d0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056210&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056250&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056ad0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x15d6cf490&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15e056550&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695ddd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695d990&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695da90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695dd50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695dc50&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695dcd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17695de50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.swat.SwatTrigger.SwatTrigger.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -507,71 +378,73 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.synthetic.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.synthetic package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.sw.html" class="btn btn-neutral" title="ucsmsdk.mometa.sw package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.swat package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat.SwatAction">ucsmsdk.mometa.swat.SwatAction module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat.SwatCondition">ucsmsdk.mometa.swat.SwatCondition module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat.SwatInjection">ucsmsdk.mometa.swat.SwatInjection module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat.SwatResultstats">ucsmsdk.mometa.swat.SwatResultstats module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat.SwatTarget">ucsmsdk.mometa.swat.SwatTarget module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat.SwatTrigger">ucsmsdk.mometa.swat.SwatTrigger module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.swat">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.sw.html" title="previous chapter">ucsmsdk.mometa.sw package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.synthetic.html" title="next chapter">ucsmsdk.mometa.synthetic package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.swat.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.swat.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

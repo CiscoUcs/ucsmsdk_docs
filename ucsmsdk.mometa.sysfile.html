@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.sysfile package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.top package" href="ucsmsdk.mometa.top.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.sysdebug package" href="ucsmsdk.mometa.sysdebug.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.sysfile package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.top package" href="ucsmsdk.mometa.top.html" />
+    <link rel="prev" title="ucsmsdk.mometa.sysdebug package" href="ucsmsdk.mometa.sysdebug.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.sysfile package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.sysfile.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-sysfile-package">
 <h1>ucsmsdk.mometa.sysfile package<a class="headerlink" href="#ucsmsdk-mometa-sysfile-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sysfile.SysfileDigest.</code><code class="descname">SysfileDigest</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>creation_ts</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sysfile/SysfileDigest.html#SysfileDigest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SysfileDigest class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1693accd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1693acf10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1693ac790&gt;, 'switch_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1693aca90&gt;, 'uri': &lt;ucscoremeta.MoPropertyMeta object at 0x16852d410&gt;, 'creation_ts': &lt;ucscoremeta.MoPropertyMeta object at 0x1693acc10&gt;, 'size': &lt;ucscoremeta.MoPropertyMeta object at 0x1693ac650&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1693aced0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1693ac390&gt;, 'ts': &lt;ucscoremeta.MoPropertyMeta object at 0x16852d690&gt;, 'source': &lt;ucscoremeta.MoPropertyMeta object at 0x1693ac3d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1693ac590&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1693ac310&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c3547d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d235ad0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d222150&gt;, 'switch_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d235850&gt;, 'uri': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d235910&gt;, 'creation_ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c354a50&gt;, 'size': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d222b90&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c354810&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c354790&gt;, 'ts': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d235890&gt;, 'source': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d235950&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16d222110&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c354b50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileDigest.SysfileDigest.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -237,7 +108,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sysfile.SysfileMutation.</code><code class="descname">SysfileMutation</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sysfile/SysfileMutation.html#SysfileMutation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SysfileMutation class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.consts">
@@ -246,7 +117,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -261,7 +132,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78890&gt;, 'fsm_stage_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78bd0&gt;, 'fsm_stamp': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78550&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb780d0&gt;, 'fsm_try': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78f50&gt;, 'fsm_progr': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78050&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78d90&gt;, 'fsm_rmt_inv_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb784d0&gt;, 'fsm_rmt_inv_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78f10&gt;, 'fsm_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78d50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78190&gt;, 'fsm_prev': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78490&gt;, 'action': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78350&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78dd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78210&gt;, 'fsm_rmt_inv_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78b90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16cb78110&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1672723d0&gt;, 'fsm_stage_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f79410&gt;, 'fsm_stamp': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f79990&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167272d50&gt;, 'fsm_try': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f799d0&gt;, 'fsm_progr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16c294ad0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f79a90&gt;, 'fsm_rmt_inv_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16c294d10&gt;, 'fsm_rmt_inv_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16c294790&gt;, 'fsm_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16c294890&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f79950&gt;, 'fsm_prev': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16c294c50&gt;, 'action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167272b10&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f79750&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168f79bd0&gt;, 'fsm_rmt_inv_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16c2946d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167272250&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutation.SysfileMutation.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1038,7 +909,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sysfile.SysfileMutationFsm.</code><code class="descname">SysfileMutationFsm</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sysfile/SysfileMutationFsm.html#SysfileMutationFsm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SysfileMutationFsm class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.consts">
@@ -1047,7 +918,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1062,7 +933,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1a33b7790&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15bf9ab10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15bf9a110&gt;, 'rmt_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15bf9ab90&gt;, 'completion_time': &lt;ucscoremeta.MoPropertyMeta object at 0x1a33b7090&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1a33b7a90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1a33b7390&gt;, 'rmt_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x15bf9aed0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1a33b79d0&gt;, 'current_fsm': &lt;ucscoremeta.MoPropertyMeta object at 0x1a33b7b90&gt;, 'rmt_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcafd90&gt;, 'instance_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcaf510&gt;, 'progress': &lt;ucscoremeta.MoPropertyMeta object at 0x15dcaf150&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15bf9a6d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1f10&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17a8d6610&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17a8d6fd0&gt;, 'rmt_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1350&gt;, 'completion_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b361350&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1fd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16842b890&gt;, 'rmt_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c434950&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1190&gt;, 'current_fsm': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17e11bf90&gt;, 'rmt_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1550&gt;, 'instance_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1410&gt;, 'progress': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1684b1310&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17a8d66d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsm.SysfileMutationFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1779,7 +1650,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.</code><code class="descname">SysfileMutationFsmStage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sysfile/SysfileMutationFsmStage.html#SysfileMutationFsmStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SysfileMutationFsmStage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.consts">
@@ -1788,7 +1659,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1803,7 +1674,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e03c50&gt;, 'last_update_time': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e03f90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1acc97410&gt;, 'stage_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1acc97b50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e03110&gt;, 'retry': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e03b50&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e03850&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e03410&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1acc97d10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1acc97a90&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x1a5e036d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168deb250&gt;, 'last_update_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168deb510&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fa67110&gt;, 'stage_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fa67c50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168debcd0&gt;, 'retry': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fa67990&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168deb650&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168debc10&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fa67b50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fa671d0&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17fa675d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmStage.SysfileMutationFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1910,7 +1781,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.</code><code class="descname">SysfileMutationFsmTask</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>item</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/sysfile/SysfileMutationFsmTask.html#SysfileMutationFsmTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is SysfileMutationFsmTask class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.consts">
@@ -1919,7 +1790,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1934,7 +1805,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3450&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3bd0&gt;, 'flags': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3290&gt;, 'item': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3d50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3f10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3ad0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3490&gt;, 'seq_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae3390&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x165ae33d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a5ce50&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1647e8350&gt;, 'flags': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1647e8850&gt;, 'item': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1647e8290&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1647e8b10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1647e8410&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1681cf3d0&gt;, 'seq_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1681cf750&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167e86390&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.sysfile.SysfileMutationFsmTask.SysfileMutationFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1986,71 +1857,72 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.top.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.top package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.sysdebug.html" class="btn btn-neutral" title="ucsmsdk.mometa.sysdebug package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.sysfile package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.sysfile.SysfileDigest">ucsmsdk.mometa.sysfile.SysfileDigest module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.sysfile.SysfileMutation">ucsmsdk.mometa.sysfile.SysfileMutation module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.sysfile.SysfileMutationFsm">ucsmsdk.mometa.sysfile.SysfileMutationFsm module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.sysfile.SysfileMutationFsmStage">ucsmsdk.mometa.sysfile.SysfileMutationFsmStage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.sysfile.SysfileMutationFsmTask">ucsmsdk.mometa.sysfile.SysfileMutationFsmTask module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.sysfile">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.sysdebug.html" title="previous chapter">ucsmsdk.mometa.sysdebug package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.top.html" title="next chapter">ucsmsdk.mometa.top package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.sysfile.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.sysfile.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

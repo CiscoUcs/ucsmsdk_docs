@@ -1,159 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.ucsmethod &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Module code" href="../index.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.ucsmethod &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.ucsmethod</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.ucsmethod</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License prop</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License prop</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This module contains the UcsSdk Core classes.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">.ucscore</span> <span class="kn">import</span> <span class="n">UcsBase</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucscoreutils</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
 
-<span class="kn">import</span> <span class="nn">ucscoreutils</span>
-<span class="kn">from</span> <span class="nn">ucscore</span> <span class="kn">import</span> <span class="n">UcsBase</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">xml.etree.cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
@@ -162,7 +70,9 @@
     <span class="kn">import</span> <span class="nn">cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
     <span class="kn">from</span> <span class="nn">cElementTree</span> <span class="kn">import</span> <span class="n">Element</span><span class="p">,</span> <span class="n">SubElement</span>
 
-<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;ucs&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="ExternalMethod"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod">[docs]</a><span class="k">class</span> <span class="nc">ExternalMethod</span><span class="p">(</span><span class="n">UcsBase</span><span class="p">):</span>
@@ -170,24 +80,25 @@
 <span class="sd">    This class represents the UCS Central Xml api&#39;s query/configuration</span>
 <span class="sd">    methods.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_external_method_attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;errorCode&#39;</span><span class="p">:</span> <span class="s">&#39;error_code&#39;</span><span class="p">,</span>
-                              <span class="s">&#39;errorDescr&#39;</span><span class="p">:</span> <span class="s">&#39;error_descr&#39;</span><span class="p">,</span>
-                              <span class="s">&#39;invocationResult&#39;</span><span class="p">:</span> <span class="s">&#39;invocation_result&#39;</span><span class="p">,</span>
-                              <span class="s">&#39;response&#39;</span><span class="p">:</span> <span class="s">&#39;response&#39;</span><span class="p">}</span>
+
+    <span class="n">_external_method_attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;errorCode&#39;</span><span class="p">:</span> <span class="s1">&#39;error_code&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;errorDescr&#39;</span><span class="p">:</span> <span class="s1">&#39;error_descr&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;invocationResult&#39;</span><span class="p">:</span> <span class="s1">&#39;invocation_result&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="s1">&#39;response&#39;</span><span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method_id</span><span class="p">):</span>
-        <span class="c"># &quot;&quot;&quot; __init__ of the UcsBase class &quot;&quot;&quot;</span>
+        <span class="c1"># &quot;&quot;&quot; __init__ of the UcsBase class &quot;&quot;&quot;</span>
         <span class="n">UcsBase</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method_id</span><span class="p">)</span>
 
         <span class="n">meta_module</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">method_id</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__method_meta</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta_module</span><span class="p">,</span> <span class="s">&quot;method_meta&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta_module</span><span class="p">,</span> <span class="s">&quot;prop_meta&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__property_map</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta_module</span><span class="p">,</span> <span class="s">&quot;prop_map&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__method_meta</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta_module</span><span class="p">,</span> <span class="s2">&quot;method_meta&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta_module</span><span class="p">,</span> <span class="s2">&quot;prop_meta&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__property_map</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta_module</span><span class="p">,</span> <span class="s2">&quot;prop_map&quot;</span><span class="p">)</span>
 
-        <span class="c"># &quot;&quot;&quot; instantiate class variables &quot;&quot;&quot;</span>
-        <span class="c"># for prop in CoreUtils.get_property_list(self._class_id):</span>
-        <span class="c">#     if prop != &quot;Meta&quot;:</span>
-        <span class="c">#         self.__dict__[prop] = None</span>
+        <span class="c1"># &quot;&quot;&quot; instantiate class variables &quot;&quot;&quot;</span>
+        <span class="c1"># for prop in CoreUtils.get_property_list(self._class_id):</span>
+        <span class="c1">#     if prop != &quot;Meta&quot;:</span>
+        <span class="c1">#         self.__dict__[prop] = None</span>
         <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
 
@@ -200,33 +111,33 @@
 <div class="viewcode-block" id="ExternalMethod.child_add"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod.child_add">[docs]</a>    <span class="k">def</span> <span class="nf">child_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; This method adds child external method object to a</span>
 <span class="sd">        external method object. &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="ExternalMethod.set_attr"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod.set_attr">[docs]</a>    <span class="k">def</span> <span class="nf">set_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; This method sets the attribute of external method object.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s">&#39;error_code&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;error_code&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">error_code</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s">&#39;error_descr&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;error_descr&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">error_descr</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s">&#39;invocation_result&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;invocation_result&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">invocation_result</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s">&#39;response&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;response&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="c"># &quot;&quot;&quot; no such property &quot;&quot;&quot;</span>
-            <span class="k">return</span> <span class="bp">None</span>
-            <span class="c"># raise AttributeError</span>
-</div>
+            <span class="c1"># &quot;&quot;&quot; no such property &quot;&quot;&quot;</span>
+            <span class="k">return</span> <span class="bp">None</span></div>
+            <span class="c1"># raise AttributeError</span>
+
 <div class="viewcode-block" id="ExternalMethod.get_error_response"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod.get_error_response">[docs]</a>    <span class="k">def</span> <span class="nf">get_error_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_code</span><span class="p">,</span> <span class="n">error_descr</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; This methods sets error attributes of an external</span>
 <span class="sd">         method object. &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">error_code</span> <span class="o">=</span> <span class="n">error_code</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">error_descr</span> <span class="o">=</span> <span class="n">error_descr</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="s">&quot;yes&quot;</span>
-        <span class="c"># return self</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span></div>
+        <span class="c1"># return self</span>
+
 <div class="viewcode-block" id="ExternalMethod.to_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod.to_xml">[docs]</a>    <span class="k">def</span> <span class="nf">to_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_doc</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">option</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">elem_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Method writes the xml representation of the external</span>
 <span class="sd">        method object. &quot;&quot;&quot;</span>
@@ -235,11 +146,11 @@
             <span class="n">override_tag</span><span class="o">=</span><span class="n">elem_name</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">xml_obj</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s">&quot;aaaLogout&quot;</span> <span class="ow">and</span> <span class="n">prop</span> <span class="o">==</span> <span class="s">&quot;in_delay_secs&quot;</span> \
-               <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">xml_obj</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s2">&quot;aaaLogout&quot;</span> <span class="ow">and</span> <span class="n">prop</span> <span class="o">==</span> <span class="s2">&quot;in_delay_secs&quot;</span> \
+               <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
                 <span class="k">continue</span>
             <span class="n">prop_meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">prop_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="s">&quot;Output&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">prop_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="s2">&quot;Output&quot;</span><span class="p">:</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">prop_meta</span><span class="o">.</span><span class="n">is_complex_type</span><span class="p">:</span>
                 <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
@@ -249,17 +160,20 @@
                 <span class="n">xml_obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">prop_meta</span><span class="o">.</span><span class="n">xml_attribute</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">child_to_xml</span><span class="p">(</span><span class="n">xml_obj</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">xml_obj</span>
-</div>
-<div class="viewcode-block" id="ExternalMethod.from_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod.from_xml">[docs]</a>    <span class="k">def</span> <span class="nf">from_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>  <span class="c"># , handle, modify_self=False, mo=None):</span>
+        <span class="k">return</span> <span class="n">xml_obj</span></div>
+
+    <span class="c1"># , handle, modify_self=False, mo=None):</span>
+<div class="viewcode-block" id="ExternalMethod.from_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethod.ExternalMethod.from_xml">[docs]</a>    <span class="k">def</span> <span class="nf">from_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">,</span> <span class="n">handle</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Method updates/fills the object from the xml representation</span>
 <span class="sd">        of the external method object. &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handle</span> <span class="o">=</span> <span class="n">handle</span>
         <span class="k">if</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_value</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_value</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">):</span>
                 <span class="k">if</span> <span class="n">attr_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_map</span><span class="p">:</span>
                     <span class="n">attr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_map</span><span class="p">[</span><span class="n">attr_name</span><span class="p">]</span>
                     <span class="n">method_prop_meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span>
-                    <span class="k">if</span> <span class="n">method_prop_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="s">&quot;Input&quot;</span> <span class="ow">or</span> <span class="p">(</span>
+                    <span class="k">if</span> <span class="n">method_prop_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="s2">&quot;Input&quot;</span> <span class="ow">or</span> <span class="p">(</span>
                             <span class="n">method_prop_meta</span><span class="o">.</span><span class="n">is_complex_type</span><span class="p">):</span>
                         <span class="k">continue</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">set_attr</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">attr_value</span><span class="p">))</span>
@@ -278,7 +192,7 @@
                     <span class="n">child_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_map</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span>
                     <span class="n">method_prop_meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property_meta</span><span class="p">[</span>
                         <span class="n">child_name</span><span class="p">]</span>
-                    <span class="k">if</span> <span class="n">method_prop_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="s">&quot;Output&quot;</span> <span class="ow">and</span> \
+                    <span class="k">if</span> <span class="n">method_prop_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="s2">&quot;Output&quot;</span> <span class="ow">and</span> \
                             <span class="p">(</span><span class="n">method_prop_meta</span><span class="o">.</span><span class="n">is_complex_type</span><span class="p">):</span>
                         <span class="n">child_obj</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">get_ucs_obj</span><span class="p">(</span>
                             <span class="n">method_prop_meta</span><span class="o">.</span><span class="n">field_type</span><span class="p">,</span>
@@ -286,80 +200,61 @@
                         <span class="k">if</span> <span class="n">child_obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">set_attr</span><span class="p">(</span><span class="n">child_name</span><span class="p">,</span>
                                           <span class="n">child_obj</span><span class="p">)</span>
-                            <span class="c"># print child_method_obj.__dict__</span>
-                            <span class="n">child_obj</span><span class="o">.</span><span class="n">from_xml</span><span class="p">(</span>
-                                <span class="n">child_elem</span><span class="p">)</span>
-</div>
+                            <span class="c1"># print child_method_obj.__dict__</span>
+                            <span class="n">child_obj</span><span class="o">.</span><span class="n">from_xml</span><span class="p">(</span><span class="n">child_elem</span><span class="p">,</span> <span class="n">handle</span><span class="p">)</span></div>
+
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">tab_size</span> <span class="o">=</span> <span class="mi">8</span>
-        <span class="n">out_str</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="s">&quot;External Method</span><span class="se">\t\t\t</span><span class="s">:</span><span class="se">\t</span><span class="s">&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_class_id</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="s">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="s">&quot;External Method&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="k">for</span> <span class="n">prop</span><span class="p">,</span> <span class="n">prop_value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()):</span>
-            <span class="k">if</span> <span class="s">&quot;ExternalMethod&quot;</span> <span class="ow">in</span> <span class="n">prop</span><span class="p">:</span>
+        <span class="n">out_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="s2">&quot;External Method</span><span class="se">\t\t\t</span><span class="s2">:</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_class_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;External Method&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">prop</span><span class="p">,</span> <span class="n">prop_value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ucsgenutils</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="s2">&quot;ExternalMethod&quot;</span> <span class="ow">in</span> <span class="n">prop</span><span class="p">:</span>
                 <span class="k">continue</span>
-            <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-                <span class="n">prop_value</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+            <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+                <span class="n">prop_value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
 
         <span class="k">return</span> <span class="n">out_str</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

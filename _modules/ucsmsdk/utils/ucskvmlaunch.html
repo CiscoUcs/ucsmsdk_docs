@@ -1,156 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.utils.ucskvmlaunch &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../index.html"/>
-        <link rel="up" title="Module code" href="../../index.html"/> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.utils.ucskvmlaunch &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.utils.ucskvmlaunch</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.utils.ucskvmlaunch</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2013 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License at</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2013 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module contains the api used to launch ucs kvm.</span>
+<span class="sd">This module contains the APIs used to launch ucs kvm.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlencode</span>
+
 <span class="kn">import</span> <span class="nn">subprocess</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 
@@ -159,29 +70,28 @@
 <span class="kn">from</span> <span class="nn">..ucsexception</span> <span class="kn">import</span> <span class="n">UcsWarning</span><span class="p">,</span> <span class="n">UcsValidationException</span><span class="p">,</span> <span class="n">UcsException</span>
 <span class="kn">from</span> <span class="nn">..ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span>
 
-<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;ucs&#39;</span><span class="p">)</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">_ParamKvm</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Internal class to act as enum to support ucs_kvm_launch utility.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">CENTRALE_PASSWORD</span> <span class="o">=</span> <span class="s">&quot;centralePassword&quot;</span>
-    <span class="n">CENTRALE_USER</span> <span class="o">=</span> <span class="s">&quot;centraleUser&quot;</span>
-    <span class="n">DN</span> <span class="o">=</span> <span class="s">&quot;dn&quot;</span>
-    <span class="n">FRAME_TITLE</span> <span class="o">=</span> <span class="s">&quot;frame_title&quot;</span>
-    <span class="n">KVM_IP_ADDR</span> <span class="o">=</span> <span class="s">&quot;kvmIpAddr&quot;</span>
-    <span class="n">KVM_PASSWORD</span> <span class="o">=</span> <span class="s">&quot;kvmPassword&quot;</span>
-    <span class="n">KVM_PN_DN</span> <span class="o">=</span> <span class="s">&quot;kvmPnDn&quot;</span>
-    <span class="n">KVM_USER</span> <span class="o">=</span> <span class="s">&quot;kvmUser&quot;</span>
-    <span class="n">TEMP_UNPW</span> <span class="o">=</span> <span class="s">&quot;tempunpw&quot;</span>
-    <span class="n">KVM_DN</span> <span class="o">=</span> <span class="s">&quot;kvmDn&quot;</span>
+    <span class="c1"># Internal class to act as enum to support ucs_kvm_launch utility.</span>
+
+    <span class="n">CENTRALE_PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;centralePassword&quot;</span>
+    <span class="n">CENTRALE_USER</span> <span class="o">=</span> <span class="s2">&quot;centraleUser&quot;</span>
+    <span class="n">DN</span> <span class="o">=</span> <span class="s2">&quot;dn&quot;</span>
+    <span class="n">FRAME_TITLE</span> <span class="o">=</span> <span class="s2">&quot;frame_title&quot;</span>
+    <span class="n">KVM_IP_ADDR</span> <span class="o">=</span> <span class="s2">&quot;kvmIpAddr&quot;</span>
+    <span class="n">KVM_PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;kvmPassword&quot;</span>
+    <span class="n">KVM_PN_DN</span> <span class="o">=</span> <span class="s2">&quot;kvmPnDn&quot;</span>
+    <span class="n">KVM_USER</span> <span class="o">=</span> <span class="s2">&quot;kvmUser&quot;</span>
+    <span class="n">TEMP_UNPW</span> <span class="o">=</span> <span class="s2">&quot;tempunpw&quot;</span>
+    <span class="n">KVM_DN</span> <span class="o">=</span> <span class="s2">&quot;kvmDn&quot;</span>
 
 
 <div class="viewcode-block" id="ucs_kvm_launch"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.ucskvmlaunch.ucs_kvm_launch">[docs]</a><span class="k">def</span> <span class="nf">ucs_kvm_launch</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">service_profile</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">blade</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">rack_unit</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                    <span class="n">frame_title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">need_url</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This operation launch ucs kvm.</span>
+<span class="sd">    ucs_kvm_launch launches the kvm session for a specified server.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        handle (UcsHandle)</span>
@@ -189,19 +99,19 @@
 <span class="sd">        blade (ComputeBlade)</span>
 <span class="sd">        rack_unit (ComputeRackUnit)</span>
 <span class="sd">        frame_title (str): title of launched frame</span>
-<span class="sd">        need_url (bool): if true, it returns url to launch kvm and will not</span>
-<span class="sd">                            launch kvm session</span>
+<span class="sd">        need_url (bool): True/False,</span>
+<span class="sd">                         Returns URL to launch kvm, if True</span>
 
 <span class="sd">    Example:</span>
-<span class="sd">        sp is LsServer object \n</span>
+<span class="sd">        # sp is service profile object \n</span>
 <span class="sd">        ucs_kvm_launch(handle, service_profile=sp)\n</span>
 <span class="sd">        ucs_kvm_launch(handle, service_profile=sp, frame_title=&quot;using sp&quot;)\n</span>
 <span class="sd">        ucs_kvm_launch(handle, service_profile=sp, need_url=True)\n</span>
 
-<span class="sd">        blade1 is ComputeBlade object\n</span>
+<span class="sd">        # blade1 is ComputeBlade object\n</span>
 <span class="sd">        ucs_kvm_launch(handle, blade=blade1)\n</span>
 
-<span class="sd">        rack1 is ComputeRackUnit object\n</span>
+<span class="sd">        # rack1 is ComputeRackUnit object\n</span>
 <span class="sd">        ucs_kvm_launch(handle, rack_unit=rack1)\n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -211,23 +121,23 @@
 
     <span class="k">if</span> <span class="p">(</span><span class="n">blade</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">rack_unit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> \
         <span class="p">(</span><span class="n">service_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">rack_unit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> \
-        <span class="p">(</span><span class="n">blade</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">service_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">):</span>
+            <span class="p">(</span><span class="n">blade</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">service_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">):</span>
         <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
-            <span class="s">&quot;Provide only one parameter from blade, &quot;</span>
-            <span class="s">&quot;rack_unit and service profile.&quot;</span><span class="p">)</span>
+            <span class="s2">&quot;Provide only one parameter from blade, &quot;</span>
+            <span class="s2">&quot;rack_unit and service profile.&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">service_profile</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">blade</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">rack_unit</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
-            <span class="s">&quot;Provide at least one parameter from blade, rack_unit and &quot;</span>
-            <span class="s">&quot;service profile.&quot;</span><span class="p">)</span>
+            <span class="s2">&quot;Provide at least one parameter from blade, rack_unit and &quot;</span>
+            <span class="s2">&quot;service profile.&quot;</span><span class="p">)</span>
 
-    <span class="n">min_version</span> <span class="o">=</span> <span class="n">UcsVersion</span><span class="p">(</span><span class="s">&#39;1.4(1a)&#39;</span><span class="p">)</span>
+    <span class="n">min_version</span> <span class="o">=</span> <span class="n">UcsVersion</span><span class="p">(</span><span class="s1">&#39;1.4(1a)&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">handle</span><span class="o">.</span><span class="n">version</span> <span class="o">&lt;</span> <span class="n">min_version</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
-            <span class="s">&quot;start_kvm_session not supported for Ucs version older than </span><span class="si">%s</span><span class="s">. &quot;</span>
-            <span class="s">&quot;You are connected to Ucs Version </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">min_version</span><span class="p">,</span>
+            <span class="s2">&quot;start_kvm_session not supported for Ucs version older than </span><span class="si">%s</span><span class="s2">. &quot;</span>
+            <span class="s2">&quot;You are connected to Ucs Version </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">min_version</span><span class="p">,</span>
                                                      <span class="n">handle</span><span class="o">.</span><span class="n">version</span><span class="p">))</span>
 
-    <span class="c"># lock = Lock()</span>
+    <span class="c1"># lock = Lock()</span>
     <span class="n">sp_bool</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">nvc</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">dn</span> <span class="o">=</span> <span class="bp">None</span>
@@ -243,7 +153,7 @@
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">DN</span><span class="p">]</span> <span class="o">=</span> <span class="n">pn_dn</span>
 
         <span class="k">if</span> <span class="n">frame_title</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">frame_title</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="n">pn_dn</span> <span class="o">+</span> <span class="s">&#39; KVM Console&#39;</span>
+            <span class="n">frame_title</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="n">pn_dn</span> <span class="o">+</span> <span class="s1">&#39; KVM Console&#39;</span>
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">FRAME_TITLE</span><span class="p">]</span> <span class="o">=</span> <span class="n">frame_title</span>
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">KVM_PN_DN</span><span class="p">]</span> <span class="o">=</span> <span class="n">pn_dn</span>
 
@@ -254,7 +164,7 @@
                             <span class="n">in_recursive</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">,</span>
                             <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">)</span>
 
-        <span class="n">response</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">mgmt_if</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">mgmt_if</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">MgmtIfConsts</span><span class="o">.</span><span class="n">SUBJECT_BLADE</span> <span class="ow">and</span> \
@@ -263,9 +173,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
-        <span class="c"># If the blade does not have an IP,</span>
-        <span class="c"># check if a service profile is associated</span>
-        <span class="k">if</span> <span class="n">ip_address</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s">&#39;0.0.0.0&#39;</span><span class="p">:</span>
+        <span class="c1"># If the blade does not have an IP,</span>
+        <span class="c1"># check if a service profile is associated</span>
+        <span class="k">if</span> <span class="n">ip_address</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s1">&#39;0.0.0.0&#39;</span><span class="p">:</span>
             <span class="n">mo</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="n">dn</span><span class="o">=</span><span class="n">pn_dn</span><span class="p">)</span>
             <span class="n">dn</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">assigned_to_dn</span>
             <span class="k">if</span> <span class="n">dn</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
@@ -275,41 +185,44 @@
         <span class="k">if</span> <span class="n">dn</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
             <span class="n">dn</span> <span class="o">=</span> <span class="n">service_profile</span><span class="o">.</span><span class="n">dn</span>
             <span class="k">if</span> <span class="n">frame_title</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-                <span class="n">frame_title</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="n">dn</span> <span class="o">+</span> <span class="s">&#39; KVM Console&#39;</span>
+                <span class="n">frame_title</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="n">dn</span> <span class="o">+</span> <span class="s1">&#39; KVM Console&#39;</span>
             <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">FRAME_TITLE</span><span class="p">]</span> <span class="o">=</span> <span class="n">frame_title</span>
+            <span class="n">sp_mo</span> <span class="o">=</span> <span class="n">service_profile</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sp_mo</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="n">dn</span><span class="p">)</span>
 
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">KVM_DN</span><span class="p">]</span> <span class="o">=</span> <span class="n">dn</span>
 
-        <span class="n">sp_mo</span> <span class="o">=</span> <span class="n">service_profile</span>
+        <span class="c1"># sp_mo = service_profile</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">sp_mo</span><span class="o">.</span><span class="n">pn_dn</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
-                <span class="s">&#39;Service Profile is not associated with blade or rack_unit.&#39;</span><span class="p">)</span>
+                <span class="s1">&#39;Service Profile is not associated with blade or rack_unit.&#39;</span><span class="p">)</span>
 
         <span class="n">pn_dn</span> <span class="o">=</span> <span class="n">sp_mo</span><span class="o">.</span><span class="n">pn_dn</span>
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">DN</span><span class="p">]</span> <span class="o">=</span> <span class="n">pn_dn</span>
 
-        <span class="n">mo_list</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_children</span><span class="p">(</span><span class="n">in_dn</span><span class="o">=</span><span class="n">dn</span><span class="p">,</span> <span class="n">class_id</span><span class="o">=</span><span class="s">&#39;vnicIpV4Addr&#39;</span><span class="p">)</span>
-        <span class="c"># TODO:replace class_id with proper constantafter generating mos.py</span>
-        <span class="c"># or Constant.py</span>
+        <span class="n">mo_list</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_children</span><span class="p">(</span><span class="n">in_dn</span><span class="o">=</span><span class="n">dn</span><span class="p">,</span> <span class="n">class_id</span><span class="o">=</span><span class="s1">&#39;vnicIpV4Addr&#39;</span><span class="p">)</span>
+        <span class="c1"># TODO:replace class_id with proper constantafter generating mos.py</span>
+        <span class="c1"># or Constant.py</span>
 
         <span class="k">for</span> <span class="n">mo</span> <span class="ow">in</span> <span class="n">mo_list</span><span class="p">:</span>
-            <span class="c"># gmo = _GenericMo(mo=mo, option=WriteXmlOption.ALL)</span>
-            <span class="c"># if &#39;Addr&#39; not in gmo.properties:</span>
-            <span class="c">#     continue</span>
-            <span class="c"># ip_address = gmo.GetAttribute(&#39;Addr&#39;)</span>
-            <span class="c"># if ip_address is not None:</span>
-            <span class="c">#     break</span>
-            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&quot;addr&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&quot;Addr&quot;</span><span class="p">):</span>
-                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&quot;addr&quot;</span><span class="p">):</span>
-                    <span class="n">ip_address</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&quot;addr&quot;</span><span class="p">)</span>
-                <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&quot;Addr&quot;</span><span class="p">):</span>
-                    <span class="n">ip_address</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&quot;Addr&quot;</span><span class="p">)</span>
+            <span class="c1"># gmo = _GenericMo(mo=mo, option=WriteXmlOption.ALL)</span>
+            <span class="c1"># if &#39;Addr&#39; not in gmo.properties:</span>
+            <span class="c1">#     continue</span>
+            <span class="c1"># ip_address = gmo.GetAttribute(&#39;Addr&#39;)</span>
+            <span class="c1"># if ip_address is not None:</span>
+            <span class="c1">#     break</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s2">&quot;addr&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s2">&quot;Addr&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s2">&quot;addr&quot;</span><span class="p">):</span>
+                    <span class="n">ip_address</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s2">&quot;addr&quot;</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s2">&quot;Addr&quot;</span><span class="p">):</span>
+                    <span class="n">ip_address</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s2">&quot;Addr&quot;</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">ip_address</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                     <span class="k">break</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">ip_address</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s">&#39;0.0.0.0&#39;</span><span class="p">)</span> <span class="ow">and</span> \
-        <span class="n">service_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ip_address</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s1">&#39;0.0.0.0&#39;</span><span class="p">)</span> <span class="ow">and</span> \
+            <span class="n">service_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_scope</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="n">handle</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
                             <span class="n">dn</span><span class="o">=</span><span class="n">pn_dn</span><span class="p">,</span>
@@ -318,34 +231,33 @@
                             <span class="n">in_recursive</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">,</span>
                             <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">)</span>
 
-        <span class="n">response</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">mgmt_if</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">mgmt_if</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">MgmtIfConsts</span><span class="o">.</span><span class="n">SUBJECT_BLADE</span> <span class="ow">and</span> \
                    <span class="n">mgmt_if</span><span class="o">.</span><span class="n">admin_state</span> <span class="o">==</span> <span class="n">MgmtIfConsts</span><span class="o">.</span><span class="n">ADMIN_STATE_ENABLE</span><span class="p">:</span>
                     <span class="n">ip_address</span> <span class="o">=</span> <span class="n">mgmt_if</span><span class="o">.</span><span class="n">ext_ip</span>
 
-    <span class="k">if</span> <span class="n">ip_address</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s">&#39;0.0.0.0&#39;</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;No assigned IP address to use.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ip_address</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s1">&#39;0.0.0.0&#39;</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;No assigned IP address to use.&quot;</span><span class="p">)</span>
 
     <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">KVM_IP_ADDR</span><span class="p">]</span> <span class="o">=</span> <span class="n">ip_address</span>
     <span class="n">elem</span> <span class="o">=</span> <span class="n">aaa_get_n_compute_auth_token_by_dn</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="n">handle</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
                                               <span class="n">in_cookie</span><span class="o">=</span><span class="n">handle</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
                                               <span class="n">in_dn</span><span class="o">=</span><span class="n">pn_dn</span><span class="p">,</span>
                                               <span class="n">in_number_of</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">CENTRALE_PASSWORD</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_tokens</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">CENTRALE_PASSWORD</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_tokens</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">CENTRALE_USER</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_user</span>
-        <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">KVM_PASSWORD</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_tokens</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">KVM_PASSWORD</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_tokens</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">KVM_USER</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_user</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
-    <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">TEMP_UNPW</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;true&quot;</span>
+    <span class="n">nvc</span><span class="p">[</span><span class="n">_ParamKvm</span><span class="o">.</span><span class="n">TEMP_UNPW</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
     <span class="n">uri</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">uri</span>
-    <span class="n">uri</span> <span class="o">=</span> <span class="n">uri</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s">&quot;/nuova&quot;</span><span class="p">)</span>
-    <span class="n">kvm_url</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">/ucsm/kvm.jnlp?</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">nvc</span><span class="p">))</span>
+    <span class="n">kvm_url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">/ucsm/kvm.jnlp?</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">nvc</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">need_url</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">kvm_url</span>
@@ -354,66 +266,48 @@
         <span class="k">if</span> <span class="n">install_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
             <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="n">install_path</span><span class="p">,</span> <span class="n">kvm_url</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">UcsWarning</span><span class="p">(</span><span class="s">&quot;Java is not installed on System.&quot;</span><span class="p">)</span>
+            <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Java is not installed on System.&quot;</span><span class="p">)</span>
             <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">kvm_url</span><span class="p">)</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

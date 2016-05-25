@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ucsmsdk.ucscore &mdash; ucsmsdk 0.9.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for ucsmsdk.ucscore</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License prop</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains the UcsSdk Core classes.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucscoreutils</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">xml.etree.cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
+    <span class="kn">from</span> <span class="nn">xml.etree.cElementTree</span> <span class="kn">import</span> <span class="n">Element</span><span class="p">,</span> <span class="n">SubElement</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">cElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
+    <span class="kn">from</span> <span class="nn">cElementTree</span> <span class="kn">import</span> <span class="n">Element</span><span class="p">,</span> <span class="n">SubElement</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="UcsBase"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase">[docs]</a><span class="k">class</span> <span class="nc">UcsBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class acts as the base class for ManagedObject, ExternalMethod</span>
+<span class="sd">    and AbstractFilter and BaseObject classes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_class_id</span> <span class="o">=</span> <span class="n">class_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_child</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handle</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">child</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Getter Method of UcsBase Class&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_child</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dirty_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Getter Method of UcsBase Class&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span>
+
+<div class="viewcode-block" id="UcsBase.get_class_id"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.get_class_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_class_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_class_id</span></div>
+
+<div class="viewcode-block" id="UcsBase.get_handle"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.get_handle">[docs]</a>    <span class="k">def</span> <span class="nf">get_handle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle</span></div>
+
+<div class="viewcode-block" id="UcsBase.child_add"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.child_add">[docs]</a>    <span class="k">def</span> <span class="nf">child_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method adds the child managed object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="UcsBase.child_remove"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.child_remove">[docs]</a>    <span class="k">def</span> <span class="nf">child_remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method removes the child managed object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="UcsBase.child_count"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.child_count">[docs]</a>    <span class="k">def</span> <span class="nf">child_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method returns the child managed object count.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="UcsBase.child_to_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.child_to_xml">[docs]</a>    <span class="k">def</span> <span class="nf">child_to_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_doc</span><span class="p">,</span> <span class="n">option</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method writes the xml representation for the object.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="UcsBase.child_is_dirty"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.child_is_dirty">[docs]</a>    <span class="k">def</span> <span class="nf">child_is_dirty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method checks whether the child object is dirty or not.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">is_dirty</span><span class="p">():</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span></div>
+
+<div class="viewcode-block" id="UcsBase.child_mark_clean"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.child_mark_clean">[docs]</a>    <span class="k">def</span> <span class="nf">child_mark_clean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method Method cleans the dirty mask of child managed object.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">mark_clean</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="UcsBase.mark_clean"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.mark_clean">[docs]</a>    <span class="k">def</span> <span class="nf">mark_clean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method cleans the dirty mask of the managed object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+<div class="viewcode-block" id="UcsBase.is_dirty"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.is_dirty">[docs]</a>    <span class="k">def</span> <span class="nf">is_dirty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method checks whether the object is dirty or not.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">child_is_dirty</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="UcsBase.write_object"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.write_object">[docs]</a>    <span class="k">def</span> <span class="nf">write_object</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method writes the string representation of the object.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">child</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">write_object</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="UcsBase.clone"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Method returns the clone of the Managed Object. &quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">copy</span>
+
+        <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__deepcopy__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">memo</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Overridden method to support deepcopy of Managed Object. &quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">copy</span>
+
+        <span class="n">clone</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">clone_child</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">clone</span><span class="o">.</span><span class="n">_child</span><span class="p">:</span>
+            <span class="n">clone_child</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">child</span><span class="p">))</span>
+        <span class="n">clone</span><span class="o">.</span><span class="n">_child</span> <span class="o">=</span> <span class="n">clone_child</span>
+        <span class="k">return</span> <span class="n">clone</span>
+
+<div class="viewcode-block" id="UcsBase.attr_set"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.attr_set">[docs]</a>    <span class="k">def</span> <span class="nf">attr_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method sets attribute value of the Method object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
+
+<div class="viewcode-block" id="UcsBase.attr_get"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.attr_get">[docs]</a>    <span class="k">def</span> <span class="nf">attr_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method gets attribute value of the Method object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="UcsBase.elem_create"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.UcsBase.elem_create">[docs]</a>    <span class="k">def</span> <span class="nf">elem_create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_tag</span><span class="p">,</span> <span class="n">xml_doc</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">override_tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">xml_doc</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">xml_obj</span> <span class="o">=</span> <span class="n">Element</span><span class="p">(</span><span class="n">class_tag</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">override_tag</span><span class="p">:</span>
+                <span class="n">xml_obj</span> <span class="o">=</span> <span class="n">SubElement</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">,</span> <span class="n">override_tag</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xml_obj</span> <span class="o">=</span> <span class="n">SubElement</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">,</span> <span class="n">class_tag</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">xml_obj</span></div></div>
+
+
+<div class="viewcode-block" id="AbstractFilter"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.AbstractFilter">[docs]</a><span class="k">class</span> <span class="nc">AbstractFilter</span><span class="p">(</span><span class="n">UcsBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;class AbstractFilter.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">,</span> <span class="n">tag_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tag_name</span> <span class="o">=</span> <span class="n">tag_name</span>
+        <span class="n">UcsBase</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)</span>
+
+<div class="viewcode-block" id="AbstractFilter.to_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.AbstractFilter.to_xml">[docs]</a>    <span class="k">def</span> <span class="nf">to_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_doc</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">option</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">elem_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method writes the xml representation of the Method object.&quot;&quot;&quot;</span>
+        <span class="n">xml_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">elem_create</span><span class="p">(</span><span class="n">class_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_tag_name</span><span class="p">,</span>
+                                   <span class="n">xml_doc</span><span class="o">=</span><span class="n">xml_doc</span><span class="p">,</span>
+                                   <span class="n">override_tag</span><span class="o">=</span><span class="n">elem_name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;class_&quot;</span><span class="p">:</span>
+                <span class="n">xml_obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">attr_get</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xml_obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">attr_get</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_to_xml</span><span class="p">(</span><span class="n">xml_obj</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">xml_obj</span></div></div>
+
+
+<div class="viewcode-block" id="BaseObject"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.BaseObject">[docs]</a><span class="k">class</span> <span class="nc">BaseObject</span><span class="p">(</span><span class="n">UcsBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;class BaseObject.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">,</span> <span class="n">tag_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tag_name</span> <span class="o">=</span> <span class="n">tag_name</span>
+        <span class="n">UcsBase</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BaseObject.to_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.BaseObject.to_xml">[docs]</a>    <span class="k">def</span> <span class="nf">to_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_doc</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">option</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">elem_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method writes the xml representation of the Method object.&quot;&quot;&quot;</span>
+        <span class="n">xml_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">elem_create</span><span class="p">(</span><span class="n">class_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_tag_name</span><span class="p">,</span>
+                                   <span class="n">xml_doc</span><span class="o">=</span><span class="n">xml_doc</span><span class="p">,</span>
+                                   <span class="n">override_tag</span><span class="o">=</span><span class="n">elem_name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xml_obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">attr_get</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_to_xml</span><span class="p">(</span><span class="n">xml_obj</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">xml_obj</span></div>
+
+<div class="viewcode-block" id="BaseObject.from_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscore.BaseObject.from_xml">[docs]</a>    <span class="k">def</span> <span class="nf">from_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">,</span> <span class="n">handle</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates the object from the xml representation</span>
+<span class="sd">        of the Method object.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handle</span> <span class="o">=</span> <span class="n">handle</span>
+        <span class="k">if</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_value</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">attr_set</span><span class="p">(</span><span class="n">ucsgenutils</span><span class="o">.</span><span class="n">convert_to_python_var_name</span><span class="p">(</span>
+                    <span class="n">attr_name</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">attr_value</span><span class="p">))</span>
+
+        <span class="n">child_elems</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">getchildren</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">child_elems</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">child_elem</span> <span class="ow">in</span> <span class="n">child_elems</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">ET</span><span class="o">.</span><span class="n">iselement</span><span class="p">(</span><span class="n">child_elem</span><span class="p">):</span>
+                    <span class="k">continue</span>
+
+                <span class="n">cln</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">child_elem</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">get_ucs_obj</span><span class="p">(</span><span class="n">cln</span><span class="p">,</span> <span class="n">child_elem</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_child</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">from_xml</span><span class="p">(</span><span class="n">child_elem</span><span class="p">,</span> <span class="n">handle</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

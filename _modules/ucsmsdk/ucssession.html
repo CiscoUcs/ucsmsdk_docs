@@ -1,160 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.ucssession &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Module code" href="../index.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.ucssession &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.ucssession</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.ucssession</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License at</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Timer</span>
 
-<span class="kn">from</span> <span class="nn">ucsexception</span> <span class="kn">import</span> <span class="n">UcsException</span>
-<span class="kn">from</span> <span class="nn">ucsdriver</span> <span class="kn">import</span> <span class="n">UcsDriver</span>
+<span class="kn">from</span> <span class="nn">.ucsexception</span> <span class="kn">import</span> <span class="n">UcsException</span><span class="p">,</span> <span class="n">UcsLoginError</span>
+<span class="kn">from</span> <span class="nn">.ucsdriver</span> <span class="kn">import</span> <span class="n">UcsDriver</span>
 
-<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;ucs&#39;</span><span class="p">)</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="UcsSession"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession">[docs]</a><span class="k">class</span> <span class="nc">UcsSession</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -172,15 +79,16 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__create_uri</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">secure</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">__ucs</span> <span class="o">=</span> <span class="n">ip</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__session_id</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__version</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_period</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__domains</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__channel</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__evt_channel</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_update_time</span> <span class="o">=</span> <span class="bp">None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_timer</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__force</span> <span class="o">=</span> <span class="bp">False</span>
@@ -190,52 +98,64 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span> <span class="o">=</span> <span class="n">UcsDriver</span><span class="p">(</span><span class="n">proxy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__proxy</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ucs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Getter method of UcsSession Class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">ip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ip</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">username</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__username</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">proxy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__proxy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">uri</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__uri</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ucs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ucs</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">cookie</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Getter method of UcsSession Class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cookie</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">session_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Getter method of UcsSession Class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__session_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Getter method of UcsSession Class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__version</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Getter method of UcsSession Class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span>
+    <span class="k">def</span> <span class="nf">refresh_period</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_period</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">uri</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Getter method of UcsSession Class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">priv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span>
 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__uri</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__domains</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">channel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__channel</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">evt_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__evt_channel</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">last_update_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__last_update_time</span>
 
     <span class="k">def</span> <span class="nf">__create_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">secure</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -276,10 +196,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">__secure</span> <span class="o">=</span> <span class="bp">True</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__port</span> <span class="o">=</span> <span class="mi">443</span>
 
-        <span class="n">https_or_http</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;http&quot;</span><span class="p">,</span> <span class="s">&quot;https&quot;</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">__secure</span><span class="p">]</span>
+        <span class="n">https_or_http</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;https&quot;</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">__secure</span><span class="p">]</span>
         <span class="n">host</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ip</span>
         <span class="n">port</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__port</span><span class="p">)</span>
-        <span class="n">uri</span> <span class="o">=</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">://</span><span class="si">%s%s%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">https_or_http</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+        <span class="n">uri</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">://</span><span class="si">%s%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">https_or_http</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">uri</span>
 
     <span class="k">def</span> <span class="nf">__clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -287,15 +207,15 @@
 <span class="sd">        Internal method to clear the session variables</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__session_id</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__version</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_period</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__domains</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__channel</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__evt_channel</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__session_id</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__version</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__last_update_time</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">())</span>
 
     <span class="k">def</span> <span class="nf">__update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
@@ -303,19 +223,20 @@
 <span class="sd">        Internal method to update the session variables</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span>
+        <span class="kn">from</span> <span class="nn">.ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_cookie</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__session_id</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_session_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__version</span> <span class="o">=</span> <span class="n">UcsVersion</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">out_version</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_period</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_refresh_period</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_priv</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__domains</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_domains</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__channel</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_channel</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__evt_channel</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_evt_channel</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_session_id</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_session_id</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__version</span> <span class="o">=</span> <span class="n">UcsVersion</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">out_version</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_update_time</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">())</span>
 
-<div class="viewcode-block" id="UcsSession.post"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.post">[docs]</a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UcsSession.post"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.post">[docs]</a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        sends the request and receives the response from ucsm server</span>
 
@@ -330,10 +251,10 @@
 <span class="sd">            response = post(&quot;http://192.168.1.1:80&quot;, data=xml_str)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">response</span>
-</div>
-<div class="viewcode-block" id="UcsSession.post_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.post_xml">[docs]</a>    <span class="k">def</span> <span class="nf">post_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_str</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">read</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span></div>
+
+<div class="viewcode-block" id="UcsSession.post_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.post_xml">[docs]</a>    <span class="k">def</span> <span class="nf">post_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_str</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        sends the xml request and receives the response from ucsm server</span>
 
@@ -347,13 +268,13 @@
 <span class="sd">            response = post_xml(&#39;&lt;aaaLogin inName=&quot;user&quot; inPassword=&quot;pass&quot;&gt;&#39;)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">ucsm_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__uri</span> <span class="o">+</span> <span class="s">&quot;/nuova&quot;</span>
-        <span class="n">response_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">ucsm_uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">xml_str</span><span class="p">)</span>
+        <span class="n">ucsm_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__uri</span> <span class="o">+</span> <span class="s2">&quot;/nuova&quot;</span>
+        <span class="n">response_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">ucsm_uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">xml_str</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">read</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">redirect_uri</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">redirect_uri</span>
 
-        <span class="k">return</span> <span class="n">response_str</span>
-</div>
+        <span class="k">return</span> <span class="n">response_str</span></div>
+
 <div class="viewcode-block" id="UcsSession.post_elem"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.post_elem">[docs]</a>    <span class="k">def</span> <span class="nf">post_elem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        sends the request and receives the response from ucsm server using xml</span>
@@ -369,32 +290,32 @@
 <span class="sd">            response = post_elem(elem=xml_element)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">import</span> <span class="nn">ucsxmlcodec</span> <span class="kn">as</span> <span class="nn">xc</span>
+        <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsxmlcodec</span> <span class="k">as</span> <span class="n">xc</span>
 
         <span class="n">dump_xml</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dump_xml</span>
         <span class="k">if</span> <span class="n">dump_xml</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">elem</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s">&quot;aaaLogin&quot;</span><span class="p">:</span>
-                <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&#39;inPassword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;*********&quot;</span>
+            <span class="k">if</span> <span class="n">elem</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s2">&quot;aaaLogin&quot;</span><span class="p">:</span>
+                <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;inPassword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;*********&quot;</span>
                 <span class="n">xml_str</span> <span class="o">=</span> <span class="n">xc</span><span class="o">.</span><span class="n">to_xml_str</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
-                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> ====&gt; </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">xml_str</span><span class="p">))</span>
-                <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&#39;inPassword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__password</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> ====&gt; </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">xml_str</span><span class="p">))</span>
+                <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;inPassword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__password</span>
                 <span class="n">xml_str</span> <span class="o">=</span> <span class="n">xc</span><span class="o">.</span><span class="n">to_xml_str</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">xml_str</span> <span class="o">=</span> <span class="n">xc</span><span class="o">.</span><span class="n">to_xml_str</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
-                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> ====&gt; </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">xml_str</span><span class="p">))</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> ====&gt; </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">xml_str</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">xml_str</span> <span class="o">=</span> <span class="n">xc</span><span class="o">.</span><span class="n">to_xml_str</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
 
         <span class="n">response_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_xml</span><span class="p">(</span><span class="n">xml_str</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">dump_xml</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> &lt;==== </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">response_str</span><span class="p">))</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> &lt;==== </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">response_str</span><span class="p">))</span>
 
         <span class="k">if</span> <span class="n">response_str</span><span class="p">:</span>
-            <span class="n">response</span> <span class="o">=</span> <span class="n">xc</span><span class="o">.</span><span class="n">from_xml_str</span><span class="p">(</span><span class="n">response_str</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">xc</span><span class="o">.</span><span class="n">from_xml_str</span><span class="p">(</span><span class="n">response_str</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">response</span>
 
-        <span class="k">return</span> <span class="bp">None</span>
-</div>
+        <span class="k">return</span> <span class="bp">None</span></div>
+
 <div class="viewcode-block" id="UcsSession.file_download"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.file_download">[docs]</a>    <span class="k">def</span> <span class="nf">file_download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_suffix</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Downloads the file from ucsm server</span>
@@ -412,11 +333,11 @@
 <span class="sd">            file_download(url_suffix=&#39;backupfile/config_backup.xml&#39;, dest_dir=&#39;/home/user/backup&#39;, file_name=&#39;my_config_backup.xml&#39;)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsgenutils</span> <span class="kn">import</span> <span class="n">download_file</span>
+        <span class="kn">from</span> <span class="nn">.ucsgenutils</span> <span class="kn">import</span> <span class="n">download_file</span>
 
-        <span class="n">file_url</span> <span class="o">=</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">url_suffix</span><span class="p">)</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">url_suffix</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&#39;Cookie&#39;</span><span class="p">,</span> <span class="s">&#39;ucsm-cookie=</span><span class="si">%s</span><span class="s">&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s1">&#39;Cookie&#39;</span><span class="p">,</span> <span class="s1">&#39;ucsm-cookie=</span><span class="si">%s</span><span class="s1">&#39;</span>
                                  <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">)</span>
 
         <span class="n">download_file</span><span class="p">(</span><span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="p">,</span>
@@ -424,8 +345,8 @@
                       <span class="n">file_dir</span><span class="o">=</span><span class="n">file_dir</span><span class="p">,</span>
                       <span class="n">file_name</span><span class="o">=</span><span class="n">file_name</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">remove_header</span><span class="p">(</span><span class="s">&#39;Cookie&#39;</span><span class="p">)</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">remove_header</span><span class="p">(</span><span class="s1">&#39;Cookie&#39;</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="UcsSession.file_upload"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucssession.UcsSession.file_upload">[docs]</a>    <span class="k">def</span> <span class="nf">file_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_suffix</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Uploads the file on UCSM server.</span>
@@ -446,11 +367,11 @@
 <span class="sd">            file_upload(url_suffix=uri_suffix, source_dir=source_dir, file_name=file_name)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsgenutils</span> <span class="kn">import</span> <span class="n">upload_file</span>
+        <span class="kn">from</span> <span class="nn">.ucsgenutils</span> <span class="kn">import</span> <span class="n">upload_file</span>
 
-        <span class="n">file_url</span> <span class="o">=</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">url_suffix</span><span class="p">)</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__uri</span><span class="p">,</span> <span class="n">url_suffix</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&#39;Cookie&#39;</span><span class="p">,</span> <span class="s">&#39;ucsm-cookie=</span><span class="si">%s</span><span class="s">&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s1">&#39;Cookie&#39;</span><span class="p">,</span> <span class="s1">&#39;ucsm-cookie=</span><span class="si">%s</span><span class="s1">&#39;</span>
                                  <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">)</span>
 
         <span class="n">upload_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="p">,</span>
@@ -458,8 +379,8 @@
                     <span class="n">file_dir</span><span class="o">=</span><span class="n">file_dir</span><span class="p">,</span>
                     <span class="n">file_name</span><span class="o">=</span><span class="n">file_name</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">remove_header</span><span class="p">(</span><span class="s">&#39;Cookie&#39;</span><span class="p">)</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__driver</span><span class="o">.</span><span class="n">remove_header</span><span class="p">(</span><span class="s1">&#39;Cookie&#39;</span><span class="p">)</span></div>
+
     <span class="k">def</span> <span class="nf">__start_refresh_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Internal method to support auto-refresh functionality.</span>
@@ -470,7 +391,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">interval</span> <span class="o">=</span> <span class="mi">60</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_timer</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="n">interval</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">)</span>
-        <span class="c"># TODO:handle exit and logout active connections. revert from daemon</span>
+        <span class="c1"># TODO:handle exit and logout active connections. revert from daemon</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_timer</span><span class="o">.</span><span class="n">setDaemon</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
@@ -489,13 +410,13 @@
 <span class="sd">        (to prevent session expiration).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_refresh</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_refresh</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">__stop_refresh_timer</span><span class="p">()</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">aaa_refresh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">,</span>
-                              <span class="bp">self</span><span class="o">.</span><span class="n">__username</span><span class="p">,</span>
-                              <span class="bp">self</span><span class="o">.</span><span class="n">__password</span><span class="p">)</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">__username</span><span class="p">,</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">__password</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">=</span> <span class="bp">None</span>
@@ -503,14 +424,38 @@
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_login</span><span class="p">()</span>
             <span class="k">return</span> <span class="bp">False</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__domains</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_domains</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_priv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_period</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">out_refresh_period</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_cookie</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_period</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">out_refresh_period</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__priv</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_priv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__domains</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_domains</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_update_time</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">())</span>
 
-        <span class="c"># re-enable the timer</span>
+        <span class="c1"># re-enable the timer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__start_refresh_timer</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">__validate_ucsm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Internal method to validate if connecting server is UCS.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">is_ucs</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_class</span>
+
+        <span class="n">nw_elem</span> <span class="o">=</span> <span class="n">config_resolve_class</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">,</span>
+                                       <span class="n">in_filter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                       <span class="n">class_id</span><span class="o">=</span><span class="s2">&quot;networkElement&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">nw_elem_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">nw_elem</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">nw_elem_response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_logout</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">is_ucs</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_logout</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">is_ucs</span>
 
     <span class="k">def</span> <span class="nf">__validate_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -518,18 +463,17 @@
 <span class="sd">        existing connection.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">mometa.top.TopSystem</span> <span class="kn">import</span> <span class="n">TopSystem</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dn</span>
+        <span class="kn">from</span> <span class="nn">.mometa.top.TopSystem</span> <span class="kn">import</span> <span class="n">TopSystem</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dn</span>
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">!=</span> <span class="s">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__force</span><span class="p">:</span>
                 <span class="n">top_system</span> <span class="o">=</span> <span class="n">TopSystem</span><span class="p">()</span>
                 <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_dn</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">,</span>
-                                            <span class="n">dn</span><span class="o">=</span><span class="n">top_system</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+                                         <span class="n">dn</span><span class="o">=</span><span class="n">top_system</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
                 <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span>
-                                       <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="bp">False</span>
                 <span class="k">return</span> <span class="bp">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_logout</span><span class="p">()</span>
@@ -549,41 +493,36 @@
 <span class="sd">            True on successful connect</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">mometa.top.TopSystem</span> <span class="kn">import</span> <span class="n">TopSystem</span>
-        <span class="kn">from</span> <span class="nn">mometa.firmware.FirmwareRunning</span> <span class="kn">import</span> <span class="n">FirmwareRunning</span><span class="p">,</span> \
+        <span class="kn">from</span> <span class="nn">.mometa.top.TopSystem</span> <span class="kn">import</span> <span class="n">TopSystem</span>
+        <span class="kn">from</span> <span class="nn">.mometa.firmware.FirmwareRunning</span> <span class="kn">import</span> <span class="n">FirmwareRunning</span><span class="p">,</span> \
             <span class="n">FirmwareRunningConsts</span>
-        <span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_login</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_class</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dn</span>
+        <span class="kn">from</span> <span class="nn">.ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_login</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dn</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__force</span> <span class="o">=</span> <span class="n">force</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__validate_connection</span><span class="p">():</span>
             <span class="k">return</span> <span class="bp">True</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">aaa_login</span><span class="p">(</span><span class="n">in_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__username</span><span class="p">,</span>
-                            <span class="n">in_password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__password</span><span class="p">)</span>
+                         <span class="n">in_password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__password</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__clear</span><span class="p">()</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__update</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-        <span class="c"># Verify not to connect to IMC</span>
-        <span class="n">nw_elem</span> <span class="o">=</span> <span class="n">config_resolve_class</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">,</span>
-                                          <span class="n">in_filter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-                                          <span class="n">class_id</span><span class="o">=</span><span class="s">&quot;networkElement&quot;</span><span class="p">)</span>
-        <span class="n">nw_elem_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">nw_elem</span><span class="p">)</span>
-        <span class="c"># To Do - returns error tag</span>
-        <span class="k">if</span> <span class="n">nw_elem_response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__clear</span><span class="p">()</span>
-            <span class="k">return</span> <span class="bp">False</span>
+        <span class="c1"># Verify not to connect to IMC</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__validate_ucsm</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">UcsLoginError</span><span class="p">(</span><span class="s2">&quot;Not a supported server.&quot;</span><span class="p">)</span>
 
         <span class="n">top_system</span> <span class="o">=</span> <span class="n">TopSystem</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">out_version</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">response</span><span class="o">.</span><span class="n">out_version</span> <span class="o">==</span> <span class="s">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">out_version</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">response</span><span class="o">.</span><span class="n">out_version</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
             <span class="n">firmware</span> <span class="o">=</span> <span class="n">FirmwareRunning</span><span class="p">(</span><span class="n">top_system</span><span class="p">,</span>
                                        <span class="n">FirmwareRunningConsts</span><span class="o">.</span><span class="n">DEPLOYMENT_SYSTEM</span><span class="p">)</span>
             <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_dn</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">,</span>
-                                        <span class="n">dn</span><span class="o">=</span><span class="n">firmware</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+                                     <span class="n">dn</span><span class="o">=</span><span class="n">firmware</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span>
@@ -617,7 +556,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_logout</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_logout</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">True</span>
@@ -626,11 +565,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">__refresh_timer</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">:</span>
-            <span class="c"># TO DO NewParam inDelaySec introduced in 224b</span>
+            <span class="c1"># TO DO NewParam inDelaySec introduced in 224b</span>
             <span class="n">elem</span> <span class="o">=</span> <span class="n">aaa_logout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__cookie</span><span class="p">,</span> <span class="mi">301</span><span class="p">)</span>
             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
 
-            <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">==</span> <span class="s">&quot;555&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">==</span> <span class="s2">&quot;555&quot;</span><span class="p">:</span>
                 <span class="k">return</span> <span class="bp">True</span>
 
             <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
@@ -654,62 +593,44 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__dump_xml</span> <span class="o">=</span> <span class="bp">False</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

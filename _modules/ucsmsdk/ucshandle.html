@@ -1,167 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.ucshandle &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Module code" href="../index.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.ucshandle &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.ucshandle</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.ucshandle</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License at</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 
 <span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="kn">import</span> <span class="nn">ucsgenutils</span>
-<span class="kn">import</span> <span class="nn">ucscoreutils</span>
-<span class="kn">from</span> <span class="nn">ucsexception</span> <span class="kn">import</span> <span class="n">UcsException</span>
-<span class="kn">from</span> <span class="nn">ucsconstants</span> <span class="kn">import</span> <span class="n">NamingId</span>
-<span class="kn">from</span> <span class="nn">ucssession</span> <span class="kn">import</span> <span class="n">UcsSession</span>
-<span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_classes</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucscoreutils</span>
+<span class="kn">from</span> <span class="nn">.ucsexception</span> <span class="kn">import</span> <span class="n">UcsException</span>
+<span class="kn">from</span> <span class="nn">.ucsconstants</span> <span class="kn">import</span> <span class="n">NamingId</span>
+<span class="kn">from</span> <span class="nn">.ucssession</span> <span class="kn">import</span> <span class="n">UcsSession</span>
+<span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_classes</span>
 
-<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;ucs&#39;</span><span class="p">)</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="UcsHandle"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle">[docs]</a><span class="k">class</span> <span class="nc">UcsHandle</span><span class="p">(</span><span class="n">UcsSession</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Handle class is the user interface point for any Ucs related communication.</span>
+<span class="sd">    UcsHandle class is the user interface point for any Ucs related communication.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        ip (str): The IP or Hostname of the UCS Server</span>
@@ -188,21 +95,22 @@
 
 <div class="viewcode-block" id="UcsHandle.set_dump_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.set_dump_xml">[docs]</a>    <span class="k">def</span> <span class="nf">set_dump_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Enables the xml request and response to be added to logs.</span>
+<span class="sd">        Enables the logging of xml requests and responses.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_dump_xml</span><span class="p">()</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_dump_xml</span><span class="p">()</span></div>
+
 <div class="viewcode-block" id="UcsHandle.unset_dump_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.unset_dump_xml">[docs]</a>    <span class="k">def</span> <span class="nf">unset_dump_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Disables the xml request and response to be added to logs.</span>
+<span class="sd">        Disables the logging of xml requests and responses.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_unset_dump_xml</span><span class="p">()</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_unset_dump_xml</span><span class="p">()</span></div>
+
 <div class="viewcode-block" id="UcsHandle.login"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.login">[docs]</a>    <span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_refresh</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Connects to ucsm connected using respective UcsHandle.</span>
+<span class="sd">        Initiates a connection to the server referenced by the UcsHandle.</span>
+<span class="sd">        A cookie is populated in the UcsHandle, if the login is successful.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            auto_refresh (bool): if set to True, it refresh the cookie</span>
@@ -222,11 +130,11 @@
 <span class="sd">            where handle is UcsHandle()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_login</span><span class="p">(</span><span class="n">auto_refresh</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
-</div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_login</span><span class="p">(</span><span class="n">auto_refresh</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="UcsHandle.logout"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.logout">[docs]</a>    <span class="k">def</span> <span class="nf">logout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Disconnects from ucsm connected using respective UcsHandle.</span>
+<span class="sd">        Disconnects from the server referenced by the UcsHandle.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            None</span>
@@ -240,11 +148,14 @@
 <span class="sd">            where handle is UcsHandle()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logout</span><span class="p">()</span>
-</div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logout</span><span class="p">()</span></div>
+
 <div class="viewcode-block" id="UcsHandle.process_xml_elem"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.process_xml_elem">[docs]</a>    <span class="k">def</span> <span class="nf">process_xml_elem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Processes xml element returned by method factory methods.</span>
+<span class="sd">        process_xml_elem is a helper method which posts xml elements to the</span>
+<span class="sd">        server and returns parsed response. It&#39;s role is to operate on the</span>
+<span class="sd">        output of methods from ucsmethodfactory, which return xml element</span>
+<span class="sd">        node(s).</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            elem (xml element object)</span>
@@ -261,26 +172,26 @@
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s">&quot;out_config&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&quot;out_config&quot;</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">out_config</span><span class="o">.</span><span class="n">child</span>
-        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s">&quot;out_configs&quot;</span><span class="p">):</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&quot;out_configs&quot;</span><span class="p">):</span>
             <span class="n">mo_list</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="n">pair_flag</span> <span class="o">=</span> <span class="bp">False</span>
             <span class="k">for</span> <span class="n">ch_</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">pair_flag</span> <span class="ow">or</span> <span class="n">ch_</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="o">!=</span> <span class="s">&quot;Pair&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">pair_flag</span> <span class="ow">or</span> <span class="n">ch_</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Pair&quot;</span><span class="p">:</span>
                     <span class="n">mo_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch_</span><span class="p">)</span>
-                <span class="k">elif</span> <span class="n">ch_</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="o">==</span> <span class="s">&quot;Pair&quot;</span><span class="p">:</span>
+                <span class="k">elif</span> <span class="n">ch_</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Pair&quot;</span><span class="p">:</span>
                     <span class="n">mo_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ch_</span><span class="o">.</span><span class="n">child</span><span class="p">)</span>
                     <span class="n">pair_flag</span> <span class="o">=</span> <span class="bp">True</span>
             <span class="k">return</span> <span class="n">mo_list</span>
-        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s">&quot;out_dns&quot;</span><span class="p">):</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&quot;out_dns&quot;</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">out_dns</span><span class="o">.</span><span class="n">child</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">response</span>
-</div>
+            <span class="k">return</span> <span class="n">response</span></div>
+
 <div class="viewcode-block" id="UcsHandle.get_auth_token"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.get_auth_token">[docs]</a>    <span class="k">def</span> <span class="nf">get_auth_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            Get ucsm auto token.</span>
+<span class="sd">        Returns a token that is used for UCS authentication.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            None</span>
@@ -291,10 +202,9 @@
 <span class="sd">        Example:</span>
 <span class="sd">            handle.get_auth_token()</span>
 
-<span class="sd">            where handle is UcsHandle()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_get_n_compute_auth_token_by_dn</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">aaa_get_n_compute_auth_token_by_dn</span>
 
         <span class="n">auth_token</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="n">mo</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query_classid</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="n">NamingId</span><span class="o">.</span><span class="n">COMPUTE_BLADE</span><span class="p">)</span>
@@ -312,31 +222,32 @@
                 <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span>
                                    <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
-            <span class="c"># cat = self.AaaGetNComputeAuthTokenByDn(mo[0].Dn, 1, None)</span>
-            <span class="n">auth_token</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_tokens</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># cat = self.AaaGetNComputeAuthTokenByDn(mo[0].Dn, 1, None)</span>
+            <span class="n">auth_token</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_tokens</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 
-        <span class="k">return</span> <span class="n">auth_token</span>
-</div>
+        <span class="k">return</span> <span class="n">auth_token</span></div>
+
 <div class="viewcode-block" id="UcsHandle.query_dns"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.query_dns">[docs]</a>    <span class="k">def</span> <span class="nf">query_dns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">dns</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Find objects using a comma separated string of distinguished name.</span>
+<span class="sd">        Queries multiple obects from the server based of a comma separated list</span>
+<span class="sd">        of their distinguised names.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            dns (comma separated strings): distinguished names to be</span>
 <span class="sd">                queried for</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            Dictionary {dn: object}</span>
+<span class="sd">            Dictionary {dn1: object, dn2: object2}</span>
 
 <span class="sd">        Example:</span>
 <span class="sd">            obj = handle.lookup_by_dns(&quot;fabric/lan/net-100&quot;, &quot;fabric/lan/net-101&quot;)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsbasetype</span> <span class="kn">import</span> <span class="n">DnSet</span><span class="p">,</span> <span class="n">Dn</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
+        <span class="kn">from</span> <span class="nn">.ucsbasetype</span> <span class="kn">import</span> <span class="n">DnSet</span><span class="p">,</span> <span class="n">Dn</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">dns</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;Provide Comma Separated string of Dns&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Provide Comma Separated string of Dns&quot;</span><span class="p">)</span>
 
         <span class="n">dn_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">dn</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">dn</span> <span class="ow">in</span> <span class="n">dns</span><span class="p">]</span>
         <span class="n">dn_dict</span> <span class="o">=</span> <span class="p">{}</span>
@@ -350,7 +261,7 @@
             <span class="n">dn_set</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">dn_obj</span><span class="p">)</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_dns</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
-                                         <span class="n">in_dns</span><span class="o">=</span><span class="n">dn_set</span><span class="p">)</span>
+                                  <span class="n">in_dns</span><span class="o">=</span><span class="n">dn_set</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
@@ -358,28 +269,29 @@
         <span class="k">for</span> <span class="n">out_mo</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
             <span class="n">dn_dict</span><span class="p">[</span><span class="n">out_mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">out_mo</span>
 
-        <span class="k">return</span> <span class="n">dn_dict</span>
-</div>
+        <span class="k">return</span> <span class="n">dn_dict</span></div>
+
 <div class="viewcode-block" id="UcsHandle.query_classids"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.query_classids">[docs]</a>    <span class="k">def</span> <span class="nf">query_classids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">class_ids</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Find objects using a comma separated string of class ids.</span>
+<span class="sd">        Queries multiple obects from the server based of a comma separated list</span>
+<span class="sd">        of their class Ids.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            class_ids (comma separated strings): Class Ids to be queried for</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            Dictionary {class_id: [list of object]}</span>
+<span class="sd">        Dictionary {class_id1: [objects], class_id2: [objects]}</span>
 
 <span class="sd">        Example:</span>
 <span class="sd">            obj = handle.lookup_by_dns(&quot;OrgOrg&quot;, &quot;LsServer&quot;)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="c"># ToDo - How to handle unknown class_id</span>
-        <span class="kn">from</span> <span class="nn">ucsbasetype</span> <span class="kn">import</span> <span class="n">ClassIdSet</span><span class="p">,</span> <span class="n">ClassId</span>
-        <span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">MO_CLASS_ID</span>
+        <span class="c1"># ToDo - How to handle unknown class_id</span>
+        <span class="kn">from</span> <span class="nn">.ucsbasetype</span> <span class="kn">import</span> <span class="n">ClassIdSet</span><span class="p">,</span> <span class="n">ClassId</span>
+        <span class="kn">from</span> <span class="nn">.ucsmeta</span> <span class="kn">import</span> <span class="n">MO_CLASS_ID</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">class_ids</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;Provide Comma Separated string of Class Ids&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Provide Comma Separated string of Class Ids&quot;</span><span class="p">)</span>
 
         <span class="n">class_id_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">class_id</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">class_ids</span><span class="p">]</span>
         <span class="n">class_id_dict</span> <span class="o">=</span> <span class="p">{}</span>
@@ -399,7 +311,7 @@
             <span class="n">class_id_set</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">class_id_obj</span><span class="p">)</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_classes</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
-                                             <span class="n">in_ids</span><span class="o">=</span><span class="n">class_id_set</span><span class="p">)</span>
+                                      <span class="n">in_ids</span><span class="o">=</span><span class="n">class_id_set</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
@@ -407,18 +319,19 @@
         <span class="k">for</span> <span class="n">out_mo</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
             <span class="n">class_id_dict</span><span class="p">[</span><span class="n">out_mo</span><span class="o">.</span><span class="n">_class_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">out_mo</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">class_id_dict</span>
-</div>
+        <span class="k">return</span> <span class="n">class_id_dict</span></div>
+
 <div class="viewcode-block" id="UcsHandle.query_dn"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.query_dn">[docs]</a>    <span class="k">def</span> <span class="nf">query_dn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">hierarchy</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">need_response</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Find an object using it&#39;s distinguished name.</span>
+<span class="sd">        Finds an object using it&#39;s distinguished name.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            dn (str): distinguished name of the object to be queried for.</span>
-<span class="sd">            hierarchy(bool): if set to True will return all the child</span>
-<span class="sd">                             hierarchical objects.</span>
-<span class="sd">            need_response(bool): if set to True will return only response</span>
-<span class="sd">                                object.</span>
+<span class="sd">            hierarchy(bool): True/False,</span>
+<span class="sd">                                get all objects in hierarchy if True</span>
+<span class="sd">            need_response(bool): True/False,</span>
+<span class="sd">                                return the response xml node, instead of parsed</span>
+<span class="sd">                                objects</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            managedobject or None   by default\n</span>
@@ -432,11 +345,11 @@
 <span class="sd">            obj = handle.lookup_by_dn(&quot;fabric/lan/net-100&quot;, hierarchy=True, need_response=True)\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsbasetype</span> <span class="kn">import</span> <span class="n">DnSet</span><span class="p">,</span> <span class="n">Dn</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
+        <span class="kn">from</span> <span class="nn">.ucsbasetype</span> <span class="kn">import</span> <span class="n">DnSet</span><span class="p">,</span> <span class="n">Dn</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">dn</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;Provide dn.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Provide dn.&quot;</span><span class="p">)</span>
 
         <span class="n">dn_set</span> <span class="o">=</span> <span class="n">DnSet</span><span class="p">()</span>
         <span class="n">dn_obj</span> <span class="o">=</span> <span class="n">Dn</span><span class="p">()</span>
@@ -444,8 +357,8 @@
         <span class="n">dn_set</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">dn_obj</span><span class="p">)</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_dns</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
-                                         <span class="n">in_dns</span><span class="o">=</span><span class="n">dn_set</span><span class="p">,</span>
-                                         <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">hierarchy</span><span class="p">)</span>
+                                  <span class="n">in_dns</span><span class="o">=</span><span class="n">dn_set</span><span class="p">,</span>
+                                  <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">hierarchy</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
@@ -462,12 +375,12 @@
         <span class="n">mo</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">mo</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">mo</span>
-</div>
+        <span class="k">return</span> <span class="n">mo</span></div>
+
 <div class="viewcode-block" id="UcsHandle.query_classid"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.query_classid">[docs]</a>    <span class="k">def</span> <span class="nf">query_classid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">filter_str</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">hierarchy</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
                       <span class="n">need_response</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Find an object using it&#39;s class id.</span>
+<span class="sd">        Finds an object using it&#39;s class id.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            class_id (str): class id of the object to be queried for.</span>
@@ -507,17 +420,17 @@
 <span class="sd">            obj = handle.query_classid(class_id=&quot;LsServer&quot;, filter_str=filter_str)\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="c"># ToDo - How to handle unknown class_id</span>
+        <span class="c1"># ToDo - How to handle unknown class_id</span>
 
-        <span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">MO_CLASS_ID</span>
-        <span class="kn">from</span> <span class="nn">ucsfilter</span> <span class="kn">import</span> <span class="n">generate_infilter</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_class</span>
+        <span class="kn">from</span> <span class="nn">.ucsfilter</span> <span class="kn">import</span> <span class="n">generate_infilter</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_class</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">class_id</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;Provide Parameter class_id&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Provide Parameter class_id&quot;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
-            <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_l</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
+        <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">find_class_id_in_mo_meta_ignore_case</span><span class="p">(</span>
+            <span class="n">class_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">meta_class_id</span><span class="p">:</span>
             <span class="n">is_meta_class_id</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">class_id</span>
@@ -530,9 +443,9 @@
             <span class="n">in_filter</span> <span class="o">=</span> <span class="bp">None</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_class</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
-                                              <span class="n">class_id</span><span class="o">=</span><span class="n">meta_class_id</span><span class="p">,</span>
-                                              <span class="n">in_filter</span><span class="o">=</span><span class="n">in_filter</span><span class="p">,</span>
-                                              <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">hierarchy</span><span class="p">)</span>
+                                    <span class="n">class_id</span><span class="o">=</span><span class="n">meta_class_id</span><span class="p">,</span>
+                                    <span class="n">in_filter</span><span class="o">=</span><span class="n">in_filter</span><span class="p">,</span>
+                                    <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">hierarchy</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
@@ -541,15 +454,18 @@
             <span class="k">return</span> <span class="n">response</span>
 
         <span class="n">out_mo_list</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">extract_molist_from_method_response</span><span class="p">(</span>
-                                                                    <span class="n">response</span><span class="p">,</span>
-                                                                    <span class="n">hierarchy</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">out_mo_list</span>
-</div>
+            <span class="n">response</span><span class="p">,</span>
+            <span class="n">hierarchy</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out_mo_list</span></div>
+
 <div class="viewcode-block" id="UcsHandle.query_children"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.query_children">[docs]</a>    <span class="k">def</span> <span class="nf">query_children</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_mo</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">in_dn</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">class_id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-                       <span class="n">hierarchy</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+                       <span class="n">filter_str</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">hierarchy</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Find all or specific class_id children object of a given managed object</span>
-<span class="sd">        or a given dn.</span>
+<span class="sd">        Finds children of a given managed object or distinguished name.</span>
+<span class="sd">        Arguments can be specified to query only a specific type(class_id)</span>
+<span class="sd">        of children.</span>
+<span class="sd">        Arguments can also be specified to query only direct children or the</span>
+<span class="sd">        entire hierarchy of children.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            in_mo (managed object): query children managed object under this</span>
@@ -558,6 +474,29 @@
 <span class="sd">                                given managed object of the respective dn.</span>
 <span class="sd">            class_id(str): by default None, if given find only specific</span>
 <span class="sd">                            children object for a given class_id.</span>
+<span class="sd">            filter_str(str): query objects with specific property with specific</span>
+<span class="sd">                            value or pattern specifying value.</span>
+
+<span class="sd">                      (property_name, &quot;property_value, type=&quot;filter_type&quot;)\n</span>
+<span class="sd">                      property_name: Name of the Property\n</span>
+<span class="sd">                      property_value: Value of the property (str or regular</span>
+<span class="sd">                                      expression)\n</span>
+<span class="sd">                      filter_type: eq - equal to\n</span>
+<span class="sd">                                   ne - not equal to\n</span>
+<span class="sd">                                   ge - greater than or equal to\n</span>
+<span class="sd">                                   gt - greater than\n</span>
+<span class="sd">                                   le - less than or equal to\n</span>
+<span class="sd">                                   lt - less than\n</span>
+<span class="sd">                                   re - regular expression\n</span>
+
+<span class="sd">                      logical filter type: not, and, or\n</span>
+
+<span class="sd">                      e.g. &#39;(dn,&quot;org-root/ls-C1_B1&quot;, type=&quot;eq&quot;) or (name,</span>
+<span class="sd">                                            &quot;event&quot;, type=&quot;re&quot;, flag=&quot;I&quot;)&#39;\n</span>
+<span class="sd">            hierarchy(bool): if set to True will return all the child</span>
+<span class="sd">                             hierarchical objects.</span>
+<span class="sd">            need_response(bool): if set to True will return only response</span>
+<span class="sd">                                object.</span>
 <span class="sd">            hierarchy(bool): if set to True will return all the child</span>
 <span class="sd">                              hierarchical objects.</span>
 
@@ -570,50 +509,66 @@
 <span class="sd">            mo_list = handle.query_children(in_mo=mo, class_id=&quot;classid&quot;)\n</span>
 <span class="sd">            mo_list = handle.query_children(in_dn=dn)\n</span>
 <span class="sd">            mo_list = handle.query_children(in_dn=dn, class_id=&quot;classid&quot;)\n</span>
+<span class="sd">            mo_list = handle.query_children(in_dn=&quot;org-root&quot;,</span>
+<span class="sd">                        class_id=&quot;LsServer&quot;, filter_str=&quot;(usr_lbl, &#39;test&#39;)&quot;)</span>
+<span class="sd">            mo_list = handle.query_children(in_dn=&quot;org-root&quot;,</span>
+<span class="sd">                class_id=&quot;LsServer&quot;, filter_str=&quot;(usr_lbl, &#39;test&#39;, type=&#39;eq&#39;)&quot;)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">MO_CLASS_ID</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_children</span>
+        <span class="kn">from</span> <span class="nn">.ucsfilter</span> <span class="kn">import</span> <span class="n">generate_infilter</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_children</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">in_mo</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">in_dn</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;[Error]: GetChild: Provide in_mo or in_dn.&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;[Error]: GetChild: Provide in_mo or in_dn.&#39;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">in_mo</span><span class="p">:</span>
             <span class="n">parent_dn</span> <span class="o">=</span> <span class="n">in_mo</span><span class="o">.</span><span class="n">dn</span>
         <span class="k">elif</span> <span class="n">in_dn</span><span class="p">:</span>
             <span class="n">parent_dn</span> <span class="o">=</span> <span class="n">in_dn</span>
 
+        <span class="n">in_filter</span> <span class="o">=</span> <span class="bp">None</span>
+
         <span class="k">if</span> <span class="n">class_id</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
-                <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_l</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
+            <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">find_class_id_in_mo_meta_ignore_case</span><span class="p">(</span>
+                <span class="n">class_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">meta_class_id</span><span class="p">:</span>
+                <span class="n">is_meta_class_id</span> <span class="o">=</span> <span class="bp">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">class_id</span>
+                <span class="n">is_meta_class_id</span> <span class="o">=</span> <span class="bp">False</span>
+
+            <span class="k">if</span> <span class="n">filter_str</span><span class="p">:</span>
+                <span class="n">in_filter</span> <span class="o">=</span> <span class="n">generate_infilter</span><span class="p">(</span><span class="n">meta_class_id</span><span class="p">,</span> <span class="n">filter_str</span><span class="p">,</span>
+                                              <span class="n">is_meta_class_id</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">class_id</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_children</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
                                        <span class="n">class_id</span><span class="o">=</span><span class="n">meta_class_id</span><span class="p">,</span>
                                        <span class="n">in_dn</span><span class="o">=</span><span class="n">parent_dn</span><span class="p">,</span>
-                                       <span class="n">in_filter</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                       <span class="n">in_filter</span><span class="o">=</span><span class="n">in_filter</span><span class="p">,</span>
                                        <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">hierarchy</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
         <span class="n">out_mo_list</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">extract_molist_from_method_response</span><span class="p">(</span>
-                                                                    <span class="n">response</span><span class="p">,</span>
-                                                                    <span class="n">hierarchy</span><span class="p">)</span>
+            <span class="n">response</span><span class="p">,</span>
+            <span class="n">hierarchy</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">out_mo_list</span>
-</div>
+        <span class="k">return</span> <span class="n">out_mo_list</span></div>
+
 <div class="viewcode-block" id="UcsHandle.add_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.add_mo">[docs]</a>    <span class="k">def</span> <span class="nf">add_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">modify_present</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Adds an object to the UCSM.</span>
+<span class="sd">        Adds a managed object to the UcsHandle commit buffer.</span>
+<span class="sd">        This method does not trigger a commit by itself.</span>
+<span class="sd">        This needs to be followed by a handle.commit() either immediately or</span>
+<span class="sd">        after more operations to ensure successful addition of object on server</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            mo (managedobject): ManagedObject to be added.</span>
-<span class="sd">            modify_present (bool): if set to True, overwrite the existing</span>
-<span class="sd">                                      object.</span>
+<span class="sd">            modify_present (bool): True/False,</span>
+<span class="sd">                                    overwrite existing object if True</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
@@ -624,18 +579,23 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">modify_present</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">:</span>
-            <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s">&quot;created,modified&quot;</span>
+            <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;created,modified&quot;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s">&quot;created&quot;</span>
+            <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;created&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span></div>
+
 <div class="viewcode-block" id="UcsHandle.set_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.set_mo">[docs]</a>    <span class="k">def</span> <span class="nf">set_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Modifies configuration of an object.</span>
+<span class="sd">        Modifies a managed object and adds it to UcsHandle commit buffer (if</span>
+<span class="sd">         not already in it).</span>
+<span class="sd">        This method does not trigger a commit by itself.</span>
+<span class="sd">        This needs to be followed by a handle.commit() either immediately or</span>
+<span class="sd">        after more operations to ensure successful modification of object on</span>
+<span class="sd">        server.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            mo (managedobject): ManagedObject with modified properties.</span>
+<span class="sd">            mo (managedobject): Managed object with modified properties.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
@@ -645,15 +605,19 @@
 <span class="sd">            handle.commit()\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s">&quot;modified&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
-</div>
+        <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;modified&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span></div>
+
 <div class="viewcode-block" id="UcsHandle.remove_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.remove_mo">[docs]</a>    <span class="k">def</span> <span class="nf">remove_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Removes object from UCSM.</span>
+<span class="sd">        Removes a managed object.</span>
+<span class="sd">        This method does not trigger a commit by itself.</span>
+<span class="sd">        This needs to be followed by a handle.commit() either immediately or</span>
+<span class="sd">        after more operations to ensure successful removal of object from the</span>
+<span class="sd">        server.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            mo (managedobject): ManagedObject to be removed.</span>
+<span class="sd">            mo (managedobject): Managed object to be removed.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
@@ -663,17 +627,18 @@
 <span class="sd">            handle.commit()\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s">&quot;deleted&quot;</span>
+        <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;deleted&quot;</span>
         <span class="k">if</span> <span class="n">mo</span><span class="o">.</span><span class="n">parent_mo</span><span class="p">:</span>
             <span class="n">mo</span><span class="o">.</span><span class="n">parent_mo</span><span class="o">.</span><span class="n">child_remove</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span></div>
+
 <div class="viewcode-block" id="UcsHandle.commit"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.commit">[docs]</a>    <span class="k">def</span> <span class="nf">commit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Sends the object to UCSM.</span>
-<span class="sd">        Add, modify or remove using add_mo(), set_mo() and remove_mo()</span>
-<span class="sd">        respectively.</span>
+<span class="sd">        Commit the buffer to the server. Pushes all the configuration changes</span>
+<span class="sd">        so far to the server.</span>
+<span class="sd">        Configuration could be added to the commit buffer using add_mo(),</span>
+<span class="sd">        set_mo(), remove_mo() prior to making a handle.commit()</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            None</span>
@@ -685,14 +650,14 @@
 <span class="sd">            handle.commit()\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="kn">from</span> <span class="nn">ucsbasetype</span> <span class="kn">import</span> <span class="n">ConfigMap</span><span class="p">,</span> <span class="n">Dn</span><span class="p">,</span> <span class="n">DnSet</span><span class="p">,</span> <span class="n">Pair</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
-        <span class="kn">from</span> <span class="nn">ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_conf_mos</span>
+        <span class="kn">from</span> <span class="nn">.ucsbasetype</span> <span class="kn">import</span> <span class="n">ConfigMap</span><span class="p">,</span> <span class="n">Dn</span><span class="p">,</span> <span class="n">DnSet</span><span class="p">,</span> <span class="n">Pair</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
+        <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_conf_mos</span>
 
         <span class="n">refresh_dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="n">mo_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">mo_dict</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;No Mo to be Committed&quot;</span><span class="p">)</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;No Mo to be Committed&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="bp">None</span>
 
         <span class="n">config_map</span> <span class="o">=</span> <span class="n">ConfigMap</span><span class="p">()</span>
@@ -713,7 +678,7 @@
             <span class="n">config_map</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span>
 
         <span class="n">elem</span> <span class="o">=</span> <span class="n">config_conf_mos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span> <span class="n">config_map</span><span class="p">,</span>
-                                         <span class="bp">False</span><span class="p">)</span>
+                               <span class="bp">False</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
@@ -730,20 +695,20 @@
                 <span class="n">dn_set</span><span class="o">.</span><span class="n">child_add</span><span class="p">(</span><span class="n">dn_obj</span><span class="p">)</span>
 
             <span class="n">elem</span> <span class="o">=</span> <span class="n">config_resolve_dns</span><span class="p">(</span><span class="n">cookie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cookie</span><span class="p">,</span>
-                                                <span class="n">in_dns</span><span class="o">=</span><span class="n">dn_set</span><span class="p">)</span>
+                                      <span class="n">in_dns</span><span class="o">=</span><span class="n">dn_set</span><span class="p">)</span>
             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span>
-                                      <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
+                                   <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
             <span class="k">for</span> <span class="n">out_mo</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
                 <span class="n">out_mo</span><span class="o">.</span><span class="n">sync_mo</span><span class="p">(</span><span class="n">refresh_dict</span><span class="p">[</span><span class="n">out_mo</span><span class="o">.</span><span class="n">dn</span><span class="p">])</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span> <span class="o">=</span> <span class="p">{}</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span> <span class="o">=</span> <span class="p">{}</span></div>
+
 <div class="viewcode-block" id="UcsHandle.commit_buffer_discard"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.commit_buffer_discard">[docs]</a>    <span class="k">def</span> <span class="nf">commit_buffer_discard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        clears the commit buffer</span>
+<span class="sd">        Discard the configuration changes in the commit buffer.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            None</span>
@@ -758,62 +723,44 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span> <span class="o">=</span> <span class="p">{}</span></div></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

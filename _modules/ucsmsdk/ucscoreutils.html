@@ -1,169 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.ucscoreutils &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Module code" href="../index.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.ucscoreutils &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.ucscoreutils</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.ucscoreutils</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License prop</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License prop</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This module contains the UcsSdk Core utilities.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="kn">import</span> <span class="nn">ucsgenutils</span>
-<span class="kn">import</span> <span class="nn">mometa</span>
-<span class="kn">import</span> <span class="nn">methodmeta</span>
-<span class="kn">import</span> <span class="nn">ucsmethod</span>
-<span class="kn">import</span> <span class="nn">ucsmo</span>
-<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">MO_CLASS_ID</span><span class="p">,</span> <span class="n">METHOD_CLASS_ID</span><span class="p">,</span> <span class="n">OTHER_TYPE_CLASS_ID</span><span class="p">,</span> \
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">mometa</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">methodmeta</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">MO_CLASS_ID</span><span class="p">,</span> <span class="n">METHOD_CLASS_ID</span><span class="p">,</span> <span class="n">OTHER_TYPE_CLASS_ID</span><span class="p">,</span> \
     <span class="n">MO_CLASS_META</span>
 
-<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;ucs&#39;</span><span class="p">)</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="get_ucs_obj"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.get_ucs_obj">[docs]</a><span class="k">def</span> <span class="nf">get_ucs_obj</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">elem</span><span class="p">,</span> <span class="n">mo_obj</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -182,6 +89,9 @@
 
     <span class="kn">import</span> <span class="nn">inspect</span>
 
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsmethod</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsmo</span>
+
     <span class="k">if</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">METHOD_CLASS_ID</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">ucsmethod</span><span class="o">.</span><span class="n">ExternalMethod</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
@@ -189,42 +99,40 @@
         <span class="n">mo_class_params</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getargspec</span><span class="p">(</span><span class="n">mo_class</span><span class="o">.</span><span class="n">__init__</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">:]</span>
         <span class="n">mo_class_param_dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">mo_class_params</span><span class="p">:</span>
-            <span class="n">mo_param</span> <span class="o">=</span> <span class="n">mo_class</span><span class="o">.</span><span class="n">prop_meta</span><span class="p">[</span><span class="n">param</span><span class="p">]</span><span class="o">.</span><span class="n">xml_attribute</span>
-            <span class="k">if</span> <span class="n">mo_param</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
-                <span class="n">mo_class_param_dict</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-                <span class="k">continue</span>
-            <span class="n">mo_class_param_dict</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="n">mo_param</span><span class="p">]</span>
+            <span class="n">mo_class_param_dict</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
 
-        <span class="n">p_dn</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-        <span class="k">if</span> <span class="s">&quot;dn&quot;</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
-            <span class="n">p_dn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&quot;dn&quot;</span><span class="p">])</span>
-        <span class="k">elif</span> <span class="s">&quot;rn&quot;</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span> <span class="ow">and</span> <span class="n">mo_obj</span><span class="p">:</span>
+        <span class="n">p_dn</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;dn&quot;</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
+            <span class="n">p_dn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;dn&quot;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="s2">&quot;rn&quot;</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span> <span class="ow">and</span> <span class="n">mo_obj</span><span class="p">:</span>
             <span class="n">p_dn</span> <span class="o">=</span> <span class="n">mo_obj</span><span class="o">.</span><span class="n">dn</span>
 
-        <span class="k">if</span> <span class="s">&#39;topRoot&#39;</span> <span class="ow">in</span> <span class="n">mo_class</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span>
-            <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">mo_class</span><span class="p">(</span><span class="o">**</span><span class="n">mo_class_param_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;topRoot&#39;</span> <span class="ow">in</span> <span class="n">mo_class</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span>
+            <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">mo_class</span><span class="p">(</span><span class="n">from_xml_response</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="o">**</span><span class="n">mo_class_param_dict</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">mo_class</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="n">p_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">mo_class_param_dict</span><span class="p">)</span>
+            <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">mo_class</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="n">p_dn</span><span class="p">,</span>
+                              <span class="n">from_xml_response</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="o">**</span><span class="n">mo_class_param_dict</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">mo_obj</span>
     <span class="k">elif</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">OTHER_TYPE_CLASS_ID</span><span class="p">:</span>
         <span class="n">module_</span> <span class="o">=</span> <span class="n">load_module</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module_</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)()</span>
 
-    <span class="c"># This case handles object types that are not known to this version</span>
-    <span class="c"># of the SDK. This case can arise when the UCS server has higher</span>
-    <span class="c"># version with more objects and the SDK is not at the latest</span>
-    <span class="c"># version yet.</span>
+    <span class="c1"># This case handles object types that are not known to this version</span>
+    <span class="c1"># of the SDK. This case can arise when the UCS server has higher</span>
+    <span class="c1"># version with more objects and the SDK is not at the latest</span>
+    <span class="c1"># version yet.</span>
 
-    <span class="n">p_dn</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-    <span class="k">if</span> <span class="s">&quot;dn&quot;</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
-        <span class="n">p_dn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&quot;dn&quot;</span><span class="p">])</span>
+    <span class="n">p_dn</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;dn&quot;</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
+        <span class="n">p_dn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;dn&quot;</span><span class="p">])</span>
     <span class="k">elif</span> <span class="n">mo_obj</span><span class="p">:</span>
         <span class="n">p_dn</span> <span class="o">=</span> <span class="n">mo_obj</span><span class="o">.</span><span class="n">dn</span>
 
-    <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">GenericMo</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="n">elem</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="n">p_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">mo_obj</span>
+    <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">GenericMo</span><span class="p">(</span>
+        <span class="n">class_id</span><span class="o">=</span><span class="n">elem</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="n">p_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mo_obj</span></div>
 
-</div>
+
 <div class="viewcode-block" id="load_module"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.load_module">[docs]</a><span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This loads the module into the current name space</span>
@@ -238,22 +146,22 @@
 
     <span class="n">module_name</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">module_name</span> <span class="ow">and</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
-        <span class="n">fq_module_name</span> <span class="o">=</span> <span class="n">mometa</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s">&quot;.</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">module_name</span>
+        <span class="n">fq_module_name</span> <span class="o">=</span> <span class="n">mometa</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s2">&quot;.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">module_name</span>
         <span class="n">module_import</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">fq_module_name</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">(),</span>
                                    <span class="p">[</span><span class="n">module_name</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">module_import</span>
     <span class="k">elif</span> <span class="n">module_name</span> <span class="ow">and</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="n">METHOD_CLASS_ID</span><span class="p">:</span>
-        <span class="n">fq_module_name</span> <span class="o">=</span> <span class="n">methodmeta</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s">&quot;.</span><span class="si">%s</span><span class="s">Meta&quot;</span> <span class="o">%</span> <span class="n">module_name</span>
+        <span class="n">fq_module_name</span> <span class="o">=</span> <span class="n">methodmeta</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s2">&quot;.</span><span class="si">%s</span><span class="s2">Meta&quot;</span> <span class="o">%</span> <span class="n">module_name</span>
         <span class="n">module_import</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">fq_module_name</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">(),</span>
                                    <span class="p">[</span><span class="n">module_name</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">module_import</span>
     <span class="k">elif</span> <span class="n">module_name</span> <span class="ow">and</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="n">OTHER_TYPE_CLASS_ID</span><span class="p">:</span>
         <span class="n">fq_module_name</span> <span class="o">=</span> <span class="n">OTHER_TYPE_CLASS_ID</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>
         <span class="n">module_import</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">fq_module_name</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">(),</span>
-                                   <span class="p">[</span><span class="n">module_name</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">module_import</span>
+                                   <span class="p">[</span><span class="n">module_name</span><span class="p">],</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">module_import</span></div>
 
-</div>
+
 <div class="viewcode-block" id="load_class"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.load_class">[docs]</a><span class="k">def</span> <span class="nf">load_class</span><span class="p">(</span><span class="n">class_id</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This loads the class into the current name space</span>
@@ -268,19 +176,19 @@
     <span class="n">class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">class_id</span> <span class="ow">and</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
         <span class="n">mod_class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_l</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
-        <span class="n">class_id_sub_pkg</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&quot;([a-z])+&quot;</span><span class="p">,</span> <span class="n">mod_class_id</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
-        <span class="n">mo_pkg</span> <span class="o">=</span> <span class="n">mometa</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s">&quot;.</span><span class="si">%s</span><span class="s">.</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_id_sub_pkg</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)</span>
+        <span class="n">class_id_sub_pkg</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;([a-z])+&quot;</span><span class="p">,</span> <span class="n">mod_class_id</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+        <span class="n">mo_pkg</span> <span class="o">=</span> <span class="n">mometa</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s2">&quot;.</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_id_sub_pkg</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)</span>
         <span class="n">mo_module</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">mo_pkg</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">(),</span> <span class="p">[</span><span class="n">class_id</span><span class="p">])</span>
         <span class="n">mo_class</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mo_module</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">mo_class</span>
     <span class="k">elif</span> <span class="n">class_id</span> <span class="ow">and</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">METHOD_CLASS_ID</span><span class="p">:</span>
-        <span class="n">mo_import</span> <span class="o">=</span> <span class="n">methodmeta</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s">&quot;.</span><span class="si">%s</span><span class="s">Meta&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
+        <span class="n">mo_import</span> <span class="o">=</span> <span class="n">methodmeta</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="s2">&quot;.</span><span class="si">%s</span><span class="s2">Meta&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
         <span class="n">method_meta</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="n">mo_import</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">(),</span>
                                  <span class="p">[</span><span class="n">class_id</span><span class="p">])</span>
         <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">method_meta</span><span class="p">,</span> <span class="n">class_id</span><span class="p">)</span>
-    <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="bp">None</span></div>
 
-</div>
+
 <div class="viewcode-block" id="load_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.load_mo">[docs]</a><span class="k">def</span> <span class="nf">load_mo</span><span class="p">(</span><span class="n">elem</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This loads the managed object  into the current name space</span>
@@ -302,19 +210,19 @@
         <span class="n">mo_class_param_dict</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span>
             <span class="n">mo_class</span><span class="o">.</span><span class="n">PROPERTY_MAP</span><span class="p">[</span><span class="n">param</span><span class="p">]]</span>
 
-    <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">mo_class</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">mo_class_param_dict</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">mo_obj</span>
+    <span class="n">mo_obj</span> <span class="o">=</span> <span class="n">mo_class</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">mo_class_param_dict</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mo_obj</span></div>
 
-</div>
+
 <div class="viewcode-block" id="is_valid_class_id"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.is_valid_class_id">[docs]</a><span class="k">def</span> <span class="nf">is_valid_class_id</span><span class="p">(</span><span class="n">class_id</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Methods checks whether the provided class_id is valid or not.&quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span> <span class="ow">or</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">METHOD_CLASS_ID</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">True</span>
-    <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">False</span></div>
 
-</div>
+
 <div class="viewcode-block" id="find_class_id_in_mo_meta_ignore_case"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.find_class_id_in_mo_meta_ignore_case">[docs]</a><span class="k">def</span> <span class="nf">find_class_id_in_mo_meta_ignore_case</span><span class="p">(</span><span class="n">class_id</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Methods whether class_id is valid or not . Given class is case insensitive.</span>
@@ -324,14 +232,14 @@
         <span class="k">return</span> <span class="bp">None</span>
     <span class="k">if</span> <span class="n">class_id</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">class_id</span>
-    <span class="c"># print class_id</span>
+    <span class="c1"># print class_id</span>
     <span class="n">l_class_id</span> <span class="o">=</span> <span class="n">class_id</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">MO_CLASS_ID</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">l_class_id</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">key</span>
-    <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="bp">None</span></div>
 
-</div>
+
 <div class="viewcode-block" id="find_class_id_in_method_meta_ignore_case"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.find_class_id_in_method_meta_ignore_case">[docs]</a><span class="k">def</span> <span class="nf">find_class_id_in_method_meta_ignore_case</span><span class="p">(</span><span class="n">class_id</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Methods whether class_id is valid or not . Given class is case insensitive.</span>
@@ -343,9 +251,9 @@
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">METHOD_CLASS_ID</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">l_class_id</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">key</span>
-    <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="bp">None</span></div>
 
-</div>
+
 <div class="viewcode-block" id="get_mo_property_meta"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.get_mo_property_meta">[docs]</a><span class="k">def</span> <span class="nf">get_mo_property_meta</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Methods returns the mo property meta of the provided key for the given</span>
@@ -363,7 +271,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">class_obj</span> <span class="o">=</span> <span class="n">load_class</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s">&quot;mo_meta&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;mo_meta&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">class_obj</span><span class="o">.</span><span class="n">mo_meta</span>
 
     <span class="n">prop_meta</span> <span class="o">=</span> <span class="n">class_obj</span><span class="o">.</span><span class="n">prop_meta</span>
@@ -372,16 +280,19 @@
         <span class="k">return</span> <span class="n">prop_meta</span><span class="p">[</span><span class="n">prop_map</span><span class="p">[</span><span class="n">key</span><span class="p">]]</span>
     <span class="k">elif</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">prop_meta</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">prop_meta</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-    <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="bp">None</span></div>
 
-</div>
+
 <div class="viewcode-block" id="write_object"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.write_object">[docs]</a><span class="k">def</span> <span class="nf">write_object</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This prints the managed object on the standard output.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsmethod</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsmo</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">,</span> <span class="n">ucsmethod</span><span class="o">.</span><span class="n">ExternalMethod</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">,</span> <span class="s">&quot;out_configs&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">,</span> <span class="s2">&quot;out_configs&quot;</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">mo_or_list</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">ManagedObject</span><span class="p">):</span>
                     <span class="n">write_object</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
@@ -389,12 +300,12 @@
         <span class="k">for</span> <span class="n">mo</span> <span class="ow">in</span> <span class="n">mo_or_list</span><span class="p">:</span>
             <span class="k">if</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">ManagedObject</span><span class="p">)</span> <span class="ow">or</span>
                     <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">GenericMo</span><span class="p">)):</span>
-                <span class="k">print</span> <span class="n">mo</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
     <span class="k">elif</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">,</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">ManagedObject</span><span class="p">)</span> <span class="ow">or</span>
             <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">,</span> <span class="n">ucsmo</span><span class="o">.</span><span class="n">GenericMo</span><span class="p">)):</span>
-        <span class="k">print</span> <span class="n">mo_or_list</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">mo_or_list</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="extract_molist_from_method_response"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.extract_molist_from_method_response">[docs]</a><span class="k">def</span> <span class="nf">extract_molist_from_method_response</span><span class="p">(</span><span class="n">method_response</span><span class="p">,</span>
                                         <span class="n">in_hierarchical</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -433,9 +344,9 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">mo_list</span> <span class="o">=</span> <span class="n">method_response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span>
 
-    <span class="k">return</span> <span class="n">mo_list</span>
+    <span class="k">return</span> <span class="n">mo_list</span></div>
 
-</div>
+
 <div class="viewcode-block" id="write_mo_tree"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.write_mo_tree">[docs]</a><span class="k">def</span> <span class="nf">write_mo_tree</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[],</span>
                   <span class="n">print_tree</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">tree_dict</span><span class="o">=</span><span class="p">{},</span> <span class="n">dn</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -460,17 +371,17 @@
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">:</span>
         <span class="n">mo</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
-    <span class="n">indent</span> <span class="o">=</span> <span class="s">&quot;    &quot;</span>
+    <span class="n">indent</span> <span class="o">=</span> <span class="s2">&quot;    &quot;</span>
 
-    <span class="n">level_indent</span> <span class="o">=</span> <span class="s">&quot;</span><span class="si">%s%s</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">indent</span> <span class="o">*</span> <span class="n">level</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+    <span class="n">level_indent</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">indent</span> <span class="o">*</span> <span class="n">level</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
 
-    <span class="n">level_key_dn</span> <span class="o">=</span> <span class="s">&quot;level_</span><span class="si">%s</span><span class="s">_dn&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">level</span><span class="p">))</span>
+    <span class="n">level_key_dn</span> <span class="o">=</span> <span class="s2">&quot;level_</span><span class="si">%s</span><span class="s2">_dn&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">level</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">level_key_dn</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tree_dict</span><span class="p">:</span>
         <span class="n">tree_dict</span><span class="p">[</span><span class="n">level_key_dn</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">:</span> <span class="n">mo</span><span class="p">}</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">tree_dict</span><span class="p">[</span><span class="n">level_key_dn</span><span class="p">][</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
 
-    <span class="n">level_key_mo</span> <span class="o">=</span> <span class="s">&quot;level_</span><span class="si">%s</span><span class="s">_mo&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">level</span><span class="p">))</span>
+    <span class="n">level_key_mo</span> <span class="o">=</span> <span class="s2">&quot;level_</span><span class="si">%s</span><span class="s2">_mo&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">level</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">level_key_mo</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tree_dict</span><span class="p">:</span>
         <span class="n">tree_dict</span><span class="p">[</span><span class="n">level_key_mo</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">:</span> <span class="p">[</span><span class="n">mo</span><span class="p">]}</span>
     <span class="k">else</span><span class="p">:</span>
@@ -479,7 +390,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">tree_dict</span><span class="p">[</span><span class="n">level_key_mo</span><span class="p">][</span><span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
 
-    <span class="n">key_all_mo</span> <span class="o">=</span> <span class="s">&quot;all_mo&quot;</span>
+    <span class="n">key_all_mo</span> <span class="o">=</span> <span class="s2">&quot;all_mo&quot;</span>
     <span class="k">if</span> <span class="n">key_all_mo</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tree_dict</span><span class="p">:</span>
         <span class="n">tree_dict</span><span class="p">[</span><span class="n">key_all_mo</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">:</span> <span class="p">[</span><span class="n">mo</span><span class="p">]}</span>
     <span class="k">else</span><span class="p">:</span>
@@ -488,13 +399,13 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">tree_dict</span><span class="p">[</span><span class="n">key_all_mo</span><span class="p">][</span><span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
 
-    <span class="c"># print tree_dict</span>
+    <span class="c1"># print tree_dict</span>
 
     <span class="k">if</span> <span class="n">print_tree</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">show_level</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> (</span><span class="si">%s</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level_indent</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level_indent</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">))</span>
         <span class="k">elif</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">show_level</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> (</span><span class="si">%s</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level_indent</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level_indent</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">class_id</span><span class="p">))</span>
 
     <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">mo</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
         <span class="n">child</span><span class="o">.</span><span class="n">mark_clean</span><span class="p">()</span>
@@ -509,10 +420,9 @@
                                       <span class="n">tree_dict</span><span class="p">,</span> <span class="n">dn</span><span class="p">)</span>
         <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
 
-    <span class="k">return</span> <span class="n">tree_dict</span>
+    <span class="k">return</span> <span class="n">tree_dict</span></div>
 
 
-</div>
 <div class="viewcode-block" id="extract_mo_tree_from_config_method_response"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.extract_mo_tree_from_config_method_response">[docs]</a><span class="k">def</span> <span class="nf">extract_mo_tree_from_config_method_response</span><span class="p">(</span><span class="n">method_response</span><span class="p">,</span>
                                                 <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                                                 <span class="n">show_level</span><span class="o">=</span><span class="p">[],</span>
@@ -542,9 +452,9 @@
         <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">current_mo</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
                                   <span class="n">show_level</span><span class="p">,</span> <span class="n">print_tree</span><span class="p">,</span>
                                   <span class="n">tree_dict</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">tree_dict</span>
+    <span class="k">return</span> <span class="n">tree_dict</span></div>
 
-</div>
+
 <div class="viewcode-block" id="print_mo_hierarchy"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.print_mo_hierarchy">[docs]</a><span class="k">def</span> <span class="nf">print_mo_hierarchy</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    print hierarchy of class_id</span>
@@ -563,17 +473,17 @@
 <span class="sd">        tree_dict = write_mo_tree(response, break_level=3, show_level=[1, 3])\n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">indent</span> <span class="o">=</span> <span class="s">&quot; &quot;</span>
-    <span class="n">level_indent</span> <span class="o">=</span> <span class="s">&quot;</span><span class="si">%s%s</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">indent</span> <span class="o">*</span> <span class="n">level</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+    <span class="n">indent</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
+    <span class="n">level_indent</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">indent</span> <span class="o">*</span> <span class="n">level</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
     <span class="n">class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">parents</span> <span class="o">=</span> <span class="p">[</span><span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span> <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span>
                    <span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">class_id</span><span class="p">]</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span>
-        <span class="k">print</span> <span class="s">&quot;[</span><span class="si">%s</span><span class="s">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">parents</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">%s</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">parents</span><span class="p">))))</span>
 
     <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">show_level</span> <span class="ow">or</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">show_level</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&quot;</span><span class="si">%s%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level_indent</span><span class="p">,</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level_indent</span><span class="p">,</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)))</span>
 
     <span class="n">children</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">class_id</span><span class="p">]</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
 
@@ -585,9 +495,9 @@
                 <span class="k">continue</span>
             <span class="n">print_mo_hierarchy</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
                                <span class="n">show_level</span><span class="p">)</span>
-    <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span></div>
 
-</div>
+
 <div class="viewcode-block" id="get_naming_props"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.get_naming_props">[docs]</a><span class="k">def</span> <span class="nf">get_naming_props</span><span class="p">(</span><span class="n">rn_str</span><span class="p">,</span> <span class="n">rn_pattern</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    extract naming property and its value from a given rn and its pattern</span>
@@ -603,73 +513,229 @@
 <span class="sd">        naming_props = get_naming_props(rn_str=&quot;ls-test_sp&quot;, rn_pattern=&quot;ls-[name]&quot;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">rn_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r&quot;\[(.+?)\]&quot;</span><span class="p">,</span> <span class="s">r&quot;(?P&lt;\1&gt;.+)&quot;</span><span class="p">,</span> <span class="n">rn_pattern</span><span class="p">)</span>
+    <span class="n">rn_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">r&quot;\[(.+?)\]&quot;</span><span class="p">,</span> <span class="s2">r&quot;(?P&lt;\1&gt;.+)&quot;</span><span class="p">,</span> <span class="n">rn_pattern</span><span class="p">)</span>
     <span class="n">rn_regex_pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">rn_regex</span><span class="p">)</span>
     <span class="n">match_obj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">rn_regex_pat</span><span class="p">,</span> <span class="n">rn_str</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">match_obj</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Error getting naming props. rn_str: </span><span class="si">%s</span><span class="s"> rn_pattern </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Error getting naming props. rn_str: </span><span class="si">%s</span><span class="s2"> rn_pattern </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
                   <span class="p">(</span><span class="n">rn_str</span><span class="p">,</span> <span class="n">rn_pattern</span><span class="p">))</span>
         <span class="k">return</span> <span class="p">{}</span>
     <span class="n">naming_prop_dict</span> <span class="o">=</span> <span class="n">match_obj</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">naming_prop_dict</span></div>
+
+
+<div class="viewcode-block" id="ClassIdMeta"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.ClassIdMeta">[docs]</a><span class="k">class</span> <span class="nc">ClassIdMeta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span> <span class="o">=</span> <span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">class_id</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_id</span> <span class="o">=</span> <span class="n">class_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xml_attribute</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">xml_attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">rn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">inp_out</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_privilege</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">parents</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">children</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span> <span class="o">=</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="ClassIdMeta.get_prop_dict"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.ClassIdMeta.get_prop_dict">[docs]</a>    <span class="k">def</span> <span class="nf">get_prop_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">class_obj</span> <span class="o">=</span> <span class="n">load_class</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span> <span class="o">=</span> <span class="n">class_obj</span><span class="o">.</span><span class="n">prop_meta</span></div>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method to return string representation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">ts</span> <span class="o">=</span> <span class="mi">8</span>
+        <span class="n">out_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;ClassId&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;ClassId&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;xml_attribute&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xml_attribute</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;rn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rn</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;min_version&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_version</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;access&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">access</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;access_privilege&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">access_privilege</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;parents&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parents</span><span class="p">)</span> <span class="o">+</span> \
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;children&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">out_str</span></div>
+
+
+<span class="k">def</span> <span class="nf">_show_tree</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ancestor_str</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+               <span class="n">ancestor</span><span class="o">=</span><span class="p">[],</span> <span class="n">last_child</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+
+    <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ancestor</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">meta_class_id</span><span class="p">]</span><span class="o">.</span><span class="n">parents</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
+
+    <span class="n">index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ancestor</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">meta_class_id</span> <span class="ow">in</span> <span class="n">ancestor</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">  |-</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ancestor_str</span><span class="p">,</span> <span class="n">meta_class_id</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ancestor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meta_class_id</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">  |-</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ancestor_str</span><span class="p">,</span> <span class="n">meta_class_id</span><span class="p">))</span>
+        <span class="n">children</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">meta_class_id</span><span class="p">]</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">break_level</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="n">break_level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+                <span class="k">if</span> <span class="n">last_child</span><span class="p">:</span>
+                    <span class="n">ancestor_str_</span> <span class="o">=</span> <span class="n">ancestor_str</span> <span class="o">+</span> <span class="s2">&quot;   &quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ancestor_str_</span> <span class="o">=</span> <span class="n">ancestor_str</span> <span class="o">+</span> <span class="s2">&quot;  |&quot;</span>
+
+                <span class="n">_show_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">ancestor_str_</span><span class="p">,</span> <span class="n">ancestor</span><span class="p">,</span>
+                           <span class="n">total</span> <span class="o">==</span> <span class="n">count</span><span class="p">)</span>
+
+        <span class="n">ancestor</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="search_class_id"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.search_class_id">[docs]</a><span class="k">def</span> <span class="nf">search_class_id</span><span class="p">(</span><span class="n">class_id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    case insensitive search for class_id in meta.</span>
+<span class="sd">    if unable to find exact class_id, this will also suggest matching class_id.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        class_id (str): string matching class_id.(case insensitive)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (str) or None</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        class_ids = search_class_id(class_id=&quot;ls&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsmeta</span>
+
+    <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">find_class_id_in_mo_meta_ignore_case</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="n">class_id</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">meta_class_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">meta_class_id</span>
+
+    <span class="c1"># if class_id not exists in meta</span>
+    <span class="n">l_class_id</span> <span class="o">=</span> <span class="n">class_id</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">class_ids</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">cid</span> <span class="k">for</span> <span class="n">cid</span> <span class="ow">in</span> <span class="n">ucsmeta</span><span class="o">.</span><span class="n">MO_CLASS_ID</span>
+                        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">l_class_id</span><span class="p">,</span> <span class="n">cid</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="n">class_ids</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; did not match any available Class Ids.</span><span class="se">\n</span><span class="s1">&#39;</span>
+                 <span class="s1">&#39;Related Class Ids are:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                 <span class="p">(</span><span class="n">class_id</span><span class="p">,</span>
+                  <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;Related Class Ids are:&quot;</span><span class="p">),</span>
+                  <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class_ids</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; did not match any available Class Ids.&#39;</span> <span class="o">%</span> <span class="n">class_id</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_meta_info"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.get_meta_info">[docs]</a><span class="k">def</span> <span class="nf">get_meta_info</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">include_prop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                  <span class="n">show_tree</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets class id meta information</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        class_id (str): string matching class_id.(case insensitive)</span>
+<span class="sd">        include_prop (bool): by default True. If False, excludes property.</span>
+<span class="sd">        show_tree (bool): by default True. If False will not display mo tree.</span>
+<span class="sd">        break_level (int): display the hierarchy till respective level.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: If class_id is not present in meta.</span>
+<span class="sd">        Or</span>
+<span class="sd">        ClassIdMeta Object: class_id</span>
+<span class="sd">                            xml_attribute</span>
+<span class="sd">                            rn</span>
+<span class="sd">                            min_version</span>
+<span class="sd">                            access</span>
+<span class="sd">                            access_privilege</span>
+<span class="sd">                            parents : parent list</span>
+<span class="sd">                            children : children list</span>
+<span class="sd">                            properties : property list</span>
+<span class="sd">                            props : {property_name : MoPropertyMeta Object}</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;)</span>
+<span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, break_level=2)</span>
+<span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, include_prop=False)</span>
+<span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, show_tree=False)</span>
+
+<span class="sd">        print(meta.xml_attribute)</span>
+<span class="sd">        print(meta.children)</span>
+<span class="sd">        print(meta.props[&quot;name&quot;])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">search_class_id</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">meta_class_id</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="n">show_tree</span><span class="p">:</span>
+        <span class="n">_show_tree</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="n">meta_class_id</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="n">break_level</span><span class="p">)</span>
+
+    <span class="n">class_id_meta</span> <span class="o">=</span> <span class="n">ClassIdMeta</span><span class="p">(</span><span class="n">meta_class_id</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">class_id_meta</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">include_prop</span><span class="p">:</span>
+        <span class="n">class_id_meta</span><span class="o">.</span><span class="n">get_prop_dict</span><span class="p">()</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="n">class_id_meta</span><span class="o">.</span><span class="n">props</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">props</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">No property info available for </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">class_id</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">class_id_meta</span>
+        <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">props</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">props</span><span class="p">[</span><span class="n">prop</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">class_id_meta</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

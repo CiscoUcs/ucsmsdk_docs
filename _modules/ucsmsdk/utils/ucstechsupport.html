@@ -1,153 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.utils.ucstechsupport &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../index.html"/>
-        <link rel="up" title="Module code" href="../../index.html"/> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.utils.ucstechsupport &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.utils.ucstechsupport</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.utils.ucstechsupport</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2013 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License at</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2013 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module contains the api used to create and download tech_support file.</span>
+<span class="sd">This module contains the APIs used to create and download tech_support file.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -156,7 +63,7 @@
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">..ucsexception</span> <span class="kn">import</span> <span class="n">UcsValidationException</span><span class="p">,</span> <span class="n">UcsWarning</span>
 
-<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;ucs&#39;</span><span class="p">)</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="get_ucs_tech_support"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.ucstechsupport.get_ucs_tech_support">[docs]</a><span class="k">def</span> <span class="nf">get_ucs_tech_support</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span>
@@ -170,35 +77,36 @@
                          <span class="n">download_techsupp</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">file_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                          <span class="n">timeout_in_sec</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This operation creates and downloads the technical support data for</span>
-<span class="sd">    the respective UCSM.</span>
+<span class="sd">    This operation creates and downloads the technical support file for</span>
+<span class="sd">    the specified Ucs server.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        handle (UcsHandle)</span>
-<span class="sd">        ucs_manager (bool): by default False, if provided as True then</span>
-<span class="sd">                            technical support data for the entire UCSM</span>
-<span class="sd">                            instance will be created and downloaded.</span>
-<span class="sd">        ucs_mgmt (bool): by default False,  if provided as True then</span>
-<span class="sd">                          technical support data for the entire UCSM</span>
-<span class="sd">                          management services(excluding fabric</span>
-<span class="sd">                          interconnects) will be created and downloaded.</span>
-<span class="sd">        chassis_id (int): chassis id.</span>
-<span class="sd">        cimc_id (int): for a specific chassis. Can be &#39;all&#39; also.</span>
-<span class="sd">        adapter_id (int): for a specific chassis. Can be &#39;all&#39; also.</span>
-<span class="sd">        iom_id (int): for a specific chassis. Can be &#39;all&#39; also.</span>
+<span class="sd">        handle (UcsHandle): Ucs connection handle</span>
+<span class="sd">        ucs_manager (bool): True/False,</span>
+<span class="sd">                            False - by default</span>
+<span class="sd">                            Create and download TechSupport for UCSM, if true</span>
+<span class="sd">        ucs_mgmt (bool): True/False,</span>
+<span class="sd">                         False - by default</span>
+<span class="sd">                         Create and download TechSupport for UCSM Management</span>
+<span class="sd">                         services(excluding Fabric interconnects), if true</span>
+<span class="sd">        chassis_id (int): chassis id</span>
+<span class="sd">        cimc_id (int/string): for a specific chassis. Can be &#39;all&#39;.</span>
+<span class="sd">        adapter_id (int/string): for a specific chassis. Can be &#39;all&#39;.</span>
+<span class="sd">        iom_id (int/string): for a specific chassis. Can be &#39;all&#39;.</span>
 <span class="sd">        fex_id (int): id of a fabric extender.</span>
 <span class="sd">        rack_server_id (int): id of a rack server.</span>
-<span class="sd">        rack_adapter_id (int): adaptor_id for a specific rack server.</span>
-<span class="sd">                              Can be &#39;all&#39; also.</span>
-<span class="sd">        remove_from_ucs (bool): by default False, if specified as True</span>
-<span class="sd">                              then the technical support data file will</span>
-<span class="sd">                              be removed from the UCS.</span>
-<span class="sd">        download_techsupp (bool): by default True, if True suggests to</span>
-<span class="sd">                                  download the tech support file.</span>
-<span class="sd">        file_dir (str): directory to download tech support file</span>
+<span class="sd">        rack_adapter_id (int/string): adaptor_id for a specific rack server.</span>
+<span class="sd">                              Can be &#39;all&#39;.</span>
+<span class="sd">        remove_from_ucs (bool): True/False,</span>
+<span class="sd">                                False - by default</span>
+<span class="sd">                                TechSupport will be removed from server, if True</span>
+<span class="sd">        download_techsupp (bool): True/False,</span>
+<span class="sd">                                    True - by default</span>
+<span class="sd">                                    Download the TechSupport file, if True</span>
+<span class="sd">        file_dir (str): directory to download tech support file to</span>
 <span class="sd">        file_name (str): name of the download tech support file</span>
-<span class="sd">        timeout_in_sec (int): specifies the time in seconds after that</span>
-<span class="sd">                                the operation will terminate.</span>
+<span class="sd">        timeout_in_sec (int): specifies the time in seconds after which</span>
+<span class="sd">                                the operation times-out.</span>
 
 <span class="sd">    Example:</span>
 <span class="sd">        * M - Manadatory, O - Optional</span>
@@ -283,7 +191,7 @@
 
     <span class="kn">from</span> <span class="nn">..mometa.top.TopSystem</span> <span class="kn">import</span> <span class="n">TopSystem</span>
     <span class="kn">from</span> <span class="nn">..mometa.sysdebug.SysdebugTechSupport</span> <span class="kn">import</span> <span class="n">SysdebugTechSupport</span><span class="p">,</span> \
-                                                    <span class="n">SysdebugTechSupportConsts</span>
+        <span class="n">SysdebugTechSupportConsts</span>
     <span class="kn">from</span> <span class="nn">..mometa.sysdebug.SysdebugTechSupFileRepository</span> <span class="kn">import</span> \
         <span class="n">SysdebugTechSupFileRepository</span>
     <span class="kn">from</span> <span class="nn">..mometa.sysdebug.SysdebugTechSupportCmdOpt</span> <span class="kn">import</span> \
@@ -291,25 +199,22 @@
 
     <span class="k">if</span> <span class="n">download_techsupp</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">file_name</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&#39;provide file_name&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s1">&#39;provide file_name&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">file_dir</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&#39;provide dir_name&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s1">&#39;provide dir_name&#39;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;.tar&#39;</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&#39;file_name should end with .tar&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.tar&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s1">&#39;file_name should end with .tar&#39;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_dir</span><span class="p">):</span>
             <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">file_dir</span><span class="p">)</span>
 
-    <span class="c"># Converting timedelta in to total seconds for Python version compatibility</span>
+    <span class="c1"># Converting timedelta in to total seconds for Python version compatibility</span>
     <span class="n">dt1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">dt2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
-    <span class="n">time_delta</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt2</span> <span class="o">-</span> <span class="n">dt1</span><span class="p">)</span>
-    <span class="n">creation_ts</span> <span class="o">=</span> <span class="n">time_delta</span><span class="o">.</span><span class="n">microseconds</span> <span class="o">/</span> <span class="mi">1000000</span> <span class="o">+</span> \
-                  <span class="p">(</span><span class="n">time_delta</span><span class="o">.</span><span class="n">days</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span> <span class="o">+</span> \
-                  <span class="n">time_delta</span><span class="o">.</span><span class="n">seconds</span>
+    <span class="n">creation_ts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">dt2</span> <span class="o">-</span> <span class="n">dt1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
 
-    <span class="c"># create SysdebugTechSupport</span>
+    <span class="c1"># create SysdebugTechSupport</span>
     <span class="n">top_system</span> <span class="o">=</span> <span class="n">TopSystem</span><span class="p">()</span>
     <span class="n">sysdebug_techsup_file_repo</span> <span class="o">=</span> <span class="n">SysdebugTechSupFileRepository</span><span class="p">(</span>
         <span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="n">top_system</span><span class="p">)</span>
@@ -321,7 +226,7 @@
     <span class="n">sys_debug_tech_support_cmd_opt</span> <span class="o">=</span> <span class="n">SysdebugTechSupportCmdOpt</span><span class="p">(</span>
         <span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="n">sys_debug_tech_support</span><span class="p">)</span>
 
-    <span class="c"># Parameter Set UCSM</span>
+    <span class="c1"># Parameter Set UCSM</span>
     <span class="k">if</span> <span class="n">ucs_manager</span><span class="p">:</span>
         <span class="n">sys_debug_tech_support_cmd_opt</span><span class="o">.</span><span class="n">major_opt_type</span> <span class="o">=</span> \
             <span class="n">SysdebugTechSupportCmdOptConsts</span><span class="o">.</span><span class="n">MAJOR_OPT_TYPE_UCSM</span>
@@ -360,12 +265,12 @@
     <span class="k">elif</span> <span class="n">fex_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">sys_debug_tech_support_cmd_opt</span><span class="o">.</span><span class="n">fab_ext_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">iom_id</span><span class="p">)</span>
         <span class="n">sys_debug_tech_support_cmd_opt</span><span class="o">.</span><span class="n">major_opt_type</span> <span class="o">=</span> \
-                <span class="n">SysdebugTechSupportCmdOptConsts</span><span class="o">.</span><span class="n">MAJOR_OPT_TYPE_FEX</span>
+            <span class="n">SysdebugTechSupportCmdOptConsts</span><span class="o">.</span><span class="n">MAJOR_OPT_TYPE_FEX</span>
 
     <span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">sys_debug_tech_support</span><span class="p">)</span>
     <span class="n">handle</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
-    <span class="c"># poll for tech support to complete</span>
+    <span class="c1"># poll for tech support to complete</span>
     <span class="n">duration</span> <span class="o">=</span> <span class="n">timeout_in_sec</span>
     <span class="n">poll_interval</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">status</span> <span class="o">=</span> <span class="bp">False</span>
@@ -382,82 +287,65 @@
         <span class="k">if</span> <span class="n">duration</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">handle</span><span class="o">.</span><span class="n">remove_mo</span><span class="p">(</span><span class="n">tech_support</span><span class="p">)</span>
             <span class="n">handle</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&#39;TechSupport file creation timed out&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s1">&#39;TechSupport file creation timed out&#39;</span><span class="p">)</span>
 
-    <span class="c"># download tech support file</span>
+    <span class="c1"># download tech support file</span>
     <span class="k">if</span> <span class="n">download_techsupp</span><span class="p">:</span>
-        <span class="n">url_suffix</span> <span class="o">=</span> <span class="s">&quot;techsupport/&quot;</span> <span class="o">+</span> <span class="n">tech_support</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">url_suffix</span> <span class="o">=</span> <span class="s2">&quot;techsupport/&quot;</span> <span class="o">+</span> <span class="n">tech_support</span><span class="o">.</span><span class="n">name</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">handle</span><span class="o">.</span><span class="n">file_download</span><span class="p">(</span><span class="n">url_suffix</span><span class="o">=</span><span class="n">url_suffix</span><span class="p">,</span>
-                                 <span class="n">dest_dir</span><span class="o">=</span><span class="n">file_dir</span><span class="p">,</span>
+                                 <span class="n">file_dir</span><span class="o">=</span><span class="n">file_dir</span><span class="p">,</span>
                                  <span class="n">file_name</span><span class="o">=</span><span class="n">file_name</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
             <span class="n">UcsWarning</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
 
-    <span class="c"># remove tech support file from ucs</span>
+    <span class="c1"># remove tech support file from ucs</span>
     <span class="k">if</span> <span class="n">remove_from_ucs</span><span class="p">:</span>
-        <span class="n">handle</span><span class="o">.</span><span class="n">remove_mo</span><span class="p">(</span><span class="n">tech_support</span><span class="p">)</span>
+        <span class="n">tech_support</span><span class="o">.</span><span class="n">admin_state</span> <span class="o">=</span> <span class="s2">&quot;delete&quot;</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">set_mo</span><span class="p">(</span><span class="n">tech_support</span><span class="p">)</span>
         <span class="n">handle</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">tech_support</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

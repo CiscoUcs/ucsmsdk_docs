@@ -1,482 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.ape.ApeSdr &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
-        <link rel="up" title="Module code" href="../../../index.html"/> 
-
-  
-  <script src="../../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.ape.ApeSdr &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.ape.ApeSdr</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.mometa.ape.ApeSdr</h1><div class="highlight"><pre>
-<span class="sd">&quot;&quot;&quot;This module contains the general information for ApeSdr ManagedObject.&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the general information for ApeSdr ManagedObject.&quot;&quot;&quot;</span>
 
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
-<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
-<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
-<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">...ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">...ucscoremeta</span> <span class="kn">import</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">...ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
 
 
-<div class="viewcode-block" id="ApeSdrConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.ape.html#ucsmsdk.mometa.ape.ApeSdr.ApeSdrConsts">[docs]</a><span class="k">class</span> <span class="nc">ApeSdrConsts</span><span class="p">():</span>
-    <span class="n">ENTITY_TYPE_ADD_IN_CARD</span> <span class="o">=</span> <span class="s">&quot;ADD_IN_CARD&quot;</span>
-    <span class="n">ENTITY_TYPE_BACK_PANEL_BOARD</span> <span class="o">=</span> <span class="s">&quot;BACK_PANEL_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_BATTERY</span> <span class="o">=</span> <span class="s">&quot;BATTERY&quot;</span>
-    <span class="n">ENTITY_TYPE_BIOS</span> <span class="o">=</span> <span class="s">&quot;BIOS&quot;</span>
-    <span class="n">ENTITY_TYPE_CABLE_INTERCONNECT</span> <span class="o">=</span> <span class="s">&quot;CABLE_INTERCONNECT&quot;</span>
-    <span class="n">ENTITY_TYPE_CHASSIS_BACK_PANEL_BOARD</span> <span class="o">=</span> <span class="s">&quot;CHASSIS_BACK_PANEL_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_CMC</span> <span class="o">=</span> <span class="s">&quot;CMC&quot;</span>
-    <span class="n">ENTITY_TYPE_CONNECTIVITY_SWITCH</span> <span class="o">=</span> <span class="s">&quot;CONNECTIVITY_SWITCH&quot;</span>
-    <span class="n">ENTITY_TYPE_COOLING_UNIT</span> <span class="o">=</span> <span class="s">&quot;COOLING_UNIT&quot;</span>
-    <span class="n">ENTITY_TYPE_DEVICE_BAY</span> <span class="o">=</span> <span class="s">&quot;DEVICE_BAY&quot;</span>
-    <span class="n">ENTITY_TYPE_DISK</span> <span class="o">=</span> <span class="s">&quot;DISK&quot;</span>
-    <span class="n">ENTITY_TYPE_DISK_DRIVE_BAY</span> <span class="o">=</span> <span class="s">&quot;DISK_DRIVE_BAY&quot;</span>
-    <span class="n">ENTITY_TYPE_DRIVE_BACKPLANE</span> <span class="o">=</span> <span class="s">&quot;DRIVE_BACKPLANE&quot;</span>
-    <span class="n">ENTITY_TYPE_EXTERNAL_ENVIRONMENT</span> <span class="o">=</span> <span class="s">&quot;EXTERNAL_ENVIRONMENT&quot;</span>
-    <span class="n">ENTITY_TYPE_FAN_COOLING</span> <span class="o">=</span> <span class="s">&quot;FAN_COOLING&quot;</span>
-    <span class="n">ENTITY_TYPE_FRONT_PANEL_BOARD</span> <span class="o">=</span> <span class="s">&quot;FRONT_PANEL_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_GROUP</span> <span class="o">=</span> <span class="s">&quot;GROUP&quot;</span>
-    <span class="n">ENTITY_TYPE_IBMC</span> <span class="o">=</span> <span class="s">&quot;IBMC&quot;</span>
-    <span class="n">ENTITY_TYPE_IO_MODULE</span> <span class="o">=</span> <span class="s">&quot;IO_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_IPMI_CHANNEL</span> <span class="o">=</span> <span class="s">&quot;IPMI_CHANNEL&quot;</span>
-    <span class="n">ENTITY_TYPE_MEMORY_DEVICE</span> <span class="o">=</span> <span class="s">&quot;MEMORY_DEVICE&quot;</span>
-    <span class="n">ENTITY_TYPE_MEMORY_MODULE</span> <span class="o">=</span> <span class="s">&quot;MEMORY_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_MGMT_CONTROLLER_FIRMWARE</span> <span class="o">=</span> <span class="s">&quot;MGMT_CONTROLLER_FIRMWARE&quot;</span>
-    <span class="n">ENTITY_TYPE_OPERATING_SYSTEM</span> <span class="o">=</span> <span class="s">&quot;OPERATING_SYSTEM&quot;</span>
-    <span class="n">ENTITY_TYPE_OTHER</span> <span class="o">=</span> <span class="s">&quot;OTHER&quot;</span>
-    <span class="n">ENTITY_TYPE_OTHER_CHASSIS_BOARD</span> <span class="o">=</span> <span class="s">&quot;OTHER_CHASSIS_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_OTHER_SYSTEM_BOARD</span> <span class="o">=</span> <span class="s">&quot;OTHER_SYSTEM_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_PCI_BUS</span> <span class="o">=</span> <span class="s">&quot;PCI_BUS&quot;</span>
-    <span class="n">ENTITY_TYPE_PCI_EXPRESS_BUS</span> <span class="o">=</span> <span class="s">&quot;PCI_EXPRESS_BUS&quot;</span>
-    <span class="n">ENTITY_TYPE_PERIPHERAL</span> <span class="o">=</span> <span class="s">&quot;PERIPHERAL&quot;</span>
-    <span class="n">ENTITY_TYPE_PERIPHERAL_BAY</span> <span class="o">=</span> <span class="s">&quot;PERIPHERAL_BAY&quot;</span>
-    <span class="n">ENTITY_TYPE_POWER_MANAGEMENT_BOARD</span> <span class="o">=</span> <span class="s">&quot;POWER_MANAGEMENT_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_POWER_MODULE</span> <span class="o">=</span> <span class="s">&quot;POWER_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_POWER_SUPPLY</span> <span class="o">=</span> <span class="s">&quot;POWER_SUPPLY&quot;</span>
-    <span class="n">ENTITY_TYPE_POWER_SYSTEM_BOARD</span> <span class="o">=</span> <span class="s">&quot;POWER_SYSTEM_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_POWER_UNIT</span> <span class="o">=</span> <span class="s">&quot;POWER_UNIT&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSING_BLADE</span> <span class="o">=</span> <span class="s">&quot;PROCESSING_BLADE&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSOR</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSOR_BOARD</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSOR_FRONT_SIDE_BUS</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR_FRONT_SIDE_BUS&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSOR_IO_MODULE</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR_IO_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSOR_MEMORY_MODULE</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR_MEMORY_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_PROCESSOR_MODULE</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_REMOTE_MGMT_COMM_DEVICE</span> <span class="o">=</span> <span class="s">&quot;REMOTE_MGMT_COMM_DEVICE&quot;</span>
-    <span class="n">ENTITY_TYPE_SATA_SAS_BUS</span> <span class="o">=</span> <span class="s">&quot;SATA_SAS_BUS&quot;</span>
-    <span class="n">ENTITY_TYPE_SCSI_BUS</span> <span class="o">=</span> <span class="s">&quot;SCSI_BUS&quot;</span>
-    <span class="n">ENTITY_TYPE_SUB_CHASSIS</span> <span class="o">=</span> <span class="s">&quot;SUB_CHASSIS&quot;</span>
-    <span class="n">ENTITY_TYPE_SYSTEM_BOARD</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_SYSTEM_BUS</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_BUS&quot;</span>
-    <span class="n">ENTITY_TYPE_SYSTEM_CHASSIS</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_CHASSIS&quot;</span>
-    <span class="n">ENTITY_TYPE_SYSTEM_INTERNAL_EXPANSION_BOARD</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_INTERNAL_EXPANSION_BOARD&quot;</span>
-    <span class="n">ENTITY_TYPE_SYSTEM_MANAGEMENT_MODULE</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_MANAGEMENT_MODULE&quot;</span>
-    <span class="n">ENTITY_TYPE_SYSTEM_MANAGEMENT_SOFTWARE</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_MANAGEMENT_SOFTWARE&quot;</span>
-    <span class="n">ENTITY_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;UNKNOWN&quot;</span>
-    <span class="n">ENTITY_TYPE_UNSPECIFIED</span> <span class="o">=</span> <span class="s">&quot;UNSPECIFIED&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_ACPI_POWER</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_ACPI_POWER&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_AVAILABILITY</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_AVAILABILITY&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_DEVICE_ENABLE</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_DEVICE_ENABLE&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_DEVICE_PRESENCE</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_DEVICE_PRESENCE&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_LIMIT_EXCEEDED</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_LIMIT_EXCEEDED&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_PERFORMANCE_MET</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_PERFORMANCE_MET&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_PREDICTIVE_FAILURE</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_PREDICTIVE_FAILURE&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_REDUNDANCY</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_REDUNDANCY&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_SEVERITY</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_SEVERITY&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_STATE</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_STATE&quot;</span>
-    <span class="n">EVENT_READING_TYPE_DISCRETE_USAGE</span> <span class="o">=</span> <span class="s">&quot;DISCRETE_USAGE&quot;</span>
-    <span class="n">EVENT_READING_TYPE_OEM1</span> <span class="o">=</span> <span class="s">&quot;OEM1&quot;</span>
-    <span class="n">EVENT_READING_TYPE_SENSOR_SPECIFIC</span> <span class="o">=</span> <span class="s">&quot;SENSOR_SPECIFIC&quot;</span>
-    <span class="n">EVENT_READING_TYPE_THRESHOLD</span> <span class="o">=</span> <span class="s">&quot;THRESHOLD&quot;</span>
-    <span class="n">EVENT_READING_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;UNKNOWN&quot;</span>
-    <span class="n">INSTANCE_ADD_IN_CARD</span> <span class="o">=</span> <span class="s">&quot;ADD_IN_CARD&quot;</span>
-    <span class="n">INSTANCE_BATTERY</span> <span class="o">=</span> <span class="s">&quot;BATTERY&quot;</span>
-    <span class="n">INSTANCE_BOOT_ERROR</span> <span class="o">=</span> <span class="s">&quot;BOOT_ERROR&quot;</span>
-    <span class="n">INSTANCE_BUTTON</span> <span class="o">=</span> <span class="s">&quot;BUTTON&quot;</span>
-    <span class="n">INSTANCE_CABLE_INTERCONNECT</span> <span class="o">=</span> <span class="s">&quot;CABLE_INTERCONNECT&quot;</span>
-    <span class="n">INSTANCE_CHASSIS</span> <span class="o">=</span> <span class="s">&quot;CHASSIS&quot;</span>
-    <span class="n">INSTANCE_CHIP_SET</span> <span class="o">=</span> <span class="s">&quot;CHIP_SET&quot;</span>
-    <span class="n">INSTANCE_COOLING_DEVICE</span> <span class="o">=</span> <span class="s">&quot;COOLING_DEVICE&quot;</span>
-    <span class="n">INSTANCE_CRITICAL_INTERRUPT</span> <span class="o">=</span> <span class="s">&quot;CRITICAL_INTERRUPT&quot;</span>
-    <span class="n">INSTANCE_CURRENT</span> <span class="o">=</span> <span class="s">&quot;CURRENT&quot;</span>
-    <span class="n">INSTANCE_DRIVE_SLOT</span> <span class="o">=</span> <span class="s">&quot;DRIVE_SLOT&quot;</span>
-    <span class="n">INSTANCE_ENTITY_PRESENCE</span> <span class="o">=</span> <span class="s">&quot;ENTITY_PRESENCE&quot;</span>
-    <span class="n">INSTANCE_EVENT_LOGGING_DISABLED</span> <span class="o">=</span> <span class="s">&quot;EVENT_LOGGING_DISABLED&quot;</span>
-    <span class="n">INSTANCE_FAN</span> <span class="o">=</span> <span class="s">&quot;FAN&quot;</span>
-    <span class="n">INSTANCE_FRU_STATE</span> <span class="o">=</span> <span class="s">&quot;FRU_STATE&quot;</span>
-    <span class="n">INSTANCE_LAN</span> <span class="o">=</span> <span class="s">&quot;LAN&quot;</span>
-    <span class="n">INSTANCE_MANAGEMENT_SUBSYSTEM_HEALTH</span> <span class="o">=</span> <span class="s">&quot;MANAGEMENT_SUBSYSTEM_HEALTH&quot;</span>
-    <span class="n">INSTANCE_MEMORY</span> <span class="o">=</span> <span class="s">&quot;MEMORY&quot;</span>
-    <span class="n">INSTANCE_MICROCONTROLLER_COPROCESSOR</span> <span class="o">=</span> <span class="s">&quot;MICROCONTROLLER_COPROCESSOR&quot;</span>
-    <span class="n">INSTANCE_MODULE_BOARD</span> <span class="o">=</span> <span class="s">&quot;MODULE_BOARD&quot;</span>
-    <span class="n">INSTANCE_MONITOR_ASIC_IC</span> <span class="o">=</span> <span class="s">&quot;MONITOR_ASIC_IC&quot;</span>
-    <span class="n">INSTANCE_OEM1</span> <span class="o">=</span> <span class="s">&quot;OEM1&quot;</span>
-    <span class="n">INSTANCE_OEM2</span> <span class="o">=</span> <span class="s">&quot;OEM2&quot;</span>
-    <span class="n">INSTANCE_OEM3</span> <span class="o">=</span> <span class="s">&quot;OEM3&quot;</span>
-    <span class="n">INSTANCE_OEM4</span> <span class="o">=</span> <span class="s">&quot;OEM4&quot;</span>
-    <span class="n">INSTANCE_OEM5</span> <span class="o">=</span> <span class="s">&quot;OEM5&quot;</span>
-    <span class="n">INSTANCE_OEM7</span> <span class="o">=</span> <span class="s">&quot;OEM7&quot;</span>
-    <span class="n">INSTANCE_OS_BOOT</span> <span class="o">=</span> <span class="s">&quot;OS_BOOT&quot;</span>
-    <span class="n">INSTANCE_OS_CRITICAL_STOP</span> <span class="o">=</span> <span class="s">&quot;OS_CRITICAL_STOP&quot;</span>
-    <span class="n">INSTANCE_OTHER_FRU</span> <span class="o">=</span> <span class="s">&quot;OTHER_FRU&quot;</span>
-    <span class="n">INSTANCE_OTHER_UNITS_BASED_SENSOR</span> <span class="o">=</span> <span class="s">&quot;OTHER_UNITS_BASED_SENSOR&quot;</span>
-    <span class="n">INSTANCE_PHYSICAL_SECURITY</span> <span class="o">=</span> <span class="s">&quot;PHYSICAL_SECURITY&quot;</span>
-    <span class="n">INSTANCE_PLATFORM_ALERT</span> <span class="o">=</span> <span class="s">&quot;PLATFORM_ALERT&quot;</span>
-    <span class="n">INSTANCE_PLATFORM_SECURITY</span> <span class="o">=</span> <span class="s">&quot;PLATFORM_SECURITY&quot;</span>
-    <span class="n">INSTANCE_POWER_MEMORY_RESIZE</span> <span class="o">=</span> <span class="s">&quot;POWER_MEMORY_RESIZE&quot;</span>
-    <span class="n">INSTANCE_POWER_SUPPLY</span> <span class="o">=</span> <span class="s">&quot;POWER_SUPPLY&quot;</span>
-    <span class="n">INSTANCE_POWER_UNIT</span> <span class="o">=</span> <span class="s">&quot;POWER_UNIT&quot;</span>
-    <span class="n">INSTANCE_PROCESSOR</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR&quot;</span>
-    <span class="n">INSTANCE_SESSION_AUDIT</span> <span class="o">=</span> <span class="s">&quot;SESSION_AUDIT&quot;</span>
-    <span class="n">INSTANCE_SLOT_CONNECTOR</span> <span class="o">=</span> <span class="s">&quot;SLOT_CONNECTOR&quot;</span>
-    <span class="n">INSTANCE_SYSTEM_ACPI_POWER_STATE</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_ACPI_POWER_STATE&quot;</span>
-    <span class="n">INSTANCE_SYSTEM_BOOT_INITIATED</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_BOOT_INITIATED&quot;</span>
-    <span class="n">INSTANCE_SYSTEM_EVENT</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_EVENT&quot;</span>
-    <span class="n">INSTANCE_SYSTEM_FIRMWARE_PROGRESS</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_FIRMWARE_PROGRESS&quot;</span>
-    <span class="n">INSTANCE_TEMPERATURE</span> <span class="o">=</span> <span class="s">&quot;TEMPERATURE&quot;</span>
-    <span class="n">INSTANCE_TERMINATOR</span> <span class="o">=</span> <span class="s">&quot;TERMINATOR&quot;</span>
-    <span class="n">INSTANCE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;UNKNOWN&quot;</span>
-    <span class="n">INSTANCE_VERSION_CHANGE</span> <span class="o">=</span> <span class="s">&quot;VERSION_CHANGE&quot;</span>
-    <span class="n">INSTANCE_VOLTAGE</span> <span class="o">=</span> <span class="s">&quot;VOLTAGE&quot;</span>
-    <span class="n">INSTANCE_WATCHDOG_1</span> <span class="o">=</span> <span class="s">&quot;WATCHDOG_1&quot;</span>
-    <span class="n">INSTANCE_WATCHDOG_2</span> <span class="o">=</span> <span class="s">&quot;WATCHDOG_2&quot;</span>
-    <span class="n">SDR_TYPE_COMPACT_SENSOR_RECORD</span> <span class="o">=</span> <span class="s">&quot;COMPACT_SENSOR_RECORD&quot;</span>
-    <span class="n">SDR_TYPE_FULL_SENSOR_RECORD</span> <span class="o">=</span> <span class="s">&quot;FULL_SENSOR_RECORD&quot;</span>
-    <span class="n">SDR_TYPE_UNKNOWN_RECORD</span> <span class="o">=</span> <span class="s">&quot;UNKNOWN_RECORD&quot;</span>
-    <span class="n">SENSOR_TYPE_ADD_IN_CARD</span> <span class="o">=</span> <span class="s">&quot;ADD_IN_CARD&quot;</span>
-    <span class="n">SENSOR_TYPE_BATTERY</span> <span class="o">=</span> <span class="s">&quot;BATTERY&quot;</span>
-    <span class="n">SENSOR_TYPE_BOOT_ERROR</span> <span class="o">=</span> <span class="s">&quot;BOOT_ERROR&quot;</span>
-    <span class="n">SENSOR_TYPE_BUTTON</span> <span class="o">=</span> <span class="s">&quot;BUTTON&quot;</span>
-    <span class="n">SENSOR_TYPE_CABLE_INTERCONNECT</span> <span class="o">=</span> <span class="s">&quot;CABLE_INTERCONNECT&quot;</span>
-    <span class="n">SENSOR_TYPE_CHASSIS</span> <span class="o">=</span> <span class="s">&quot;CHASSIS&quot;</span>
-    <span class="n">SENSOR_TYPE_CHIP_SET</span> <span class="o">=</span> <span class="s">&quot;CHIP_SET&quot;</span>
-    <span class="n">SENSOR_TYPE_COOLING_DEVICE</span> <span class="o">=</span> <span class="s">&quot;COOLING_DEVICE&quot;</span>
-    <span class="n">SENSOR_TYPE_CRITICAL_INTERRUPT</span> <span class="o">=</span> <span class="s">&quot;CRITICAL_INTERRUPT&quot;</span>
-    <span class="n">SENSOR_TYPE_CURRENT</span> <span class="o">=</span> <span class="s">&quot;CURRENT&quot;</span>
-    <span class="n">SENSOR_TYPE_DRIVE_SLOT</span> <span class="o">=</span> <span class="s">&quot;DRIVE_SLOT&quot;</span>
-    <span class="n">SENSOR_TYPE_ENTITY_PRESENCE</span> <span class="o">=</span> <span class="s">&quot;ENTITY_PRESENCE&quot;</span>
-    <span class="n">SENSOR_TYPE_EVENT_LOGGING_DISABLED</span> <span class="o">=</span> <span class="s">&quot;EVENT_LOGGING_DISABLED&quot;</span>
-    <span class="n">SENSOR_TYPE_FAN</span> <span class="o">=</span> <span class="s">&quot;FAN&quot;</span>
-    <span class="n">SENSOR_TYPE_FRU_STATE</span> <span class="o">=</span> <span class="s">&quot;FRU_STATE&quot;</span>
-    <span class="n">SENSOR_TYPE_LAN</span> <span class="o">=</span> <span class="s">&quot;LAN&quot;</span>
-    <span class="n">SENSOR_TYPE_MANAGEMENT_SUBSYSTEM_HEALTH</span> <span class="o">=</span> <span class="s">&quot;MANAGEMENT_SUBSYSTEM_HEALTH&quot;</span>
-    <span class="n">SENSOR_TYPE_MEMORY</span> <span class="o">=</span> <span class="s">&quot;MEMORY&quot;</span>
-    <span class="n">SENSOR_TYPE_MICROCONTROLLER_COPROCESSOR</span> <span class="o">=</span> <span class="s">&quot;MICROCONTROLLER_COPROCESSOR&quot;</span>
-    <span class="n">SENSOR_TYPE_MODULE_BOARD</span> <span class="o">=</span> <span class="s">&quot;MODULE_BOARD&quot;</span>
-    <span class="n">SENSOR_TYPE_MONITOR_ASIC_IC</span> <span class="o">=</span> <span class="s">&quot;MONITOR_ASIC_IC&quot;</span>
-    <span class="n">SENSOR_TYPE_OEM1</span> <span class="o">=</span> <span class="s">&quot;OEM1&quot;</span>
-    <span class="n">SENSOR_TYPE_OEM2</span> <span class="o">=</span> <span class="s">&quot;OEM2&quot;</span>
-    <span class="n">SENSOR_TYPE_OEM3</span> <span class="o">=</span> <span class="s">&quot;OEM3&quot;</span>
-    <span class="n">SENSOR_TYPE_OEM4</span> <span class="o">=</span> <span class="s">&quot;OEM4&quot;</span>
-    <span class="n">SENSOR_TYPE_OEM5</span> <span class="o">=</span> <span class="s">&quot;OEM5&quot;</span>
-    <span class="n">SENSOR_TYPE_OEM7</span> <span class="o">=</span> <span class="s">&quot;OEM7&quot;</span>
-    <span class="n">SENSOR_TYPE_OS_BOOT</span> <span class="o">=</span> <span class="s">&quot;OS_BOOT&quot;</span>
-    <span class="n">SENSOR_TYPE_OS_CRITICAL_STOP</span> <span class="o">=</span> <span class="s">&quot;OS_CRITICAL_STOP&quot;</span>
-    <span class="n">SENSOR_TYPE_OTHER_FRU</span> <span class="o">=</span> <span class="s">&quot;OTHER_FRU&quot;</span>
-    <span class="n">SENSOR_TYPE_OTHER_UNITS_BASED_SENSOR</span> <span class="o">=</span> <span class="s">&quot;OTHER_UNITS_BASED_SENSOR&quot;</span>
-    <span class="n">SENSOR_TYPE_PHYSICAL_SECURITY</span> <span class="o">=</span> <span class="s">&quot;PHYSICAL_SECURITY&quot;</span>
-    <span class="n">SENSOR_TYPE_PLATFORM_ALERT</span> <span class="o">=</span> <span class="s">&quot;PLATFORM_ALERT&quot;</span>
-    <span class="n">SENSOR_TYPE_PLATFORM_SECURITY</span> <span class="o">=</span> <span class="s">&quot;PLATFORM_SECURITY&quot;</span>
-    <span class="n">SENSOR_TYPE_POWER_MEMORY_RESIZE</span> <span class="o">=</span> <span class="s">&quot;POWER_MEMORY_RESIZE&quot;</span>
-    <span class="n">SENSOR_TYPE_POWER_SUPPLY</span> <span class="o">=</span> <span class="s">&quot;POWER_SUPPLY&quot;</span>
-    <span class="n">SENSOR_TYPE_POWER_UNIT</span> <span class="o">=</span> <span class="s">&quot;POWER_UNIT&quot;</span>
-    <span class="n">SENSOR_TYPE_PROCESSOR</span> <span class="o">=</span> <span class="s">&quot;PROCESSOR&quot;</span>
-    <span class="n">SENSOR_TYPE_SESSION_AUDIT</span> <span class="o">=</span> <span class="s">&quot;SESSION_AUDIT&quot;</span>
-    <span class="n">SENSOR_TYPE_SLOT_CONNECTOR</span> <span class="o">=</span> <span class="s">&quot;SLOT_CONNECTOR&quot;</span>
-    <span class="n">SENSOR_TYPE_SYSTEM_ACPI_POWER_STATE</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_ACPI_POWER_STATE&quot;</span>
-    <span class="n">SENSOR_TYPE_SYSTEM_BOOT_INITIATED</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_BOOT_INITIATED&quot;</span>
-    <span class="n">SENSOR_TYPE_SYSTEM_EVENT</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_EVENT&quot;</span>
-    <span class="n">SENSOR_TYPE_SYSTEM_FIRMWARE_PROGRESS</span> <span class="o">=</span> <span class="s">&quot;SYSTEM_FIRMWARE_PROGRESS&quot;</span>
-    <span class="n">SENSOR_TYPE_TEMPERATURE</span> <span class="o">=</span> <span class="s">&quot;TEMPERATURE&quot;</span>
-    <span class="n">SENSOR_TYPE_TERMINATOR</span> <span class="o">=</span> <span class="s">&quot;TERMINATOR&quot;</span>
-    <span class="n">SENSOR_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;UNKNOWN&quot;</span>
-    <span class="n">SENSOR_TYPE_VERSION_CHANGE</span> <span class="o">=</span> <span class="s">&quot;VERSION_CHANGE&quot;</span>
-    <span class="n">SENSOR_TYPE_VOLTAGE</span> <span class="o">=</span> <span class="s">&quot;VOLTAGE&quot;</span>
-    <span class="n">SENSOR_TYPE_WATCHDOG_1</span> <span class="o">=</span> <span class="s">&quot;WATCHDOG_1&quot;</span>
-    <span class="n">SENSOR_TYPE_WATCHDOG_2</span> <span class="o">=</span> <span class="s">&quot;WATCHDOG_2&quot;</span>
-    <span class="n">TYPE_COMPACT_SENSOR_RECORD</span> <span class="o">=</span> <span class="s">&quot;COMPACT_SENSOR_RECORD&quot;</span>
-    <span class="n">TYPE_FULL_SENSOR_RECORD</span> <span class="o">=</span> <span class="s">&quot;FULL_SENSOR_RECORD&quot;</span>
-    <span class="n">TYPE_UNKNOWN_RECORD</span> <span class="o">=</span> <span class="s">&quot;UNKNOWN_RECORD&quot;</span>
-    <span class="n">UNITS_AMPS</span> <span class="o">=</span> <span class="s">&quot;AMPS&quot;</span>
-    <span class="n">UNITS_BECQUERELS</span> <span class="o">=</span> <span class="s">&quot;BECQUERELS&quot;</span>
-    <span class="n">UNITS_BITS</span> <span class="o">=</span> <span class="s">&quot;BITS&quot;</span>
-    <span class="n">UNITS_BYTES</span> <span class="o">=</span> <span class="s">&quot;BYTES&quot;</span>
-    <span class="n">UNITS_CANDELA</span> <span class="o">=</span> <span class="s">&quot;CANDELA&quot;</span>
-    <span class="n">UNITS_CENTIMETERS</span> <span class="o">=</span> <span class="s">&quot;CENTIMETERS&quot;</span>
-    <span class="n">UNITS_CFM</span> <span class="o">=</span> <span class="s">&quot;CFM&quot;</span>
-    <span class="n">UNITS_CHARACTERS</span> <span class="o">=</span> <span class="s">&quot;CHARACTERS&quot;</span>
-    <span class="n">UNITS_COLLISIONS</span> <span class="o">=</span> <span class="s">&quot;COLLISIONS&quot;</span>
-    <span class="n">UNITS_COLOR_TEMP_DEG_K</span> <span class="o">=</span> <span class="s">&quot;COLOR_TEMP_DEG_K&quot;</span>
-    <span class="n">UNITS_CORRECTABLE_ERRORS</span> <span class="o">=</span> <span class="s">&quot;CORRECTABLE_ERRORS&quot;</span>
-    <span class="n">UNITS_COULOMBS</span> <span class="o">=</span> <span class="s">&quot;COULOMBS&quot;</span>
-    <span class="n">UNITS_CUBIC_CENTIMETERS</span> <span class="o">=</span> <span class="s">&quot;CUBIC_CENTIMETERS&quot;</span>
-    <span class="n">UNITS_CUBIC_FEET</span> <span class="o">=</span> <span class="s">&quot;CUBIC_FEET&quot;</span>
-    <span class="n">UNITS_CUBIC_INCHS</span> <span class="o">=</span> <span class="s">&quot;CUBIC_INCHS&quot;</span>
-    <span class="n">UNITS_CUBIC_METERS</span> <span class="o">=</span> <span class="s">&quot;CUBIC_METERS&quot;</span>
-    <span class="n">UNITS_CYCLES</span> <span class="o">=</span> <span class="s">&quot;CYCLES&quot;</span>
-    <span class="n">UNITS_DAY</span> <span class="o">=</span> <span class="s">&quot;DAY&quot;</span>
-    <span class="n">UNITS_DECIBELS</span> <span class="o">=</span> <span class="s">&quot;DECIBELS&quot;</span>
-    <span class="n">UNITS_DEGREES_C</span> <span class="o">=</span> <span class="s">&quot;DEGREES_C&quot;</span>
-    <span class="n">UNITS_DEGREES_F</span> <span class="o">=</span> <span class="s">&quot;DEGREES_F&quot;</span>
-    <span class="n">UNITS_DEGREES_K</span> <span class="o">=</span> <span class="s">&quot;DEGREES_K&quot;</span>
-    <span class="n">UNITS_DWORDS</span> <span class="o">=</span> <span class="s">&quot;DWORDS&quot;</span>
-    <span class="n">UNITS_DB_A</span> <span class="o">=</span> <span class="s">&quot;DbA&quot;</span>
-    <span class="n">UNITS_DB_C</span> <span class="o">=</span> <span class="s">&quot;DbC&quot;</span>
-    <span class="n">UNITS_ERRORS</span> <span class="o">=</span> <span class="s">&quot;ERRORS&quot;</span>
-    <span class="n">UNITS_FARADS</span> <span class="o">=</span> <span class="s">&quot;FARADS&quot;</span>
-    <span class="n">UNITS_FATAL_ERRORS</span> <span class="o">=</span> <span class="s">&quot;FATAL_ERRORS&quot;</span>
-    <span class="n">UNITS_FEET</span> <span class="o">=</span> <span class="s">&quot;FEET&quot;</span>
-    <span class="n">UNITS_FL_OZ</span> <span class="o">=</span> <span class="s">&quot;FL_OZ&quot;</span>
-    <span class="n">UNITS_FOOT_POUNDS</span> <span class="o">=</span> <span class="s">&quot;FOOT_POUNDS&quot;</span>
-    <span class="n">UNITS_GAUSS</span> <span class="o">=</span> <span class="s">&quot;GAUSS&quot;</span>
-    <span class="n">UNITS_GBITS</span> <span class="o">=</span> <span class="s">&quot;GBITS&quot;</span>
-    <span class="n">UNITS_GBYTES</span> <span class="o">=</span> <span class="s">&quot;GBYTES&quot;</span>
-    <span class="n">UNITS_GILBERTS</span> <span class="o">=</span> <span class="s">&quot;GILBERTS&quot;</span>
-    <span class="n">UNITS_GRAMS</span> <span class="o">=</span> <span class="s">&quot;GRAMS&quot;</span>
-    <span class="n">UNITS_GRAVITIES</span> <span class="o">=</span> <span class="s">&quot;GRAVITIES&quot;</span>
-    <span class="n">UNITS_GRAYS</span> <span class="o">=</span> <span class="s">&quot;GRAYS&quot;</span>
-    <span class="n">UNITS_HENRIES</span> <span class="o">=</span> <span class="s">&quot;HENRIES&quot;</span>
-    <span class="n">UNITS_HITS</span> <span class="o">=</span> <span class="s">&quot;HITS&quot;</span>
-    <span class="n">UNITS_HOUR</span> <span class="o">=</span> <span class="s">&quot;HOUR&quot;</span>
-    <span class="n">UNITS_HZ</span> <span class="o">=</span> <span class="s">&quot;HZ&quot;</span>
-    <span class="n">UNITS_INCHES</span> <span class="o">=</span> <span class="s">&quot;INCHES&quot;</span>
-    <span class="n">UNITS_JOULES</span> <span class="o">=</span> <span class="s">&quot;JOULES&quot;</span>
-    <span class="n">UNITS_KBITS</span> <span class="o">=</span> <span class="s">&quot;KBITS&quot;</span>
-    <span class="n">UNITS_KBYTES</span> <span class="o">=</span> <span class="s">&quot;KBYTES&quot;</span>
-    <span class="n">UNITS_KPA</span> <span class="o">=</span> <span class="s">&quot;KPA&quot;</span>
-    <span class="n">UNITS_LINES</span> <span class="o">=</span> <span class="s">&quot;LINES&quot;</span>
-    <span class="n">UNITS_LITERS</span> <span class="o">=</span> <span class="s">&quot;LITERS&quot;</span>
-    <span class="n">UNITS_LUMENS</span> <span class="o">=</span> <span class="s">&quot;LUMENS&quot;</span>
-    <span class="n">UNITS_LUX</span> <span class="o">=</span> <span class="s">&quot;LUX&quot;</span>
-    <span class="n">UNITS_MBITS</span> <span class="o">=</span> <span class="s">&quot;MBITS&quot;</span>
-    <span class="n">UNITS_MBYTES</span> <span class="o">=</span> <span class="s">&quot;MBYTES&quot;</span>
-    <span class="n">UNITS_MESSAGES</span> <span class="o">=</span> <span class="s">&quot;MESSAGES&quot;</span>
-    <span class="n">UNITS_METERS</span> <span class="o">=</span> <span class="s">&quot;METERS&quot;</span>
-    <span class="n">UNITS_MHENRIES</span> <span class="o">=</span> <span class="s">&quot;MHENRIES&quot;</span>
-    <span class="n">UNITS_MIL</span> <span class="o">=</span> <span class="s">&quot;MIL&quot;</span>
-    <span class="n">UNITS_MILLIMETERS</span> <span class="o">=</span> <span class="s">&quot;MILLIMETERS&quot;</span>
-    <span class="n">UNITS_MINUTE</span> <span class="o">=</span> <span class="s">&quot;MINUTE&quot;</span>
-    <span class="n">UNITS_MISSES</span> <span class="o">=</span> <span class="s">&quot;MISSES&quot;</span>
-    <span class="n">UNITS_MOLES</span> <span class="o">=</span> <span class="s">&quot;MOLES&quot;</span>
-    <span class="n">UNITS_MSECONDS</span> <span class="o">=</span> <span class="s">&quot;MSECONDS&quot;</span>
-    <span class="n">UNITS_NEWTONS</span> <span class="o">=</span> <span class="s">&quot;NEWTONS&quot;</span>
-    <span class="n">UNITS_NITS</span> <span class="o">=</span> <span class="s">&quot;NITS&quot;</span>
-    <span class="n">UNITS_OHMS</span> <span class="o">=</span> <span class="s">&quot;OHMS&quot;</span>
-    <span class="n">UNITS_OUNCES</span> <span class="o">=</span> <span class="s">&quot;OUNCES&quot;</span>
-    <span class="n">UNITS_OUNCE_INCHES</span> <span class="o">=</span> <span class="s">&quot;OUNCE_INCHES&quot;</span>
-    <span class="n">UNITS_OVERRUNS</span> <span class="o">=</span> <span class="s">&quot;OVERRUNS&quot;</span>
-    <span class="n">UNITS_PACKETS</span> <span class="o">=</span> <span class="s">&quot;PACKETS&quot;</span>
-    <span class="n">UNITS_POUNDS</span> <span class="o">=</span> <span class="s">&quot;POUNDS&quot;</span>
-    <span class="n">UNITS_PPM</span> <span class="o">=</span> <span class="s">&quot;PPM&quot;</span>
-    <span class="n">UNITS_PSI</span> <span class="o">=</span> <span class="s">&quot;PSI&quot;</span>
-    <span class="n">UNITS_QWORDS</span> <span class="o">=</span> <span class="s">&quot;QWORDS&quot;</span>
-    <span class="n">UNITS_RADIANS</span> <span class="o">=</span> <span class="s">&quot;RADIANS&quot;</span>
-    <span class="n">UNITS_RESETS</span> <span class="o">=</span> <span class="s">&quot;RESETS&quot;</span>
-    <span class="n">UNITS_RETRIES</span> <span class="o">=</span> <span class="s">&quot;RETRIES&quot;</span>
-    <span class="n">UNITS_REVOLUTIONS</span> <span class="o">=</span> <span class="s">&quot;REVOLUTIONS&quot;</span>
-    <span class="n">UNITS_RPM</span> <span class="o">=</span> <span class="s">&quot;RPM&quot;</span>
-    <span class="n">UNITS_SECONDS</span> <span class="o">=</span> <span class="s">&quot;SECONDS&quot;</span>
-    <span class="n">UNITS_SERADIANS</span> <span class="o">=</span> <span class="s">&quot;SERADIANS&quot;</span>
-    <span class="n">UNITS_SIEMENS</span> <span class="o">=</span> <span class="s">&quot;SIEMENS&quot;</span>
-    <span class="n">UNITS_SIEVERTS</span> <span class="o">=</span> <span class="s">&quot;SIEVERTS&quot;</span>
-    <span class="n">UNITS_UFARADS</span> <span class="o">=</span> <span class="s">&quot;UFARADS&quot;</span>
-    <span class="n">UNITS_UNCORRECTABLE_ERRORS</span> <span class="o">=</span> <span class="s">&quot;UNCORRECTABLE_ERRORS&quot;</span>
-    <span class="n">UNITS_UNDERRUNS</span> <span class="o">=</span> <span class="s">&quot;UNDERRUNS&quot;</span>
-    <span class="n">UNITS_UNSPECIFIED</span> <span class="o">=</span> <span class="s">&quot;UNSPECIFIED&quot;</span>
-    <span class="n">UNITS_USECONDS</span> <span class="o">=</span> <span class="s">&quot;USECONDS&quot;</span>
-    <span class="n">UNITS_VA</span> <span class="o">=</span> <span class="s">&quot;VA&quot;</span>
-    <span class="n">UNITS_VOLTS</span> <span class="o">=</span> <span class="s">&quot;VOLTS&quot;</span>
-    <span class="n">UNITS_WATTS</span> <span class="o">=</span> <span class="s">&quot;WATTS&quot;</span>
-    <span class="n">UNITS_WEEK</span> <span class="o">=</span> <span class="s">&quot;WEEK&quot;</span>
-    <span class="n">UNITS_WORDS</span> <span class="o">=</span> <span class="s">&quot;WORDS&quot;</span>
-    <span class="n">UNITS_RESERVED1</span> <span class="o">=</span> <span class="s">&quot;reserved1&quot;</span>
+<div class="viewcode-block" id="ApeSdrConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.ape.html#ucsmsdk.mometa.ape.ApeSdr.ApeSdrConsts">[docs]</a><span class="k">class</span> <span class="nc">ApeSdrConsts</span><span class="p">:</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_ACPI_POWER</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_ACPI_POWER&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_AVAILABILITY</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_AVAILABILITY&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_DEVICE_ENABLE</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_DEVICE_ENABLE&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_DEVICE_PRESENCE</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_DEVICE_PRESENCE&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_LIMIT_EXCEEDED</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_LIMIT_EXCEEDED&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_PERFORMANCE_MET</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_PERFORMANCE_MET&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_PREDICTIVE_FAILURE</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_PREDICTIVE_FAILURE&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_REDUNDANCY</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_REDUNDANCY&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_SEVERITY</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_SEVERITY&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_STATE</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_STATE&quot;</span>
+    <span class="n">EVENT_READING_TYPE_DISCRETE_USAGE</span> <span class="o">=</span> <span class="s2">&quot;DISCRETE_USAGE&quot;</span>
+    <span class="n">EVENT_READING_TYPE_OEM1</span> <span class="o">=</span> <span class="s2">&quot;OEM1&quot;</span>
+    <span class="n">EVENT_READING_TYPE_SENSOR_SPECIFIC</span> <span class="o">=</span> <span class="s2">&quot;SENSOR_SPECIFIC&quot;</span>
+    <span class="n">EVENT_READING_TYPE_THRESHOLD</span> <span class="o">=</span> <span class="s2">&quot;THRESHOLD&quot;</span>
+    <span class="n">EVENT_READING_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;UNKNOWN&quot;</span>
+    <span class="n">INSTANCE_ADD_IN_CARD</span> <span class="o">=</span> <span class="s2">&quot;ADD_IN_CARD&quot;</span>
+    <span class="n">INSTANCE_BATTERY</span> <span class="o">=</span> <span class="s2">&quot;BATTERY&quot;</span>
+    <span class="n">INSTANCE_BOOT_ERROR</span> <span class="o">=</span> <span class="s2">&quot;BOOT_ERROR&quot;</span>
+    <span class="n">INSTANCE_BUTTON</span> <span class="o">=</span> <span class="s2">&quot;BUTTON&quot;</span>
+    <span class="n">INSTANCE_CABLE_INTERCONNECT</span> <span class="o">=</span> <span class="s2">&quot;CABLE_INTERCONNECT&quot;</span>
+    <span class="n">INSTANCE_CHASSIS</span> <span class="o">=</span> <span class="s2">&quot;CHASSIS&quot;</span>
+    <span class="n">INSTANCE_CHIP_SET</span> <span class="o">=</span> <span class="s2">&quot;CHIP_SET&quot;</span>
+    <span class="n">INSTANCE_COOLING_DEVICE</span> <span class="o">=</span> <span class="s2">&quot;COOLING_DEVICE&quot;</span>
+    <span class="n">INSTANCE_CRITICAL_INTERRUPT</span> <span class="o">=</span> <span class="s2">&quot;CRITICAL_INTERRUPT&quot;</span>
+    <span class="n">INSTANCE_CURRENT</span> <span class="o">=</span> <span class="s2">&quot;CURRENT&quot;</span>
+    <span class="n">INSTANCE_DRIVE_SLOT</span> <span class="o">=</span> <span class="s2">&quot;DRIVE_SLOT&quot;</span>
+    <span class="n">INSTANCE_ENTITY_PRESENCE</span> <span class="o">=</span> <span class="s2">&quot;ENTITY_PRESENCE&quot;</span>
+    <span class="n">INSTANCE_EVENT_LOGGING_DISABLED</span> <span class="o">=</span> <span class="s2">&quot;EVENT_LOGGING_DISABLED&quot;</span>
+    <span class="n">INSTANCE_FAN</span> <span class="o">=</span> <span class="s2">&quot;FAN&quot;</span>
+    <span class="n">INSTANCE_FRU_STATE</span> <span class="o">=</span> <span class="s2">&quot;FRU_STATE&quot;</span>
+    <span class="n">INSTANCE_LAN</span> <span class="o">=</span> <span class="s2">&quot;LAN&quot;</span>
+    <span class="n">INSTANCE_MANAGEMENT_SUBSYSTEM_HEALTH</span> <span class="o">=</span> <span class="s2">&quot;MANAGEMENT_SUBSYSTEM_HEALTH&quot;</span>
+    <span class="n">INSTANCE_MEMORY</span> <span class="o">=</span> <span class="s2">&quot;MEMORY&quot;</span>
+    <span class="n">INSTANCE_MICROCONTROLLER_COPROCESSOR</span> <span class="o">=</span> <span class="s2">&quot;MICROCONTROLLER_COPROCESSOR&quot;</span>
+    <span class="n">INSTANCE_MODULE_BOARD</span> <span class="o">=</span> <span class="s2">&quot;MODULE_BOARD&quot;</span>
+    <span class="n">INSTANCE_MONITOR_ASIC_IC</span> <span class="o">=</span> <span class="s2">&quot;MONITOR_ASIC_IC&quot;</span>
+    <span class="n">INSTANCE_OEM1</span> <span class="o">=</span> <span class="s2">&quot;OEM1&quot;</span>
+    <span class="n">INSTANCE_OEM2</span> <span class="o">=</span> <span class="s2">&quot;OEM2&quot;</span>
+    <span class="n">INSTANCE_OEM3</span> <span class="o">=</span> <span class="s2">&quot;OEM3&quot;</span>
+    <span class="n">INSTANCE_OEM4</span> <span class="o">=</span> <span class="s2">&quot;OEM4&quot;</span>
+    <span class="n">INSTANCE_OEM5</span> <span class="o">=</span> <span class="s2">&quot;OEM5&quot;</span>
+    <span class="n">INSTANCE_OEM7</span> <span class="o">=</span> <span class="s2">&quot;OEM7&quot;</span>
+    <span class="n">INSTANCE_OS_BOOT</span> <span class="o">=</span> <span class="s2">&quot;OS_BOOT&quot;</span>
+    <span class="n">INSTANCE_OS_CRITICAL_STOP</span> <span class="o">=</span> <span class="s2">&quot;OS_CRITICAL_STOP&quot;</span>
+    <span class="n">INSTANCE_OTHER_FRU</span> <span class="o">=</span> <span class="s2">&quot;OTHER_FRU&quot;</span>
+    <span class="n">INSTANCE_OTHER_UNITS_BASED_SENSOR</span> <span class="o">=</span> <span class="s2">&quot;OTHER_UNITS_BASED_SENSOR&quot;</span>
+    <span class="n">INSTANCE_PHYSICAL_SECURITY</span> <span class="o">=</span> <span class="s2">&quot;PHYSICAL_SECURITY&quot;</span>
+    <span class="n">INSTANCE_PLATFORM_ALERT</span> <span class="o">=</span> <span class="s2">&quot;PLATFORM_ALERT&quot;</span>
+    <span class="n">INSTANCE_PLATFORM_SECURITY</span> <span class="o">=</span> <span class="s2">&quot;PLATFORM_SECURITY&quot;</span>
+    <span class="n">INSTANCE_POWER_MEMORY_RESIZE</span> <span class="o">=</span> <span class="s2">&quot;POWER_MEMORY_RESIZE&quot;</span>
+    <span class="n">INSTANCE_POWER_SUPPLY</span> <span class="o">=</span> <span class="s2">&quot;POWER_SUPPLY&quot;</span>
+    <span class="n">INSTANCE_POWER_UNIT</span> <span class="o">=</span> <span class="s2">&quot;POWER_UNIT&quot;</span>
+    <span class="n">INSTANCE_PROCESSOR</span> <span class="o">=</span> <span class="s2">&quot;PROCESSOR&quot;</span>
+    <span class="n">INSTANCE_SESSION_AUDIT</span> <span class="o">=</span> <span class="s2">&quot;SESSION_AUDIT&quot;</span>
+    <span class="n">INSTANCE_SLOT_CONNECTOR</span> <span class="o">=</span> <span class="s2">&quot;SLOT_CONNECTOR&quot;</span>
+    <span class="n">INSTANCE_SYSTEM_ACPI_POWER_STATE</span> <span class="o">=</span> <span class="s2">&quot;SYSTEM_ACPI_POWER_STATE&quot;</span>
+    <span class="n">INSTANCE_SYSTEM_BOOT_INITIATED</span> <span class="o">=</span> <span class="s2">&quot;SYSTEM_BOOT_INITIATED&quot;</span>
+    <span class="n">INSTANCE_SYSTEM_EVENT</span> <span class="o">=</span> <span class="s2">&quot;SYSTEM_EVENT&quot;</span>
+    <span class="n">INSTANCE_SYSTEM_FIRMWARE_PROGRESS</span> <span class="o">=</span> <span class="s2">&quot;SYSTEM_FIRMWARE_PROGRESS&quot;</span>
+    <span class="n">INSTANCE_TEMPERATURE</span> <span class="o">=</span> <span class="s2">&quot;TEMPERATURE&quot;</span>
+    <span class="n">INSTANCE_TERMINATOR</span> <span class="o">=</span> <span class="s2">&quot;TERMINATOR&quot;</span>
+    <span class="n">INSTANCE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;UNKNOWN&quot;</span>
+    <span class="n">INSTANCE_VERSION_CHANGE</span> <span class="o">=</span> <span class="s2">&quot;VERSION_CHANGE&quot;</span>
+    <span class="n">INSTANCE_VOLTAGE</span> <span class="o">=</span> <span class="s2">&quot;VOLTAGE&quot;</span>
+    <span class="n">INSTANCE_WATCHDOG_1</span> <span class="o">=</span> <span class="s2">&quot;WATCHDOG_1&quot;</span>
+    <span class="n">INSTANCE_WATCHDOG_2</span> <span class="o">=</span> <span class="s2">&quot;WATCHDOG_2&quot;</span>
+    <span class="n">SDR_TYPE_COMPACT_SENSOR_RECORD</span> <span class="o">=</span> <span class="s2">&quot;COMPACT_SENSOR_RECORD&quot;</span>
+    <span class="n">SDR_TYPE_FULL_SENSOR_RECORD</span> <span class="o">=</span> <span class="s2">&quot;FULL_SENSOR_RECORD&quot;</span>
+    <span class="n">SDR_TYPE_UNKNOWN_RECORD</span> <span class="o">=</span> <span class="s2">&quot;UNKNOWN_RECORD&quot;</span>
+    <span class="n">UNITS_AMPS</span> <span class="o">=</span> <span class="s2">&quot;AMPS&quot;</span>
+    <span class="n">UNITS_BECQUERELS</span> <span class="o">=</span> <span class="s2">&quot;BECQUERELS&quot;</span>
+    <span class="n">UNITS_BITS</span> <span class="o">=</span> <span class="s2">&quot;BITS&quot;</span>
+    <span class="n">UNITS_BYTES</span> <span class="o">=</span> <span class="s2">&quot;BYTES&quot;</span>
+    <span class="n">UNITS_CANDELA</span> <span class="o">=</span> <span class="s2">&quot;CANDELA&quot;</span>
+    <span class="n">UNITS_CENTIMETERS</span> <span class="o">=</span> <span class="s2">&quot;CENTIMETERS&quot;</span>
+    <span class="n">UNITS_CFM</span> <span class="o">=</span> <span class="s2">&quot;CFM&quot;</span>
+    <span class="n">UNITS_CHARACTERS</span> <span class="o">=</span> <span class="s2">&quot;CHARACTERS&quot;</span>
+    <span class="n">UNITS_COLLISIONS</span> <span class="o">=</span> <span class="s2">&quot;COLLISIONS&quot;</span>
+    <span class="n">UNITS_COLOR_TEMP_DEG_K</span> <span class="o">=</span> <span class="s2">&quot;COLOR_TEMP_DEG_K&quot;</span>
+    <span class="n">UNITS_CORRECTABLE_ERRORS</span> <span class="o">=</span> <span class="s2">&quot;CORRECTABLE_ERRORS&quot;</span>
+    <span class="n">UNITS_COULOMBS</span> <span class="o">=</span> <span class="s2">&quot;COULOMBS&quot;</span>
+    <span class="n">UNITS_CUBIC_CENTIMETERS</span> <span class="o">=</span> <span class="s2">&quot;CUBIC_CENTIMETERS&quot;</span>
+    <span class="n">UNITS_CUBIC_FEET</span> <span class="o">=</span> <span class="s2">&quot;CUBIC_FEET&quot;</span>
+    <span class="n">UNITS_CUBIC_INCHS</span> <span class="o">=</span> <span class="s2">&quot;CUBIC_INCHS&quot;</span>
+    <span class="n">UNITS_CUBIC_METERS</span> <span class="o">=</span> <span class="s2">&quot;CUBIC_METERS&quot;</span>
+    <span class="n">UNITS_CYCLES</span> <span class="o">=</span> <span class="s2">&quot;CYCLES&quot;</span>
+    <span class="n">UNITS_DAY</span> <span class="o">=</span> <span class="s2">&quot;DAY&quot;</span>
+    <span class="n">UNITS_DECIBELS</span> <span class="o">=</span> <span class="s2">&quot;DECIBELS&quot;</span>
+    <span class="n">UNITS_DEGREES_C</span> <span class="o">=</span> <span class="s2">&quot;DEGREES_C&quot;</span>
+    <span class="n">UNITS_DEGREES_F</span> <span class="o">=</span> <span class="s2">&quot;DEGREES_F&quot;</span>
+    <span class="n">UNITS_DEGREES_K</span> <span class="o">=</span> <span class="s2">&quot;DEGREES_K&quot;</span>
+    <span class="n">UNITS_DWORDS</span> <span class="o">=</span> <span class="s2">&quot;DWORDS&quot;</span>
+    <span class="n">UNITS_DB_A</span> <span class="o">=</span> <span class="s2">&quot;DbA&quot;</span>
+    <span class="n">UNITS_DB_C</span> <span class="o">=</span> <span class="s2">&quot;DbC&quot;</span>
+    <span class="n">UNITS_ERRORS</span> <span class="o">=</span> <span class="s2">&quot;ERRORS&quot;</span>
+    <span class="n">UNITS_FARADS</span> <span class="o">=</span> <span class="s2">&quot;FARADS&quot;</span>
+    <span class="n">UNITS_FATAL_ERRORS</span> <span class="o">=</span> <span class="s2">&quot;FATAL_ERRORS&quot;</span>
+    <span class="n">UNITS_FEET</span> <span class="o">=</span> <span class="s2">&quot;FEET&quot;</span>
+    <span class="n">UNITS_FL_OZ</span> <span class="o">=</span> <span class="s2">&quot;FL_OZ&quot;</span>
+    <span class="n">UNITS_FOOT_POUNDS</span> <span class="o">=</span> <span class="s2">&quot;FOOT_POUNDS&quot;</span>
+    <span class="n">UNITS_GAUSS</span> <span class="o">=</span> <span class="s2">&quot;GAUSS&quot;</span>
+    <span class="n">UNITS_GBITS</span> <span class="o">=</span> <span class="s2">&quot;GBITS&quot;</span>
+    <span class="n">UNITS_GBYTES</span> <span class="o">=</span> <span class="s2">&quot;GBYTES&quot;</span>
+    <span class="n">UNITS_GILBERTS</span> <span class="o">=</span> <span class="s2">&quot;GILBERTS&quot;</span>
+    <span class="n">UNITS_GRAMS</span> <span class="o">=</span> <span class="s2">&quot;GRAMS&quot;</span>
+    <span class="n">UNITS_GRAVITIES</span> <span class="o">=</span> <span class="s2">&quot;GRAVITIES&quot;</span>
+    <span class="n">UNITS_GRAYS</span> <span class="o">=</span> <span class="s2">&quot;GRAYS&quot;</span>
+    <span class="n">UNITS_HENRIES</span> <span class="o">=</span> <span class="s2">&quot;HENRIES&quot;</span>
+    <span class="n">UNITS_HITS</span> <span class="o">=</span> <span class="s2">&quot;HITS&quot;</span>
+    <span class="n">UNITS_HOUR</span> <span class="o">=</span> <span class="s2">&quot;HOUR&quot;</span>
+    <span class="n">UNITS_HZ</span> <span class="o">=</span> <span class="s2">&quot;HZ&quot;</span>
+    <span class="n">UNITS_INCHES</span> <span class="o">=</span> <span class="s2">&quot;INCHES&quot;</span>
+    <span class="n">UNITS_JOULES</span> <span class="o">=</span> <span class="s2">&quot;JOULES&quot;</span>
+    <span class="n">UNITS_KBITS</span> <span class="o">=</span> <span class="s2">&quot;KBITS&quot;</span>
+    <span class="n">UNITS_KBYTES</span> <span class="o">=</span> <span class="s2">&quot;KBYTES&quot;</span>
+    <span class="n">UNITS_KPA</span> <span class="o">=</span> <span class="s2">&quot;KPA&quot;</span>
+    <span class="n">UNITS_LINES</span> <span class="o">=</span> <span class="s2">&quot;LINES&quot;</span>
+    <span class="n">UNITS_LITERS</span> <span class="o">=</span> <span class="s2">&quot;LITERS&quot;</span>
+    <span class="n">UNITS_LUMENS</span> <span class="o">=</span> <span class="s2">&quot;LUMENS&quot;</span>
+    <span class="n">UNITS_LUX</span> <span class="o">=</span> <span class="s2">&quot;LUX&quot;</span>
+    <span class="n">UNITS_MBITS</span> <span class="o">=</span> <span class="s2">&quot;MBITS&quot;</span>
+    <span class="n">UNITS_MBYTES</span> <span class="o">=</span> <span class="s2">&quot;MBYTES&quot;</span>
+    <span class="n">UNITS_MESSAGES</span> <span class="o">=</span> <span class="s2">&quot;MESSAGES&quot;</span>
+    <span class="n">UNITS_METERS</span> <span class="o">=</span> <span class="s2">&quot;METERS&quot;</span>
+    <span class="n">UNITS_MHENRIES</span> <span class="o">=</span> <span class="s2">&quot;MHENRIES&quot;</span>
+    <span class="n">UNITS_MIL</span> <span class="o">=</span> <span class="s2">&quot;MIL&quot;</span>
+    <span class="n">UNITS_MILLIMETERS</span> <span class="o">=</span> <span class="s2">&quot;MILLIMETERS&quot;</span>
+    <span class="n">UNITS_MINUTE</span> <span class="o">=</span> <span class="s2">&quot;MINUTE&quot;</span>
+    <span class="n">UNITS_MISSES</span> <span class="o">=</span> <span class="s2">&quot;MISSES&quot;</span>
+    <span class="n">UNITS_MOLES</span> <span class="o">=</span> <span class="s2">&quot;MOLES&quot;</span>
+    <span class="n">UNITS_MSECONDS</span> <span class="o">=</span> <span class="s2">&quot;MSECONDS&quot;</span>
+    <span class="n">UNITS_NEWTONS</span> <span class="o">=</span> <span class="s2">&quot;NEWTONS&quot;</span>
+    <span class="n">UNITS_NITS</span> <span class="o">=</span> <span class="s2">&quot;NITS&quot;</span>
+    <span class="n">UNITS_OHMS</span> <span class="o">=</span> <span class="s2">&quot;OHMS&quot;</span>
+    <span class="n">UNITS_OUNCES</span> <span class="o">=</span> <span class="s2">&quot;OUNCES&quot;</span>
+    <span class="n">UNITS_OUNCE_INCHES</span> <span class="o">=</span> <span class="s2">&quot;OUNCE_INCHES&quot;</span>
+    <span class="n">UNITS_OVERRUNS</span> <span class="o">=</span> <span class="s2">&quot;OVERRUNS&quot;</span>
+    <span class="n">UNITS_PACKETS</span> <span class="o">=</span> <span class="s2">&quot;PACKETS&quot;</span>
+    <span class="n">UNITS_POUNDS</span> <span class="o">=</span> <span class="s2">&quot;POUNDS&quot;</span>
+    <span class="n">UNITS_PPM</span> <span class="o">=</span> <span class="s2">&quot;PPM&quot;</span>
+    <span class="n">UNITS_PSI</span> <span class="o">=</span> <span class="s2">&quot;PSI&quot;</span>
+    <span class="n">UNITS_QWORDS</span> <span class="o">=</span> <span class="s2">&quot;QWORDS&quot;</span>
+    <span class="n">UNITS_RADIANS</span> <span class="o">=</span> <span class="s2">&quot;RADIANS&quot;</span>
+    <span class="n">UNITS_RESETS</span> <span class="o">=</span> <span class="s2">&quot;RESETS&quot;</span>
+    <span class="n">UNITS_RETRIES</span> <span class="o">=</span> <span class="s2">&quot;RETRIES&quot;</span>
+    <span class="n">UNITS_REVOLUTIONS</span> <span class="o">=</span> <span class="s2">&quot;REVOLUTIONS&quot;</span>
+    <span class="n">UNITS_RPM</span> <span class="o">=</span> <span class="s2">&quot;RPM&quot;</span>
+    <span class="n">UNITS_SECONDS</span> <span class="o">=</span> <span class="s2">&quot;SECONDS&quot;</span>
+    <span class="n">UNITS_SERADIANS</span> <span class="o">=</span> <span class="s2">&quot;SERADIANS&quot;</span>
+    <span class="n">UNITS_SIEMENS</span> <span class="o">=</span> <span class="s2">&quot;SIEMENS&quot;</span>
+    <span class="n">UNITS_SIEVERTS</span> <span class="o">=</span> <span class="s2">&quot;SIEVERTS&quot;</span>
+    <span class="n">UNITS_UFARADS</span> <span class="o">=</span> <span class="s2">&quot;UFARADS&quot;</span>
+    <span class="n">UNITS_UNCORRECTABLE_ERRORS</span> <span class="o">=</span> <span class="s2">&quot;UNCORRECTABLE_ERRORS&quot;</span>
+    <span class="n">UNITS_UNDERRUNS</span> <span class="o">=</span> <span class="s2">&quot;UNDERRUNS&quot;</span>
+    <span class="n">UNITS_UNSPECIFIED</span> <span class="o">=</span> <span class="s2">&quot;UNSPECIFIED&quot;</span>
+    <span class="n">UNITS_USECONDS</span> <span class="o">=</span> <span class="s2">&quot;USECONDS&quot;</span>
+    <span class="n">UNITS_VA</span> <span class="o">=</span> <span class="s2">&quot;VA&quot;</span>
+    <span class="n">UNITS_VOLTS</span> <span class="o">=</span> <span class="s2">&quot;VOLTS&quot;</span>
+    <span class="n">UNITS_WATTS</span> <span class="o">=</span> <span class="s2">&quot;WATTS&quot;</span>
+    <span class="n">UNITS_WEEK</span> <span class="o">=</span> <span class="s2">&quot;WEEK&quot;</span>
+    <span class="n">UNITS_WORDS</span> <span class="o">=</span> <span class="s2">&quot;WORDS&quot;</span>
+    <span class="n">UNITS_RESERVED1</span> <span class="o">=</span> <span class="s2">&quot;reserved1&quot;</span></div>
 
-</div>
+
 <div class="viewcode-block" id="ApeSdr"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.ape.html#ucsmsdk.mometa.ape.ApeSdr.ApeSdr">[docs]</a><span class="k">class</span> <span class="nc">ApeSdr</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This is ApeSdr class.&quot;&quot;&quot;</span>
 
     <span class="n">consts</span> <span class="o">=</span> <span class="n">ApeSdrConsts</span><span class="p">()</span>
-    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">u&#39;id&#39;</span><span class="p">])</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">u&#39;id&#39;</span><span class="p">])</span>
 
-    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;ApeSdr&quot;</span><span class="p">,</span> <span class="s">&quot;apeSdr&quot;</span><span class="p">,</span> <span class="s">&quot;sdr-[id]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0xffffff</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;apeMcTable&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="bp">None</span><span class="p">])</span>
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s2">&quot;ApeSdr&quot;</span><span class="p">,</span> <span class="s2">&quot;apeSdr&quot;</span><span class="p">,</span> <span class="s2">&quot;sdr-[id]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s2">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x3fff</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s1">u&#39;apeMcTable&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="bp">None</span><span class="p">])</span>
 
     <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;entity_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;entity_type&quot;</span><span class="p">,</span> <span class="s">&quot;entityType&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ADD_IN_CARD&quot;</span><span class="p">,</span> <span class="s">&quot;BACK_PANEL_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;BATTERY&quot;</span><span class="p">,</span> <span class="s">&quot;BIOS&quot;</span><span class="p">,</span> <span class="s">&quot;CABLE_INTERCONNECT&quot;</span><span class="p">,</span> <span class="s">&quot;CHASSIS_BACK_PANEL_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;CMC&quot;</span><span class="p">,</span> <span class="s">&quot;CONNECTIVITY_SWITCH&quot;</span><span class="p">,</span> <span class="s">&quot;COOLING_UNIT&quot;</span><span class="p">,</span> <span class="s">&quot;DEVICE_BAY&quot;</span><span class="p">,</span> <span class="s">&quot;DISK&quot;</span><span class="p">,</span> <span class="s">&quot;DISK_DRIVE_BAY&quot;</span><span class="p">,</span> <span class="s">&quot;DRIVE_BACKPLANE&quot;</span><span class="p">,</span> <span class="s">&quot;EXTERNAL_ENVIRONMENT&quot;</span><span class="p">,</span> <span class="s">&quot;FAN_COOLING&quot;</span><span class="p">,</span> <span class="s">&quot;FRONT_PANEL_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;GROUP&quot;</span><span class="p">,</span> <span class="s">&quot;IBMC&quot;</span><span class="p">,</span> <span class="s">&quot;IO_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;IPMI_CHANNEL&quot;</span><span class="p">,</span> <span class="s">&quot;MEMORY_DEVICE&quot;</span><span class="p">,</span> <span class="s">&quot;MEMORY_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;MGMT_CONTROLLER_FIRMWARE&quot;</span><span class="p">,</span> <span class="s">&quot;OPERATING_SYSTEM&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER_CHASSIS_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER_SYSTEM_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;PCI_BUS&quot;</span><span class="p">,</span> <span class="s">&quot;PCI_EXPRESS_BUS&quot;</span><span class="p">,</span> <span class="s">&quot;PERIPHERAL&quot;</span><span class="p">,</span> <span class="s">&quot;PERIPHERAL_BAY&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_MANAGEMENT_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_SUPPLY&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_SYSTEM_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_UNIT&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSING_BLADE&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR_FRONT_SIDE_BUS&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR_IO_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR_MEMORY_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;REMOTE_MGMT_COMM_DEVICE&quot;</span><span class="p">,</span> <span class="s">&quot;SATA_SAS_BUS&quot;</span><span class="p">,</span> <span class="s">&quot;SCSI_BUS&quot;</span><span class="p">,</span> <span class="s">&quot;SUB_CHASSIS&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_BUS&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_CHASSIS&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_INTERNAL_EXPANSION_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_MANAGEMENT_MODULE&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_MANAGEMENT_SOFTWARE&quot;</span><span class="p">,</span> <span class="s">&quot;UNKNOWN&quot;</span><span class="p">,</span> <span class="s">&quot;UNSPECIFIED&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;event_reading_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;event_reading_type&quot;</span><span class="p">,</span> <span class="s">&quot;eventReadingType&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;DISCRETE_ACPI_POWER&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_AVAILABILITY&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_DEVICE_ENABLE&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_DEVICE_PRESENCE&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_LIMIT_EXCEEDED&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_PERFORMANCE_MET&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_PREDICTIVE_FAILURE&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_REDUNDANCY&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_SEVERITY&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_STATE&quot;</span><span class="p">,</span> <span class="s">&quot;DISCRETE_USAGE&quot;</span><span class="p">,</span> <span class="s">&quot;OEM1&quot;</span><span class="p">,</span> <span class="s">&quot;SENSOR_SPECIFIC&quot;</span><span class="p">,</span> <span class="s">&quot;THRESHOLD&quot;</span><span class="p">,</span> <span class="s">&quot;UNKNOWN&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;hysterisis_down&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;hysterisis_down&quot;</span><span class="p">,</span> <span class="s">&quot;hysterisisDown&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x20</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;hysterisis_up&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;hysterisis_up&quot;</span><span class="p">,</span> <span class="s">&quot;hysterisisUp&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x40</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x80</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;instance&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;instance&quot;</span><span class="p">,</span> <span class="s">&quot;instance&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x100</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ADD_IN_CARD&quot;</span><span class="p">,</span> <span class="s">&quot;BATTERY&quot;</span><span class="p">,</span> <span class="s">&quot;BOOT_ERROR&quot;</span><span class="p">,</span> <span class="s">&quot;BUTTON&quot;</span><span class="p">,</span> <span class="s">&quot;CABLE_INTERCONNECT&quot;</span><span class="p">,</span> <span class="s">&quot;CHASSIS&quot;</span><span class="p">,</span> <span class="s">&quot;CHIP_SET&quot;</span><span class="p">,</span> <span class="s">&quot;COOLING_DEVICE&quot;</span><span class="p">,</span> <span class="s">&quot;CRITICAL_INTERRUPT&quot;</span><span class="p">,</span> <span class="s">&quot;CURRENT&quot;</span><span class="p">,</span> <span class="s">&quot;DRIVE_SLOT&quot;</span><span class="p">,</span> <span class="s">&quot;ENTITY_PRESENCE&quot;</span><span class="p">,</span> <span class="s">&quot;EVENT_LOGGING_DISABLED&quot;</span><span class="p">,</span> <span class="s">&quot;FAN&quot;</span><span class="p">,</span> <span class="s">&quot;FRU_STATE&quot;</span><span class="p">,</span> <span class="s">&quot;LAN&quot;</span><span class="p">,</span> <span class="s">&quot;MANAGEMENT_SUBSYSTEM_HEALTH&quot;</span><span class="p">,</span> <span class="s">&quot;MEMORY&quot;</span><span class="p">,</span> <span class="s">&quot;MICROCONTROLLER_COPROCESSOR&quot;</span><span class="p">,</span> <span class="s">&quot;MODULE_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;MONITOR_ASIC_IC&quot;</span><span class="p">,</span> <span class="s">&quot;OEM1&quot;</span><span class="p">,</span> <span class="s">&quot;OEM2&quot;</span><span class="p">,</span> <span class="s">&quot;OEM3&quot;</span><span class="p">,</span> <span class="s">&quot;OEM4&quot;</span><span class="p">,</span> <span class="s">&quot;OEM5&quot;</span><span class="p">,</span> <span class="s">&quot;OEM7&quot;</span><span class="p">,</span> <span class="s">&quot;OS_BOOT&quot;</span><span class="p">,</span> <span class="s">&quot;OS_CRITICAL_STOP&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER_FRU&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER_UNITS_BASED_SENSOR&quot;</span><span class="p">,</span> <span class="s">&quot;PHYSICAL_SECURITY&quot;</span><span class="p">,</span> <span class="s">&quot;PLATFORM_ALERT&quot;</span><span class="p">,</span> <span class="s">&quot;PLATFORM_SECURITY&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_MEMORY_RESIZE&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_SUPPLY&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_UNIT&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR&quot;</span><span class="p">,</span> <span class="s">&quot;SESSION_AUDIT&quot;</span><span class="p">,</span> <span class="s">&quot;SLOT_CONNECTOR&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_ACPI_POWER_STATE&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_BOOT_INITIATED&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_EVENT&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_FIRMWARE_PROGRESS&quot;</span><span class="p">,</span> <span class="s">&quot;TEMPERATURE&quot;</span><span class="p">,</span> <span class="s">&quot;TERMINATOR&quot;</span><span class="p">,</span> <span class="s">&quot;UNKNOWN&quot;</span><span class="p">,</span> <span class="s">&quot;VERSION_CHANGE&quot;</span><span class="p">,</span> <span class="s">&quot;VOLTAGE&quot;</span><span class="p">,</span> <span class="s">&quot;WATCHDOG_1&quot;</span><span class="p">,</span> <span class="s">&quot;WATCHDOG_2&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
-        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x200</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x400</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sdr_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sdr_type&quot;</span><span class="p">,</span> <span class="s">&quot;sdr_type&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x800</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;COMPACT_SENSOR_RECORD&quot;</span><span class="p">,</span> <span class="s">&quot;FULL_SENSOR_RECORD&quot;</span><span class="p">,</span> <span class="s">&quot;UNKNOWN_RECORD&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sensor_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sensor_id&quot;</span><span class="p">,</span> <span class="s">&quot;sensorId&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x1000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sensor_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sensor_type&quot;</span><span class="p">,</span> <span class="s">&quot;sensorType&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x2000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ADD_IN_CARD&quot;</span><span class="p">,</span> <span class="s">&quot;BATTERY&quot;</span><span class="p">,</span> <span class="s">&quot;BOOT_ERROR&quot;</span><span class="p">,</span> <span class="s">&quot;BUTTON&quot;</span><span class="p">,</span> <span class="s">&quot;CABLE_INTERCONNECT&quot;</span><span class="p">,</span> <span class="s">&quot;CHASSIS&quot;</span><span class="p">,</span> <span class="s">&quot;CHIP_SET&quot;</span><span class="p">,</span> <span class="s">&quot;COOLING_DEVICE&quot;</span><span class="p">,</span> <span class="s">&quot;CRITICAL_INTERRUPT&quot;</span><span class="p">,</span> <span class="s">&quot;CURRENT&quot;</span><span class="p">,</span> <span class="s">&quot;DRIVE_SLOT&quot;</span><span class="p">,</span> <span class="s">&quot;ENTITY_PRESENCE&quot;</span><span class="p">,</span> <span class="s">&quot;EVENT_LOGGING_DISABLED&quot;</span><span class="p">,</span> <span class="s">&quot;FAN&quot;</span><span class="p">,</span> <span class="s">&quot;FRU_STATE&quot;</span><span class="p">,</span> <span class="s">&quot;LAN&quot;</span><span class="p">,</span> <span class="s">&quot;MANAGEMENT_SUBSYSTEM_HEALTH&quot;</span><span class="p">,</span> <span class="s">&quot;MEMORY&quot;</span><span class="p">,</span> <span class="s">&quot;MICROCONTROLLER_COPROCESSOR&quot;</span><span class="p">,</span> <span class="s">&quot;MODULE_BOARD&quot;</span><span class="p">,</span> <span class="s">&quot;MONITOR_ASIC_IC&quot;</span><span class="p">,</span> <span class="s">&quot;OEM1&quot;</span><span class="p">,</span> <span class="s">&quot;OEM2&quot;</span><span class="p">,</span> <span class="s">&quot;OEM3&quot;</span><span class="p">,</span> <span class="s">&quot;OEM4&quot;</span><span class="p">,</span> <span class="s">&quot;OEM5&quot;</span><span class="p">,</span> <span class="s">&quot;OEM7&quot;</span><span class="p">,</span> <span class="s">&quot;OS_BOOT&quot;</span><span class="p">,</span> <span class="s">&quot;OS_CRITICAL_STOP&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER_FRU&quot;</span><span class="p">,</span> <span class="s">&quot;OTHER_UNITS_BASED_SENSOR&quot;</span><span class="p">,</span> <span class="s">&quot;PHYSICAL_SECURITY&quot;</span><span class="p">,</span> <span class="s">&quot;PLATFORM_ALERT&quot;</span><span class="p">,</span> <span class="s">&quot;PLATFORM_SECURITY&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_MEMORY_RESIZE&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_SUPPLY&quot;</span><span class="p">,</span> <span class="s">&quot;POWER_UNIT&quot;</span><span class="p">,</span> <span class="s">&quot;PROCESSOR&quot;</span><span class="p">,</span> <span class="s">&quot;SESSION_AUDIT&quot;</span><span class="p">,</span> <span class="s">&quot;SLOT_CONNECTOR&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_ACPI_POWER_STATE&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_BOOT_INITIATED&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_EVENT&quot;</span><span class="p">,</span> <span class="s">&quot;SYSTEM_FIRMWARE_PROGRESS&quot;</span><span class="p">,</span> <span class="s">&quot;TEMPERATURE&quot;</span><span class="p">,</span> <span class="s">&quot;TERMINATOR&quot;</span><span class="p">,</span> <span class="s">&quot;UNKNOWN&quot;</span><span class="p">,</span> <span class="s">&quot;VERSION_CHANGE&quot;</span><span class="p">,</span> <span class="s">&quot;VOLTAGE&quot;</span><span class="p">,</span> <span class="s">&quot;WATCHDOG_1&quot;</span><span class="p">,</span> <span class="s">&quot;WATCHDOG_2&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sensor_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sensor_type&quot;</span><span class="p">,</span> <span class="s">&quot;sensor_type&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x4000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;threshold_lc&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;threshold_lc&quot;</span><span class="p">,</span> <span class="s">&quot;thresholdLc&quot;</span><span class="p">,</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;threshold_lnc&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;threshold_lnc&quot;</span><span class="p">,</span> <span class="s">&quot;thresholdLnc&quot;</span><span class="p">,</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x20000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;threshold_lnr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;threshold_lnr&quot;</span><span class="p">,</span> <span class="s">&quot;thresholdLnr&quot;</span><span class="p">,</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x40000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;threshold_uc&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;threshold_uc&quot;</span><span class="p">,</span> <span class="s">&quot;thresholdUc&quot;</span><span class="p">,</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x80000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;threshold_unc&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;threshold_unc&quot;</span><span class="p">,</span> <span class="s">&quot;thresholdUnc&quot;</span><span class="p">,</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x100000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;threshold_unr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;threshold_unr&quot;</span><span class="p">,</span> <span class="s">&quot;thresholdUnr&quot;</span><span class="p">,</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x200000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x400000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;COMPACT_SENSOR_RECORD&quot;</span><span class="p">,</span> <span class="s">&quot;FULL_SENSOR_RECORD&quot;</span><span class="p">,</span> <span class="s">&quot;UNKNOWN_RECORD&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;units&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;units&quot;</span><span class="p">,</span> <span class="s">&quot;units&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x800000</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;AMPS&quot;</span><span class="p">,</span> <span class="s">&quot;BECQUERELS&quot;</span><span class="p">,</span> <span class="s">&quot;BITS&quot;</span><span class="p">,</span> <span class="s">&quot;BYTES&quot;</span><span class="p">,</span> <span class="s">&quot;CANDELA&quot;</span><span class="p">,</span> <span class="s">&quot;CENTIMETERS&quot;</span><span class="p">,</span> <span class="s">&quot;CFM&quot;</span><span class="p">,</span> <span class="s">&quot;CHARACTERS&quot;</span><span class="p">,</span> <span class="s">&quot;COLLISIONS&quot;</span><span class="p">,</span> <span class="s">&quot;COLOR_TEMP_DEG_K&quot;</span><span class="p">,</span> <span class="s">&quot;CORRECTABLE_ERRORS&quot;</span><span class="p">,</span> <span class="s">&quot;COULOMBS&quot;</span><span class="p">,</span> <span class="s">&quot;CUBIC_CENTIMETERS&quot;</span><span class="p">,</span> <span class="s">&quot;CUBIC_FEET&quot;</span><span class="p">,</span> <span class="s">&quot;CUBIC_INCHS&quot;</span><span class="p">,</span> <span class="s">&quot;CUBIC_METERS&quot;</span><span class="p">,</span> <span class="s">&quot;CYCLES&quot;</span><span class="p">,</span> <span class="s">&quot;DAY&quot;</span><span class="p">,</span> <span class="s">&quot;DECIBELS&quot;</span><span class="p">,</span> <span class="s">&quot;DEGREES_C&quot;</span><span class="p">,</span> <span class="s">&quot;DEGREES_F&quot;</span><span class="p">,</span> <span class="s">&quot;DEGREES_K&quot;</span><span class="p">,</span> <span class="s">&quot;DWORDS&quot;</span><span class="p">,</span> <span class="s">&quot;DbA&quot;</span><span class="p">,</span> <span class="s">&quot;DbC&quot;</span><span class="p">,</span> <span class="s">&quot;ERRORS&quot;</span><span class="p">,</span> <span class="s">&quot;FARADS&quot;</span><span class="p">,</span> <span class="s">&quot;FATAL_ERRORS&quot;</span><span class="p">,</span> <span class="s">&quot;FEET&quot;</span><span class="p">,</span> <span class="s">&quot;FL_OZ&quot;</span><span class="p">,</span> <span class="s">&quot;FOOT_POUNDS&quot;</span><span class="p">,</span> <span class="s">&quot;GAUSS&quot;</span><span class="p">,</span> <span class="s">&quot;GBITS&quot;</span><span class="p">,</span> <span class="s">&quot;GBYTES&quot;</span><span class="p">,</span> <span class="s">&quot;GILBERTS&quot;</span><span class="p">,</span> <span class="s">&quot;GRAMS&quot;</span><span class="p">,</span> <span class="s">&quot;GRAVITIES&quot;</span><span class="p">,</span> <span class="s">&quot;GRAYS&quot;</span><span class="p">,</span> <span class="s">&quot;HENRIES&quot;</span><span class="p">,</span> <span class="s">&quot;HITS&quot;</span><span class="p">,</span> <span class="s">&quot;HOUR&quot;</span><span class="p">,</span> <span class="s">&quot;HZ&quot;</span><span class="p">,</span> <span class="s">&quot;INCHES&quot;</span><span class="p">,</span> <span class="s">&quot;JOULES&quot;</span><span class="p">,</span> <span class="s">&quot;KBITS&quot;</span><span class="p">,</span> <span class="s">&quot;KBYTES&quot;</span><span class="p">,</span> <span class="s">&quot;KPA&quot;</span><span class="p">,</span> <span class="s">&quot;LINES&quot;</span><span class="p">,</span> <span class="s">&quot;LITERS&quot;</span><span class="p">,</span> <span class="s">&quot;LUMENS&quot;</span><span class="p">,</span> <span class="s">&quot;LUX&quot;</span><span class="p">,</span> <span class="s">&quot;MBITS&quot;</span><span class="p">,</span> <span class="s">&quot;MBYTES&quot;</span><span class="p">,</span> <span class="s">&quot;MESSAGES&quot;</span><span class="p">,</span> <span class="s">&quot;METERS&quot;</span><span class="p">,</span> <span class="s">&quot;MHENRIES&quot;</span><span class="p">,</span> <span class="s">&quot;MIL&quot;</span><span class="p">,</span> <span class="s">&quot;MILLIMETERS&quot;</span><span class="p">,</span> <span class="s">&quot;MINUTE&quot;</span><span class="p">,</span> <span class="s">&quot;MISSES&quot;</span><span class="p">,</span> <span class="s">&quot;MOLES&quot;</span><span class="p">,</span> <span class="s">&quot;MSECONDS&quot;</span><span class="p">,</span> <span class="s">&quot;NEWTONS&quot;</span><span class="p">,</span> <span class="s">&quot;NITS&quot;</span><span class="p">,</span> <span class="s">&quot;OHMS&quot;</span><span class="p">,</span> <span class="s">&quot;OUNCES&quot;</span><span class="p">,</span> <span class="s">&quot;OUNCE_INCHES&quot;</span><span class="p">,</span> <span class="s">&quot;OVERRUNS&quot;</span><span class="p">,</span> <span class="s">&quot;PACKETS&quot;</span><span class="p">,</span> <span class="s">&quot;POUNDS&quot;</span><span class="p">,</span> <span class="s">&quot;PPM&quot;</span><span class="p">,</span> <span class="s">&quot;PSI&quot;</span><span class="p">,</span> <span class="s">&quot;QWORDS&quot;</span><span class="p">,</span> <span class="s">&quot;RADIANS&quot;</span><span class="p">,</span> <span class="s">&quot;RESETS&quot;</span><span class="p">,</span> <span class="s">&quot;RETRIES&quot;</span><span class="p">,</span> <span class="s">&quot;REVOLUTIONS&quot;</span><span class="p">,</span> <span class="s">&quot;RPM&quot;</span><span class="p">,</span> <span class="s">&quot;SECONDS&quot;</span><span class="p">,</span> <span class="s">&quot;SERADIANS&quot;</span><span class="p">,</span> <span class="s">&quot;SIEMENS&quot;</span><span class="p">,</span> <span class="s">&quot;SIEVERTS&quot;</span><span class="p">,</span> <span class="s">&quot;UFARADS&quot;</span><span class="p">,</span> <span class="s">&quot;UNCORRECTABLE_ERRORS&quot;</span><span class="p">,</span> <span class="s">&quot;UNDERRUNS&quot;</span><span class="p">,</span> <span class="s">&quot;UNSPECIFIED&quot;</span><span class="p">,</span> <span class="s">&quot;USECONDS&quot;</span><span class="p">,</span> <span class="s">&quot;VA&quot;</span><span class="p">,</span> <span class="s">&quot;VOLTS&quot;</span><span class="p">,</span> <span class="s">&quot;WATTS&quot;</span><span class="p">,</span> <span class="s">&quot;WEEK&quot;</span><span class="p">,</span> <span class="s">&quot;WORDS&quot;</span><span class="p">,</span> <span class="s">&quot;reserved1&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;child_action&quot;</span><span class="p">,</span> <span class="s2">&quot;childAction&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;entity_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;entity_type&quot;</span><span class="p">,</span> <span class="s2">&quot;entityType&quot;</span><span class="p">,</span> <span class="s2">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;event_reading_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;event_reading_type&quot;</span><span class="p">,</span> <span class="s2">&quot;eventReadingType&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;DISCRETE_ACPI_POWER&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_AVAILABILITY&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_DEVICE_ENABLE&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_DEVICE_PRESENCE&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_LIMIT_EXCEEDED&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_PERFORMANCE_MET&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_PREDICTIVE_FAILURE&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_REDUNDANCY&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_SEVERITY&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_STATE&quot;</span><span class="p">,</span> <span class="s2">&quot;DISCRETE_USAGE&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM1&quot;</span><span class="p">,</span> <span class="s2">&quot;SENSOR_SPECIFIC&quot;</span><span class="p">,</span> <span class="s2">&quot;THRESHOLD&quot;</span><span class="p">,</span> <span class="s2">&quot;UNKNOWN&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;instance&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ADD_IN_CARD&quot;</span><span class="p">,</span> <span class="s2">&quot;BATTERY&quot;</span><span class="p">,</span> <span class="s2">&quot;BOOT_ERROR&quot;</span><span class="p">,</span> <span class="s2">&quot;BUTTON&quot;</span><span class="p">,</span> <span class="s2">&quot;CABLE_INTERCONNECT&quot;</span><span class="p">,</span> <span class="s2">&quot;CHASSIS&quot;</span><span class="p">,</span> <span class="s2">&quot;CHIP_SET&quot;</span><span class="p">,</span> <span class="s2">&quot;COOLING_DEVICE&quot;</span><span class="p">,</span> <span class="s2">&quot;CRITICAL_INTERRUPT&quot;</span><span class="p">,</span> <span class="s2">&quot;CURRENT&quot;</span><span class="p">,</span> <span class="s2">&quot;DRIVE_SLOT&quot;</span><span class="p">,</span> <span class="s2">&quot;ENTITY_PRESENCE&quot;</span><span class="p">,</span> <span class="s2">&quot;EVENT_LOGGING_DISABLED&quot;</span><span class="p">,</span> <span class="s2">&quot;FAN&quot;</span><span class="p">,</span> <span class="s2">&quot;FRU_STATE&quot;</span><span class="p">,</span> <span class="s2">&quot;LAN&quot;</span><span class="p">,</span> <span class="s2">&quot;MANAGEMENT_SUBSYSTEM_HEALTH&quot;</span><span class="p">,</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span> <span class="s2">&quot;MICROCONTROLLER_COPROCESSOR&quot;</span><span class="p">,</span> <span class="s2">&quot;MODULE_BOARD&quot;</span><span class="p">,</span> <span class="s2">&quot;MONITOR_ASIC_IC&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM1&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM2&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM3&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM4&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM5&quot;</span><span class="p">,</span> <span class="s2">&quot;OEM7&quot;</span><span class="p">,</span> <span class="s2">&quot;OS_BOOT&quot;</span><span class="p">,</span> <span class="s2">&quot;OS_CRITICAL_STOP&quot;</span><span class="p">,</span> <span class="s2">&quot;OTHER_FRU&quot;</span><span class="p">,</span> <span class="s2">&quot;OTHER_UNITS_BASED_SENSOR&quot;</span><span class="p">,</span> <span class="s2">&quot;PHYSICAL_SECURITY&quot;</span><span class="p">,</span> <span class="s2">&quot;PLATFORM_ALERT&quot;</span><span class="p">,</span> <span class="s2">&quot;PLATFORM_SECURITY&quot;</span><span class="p">,</span> <span class="s2">&quot;POWER_MEMORY_RESIZE&quot;</span><span class="p">,</span> <span class="s2">&quot;POWER_SUPPLY&quot;</span><span class="p">,</span> <span class="s2">&quot;POWER_UNIT&quot;</span><span class="p">,</span> <span class="s2">&quot;PROCESSOR&quot;</span><span class="p">,</span> <span class="s2">&quot;SESSION_AUDIT&quot;</span><span class="p">,</span> <span class="s2">&quot;SLOT_CONNECTOR&quot;</span><span class="p">,</span> <span class="s2">&quot;SYSTEM_ACPI_POWER_STATE&quot;</span><span class="p">,</span> <span class="s2">&quot;SYSTEM_BOOT_INITIATED&quot;</span><span class="p">,</span> <span class="s2">&quot;SYSTEM_EVENT&quot;</span><span class="p">,</span> <span class="s2">&quot;SYSTEM_FIRMWARE_PROGRESS&quot;</span><span class="p">,</span> <span class="s2">&quot;TEMPERATURE&quot;</span><span class="p">,</span> <span class="s2">&quot;TERMINATOR&quot;</span><span class="p">,</span> <span class="s2">&quot;UNKNOWN&quot;</span><span class="p">,</span> <span class="s2">&quot;VERSION_CHANGE&quot;</span><span class="p">,</span> <span class="s2">&quot;VOLTAGE&quot;</span><span class="p">,</span> <span class="s2">&quot;WATCHDOG_1&quot;</span><span class="p">,</span> <span class="s2">&quot;WATCHDOG_2&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;0-4294967295&quot;</span><span class="p">]),</span> 
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sdr_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sdr_type&quot;</span><span class="p">,</span> <span class="s2">&quot;sdr_type&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version311e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;COMPACT_SENSOR_RECORD&quot;</span><span class="p">,</span> <span class="s2">&quot;FULL_SENSOR_RECORD&quot;</span><span class="p">,</span> <span class="s2">&quot;UNKNOWN_RECORD&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sensor_id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sensor_id&quot;</span><span class="p">,</span> <span class="s2">&quot;sensorId&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x400</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sensor_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sensor_type&quot;</span><span class="p">,</span> <span class="s2">&quot;sensor_type&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version311e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x800</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x2000</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;AMPS&quot;</span><span class="p">,</span> <span class="s2">&quot;BECQUERELS&quot;</span><span class="p">,</span> <span class="s2">&quot;BITS&quot;</span><span class="p">,</span> <span class="s2">&quot;BYTES&quot;</span><span class="p">,</span> <span class="s2">&quot;CANDELA&quot;</span><span class="p">,</span> <span class="s2">&quot;CENTIMETERS&quot;</span><span class="p">,</span> <span class="s2">&quot;CFM&quot;</span><span class="p">,</span> <span class="s2">&quot;CHARACTERS&quot;</span><span class="p">,</span> <span class="s2">&quot;COLLISIONS&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_TEMP_DEG_K&quot;</span><span class="p">,</span> <span class="s2">&quot;CORRECTABLE_ERRORS&quot;</span><span class="p">,</span> <span class="s2">&quot;COULOMBS&quot;</span><span class="p">,</span> <span class="s2">&quot;CUBIC_CENTIMETERS&quot;</span><span class="p">,</span> <span class="s2">&quot;CUBIC_FEET&quot;</span><span class="p">,</span> <span class="s2">&quot;CUBIC_INCHS&quot;</span><span class="p">,</span> <span class="s2">&quot;CUBIC_METERS&quot;</span><span class="p">,</span> <span class="s2">&quot;CYCLES&quot;</span><span class="p">,</span> <span class="s2">&quot;DAY&quot;</span><span class="p">,</span> <span class="s2">&quot;DECIBELS&quot;</span><span class="p">,</span> <span class="s2">&quot;DEGREES_C&quot;</span><span class="p">,</span> <span class="s2">&quot;DEGREES_F&quot;</span><span class="p">,</span> <span class="s2">&quot;DEGREES_K&quot;</span><span class="p">,</span> <span class="s2">&quot;DWORDS&quot;</span><span class="p">,</span> <span class="s2">&quot;DbA&quot;</span><span class="p">,</span> <span class="s2">&quot;DbC&quot;</span><span class="p">,</span> <span class="s2">&quot;ERRORS&quot;</span><span class="p">,</span> <span class="s2">&quot;FARADS&quot;</span><span class="p">,</span> <span class="s2">&quot;FATAL_ERRORS&quot;</span><span class="p">,</span> <span class="s2">&quot;FEET&quot;</span><span class="p">,</span> <span class="s2">&quot;FL_OZ&quot;</span><span class="p">,</span> <span class="s2">&quot;FOOT_POUNDS&quot;</span><span class="p">,</span> <span class="s2">&quot;GAUSS&quot;</span><span class="p">,</span> <span class="s2">&quot;GBITS&quot;</span><span class="p">,</span> <span class="s2">&quot;GBYTES&quot;</span><span class="p">,</span> <span class="s2">&quot;GILBERTS&quot;</span><span class="p">,</span> <span class="s2">&quot;GRAMS&quot;</span><span class="p">,</span> <span class="s2">&quot;GRAVITIES&quot;</span><span class="p">,</span> <span class="s2">&quot;GRAYS&quot;</span><span class="p">,</span> <span class="s2">&quot;HENRIES&quot;</span><span class="p">,</span> <span class="s2">&quot;HITS&quot;</span><span class="p">,</span> <span class="s2">&quot;HOUR&quot;</span><span class="p">,</span> <span class="s2">&quot;HZ&quot;</span><span class="p">,</span> <span class="s2">&quot;INCHES&quot;</span><span class="p">,</span> <span class="s2">&quot;JOULES&quot;</span><span class="p">,</span> <span class="s2">&quot;KBITS&quot;</span><span class="p">,</span> <span class="s2">&quot;KBYTES&quot;</span><span class="p">,</span> <span class="s2">&quot;KPA&quot;</span><span class="p">,</span> <span class="s2">&quot;LINES&quot;</span><span class="p">,</span> <span class="s2">&quot;LITERS&quot;</span><span class="p">,</span> <span class="s2">&quot;LUMENS&quot;</span><span class="p">,</span> <span class="s2">&quot;LUX&quot;</span><span class="p">,</span> <span class="s2">&quot;MBITS&quot;</span><span class="p">,</span> <span class="s2">&quot;MBYTES&quot;</span><span class="p">,</span> <span class="s2">&quot;MESSAGES&quot;</span><span class="p">,</span> <span class="s2">&quot;METERS&quot;</span><span class="p">,</span> <span class="s2">&quot;MHENRIES&quot;</span><span class="p">,</span> <span class="s2">&quot;MIL&quot;</span><span class="p">,</span> <span class="s2">&quot;MILLIMETERS&quot;</span><span class="p">,</span> <span class="s2">&quot;MINUTE&quot;</span><span class="p">,</span> <span class="s2">&quot;MISSES&quot;</span><span class="p">,</span> <span class="s2">&quot;MOLES&quot;</span><span class="p">,</span> <span class="s2">&quot;MSECONDS&quot;</span><span class="p">,</span> <span class="s2">&quot;NEWTONS&quot;</span><span class="p">,</span> <span class="s2">&quot;NITS&quot;</span><span class="p">,</span> <span class="s2">&quot;OHMS&quot;</span><span class="p">,</span> <span class="s2">&quot;OUNCES&quot;</span><span class="p">,</span> <span class="s2">&quot;OUNCE_INCHES&quot;</span><span class="p">,</span> <span class="s2">&quot;OVERRUNS&quot;</span><span class="p">,</span> <span class="s2">&quot;PACKETS&quot;</span><span class="p">,</span> <span class="s2">&quot;POUNDS&quot;</span><span class="p">,</span> <span class="s2">&quot;PPM&quot;</span><span class="p">,</span> <span class="s2">&quot;PSI&quot;</span><span class="p">,</span> <span class="s2">&quot;QWORDS&quot;</span><span class="p">,</span> <span class="s2">&quot;RADIANS&quot;</span><span class="p">,</span> <span class="s2">&quot;RESETS&quot;</span><span class="p">,</span> <span class="s2">&quot;RETRIES&quot;</span><span class="p">,</span> <span class="s2">&quot;REVOLUTIONS&quot;</span><span class="p">,</span> <span class="s2">&quot;RPM&quot;</span><span class="p">,</span> <span class="s2">&quot;SECONDS&quot;</span><span class="p">,</span> <span class="s2">&quot;SERADIANS&quot;</span><span class="p">,</span> <span class="s2">&quot;SIEMENS&quot;</span><span class="p">,</span> <span class="s2">&quot;SIEVERTS&quot;</span><span class="p">,</span> <span class="s2">&quot;UFARADS&quot;</span><span class="p">,</span> <span class="s2">&quot;UNCORRECTABLE_ERRORS&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDERRUNS&quot;</span><span class="p">,</span> <span class="s2">&quot;UNSPECIFIED&quot;</span><span class="p">,</span> <span class="s2">&quot;USECONDS&quot;</span><span class="p">,</span> <span class="s2">&quot;VA&quot;</span><span class="p">,</span> <span class="s2">&quot;VOLTS&quot;</span><span class="p">,</span> <span class="s2">&quot;WATTS&quot;</span><span class="p">,</span> <span class="s2">&quot;WEEK&quot;</span><span class="p">,</span> <span class="s2">&quot;WORDS&quot;</span><span class="p">,</span> <span class="s2">&quot;reserved1&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
     <span class="p">}</span>
 
     <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;entityType&quot;</span><span class="p">:</span> <span class="s">&quot;entity_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;eventReadingType&quot;</span><span class="p">:</span> <span class="s">&quot;event_reading_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;hysterisisDown&quot;</span><span class="p">:</span> <span class="s">&quot;hysterisis_down&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;hysterisisUp&quot;</span><span class="p">:</span> <span class="s">&quot;hysterisis_up&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;instance&quot;</span><span class="p">:</span> <span class="s">&quot;instance&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sdr_type&quot;</span><span class="p">:</span> <span class="s">&quot;sdr_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sensorId&quot;</span><span class="p">:</span> <span class="s">&quot;sensor_id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sensorType&quot;</span><span class="p">:</span> <span class="s">&quot;sensor_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sensor_type&quot;</span><span class="p">:</span> <span class="s">&quot;sensor_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thresholdLc&quot;</span><span class="p">:</span> <span class="s">&quot;threshold_lc&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thresholdLnc&quot;</span><span class="p">:</span> <span class="s">&quot;threshold_lnc&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thresholdLnr&quot;</span><span class="p">:</span> <span class="s">&quot;threshold_lnr&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thresholdUc&quot;</span><span class="p">:</span> <span class="s">&quot;threshold_uc&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thresholdUnc&quot;</span><span class="p">:</span> <span class="s">&quot;threshold_unc&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thresholdUnr&quot;</span><span class="p">:</span> <span class="s">&quot;threshold_unr&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;units&quot;</span><span class="p">:</span> <span class="s">&quot;units&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;childAction&quot;</span><span class="p">:</span> <span class="s2">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;entityType&quot;</span><span class="p">:</span> <span class="s2">&quot;entity_type&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;eventReadingType&quot;</span><span class="p">:</span> <span class="s2">&quot;event_reading_type&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;instance&quot;</span><span class="p">:</span> <span class="s2">&quot;instance&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sdr_type&quot;</span><span class="p">:</span> <span class="s2">&quot;sdr_type&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sensorId&quot;</span><span class="p">:</span> <span class="s2">&quot;sensor_id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sensor_type&quot;</span><span class="p">:</span> <span class="s2">&quot;sensor_type&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;units&quot;</span><span class="p">,</span> 
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -485,84 +260,56 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">entity_type</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">event_reading_type</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">hysterisis_down</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">hysterisis_up</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">instance</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sacl</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sdr_type</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sensor_id</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sensor_type</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sensor_type</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_lc</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_lnc</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_lnr</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_uc</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_unc</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_unr</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="bp">None</span>
 
-        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;ApeSdr&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</pre></div></div>
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;ApeSdr&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

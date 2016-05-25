@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.graphics package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.hostimg package" href="ucsmsdk.mometa.hostimg.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.gmeta package" href="ucsmsdk.mometa.gmeta.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.graphics package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.hostimg package" href="ucsmsdk.mometa.hostimg.html" />
+    <link rel="prev" title="ucsmsdk.mometa.gmeta package" href="ucsmsdk.mometa.gmeta.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.graphics package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.graphics.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-graphics-package">
 <h1>ucsmsdk.mometa.graphics package<a class="headerlink" href="#ucsmsdk-mometa-graphics-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.graphics.GraphicsCard.</code><code class="descname">GraphicsCard</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/graphics/GraphicsCard.html#GraphicsCard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is GraphicsCard class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbbba50&gt;, 'presence': &lt;ucscoremeta.MoPropertyMeta object at 0x159f99f10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15e886150&gt;, 'thermal': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbbba90&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9a7450&gt;, 'operability': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9a7ed0&gt;, 'stepping': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbbbbd0&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x15ce1d750&gt;, 'firmware_version': &lt;ucscoremeta.MoPropertyMeta object at 0x15f9bc750&gt;, 'pci_slot': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9a7590&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15f9bc6d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15d120f50&gt;, 'lc': &lt;ucscoremeta.MoPropertyMeta object at 0x15f9bc690&gt;, 'is_supported': &lt;ucscoremeta.MoPropertyMeta object at 0x15f9bcad0&gt;, 'location_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15df52c10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x159f99f90&gt;, 'device_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15a6275d0&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x159f99e90&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627d90&gt;, 'sub_vendor_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbbbb10&gt;, 'power': &lt;ucscoremeta.MoPropertyMeta object at 0x159f99d90&gt;, 'vendor_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15ce1d210&gt;, 'oper_qualifier_reason': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9a7fd0&gt;, 'pci_addr': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9a74d0&gt;, 'serial': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbbba10&gt;, 'perf': &lt;ucscoremeta.MoPropertyMeta object at 0x159f99850&gt;, 'pci_addr_list': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9a7f90&gt;, 'sub_device_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15cbbbc50&gt;, 'expander_slot': &lt;ucscoremeta.MoPropertyMeta object at 0x15fba3f90&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x15a9503d0&gt;, 'voltage': &lt;ucscoremeta.MoPropertyMeta object at 0x15e369150&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14e176810&gt;, 'presence': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd61d90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150878d10&gt;, 'thermal': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150c02410&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd18610&gt;, 'operability': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd183d0&gt;, 'stepping': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14e176610&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150c027d0&gt;, 'firmware_version': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14ebee890&gt;, 'pci_slot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14eadfdd0&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151c55550&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14ccffd90&gt;, 'lc': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151c55210&gt;, 'is_supported': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151c55750&gt;, 'location_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd185d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14f6bb610&gt;, 'device_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14ccff610&gt;, 'revision': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14f2f0fd0&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1518f7550&gt;, 'sub_vendor_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150c0f610&gt;, 'power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd61890&gt;, 'vendor_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150c02650&gt;, 'oper_qualifier_reason': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd18450&gt;, 'pci_addr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd18550&gt;, 'serial': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14e176790&gt;, 'perf': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14f894b50&gt;, 'pci_addr_list': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14f8f5c10&gt;, 'sub_device_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150c0f6d0&gt;, 'expander_slot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14f8c6110&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd18510&gt;, 'voltage': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14eda5690&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsCard.GraphicsCard.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -847,7 +718,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.graphics.GraphicsController.GraphicsController">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.graphics.GraphicsController.</code><code class="descname">GraphicsController</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/graphics/GraphicsController.html#GraphicsController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsController.GraphicsController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is GraphicsController class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.consts">
@@ -856,7 +727,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -871,7 +742,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f590&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fd90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fc10&gt;, 'oper_qualifier_reason': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f790&gt;, 'power': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fa90&gt;, 'presence': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fb10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fc90&gt;, 'perf': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fa10&gt;, 'location_dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f690&gt;, 'thermal': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fe10&gt;, 'voltage': &lt;ucscoremeta.MoPropertyMeta object at 0x15532ff10&gt;, 'oper_state': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f810&gt;, 'operability': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f890&gt;, 'pci_addr': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f910&gt;, 'vendor': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fe90&gt;, 'model': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f710&gt;, 'pci_slot': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f990&gt;, 'revision': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fb90&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f610&gt;, 'serial': &lt;ucscoremeta.MoPropertyMeta object at 0x15532fd10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15532f510&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1410&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbd090&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1ed0&gt;, 'oper_qualifier_reason': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1910&gt;, 'power': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1d50&gt;, 'presence': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1dd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1f50&gt;, 'perf': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1cd0&gt;, 'location_dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1650&gt;, 'thermal': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbd110&gt;, 'voltage': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbd210&gt;, 'oper_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1990&gt;, 'operability': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1a10&gt;, 'pci_addr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1bd0&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13cbbd190&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1750&gt;, 'pci_slot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1c50&gt;, 'revision': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1e50&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca15d0&gt;, 'serial': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1fd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x151ca1390&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.graphics.GraphicsController.GraphicsController.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1473,71 +1344,69 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.hostimg.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.hostimg package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.gmeta.html" class="btn btn-neutral" title="ucsmsdk.mometa.gmeta package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.graphics package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.graphics.GraphicsCard">ucsmsdk.mometa.graphics.GraphicsCard module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.graphics.GraphicsController">ucsmsdk.mometa.graphics.GraphicsController module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.graphics">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.gmeta.html" title="previous chapter">ucsmsdk.mometa.gmeta package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.hostimg.html" title="next chapter">ucsmsdk.mometa.hostimg package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.graphics.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.graphics.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

@@ -1,302 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.methodmeta package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk package" href="ucsmsdk.html"/>
-        <link rel="next" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="prev" title="ucsmsdk package" href="ucsmsdk.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.methodmeta package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk package" href="ucsmsdk.html" />
+    <link rel="next" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="prev" title="ucsmsdk package" href="ucsmsdk.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">ucsmsdk.methodmeta package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaChangeSelfPasswordMeta">ucsmsdk.methodmeta.AaaChangeSelfPasswordMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaCheckComputeAuthTokenMeta">ucsmsdk.methodmeta.AaaCheckComputeAuthTokenMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaCheckComputeExtAccessMeta">ucsmsdk.methodmeta.AaaCheckComputeExtAccessMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaGetAuthTokenClientMeta">ucsmsdk.methodmeta.AaaGetAuthTokenClientMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaGetKVMLaunchUrlMeta">ucsmsdk.methodmeta.AaaGetKVMLaunchUrlMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaGetNComputeAuthTokenByDnMeta">ucsmsdk.methodmeta.AaaGetNComputeAuthTokenByDnMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaKeepAliveMeta">ucsmsdk.methodmeta.AaaKeepAliveMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaLoginMeta">ucsmsdk.methodmeta.AaaLoginMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaLogoutMeta">ucsmsdk.methodmeta.AaaLogoutMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaRefreshMeta">ucsmsdk.methodmeta.AaaRefreshMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaTokenLoginMeta">ucsmsdk.methodmeta.AaaTokenLoginMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaTokenRefreshMeta">ucsmsdk.methodmeta.AaaTokenRefreshMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeBootPnuOsMeta">ucsmsdk.methodmeta.ApeBootPnuOsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeConfigureCMCLIFMeta">ucsmsdk.methodmeta.ApeConfigureCMCLIFMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeCreateHVVnicMeta">ucsmsdk.methodmeta.ApeCreateHVVnicMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeCreateSfishMeta">ucsmsdk.methodmeta.ApeCreateSfishMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeCreateVMVnicMeta">ucsmsdk.methodmeta.ApeCreateVMVnicMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeDeleteHVVnicMeta">ucsmsdk.methodmeta.ApeDeleteHVVnicMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeDeleteSfishMeta">ucsmsdk.methodmeta.ApeDeleteSfishMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeDeleteVMVnicMeta">ucsmsdk.methodmeta.ApeDeleteVMVnicMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetAdaptorConnectivityMeta">ucsmsdk.methodmeta.ApeGetAdaptorConnectivityMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetNextIdMeta">ucsmsdk.methodmeta.ApeGetNextIdMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetPnuOSInventoryMeta">ucsmsdk.methodmeta.ApeGetPnuOSInventoryMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetServerFromIpMeta">ucsmsdk.methodmeta.ApeGetServerFromIpMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetSwitchApeFruMeta">ucsmsdk.methodmeta.ApeGetSwitchApeFruMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInjectStimuliMeta">ucsmsdk.methodmeta.ApeInjectStimuliMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInsertNewChassisMeta">ucsmsdk.methodmeta.ApeInsertNewChassisMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInsertNewFexMeta">ucsmsdk.methodmeta.ApeInsertNewFexMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInsertNewRackMeta">ucsmsdk.methodmeta.ApeInsertNewRackMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueAdaptorIdMeta">ucsmsdk.methodmeta.ApeIssueAdaptorIdMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueChassisIdMeta">ucsmsdk.methodmeta.ApeIssueChassisIdMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueFexIdMeta">ucsmsdk.methodmeta.ApeIssueFexIdMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueRackIdMeta">ucsmsdk.methodmeta.ApeIssueRackIdMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetAttributeMeta">ucsmsdk.methodmeta.ApeMcGetAttributeMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetBiosTokensMeta">ucsmsdk.methodmeta.ApeMcGetBiosTokensMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetFruMeta">ucsmsdk.methodmeta.ApeMcGetFruMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetMeta">ucsmsdk.methodmeta.ApeMcGetMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetParamMeta">ucsmsdk.methodmeta.ApeMcGetParamMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetReadingMeta">ucsmsdk.methodmeta.ApeMcGetReadingMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetSdrMeta">ucsmsdk.methodmeta.ApeMcGetSdrMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetSmbiosMeta">ucsmsdk.methodmeta.ApeMcGetSmbiosMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcSetMeta">ucsmsdk.methodmeta.ApeMcSetMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcSetParamMeta">ucsmsdk.methodmeta.ApeMcSetParamMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMuxOfflineMeta">ucsmsdk.methodmeta.ApeMuxOfflineMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetAdaptorFirmwareVersionMeta">ucsmsdk.methodmeta.ApeSetAdaptorFirmwareVersionMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetApeSensorReadingMeta">ucsmsdk.methodmeta.ApeSetApeSensorReadingMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetFlexFlashControllerFirmwareVersionMeta">ucsmsdk.methodmeta.ApeSetFlexFlashControllerFirmwareVersionMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetFlexFlashControllerStateMeta">ucsmsdk.methodmeta.ApeSetFlexFlashControllerStateMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetFlexFlashVirtualRaidInformationMeta">ucsmsdk.methodmeta.ApeSetFlexFlashVirtualRaidInformationMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetServerLifeCycleMeta">ucsmsdk.methodmeta.ApeSetServerLifeCycleMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetSwitchInventoryMeta">ucsmsdk.methodmeta.ApeSetSwitchInventoryMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetVmediaMountsMeta">ucsmsdk.methodmeta.ApeSetVmediaMountsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeTriggerSwInvMeta">ucsmsdk.methodmeta.ApeTriggerSwInvMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeUpdateApeFirmwareParamTableMeta">ucsmsdk.methodmeta.ApeUpdateApeFirmwareParamTableMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeUpdateBIOSFirmwareVersionMeta">ucsmsdk.methodmeta.ApeUpdateBIOSFirmwareVersionMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeUpdateStorageCtlrFirmwareVersionMeta">ucsmsdk.methodmeta.ApeUpdateStorageCtlrFirmwareVersionMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ComputeGetInventoryMeta">ucsmsdk.methodmeta.ComputeGetInventoryMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCheckCompatibilityMeta">ucsmsdk.methodmeta.ConfigCheckCompatibilityMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCheckConformanceMeta">ucsmsdk.methodmeta.ConfigCheckConformanceMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCheckFirmwareUpdatableMeta">ucsmsdk.methodmeta.ConfigCheckFirmwareUpdatableMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfFilteredMeta">ucsmsdk.methodmeta.ConfigConfFilteredMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfMoGroupMeta">ucsmsdk.methodmeta.ConfigConfMoGroupMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfMoMeta">ucsmsdk.methodmeta.ConfigConfMoMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfMosMeta">ucsmsdk.methodmeta.ConfigConfMosMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfRenameMeta">ucsmsdk.methodmeta.ConfigConfRenameMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCountClassMeta">ucsmsdk.methodmeta.ConfigCountClassMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigEstimateConfMosMeta">ucsmsdk.methodmeta.ConfigEstimateConfMosMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigEstimateImpactMeta">ucsmsdk.methodmeta.ConfigEstimateImpactMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindDependenciesMeta">ucsmsdk.methodmeta.ConfigFindDependenciesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindDnsByClassIdMeta">ucsmsdk.methodmeta.ConfigFindDnsByClassIdMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindHostPackDependenciesMeta">ucsmsdk.methodmeta.ConfigFindHostPackDependenciesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindPermittedMeta">ucsmsdk.methodmeta.ConfigFindPermittedMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindStoragePackDependenciesMeta">ucsmsdk.methodmeta.ConfigFindStoragePackDependenciesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta">ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetRemotePoliciesMeta">ucsmsdk.methodmeta.ConfigGetRemotePoliciesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetXmlFileMeta">ucsmsdk.methodmeta.ConfigGetXmlFileMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetXmlFileStrMeta">ucsmsdk.methodmeta.ConfigGetXmlFileStrMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigInstallAllImpactMeta">ucsmsdk.methodmeta.ConfigInstallAllImpactMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigInstallStorageAllImpactMeta">ucsmsdk.methodmeta.ConfigInstallStorageAllImpactMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigMoChangeEventMeta">ucsmsdk.methodmeta.ConfigMoChangeEventMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigRefreshIdentityMeta">ucsmsdk.methodmeta.ConfigRefreshIdentityMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigReleaseResolveContextMeta">ucsmsdk.methodmeta.ConfigReleaseResolveContextMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigRenewResolveContextMeta">ucsmsdk.methodmeta.ConfigRenewResolveContextMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveChildrenMeta">ucsmsdk.methodmeta.ConfigResolveChildrenMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveChildrenSortedMeta">ucsmsdk.methodmeta.ConfigResolveChildrenSortedMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassMeta">ucsmsdk.methodmeta.ConfigResolveClassMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassSortedMeta">ucsmsdk.methodmeta.ConfigResolveClassSortedMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassesMeta">ucsmsdk.methodmeta.ConfigResolveClassesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassesSortedMeta">ucsmsdk.methodmeta.ConfigResolveClassesSortedMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveContextMeta">ucsmsdk.methodmeta.ConfigResolveContextMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveDnMeta">ucsmsdk.methodmeta.ConfigResolveDnMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveDnsMeta">ucsmsdk.methodmeta.ConfigResolveDnsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveParentMeta">ucsmsdk.methodmeta.ConfigResolveParentMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigScopeMeta">ucsmsdk.methodmeta.ConfigScopeMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventRegisterEventChannelMeta">ucsmsdk.methodmeta.EventRegisterEventChannelMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventRegisterEventChannelRespMeta">ucsmsdk.methodmeta.EventRegisterEventChannelRespMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventSendEventMeta">ucsmsdk.methodmeta.EventSendEventMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventSendHeartbeatMeta">ucsmsdk.methodmeta.EventSendHeartbeatMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventSubscribeMeta">ucsmsdk.methodmeta.EventSubscribeMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventUnRegisterEventChannelMeta">ucsmsdk.methodmeta.EventUnRegisterEventChannelMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventUnsubscribeMeta">ucsmsdk.methodmeta.EventUnsubscribeMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.FaultAckFaultMeta">ucsmsdk.methodmeta.FaultAckFaultMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.FaultAckFaultsMeta">ucsmsdk.methodmeta.FaultAckFaultsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.FaultResolveFaultMeta">ucsmsdk.methodmeta.FaultResolveFaultMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.FsmDebugActionMeta">ucsmsdk.methodmeta.FsmDebugActionMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LoggingSyncOcnsMeta">ucsmsdk.methodmeta.LoggingSyncOcnsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsCloneMeta">ucsmsdk.methodmeta.LsCloneMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsInstantiateNNamedTemplateMeta">ucsmsdk.methodmeta.LsInstantiateNNamedTemplateMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsInstantiateNTemplateMeta">ucsmsdk.methodmeta.LsInstantiateNTemplateMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsInstantiateTemplateMeta">ucsmsdk.methodmeta.LsInstantiateTemplateMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsResolveTemplatesMeta">ucsmsdk.methodmeta.LsResolveTemplatesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsTemplatiseMeta">ucsmsdk.methodmeta.LsTemplatiseMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.MethodResolveVesselMeta">ucsmsdk.methodmeta.MethodResolveVesselMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.MethodVesselMeta">ucsmsdk.methodmeta.MethodVesselMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.MgmtResolveBackupFilenamesMeta">ucsmsdk.methodmeta.MgmtResolveBackupFilenamesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.OrgResolveElementsMeta">ucsmsdk.methodmeta.OrgResolveElementsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.OrgResolveLogicalParentsMeta">ucsmsdk.methodmeta.OrgResolveLogicalParentsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.PolicyResolveNamesMeta">ucsmsdk.methodmeta.PolicyResolveNamesMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.PolicySetCentraleStorageMeta">ucsmsdk.methodmeta.PolicySetCentraleStorageMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.PoolResolveInScopeMeta">ucsmsdk.methodmeta.PoolResolveInScopeMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.StatsClearIntervalMeta">ucsmsdk.methodmeta.StatsClearIntervalMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.StatsResolveThresholdPolicyMeta">ucsmsdk.methodmeta.StatsResolveThresholdPolicyMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.StatsSubscribeMeta">ucsmsdk.methodmeta.StatsSubscribeMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.SwatExampleMeta">ucsmsdk.methodmeta.SwatExampleMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.SwatGetstatsMeta">ucsmsdk.methodmeta.SwatGetstatsMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.SwatInjectMeta">ucsmsdk.methodmeta.SwatInjectMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.SyntheticFSObjInventoryBMeta">ucsmsdk.methodmeta.SyntheticFSObjInventoryBMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.SyntheticFSObjInventoryMeta">ucsmsdk.methodmeta.SyntheticFSObjInventoryMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.SyntheticTestTxMeta">ucsmsdk.methodmeta.SyntheticTestTxMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta.TrigPerformTokenActionMeta">ucsmsdk.methodmeta.TrigPerformTokenActionMeta module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ucsmsdk.methodmeta">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-    <li>ucsmsdk.methodmeta package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.methodmeta.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-methodmeta-package">
 <h1>ucsmsdk.methodmeta package<a class="headerlink" href="#ucsmsdk-methodmeta-package" title="Permalink to this headline">¶</a></h1>
@@ -435,6 +178,10 @@
 <span id="ucsmsdk-methodmeta-apeissuerackidmeta-module"></span><h2>ucsmsdk.methodmeta.ApeIssueRackIdMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ApeIssueRackIdMeta" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the meta information of ApeIssueRackId ExternalMethod.</p>
 </div>
+<div class="section" id="module-ucsmsdk.methodmeta.ApeMcGetAttributeDataMeta">
+<span id="ucsmsdk-methodmeta-apemcgetattributedatameta-module"></span><h2>ucsmsdk.methodmeta.ApeMcGetAttributeDataMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ApeMcGetAttributeDataMeta" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the meta information of ApeMcGetAttributeData ExternalMethod.</p>
+</div>
 <div class="section" id="module-ucsmsdk.methodmeta.ApeMcGetAttributeMeta">
 <span id="ucsmsdk-methodmeta-apemcgetattributemeta-module"></span><h2>ucsmsdk.methodmeta.ApeMcGetAttributeMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ApeMcGetAttributeMeta" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the meta information of ApeMcGetAttribute ExternalMethod.</p>
@@ -466,6 +213,10 @@
 <div class="section" id="module-ucsmsdk.methodmeta.ApeMcGetSmbiosMeta">
 <span id="ucsmsdk-methodmeta-apemcgetsmbiosmeta-module"></span><h2>ucsmsdk.methodmeta.ApeMcGetSmbiosMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ApeMcGetSmbiosMeta" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the meta information of ApeMcGetSmbios ExternalMethod.</p>
+</div>
+<div class="section" id="module-ucsmsdk.methodmeta.ApeMcSetAttributeDataMeta">
+<span id="ucsmsdk-methodmeta-apemcsetattributedatameta-module"></span><h2>ucsmsdk.methodmeta.ApeMcSetAttributeDataMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ApeMcSetAttributeDataMeta" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the meta information of ApeMcSetAttributeData ExternalMethod.</p>
 </div>
 <div class="section" id="module-ucsmsdk.methodmeta.ApeMcSetMeta">
 <span id="ucsmsdk-methodmeta-apemcsetmeta-module"></span><h2>ucsmsdk.methodmeta.ApeMcSetMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ApeMcSetMeta" title="Permalink to this headline">¶</a></h2>
@@ -591,10 +342,6 @@
 <span id="ucsmsdk-methodmeta-configfindpermittedmeta-module"></span><h2>ucsmsdk.methodmeta.ConfigFindPermittedMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ConfigFindPermittedMeta" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the meta information of ConfigFindPermitted ExternalMethod.</p>
 </div>
-<div class="section" id="module-ucsmsdk.methodmeta.ConfigFindStoragePackDependenciesMeta">
-<span id="ucsmsdk-methodmeta-configfindstoragepackdependenciesmeta-module"></span><h2>ucsmsdk.methodmeta.ConfigFindStoragePackDependenciesMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ConfigFindStoragePackDependenciesMeta" title="Permalink to this headline">¶</a></h2>
-<p>This module contains the meta information of ConfigFindStoragePackDependencies ExternalMethod.</p>
-</div>
 <div class="section" id="module-ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta">
 <span id="ucsmsdk-methodmeta-configgetestimateimpactmeta-module"></span><h2>ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the meta information of ConfigGetEstimateImpact ExternalMethod.</p>
@@ -614,10 +361,6 @@
 <div class="section" id="module-ucsmsdk.methodmeta.ConfigInstallAllImpactMeta">
 <span id="ucsmsdk-methodmeta-configinstallallimpactmeta-module"></span><h2>ucsmsdk.methodmeta.ConfigInstallAllImpactMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ConfigInstallAllImpactMeta" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the meta information of ConfigInstallAllImpact ExternalMethod.</p>
-</div>
-<div class="section" id="module-ucsmsdk.methodmeta.ConfigInstallStorageAllImpactMeta">
-<span id="ucsmsdk-methodmeta-configinstallstorageallimpactmeta-module"></span><h2>ucsmsdk.methodmeta.ConfigInstallStorageAllImpactMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ConfigInstallStorageAllImpactMeta" title="Permalink to this headline">¶</a></h2>
-<p>This module contains the meta information of ConfigInstallStorageAllImpact ExternalMethod.</p>
 </div>
 <div class="section" id="module-ucsmsdk.methodmeta.ConfigMoChangeEventMeta">
 <span id="ucsmsdk-methodmeta-configmochangeeventmeta-module"></span><h2>ucsmsdk.methodmeta.ConfigMoChangeEventMeta module<a class="headerlink" href="#module-ucsmsdk.methodmeta.ConfigMoChangeEventMeta" title="Permalink to this headline">¶</a></h2>
@@ -829,71 +572,195 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.html" class="btn btn-neutral" title="ucsmsdk package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.methodmeta package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaChangeSelfPasswordMeta">ucsmsdk.methodmeta.AaaChangeSelfPasswordMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaCheckComputeAuthTokenMeta">ucsmsdk.methodmeta.AaaCheckComputeAuthTokenMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaCheckComputeExtAccessMeta">ucsmsdk.methodmeta.AaaCheckComputeExtAccessMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaGetAuthTokenClientMeta">ucsmsdk.methodmeta.AaaGetAuthTokenClientMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaGetKVMLaunchUrlMeta">ucsmsdk.methodmeta.AaaGetKVMLaunchUrlMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaGetNComputeAuthTokenByDnMeta">ucsmsdk.methodmeta.AaaGetNComputeAuthTokenByDnMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaKeepAliveMeta">ucsmsdk.methodmeta.AaaKeepAliveMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaLoginMeta">ucsmsdk.methodmeta.AaaLoginMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaLogoutMeta">ucsmsdk.methodmeta.AaaLogoutMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaRefreshMeta">ucsmsdk.methodmeta.AaaRefreshMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaTokenLoginMeta">ucsmsdk.methodmeta.AaaTokenLoginMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.AaaTokenRefreshMeta">ucsmsdk.methodmeta.AaaTokenRefreshMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeBootPnuOsMeta">ucsmsdk.methodmeta.ApeBootPnuOsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeConfigureCMCLIFMeta">ucsmsdk.methodmeta.ApeConfigureCMCLIFMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeCreateHVVnicMeta">ucsmsdk.methodmeta.ApeCreateHVVnicMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeCreateSfishMeta">ucsmsdk.methodmeta.ApeCreateSfishMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeCreateVMVnicMeta">ucsmsdk.methodmeta.ApeCreateVMVnicMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeDeleteHVVnicMeta">ucsmsdk.methodmeta.ApeDeleteHVVnicMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeDeleteSfishMeta">ucsmsdk.methodmeta.ApeDeleteSfishMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeDeleteVMVnicMeta">ucsmsdk.methodmeta.ApeDeleteVMVnicMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetAdaptorConnectivityMeta">ucsmsdk.methodmeta.ApeGetAdaptorConnectivityMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetNextIdMeta">ucsmsdk.methodmeta.ApeGetNextIdMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetPnuOSInventoryMeta">ucsmsdk.methodmeta.ApeGetPnuOSInventoryMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetServerFromIpMeta">ucsmsdk.methodmeta.ApeGetServerFromIpMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeGetSwitchApeFruMeta">ucsmsdk.methodmeta.ApeGetSwitchApeFruMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInjectStimuliMeta">ucsmsdk.methodmeta.ApeInjectStimuliMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInsertNewChassisMeta">ucsmsdk.methodmeta.ApeInsertNewChassisMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInsertNewFexMeta">ucsmsdk.methodmeta.ApeInsertNewFexMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeInsertNewRackMeta">ucsmsdk.methodmeta.ApeInsertNewRackMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueAdaptorIdMeta">ucsmsdk.methodmeta.ApeIssueAdaptorIdMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueChassisIdMeta">ucsmsdk.methodmeta.ApeIssueChassisIdMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueFexIdMeta">ucsmsdk.methodmeta.ApeIssueFexIdMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeIssueRackIdMeta">ucsmsdk.methodmeta.ApeIssueRackIdMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetAttributeDataMeta">ucsmsdk.methodmeta.ApeMcGetAttributeDataMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetAttributeMeta">ucsmsdk.methodmeta.ApeMcGetAttributeMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetBiosTokensMeta">ucsmsdk.methodmeta.ApeMcGetBiosTokensMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetFruMeta">ucsmsdk.methodmeta.ApeMcGetFruMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetMeta">ucsmsdk.methodmeta.ApeMcGetMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetParamMeta">ucsmsdk.methodmeta.ApeMcGetParamMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetReadingMeta">ucsmsdk.methodmeta.ApeMcGetReadingMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetSdrMeta">ucsmsdk.methodmeta.ApeMcGetSdrMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcGetSmbiosMeta">ucsmsdk.methodmeta.ApeMcGetSmbiosMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcSetAttributeDataMeta">ucsmsdk.methodmeta.ApeMcSetAttributeDataMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcSetMeta">ucsmsdk.methodmeta.ApeMcSetMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMcSetParamMeta">ucsmsdk.methodmeta.ApeMcSetParamMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeMuxOfflineMeta">ucsmsdk.methodmeta.ApeMuxOfflineMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetAdaptorFirmwareVersionMeta">ucsmsdk.methodmeta.ApeSetAdaptorFirmwareVersionMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetApeSensorReadingMeta">ucsmsdk.methodmeta.ApeSetApeSensorReadingMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetFlexFlashControllerFirmwareVersionMeta">ucsmsdk.methodmeta.ApeSetFlexFlashControllerFirmwareVersionMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetFlexFlashControllerStateMeta">ucsmsdk.methodmeta.ApeSetFlexFlashControllerStateMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetFlexFlashVirtualRaidInformationMeta">ucsmsdk.methodmeta.ApeSetFlexFlashVirtualRaidInformationMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetServerLifeCycleMeta">ucsmsdk.methodmeta.ApeSetServerLifeCycleMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetSwitchInventoryMeta">ucsmsdk.methodmeta.ApeSetSwitchInventoryMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeSetVmediaMountsMeta">ucsmsdk.methodmeta.ApeSetVmediaMountsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeTriggerSwInvMeta">ucsmsdk.methodmeta.ApeTriggerSwInvMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeUpdateApeFirmwareParamTableMeta">ucsmsdk.methodmeta.ApeUpdateApeFirmwareParamTableMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeUpdateBIOSFirmwareVersionMeta">ucsmsdk.methodmeta.ApeUpdateBIOSFirmwareVersionMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ApeUpdateStorageCtlrFirmwareVersionMeta">ucsmsdk.methodmeta.ApeUpdateStorageCtlrFirmwareVersionMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ComputeGetInventoryMeta">ucsmsdk.methodmeta.ComputeGetInventoryMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCheckCompatibilityMeta">ucsmsdk.methodmeta.ConfigCheckCompatibilityMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCheckConformanceMeta">ucsmsdk.methodmeta.ConfigCheckConformanceMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCheckFirmwareUpdatableMeta">ucsmsdk.methodmeta.ConfigCheckFirmwareUpdatableMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfFilteredMeta">ucsmsdk.methodmeta.ConfigConfFilteredMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfMoGroupMeta">ucsmsdk.methodmeta.ConfigConfMoGroupMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfMoMeta">ucsmsdk.methodmeta.ConfigConfMoMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfMosMeta">ucsmsdk.methodmeta.ConfigConfMosMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigConfRenameMeta">ucsmsdk.methodmeta.ConfigConfRenameMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigCountClassMeta">ucsmsdk.methodmeta.ConfigCountClassMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigEstimateConfMosMeta">ucsmsdk.methodmeta.ConfigEstimateConfMosMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigEstimateImpactMeta">ucsmsdk.methodmeta.ConfigEstimateImpactMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindDependenciesMeta">ucsmsdk.methodmeta.ConfigFindDependenciesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindDnsByClassIdMeta">ucsmsdk.methodmeta.ConfigFindDnsByClassIdMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindHostPackDependenciesMeta">ucsmsdk.methodmeta.ConfigFindHostPackDependenciesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigFindPermittedMeta">ucsmsdk.methodmeta.ConfigFindPermittedMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta">ucsmsdk.methodmeta.ConfigGetEstimateImpactMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetRemotePoliciesMeta">ucsmsdk.methodmeta.ConfigGetRemotePoliciesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetXmlFileMeta">ucsmsdk.methodmeta.ConfigGetXmlFileMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigGetXmlFileStrMeta">ucsmsdk.methodmeta.ConfigGetXmlFileStrMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigInstallAllImpactMeta">ucsmsdk.methodmeta.ConfigInstallAllImpactMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigMoChangeEventMeta">ucsmsdk.methodmeta.ConfigMoChangeEventMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigRefreshIdentityMeta">ucsmsdk.methodmeta.ConfigRefreshIdentityMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigReleaseResolveContextMeta">ucsmsdk.methodmeta.ConfigReleaseResolveContextMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigRenewResolveContextMeta">ucsmsdk.methodmeta.ConfigRenewResolveContextMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveChildrenMeta">ucsmsdk.methodmeta.ConfigResolveChildrenMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveChildrenSortedMeta">ucsmsdk.methodmeta.ConfigResolveChildrenSortedMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassMeta">ucsmsdk.methodmeta.ConfigResolveClassMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassSortedMeta">ucsmsdk.methodmeta.ConfigResolveClassSortedMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassesMeta">ucsmsdk.methodmeta.ConfigResolveClassesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveClassesSortedMeta">ucsmsdk.methodmeta.ConfigResolveClassesSortedMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveContextMeta">ucsmsdk.methodmeta.ConfigResolveContextMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveDnMeta">ucsmsdk.methodmeta.ConfigResolveDnMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveDnsMeta">ucsmsdk.methodmeta.ConfigResolveDnsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigResolveParentMeta">ucsmsdk.methodmeta.ConfigResolveParentMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.ConfigScopeMeta">ucsmsdk.methodmeta.ConfigScopeMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventRegisterEventChannelMeta">ucsmsdk.methodmeta.EventRegisterEventChannelMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventRegisterEventChannelRespMeta">ucsmsdk.methodmeta.EventRegisterEventChannelRespMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventSendEventMeta">ucsmsdk.methodmeta.EventSendEventMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventSendHeartbeatMeta">ucsmsdk.methodmeta.EventSendHeartbeatMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventSubscribeMeta">ucsmsdk.methodmeta.EventSubscribeMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventUnRegisterEventChannelMeta">ucsmsdk.methodmeta.EventUnRegisterEventChannelMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.EventUnsubscribeMeta">ucsmsdk.methodmeta.EventUnsubscribeMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.FaultAckFaultMeta">ucsmsdk.methodmeta.FaultAckFaultMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.FaultAckFaultsMeta">ucsmsdk.methodmeta.FaultAckFaultsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.FaultResolveFaultMeta">ucsmsdk.methodmeta.FaultResolveFaultMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.FsmDebugActionMeta">ucsmsdk.methodmeta.FsmDebugActionMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LoggingSyncOcnsMeta">ucsmsdk.methodmeta.LoggingSyncOcnsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsCloneMeta">ucsmsdk.methodmeta.LsCloneMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsInstantiateNNamedTemplateMeta">ucsmsdk.methodmeta.LsInstantiateNNamedTemplateMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsInstantiateNTemplateMeta">ucsmsdk.methodmeta.LsInstantiateNTemplateMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsInstantiateTemplateMeta">ucsmsdk.methodmeta.LsInstantiateTemplateMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsResolveTemplatesMeta">ucsmsdk.methodmeta.LsResolveTemplatesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.LsTemplatiseMeta">ucsmsdk.methodmeta.LsTemplatiseMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.MethodResolveVesselMeta">ucsmsdk.methodmeta.MethodResolveVesselMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.MethodVesselMeta">ucsmsdk.methodmeta.MethodVesselMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.MgmtResolveBackupFilenamesMeta">ucsmsdk.methodmeta.MgmtResolveBackupFilenamesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.OrgResolveElementsMeta">ucsmsdk.methodmeta.OrgResolveElementsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.OrgResolveLogicalParentsMeta">ucsmsdk.methodmeta.OrgResolveLogicalParentsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.PolicyResolveNamesMeta">ucsmsdk.methodmeta.PolicyResolveNamesMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.PolicySetCentraleStorageMeta">ucsmsdk.methodmeta.PolicySetCentraleStorageMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.PoolResolveInScopeMeta">ucsmsdk.methodmeta.PoolResolveInScopeMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.StatsClearIntervalMeta">ucsmsdk.methodmeta.StatsClearIntervalMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.StatsResolveThresholdPolicyMeta">ucsmsdk.methodmeta.StatsResolveThresholdPolicyMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.StatsSubscribeMeta">ucsmsdk.methodmeta.StatsSubscribeMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.SwatExampleMeta">ucsmsdk.methodmeta.SwatExampleMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.SwatGetstatsMeta">ucsmsdk.methodmeta.SwatGetstatsMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.SwatInjectMeta">ucsmsdk.methodmeta.SwatInjectMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.SyntheticFSObjInventoryBMeta">ucsmsdk.methodmeta.SyntheticFSObjInventoryBMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.SyntheticFSObjInventoryMeta">ucsmsdk.methodmeta.SyntheticFSObjInventoryMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.SyntheticTestTxMeta">ucsmsdk.methodmeta.SyntheticTestTxMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta.TrigPerformTokenActionMeta">ucsmsdk.methodmeta.TrigPerformTokenActionMeta module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.methodmeta">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+      <li>Previous: <a href="ucsmsdk.html" title="previous chapter">ucsmsdk package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.html" title="next chapter">ucsmsdk.mometa package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.methodmeta.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.methodmeta.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

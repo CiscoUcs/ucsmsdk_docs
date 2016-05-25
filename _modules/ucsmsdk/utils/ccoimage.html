@@ -1,177 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.utils.ccoimage &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../index.html"/>
-        <link rel="up" title="Module code" href="../../index.html"/> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.utils.ccoimage &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.utils.ccoimage</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.utils.ccoimage</h1><div class="highlight"><pre>
-<span class="c"># Copyright 2015 Cisco Systems, Inc.</span>
-<span class="c">#</span>
-<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="c"># you may not use this file except in compliance with the License.</span>
-<span class="c"># You may obtain a copy of the License at</span>
-<span class="c">#  http://www.apache.org/licenses/LICENSE-2.0</span>
-<span class="c">#</span>
-<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
-<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="c"># See the License for the specific language governing permissions and</span>
-<span class="c"># limitations under the License.</span>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module is responsible to download the ccoimage.</span>
+<span class="sd">This module has helper methods to facilitate image download from CCO</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">logging</span>
 
 <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
 <span class="kn">from</span> <span class="nn">..ucsexception</span> <span class="kn">import</span> <span class="n">UcsValidationException</span><span class="p">,</span> <span class="n">UcsWarning</span>
 <span class="kn">from</span> <span class="nn">..ucsdriver</span> <span class="kn">import</span> <span class="n">UcsDriver</span>
 
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
+
 
 <span class="k">class</span> <span class="nc">_UcsCcoImageList</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;used as enum for cco image attributes&quot;&quot;&quot;</span>
-    <span class="n">IDAC_TAG_VERSION</span> <span class="o">=</span> <span class="s">&quot;version&quot;</span>
-    <span class="n">IDAC_TAG_IMAGE_NAME</span> <span class="o">=</span> <span class="s">&quot;imageName&quot;</span>
-    <span class="n">IDAC_TAG_URL</span> <span class="o">=</span> <span class="s">&quot;url&quot;</span>
-    <span class="n">IDAC_TAG_IP_URL</span> <span class="o">=</span> <span class="s">&quot;IPurl&quot;</span>
-    <span class="n">IDAC_TAG_SIZE</span> <span class="o">=</span> <span class="s">&quot;size&quot;</span>
-    <span class="n">IDAC_TAG_CHECKSUM</span> <span class="o">=</span> <span class="s">&quot;checksum&quot;</span>
-    <span class="n">IDAC_TAG_FILE_DESCRIPTION</span> <span class="o">=</span> <span class="s">&quot;fileDescription&quot;</span>
+    <span class="sd">&quot;&quot;&quot;enum for cco image attributes&quot;&quot;&quot;</span>
+    <span class="n">IDAC_TAG_VERSION</span> <span class="o">=</span> <span class="s2">&quot;version&quot;</span>
+    <span class="n">IDAC_TAG_IMAGE_NAME</span> <span class="o">=</span> <span class="s2">&quot;imageName&quot;</span>
+    <span class="n">IDAC_TAG_URL</span> <span class="o">=</span> <span class="s2">&quot;url&quot;</span>
+    <span class="n">IDAC_TAG_IP_URL</span> <span class="o">=</span> <span class="s2">&quot;IPurl&quot;</span>
+    <span class="n">IDAC_TAG_SIZE</span> <span class="o">=</span> <span class="s2">&quot;size&quot;</span>
+    <span class="n">IDAC_TAG_CHECKSUM</span> <span class="o">=</span> <span class="s2">&quot;checksum&quot;</span>
+    <span class="n">IDAC_TAG_FILE_DESCRIPTION</span> <span class="o">=</span> <span class="s2">&quot;fileDescription&quot;</span>
 
 
 <div class="viewcode-block" id="UcsCcoImage"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.ccoimage.UcsCcoImage">[docs]</a><span class="k">class</span> <span class="nc">UcsCcoImage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Describes the cco image</span>
+<span class="sd">    Describes the cco image object</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -185,37 +98,37 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">network_credential</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span> <span class="o">=</span> <span class="bp">None</span>
 
-<div class="viewcode-block" id="UcsCcoImage.__str__"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.ccoimage.UcsCcoImage.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Overridden str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">tab_size</span> <span class="o">=</span> <span class="mi">8</span>
-        <span class="n">out_str</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;image_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">image_name</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;version&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;ip_url&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">ip_url</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;checksum_md5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">checksum_md5</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;file_description&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_description</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;network_credential&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">network_credential</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s">&quot;proxy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="n">out_str</span> <span class="o">+=</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-        <span class="k">return</span> <span class="n">out_str</span>
+        <span class="n">out_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;image_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;ip_url&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip_url</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;checksum_md5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">checksum_md5</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;file_description&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_description</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;network_credential&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">network_credential</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;proxy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">out_str</span></div>
 
-</div></div>
+
 <div class="viewcode-block" id="get_ucs_cco_image_list"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.ccoimage.get_ucs_cco_image_list">[docs]</a><span class="k">def</span> <span class="nf">get_ucs_cco_image_list</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">mdf_id_list</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                            <span class="n">proxy</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Gets the list of available cco images</span>
+<span class="sd">    Gets the list of images available on CCO</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        username (str): username to connect to image server</span>
@@ -236,21 +149,21 @@
     <span class="kn">import</span> <span class="nn">base64</span>
 
     <span class="k">if</span> <span class="n">username</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">username</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Username: &quot;</span><span class="p">)</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Username: &quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">()</span>
 
     <span class="n">ucs_mdf_ids</span> <span class="o">=</span> <span class="p">(</span><span class="mi">283612660</span><span class="p">,</span> <span class="mi">283853163</span><span class="p">,</span> <span class="mi">283862063</span><span class="p">)</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://www.cisco.com/cgi-bin/front.x/ida/locator/locator.pl&quot;</span>
-    <span class="n">ida_xml_query_header</span> <span class="o">=</span> <span class="s">&#39;input_xml=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;</span> \
-                           <span class="s">&#39;&lt;locator&gt;&#39;</span> \
-                           <span class="s">&#39;&lt;input&gt;&#39;</span>
-    <span class="n">ida_xml_query_mdf_id</span> <span class="o">=</span> <span class="s">&#39;&lt;mdfConcept id=&quot;</span><span class="si">%s</span><span class="s">&quot; name=&quot;&quot;/&gt;&#39;</span>
-    <span class="n">ida_xml_query_footer</span> <span class="o">=</span> <span class="s">&#39;&lt;/input&gt;&lt;/locator&gt;&#39;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.cisco.com/cgi-bin/front.x/ida/locator/locator.pl&quot;</span>
+    <span class="n">ida_xml_query_header</span> <span class="o">=</span> <span class="s1">&#39;input_xml=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;</span> \
+                           <span class="s1">&#39;&lt;locator&gt;&#39;</span> \
+                           <span class="s1">&#39;&lt;input&gt;&#39;</span>
+    <span class="n">ida_xml_query_mdf_id</span> <span class="o">=</span> <span class="s1">&#39;&lt;mdfConcept id=&quot;</span><span class="si">%s</span><span class="s1">&quot; name=&quot;&quot;/&gt;&#39;</span>
+    <span class="n">ida_xml_query_footer</span> <span class="o">=</span> <span class="s1">&#39;&lt;/input&gt;&lt;/locator&gt;&#39;</span>
 
-    <span class="c"># create input_xml string to post as</span>
-    <span class="c"># data to the respective url via post method</span>
-    <span class="n">input_xml</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="c1"># create input_xml string to post as</span>
+    <span class="c1"># data to the respective url via post method</span>
+    <span class="n">input_xml</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="n">input_xml</span> <span class="o">+=</span> <span class="n">ida_xml_query_header</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">mdf_id_list</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">mdf_id</span> <span class="ow">in</span> <span class="n">ucs_mdf_ids</span><span class="p">:</span>
@@ -260,78 +173,86 @@
             <span class="n">input_xml</span> <span class="o">+=</span> <span class="n">ida_xml_query_mdf_id</span> <span class="o">%</span> <span class="n">mdf_id</span>
 
     <span class="n">input_xml</span> <span class="o">+=</span> <span class="n">ida_xml_query_footer</span>
-    <span class="c"># print input_xml</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">input_xml</span><span class="p">)</span>
 
-    <span class="c"># sending url request</span>
+    <span class="c1"># base64encode for Authorization header</span>
+    <span class="n">credential</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">((</span><span class="n">username</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">password</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span>
+        <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">credential</span><span class="p">)</span>
+
+    <span class="c1"># send request to server</span>
     <span class="n">driver</span> <span class="o">=</span> <span class="n">UcsDriver</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span>
-    <span class="n">credential</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">encodestring</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">))[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="s">&quot;Basic </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">credential</span><span class="p">)</span>
-    <span class="n">ida_xml_response</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">input_xml</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s2">&quot;Authorization&quot;</span><span class="p">,</span> <span class="s2">&quot;Basic </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">credential</span><span class="p">)</span>
+    <span class="n">ida_xml_response</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+                                   <span class="n">data</span><span class="o">=</span><span class="n">input_xml</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
+                                   <span class="n">dump_xml</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                   <span class="n">read</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
     <span class="k">if</span> <span class="ow">not</span> <span class="n">ida_xml_response</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;No Response from &lt;</span><span class="si">%s</span><span class="s">&gt;&quot;</span> <span class="o">%</span> <span class="n">url</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;No Response from &lt;</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="n">url</span><span class="p">)</span>
 
     <span class="n">doc</span> <span class="o">=</span> <span class="n">xml</span><span class="o">.</span><span class="n">dom</span><span class="o">.</span><span class="n">minidom</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="n">ida_xml_response</span><span class="p">)</span>
-    <span class="n">image_node_list</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&quot;image&quot;</span><span class="p">)</span>
+    <span class="n">image_node_list</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">image_node_list</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;No Images Found&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;No Images Found&quot;</span><span class="p">)</span>
 
-    <span class="c"># Serialize image nodes in objects</span>
+    <span class="c1"># Serialize image nodes in objects</span>
     <span class="n">cco_image_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">image_node</span> <span class="ow">in</span> <span class="n">image_node_list</span><span class="p">:</span>
-        <span class="c"># print image_node.toxml()</span>
+        <span class="c1"># print image_node.toxml()</span>
         <span class="n">image</span> <span class="o">=</span> <span class="n">UcsCcoImage</span><span class="p">()</span>
         <span class="n">image</span><span class="o">.</span><span class="n">network_credential</span> <span class="o">=</span> <span class="n">credential</span>
 
         <span class="n">property_node_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">child_node</span> <span class="k">for</span> <span class="n">child_node</span> <span class="ow">in</span>
                               <span class="n">image_node</span><span class="o">.</span><span class="n">childNodes</span> <span class="k">if</span>
                               <span class="n">child_node</span><span class="o">.</span><span class="n">nodeType</span> <span class="o">==</span> <span class="n">child_node</span><span class="o">.</span><span class="n">ELEMENT_NODE</span>
-                              <span class="ow">and</span> <span class="n">child_node</span><span class="o">.</span><span class="n">localName</span> <span class="o">==</span> <span class="s">&quot;property&quot;</span><span class="p">]</span>
+                              <span class="ow">and</span> <span class="n">child_node</span><span class="o">.</span><span class="n">localName</span> <span class="o">==</span> <span class="s2">&quot;property&quot;</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">property_node</span> <span class="ow">in</span> <span class="n">property_node_list</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">property_node</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">property_node</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">):</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_VERSION</span><span class="p">:</span>
-                <span class="n">image</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_VERSION</span><span class="p">:</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_IMAGE_NAME</span><span class="p">:</span>
-                <span class="n">image</span><span class="o">.</span><span class="n">image_name</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_IMAGE_NAME</span><span class="p">:</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">image_name</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_URL</span><span class="p">:</span>
-                <span class="n">image</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_URL</span><span class="p">:</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_IP_URL</span><span class="p">:</span>
-                <span class="n">image</span><span class="o">.</span><span class="n">ip_url</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_IP_URL</span><span class="p">:</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">ip_url</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_SIZE</span><span class="p">:</span>
-                <span class="n">image</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">))</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_SIZE</span><span class="p">:</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">))</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_CHECKSUM</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s">&quot;md5&quot;</span><span class="p">:</span>
-                    <span class="n">image</span><span class="o">.</span><span class="n">checksum_md5</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_CHECKSUM</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;md5&quot;</span><span class="p">:</span>
+                    <span class="n">image</span><span class="o">.</span><span class="n">checksum_md5</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                     <span class="k">continue</span>
             <span class="k">if</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span>
-                    <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_FILE_DESCRIPTION</span><span class="p">:</span>
-                <span class="n">image</span><span class="o">.</span><span class="n">file_description</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">_UcsCcoImageList</span><span class="o">.</span><span class="n">IDAC_TAG_FILE_DESCRIPTION</span><span class="p">:</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">file_description</span> <span class="o">=</span> <span class="n">property_node</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                 <span class="k">continue</span>
 
         <span class="n">cco_image_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">cco_image_list</span>
+    <span class="k">return</span> <span class="n">cco_image_list</span></div>
 
-</div>
+
 <div class="viewcode-block" id="get_ucs_cco_image"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.ccoimage.get_ucs_cco_image">[docs]</a><span class="k">def</span> <span class="nf">get_ucs_cco_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Downloads the cco image</span>
+<span class="sd">    Downloads image from CCO</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        image (object): object of type UcsCcoImage</span>
-<span class="sd">        file_dir (str): directory to download image</span>
-<span class="sd">        proxy (str): proxy used for connection</span>
+<span class="sd">        image (UcsCcoImage): object of type UcsCcoImage</span>
+<span class="sd">        file_dir (str): directory to download image to</span>
+<span class="sd">        proxy (str): proxy (if any)</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        None</span>
@@ -342,21 +263,21 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">image</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;Provide image.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;Provide an image to be downloaded.&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">UcsCcoImage</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;Object is not of type UcsCcoImage&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;Object is not of type UcsCcoImage&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">file_dir</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;Provide file_dir.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;Provide file_dir to download image to.&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">file_dir</span><span class="p">):</span>
         <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
-            <span class="s">&quot;Not the valid directory &lt;</span><span class="si">%s</span><span class="s">&gt;&quot;</span> <span class="o">%</span> <span class="n">file_dir</span><span class="p">)</span>
+            <span class="s2">&quot;Not a valid directory &lt;</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="n">file_dir</span><span class="p">)</span>
 
     <span class="n">image_url</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">url</span>
-    <span class="k">print</span> <span class="s">&quot;Processing Image &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">image_name</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Processing Image &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">image_name</span><span class="p">))</span>
 
     <span class="n">driver</span> <span class="o">=</span> <span class="n">UcsDriver</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span>
-    <span class="n">driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="s">&quot;Basic </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">image</span><span class="o">.</span><span class="n">network_credential</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s2">&quot;Authorization&quot;</span><span class="p">,</span> <span class="s2">&quot;Basic </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">image</span><span class="o">.</span><span class="n">network_credential</span><span class="p">)</span>
     <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span>
                               <span class="n">file_url</span><span class="o">=</span><span class="n">image_url</span><span class="p">,</span>
                               <span class="n">file_dir</span><span class="o">=</span><span class="n">file_dir</span><span class="p">,</span>
@@ -365,80 +286,61 @@
     <span class="n">local_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_dir</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">image_name</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">local_file</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s">&quot;url parameter is not provided.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;URL parameter is not provided.&quot;</span><span class="p">)</span>
 
     <span class="n">md5_sum</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">get_md5_sum</span><span class="p">(</span><span class="n">local_file</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">md5_sum</span><span class="p">:</span>
-        <span class="n">UcsWarning</span><span class="p">(</span><span class="s">&quot;Unable to generate md5sum for file &lt;</span><span class="si">%s</span><span class="s">&gt;&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
-        <span class="n">UcsWarning</span><span class="p">(</span><span class="s">&quot;Deleting file &lt;</span><span class="si">%s</span><span class="s">&gt; .....&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
+        <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Unable to generate md5sum for file &lt;</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
+        <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Deleting file &lt;</span><span class="si">%s</span><span class="s2">&gt; .....&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">local_file</span><span class="p">)</span>
         <span class="k">return</span>
-
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">md5_sum</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">checksum_md5</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">md5_sum</span> <span class="o">!=</span> <span class="n">image</span><span class="o">.</span><span class="n">checksum_md5</span><span class="p">:</span>
-        <span class="n">UcsWarning</span><span class="p">(</span><span class="s">&quot;Incorrect md5sum for file &lt;</span><span class="si">%s</span><span class="s">&gt;&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
-        <span class="n">UcsWarning</span><span class="p">(</span><span class="s">&quot;Deleting file &lt;</span><span class="si">%s</span><span class="s">&gt; .....&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
+        <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Incorrect md5sum for file &lt;</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
+        <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Deleting file &lt;</span><span class="si">%s</span><span class="s2">&gt; .....&quot;</span> <span class="o">%</span> <span class="n">local_file</span><span class="p">)</span>
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">local_file</span><span class="p">)</span>
-        <span class="k">return</span>
-
-    <span class="k">print</span> <span class="s">&quot;Processing Image Completed.&quot;</span></div>
+        <span class="k">return</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

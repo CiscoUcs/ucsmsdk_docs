@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.lsboot package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.lsmaint package" href="ucsmsdk.mometa.lsmaint.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.ls package" href="ucsmsdk.mometa.ls.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.lsboot package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.lsmaint package" href="ucsmsdk.mometa.lsmaint.html" />
+    <link rel="prev" title="ucsmsdk.mometa.ls package" href="ucsmsdk.mometa.ls.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.lsboot package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.lsboot.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-lsboot-package">
 <h1>ucsmsdk.mometa.lsboot package<a class="headerlink" href="#ucsmsdk-mometa-lsboot-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootBootSecurity.</code><code class="descname">LsbootBootSecurity</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootBootSecurity.html#LsbootBootSecurity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootBootSecurity class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9b8250&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9b81d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9b8350&gt;, 'secure_boot': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9b8050&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9b8750&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x13a9b89d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126a6c650&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126432250&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126a6c910&gt;, 'secure_boot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126432550&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126a6cad0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126a6cfd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootBootSecurity.LsbootBootSecurity.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -242,7 +113,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootDef.</code><code class="descname">LsbootDef</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootDef.html#LsbootDef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootDef class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.consts">
@@ -251,7 +122,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -266,7 +137,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfb790&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x122e82b50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x122e82750&gt;, 'purpose': &lt;ucscoremeta.MoPropertyMeta object at 0x12a480750&gt;, 'enforce_vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfbf50&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfb650&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfbf10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfb990&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfb4d0&gt;, 'reboot_on_update': &lt;ucscoremeta.MoPropertyMeta object at 0x12a480a90&gt;, 'adv_boot_order_applicable': &lt;ucscoremeta.MoPropertyMeta object at 0x13e644490&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x12a480d10&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x12a480bd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x12a480410&gt;, 'boot_mode': &lt;ucscoremeta.MoPropertyMeta object at 0x11acfb350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141a38b90&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136038e90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128b6ef50&gt;, 'purpose': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128b6e750&gt;, 'enforce_vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11c755f90&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11c755cd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141a38d10&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11c755250&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141a38390&gt;, 'reboot_on_update': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128b6ef90&gt;, 'adv_boot_order_applicable': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141a38d50&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128b6eb90&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128b6ec50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x128b6eb10&gt;, 'boot_mode': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x141a38c90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDef.LsbootDef.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -383,7 +254,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.</code><code class="descname">LsbootDefaultLocalImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootDefaultLocalImage.html#LsbootDefaultLocalImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootDefaultLocalImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.consts">
@@ -392,7 +263,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -407,7 +278,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc9990&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc9f10&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc9110&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc93d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc99d0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc91d0&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc9610&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11ecc9750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14b1a0110&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11cf0a310&gt;, 'prop_acl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11e8cb150&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11e8cbc10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11e8cb8d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11cf0a990&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14b1a0050&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x139cef5d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage.LsbootDefaultLocalImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -464,7 +335,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.</code><code class="descname">LsbootEmbeddedLocalDiskImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootEmbeddedLocalDiskImage.html#LsbootEmbeddedLocalDiskImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootEmbeddedLocalDiskImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.consts">
@@ -473,7 +344,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -488,7 +359,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11a6591d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x11a659090&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x11a659510&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x11a659610&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x11a659a50&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x11a659410&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11a659810&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81e90&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81d50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81610&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81050&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81310&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81ed0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c81750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage.LsbootEmbeddedLocalDiskImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -545,7 +416,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.</code><code class="descname">LsbootEmbeddedLocalDiskImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootEmbeddedLocalDiskImagePath.html#LsbootEmbeddedLocalDiskImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootEmbeddedLocalDiskImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.consts">
@@ -554,7 +425,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -569,7 +440,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11ec94510&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x11ec94c50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x11ec94b10&gt;, 'slot_number': &lt;ucscoremeta.MoPropertyMeta object at 0x11ec94290&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x11ec942d0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x13fc7e590&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11ec94910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330dba50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330dbdd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330db050&gt;, 'slot_number': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330db150&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330db6d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330dbb50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330db7d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath.LsbootEmbeddedLocalDiskImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -596,7 +467,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.</code><code class="descname">LsbootEmbeddedLocalLunImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootEmbeddedLocalLunImage.html#LsbootEmbeddedLocalLunImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootEmbeddedLocalLunImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.consts">
@@ -605,7 +476,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -620,7 +491,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1109583d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x124f2a090&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x110958450&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x110958d50&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x124f2ad10&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x110958490&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14986e610&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12aea7190&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12c67cfd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12c67cd50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12c67c990&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12c67cdd0&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14f156450&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12aea7050&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage.LsbootEmbeddedLocalLunImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -677,7 +548,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootIScsi.</code><code class="descname">LsbootIScsi</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootIScsi.html#LsbootIScsi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootIScsi class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.consts">
@@ -686,7 +557,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -701,7 +572,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucscoremeta.MoPropertyMeta object at 0x13d751810&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x13d751990&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14ab13e90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14512f210&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x13d751210&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x14ab13b50&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x13d751110&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x13d751910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4e690&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4e8d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4ec10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4ec90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4ed10&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4ea10&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4e290&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x135d4e0d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsi.LsbootIScsi.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -788,7 +659,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.</code><code class="descname">LsbootIScsiImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootIScsiImagePath.html#LsbootIScsiImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootIScsiImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.consts">
@@ -797,7 +668,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -807,12 +678,12 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.prop_map">
-<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'target': 'target', 'iSCSIVnicName': 'i_scsi_vnic_name', 'vnicName': 'vnic_name', 'sacl': 'sacl', 'rn': 'rn', 'lunName': 'lun_name', 'type': 'type', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'vnicName': 'vnic_name', 'iSCSIVnicName': 'i_scsi_vnic_name', 'sacl': 'sacl', 'rn': 'rn', 'type': 'type', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14de39690&gt;, 'i_scsi_vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x12415b490&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13d89c1d0&gt;, 'target': &lt;ucscoremeta.MoPropertyMeta object at 0x13d89ccd0&gt;, 'lun_name': &lt;ucscoremeta.MoPropertyMeta object at 0x12415bbd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x12415b950&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x12415b2d0&gt;, 'vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x13d89c5d0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x13d89cb50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14de39c50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797510&gt;, 'i_scsi_vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797bd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797410&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797d90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797590&gt;, 'vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797650&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797f50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12c67ca90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -821,21 +692,6 @@
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.</code><code class="descname">LsbootIScsiImagePathConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootIScsiImagePath.html#LsbootIScsiImagePathConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TARGET_MANAGED">
-<code class="descname">TARGET_MANAGED</code><em class="property"> = 'managed'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TARGET_MANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TARGET_UNMANAGED">
-<code class="descname">TARGET_UNMANAGED</code><em class="property"> = 'unmanaged'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TARGET_UNMANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TARGET_UNSPECIFIED">
-<code class="descname">TARGET_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TARGET_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TYPE_PRIMARY">
 <code class="descname">TYPE_PRIMARY</code><em class="property"> = 'primary'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootIScsiImagePath.LsbootIScsiImagePathConsts.TYPE_PRIMARY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -854,7 +710,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLan.</code><code class="descname">LsbootLan</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLan.html#LsbootLan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLan class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.consts">
@@ -863,7 +719,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -878,7 +734,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37c10&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37050&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37410&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37c50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37490&gt;, 'prot': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37890&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x13bf28c50&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x142f378d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x142f37350&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12a098c90&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12159b590&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11cf0a550&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11cf0a090&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12226fc50&gt;, 'prot': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12226f350&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11cf0aa10&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14fd61710&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12159b410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLan.LsbootLan.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -980,7 +836,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLanImagePath.</code><code class="descname">LsbootLanImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLanImagePath.html#LsbootLanImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLanImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.consts">
@@ -989,7 +845,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -999,12 +855,12 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.prop_map">
-<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'imgPolicyName': 'img_policy_name', 'iSCSIVnicName': 'i_scsi_vnic_name', 'sacl': 'sacl', 'imgSecPolicyName': 'img_sec_policy_name', 'vnicName': 'vnic_name', 'childAction': 'child_action', 'target': 'target', 'provSrvPolicyName': 'prov_srv_policy_name', 'bootIpPolicyName': 'boot_ip_policy_name', 'rn': 'rn', 'type': 'type'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'imgPolicyName': 'img_policy_name', 'iSCSIVnicName': 'i_scsi_vnic_name', 'sacl': 'sacl', 'imgSecPolicyName': 'img_sec_policy_name', 'childAction': 'child_action', 'vnicName': 'vnic_name', 'provSrvPolicyName': 'prov_srv_policy_name', 'bootIpPolicyName': 'boot_ip_policy_name', 'rn': 'rn', 'type': 'type'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x154f8ad90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x155a1cb10&gt;, 'prov_srv_policy_name': &lt;ucscoremeta.MoPropertyMeta object at 0x14db78410&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x155a1c610&gt;, 'i_scsi_vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x154f8aa10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x154f8a750&gt;, 'target': &lt;ucscoremeta.MoPropertyMeta object at 0x155a1c2d0&gt;, 'vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x155a1c310&gt;, 'boot_ip_policy_name': &lt;ucscoremeta.MoPropertyMeta object at 0x154f8a910&gt;, 'img_sec_policy_name': &lt;ucscoremeta.MoPropertyMeta object at 0x14db78a50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14db78b50&gt;, 'img_policy_name': &lt;ucscoremeta.MoPropertyMeta object at 0x14db788d0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x155a1cd90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150906c50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1401b3d50&gt;, 'prov_srv_policy_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797d50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1401b3210&gt;, 'i_scsi_vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150906790&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13a97e190&gt;, 'vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1401b3e10&gt;, 'boot_ip_policy_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x130869450&gt;, 'img_sec_policy_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797750&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d797290&gt;, 'img_policy_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150906590&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1401b3910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1013,21 +869,6 @@
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLanImagePath.</code><code class="descname">LsbootLanImagePathConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLanImagePath.html#LsbootLanImagePathConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TARGET_MANAGED">
-<code class="descname">TARGET_MANAGED</code><em class="property"> = 'managed'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TARGET_MANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TARGET_UNMANAGED">
-<code class="descname">TARGET_UNMANAGED</code><em class="property"> = 'unmanaged'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TARGET_UNMANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TARGET_UNSPECIFIED">
-<code class="descname">TARGET_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TARGET_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TYPE_PRIMARY">
 <code class="descname">TYPE_PRIMARY</code><em class="property"> = 'primary'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLanImagePath.LsbootLanImagePathConsts.TYPE_PRIMARY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1046,7 +887,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.</code><code class="descname">LsbootLocalDiskImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLocalDiskImage.html#LsbootLocalDiskImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLocalDiskImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.consts">
@@ -1055,7 +896,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1070,7 +911,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x126514dd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1350b5a90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1350b5c50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x126514b50&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1350b5650&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x126514a10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x126514d90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572fcd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11caedbd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572ffd0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572fad0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11caedf50&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572f150&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572f9d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImage.LsbootLocalDiskImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1127,7 +968,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.</code><code class="descname">LsbootLocalDiskImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLocalDiskImagePath.html#LsbootLocalDiskImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLocalDiskImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.consts">
@@ -1136,7 +977,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1151,7 +992,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15479e110&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15479e510&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15479e3d0&gt;, 'slot_number': &lt;ucscoremeta.MoPropertyMeta object at 0x15479ef50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15479e990&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x15479ee90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15479eb90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12bc4e890&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12bc4eb90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12bc4ee90&gt;, 'slot_number': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12bc4ec90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12bc4e4d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12bc4ec50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x138c72e50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath.LsbootLocalDiskImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1178,7 +1019,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLocalHddImage.</code><code class="descname">LsbootLocalHddImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLocalHddImage.html#LsbootLocalHddImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLocalHddImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.consts">
@@ -1187,7 +1028,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1202,7 +1043,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1367a4a10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1367a4050&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1367a4c90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1367a4bd0&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1367a4f50&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x1367a46d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1429977d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5af110&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5afc50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5af090&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5afb50&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5afc90&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5afd10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e5affd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalHddImage.LsbootLocalHddImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1259,7 +1100,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.</code><code class="descname">LsbootLocalLunImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLocalLunImagePath.html#LsbootLocalLunImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLocalLunImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.consts">
@@ -1268,7 +1109,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1283,7 +1124,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14981ea90&gt;, 'lun_name': &lt;ucscoremeta.MoPropertyMeta object at 0x14981e190&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14981e310&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14981e810&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14981e090&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x14981e410&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14981ead0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15095fd50&gt;, 'lun_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12729d090&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12729d710&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12729d0d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12729dc50&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12729d7d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145714990&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath.LsbootLocalLunImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1310,7 +1151,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootLocalStorage.</code><code class="descname">LsbootLocalStorage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootLocalStorage.html#LsbootLocalStorage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootLocalStorage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.consts">
@@ -1319,7 +1160,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1334,7 +1175,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cf590&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfd10&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cf850&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfed0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfcd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfc90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572fa50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e818d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142e81cd0&gt;, 'prop_acl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572ff90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572f450&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572fb90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootLocalStorage.LsbootLocalStorage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1351,7 +1192,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootPolicy.</code><code class="descname">LsbootPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootPolicy.html#LsbootPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootPolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.consts">
@@ -1360,7 +1201,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1375,7 +1216,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cf1d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14e27f0d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14e27f9d0&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cf510&gt;, 'purpose': &lt;ucscoremeta.MoPropertyMeta object at 0x14e27f790&gt;, 'enforce_vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfbd0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cf950&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14981e650&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfe90&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfa90&gt;, 'reboot_on_update': &lt;ucscoremeta.MoPropertyMeta object at 0x14e27fad0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cfe50&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x14d9cf790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14e27f7d0&gt;, 'boot_mode': &lt;ucscoremeta.MoPropertyMeta object at 0x14981ef50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522490&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522f90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522790&gt;, 'prop_acl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522fd0&gt;, 'purpose': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f5227d0&gt;, 'enforce_vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522250&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522f50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1385c6e10&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522590&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522b10&gt;, 'reboot_on_update': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522810&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f5224d0&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f5228d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f522550&gt;, 'boot_mode': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1385c6d10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootPolicy.LsbootPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1472,7 +1313,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootSan.</code><code class="descname">LsbootSan</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootSan.html#LsbootSan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootSan class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.consts">
@@ -1481,7 +1322,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1496,7 +1337,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7aed0&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7aa90&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7a6d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7a810&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7a490&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7ad10&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7ab50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x128f7a3d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12dec52d0&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12dec50d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1398b10d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12dec5bd0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12dec5cd0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1398b1b90&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12dec5750&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12dec5e90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSan.LsbootSan.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1583,7 +1424,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.</code><code class="descname">LsbootSanCatSanImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootSanCatSanImage.html#LsbootSanCatSanImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootSanCatSanImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.consts">
@@ -1592,7 +1433,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1607,7 +1448,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x11fea4310&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x11fea4290&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x11fea4650&gt;, 'vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x12e011f50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x11fea4a50&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x12e011550&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x11fea4d50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12505e150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12505e890&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12505e590&gt;, 'vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1450c5950&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12505e2d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12505e050&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12505ea50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImage.LsbootSanCatSanImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1634,7 +1475,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.</code><code class="descname">LsbootSanCatSanImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootSanCatSanImagePath.html#LsbootSanCatSanImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootSanCatSanImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.consts">
@@ -1643,7 +1484,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1653,12 +1494,12 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.prop_map">
-<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'target': 'target', 'vnicName': 'vnic_name', 'sacl': 'sacl', 'rn': 'rn', 'wwn': 'wwn', 'type': 'type', 'lun': 'lun', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'vnicName': 'vnic_name', 'sacl': 'sacl', 'rn': 'rn', 'wwn': 'wwn', 'type': 'type', 'lun': 'lun', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf92d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9410&gt;, 'wwn': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9890&gt;, 'target': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9ed0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9fd0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9210&gt;, 'vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9290&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf93d0&gt;, 'lun': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9610&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x147bf9250&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470450&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470d10&gt;, 'wwn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470bd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470190&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e4704d0&gt;, 'vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470910&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470a50&gt;, 'lun': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470fd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e470e90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1669,21 +1510,6 @@
 <dd><dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.LUN_UNSPECIFIED">
 <code class="descname">LUN_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.LUN_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.TARGET_MANAGED">
-<code class="descname">TARGET_MANAGED</code><em class="property"> = 'managed'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.TARGET_MANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.TARGET_UNMANAGED">
-<code class="descname">TARGET_UNMANAGED</code><em class="property"> = 'unmanaged'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.TARGET_UNMANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.TARGET_UNSPECIFIED">
-<code class="descname">TARGET_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath.LsbootSanCatSanImagePathConsts.TARGET_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1705,7 +1531,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootSanImage.</code><code class="descname">LsbootSanImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootSanImage.html#LsbootSanImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootSanImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.consts">
@@ -1714,7 +1540,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1729,7 +1555,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x149394e50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x149394890&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1493949d0&gt;, 'vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1493941d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x149394410&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x149394dd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x12506bf50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572f550&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1385c6190&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1385c6c90&gt;, 'vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1385c6a90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x150e84e50&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1385c6810&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12572fe90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImage.LsbootSanImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1756,7 +1582,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootSanImagePath.</code><code class="descname">LsbootSanImagePath</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootSanImagePath.html#LsbootSanImagePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootSanImagePath class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.consts">
@@ -1765,7 +1591,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1775,12 +1601,12 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.prop_map">
-<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'target': 'target', 'vnicName': 'vnic_name', 'sacl': 'sacl', 'rn': 'rn', 'wwn': 'wwn', 'type': 'type', 'lun': 'lun', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'vnicName': 'vnic_name', 'sacl': 'sacl', 'rn': 'rn', 'wwn': 'wwn', 'type': 'type', 'lun': 'lun', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.prop_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1fed0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1f310&gt;, 'wwn': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1f890&gt;, 'target': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1fe90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1fb10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1f550&gt;, 'vnic_name': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1f290&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1ff90&gt;, 'lun': &lt;ucscoremeta.MoPropertyMeta object at 0x154c1f150&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14144e410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126952bd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330ef6d0&gt;, 'wwn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330efcd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330efb50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126952b50&gt;, 'vnic_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330ef9d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1330ef890&gt;, 'lun': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126952490&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x126952390&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePath.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1791,21 +1617,6 @@
 <dd><dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.LUN_UNSPECIFIED">
 <code class="descname">LUN_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.LUN_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.TARGET_MANAGED">
-<code class="descname">TARGET_MANAGED</code><em class="property"> = 'managed'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.TARGET_MANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.TARGET_UNMANAGED">
-<code class="descname">TARGET_UNMANAGED</code><em class="property"> = 'unmanaged'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.TARGET_UNMANAGED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.TARGET_UNSPECIFIED">
-<code class="descname">TARGET_UNSPECIFIED</code><em class="property"> = 'unspecified'</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootSanImagePath.LsbootSanImagePathConsts.TARGET_UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1827,7 +1638,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootStorage.</code><code class="descname">LsbootStorage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootStorage.html#LsbootStorage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootStorage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.consts">
@@ -1836,7 +1647,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1851,7 +1662,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucscoremeta.MoPropertyMeta object at 0x14145a290&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x14145a8d0&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x14145ae50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x14145a750&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x14145ab50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x14145a190&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x14145a650&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x14145aa10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x14145a5d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'access': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11f92a510&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x124196c50&gt;, 'prop_acl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14219bc50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14219bd10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14219b590&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14219b750&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14219b1d0&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14219bc10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1241968d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootStorage.LsbootStorage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1938,7 +1749,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.</code><code class="descname">LsbootUEFIBootParam</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootUEFIBootParam.html#LsbootUEFIBootParam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootUEFIBootParam class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.consts">
@@ -1947,7 +1758,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1962,7 +1773,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'boot_loader_path': &lt;ucscoremeta.MoPropertyMeta object at 0x1552faa10&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fa590&gt;, 'boot_description': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fa550&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fa2d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fad90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fae10&gt;, 'boot_loader_name': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fa950&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1552fadd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'boot_loader_path': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d1fca90&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x124831350&gt;, 'boot_description': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d1fcb90&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x142247650&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x124831f90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x124831250&gt;, 'boot_loader_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d1fc710&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x124831290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUEFIBootParam.LsbootUEFIBootParam.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1979,7 +1790,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.</code><code class="descname">LsbootUsbExternalImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootUsbExternalImage.html#LsbootUsbExternalImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootUsbExternalImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.consts">
@@ -1988,7 +1799,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2003,7 +1814,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x121079090&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x121079210&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1210792d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x121079750&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x1210791d0&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x121079bd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1210799d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e183bd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e183b50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e1834d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e1835d0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e183250&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e183dd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e183910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbExternalImage.LsbootUsbExternalImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2060,7 +1871,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.</code><code class="descname">LsbootUsbFlashStorageImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootUsbFlashStorageImage.html#LsbootUsbFlashStorageImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootUsbFlashStorageImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.consts">
@@ -2069,7 +1880,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2084,7 +1895,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627510&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627f50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627090&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627390&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627610&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x15a627190&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15a6274d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30d290&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30d890&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30de90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30dbd0&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30d790&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30d310&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13e30d6d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage.LsbootUsbFlashStorageImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2141,7 +1952,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.</code><code class="descname">LsbootUsbInternalImage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootUsbInternalImage.html#LsbootUsbInternalImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootUsbInternalImage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.consts">
@@ -2150,7 +1961,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2165,7 +1976,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15a12b810&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x13c55db50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x140a01c90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x140a01210&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x121079990&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x15a12ba90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15a12be50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12b442350&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12b442110&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12b442890&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12b442b90&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12b442650&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12b442f90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11c528150&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootUsbInternalImage.LsbootUsbInternalImage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2222,7 +2033,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.lsboot.LsbootVirtualMedia.</code><code class="descname">LsbootVirtualMedia</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>access</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/lsboot/LsbootVirtualMedia.html#LsbootVirtualMedia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is LsbootVirtualMedia class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.consts">
@@ -2231,7 +2042,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2246,7 +2057,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1ce10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c750&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c410&gt;, 'lun_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c250&gt;, 'prop_acl': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1ccd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c650&gt;, 'access': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c110&gt;, 'mapping_name': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c550&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c390&gt;, 'type': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c050&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x15ab1c7d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d731b10&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x130e39210&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d731410&gt;, 'lun_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d7313d0&gt;, 'prop_acl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d7314d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d731dd0&gt;, 'access': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d731210&gt;, 'mapping_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d731b90&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d731390&gt;, 'type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x130e39950&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13d7318d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.lsboot.LsbootVirtualMedia.LsbootVirtualMedia.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2338,71 +2149,94 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.lsmaint.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.lsmaint package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.ls.html" class="btn btn-neutral" title="ucsmsdk.mometa.ls package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.lsboot package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootBootSecurity">ucsmsdk.mometa.lsboot.LsbootBootSecurity module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootDef">ucsmsdk.mometa.lsboot.LsbootDef module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage">ucsmsdk.mometa.lsboot.LsbootDefaultLocalImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage">ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath">ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalDiskImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage">ucsmsdk.mometa.lsboot.LsbootEmbeddedLocalLunImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootIScsi">ucsmsdk.mometa.lsboot.LsbootIScsi module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootIScsiImagePath">ucsmsdk.mometa.lsboot.LsbootIScsiImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLan">ucsmsdk.mometa.lsboot.LsbootLan module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLanImagePath">ucsmsdk.mometa.lsboot.LsbootLanImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLocalDiskImage">ucsmsdk.mometa.lsboot.LsbootLocalDiskImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath">ucsmsdk.mometa.lsboot.LsbootLocalDiskImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLocalHddImage">ucsmsdk.mometa.lsboot.LsbootLocalHddImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath">ucsmsdk.mometa.lsboot.LsbootLocalLunImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootLocalStorage">ucsmsdk.mometa.lsboot.LsbootLocalStorage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootPolicy">ucsmsdk.mometa.lsboot.LsbootPolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootSan">ucsmsdk.mometa.lsboot.LsbootSan module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootSanCatSanImage">ucsmsdk.mometa.lsboot.LsbootSanCatSanImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath">ucsmsdk.mometa.lsboot.LsbootSanCatSanImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootSanImage">ucsmsdk.mometa.lsboot.LsbootSanImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootSanImagePath">ucsmsdk.mometa.lsboot.LsbootSanImagePath module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootStorage">ucsmsdk.mometa.lsboot.LsbootStorage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootUEFIBootParam">ucsmsdk.mometa.lsboot.LsbootUEFIBootParam module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootUsbExternalImage">ucsmsdk.mometa.lsboot.LsbootUsbExternalImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage">ucsmsdk.mometa.lsboot.LsbootUsbFlashStorageImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootUsbInternalImage">ucsmsdk.mometa.lsboot.LsbootUsbInternalImage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot.LsbootVirtualMedia">ucsmsdk.mometa.lsboot.LsbootVirtualMedia module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.lsboot">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.ls.html" title="previous chapter">ucsmsdk.mometa.ls package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.lsmaint.html" title="next chapter">ucsmsdk.mometa.lsmaint package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.lsboot.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.lsboot.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

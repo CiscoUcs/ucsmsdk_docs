@@ -1,313 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.mgmt.MgmtControllerFsmStage &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
-        <link rel="up" title="Module code" href="../../../index.html"/> 
-
-  
-  <script src="../../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.mgmt.MgmtControllerFsmStage &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.mgmt.MgmtControllerFsmStage</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.mometa.mgmt.MgmtControllerFsmStage</h1><div class="highlight"><pre>
-<span class="sd">&quot;&quot;&quot;This module contains the general information for MgmtControllerFsmStage ManagedObject.&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the general information for MgmtControllerFsmStage ManagedObject.&quot;&quot;&quot;</span>
 
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
-<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
-<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
-<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">...ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">...ucscoremeta</span> <span class="kn">import</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">...ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
 
 
-<div class="viewcode-block" id="MgmtControllerFsmStageConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.mgmt.html#ucsmsdk.mometa.mgmt.MgmtControllerFsmStage.MgmtControllerFsmStageConsts">[docs]</a><span class="k">class</span> <span class="nc">MgmtControllerFsmStageConsts</span><span class="p">():</span>
-    <span class="n">LAST_UPDATE_TIME_</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_ACTIVATE</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorActivate&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorBegin&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_FAIL</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorFail&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_POLL_ACTIVATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorPollActivateStatus&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_POWER_OFF_SERVERS</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorPowerOffServers&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_RESET</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorReset&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_SERVERS_POWER_OFF_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorServersPowerOffCompletion&quot;</span>
-    <span class="n">NAME_ACTIVATE_ADAPTOR_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ActivateAdaptorSuccess&quot;</span>
-    <span class="n">NAME_ACTIVATE_BMCACTIVATE</span> <span class="o">=</span> <span class="s">&quot;ActivateBMCActivate&quot;</span>
-    <span class="n">NAME_ACTIVATE_BMCBEGIN</span> <span class="o">=</span> <span class="s">&quot;ActivateBMCBegin&quot;</span>
-    <span class="n">NAME_ACTIVATE_BMCFAIL</span> <span class="o">=</span> <span class="s">&quot;ActivateBMCFail&quot;</span>
-    <span class="n">NAME_ACTIVATE_BMCRESET</span> <span class="o">=</span> <span class="s">&quot;ActivateBMCReset&quot;</span>
-    <span class="n">NAME_ACTIVATE_BMCSUCCESS</span> <span class="o">=</span> <span class="s">&quot;ActivateBMCSuccess&quot;</span>
-    <span class="n">NAME_ACTIVATE_CMCACTIVATE</span> <span class="o">=</span> <span class="s">&quot;ActivateCMCActivate&quot;</span>
-    <span class="n">NAME_ACTIVATE_CMCBEGIN</span> <span class="o">=</span> <span class="s">&quot;ActivateCMCBegin&quot;</span>
-    <span class="n">NAME_ACTIVATE_CMCFAIL</span> <span class="o">=</span> <span class="s">&quot;ActivateCMCFail&quot;</span>
-    <span class="n">NAME_ACTIVATE_CMCPOLL_ACTIVATION</span> <span class="o">=</span> <span class="s">&quot;ActivateCMCPollActivation&quot;</span>
-    <span class="n">NAME_ACTIVATE_CMCRESET</span> <span class="o">=</span> <span class="s">&quot;ActivateCMCReset&quot;</span>
-    <span class="n">NAME_ACTIVATE_CMCSUCCESS</span> <span class="o">=</span> <span class="s">&quot;ActivateCMCSuccess&quot;</span>
-    <span class="n">NAME_ACTIVATE_IOMACTIVATE</span> <span class="o">=</span> <span class="s">&quot;ActivateIOMActivate&quot;</span>
-    <span class="n">NAME_ACTIVATE_IOMBEGIN</span> <span class="o">=</span> <span class="s">&quot;ActivateIOMBegin&quot;</span>
-    <span class="n">NAME_ACTIVATE_IOMFAIL</span> <span class="o">=</span> <span class="s">&quot;ActivateIOMFail&quot;</span>
-    <span class="n">NAME_ACTIVATE_IOMRESET</span> <span class="o">=</span> <span class="s">&quot;ActivateIOMReset&quot;</span>
-    <span class="n">NAME_ACTIVATE_IOMSUCCESS</span> <span class="o">=</span> <span class="s">&quot;ActivateIOMSuccess&quot;</span>
-    <span class="n">NAME_EXT_MGMT_IF_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtIfConfigBegin&quot;</span>
-    <span class="n">NAME_EXT_MGMT_IF_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtIfConfigFail&quot;</span>
-    <span class="n">NAME_EXT_MGMT_IF_CONFIG_PRIMARY</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtIfConfigPrimary&quot;</span>
-    <span class="n">NAME_EXT_MGMT_IF_CONFIG_SECONDARY</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtIfConfigSecondary&quot;</span>
-    <span class="n">NAME_EXT_MGMT_IF_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtIfConfigSuccess&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_ACTIVE</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigActive&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigBegin&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CIMCVLAN_CFG_LOCAL</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgLocal&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CIMCVLAN_CFG_PEER</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgPeer&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CMCVLAN_CFG</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigCMCVlanCfg&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CMCVLAN_CFG_PEER</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigCMCVlanCfgPeer&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigFail&quot;</span>
-    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;ExtMgmtInterfaceConfigSuccess&quot;</span>
-    <span class="n">NAME_LOCK_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;LockConfigBegin&quot;</span>
-    <span class="n">NAME_LOCK_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;LockConfigFail&quot;</span>
-    <span class="n">NAME_LOCK_CONFIG_POWER_BUTTON_LOCK_CONFIG</span> <span class="o">=</span> <span class="s">&quot;LockConfigPowerButtonLockConfig&quot;</span>
-    <span class="n">NAME_LOCK_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;LockConfigSuccess&quot;</span>
-    <span class="n">NAME_ONLINE_BEGIN</span> <span class="o">=</span> <span class="s">&quot;OnlineBegin&quot;</span>
-    <span class="n">NAME_ONLINE_BMC_CONFIGURE_CONN_LOCAL</span> <span class="o">=</span> <span class="s">&quot;OnlineBmcConfigureConnLocal&quot;</span>
-    <span class="n">NAME_ONLINE_BMC_CONFIGURE_CONN_PEER</span> <span class="o">=</span> <span class="s">&quot;OnlineBmcConfigureConnPeer&quot;</span>
-    <span class="n">NAME_ONLINE_FAIL</span> <span class="o">=</span> <span class="s">&quot;OnlineFail&quot;</span>
-    <span class="n">NAME_ONLINE_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;OnlineSuccess&quot;</span>
-    <span class="n">NAME_ONLINE_SW_CONFIGURE_CONN_LOCAL</span> <span class="o">=</span> <span class="s">&quot;OnlineSwConfigureConnLocal&quot;</span>
-    <span class="n">NAME_ONLINE_SW_CONFIGURE_CONN_PEER</span> <span class="o">=</span> <span class="s">&quot;OnlineSwConfigureConnPeer&quot;</span>
-    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;PowerBudgetReclaimConfigBegin&quot;</span>
-    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;PowerBudgetReclaimConfigFail&quot;</span>
-    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_POWER_OFF_RECLAIM</span> <span class="o">=</span> <span class="s">&quot;PowerBudgetReclaimConfigPowerOffReclaim&quot;</span>
-    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_POWER_OFF_WAIT</span> <span class="o">=</span> <span class="s">&quot;PowerBudgetReclaimConfigPowerOffWait&quot;</span>
-    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;PowerBudgetReclaimConfigSuccess&quot;</span>
-    <span class="n">NAME_REGISTRY_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;RegistryConfigBegin&quot;</span>
-    <span class="n">NAME_REGISTRY_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;RegistryConfigFail&quot;</span>
-    <span class="n">NAME_REGISTRY_CONFIG_REMOVE</span> <span class="o">=</span> <span class="s">&quot;RegistryConfigRemove&quot;</span>
-    <span class="n">NAME_REGISTRY_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;RegistryConfigSuccess&quot;</span>
-    <span class="n">NAME_SYS_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s">&quot;SysConfigBegin&quot;</span>
-    <span class="n">NAME_SYS_CONFIG_FAIL</span> <span class="o">=</span> <span class="s">&quot;SysConfigFail&quot;</span>
-    <span class="n">NAME_SYS_CONFIG_PRIMARY</span> <span class="o">=</span> <span class="s">&quot;SysConfigPrimary&quot;</span>
-    <span class="n">NAME_SYS_CONFIG_SECONDARY</span> <span class="o">=</span> <span class="s">&quot;SysConfigSecondary&quot;</span>
-    <span class="n">NAME_SYS_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;SysConfigSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_ADAPTOR_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorBegin&quot;</span>
-    <span class="n">NAME_UPDATE_ADAPTOR_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorFail&quot;</span>
-    <span class="n">NAME_UPDATE_ADAPTOR_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorPollUpdateStatus&quot;</span>
-    <span class="n">NAME_UPDATE_ADAPTOR_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_ADAPTOR_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateAdaptorUpdateRequest&quot;</span>
-    <span class="n">NAME_UPDATE_BMCBEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateBMCBegin&quot;</span>
-    <span class="n">NAME_UPDATE_BMCFAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateBMCFail&quot;</span>
-    <span class="n">NAME_UPDATE_BMCPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateBMCPollUpdateStatus&quot;</span>
-    <span class="n">NAME_UPDATE_BMCSUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateBMCSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_BMCUPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateBMCUpdateRequest&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerBegin&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerFail&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPollUpdateStatus&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POWER_OFF_SERVERS</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPowerOffServers&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_PREPARE_FOR_UPDATE</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerPrepareForUpdate&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SERVERS_POWER_OFF_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerServersPowerOffCompletion&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateBoardControllerUpdateRequest&quot;</span>
-    <span class="n">NAME_UPDATE_CMCBEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateCMCBegin&quot;</span>
-    <span class="n">NAME_UPDATE_CMCFAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateCMCFail&quot;</span>
-    <span class="n">NAME_UPDATE_CMCPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateCMCPollUpdateStatus&quot;</span>
-    <span class="n">NAME_UPDATE_CMCSUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateCMCSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_CMCUPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateCMCUpdateRequest&quot;</span>
-    <span class="n">NAME_UPDATE_IOMBEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMBegin&quot;</span>
-    <span class="n">NAME_UPDATE_IOMCOPY_IOMIMG_TO_SUB</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMCopyIOMImgToSub&quot;</span>
-    <span class="n">NAME_UPDATE_IOMCOPY_IMG_FROM_REP</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMCopyImgFromRep&quot;</span>
-    <span class="n">NAME_UPDATE_IOMFAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMFail&quot;</span>
-    <span class="n">NAME_UPDATE_IOMPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMPollUpdateStatus&quot;</span>
-    <span class="n">NAME_UPDATE_IOMSUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_IOMUPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateIOMUpdateRequest&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_ACTIVATE</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerActivate&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerBegin&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerFail&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_POLL_ACTIVATION</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerPollActivation&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerPollUpdateStatus&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_POWER_OFF_SERVERS</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerPowerOffServers&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_SERVERS_POWER_OFF_COMPLETION</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerServersPowerOffCompletion&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_RAID_CONTROLLER_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s">&quot;UpdateRaidControllerUpdateRequest&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchBegin&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_COPY_TO_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchCopyToLocal&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_COPY_TO_PEER</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchCopyToPeer&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchFail&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_RESET_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchResetLocal&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_RESET_REMOTE</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchResetRemote&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchSuccess&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_UPDATE_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchUpdateLocal&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_UPDATE_REMOTE</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchUpdateRemote&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_VERIFY_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchVerifyLocal&quot;</span>
-    <span class="n">NAME_UPDATE_SWITCH_VERIFY_REMOTE</span> <span class="o">=</span> <span class="s">&quot;UpdateSwitchVerifyRemote&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_BEGIN</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerBegin&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_COPY_EXT_TO_LOCAL</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerCopyExtToLocal&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_COPY_EXT_TO_PEER</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerCopyExtToPeer&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_EXECUTE</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerExecute&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_FAIL</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerFail&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_START</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerStart&quot;</span>
-    <span class="n">NAME_UPDATE_UCSMANAGER_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;UpdateUCSManagerSuccess&quot;</span>
-    <span class="n">NAME_NOP</span> <span class="o">=</span> <span class="s">&quot;nop&quot;</span>
-    <span class="n">STAGE_STATUS_FAIL</span> <span class="o">=</span> <span class="s">&quot;fail&quot;</span>
-    <span class="n">STAGE_STATUS_IN_PROGRESS</span> <span class="o">=</span> <span class="s">&quot;inProgress&quot;</span>
-    <span class="n">STAGE_STATUS_NOP</span> <span class="o">=</span> <span class="s">&quot;nop&quot;</span>
-    <span class="n">STAGE_STATUS_PENDING</span> <span class="o">=</span> <span class="s">&quot;pending&quot;</span>
-    <span class="n">STAGE_STATUS_SKIP</span> <span class="o">=</span> <span class="s">&quot;skip&quot;</span>
-    <span class="n">STAGE_STATUS_SUCCESS</span> <span class="o">=</span> <span class="s">&quot;success&quot;</span>
-    <span class="n">STAGE_STATUS_THROTTLED</span> <span class="o">=</span> <span class="s">&quot;throttled&quot;</span>
+<div class="viewcode-block" id="MgmtControllerFsmStageConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.mgmt.html#ucsmsdk.mometa.mgmt.MgmtControllerFsmStage.MgmtControllerFsmStageConsts">[docs]</a><span class="k">class</span> <span class="nc">MgmtControllerFsmStageConsts</span><span class="p">:</span>
+    <span class="n">LAST_UPDATE_TIME_</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_ACTIVATE</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorActivate&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorBegin&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_FAIL</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorFail&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_POLL_ACTIVATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorPollActivateStatus&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_POWER_OFF_SERVERS</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorPowerOffServers&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_RESET</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorReset&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_SERVERS_POWER_OFF_COMPLETION</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorServersPowerOffCompletion&quot;</span>
+    <span class="n">NAME_ACTIVATE_ADAPTOR_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;ActivateAdaptorSuccess&quot;</span>
+    <span class="n">NAME_ACTIVATE_BMCACTIVATE</span> <span class="o">=</span> <span class="s2">&quot;ActivateBMCActivate&quot;</span>
+    <span class="n">NAME_ACTIVATE_BMCBEGIN</span> <span class="o">=</span> <span class="s2">&quot;ActivateBMCBegin&quot;</span>
+    <span class="n">NAME_ACTIVATE_BMCFAIL</span> <span class="o">=</span> <span class="s2">&quot;ActivateBMCFail&quot;</span>
+    <span class="n">NAME_ACTIVATE_BMCRESET</span> <span class="o">=</span> <span class="s2">&quot;ActivateBMCReset&quot;</span>
+    <span class="n">NAME_ACTIVATE_BMCSUCCESS</span> <span class="o">=</span> <span class="s2">&quot;ActivateBMCSuccess&quot;</span>
+    <span class="n">NAME_ACTIVATE_CMCACTIVATE</span> <span class="o">=</span> <span class="s2">&quot;ActivateCMCActivate&quot;</span>
+    <span class="n">NAME_ACTIVATE_CMCBEGIN</span> <span class="o">=</span> <span class="s2">&quot;ActivateCMCBegin&quot;</span>
+    <span class="n">NAME_ACTIVATE_CMCFAIL</span> <span class="o">=</span> <span class="s2">&quot;ActivateCMCFail&quot;</span>
+    <span class="n">NAME_ACTIVATE_CMCPOLL_ACTIVATION</span> <span class="o">=</span> <span class="s2">&quot;ActivateCMCPollActivation&quot;</span>
+    <span class="n">NAME_ACTIVATE_CMCRESET</span> <span class="o">=</span> <span class="s2">&quot;ActivateCMCReset&quot;</span>
+    <span class="n">NAME_ACTIVATE_CMCSUCCESS</span> <span class="o">=</span> <span class="s2">&quot;ActivateCMCSuccess&quot;</span>
+    <span class="n">NAME_ACTIVATE_IOMACTIVATE</span> <span class="o">=</span> <span class="s2">&quot;ActivateIOMActivate&quot;</span>
+    <span class="n">NAME_ACTIVATE_IOMBEGIN</span> <span class="o">=</span> <span class="s2">&quot;ActivateIOMBegin&quot;</span>
+    <span class="n">NAME_ACTIVATE_IOMFAIL</span> <span class="o">=</span> <span class="s2">&quot;ActivateIOMFail&quot;</span>
+    <span class="n">NAME_ACTIVATE_IOMRESET</span> <span class="o">=</span> <span class="s2">&quot;ActivateIOMReset&quot;</span>
+    <span class="n">NAME_ACTIVATE_IOMSUCCESS</span> <span class="o">=</span> <span class="s2">&quot;ActivateIOMSuccess&quot;</span>
+    <span class="n">NAME_EXT_MGMT_IF_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtIfConfigBegin&quot;</span>
+    <span class="n">NAME_EXT_MGMT_IF_CONFIG_FAIL</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtIfConfigFail&quot;</span>
+    <span class="n">NAME_EXT_MGMT_IF_CONFIG_PRIMARY</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtIfConfigPrimary&quot;</span>
+    <span class="n">NAME_EXT_MGMT_IF_CONFIG_SECONDARY</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtIfConfigSecondary&quot;</span>
+    <span class="n">NAME_EXT_MGMT_IF_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtIfConfigSuccess&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_ACTIVE</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigActive&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigBegin&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CIMCVLAN_CFG_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgLocal&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CIMCVLAN_CFG_PEER</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgPeer&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CMCVLAN_CFG</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCMCVlanCfg&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_CMCVLAN_CFG_PEER</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCMCVlanCfgPeer&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_FAIL</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigFail&quot;</span>
+    <span class="n">NAME_EXT_MGMT_INTERFACE_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;ExtMgmtInterfaceConfigSuccess&quot;</span>
+    <span class="n">NAME_LOCK_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;LockConfigBegin&quot;</span>
+    <span class="n">NAME_LOCK_CONFIG_FAIL</span> <span class="o">=</span> <span class="s2">&quot;LockConfigFail&quot;</span>
+    <span class="n">NAME_LOCK_CONFIG_POWER_BUTTON_LOCK_CONFIG</span> <span class="o">=</span> <span class="s2">&quot;LockConfigPowerButtonLockConfig&quot;</span>
+    <span class="n">NAME_LOCK_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;LockConfigSuccess&quot;</span>
+    <span class="n">NAME_ONLINE_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;OnlineBegin&quot;</span>
+    <span class="n">NAME_ONLINE_BMC_CONFIGURE_CONN_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;OnlineBmcConfigureConnLocal&quot;</span>
+    <span class="n">NAME_ONLINE_BMC_CONFIGURE_CONN_PEER</span> <span class="o">=</span> <span class="s2">&quot;OnlineBmcConfigureConnPeer&quot;</span>
+    <span class="n">NAME_ONLINE_FAIL</span> <span class="o">=</span> <span class="s2">&quot;OnlineFail&quot;</span>
+    <span class="n">NAME_ONLINE_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;OnlineSuccess&quot;</span>
+    <span class="n">NAME_ONLINE_SW_CONFIGURE_CONN_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;OnlineSwConfigureConnLocal&quot;</span>
+    <span class="n">NAME_ONLINE_SW_CONFIGURE_CONN_PEER</span> <span class="o">=</span> <span class="s2">&quot;OnlineSwConfigureConnPeer&quot;</span>
+    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;PowerBudgetReclaimConfigBegin&quot;</span>
+    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_FAIL</span> <span class="o">=</span> <span class="s2">&quot;PowerBudgetReclaimConfigFail&quot;</span>
+    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_POWER_OFF_RECLAIM</span> <span class="o">=</span> <span class="s2">&quot;PowerBudgetReclaimConfigPowerOffReclaim&quot;</span>
+    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_POWER_OFF_WAIT</span> <span class="o">=</span> <span class="s2">&quot;PowerBudgetReclaimConfigPowerOffWait&quot;</span>
+    <span class="n">NAME_POWER_BUDGET_RECLAIM_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;PowerBudgetReclaimConfigSuccess&quot;</span>
+    <span class="n">NAME_REGISTRY_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;RegistryConfigBegin&quot;</span>
+    <span class="n">NAME_REGISTRY_CONFIG_FAIL</span> <span class="o">=</span> <span class="s2">&quot;RegistryConfigFail&quot;</span>
+    <span class="n">NAME_REGISTRY_CONFIG_REMOVE</span> <span class="o">=</span> <span class="s2">&quot;RegistryConfigRemove&quot;</span>
+    <span class="n">NAME_REGISTRY_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;RegistryConfigSuccess&quot;</span>
+    <span class="n">NAME_SYS_CONFIG_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;SysConfigBegin&quot;</span>
+    <span class="n">NAME_SYS_CONFIG_FAIL</span> <span class="o">=</span> <span class="s2">&quot;SysConfigFail&quot;</span>
+    <span class="n">NAME_SYS_CONFIG_PRIMARY</span> <span class="o">=</span> <span class="s2">&quot;SysConfigPrimary&quot;</span>
+    <span class="n">NAME_SYS_CONFIG_SECONDARY</span> <span class="o">=</span> <span class="s2">&quot;SysConfigSecondary&quot;</span>
+    <span class="n">NAME_SYS_CONFIG_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;SysConfigSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateAdaptorBegin&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_FAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateAdaptorFail&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;UpdateAdaptorPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateAdaptorSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_ADAPTOR_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;UpdateAdaptorUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_BMCBEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateBMCBegin&quot;</span>
+    <span class="n">NAME_UPDATE_BMCFAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateBMCFail&quot;</span>
+    <span class="n">NAME_UPDATE_BMCPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;UpdateBMCPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_BMCSUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateBMCSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_BMCUPDATE_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;UpdateBMCUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerBegin&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_FAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerFail&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_POWER_OFF_SERVERS</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerPowerOffServers&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_PREPARE_FOR_UPDATE</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerPrepareForUpdate&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SERVERS_POWER_OFF_COMPLETION</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerServersPowerOffCompletion&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_BOARD_CONTROLLER_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;UpdateBoardControllerUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_CMCBEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateCMCBegin&quot;</span>
+    <span class="n">NAME_UPDATE_CMCFAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateCMCFail&quot;</span>
+    <span class="n">NAME_UPDATE_CMCPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;UpdateCMCPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_CMCSUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateCMCSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_CMCUPDATE_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;UpdateCMCUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_IOMBEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMBegin&quot;</span>
+    <span class="n">NAME_UPDATE_IOMCOPY_IOMIMG_TO_SUB</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMCopyIOMImgToSub&quot;</span>
+    <span class="n">NAME_UPDATE_IOMCOPY_IMG_FROM_REP</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMCopyImgFromRep&quot;</span>
+    <span class="n">NAME_UPDATE_IOMFAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMFail&quot;</span>
+    <span class="n">NAME_UPDATE_IOMPOLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_IOMSUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_IOMUPDATE_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;UpdateIOMUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_ACTIVATE</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerActivate&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerBegin&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_FAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerFail&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_POLL_ACTIVATION</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerPollActivation&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_POLL_UPDATE_STATUS</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerPollUpdateStatus&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_POWER_OFF_SERVERS</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerPowerOffServers&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_SERVERS_POWER_OFF_COMPLETION</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerServersPowerOffCompletion&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_RAID_CONTROLLER_UPDATE_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;UpdateRaidControllerUpdateRequest&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchBegin&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_COPY_TO_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchCopyToLocal&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_COPY_TO_PEER</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchCopyToPeer&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_FAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchFail&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_RESET_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchResetLocal&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_RESET_REMOTE</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchResetRemote&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchSuccess&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_UPDATE_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchUpdateLocal&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_UPDATE_REMOTE</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchUpdateRemote&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_VERIFY_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchVerifyLocal&quot;</span>
+    <span class="n">NAME_UPDATE_SWITCH_VERIFY_REMOTE</span> <span class="o">=</span> <span class="s2">&quot;UpdateSwitchVerifyRemote&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_BEGIN</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerBegin&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_COPY_EXT_TO_LOCAL</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerCopyExtToLocal&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_COPY_EXT_TO_PEER</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerCopyExtToPeer&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_EXECUTE</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerExecute&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_FAIL</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerFail&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_START</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerStart&quot;</span>
+    <span class="n">NAME_UPDATE_UCSMANAGER_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;UpdateUCSManagerSuccess&quot;</span>
+    <span class="n">NAME_NOP</span> <span class="o">=</span> <span class="s2">&quot;nop&quot;</span>
+    <span class="n">STAGE_STATUS_FAIL</span> <span class="o">=</span> <span class="s2">&quot;fail&quot;</span>
+    <span class="n">STAGE_STATUS_IN_PROGRESS</span> <span class="o">=</span> <span class="s2">&quot;inProgress&quot;</span>
+    <span class="n">STAGE_STATUS_NOP</span> <span class="o">=</span> <span class="s2">&quot;nop&quot;</span>
+    <span class="n">STAGE_STATUS_PENDING</span> <span class="o">=</span> <span class="s2">&quot;pending&quot;</span>
+    <span class="n">STAGE_STATUS_SKIP</span> <span class="o">=</span> <span class="s2">&quot;skip&quot;</span>
+    <span class="n">STAGE_STATUS_SUCCESS</span> <span class="o">=</span> <span class="s2">&quot;success&quot;</span>
+    <span class="n">STAGE_STATUS_THROTTLED</span> <span class="o">=</span> <span class="s2">&quot;throttled&quot;</span></div>
 
-</div>
+
 <div class="viewcode-block" id="MgmtControllerFsmStage"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.mgmt.html#ucsmsdk.mometa.mgmt.MgmtControllerFsmStage.MgmtControllerFsmStage">[docs]</a><span class="k">class</span> <span class="nc">MgmtControllerFsmStage</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This is MgmtControllerFsmStage class.&quot;&quot;&quot;</span>
 
     <span class="n">consts</span> <span class="o">=</span> <span class="n">MgmtControllerFsmStageConsts</span><span class="p">()</span>
-    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">u&#39;name&#39;</span><span class="p">])</span>
+    <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">u&#39;name&#39;</span><span class="p">])</span>
 
-    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;MgmtControllerFsmStage&quot;</span><span class="p">,</span> <span class="s">&quot;mgmtControllerFsmStage&quot;</span><span class="p">,</span> <span class="s">&quot;stage-[name]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="s">&quot;OutputOnly&quot;</span><span class="p">,</span> <span class="mh">0xf</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;mgmtControllerFsm&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="bp">None</span><span class="p">])</span>
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s2">&quot;MgmtControllerFsmStage&quot;</span><span class="p">,</span> <span class="s2">&quot;mgmtControllerFsmStage&quot;</span><span class="p">,</span> <span class="s2">&quot;stage-[name]&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="s2">&quot;OutputOnly&quot;</span><span class="p">,</span> <span class="mh">0xf</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s1">u&#39;mgmtControllerFsm&#39;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="bp">None</span><span class="p">])</span>
 
     <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;descr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;descr&quot;</span><span class="p">,</span> <span class="s">&quot;descr&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[ !#$%&amp;\(\)\*\+,\-\./:;\?@\[\]_\{\|\}~a-zA-Z0-9]{0,256}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;last_update_time&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;last_update_time&quot;</span><span class="p">,</span> <span class="s">&quot;lastUpdateTime&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;([0-9]){4}-([0-9]){2}-([0-9]){2}T([0-9]){2}:([0-9]){2}:([0-9]){2}((\.([0-9]){3})){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ActivateAdaptorActivate&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorFail&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorPollActivateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorPowerOffServers&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorReset&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorServersPowerOffCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateAdaptorSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBMCActivate&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBMCBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBMCFail&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBMCReset&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateBMCSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateCMCActivate&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateCMCBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateCMCFail&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateCMCPollActivation&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateCMCReset&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateCMCSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateIOMActivate&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateIOMBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateIOMFail&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateIOMReset&quot;</span><span class="p">,</span> <span class="s">&quot;ActivateIOMSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtIfConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtIfConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtIfConfigPrimary&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtIfConfigSecondary&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtIfConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigActive&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgLocal&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgPeer&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigCMCVlanCfg&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigCMCVlanCfgPeer&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;ExtMgmtInterfaceConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;LockConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;LockConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;LockConfigPowerButtonLockConfig&quot;</span><span class="p">,</span> <span class="s">&quot;LockConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineBegin&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineBmcConfigureConnLocal&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineBmcConfigureConnPeer&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineFail&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineSwConfigureConnLocal&quot;</span><span class="p">,</span> <span class="s">&quot;OnlineSwConfigureConnPeer&quot;</span><span class="p">,</span> <span class="s">&quot;PowerBudgetReclaimConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;PowerBudgetReclaimConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;PowerBudgetReclaimConfigPowerOffReclaim&quot;</span><span class="p">,</span> <span class="s">&quot;PowerBudgetReclaimConfigPowerOffWait&quot;</span><span class="p">,</span> <span class="s">&quot;PowerBudgetReclaimConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;RegistryConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;RegistryConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;RegistryConfigRemove&quot;</span><span class="p">,</span> <span class="s">&quot;RegistryConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;SysConfigBegin&quot;</span><span class="p">,</span> <span class="s">&quot;SysConfigFail&quot;</span><span class="p">,</span> <span class="s">&quot;SysConfigPrimary&quot;</span><span class="p">,</span> <span class="s">&quot;SysConfigSecondary&quot;</span><span class="p">,</span> <span class="s">&quot;SysConfigSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateAdaptorUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBMCBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBMCFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBMCPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBMCSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBMCUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPowerOffServers&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerPrepareForUpdate&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerServersPowerOffCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateBoardControllerUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateCMCBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateCMCFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateCMCPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateCMCSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateCMCUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMCopyIOMImgToSub&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMCopyImgFromRep&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateIOMUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerActivate&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerPollActivation&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerPowerOffServers&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerServersPowerOffCompletion&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateRaidControllerUpdateRequest&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchCopyToLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchCopyToPeer&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchResetLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchResetRemote&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchUpdateLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchUpdateRemote&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchVerifyLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateSwitchVerifyRemote&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerBegin&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerCopyExtToLocal&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerCopyExtToPeer&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerExecute&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerFail&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerStart&quot;</span><span class="p">,</span> <span class="s">&quot;UpdateUCSManagerSuccess&quot;</span><span class="p">,</span> <span class="s">&quot;nop&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;order&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;order&quot;</span><span class="p">,</span> <span class="s">&quot;order&quot;</span><span class="p">,</span> <span class="s">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;retry&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;retry&quot;</span><span class="p">,</span> <span class="s">&quot;retry&quot;</span><span class="p">,</span> <span class="s">&quot;byte&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;stage_status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;stage_status&quot;</span><span class="p">,</span> <span class="s">&quot;stageStatus&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;fail&quot;</span><span class="p">,</span> <span class="s">&quot;inProgress&quot;</span><span class="p">,</span> <span class="s">&quot;nop&quot;</span><span class="p">,</span> <span class="s">&quot;pending&quot;</span><span class="p">,</span> <span class="s">&quot;skip&quot;</span><span class="p">,</span> <span class="s">&quot;success&quot;</span><span class="p">,</span> <span class="s">&quot;throttled&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;child_action&quot;</span><span class="p">,</span> <span class="s2">&quot;childAction&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;descr&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;descr&quot;</span><span class="p">,</span> <span class="s2">&quot;descr&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;[ !#$%&amp;\(\)\*\+,\-\./:;\?@\[\]_\{\|\}~a-zA-Z0-9]{0,256}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;last_update_time&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;last_update_time&quot;</span><span class="p">,</span> <span class="s2">&quot;lastUpdateTime&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;([0-9]){4}-([0-9]){2}-([0-9]){2}T([0-9]){2}:([0-9]){2}:([0-9]){2}((\.([0-9]){3})){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">NAMING</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ActivateAdaptorActivate&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorFail&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorPollActivateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorPowerOffServers&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorReset&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorServersPowerOffCompletion&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateAdaptorSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateBMCActivate&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateBMCBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateBMCFail&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateBMCReset&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateBMCSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateCMCActivate&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateCMCBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateCMCFail&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateCMCPollActivation&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateCMCReset&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateCMCSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateIOMActivate&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateIOMBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateIOMFail&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateIOMReset&quot;</span><span class="p">,</span> <span class="s2">&quot;ActivateIOMSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtIfConfigBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtIfConfigFail&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtIfConfigPrimary&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtIfConfigSecondary&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtIfConfigSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigActive&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCIMCVlanCfgPeer&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCMCVlanCfg&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigCMCVlanCfgPeer&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigFail&quot;</span><span class="p">,</span> <span class="s2">&quot;ExtMgmtInterfaceConfigSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;LockConfigBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;LockConfigFail&quot;</span><span class="p">,</span> <span class="s2">&quot;LockConfigPowerButtonLockConfig&quot;</span><span class="p">,</span> <span class="s2">&quot;LockConfigSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineBmcConfigureConnLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineBmcConfigureConnPeer&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineFail&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineSwConfigureConnLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;OnlineSwConfigureConnPeer&quot;</span><span class="p">,</span> <span class="s2">&quot;PowerBudgetReclaimConfigBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;PowerBudgetReclaimConfigFail&quot;</span><span class="p">,</span> <span class="s2">&quot;PowerBudgetReclaimConfigPowerOffReclaim&quot;</span><span class="p">,</span> <span class="s2">&quot;PowerBudgetReclaimConfigPowerOffWait&quot;</span><span class="p">,</span> <span class="s2">&quot;PowerBudgetReclaimConfigSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;RegistryConfigBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;RegistryConfigFail&quot;</span><span class="p">,</span> <span class="s2">&quot;RegistryConfigRemove&quot;</span><span class="p">,</span> <span class="s2">&quot;RegistryConfigSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;SysConfigBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;SysConfigFail&quot;</span><span class="p">,</span> <span class="s2">&quot;SysConfigPrimary&quot;</span><span class="p">,</span> <span class="s2">&quot;SysConfigSecondary&quot;</span><span class="p">,</span> <span class="s2">&quot;SysConfigSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateAdaptorBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateAdaptorFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateAdaptorPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateAdaptorSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateAdaptorUpdateRequest&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBMCBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBMCFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBMCPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBMCSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBMCUpdateRequest&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerPowerOffServers&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerPrepareForUpdate&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerServersPowerOffCompletion&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateBoardControllerUpdateRequest&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateCMCBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateCMCFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateCMCPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateCMCSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateCMCUpdateRequest&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMCopyIOMImgToSub&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMCopyImgFromRep&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateIOMUpdateRequest&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerActivate&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerPollActivation&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerPollUpdateStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerPowerOffServers&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerServersPowerOffCompletion&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateRaidControllerUpdateRequest&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchCopyToLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchCopyToPeer&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchResetLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchResetRemote&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchUpdateLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchUpdateRemote&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchVerifyLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateSwitchVerifyRemote&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerBegin&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerCopyExtToLocal&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerCopyExtToPeer&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerExecute&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerFail&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerStart&quot;</span><span class="p">,</span> <span class="s2">&quot;UpdateUCSManagerSuccess&quot;</span><span class="p">,</span> <span class="s2">&quot;nop&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;order&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span><span class="p">,</span> <span class="s2">&quot;ushort&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;retry&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;retry&quot;</span><span class="p">,</span> <span class="s2">&quot;retry&quot;</span><span class="p">,</span> <span class="s2">&quot;byte&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;stage_status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;stage_status&quot;</span><span class="p">,</span> <span class="s2">&quot;stageStatus&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;fail&quot;</span><span class="p">,</span> <span class="s2">&quot;inProgress&quot;</span><span class="p">,</span> <span class="s2">&quot;nop&quot;</span><span class="p">,</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span> <span class="s2">&quot;skip&quot;</span><span class="p">,</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;throttled&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
     <span class="p">}</span>
 
     <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;descr&quot;</span><span class="p">:</span> <span class="s">&quot;descr&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;lastUpdateTime&quot;</span><span class="p">:</span> <span class="s">&quot;last_update_time&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;order&quot;</span><span class="p">:</span> <span class="s">&quot;order&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;retry&quot;</span><span class="p">:</span> <span class="s">&quot;retry&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;stageStatus&quot;</span><span class="p">:</span> <span class="s">&quot;stage_status&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;childAction&quot;</span><span class="p">:</span> <span class="s2">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;descr&quot;</span><span class="p">:</span> <span class="s2">&quot;descr&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;lastUpdateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;last_update_time&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;order&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;retry&quot;</span><span class="p">:</span> <span class="s2">&quot;retry&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;stageStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;stage_status&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> 
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -322,65 +226,47 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stage_status</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="bp">None</span>
 
-        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;MgmtControllerFsmStage&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</pre></div></div>
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;MgmtControllerFsmStage&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

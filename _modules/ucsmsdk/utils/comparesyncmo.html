@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ucsmsdk.utils.comparesyncmo &mdash; ucsmsdk 0.9.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for ucsmsdk.utils.comparesyncmo</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2015 Cisco Systems, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#  http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains the api used to provide compare and sync functionality</span>
+<span class="sd">within ucsm or across ucsm.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ucscoreutils</span>
+<span class="kn">from</span> <span class="nn">..ucscoremeta</span> <span class="kn">import</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">..ucsexception</span> <span class="kn">import</span> <span class="n">UcsWarning</span><span class="p">,</span> <span class="n">UcsValidationException</span>
+<span class="kn">from</span> <span class="nn">..ucsmo</span> <span class="kn">import</span> <span class="n">GenericMo</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ucs&#39;</span><span class="p">)</span>
+
+<span class="n">skip_mos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;LsVersionBeh&quot;</span><span class="p">,</span> <span class="s2">&quot;LsmaintAck&quot;</span><span class="p">,</span> <span class="s2">&quot;LsIssues&quot;</span><span class="p">,</span> <span class="s2">&quot;VnicIpV4PooledAddr&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;VnicDynamicCon&quot;</span><span class="p">,</span> <span class="s2">&quot;LsVConAssign&quot;</span><span class="p">,</span> <span class="s2">&quot;ComputePooledSlot&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ComputePooledRackUnit&quot;</span><span class="p">,</span> <span class="s2">&quot;VnicIPv4PooledIscsiAddr&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;IppoolPooled&quot;</span><span class="p">,</span> <span class="s2">&quot;IqnpoolPooled&quot;</span><span class="p">,</span> <span class="s2">&quot;MacpoolPooled&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;UuidpoolPooled&quot;</span><span class="p">,</span> <span class="s2">&quot;VnicConnDef&quot;</span><span class="p">,</span> <span class="s2">&quot;VnicFcGroupDef&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;LsServerExtension&quot;</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">_CompareStatus</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal class used as enum.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">TYPES_DIFFERENT</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">PROPS_DIFFERENT</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">EQUAL</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="k">class</span> <span class="nc">_PropDiff</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal class for property delta</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">old_value</span><span class="p">,</span> <span class="n">new_value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prop</span> <span class="o">=</span> <span class="n">prop</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">old_value</span> <span class="o">=</span> <span class="n">old_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">new_value</span> <span class="o">=</span> <span class="n">new_value</span>
+
+
+<span class="k">class</span> <span class="nc">_MoDiff</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class represents difference object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">REMOVE</span> <span class="o">=</span> <span class="s2">&quot;&lt;=&quot;</span>
+    <span class="n">ADD_MODIFY</span> <span class="o">=</span> <span class="s2">&quot;=&gt;&quot;</span>
+    <span class="n">EQUAL</span> <span class="o">=</span> <span class="s2">&quot;==&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_object</span><span class="p">,</span> <span class="n">side_indicator</span><span class="p">,</span> <span class="n">diff_property</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">ref_values</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">diff_values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_object</span> <span class="o">=</span> <span class="n">input_object</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">input_object</span><span class="o">.</span><span class="n">dn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">side_indicator</span> <span class="o">=</span> <span class="n">side_indicator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diff_property</span> <span class="o">=</span> <span class="n">diff_property</span>
+
+        <span class="k">if</span> <span class="n">ref_values</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ref_prop_values</span> <span class="o">=</span> <span class="n">ref_values</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ref_prop_values</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="n">diff_values</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_prop_values</span> <span class="o">=</span> <span class="n">diff_values</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_prop_values</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">get_prop_diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">prop</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref_prop_values</span> <span class="ow">and</span> <span class="n">prop</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_prop_values</span><span class="p">:</span>
+            <span class="n">prop_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref_prop_values</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">prop</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                    <span class="n">prop_name</span> <span class="o">=</span> <span class="n">key</span>
+                    <span class="k">break</span>
+            <span class="k">return</span> <span class="n">_PropDiff</span><span class="p">(</span><span class="n">prop_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref_prop_values</span><span class="p">[</span><span class="n">prop</span><span class="p">],</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">diff_prop_values</span><span class="p">[</span><span class="n">prop</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+
+<span class="k">def</span> <span class="nf">_update_mo_dn_and_naming_props</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">ref_dn</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal method to modify the naming properties of mo using dn.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># modify diffmo dn with refmo dn</span>
+    <span class="n">mo</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="s1">&#39;dn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_dn</span>
+
+    <span class="c1"># modify diffmo rn with refmo rn</span>
+    <span class="n">ref_rn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">r&#39;^.*/&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ref_dn</span><span class="p">)</span>
+    <span class="n">mo</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="s1">&#39;rn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_rn</span>
+
+    <span class="c1"># modify diff mo naming properties using ref_rn</span>
+    <span class="n">naming_prop_dict</span> <span class="o">=</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">get_naming_props</span><span class="p">(</span><span class="n">rn_str</span><span class="o">=</span><span class="n">ref_rn</span><span class="p">,</span>
+                                                     <span class="n">rn_pattern</span><span class="o">=</span><span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">rn</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">naming_prop_dict</span><span class="p">:</span>
+        <span class="n">mo</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span> <span class="o">=</span> <span class="n">naming_prop_dict</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_translate_managed_object</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">xlate_org</span><span class="p">,</span> <span class="n">xlate_map</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal method used to translate a managed object which helps in comparing</span>
+<span class="sd">    two mo with different dn.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">xlate_org</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">xlate_map</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">mo</span>
+
+    <span class="n">mo</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+    <span class="n">ref_dn</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="n">xlate_org</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">match_obj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span>
+            <span class="s1">r&#39;^(org-[\-\.:_a-zA-Z0-9]{1,16}/)*org-[\-\.:_a-zA-Z0-9]{1,16}&#39;</span><span class="p">,</span>
+            <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match_obj</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">mo</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;OrgOrg&quot;</span><span class="p">:</span>
+                <span class="n">ref_dn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">match_obj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
+                                <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">xlate_org</span><span class="p">,</span>
+                                <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ref_dn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^</span><span class="si">%s</span><span class="s2">/&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">match_obj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
+                                <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/&quot;</span> <span class="o">%</span> <span class="n">xlate_org</span><span class="p">,</span>
+                                <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+            <span class="n">_update_mo_dn_and_naming_props</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">ref_dn</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">xlate_map</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">diff_dn</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span>
+        <span class="k">if</span> <span class="n">diff_dn</span> <span class="ow">in</span> <span class="n">xlate_map</span><span class="p">:</span>
+            <span class="n">ref_dn</span> <span class="o">=</span> <span class="n">xlate_map</span><span class="p">[</span><span class="n">diff_dn</span><span class="p">]</span>
+            <span class="n">_update_mo_dn_and_naming_props</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">ref_dn</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">diff_dn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">r&#39;[/]*[^/]+$&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">diff_dn</span><span class="p">)</span>
+            <span class="k">while</span> <span class="n">diff_dn</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">diff_dn</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">xlate_map</span><span class="p">:</span>
+                    <span class="n">diff_dn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">r&#39;[/]*[^/]+$&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">diff_dn</span><span class="p">)</span>
+                    <span class="k">continue</span>
+
+                <span class="n">ref_dn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^</span><span class="si">%s</span><span class="s2">/&quot;</span> <span class="o">%</span> <span class="n">diff_dn</span><span class="p">,</span>
+                                <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/&quot;</span> <span class="o">%</span> <span class="n">xlate_map</span><span class="p">[</span><span class="n">diff_dn</span><span class="p">],</span>
+                                <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+                <span class="n">_update_mo_dn_and_naming_props</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">ref_dn</span><span class="p">)</span>
+                <span class="k">break</span>
+    <span class="k">return</span> <span class="n">mo</span>
+
+
+<span class="k">def</span> <span class="nf">_list_has_values</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal function to check if obj is non empty list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">_should_skip_mo</span><span class="p">(</span><span class="n">mo</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal function to check if mo to be skipped from comparison.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">mo</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">GenericMo</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">mo</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">())</span> <span class="ow">in</span> <span class="n">skip_mos</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">elif</span> <span class="n">mo</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="ow">in</span> <span class="n">skip_mos</span> <span class="ow">or</span> \
+            <span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="n">MoMeta</span><span class="o">.</span><span class="n">ACCESS_TYPE_OUTPUTONLY</span> <span class="ow">or</span> \
+            <span class="p">(</span><span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">inp_out</span> <span class="o">==</span> <span class="n">MoMeta</span><span class="o">.</span><span class="n">ACCESS_TYPE_IO</span>
+             <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">access</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+             <span class="ow">and</span> <span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">access</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;read-only&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+
+<span class="k">def</span> <span class="nf">_get_skip_props</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">include_operational</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal function to skip mo property if not to be considered for sync.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">skip_props</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">mo</span><span class="o">.</span><span class="n">prop_meta</span><span class="p">:</span>
+        <span class="n">mo_property_meta</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">prop_meta</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">mo_property_meta</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># not include operational property</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">include_operational</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">mo_property_meta</span><span class="o">.</span><span class="n">access</span> <span class="ow">in</span> <span class="p">(</span><span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span>
+                                           <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">):</span>
+                <span class="n">skip_props</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+        <span class="c1"># checks if property is part of current or earlier ucsm schema</span>
+        <span class="k">if</span> <span class="n">version_filter</span><span class="p">:</span>
+            <span class="n">version</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">get_handle</span><span class="p">()</span><span class="o">.</span><span class="n">version</span>
+            <span class="k">if</span> <span class="n">version</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">version</span> <span class="o">&lt;</span> <span class="n">mo_property_meta</span><span class="o">.</span><span class="n">version</span> <span class="ow">or</span> \
+               <span class="n">mo_property_meta</span><span class="o">.</span><span class="n">access</span> <span class="o">==</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">:</span>
+                <span class="n">skip_props</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">skip_props</span>
+
+
+<span class="k">def</span> <span class="nf">_compare_known_mo</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">to_mo</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">include_operational</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                      <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal function to compare if both the ref and diff obj is known mo.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">from_mo_skip_props</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">include_operational</span> <span class="ow">or</span> <span class="n">version_filter</span><span class="p">:</span>
+        <span class="n">from_mo_skip_props</span> <span class="o">=</span> <span class="n">_get_skip_props</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">include_operational</span><span class="p">,</span>
+                                             <span class="n">version_filter</span><span class="p">)</span>
+
+    <span class="c1"># comparing known properties of ref mo</span>
+    <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">prop_meta</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">from_mo_skip_props</span> <span class="ow">and</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">from_mo_skip_props</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="c1"># if not exist in diff mo</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">to_mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">):</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Property &#39;</span><span class="si">%s</span><span class="s2">&#39; of &#39;</span><span class="si">%s</span><span class="s2">&#39; does not exist in diff obj.&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="n">prop</span><span class="p">,</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">dn</span><span class="p">))</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">to_mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">):</span>
+            <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+
+    <span class="c1"># comparing unknown properties of ref mo</span>
+    <span class="n">from_xtra_props</span> <span class="o">=</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">_ManagedObject__xtra_props</span>
+    <span class="n">to_xtra_props</span> <span class="o">=</span> <span class="n">to_mo</span><span class="o">.</span><span class="n">_ManagedObject__xtra_props</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">to_xtra_props</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">from_xtra_props</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">prop</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">to_xtra_props</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">from_xtra_props</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">!=</span> <span class="n">to_xtra_props</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">version_filter</span><span class="p">:</span>
+                <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Ignoring xtra property &#39;</span><span class="si">%s</span><span class="s2">&#39; of &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                    <span class="n">prop</span><span class="p">,</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">dn</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_compare_unknown_mo</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">to_mo</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal function to compare if any or both of the  ref and diff obj is</span>
+<span class="sd">    unknown mo.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># both unknown mo</span>
+    <span class="k">if</span> <span class="n">version_filter</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">properties</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">prop</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">to_mo</span><span class="o">.</span><span class="n">properties</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span> <span class="o">!=</span> <span class="n">to_mo</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="n">prop</span><span class="p">]:</span>
+            <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_compare</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">to_mo</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">include_operational</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+             <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal method to support compare reference and difference object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># compare mo of different types</span>
+    <span class="k">if</span> <span class="n">from_mo</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span> <span class="o">!=</span> <span class="n">to_mo</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">_CompareStatus</span><span class="o">.</span><span class="n">TYPES_DIFFERENT</span>
+
+    <span class="c1"># compare for unknown class_id</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">GenericMo</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">to_mo</span><span class="p">,</span> <span class="n">GenericMo</span><span class="p">):</span>
+        <span class="n">_compare_unknown_mo</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">to_mo</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">version_filter</span><span class="p">)</span>
+
+    <span class="c1"># compare for known class_id</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">_compare_known_mo</span><span class="p">(</span><span class="n">from_mo</span><span class="p">,</span> <span class="n">to_mo</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">include_operational</span><span class="p">,</span>
+                          <span class="n">version_filter</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_CompareStatus</span><span class="o">.</span><span class="n">PROPS_DIFFERENT</span>
+
+    <span class="k">return</span> <span class="n">_CompareStatus</span><span class="o">.</span><span class="n">EQUAL</span>
+
+
+<span class="k">def</span> <span class="nf">_compare_common_mo</span><span class="p">(</span><span class="n">ref_dict</span><span class="p">,</span> <span class="n">diff_dict</span><span class="p">,</span> <span class="n">include_operational</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                       <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">include_equal</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                       <span class="n">exclude_different</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+
+    <span class="n">diff_output</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">common_dns</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ref_dict</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">diff_dict</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">dn</span> <span class="ow">in</span> <span class="n">common_dns</span><span class="p">:</span>
+        <span class="n">ref_mo</span> <span class="o">=</span> <span class="n">ref_dict</span><span class="p">[</span><span class="n">dn</span><span class="p">]</span>
+        <span class="n">diff_mo</span> <span class="o">=</span> <span class="n">diff_dict</span><span class="p">[</span><span class="n">dn</span><span class="p">]</span>
+        <span class="n">diff_props</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># compare both mo for property and type</span>
+        <span class="n">diff_status</span> <span class="o">=</span> <span class="n">_compare</span><span class="p">(</span><span class="n">ref_mo</span><span class="p">,</span> <span class="n">diff_mo</span><span class="p">,</span> <span class="n">diff_props</span><span class="p">,</span>
+                               <span class="n">include_operational</span><span class="p">,</span> <span class="n">version_filter</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">diff_status</span> <span class="o">==</span> <span class="n">_CompareStatus</span><span class="o">.</span><span class="n">EQUAL</span> <span class="ow">and</span> <span class="n">include_equal</span><span class="p">:</span>
+            <span class="n">mo_diff</span> <span class="o">=</span> <span class="n">_MoDiff</span><span class="p">(</span><span class="n">ref_mo</span><span class="p">,</span> <span class="n">_MoDiff</span><span class="o">.</span><span class="n">EQUAL</span><span class="p">)</span>
+            <span class="n">diff_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo_diff</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">exclude_different</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">diff_status</span> <span class="o">==</span> <span class="n">_CompareStatus</span><span class="o">.</span><span class="n">TYPES_DIFFERENT</span><span class="p">:</span>
+            <span class="n">mo_diff</span> <span class="o">=</span> <span class="n">_MoDiff</span><span class="p">(</span><span class="n">ref_mo</span><span class="p">,</span> <span class="n">_MoDiff</span><span class="o">.</span><span class="n">REMOVE</span><span class="p">)</span>
+            <span class="n">diff_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo_diff</span><span class="p">)</span>
+            <span class="n">mo_diff</span> <span class="o">=</span> <span class="n">_MoDiff</span><span class="p">(</span><span class="n">diff_mo</span><span class="p">,</span> <span class="n">_MoDiff</span><span class="o">.</span><span class="n">ADD_MODIFY</span><span class="p">)</span>
+            <span class="n">diff_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo_diff</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">diff_status</span> <span class="o">==</span> <span class="n">_CompareStatus</span><span class="o">.</span><span class="n">PROPS_DIFFERENT</span><span class="p">:</span>
+            <span class="n">ref_values</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">diff_values</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">diff_props</span><span class="p">:</span>
+                <span class="n">ref_values</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ref_mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+                <span class="n">diff_values</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">diff_mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+            <span class="n">mo_diff</span> <span class="o">=</span> <span class="n">_MoDiff</span><span class="p">(</span><span class="n">diff_mo</span><span class="p">,</span> <span class="n">_MoDiff</span><span class="o">.</span><span class="n">ADD_MODIFY</span><span class="p">,</span>
+                              <span class="n">diff_props</span><span class="p">,</span> <span class="n">ref_values</span><span class="p">,</span> <span class="n">diff_values</span><span class="p">)</span>
+            <span class="n">diff_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo_diff</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">diff_output</span>
+
+
+<div class="viewcode-block" id="compare_ucs_mo"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.comparesyncmo.compare_ucs_mo">[docs]</a><span class="k">def</span> <span class="nf">compare_ucs_mo</span><span class="p">(</span><span class="n">ref_obj</span><span class="p">,</span> <span class="n">diff_obj</span><span class="p">,</span>
+                   <span class="n">exclude_different</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                   <span class="n">include_equal</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                   <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                   <span class="n">include_operational</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                   <span class="n">xlate_org</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">xlate_map</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compares the state of two managed objects with same dn.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ref_obj (list): list of Managed Objects of reference ucsm</span>
+<span class="sd">        diff_obj (list): list of Managed Objects of difference ucsm</span>
+<span class="sd">        exclude_different (bool): by default False. If set to True, will</span>
+<span class="sd">                                  compare mos only which exist on both</span>
+<span class="sd">                                  reference and difference ucsm respectively</span>
+<span class="sd">        include_equal (bool): by default False. If set to True, will also</span>
+<span class="sd">                              display properties which are equal</span>
+<span class="sd">        version_filter (bool): by default True: If set to False, ignore</span>
+<span class="sd">                                  properties which is introduced in later ucsm</span>
+<span class="sd">                                  version than reference ucsm</span>
+<span class="sd">        include_operational (bool): by default False: If set to True, compares</span>
+<span class="sd">                                    all the properties of mo.</span>
+<span class="sd">        xlate_org (str): org-dn, should be used compare objects of same type</span>
+<span class="sd">                         under different org. org-dn of reference mo.</span>
+<span class="sd">        xlate_map (dict) : {&quot;difference_dn&quot;: &quot;reference_dn&quot;}</span>
+<span class="sd">                           Should be used to compare objects of same type with</span>
+<span class="sd">                           different dn.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        List of MoDiff objects:</span>
+<span class="sd">        MoDiff Object : dn - dn of Managed Object</span>
+<span class="sd">                        input_object - Managed Object</span>
+<span class="sd">                        side_indicator -</span>
+<span class="sd">                            &quot;=&gt;&quot; Add the diff obj to ref ucsm</span>
+<span class="sd">                              or</span>
+<span class="sd">                              Modify the ref object by diff object on ref ucsm</span>
+
+<span class="sd">                            &quot;&lt;=&quot; Removes the ref obj from ref ucsm</span>
+
+<span class="sd">                            &quot;==&quot; object is equal on both ref and diff ucsm</span>
+<span class="sd">                        diff_property  - property list with different value</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        #1</span>
+<span class="sd">        ref_mos = [ref_handle.query_dn(dn=&quot;org-root/ls-sp&quot;)]</span>
+<span class="sd">        diff_mos = [diff_handle.query_dn(dn=&quot;org-root/ls-sp&quot;)]</span>
+<span class="sd">        compare_ucs_mo(ref_mos, diff_mos)</span>
+
+<span class="sd">        #2</span>
+<span class="sd">        ref_mos = [ref_handle.query_dn(dn=&quot;org-root/org-ref/ls-sp&quot;)]</span>
+<span class="sd">        diff_mos = [diff_handle.query_dn(dn=&quot;org-root/org-diff/ls-sp&quot;)]</span>
+<span class="sd">        compare_ucs_mo(ref_mos, diff_mos, xlate_org = &quot;org-root/org-ref&quot;)</span>
+
+<span class="sd">        #3</span>
+<span class="sd">        ref_mos = [ref_handle.query_dn(dn=&quot;org-root/ls-ref&quot;)]</span>
+<span class="sd">        diff_mos = [diff_handle.query_dn(dn=&quot;org-root/ls-diff&quot;)]</span>
+<span class="sd">        compare_ucs_mo(ref_mos, diff_mos,</span>
+<span class="sd">                       xlate_map = {&quot;org-root/ls-diff&quot;: &quot;org-root/ls-ref&quot;})</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">reference_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">difference_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">diff_output</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">ref_obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">_list_has_values</span><span class="p">(</span><span class="n">ref_obj</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">mo</span> <span class="ow">in</span> <span class="n">ref_obj</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">_should_skip_mo</span><span class="p">(</span><span class="n">mo</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">reference_dict</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
+
+    <span class="k">if</span> <span class="n">diff_obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">_list_has_values</span><span class="p">(</span><span class="n">diff_obj</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">mo</span> <span class="ow">in</span> <span class="n">diff_obj</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">_should_skip_mo</span><span class="p">(</span><span class="n">mo</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">translated_mo</span> <span class="o">=</span> <span class="n">_translate_managed_object</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">xlate_org</span><span class="p">,</span> <span class="n">xlate_map</span><span class="p">)</span>
+            <span class="n">difference_dict</span><span class="p">[</span><span class="n">translated_mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">translated_mo</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">exclude_different</span><span class="p">:</span>
+        <span class="n">only_ref_dns</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">reference_dict</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">difference_dict</span><span class="p">)</span>
+        <span class="n">only_diff_dns</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">difference_dict</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">reference_dict</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">dn</span> <span class="ow">in</span> <span class="n">only_ref_dns</span><span class="p">:</span>
+            <span class="n">diff_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_MoDiff</span><span class="p">(</span><span class="n">reference_dict</span><span class="p">[</span><span class="n">dn</span><span class="p">],</span>
+                                       <span class="n">_MoDiff</span><span class="o">.</span><span class="n">REMOVE</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">dn</span> <span class="ow">in</span> <span class="n">only_diff_dns</span><span class="p">:</span>
+            <span class="n">diff_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_MoDiff</span><span class="p">(</span><span class="n">difference_dict</span><span class="p">[</span><span class="n">dn</span><span class="p">],</span>
+                                       <span class="n">_MoDiff</span><span class="o">.</span><span class="n">ADD_MODIFY</span><span class="p">))</span>
+
+    <span class="n">diff_with_props</span> <span class="o">=</span> <span class="n">_compare_common_mo</span><span class="p">(</span><span class="n">reference_dict</span><span class="p">,</span> <span class="n">difference_dict</span><span class="p">,</span>
+                                         <span class="n">include_operational</span><span class="p">,</span>
+                                         <span class="n">version_filter</span><span class="p">,</span> <span class="n">include_equal</span><span class="p">,</span>
+                                         <span class="n">exclude_different</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">diff_with_props</span><span class="p">:</span>
+        <span class="n">diff_output</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">diff_with_props</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">diff_output</span></div>
+
+
+<div class="viewcode-block" id="sync_ucs_mo"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.comparesyncmo.sync_ucs_mo">[docs]</a><span class="k">def</span> <span class="nf">sync_ucs_mo</span><span class="p">(</span><span class="n">ref_handle</span><span class="p">,</span> <span class="n">difference</span><span class="p">,</span>
+                <span class="n">delete_not_present</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">version_filter</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    syncs the difference object on reference ucsm.</span>
+<span class="sd">    In other words, make the state of reference ucsm for the respective</span>
+<span class="sd">    ref object same as difference object on reference ucsm.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ref_handle (UcsHandle): connect handle of reference ucsm</span>
+<span class="sd">        difference (list of MoDiff objects): output of compare-ucs-mo api</span>
+<span class="sd">        delete_not_present (bool): by dafault False. If set to true, will</span>
+<span class="sd">                                   delete ref mo which does not exist on</span>
+<span class="sd">                                   difference ucsm</span>
+<span class="sd">        version_filter (bool): by default True: If set to False, ignore</span>
+<span class="sd">                                  properties which is introduced in later ucsm</span>
+<span class="sd">                                  version than reference ucsm</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        #1</span>
+<span class="sd">        ref_mos = [ref_handle.query_dn(dn=&quot;org-root/ls-sp&quot;)]</span>
+<span class="sd">        diff_mos = [diff_handle.query_dn(dn=&quot;org-root/ls-sp&quot;)]</span>
+<span class="sd">        difference = compare_ucs_mo(ref_handle, ref_mos,diff_handle, diff_mos)</span>
+<span class="sd">        sync_ucs_mo(ref_handle, difference=difference, delete_not_present=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">difference</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">_list_has_values</span><span class="p">(</span><span class="n">difference</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
+            <span class="s2">&quot;difference object parameter is not provided.&quot;</span><span class="p">)</span>
+
+    <span class="n">to_commit</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">for</span> <span class="n">mo_diff</span> <span class="ow">in</span> <span class="n">difference</span><span class="p">:</span>
+        <span class="n">mo</span> <span class="o">=</span> <span class="n">mo_diff</span><span class="o">.</span><span class="n">input_object</span>
+        <span class="n">class_id</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">GenericMo</span><span class="p">):</span>
+            <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Ignoring &#39;</span><span class="si">%s</span><span class="s2">&#39;.Unknown ClasId &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">,</span> <span class="n">class_id</span><span class="p">))</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Remove</span>
+        <span class="k">if</span> <span class="n">mo_diff</span><span class="o">.</span><span class="n">side_indicator</span> <span class="o">==</span> <span class="n">_MoDiff</span><span class="o">.</span><span class="n">REMOVE</span> <span class="ow">and</span> <span class="n">delete_not_present</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;removing mo &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span> <span class="o">%</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+            <span class="n">ref_handle</span><span class="o">.</span><span class="n">remove_mo</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
+            <span class="n">to_commit</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="k">if</span> <span class="n">version_filter</span><span class="p">:</span>
+            <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span>
+            <span class="k">if</span> <span class="n">ref_handle</span><span class="o">.</span><span class="n">version</span> <span class="o">&lt;</span> <span class="n">mo_meta</span><span class="o">.</span><span class="n">version</span><span class="p">:</span>
+                <span class="n">UcsWarning</span><span class="p">(</span><span class="s2">&quot;Ignoring unsupported class_id &#39;</span><span class="si">%s</span><span class="s2">&#39; for dn &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span>
+                           <span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">))</span>
+                <span class="k">continue</span>
+
+        <span class="c1"># Add or Modify</span>
+        <span class="k">if</span> <span class="n">mo_diff</span><span class="o">.</span><span class="n">side_indicator</span> <span class="o">==</span> <span class="n">_MoDiff</span><span class="o">.</span><span class="n">ADD_MODIFY</span><span class="p">:</span>
+            <span class="n">add_exists</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">GenericMo</span><span class="p">)</span> <span class="ow">and</span> <span class="s1">&#39;Add&#39;</span> <span class="ow">in</span> <span class="n">mo</span><span class="o">.</span><span class="n">mo_meta</span><span class="o">.</span><span class="n">verbs</span><span class="p">:</span>
+                <span class="n">add_exists</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="c1"># Add</span>
+            <span class="k">if</span> <span class="n">add_exists</span> <span class="ow">and</span> <span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span> <span class="ow">is</span> <span class="bp">None</span>
+                               <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;adding mo &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+                <span class="n">mo</span><span class="o">.</span><span class="n">mark_dirty</span><span class="p">()</span>
+                <span class="n">ref_handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
+                <span class="n">to_commit</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="c1"># Modify the Managed Object</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span> <span class="ow">is</span> <span class="bp">None</span> \
+                        <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">set_flag</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">mo</span><span class="o">.</span><span class="n">prop_meta</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span><span class="o">.</span><span class="n">access</span> <span class="o">==</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">:</span>
+                        <span class="nb">setattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
+                        <span class="n">set_flag</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">set_flag</span><span class="p">:</span>
+                    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;No Configurable Properties Changed for mo &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span>
+                              <span class="o">%</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;set mo &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span>
+                    <span class="n">ref_handle</span><span class="o">.</span><span class="n">set_mo</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
+                    <span class="n">to_commit</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="k">if</span> <span class="n">to_commit</span><span class="p">:</span>
+        <span class="n">ref_handle</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="write_mo_diff"><a class="viewcode-back" href="../../../ucsmsdk.utils.html#ucsmsdk.utils.comparesyncmo.write_mo_diff">[docs]</a><span class="k">def</span> <span class="nf">write_mo_diff</span><span class="p">(</span><span class="n">diff_obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Writes the difference managedObject(output of CompareManagedObject)</span>
+<span class="sd">    on the terminal.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">tab_size</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_list_has_values</span><span class="p">(</span><span class="n">diff_obj</span><span class="p">):</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">diff_obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">_MoDiff</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;dn&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;input_object&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">),</span>
+              <span class="s2">&quot;side_indicator&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;diff_property&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;--&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;-----------&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">),</span>
+              <span class="s2">&quot;-------------&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;------------&quot;</span><span class="p">)</span>
+    <span class="n">diff_obj_mod</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">mo_diff</span> <span class="ow">in</span> <span class="n">diff_obj</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mo_diff</span><span class="p">,</span> <span class="n">_MoDiff</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="n">diff_obj_mod</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mo_diff</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">mo_diff</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">diff_obj_mod</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">mo</span><span class="p">:</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">dn</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">10</span><span class="p">),</span>
+              <span class="nb">str</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">input_object</span><span class="o">.</span><span class="n">get_class_id</span><span class="p">())</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">),</span>
+              <span class="nb">str</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">side_indicator</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">tab_size</span> <span class="o">*</span> <span class="mi">3</span><span class="p">),</span>
+              <span class="nb">str</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span><span class="p">))</span>
+              <span class="k">if</span> <span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">mo_diff</span><span class="o">.</span><span class="n">diff_property</span><span class="p">))</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

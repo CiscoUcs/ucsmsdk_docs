@@ -1,371 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.compute.ComputeBoard &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="../../../../index.html"/>
-        <link rel="up" title="Module code" href="../../../index.html"/> 
-
-  
-  <script src="../../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.compute.ComputeBoard &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="../../../../index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ucsmsdk.html">ucsmsdk package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.compute.ComputeBoard</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <h1>Source code for ucsmsdk.mometa.compute.ComputeBoard</h1><div class="highlight"><pre>
-<span class="sd">&quot;&quot;&quot;This module contains the general information for ComputeBoard ManagedObject.&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the general information for ComputeBoard ManagedObject.&quot;&quot;&quot;</span>
 
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
-<span class="kn">from</span> <span class="nn">ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
-<span class="kn">from</span> <span class="nn">ucscoremeta</span> <span class="kn">import</span> <span class="n">UcsVersion</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
-<span class="kn">from</span> <span class="nn">ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))))</span>
+<span class="kn">from</span> <span class="nn">...ucsmo</span> <span class="kn">import</span> <span class="n">ManagedObject</span>
+<span class="kn">from</span> <span class="nn">...ucscoremeta</span> <span class="kn">import</span> <span class="n">MoPropertyMeta</span><span class="p">,</span> <span class="n">MoMeta</span>
+<span class="kn">from</span> <span class="nn">...ucsmeta</span> <span class="kn">import</span> <span class="n">VersionMeta</span>
 
 
-<div class="viewcode-block" id="ComputeBoardConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.compute.html#ucsmsdk.mometa.compute.ComputeBoard.ComputeBoardConsts">[docs]</a><span class="k">class</span> <span class="nc">ComputeBoardConsts</span><span class="p">():</span>
-    <span class="n">CMOS_VOLTAGE_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-critical&quot;</span>
-    <span class="n">CMOS_VOLTAGE_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-non-critical&quot;</span>
-    <span class="n">CMOS_VOLTAGE_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;lower-non-recoverable&quot;</span>
-    <span class="n">CMOS_VOLTAGE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">CMOS_VOLTAGE_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">CMOS_VOLTAGE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">CMOS_VOLTAGE_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-critical&quot;</span>
-    <span class="n">CMOS_VOLTAGE_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-non-critical&quot;</span>
-    <span class="n">CMOS_VOLTAGE_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;upper-non-recoverable&quot;</span>
-    <span class="n">CPU_TYPE_IVY_BRIDGE</span> <span class="o">=</span> <span class="s">&quot;ivy-bridge&quot;</span>
-    <span class="n">CPU_TYPE_OTHER</span> <span class="o">=</span> <span class="s">&quot;other&quot;</span>
-    <span class="n">CPU_TYPE_SANDY_BRIDGE</span> <span class="o">=</span> <span class="s">&quot;sandy-bridge&quot;</span>
-    <span class="n">OPER_POWER_DEGRADED</span> <span class="o">=</span> <span class="s">&quot;degraded&quot;</span>
-    <span class="n">OPER_POWER_ERROR</span> <span class="o">=</span> <span class="s">&quot;error&quot;</span>
-    <span class="n">OPER_POWER_FAILED</span> <span class="o">=</span> <span class="s">&quot;failed&quot;</span>
-    <span class="n">OPER_POWER_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">OPER_POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;off&quot;</span>
-    <span class="n">OPER_POWER_OFFDUTY</span> <span class="o">=</span> <span class="s">&quot;offduty&quot;</span>
-    <span class="n">OPER_POWER_OFFLINE</span> <span class="o">=</span> <span class="s">&quot;offline&quot;</span>
-    <span class="n">OPER_POWER_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">OPER_POWER_ON</span> <span class="o">=</span> <span class="s">&quot;on&quot;</span>
-    <span class="n">OPER_POWER_ONLINE</span> <span class="o">=</span> <span class="s">&quot;online&quot;</span>
-    <span class="n">OPER_POWER_POWER_SAVE</span> <span class="o">=</span> <span class="s">&quot;power-save&quot;</span>
-    <span class="n">OPER_POWER_TEST</span> <span class="o">=</span> <span class="s">&quot;test&quot;</span>
-    <span class="n">OPER_POWER_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">OPER_STATE_ACCESSIBILITY_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;accessibility-problem&quot;</span>
-    <span class="n">OPER_STATE_AUTO_UPGRADE</span> <span class="o">=</span> <span class="s">&quot;auto-upgrade&quot;</span>
-    <span class="n">OPER_STATE_BIOS_POST_TIMEOUT</span> <span class="o">=</span> <span class="s">&quot;bios-post-timeout&quot;</span>
-    <span class="n">OPER_STATE_CHASSIS_LIMIT_EXCEEDED</span> <span class="o">=</span> <span class="s">&quot;chassis-limit-exceeded&quot;</span>
-    <span class="n">OPER_STATE_CONFIG</span> <span class="o">=</span> <span class="s">&quot;config&quot;</span>
-    <span class="n">OPER_STATE_DECOMISSIONING</span> <span class="o">=</span> <span class="s">&quot;decomissioning&quot;</span>
-    <span class="n">OPER_STATE_DEGRADED</span> <span class="o">=</span> <span class="s">&quot;degraded&quot;</span>
-    <span class="n">OPER_STATE_DISABLED</span> <span class="o">=</span> <span class="s">&quot;disabled&quot;</span>
-    <span class="n">OPER_STATE_DISCOVERY</span> <span class="o">=</span> <span class="s">&quot;discovery&quot;</span>
-    <span class="n">OPER_STATE_DISCOVERY_FAILED</span> <span class="o">=</span> <span class="s">&quot;discovery-failed&quot;</span>
-    <span class="n">OPER_STATE_EQUIPMENT_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;equipment-problem&quot;</span>
-    <span class="n">OPER_STATE_FABRIC_CONN_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;fabric-conn-problem&quot;</span>
-    <span class="n">OPER_STATE_FABRIC_UNSUPPORTED_CONN</span> <span class="o">=</span> <span class="s">&quot;fabric-unsupported-conn&quot;</span>
-    <span class="n">OPER_STATE_IDENTIFY</span> <span class="o">=</span> <span class="s">&quot;identify&quot;</span>
-    <span class="n">OPER_STATE_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s">&quot;identity-unestablishable&quot;</span>
-    <span class="n">OPER_STATE_INOPERABLE</span> <span class="o">=</span> <span class="s">&quot;inoperable&quot;</span>
-    <span class="n">OPER_STATE_LINK_ACTIVATE_BLOCKED</span> <span class="o">=</span> <span class="s">&quot;link-activate-blocked&quot;</span>
-    <span class="n">OPER_STATE_MALFORMED_FRU</span> <span class="o">=</span> <span class="s">&quot;malformed-fru&quot;</span>
-    <span class="n">OPER_STATE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">OPER_STATE_OPERABLE</span> <span class="o">=</span> <span class="s">&quot;operable&quot;</span>
-    <span class="n">OPER_STATE_PEER_COMM_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;peer-comm-problem&quot;</span>
-    <span class="n">OPER_STATE_PERFORMANCE_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;performance-problem&quot;</span>
-    <span class="n">OPER_STATE_POST_FAILURE</span> <span class="o">=</span> <span class="s">&quot;post-failure&quot;</span>
-    <span class="n">OPER_STATE_POWER_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;power-problem&quot;</span>
-    <span class="n">OPER_STATE_POWERED_OFF</span> <span class="o">=</span> <span class="s">&quot;powered-off&quot;</span>
-    <span class="n">OPER_STATE_REMOVED</span> <span class="o">=</span> <span class="s">&quot;removed&quot;</span>
-    <span class="n">OPER_STATE_THERMAL_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;thermal-problem&quot;</span>
-    <span class="n">OPER_STATE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">OPER_STATE_UPGRADE_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;upgrade-problem&quot;</span>
-    <span class="n">OPER_STATE_VOLTAGE_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;voltage-problem&quot;</span>
-    <span class="n">OPERABILITY_ACCESSIBILITY_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;accessibility-problem&quot;</span>
-    <span class="n">OPERABILITY_AUTO_UPGRADE</span> <span class="o">=</span> <span class="s">&quot;auto-upgrade&quot;</span>
-    <span class="n">OPERABILITY_BIOS_POST_TIMEOUT</span> <span class="o">=</span> <span class="s">&quot;bios-post-timeout&quot;</span>
-    <span class="n">OPERABILITY_CHASSIS_LIMIT_EXCEEDED</span> <span class="o">=</span> <span class="s">&quot;chassis-limit-exceeded&quot;</span>
-    <span class="n">OPERABILITY_CONFIG</span> <span class="o">=</span> <span class="s">&quot;config&quot;</span>
-    <span class="n">OPERABILITY_DECOMISSIONING</span> <span class="o">=</span> <span class="s">&quot;decomissioning&quot;</span>
-    <span class="n">OPERABILITY_DEGRADED</span> <span class="o">=</span> <span class="s">&quot;degraded&quot;</span>
-    <span class="n">OPERABILITY_DISABLED</span> <span class="o">=</span> <span class="s">&quot;disabled&quot;</span>
-    <span class="n">OPERABILITY_DISCOVERY</span> <span class="o">=</span> <span class="s">&quot;discovery&quot;</span>
-    <span class="n">OPERABILITY_DISCOVERY_FAILED</span> <span class="o">=</span> <span class="s">&quot;discovery-failed&quot;</span>
-    <span class="n">OPERABILITY_EQUIPMENT_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;equipment-problem&quot;</span>
-    <span class="n">OPERABILITY_FABRIC_CONN_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;fabric-conn-problem&quot;</span>
-    <span class="n">OPERABILITY_FABRIC_UNSUPPORTED_CONN</span> <span class="o">=</span> <span class="s">&quot;fabric-unsupported-conn&quot;</span>
-    <span class="n">OPERABILITY_IDENTIFY</span> <span class="o">=</span> <span class="s">&quot;identify&quot;</span>
-    <span class="n">OPERABILITY_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s">&quot;identity-unestablishable&quot;</span>
-    <span class="n">OPERABILITY_INOPERABLE</span> <span class="o">=</span> <span class="s">&quot;inoperable&quot;</span>
-    <span class="n">OPERABILITY_LINK_ACTIVATE_BLOCKED</span> <span class="o">=</span> <span class="s">&quot;link-activate-blocked&quot;</span>
-    <span class="n">OPERABILITY_MALFORMED_FRU</span> <span class="o">=</span> <span class="s">&quot;malformed-fru&quot;</span>
-    <span class="n">OPERABILITY_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">OPERABILITY_OPERABLE</span> <span class="o">=</span> <span class="s">&quot;operable&quot;</span>
-    <span class="n">OPERABILITY_PEER_COMM_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;peer-comm-problem&quot;</span>
-    <span class="n">OPERABILITY_PERFORMANCE_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;performance-problem&quot;</span>
-    <span class="n">OPERABILITY_POST_FAILURE</span> <span class="o">=</span> <span class="s">&quot;post-failure&quot;</span>
-    <span class="n">OPERABILITY_POWER_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;power-problem&quot;</span>
-    <span class="n">OPERABILITY_POWERED_OFF</span> <span class="o">=</span> <span class="s">&quot;powered-off&quot;</span>
-    <span class="n">OPERABILITY_REMOVED</span> <span class="o">=</span> <span class="s">&quot;removed&quot;</span>
-    <span class="n">OPERABILITY_THERMAL_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;thermal-problem&quot;</span>
-    <span class="n">OPERABILITY_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">OPERABILITY_UPGRADE_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;upgrade-problem&quot;</span>
-    <span class="n">OPERABILITY_VOLTAGE_PROBLEM</span> <span class="o">=</span> <span class="s">&quot;voltage-problem&quot;</span>
-    <span class="n">PERF_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-critical&quot;</span>
-    <span class="n">PERF_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-non-critical&quot;</span>
-    <span class="n">PERF_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;lower-non-recoverable&quot;</span>
-    <span class="n">PERF_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">PERF_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">PERF_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">PERF_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-critical&quot;</span>
-    <span class="n">PERF_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-non-critical&quot;</span>
-    <span class="n">PERF_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;upper-non-recoverable&quot;</span>
-    <span class="n">POWER_DEGRADED</span> <span class="o">=</span> <span class="s">&quot;degraded&quot;</span>
-    <span class="n">POWER_ERROR</span> <span class="o">=</span> <span class="s">&quot;error&quot;</span>
-    <span class="n">POWER_FAILED</span> <span class="o">=</span> <span class="s">&quot;failed&quot;</span>
-    <span class="n">POWER_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">POWER_OFF</span> <span class="o">=</span> <span class="s">&quot;off&quot;</span>
-    <span class="n">POWER_OFFDUTY</span> <span class="o">=</span> <span class="s">&quot;offduty&quot;</span>
-    <span class="n">POWER_OFFLINE</span> <span class="o">=</span> <span class="s">&quot;offline&quot;</span>
-    <span class="n">POWER_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">POWER_ON</span> <span class="o">=</span> <span class="s">&quot;on&quot;</span>
-    <span class="n">POWER_ONLINE</span> <span class="o">=</span> <span class="s">&quot;online&quot;</span>
-    <span class="n">POWER_POWER_SAVE</span> <span class="o">=</span> <span class="s">&quot;power-save&quot;</span>
-    <span class="n">POWER_TEST</span> <span class="o">=</span> <span class="s">&quot;test&quot;</span>
-    <span class="n">POWER_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">POWER_USAGE_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-critical&quot;</span>
-    <span class="n">POWER_USAGE_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-non-critical&quot;</span>
-    <span class="n">POWER_USAGE_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;lower-non-recoverable&quot;</span>
-    <span class="n">POWER_USAGE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">POWER_USAGE_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">POWER_USAGE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">POWER_USAGE_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-critical&quot;</span>
-    <span class="n">POWER_USAGE_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-non-critical&quot;</span>
-    <span class="n">POWER_USAGE_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;upper-non-recoverable&quot;</span>
-    <span class="n">PRESENCE_EMPTY</span> <span class="o">=</span> <span class="s">&quot;empty&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED</span> <span class="o">=</span> <span class="s">&quot;equipped&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED_DEPRECATED</span> <span class="o">=</span> <span class="s">&quot;equipped-deprecated&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s">&quot;equipped-identity-unestablishable&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED_NOT_PRIMARY</span> <span class="o">=</span> <span class="s">&quot;equipped-not-primary&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED_SLAVE</span> <span class="o">=</span> <span class="s">&quot;equipped-slave&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED_UNSUPPORTED</span> <span class="o">=</span> <span class="s">&quot;equipped-unsupported&quot;</span>
-    <span class="n">PRESENCE_EQUIPPED_WITH_MALFORMED_FRU</span> <span class="o">=</span> <span class="s">&quot;equipped-with-malformed-fru&quot;</span>
-    <span class="n">PRESENCE_INACCESSIBLE</span> <span class="o">=</span> <span class="s">&quot;inaccessible&quot;</span>
-    <span class="n">PRESENCE_MISMATCH</span> <span class="o">=</span> <span class="s">&quot;mismatch&quot;</span>
-    <span class="n">PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s">&quot;mismatch-identity-unestablishable&quot;</span>
-    <span class="n">PRESENCE_MISMATCH_SLAVE</span> <span class="o">=</span> <span class="s">&quot;mismatch-slave&quot;</span>
-    <span class="n">PRESENCE_MISSING</span> <span class="o">=</span> <span class="s">&quot;missing&quot;</span>
-    <span class="n">PRESENCE_MISSING_SLAVE</span> <span class="o">=</span> <span class="s">&quot;missing-slave&quot;</span>
-    <span class="n">PRESENCE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">PRESENCE_UNAUTHORIZED</span> <span class="o">=</span> <span class="s">&quot;unauthorized&quot;</span>
-    <span class="n">PRESENCE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">THERMAL_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-critical&quot;</span>
-    <span class="n">THERMAL_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-non-critical&quot;</span>
-    <span class="n">THERMAL_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;lower-non-recoverable&quot;</span>
-    <span class="n">THERMAL_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">THERMAL_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">THERMAL_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">THERMAL_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-critical&quot;</span>
-    <span class="n">THERMAL_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-non-critical&quot;</span>
-    <span class="n">THERMAL_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;upper-non-recoverable&quot;</span>
-    <span class="n">VOLTAGE_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-critical&quot;</span>
-    <span class="n">VOLTAGE_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;lower-non-critical&quot;</span>
-    <span class="n">VOLTAGE_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;lower-non-recoverable&quot;</span>
-    <span class="n">VOLTAGE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s">&quot;not-supported&quot;</span>
-    <span class="n">VOLTAGE_OK</span> <span class="o">=</span> <span class="s">&quot;ok&quot;</span>
-    <span class="n">VOLTAGE_UNKNOWN</span> <span class="o">=</span> <span class="s">&quot;unknown&quot;</span>
-    <span class="n">VOLTAGE_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-critical&quot;</span>
-    <span class="n">VOLTAGE_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s">&quot;upper-non-critical&quot;</span>
-    <span class="n">VOLTAGE_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s">&quot;upper-non-recoverable&quot;</span>
+<div class="viewcode-block" id="ComputeBoardConsts"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.compute.html#ucsmsdk.mometa.compute.ComputeBoard.ComputeBoardConsts">[docs]</a><span class="k">class</span> <span class="nc">ComputeBoardConsts</span><span class="p">:</span>
+    <span class="n">CMOS_VOLTAGE_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-critical&quot;</span>
+    <span class="n">CMOS_VOLTAGE_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-non-critical&quot;</span>
+    <span class="n">CMOS_VOLTAGE_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;lower-non-recoverable&quot;</span>
+    <span class="n">CMOS_VOLTAGE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">CMOS_VOLTAGE_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">CMOS_VOLTAGE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">CMOS_VOLTAGE_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-critical&quot;</span>
+    <span class="n">CMOS_VOLTAGE_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-non-critical&quot;</span>
+    <span class="n">CMOS_VOLTAGE_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;upper-non-recoverable&quot;</span>
+    <span class="n">OPER_POWER_DEGRADED</span> <span class="o">=</span> <span class="s2">&quot;degraded&quot;</span>
+    <span class="n">OPER_POWER_ERROR</span> <span class="o">=</span> <span class="s2">&quot;error&quot;</span>
+    <span class="n">OPER_POWER_FAILED</span> <span class="o">=</span> <span class="s2">&quot;failed&quot;</span>
+    <span class="n">OPER_POWER_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">OPER_POWER_OFF</span> <span class="o">=</span> <span class="s2">&quot;off&quot;</span>
+    <span class="n">OPER_POWER_OFFDUTY</span> <span class="o">=</span> <span class="s2">&quot;offduty&quot;</span>
+    <span class="n">OPER_POWER_OFFLINE</span> <span class="o">=</span> <span class="s2">&quot;offline&quot;</span>
+    <span class="n">OPER_POWER_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">OPER_POWER_ON</span> <span class="o">=</span> <span class="s2">&quot;on&quot;</span>
+    <span class="n">OPER_POWER_ONLINE</span> <span class="o">=</span> <span class="s2">&quot;online&quot;</span>
+    <span class="n">OPER_POWER_POWER_SAVE</span> <span class="o">=</span> <span class="s2">&quot;power-save&quot;</span>
+    <span class="n">OPER_POWER_TEST</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+    <span class="n">OPER_POWER_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">OPER_STATE_ACCESSIBILITY_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;accessibility-problem&quot;</span>
+    <span class="n">OPER_STATE_AUTO_UPGRADE</span> <span class="o">=</span> <span class="s2">&quot;auto-upgrade&quot;</span>
+    <span class="n">OPER_STATE_BIOS_POST_TIMEOUT</span> <span class="o">=</span> <span class="s2">&quot;bios-post-timeout&quot;</span>
+    <span class="n">OPER_STATE_CHASSIS_LIMIT_EXCEEDED</span> <span class="o">=</span> <span class="s2">&quot;chassis-limit-exceeded&quot;</span>
+    <span class="n">OPER_STATE_CONFIG</span> <span class="o">=</span> <span class="s2">&quot;config&quot;</span>
+    <span class="n">OPER_STATE_DECOMISSIONING</span> <span class="o">=</span> <span class="s2">&quot;decomissioning&quot;</span>
+    <span class="n">OPER_STATE_DEGRADED</span> <span class="o">=</span> <span class="s2">&quot;degraded&quot;</span>
+    <span class="n">OPER_STATE_DISABLED</span> <span class="o">=</span> <span class="s2">&quot;disabled&quot;</span>
+    <span class="n">OPER_STATE_DISCOVERY</span> <span class="o">=</span> <span class="s2">&quot;discovery&quot;</span>
+    <span class="n">OPER_STATE_DISCOVERY_FAILED</span> <span class="o">=</span> <span class="s2">&quot;discovery-failed&quot;</span>
+    <span class="n">OPER_STATE_EQUIPMENT_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;equipment-problem&quot;</span>
+    <span class="n">OPER_STATE_FABRIC_CONN_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;fabric-conn-problem&quot;</span>
+    <span class="n">OPER_STATE_FABRIC_UNSUPPORTED_CONN</span> <span class="o">=</span> <span class="s2">&quot;fabric-unsupported-conn&quot;</span>
+    <span class="n">OPER_STATE_IDENTIFY</span> <span class="o">=</span> <span class="s2">&quot;identify&quot;</span>
+    <span class="n">OPER_STATE_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s2">&quot;identity-unestablishable&quot;</span>
+    <span class="n">OPER_STATE_INOPERABLE</span> <span class="o">=</span> <span class="s2">&quot;inoperable&quot;</span>
+    <span class="n">OPER_STATE_LINK_ACTIVATE_BLOCKED</span> <span class="o">=</span> <span class="s2">&quot;link-activate-blocked&quot;</span>
+    <span class="n">OPER_STATE_MALFORMED_FRU</span> <span class="o">=</span> <span class="s2">&quot;malformed-fru&quot;</span>
+    <span class="n">OPER_STATE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">OPER_STATE_OPERABLE</span> <span class="o">=</span> <span class="s2">&quot;operable&quot;</span>
+    <span class="n">OPER_STATE_PEER_COMM_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;peer-comm-problem&quot;</span>
+    <span class="n">OPER_STATE_PERFORMANCE_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;performance-problem&quot;</span>
+    <span class="n">OPER_STATE_POST_FAILURE</span> <span class="o">=</span> <span class="s2">&quot;post-failure&quot;</span>
+    <span class="n">OPER_STATE_POWER_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;power-problem&quot;</span>
+    <span class="n">OPER_STATE_POWERED_OFF</span> <span class="o">=</span> <span class="s2">&quot;powered-off&quot;</span>
+    <span class="n">OPER_STATE_REMOVED</span> <span class="o">=</span> <span class="s2">&quot;removed&quot;</span>
+    <span class="n">OPER_STATE_THERMAL_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;thermal-problem&quot;</span>
+    <span class="n">OPER_STATE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">OPER_STATE_UPGRADE_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;upgrade-problem&quot;</span>
+    <span class="n">OPER_STATE_VOLTAGE_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;voltage-problem&quot;</span>
+    <span class="n">OPERABILITY_ACCESSIBILITY_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;accessibility-problem&quot;</span>
+    <span class="n">OPERABILITY_AUTO_UPGRADE</span> <span class="o">=</span> <span class="s2">&quot;auto-upgrade&quot;</span>
+    <span class="n">OPERABILITY_BIOS_POST_TIMEOUT</span> <span class="o">=</span> <span class="s2">&quot;bios-post-timeout&quot;</span>
+    <span class="n">OPERABILITY_CHASSIS_LIMIT_EXCEEDED</span> <span class="o">=</span> <span class="s2">&quot;chassis-limit-exceeded&quot;</span>
+    <span class="n">OPERABILITY_CONFIG</span> <span class="o">=</span> <span class="s2">&quot;config&quot;</span>
+    <span class="n">OPERABILITY_DECOMISSIONING</span> <span class="o">=</span> <span class="s2">&quot;decomissioning&quot;</span>
+    <span class="n">OPERABILITY_DEGRADED</span> <span class="o">=</span> <span class="s2">&quot;degraded&quot;</span>
+    <span class="n">OPERABILITY_DISABLED</span> <span class="o">=</span> <span class="s2">&quot;disabled&quot;</span>
+    <span class="n">OPERABILITY_DISCOVERY</span> <span class="o">=</span> <span class="s2">&quot;discovery&quot;</span>
+    <span class="n">OPERABILITY_DISCOVERY_FAILED</span> <span class="o">=</span> <span class="s2">&quot;discovery-failed&quot;</span>
+    <span class="n">OPERABILITY_EQUIPMENT_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;equipment-problem&quot;</span>
+    <span class="n">OPERABILITY_FABRIC_CONN_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;fabric-conn-problem&quot;</span>
+    <span class="n">OPERABILITY_FABRIC_UNSUPPORTED_CONN</span> <span class="o">=</span> <span class="s2">&quot;fabric-unsupported-conn&quot;</span>
+    <span class="n">OPERABILITY_IDENTIFY</span> <span class="o">=</span> <span class="s2">&quot;identify&quot;</span>
+    <span class="n">OPERABILITY_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s2">&quot;identity-unestablishable&quot;</span>
+    <span class="n">OPERABILITY_INOPERABLE</span> <span class="o">=</span> <span class="s2">&quot;inoperable&quot;</span>
+    <span class="n">OPERABILITY_LINK_ACTIVATE_BLOCKED</span> <span class="o">=</span> <span class="s2">&quot;link-activate-blocked&quot;</span>
+    <span class="n">OPERABILITY_MALFORMED_FRU</span> <span class="o">=</span> <span class="s2">&quot;malformed-fru&quot;</span>
+    <span class="n">OPERABILITY_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">OPERABILITY_OPERABLE</span> <span class="o">=</span> <span class="s2">&quot;operable&quot;</span>
+    <span class="n">OPERABILITY_PEER_COMM_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;peer-comm-problem&quot;</span>
+    <span class="n">OPERABILITY_PERFORMANCE_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;performance-problem&quot;</span>
+    <span class="n">OPERABILITY_POST_FAILURE</span> <span class="o">=</span> <span class="s2">&quot;post-failure&quot;</span>
+    <span class="n">OPERABILITY_POWER_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;power-problem&quot;</span>
+    <span class="n">OPERABILITY_POWERED_OFF</span> <span class="o">=</span> <span class="s2">&quot;powered-off&quot;</span>
+    <span class="n">OPERABILITY_REMOVED</span> <span class="o">=</span> <span class="s2">&quot;removed&quot;</span>
+    <span class="n">OPERABILITY_THERMAL_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;thermal-problem&quot;</span>
+    <span class="n">OPERABILITY_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">OPERABILITY_UPGRADE_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;upgrade-problem&quot;</span>
+    <span class="n">OPERABILITY_VOLTAGE_PROBLEM</span> <span class="o">=</span> <span class="s2">&quot;voltage-problem&quot;</span>
+    <span class="n">PERF_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-critical&quot;</span>
+    <span class="n">PERF_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-non-critical&quot;</span>
+    <span class="n">PERF_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;lower-non-recoverable&quot;</span>
+    <span class="n">PERF_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">PERF_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">PERF_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">PERF_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-critical&quot;</span>
+    <span class="n">PERF_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-non-critical&quot;</span>
+    <span class="n">PERF_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;upper-non-recoverable&quot;</span>
+    <span class="n">POWER_DEGRADED</span> <span class="o">=</span> <span class="s2">&quot;degraded&quot;</span>
+    <span class="n">POWER_ERROR</span> <span class="o">=</span> <span class="s2">&quot;error&quot;</span>
+    <span class="n">POWER_FAILED</span> <span class="o">=</span> <span class="s2">&quot;failed&quot;</span>
+    <span class="n">POWER_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">POWER_OFF</span> <span class="o">=</span> <span class="s2">&quot;off&quot;</span>
+    <span class="n">POWER_OFFDUTY</span> <span class="o">=</span> <span class="s2">&quot;offduty&quot;</span>
+    <span class="n">POWER_OFFLINE</span> <span class="o">=</span> <span class="s2">&quot;offline&quot;</span>
+    <span class="n">POWER_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">POWER_ON</span> <span class="o">=</span> <span class="s2">&quot;on&quot;</span>
+    <span class="n">POWER_ONLINE</span> <span class="o">=</span> <span class="s2">&quot;online&quot;</span>
+    <span class="n">POWER_POWER_SAVE</span> <span class="o">=</span> <span class="s2">&quot;power-save&quot;</span>
+    <span class="n">POWER_TEST</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+    <span class="n">POWER_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">POWER_USAGE_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-critical&quot;</span>
+    <span class="n">POWER_USAGE_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-non-critical&quot;</span>
+    <span class="n">POWER_USAGE_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;lower-non-recoverable&quot;</span>
+    <span class="n">POWER_USAGE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">POWER_USAGE_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">POWER_USAGE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">POWER_USAGE_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-critical&quot;</span>
+    <span class="n">POWER_USAGE_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-non-critical&quot;</span>
+    <span class="n">POWER_USAGE_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;upper-non-recoverable&quot;</span>
+    <span class="n">PRESENCE_EMPTY</span> <span class="o">=</span> <span class="s2">&quot;empty&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED</span> <span class="o">=</span> <span class="s2">&quot;equipped&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED_DEPRECATED</span> <span class="o">=</span> <span class="s2">&quot;equipped-deprecated&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s2">&quot;equipped-identity-unestablishable&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED_NOT_PRIMARY</span> <span class="o">=</span> <span class="s2">&quot;equipped-not-primary&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED_SLAVE</span> <span class="o">=</span> <span class="s2">&quot;equipped-slave&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED_UNSUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;equipped-unsupported&quot;</span>
+    <span class="n">PRESENCE_EQUIPPED_WITH_MALFORMED_FRU</span> <span class="o">=</span> <span class="s2">&quot;equipped-with-malformed-fru&quot;</span>
+    <span class="n">PRESENCE_INACCESSIBLE</span> <span class="o">=</span> <span class="s2">&quot;inaccessible&quot;</span>
+    <span class="n">PRESENCE_MISMATCH</span> <span class="o">=</span> <span class="s2">&quot;mismatch&quot;</span>
+    <span class="n">PRESENCE_MISMATCH_IDENTITY_UNESTABLISHABLE</span> <span class="o">=</span> <span class="s2">&quot;mismatch-identity-unestablishable&quot;</span>
+    <span class="n">PRESENCE_MISMATCH_SLAVE</span> <span class="o">=</span> <span class="s2">&quot;mismatch-slave&quot;</span>
+    <span class="n">PRESENCE_MISSING</span> <span class="o">=</span> <span class="s2">&quot;missing&quot;</span>
+    <span class="n">PRESENCE_MISSING_SLAVE</span> <span class="o">=</span> <span class="s2">&quot;missing-slave&quot;</span>
+    <span class="n">PRESENCE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">PRESENCE_UNAUTHORIZED</span> <span class="o">=</span> <span class="s2">&quot;unauthorized&quot;</span>
+    <span class="n">PRESENCE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">THERMAL_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-critical&quot;</span>
+    <span class="n">THERMAL_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-non-critical&quot;</span>
+    <span class="n">THERMAL_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;lower-non-recoverable&quot;</span>
+    <span class="n">THERMAL_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">THERMAL_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">THERMAL_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">THERMAL_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-critical&quot;</span>
+    <span class="n">THERMAL_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-non-critical&quot;</span>
+    <span class="n">THERMAL_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;upper-non-recoverable&quot;</span>
+    <span class="n">VOLTAGE_LOWER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-critical&quot;</span>
+    <span class="n">VOLTAGE_LOWER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;lower-non-critical&quot;</span>
+    <span class="n">VOLTAGE_LOWER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;lower-non-recoverable&quot;</span>
+    <span class="n">VOLTAGE_NOT_SUPPORTED</span> <span class="o">=</span> <span class="s2">&quot;not-supported&quot;</span>
+    <span class="n">VOLTAGE_OK</span> <span class="o">=</span> <span class="s2">&quot;ok&quot;</span>
+    <span class="n">VOLTAGE_UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="n">VOLTAGE_UPPER_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-critical&quot;</span>
+    <span class="n">VOLTAGE_UPPER_NON_CRITICAL</span> <span class="o">=</span> <span class="s2">&quot;upper-non-critical&quot;</span>
+    <span class="n">VOLTAGE_UPPER_NON_RECOVERABLE</span> <span class="o">=</span> <span class="s2">&quot;upper-non-recoverable&quot;</span></div>
 
-</div>
+
 <div class="viewcode-block" id="ComputeBoard"><a class="viewcode-back" href="../../../../ucsmsdk.mometa.compute.html#ucsmsdk.mometa.compute.ComputeBoard.ComputeBoard">[docs]</a><span class="k">class</span> <span class="nc">ComputeBoard</span><span class="p">(</span><span class="n">ManagedObject</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This is ComputeBoard class.&quot;&quot;&quot;</span>
 
     <span class="n">consts</span> <span class="o">=</span> <span class="n">ComputeBoardConsts</span><span class="p">()</span>
     <span class="n">naming_props</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([])</span>
 
-    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s">&quot;ComputeBoard&quot;</span><span class="p">,</span> <span class="s">&quot;computeBoard&quot;</span><span class="p">,</span> <span class="s">&quot;board&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x1f</span><span class="n">L</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;computeBlade&#39;</span><span class="p">,</span> <span class="s">u&#39;computeRackUnit&#39;</span><span class="p">,</span> <span class="s">u&#39;computeServerUnit&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;computeIOHub&#39;</span><span class="p">,</span> <span class="s">u&#39;computeMbPowerStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computeMbTempStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computePCIeFatalCompletionStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computePCIeFatalProtocolStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computePCIeFatalReceiveStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computePCIeFatalStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computeRackUnitMbTempStats&#39;</span><span class="p">,</span> <span class="s">u&#39;computeRtcBattery&#39;</span><span class="p">,</span> <span class="s">u&#39;computeStorageBladeMbTempStats&#39;</span><span class="p">,</span> <span class="s">u&#39;equipmentTpm&#39;</span><span class="p">,</span> <span class="s">u&#39;faultInst&#39;</span><span class="p">,</span> <span class="s">u&#39;graphicsCard&#39;</span><span class="p">,</span> <span class="s">u&#39;memoryArray&#39;</span><span class="p">,</span> <span class="s">u&#39;memoryBufferUnit&#39;</span><span class="p">,</span> <span class="s">u&#39;processorUnit&#39;</span><span class="p">,</span> <span class="s">u&#39;securityUnit&#39;</span><span class="p">,</span> <span class="s">u&#39;storageController&#39;</span><span class="p">,</span> <span class="s">u&#39;storageFlexFlashController&#39;</span><span class="p">,</span> <span class="s">u&#39;storageLocalDiskSlotEp&#39;</span><span class="p">,</span> <span class="s">u&#39;storageSasExpander&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;Get&quot;</span><span class="p">])</span>
+    <span class="n">mo_meta</span> <span class="o">=</span> <span class="n">MoMeta</span><span class="p">(</span><span class="s2">&quot;ComputeBoard&quot;</span><span class="p">,</span> <span class="s2">&quot;computeBoard&quot;</span><span class="p">,</span> <span class="s2">&quot;board&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="s2">&quot;InputOutput&quot;</span><span class="p">,</span> <span class="mh">0x1f</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;read-only&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s1">u&#39;computeBlade&#39;</span><span class="p">,</span> <span class="s1">u&#39;computeRackUnit&#39;</span><span class="p">,</span> <span class="s1">u&#39;computeServerUnit&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">u&#39;computeIOHub&#39;</span><span class="p">,</span> <span class="s1">u&#39;computeMbPowerStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computeMbTempStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computePCIeFatalCompletionStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computePCIeFatalProtocolStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computePCIeFatalReceiveStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computePCIeFatalStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computeRackUnitMbTempStats&#39;</span><span class="p">,</span> <span class="s1">u&#39;computeRtcBattery&#39;</span><span class="p">,</span> <span class="s1">u&#39;equipmentTpm&#39;</span><span class="p">,</span> <span class="s1">u&#39;faultInst&#39;</span><span class="p">,</span> <span class="s1">u&#39;graphicsCard&#39;</span><span class="p">,</span> <span class="s1">u&#39;memoryArray&#39;</span><span class="p">,</span> <span class="s1">u&#39;memoryBufferUnit&#39;</span><span class="p">,</span> <span class="s1">u&#39;processorUnit&#39;</span><span class="p">,</span> <span class="s1">u&#39;securityUnit&#39;</span><span class="p">,</span> <span class="s1">u&#39;storageController&#39;</span><span class="p">,</span> <span class="s1">u&#39;storageFlexFlashController&#39;</span><span class="p">,</span> <span class="s1">u&#39;storageLocalDiskSlotEp&#39;</span><span class="p">,</span> <span class="s1">u&#39;storageSasExpander&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Get&quot;</span><span class="p">])</span>
 
     <span class="n">prop_meta</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;child_action&quot;</span><span class="p">,</span> <span class="s">&quot;childAction&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;cmos_voltage&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;cmos_voltage&quot;</span><span class="p">,</span> <span class="s">&quot;cmosVoltage&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;cpu_type&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;cpu_type&quot;</span><span class="p">,</span> <span class="s">&quot;cpuType&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version223a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;ivy-bridge&quot;</span><span class="p">,</span> <span class="s">&quot;other&quot;</span><span class="p">,</span> <span class="s">&quot;sandy-bridge&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;cpu_type_description&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;cpu_type_description&quot;</span><span class="p">,</span> <span class="s">&quot;cpuTypeDescription&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version224b</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;fault_qualifier&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;fault_qualifier&quot;</span><span class="p">,</span> <span class="s">&quot;faultQualifier&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version222c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;location_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;location_dn&quot;</span><span class="p">,</span> <span class="s">&quot;locationDn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version222c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;model&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;model&quot;</span><span class="p">,</span> <span class="s">&quot;model&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;oper_power&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_power&quot;</span><span class="p">,</span> <span class="s">&quot;operPower&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;degraded&quot;</span><span class="p">,</span> <span class="s">&quot;error&quot;</span><span class="p">,</span> <span class="s">&quot;failed&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;off&quot;</span><span class="p">,</span> <span class="s">&quot;offduty&quot;</span><span class="p">,</span> <span class="s">&quot;offline&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;online&quot;</span><span class="p">,</span> <span class="s">&quot;power-save&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;oper_qualifier_reason&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_qualifier_reason&quot;</span><span class="p">,</span> <span class="s">&quot;operQualifierReason&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;[ !#$%&amp;\(\)\*\+,\-\./:;\?@\[\]_\{\|\}~a-zA-Z0-9]{0,256}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;oper_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;oper_state&quot;</span><span class="p">,</span> <span class="s">&quot;operState&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;accessibility-problem&quot;</span><span class="p">,</span> <span class="s">&quot;auto-upgrade&quot;</span><span class="p">,</span> <span class="s">&quot;bios-post-timeout&quot;</span><span class="p">,</span> <span class="s">&quot;chassis-limit-exceeded&quot;</span><span class="p">,</span> <span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;decomissioning&quot;</span><span class="p">,</span> <span class="s">&quot;degraded&quot;</span><span class="p">,</span> <span class="s">&quot;disabled&quot;</span><span class="p">,</span> <span class="s">&quot;discovery&quot;</span><span class="p">,</span> <span class="s">&quot;discovery-failed&quot;</span><span class="p">,</span> <span class="s">&quot;equipment-problem&quot;</span><span class="p">,</span> <span class="s">&quot;fabric-conn-problem&quot;</span><span class="p">,</span> <span class="s">&quot;fabric-unsupported-conn&quot;</span><span class="p">,</span> <span class="s">&quot;identify&quot;</span><span class="p">,</span> <span class="s">&quot;identity-unestablishable&quot;</span><span class="p">,</span> <span class="s">&quot;inoperable&quot;</span><span class="p">,</span> <span class="s">&quot;link-activate-blocked&quot;</span><span class="p">,</span> <span class="s">&quot;malformed-fru&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;operable&quot;</span><span class="p">,</span> <span class="s">&quot;peer-comm-problem&quot;</span><span class="p">,</span> <span class="s">&quot;performance-problem&quot;</span><span class="p">,</span> <span class="s">&quot;post-failure&quot;</span><span class="p">,</span> <span class="s">&quot;power-problem&quot;</span><span class="p">,</span> <span class="s">&quot;powered-off&quot;</span><span class="p">,</span> <span class="s">&quot;removed&quot;</span><span class="p">,</span> <span class="s">&quot;thermal-problem&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upgrade-problem&quot;</span><span class="p">,</span> <span class="s">&quot;voltage-problem&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;operability&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;operability&quot;</span><span class="p">,</span> <span class="s">&quot;operability&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;accessibility-problem&quot;</span><span class="p">,</span> <span class="s">&quot;auto-upgrade&quot;</span><span class="p">,</span> <span class="s">&quot;bios-post-timeout&quot;</span><span class="p">,</span> <span class="s">&quot;chassis-limit-exceeded&quot;</span><span class="p">,</span> <span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;decomissioning&quot;</span><span class="p">,</span> <span class="s">&quot;degraded&quot;</span><span class="p">,</span> <span class="s">&quot;disabled&quot;</span><span class="p">,</span> <span class="s">&quot;discovery&quot;</span><span class="p">,</span> <span class="s">&quot;discovery-failed&quot;</span><span class="p">,</span> <span class="s">&quot;equipment-problem&quot;</span><span class="p">,</span> <span class="s">&quot;fabric-conn-problem&quot;</span><span class="p">,</span> <span class="s">&quot;fabric-unsupported-conn&quot;</span><span class="p">,</span> <span class="s">&quot;identify&quot;</span><span class="p">,</span> <span class="s">&quot;identity-unestablishable&quot;</span><span class="p">,</span> <span class="s">&quot;inoperable&quot;</span><span class="p">,</span> <span class="s">&quot;link-activate-blocked&quot;</span><span class="p">,</span> <span class="s">&quot;malformed-fru&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;operable&quot;</span><span class="p">,</span> <span class="s">&quot;peer-comm-problem&quot;</span><span class="p">,</span> <span class="s">&quot;performance-problem&quot;</span><span class="p">,</span> <span class="s">&quot;post-failure&quot;</span><span class="p">,</span> <span class="s">&quot;power-problem&quot;</span><span class="p">,</span> <span class="s">&quot;powered-off&quot;</span><span class="p">,</span> <span class="s">&quot;removed&quot;</span><span class="p">,</span> <span class="s">&quot;thermal-problem&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upgrade-problem&quot;</span><span class="p">,</span> <span class="s">&quot;voltage-problem&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;perf&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;perf&quot;</span><span class="p">,</span> <span class="s">&quot;perf&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;power&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;power&quot;</span><span class="p">,</span> <span class="s">&quot;power&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;degraded&quot;</span><span class="p">,</span> <span class="s">&quot;error&quot;</span><span class="p">,</span> <span class="s">&quot;failed&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;off&quot;</span><span class="p">,</span> <span class="s">&quot;offduty&quot;</span><span class="p">,</span> <span class="s">&quot;offline&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;online&quot;</span><span class="p">,</span> <span class="s">&quot;power-save&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;power_usage&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;power_usage&quot;</span><span class="p">,</span> <span class="s">&quot;powerUsage&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;presence&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;presence&quot;</span><span class="p">,</span> <span class="s">&quot;presence&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;empty&quot;</span><span class="p">,</span> <span class="s">&quot;equipped&quot;</span><span class="p">,</span> <span class="s">&quot;equipped-deprecated&quot;</span><span class="p">,</span> <span class="s">&quot;equipped-identity-unestablishable&quot;</span><span class="p">,</span> <span class="s">&quot;equipped-not-primary&quot;</span><span class="p">,</span> <span class="s">&quot;equipped-slave&quot;</span><span class="p">,</span> <span class="s">&quot;equipped-unsupported&quot;</span><span class="p">,</span> <span class="s">&quot;equipped-with-malformed-fru&quot;</span><span class="p">,</span> <span class="s">&quot;inaccessible&quot;</span><span class="p">,</span> <span class="s">&quot;mismatch&quot;</span><span class="p">,</span> <span class="s">&quot;mismatch-identity-unestablishable&quot;</span><span class="p">,</span> <span class="s">&quot;mismatch-slave&quot;</span><span class="p">,</span> <span class="s">&quot;missing&quot;</span><span class="p">,</span> <span class="s">&quot;missing-slave&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;unauthorized&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;revision&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;revision&quot;</span><span class="p">,</span> <span class="s">&quot;revision&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x8</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;serial&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;serial&quot;</span><span class="p">,</span> <span class="s">&quot;serial&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10</span><span class="n">L</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;thermal&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;thermal&quot;</span><span class="p">,</span> <span class="s">&quot;thermal&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;vendor&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;vendor&quot;</span><span class="p">,</span> <span class="s">&quot;vendor&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
-        <span class="s">&quot;voltage&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s">&quot;voltage&quot;</span><span class="p">,</span> <span class="s">&quot;voltage&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">,</span> <span class="s">&quot;unknown&quot;</span><span class="p">,</span> <span class="s">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;child_action&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;child_action&quot;</span><span class="p">,</span> <span class="s2">&quot;childAction&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((deleteAll|ignore|deleteNonPresent),){0,2}(deleteAll|ignore|deleteNonPresent){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;cmos_voltage&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;cmos_voltage&quot;</span><span class="p">,</span> <span class="s2">&quot;cmosVoltage&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;cpu_type_description&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;cpu_type_description&quot;</span><span class="p">,</span> <span class="s2">&quot;cpuTypeDescription&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version224a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;fault_qualifier&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;fault_qualifier&quot;</span><span class="p">,</span> <span class="s2">&quot;faultQualifier&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version222c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;uint&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;location_dn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;location_dn&quot;</span><span class="p">,</span> <span class="s2">&quot;locationDn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version222c</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;oper_power&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;oper_power&quot;</span><span class="p">,</span> <span class="s2">&quot;operPower&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;degraded&quot;</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span> <span class="s2">&quot;failed&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span> <span class="s2">&quot;offduty&quot;</span><span class="p">,</span> <span class="s2">&quot;offline&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="s2">&quot;online&quot;</span><span class="p">,</span> <span class="s2">&quot;power-save&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;oper_qualifier_reason&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;oper_qualifier_reason&quot;</span><span class="p">,</span> <span class="s2">&quot;operQualifierReason&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;[ !#$%&amp;\(\)\*\+,\-\./:;\?@\[\]_\{\|\}~a-zA-Z0-9]{0,256}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;oper_state&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;oper_state&quot;</span><span class="p">,</span> <span class="s2">&quot;operState&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;accessibility-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;auto-upgrade&quot;</span><span class="p">,</span> <span class="s2">&quot;bios-post-timeout&quot;</span><span class="p">,</span> <span class="s2">&quot;chassis-limit-exceeded&quot;</span><span class="p">,</span> <span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="s2">&quot;decomissioning&quot;</span><span class="p">,</span> <span class="s2">&quot;degraded&quot;</span><span class="p">,</span> <span class="s2">&quot;disabled&quot;</span><span class="p">,</span> <span class="s2">&quot;discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;discovery-failed&quot;</span><span class="p">,</span> <span class="s2">&quot;equipment-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;fabric-conn-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;fabric-unsupported-conn&quot;</span><span class="p">,</span> <span class="s2">&quot;identify&quot;</span><span class="p">,</span> <span class="s2">&quot;identity-unestablishable&quot;</span><span class="p">,</span> <span class="s2">&quot;inoperable&quot;</span><span class="p">,</span> <span class="s2">&quot;link-activate-blocked&quot;</span><span class="p">,</span> <span class="s2">&quot;malformed-fru&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;operable&quot;</span><span class="p">,</span> <span class="s2">&quot;peer-comm-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;performance-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;post-failure&quot;</span><span class="p">,</span> <span class="s2">&quot;power-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;powered-off&quot;</span><span class="p">,</span> <span class="s2">&quot;removed&quot;</span><span class="p">,</span> <span class="s2">&quot;thermal-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upgrade-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;voltage-problem&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;operability&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;operability&quot;</span><span class="p">,</span> <span class="s2">&quot;operability&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;accessibility-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;auto-upgrade&quot;</span><span class="p">,</span> <span class="s2">&quot;bios-post-timeout&quot;</span><span class="p">,</span> <span class="s2">&quot;chassis-limit-exceeded&quot;</span><span class="p">,</span> <span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="s2">&quot;decomissioning&quot;</span><span class="p">,</span> <span class="s2">&quot;degraded&quot;</span><span class="p">,</span> <span class="s2">&quot;disabled&quot;</span><span class="p">,</span> <span class="s2">&quot;discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;discovery-failed&quot;</span><span class="p">,</span> <span class="s2">&quot;equipment-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;fabric-conn-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;fabric-unsupported-conn&quot;</span><span class="p">,</span> <span class="s2">&quot;identify&quot;</span><span class="p">,</span> <span class="s2">&quot;identity-unestablishable&quot;</span><span class="p">,</span> <span class="s2">&quot;inoperable&quot;</span><span class="p">,</span> <span class="s2">&quot;link-activate-blocked&quot;</span><span class="p">,</span> <span class="s2">&quot;malformed-fru&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;operable&quot;</span><span class="p">,</span> <span class="s2">&quot;peer-comm-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;performance-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;post-failure&quot;</span><span class="p">,</span> <span class="s2">&quot;power-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;powered-off&quot;</span><span class="p">,</span> <span class="s2">&quot;removed&quot;</span><span class="p">,</span> <span class="s2">&quot;thermal-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upgrade-problem&quot;</span><span class="p">,</span> <span class="s2">&quot;voltage-problem&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;perf&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;perf&quot;</span><span class="p">,</span> <span class="s2">&quot;perf&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;power&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;power&quot;</span><span class="p">,</span> <span class="s2">&quot;power&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;degraded&quot;</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span> <span class="s2">&quot;failed&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span> <span class="s2">&quot;offduty&quot;</span><span class="p">,</span> <span class="s2">&quot;offline&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="s2">&quot;online&quot;</span><span class="p">,</span> <span class="s2">&quot;power-save&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;power_usage&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;power_usage&quot;</span><span class="p">,</span> <span class="s2">&quot;powerUsage&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version211a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;presence&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;presence&quot;</span><span class="p">,</span> <span class="s2">&quot;presence&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;empty&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped-deprecated&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped-identity-unestablishable&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped-not-primary&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped-slave&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped-unsupported&quot;</span><span class="p">,</span> <span class="s2">&quot;equipped-with-malformed-fru&quot;</span><span class="p">,</span> <span class="s2">&quot;inaccessible&quot;</span><span class="p">,</span> <span class="s2">&quot;mismatch&quot;</span><span class="p">,</span> <span class="s2">&quot;mismatch-identity-unestablishable&quot;</span><span class="p">,</span> <span class="s2">&quot;mismatch-slave&quot;</span><span class="p">,</span> <span class="s2">&quot;missing&quot;</span><span class="p">,</span> <span class="s2">&quot;missing-slave&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;unauthorized&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;revision&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;revision&quot;</span><span class="p">,</span> <span class="s2">&quot;revision&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version302a</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((none|del|mod|addchild|cascade),){0,4}(none|del|mod|addchild|cascade){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;serial&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;serial&quot;</span><span class="p">,</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">r&quot;&quot;&quot;((removed|created|modified|deleted),){0,3}(removed|created|modified|deleted){0,1}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;thermal&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;thermal&quot;</span><span class="p">,</span> <span class="s2">&quot;thermal&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;vendor&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;vendor&quot;</span><span class="p">,</span> <span class="s2">&quot;vendor&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">510</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]),</span> 
+        <span class="s2">&quot;voltage&quot;</span><span class="p">:</span> <span class="n">MoPropertyMeta</span><span class="p">(</span><span class="s2">&quot;voltage&quot;</span><span class="p">,</span> <span class="s2">&quot;voltage&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">VersionMeta</span><span class="o">.</span><span class="n">Version101e</span><span class="p">,</span> <span class="n">MoPropertyMeta</span><span class="o">.</span><span class="n">READ_ONLY</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;lower-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;lower-non-recoverable&quot;</span><span class="p">,</span> <span class="s2">&quot;not-supported&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-critical&quot;</span><span class="p">,</span> <span class="s2">&quot;upper-non-recoverable&quot;</span><span class="p">],</span> <span class="p">[]),</span> 
     <span class="p">}</span>
 
     <span class="n">prop_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">&quot;childAction&quot;</span><span class="p">:</span> <span class="s">&quot;child_action&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;cmosVoltage&quot;</span><span class="p">:</span> <span class="s">&quot;cmos_voltage&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;cpuType&quot;</span><span class="p">:</span> <span class="s">&quot;cpu_type&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;cpuTypeDescription&quot;</span><span class="p">:</span> <span class="s">&quot;cpu_type_description&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;dn&quot;</span><span class="p">:</span> <span class="s">&quot;dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;faultQualifier&quot;</span><span class="p">:</span> <span class="s">&quot;fault_qualifier&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;id&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;locationDn&quot;</span><span class="p">:</span> <span class="s">&quot;location_dn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;model&quot;</span><span class="p">:</span> <span class="s">&quot;model&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;operPower&quot;</span><span class="p">:</span> <span class="s">&quot;oper_power&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;operQualifierReason&quot;</span><span class="p">:</span> <span class="s">&quot;oper_qualifier_reason&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;operState&quot;</span><span class="p">:</span> <span class="s">&quot;oper_state&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;operability&quot;</span><span class="p">:</span> <span class="s">&quot;operability&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;perf&quot;</span><span class="p">:</span> <span class="s">&quot;perf&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;power&quot;</span><span class="p">:</span> <span class="s">&quot;power&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;powerUsage&quot;</span><span class="p">:</span> <span class="s">&quot;power_usage&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;presence&quot;</span><span class="p">:</span> <span class="s">&quot;presence&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;revision&quot;</span><span class="p">:</span> <span class="s">&quot;revision&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;rn&quot;</span><span class="p">:</span> <span class="s">&quot;rn&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;sacl&quot;</span><span class="p">:</span> <span class="s">&quot;sacl&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;serial&quot;</span><span class="p">:</span> <span class="s">&quot;serial&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;thermal&quot;</span><span class="p">:</span> <span class="s">&quot;thermal&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;vendor&quot;</span><span class="p">:</span> <span class="s">&quot;vendor&quot;</span><span class="p">,</span> 
-        <span class="s">&quot;voltage&quot;</span><span class="p">:</span> <span class="s">&quot;voltage&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;childAction&quot;</span><span class="p">:</span> <span class="s2">&quot;child_action&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;cmosVoltage&quot;</span><span class="p">:</span> <span class="s2">&quot;cmos_voltage&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;cpuTypeDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;cpu_type_description&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;dn&quot;</span><span class="p">:</span> <span class="s2">&quot;dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;faultQualifier&quot;</span><span class="p">:</span> <span class="s2">&quot;fault_qualifier&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;locationDn&quot;</span><span class="p">:</span> <span class="s2">&quot;location_dn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;operPower&quot;</span><span class="p">:</span> <span class="s2">&quot;oper_power&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;operQualifierReason&quot;</span><span class="p">:</span> <span class="s2">&quot;oper_qualifier_reason&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;operState&quot;</span><span class="p">:</span> <span class="s2">&quot;oper_state&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;operability&quot;</span><span class="p">:</span> <span class="s2">&quot;operability&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;perf&quot;</span><span class="p">:</span> <span class="s2">&quot;perf&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;power&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;powerUsage&quot;</span><span class="p">:</span> <span class="s2">&quot;power_usage&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;presence&quot;</span><span class="p">:</span> <span class="s2">&quot;presence&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;revision&quot;</span><span class="p">:</span> <span class="s2">&quot;revision&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;rn&quot;</span><span class="p">:</span> <span class="s2">&quot;rn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;sacl&quot;</span><span class="p">:</span> <span class="s2">&quot;sacl&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;serial&quot;</span><span class="p">:</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;thermal&quot;</span><span class="p">:</span> <span class="s2">&quot;thermal&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;vendor&quot;</span><span class="p">:</span> <span class="s2">&quot;vendor&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;voltage&quot;</span><span class="p">:</span> <span class="s2">&quot;voltage&quot;</span><span class="p">,</span> 
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_mask</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">child_action</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmos_voltage</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cpu_type</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cpu_type_description</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fault_qualifier</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="bp">None</span>
@@ -387,65 +285,47 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">vendor</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">voltage</span> <span class="o">=</span> <span class="bp">None</span>
 
-        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&quot;ComputeBoard&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</pre></div></div>
+        <span class="n">ManagedObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;ComputeBoard&quot;</span><span class="p">,</span> <span class="n">parent_mo_or_dn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
 
-           </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>

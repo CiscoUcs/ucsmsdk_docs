@@ -1,174 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ucsmsdk.mometa.stats package &mdash; ucsmsdk 0.1.0 documentation</title>
-  
-
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="ucsmsdk 0.1.0 documentation" href="index.html"/>
-        <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html"/>
-        <link rel="next" title="ucsmsdk.mometa.storage package" href="ucsmsdk.mometa.storage.html"/>
-        <link rel="prev" title="ucsmsdk.mometa.sol package" href="ucsmsdk.mometa.sol.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>ucsmsdk.mometa.stats package &mdash; ucsmsdk 0.9.1.0 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.storage package" href="ucsmsdk.mometa.storage.html" />
+    <link rel="prev" title="ucsmsdk.mometa.sol package" href="ucsmsdk.mometa.sol.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-          
-            <a href="index.html" class="icon icon-home"> ucsmsdk
-          
+  </head>
+  <body role="document">
+  
 
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="ucsmsdk.html">ucsmsdk package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="ucsmsdk.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.methodmeta.html">ucsmsdk.methodmeta package</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="ucsmsdk.mometa.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ucsmsdk.mometa.html#module-ucsmsdk.mometa">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="ucsmsdk.utils.html">ucsmsdk.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucsbasetype-module">ucsmsdk.ucsbasetype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsconstants">ucsmsdk.ucsconstants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#ucsmsdk-ucscore-module">ucsmsdk.ucscore module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoremeta">ucsmsdk.ucscoremeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucscoreutils">ucsmsdk.ucscoreutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsdriver">ucsmsdk.ucsdriver module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucseventhandler">ucsmsdk.ucseventhandler module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsexception">ucsmsdk.ucsexception module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfilter">ucsmsdk.ucsfilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsfiltertype">ucsmsdk.ucsfiltertype module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsgenutils">ucsmsdk.ucsgenutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucshandle">ucsmsdk.ucshandle module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmeta">ucsmsdk.ucsmeta module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethod">ucsmsdk.ucsmethod module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmethodfactory">ucsmsdk.ucsmethodfactory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsmo">ucsmsdk.ucsmo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucssession">ucsmsdk.ucssession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk.ucsxmlcodec">ucsmsdk.ucsxmlcodec module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ucsmsdk.html#module-ucsmsdk">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html#id1">0.9.0.0 (2015-01-11)</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ucsmsdk</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.html">ucsmsdk package</a> &raquo;</li>
-      
-          <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a> &raquo;</li>
-      
-    <li>ucsmsdk.mometa.stats package</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucsmsdk.mometa.stats.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="ucsmsdk-mometa-stats-package">
 <h1>ucsmsdk.mometa.stats package<a class="headerlink" href="#ucsmsdk-mometa-stats-package" title="Permalink to this headline">¶</a></h1>
@@ -181,7 +52,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsCollectionPolicy.</code><code class="descname">StatsCollectionPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsCollectionPolicy.html#StatsCollectionPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsCollectionPolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.consts">
@@ -190,7 +61,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -205,7 +76,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x165482b10&gt;, 'fsm_stage_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x165482890&gt;, 'fsm_stamp': &lt;ucscoremeta.MoPropertyMeta object at 0x165482690&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x165482090&gt;, 'fsm_try': &lt;ucscoremeta.MoPropertyMeta object at 0x165482590&gt;, 'fsm_progr': &lt;ucscoremeta.MoPropertyMeta object at 0x165482c90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1654827d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165482950&gt;, 'fsm_rmt_inv_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x165482e90&gt;, 'fsm_rmt_inv_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x165482050&gt;, 'fsm_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1654820d0&gt;, 'reporting_interval': &lt;ucscoremeta.MoPropertyMeta object at 0x165482b50&gt;, 'fsm_prev': &lt;ucscoremeta.MoPropertyMeta object at 0x1654828d0&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x165482790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165482dd0&gt;, 'collection_interval': &lt;ucscoremeta.MoPropertyMeta object at 0x1654821d0&gt;, 'fsm_rmt_inv_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x165482e10&gt;, 'id': &lt;ucscoremeta.MoPropertyMeta object at 0x165482e50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x165482750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168afd150&gt;, 'fsm_stage_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490c490&gt;, 'fsm_stamp': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490c8d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3d50&gt;, 'fsm_try': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696fbb50&gt;, 'fsm_progr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490ce90&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3910&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3b50&gt;, 'fsm_rmt_inv_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490ccd0&gt;, 'fsm_rmt_inv_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490c0d0&gt;, 'fsm_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168afd610&gt;, 'reporting_interval': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3890&gt;, 'fsm_prev': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490c850&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490c6d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17d4c3110&gt;, 'collection_interval': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168afde50&gt;, 'fsm_rmt_inv_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14490cc90&gt;, 'id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1696fb790&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168ead750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicy.StatsCollectionPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1022,7 +893,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.</code><code class="descname">StatsCollectionPolicyFsm</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsCollectionPolicyFsm.html#StatsCollectionPolicyFsm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsCollectionPolicyFsm class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.consts">
@@ -1031,7 +902,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1046,7 +917,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x165268cd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1c50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf17d0&gt;, 'rmt_err_descr': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1590&gt;, 'completion_time': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1150&gt;, 'fsm_status': &lt;ucscoremeta.MoPropertyMeta object at 0x165268210&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1e90&gt;, 'rmt_rslt': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1c90&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1652681d0&gt;, 'current_fsm': &lt;ucscoremeta.MoPropertyMeta object at 0x16536a550&gt;, 'rmt_err_code': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1b90&gt;, 'instance_id': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1890&gt;, 'progress': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf1e10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x15ddf10d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8310&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b84d0&gt;, 'rmt_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8610&gt;, 'completion_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c850&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c110&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18067b2d0&gt;, 'rmt_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8590&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148ce10&gt;, 'current_fsm': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c990&gt;, 'rmt_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c510&gt;, 'instance_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c810&gt;, 'progress': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x18148c750&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f6b8790&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsm.StatsCollectionPolicyFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1758,7 +1629,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.</code><code class="descname">StatsCollectionPolicyFsmStage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsCollectionPolicyFsmStage.html#StatsCollectionPolicyFsmStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsCollectionPolicyFsmStage class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.consts">
@@ -1767,7 +1638,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1782,7 +1653,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5f10&gt;, 'last_update_time': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5690&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5c50&gt;, 'stage_status': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5f50&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16672bbd0&gt;, 'retry': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5a10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b57d0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5a50&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5310&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5810&gt;, 'order': &lt;ucscoremeta.MoPropertyMeta object at 0x1681b5750&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46850&gt;, 'last_update_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46990&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17df28790&gt;, 'stage_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17df28090&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46510&gt;, 'retry': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46a50&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46750&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46110&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17df287d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17df28f10&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168a46dd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage.StatsCollectionPolicyFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1869,7 +1740,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.</code><code class="descname">StatsCollectionPolicyFsmTask</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>item</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsCollectionPolicyFsmTask.html#StatsCollectionPolicyFsmTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsCollectionPolicyFsmTask class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.consts">
@@ -1878,7 +1749,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1893,7 +1764,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9750&gt;, 'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9a90&gt;, 'flags': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9310&gt;, 'item': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9f90&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9990&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9610&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9810&gt;, 'seq_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f98d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1671f9b90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488a10&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488950&gt;, 'flags': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488e10&gt;, 'item': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488150&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488590&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x180488210&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1804886d0&gt;, 'seq_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1804887d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1804885d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask.StatsCollectionPolicyFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1940,7 +1811,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsHolder.StatsHolder">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsHolder.</code><code class="descname">StatsHolder</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsHolder.html#StatsHolder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsHolder.StatsHolder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsHolder class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsHolder.StatsHolder.consts">
@@ -1949,7 +1820,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsHolder.StatsHolder.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsHolder.StatsHolder.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsHolder.StatsHolder.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1964,7 +1835,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsHolder.StatsHolder.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e56d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e5910&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e5750&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e5810&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e5110&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1674e5310&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsHolder.StatsHolder.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1643db9d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1643dbb10&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1643dbf10&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1643db110&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1643db850&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1643dbc10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsHolder.StatsHolder.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1981,7 +1852,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThr32Definition.</code><code class="descname">StatsThr32Definition</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>prop_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThr32Definition.html#StatsThr32Definition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThr32Definition class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.consts">
@@ -1990,7 +1861,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2005,7 +1876,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16495e8d0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x165e923d0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x165e922d0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16495e250&gt;, 'auto_recovery': &lt;ucscoremeta.MoPropertyMeta object at 0x16495e310&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92a10&gt;, 'auto_recovery_time': &lt;ucscoremeta.MoPropertyMeta object at 0x16495e390&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92250&gt;, 'normal_value': &lt;ucscoremeta.MoPropertyMeta object at 0x165e928d0&gt;, 'prop_type': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92890&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92190&gt;, 'prop_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92c10&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92b90&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92f90&gt;, 'error_disable_fi_port': &lt;ucscoremeta.MoPropertyMeta object at 0x165e92d90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16495e290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3a7310&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17e6381d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181e1bf50&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17dd0f0d0&gt;, 'auto_recovery': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ea51790&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17e638910&gt;, 'auto_recovery_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17ea510d0&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1566e6990&gt;, 'normal_value': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x181e1b790&gt;, 'prop_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17e638750&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17f546690&gt;, 'prop_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1566e66d0&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3a7610&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17e638c50&gt;, 'error_disable_fi_port': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15b3a7450&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17dd0f450&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32Definition.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -4749,66 +4620,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER">
 <code class="descname">PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER</code><em class="property"> = 'equipmentChassisStatsinputPower'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -7049,46 +6860,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE</code><em class="property"> = 'memoryNvDimmEnvStatstemperature'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE</code><em class="property"> = 'memoryNvDimmEnvStatsvoltage'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_RUNTIMEAVAILABLE">
 <code class="descname">PROP_ID_MEMORY_RUNTIMEAVAILABLE</code><em class="property"> = 'memoryRuntimeavailable'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_MEMORY_RUNTIMEAVAILABLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -7274,46 +7045,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD</code><em class="property"> = 'storageCtrlStorageStatscpuLoad'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG</code><em class="property"> = 'storageCtrlStorageStatscpuLoadAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX</code><em class="property"> = 'storageCtrlStorageStatscpuLoadMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN</code><em class="property"> = 'storageCtrlStorageStatscpuLoadMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsage'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE">
 <code class="descname">PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE</code><em class="property"> = 'storageDiskEnvStatstemperature'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -7351,146 +7082,6 @@
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN">
 <code class="descname">PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN</code><em class="property"> = 'storageDiskEnvStatswearPercentageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS</code><em class="property"> = 'storageStorageStatsiops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG</code><em class="property"> = 'storageStorageStatsiopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX</code><em class="property"> = 'storageStorageStatsiopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN</code><em class="property"> = 'storageStorageStatsiopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY</code><em class="property"> = 'storageStorageStatslatency'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG</code><em class="property"> = 'storageStorageStatslatencyAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX</code><em class="property"> = 'storageStorageStatslatencyMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN</code><em class="property"> = 'storageStorageStatslatencyMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS</code><em class="property"> = 'storageStorageStatsmbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG</code><em class="property"> = 'storageStorageStatsmbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX</code><em class="property"> = 'storageStorageStatsmbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN</code><em class="property"> = 'storageStorageStatsmbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS</code><em class="property"> = 'storageStorageStatsreadIops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG</code><em class="property"> = 'storageStorageStatsreadIopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX</code><em class="property"> = 'storageStorageStatsreadIopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN</code><em class="property"> = 'storageStorageStatsreadIopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS</code><em class="property"> = 'storageStorageStatsreadMbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG</code><em class="property"> = 'storageStorageStatsreadMbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX</code><em class="property"> = 'storageStorageStatsreadMbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN</code><em class="property"> = 'storageStorageStatsreadMbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS</code><em class="property"> = 'storageStorageStatswriteIops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG</code><em class="property"> = 'storageStorageStatswriteIopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX</code><em class="property"> = 'storageStorageStatswriteIopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN</code><em class="property"> = 'storageStorageStatswriteIopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS</code><em class="property"> = 'storageStorageStatswriteMbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG</code><em class="property"> = 'storageStorageStatswriteMbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX</code><em class="property"> = 'storageStorageStatswriteMbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN</code><em class="property"> = 'storageStorageStatswriteMbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Definition.StatsThr32DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -7922,7 +7513,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThr32Value.</code><code class="descname">StatsThr32Value</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>direction</em>, <em>severity</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThr32Value.html#StatsThr32Value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThr32Value class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.consts">
@@ -7931,7 +7522,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -7946,7 +7537,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802bd0&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x166d52350&gt;, 'direction': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802fd0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x166d52250&gt;, 'prop_type': &lt;ucscoremeta.MoPropertyMeta object at 0x16a8294d0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802f10&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802a10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802650&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802810&gt;, 'deescalating': &lt;ucscoremeta.MoPropertyMeta object at 0x1adb52e10&gt;, 'severity': &lt;ucscoremeta.MoPropertyMeta object at 0x166d522d0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x16a8021d0&gt;, 'escalating': &lt;ucscoremeta.MoPropertyMeta object at 0x16a802a50&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x16a8029d0&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x166d521d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d4f510&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15ee20310&gt;, 'direction': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d4f610&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15717fa50&gt;, 'prop_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15717fe50&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1417fab90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x16726c210&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1417c8310&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d4fe10&gt;, 'deescalating': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169d4ff50&gt;, 'severity': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1579ab710&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x157183a10&gt;, 'escalating': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1417faed0&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1417c8950&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x15717fad0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr32Value.StatsThr32Value.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -8043,7 +7634,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThr64Definition.</code><code class="descname">StatsThr64Definition</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>prop_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThr64Definition.html#StatsThr64Definition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThr64Definition class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.consts">
@@ -8052,7 +7643,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -8067,7 +7658,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5d10&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7c92d0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5e90&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5c90&gt;, 'auto_recovery': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f54d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7c9250&gt;, 'auto_recovery_time': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5b90&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7c9050&gt;, 'normal_value': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5f10&gt;, 'prop_type': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7c9150&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5f90&gt;, 'prop_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7c90d0&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5e10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7c91d0&gt;, 'error_disable_fi_port': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5d90&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x16a7f5c10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a290&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48ad50&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a0d0&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a890&gt;, 'auto_recovery': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a750&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48ac50&gt;, 'auto_recovery_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48ab10&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a250&gt;, 'normal_value': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a710&gt;, 'prop_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48ae10&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a410&gt;, 'prop_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48aa90&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48af50&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48a150&gt;, 'error_disable_fi_port': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48ac90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17c48ab90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64Definition.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -10811,66 +10402,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER">
 <code class="descname">PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER</code><em class="property"> = 'equipmentChassisStatsinputPower'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -13111,46 +12642,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE</code><em class="property"> = 'memoryNvDimmEnvStatstemperature'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE</code><em class="property"> = 'memoryNvDimmEnvStatsvoltage'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_RUNTIMEAVAILABLE">
 <code class="descname">PROP_ID_MEMORY_RUNTIMEAVAILABLE</code><em class="property"> = 'memoryRuntimeavailable'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_MEMORY_RUNTIMEAVAILABLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -13336,46 +12827,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD</code><em class="property"> = 'storageCtrlStorageStatscpuLoad'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG</code><em class="property"> = 'storageCtrlStorageStatscpuLoadAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX</code><em class="property"> = 'storageCtrlStorageStatscpuLoadMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN</code><em class="property"> = 'storageCtrlStorageStatscpuLoadMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsage'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE">
 <code class="descname">PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE</code><em class="property"> = 'storageDiskEnvStatstemperature'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -13413,146 +12864,6 @@
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN">
 <code class="descname">PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN</code><em class="property"> = 'storageDiskEnvStatswearPercentageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS</code><em class="property"> = 'storageStorageStatsiops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG</code><em class="property"> = 'storageStorageStatsiopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX</code><em class="property"> = 'storageStorageStatsiopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN</code><em class="property"> = 'storageStorageStatsiopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY</code><em class="property"> = 'storageStorageStatslatency'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG</code><em class="property"> = 'storageStorageStatslatencyAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX</code><em class="property"> = 'storageStorageStatslatencyMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN</code><em class="property"> = 'storageStorageStatslatencyMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS</code><em class="property"> = 'storageStorageStatsmbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG</code><em class="property"> = 'storageStorageStatsmbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX</code><em class="property"> = 'storageStorageStatsmbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN</code><em class="property"> = 'storageStorageStatsmbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS</code><em class="property"> = 'storageStorageStatsreadIops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG</code><em class="property"> = 'storageStorageStatsreadIopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX</code><em class="property"> = 'storageStorageStatsreadIopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN</code><em class="property"> = 'storageStorageStatsreadIopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS</code><em class="property"> = 'storageStorageStatsreadMbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG</code><em class="property"> = 'storageStorageStatsreadMbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX</code><em class="property"> = 'storageStorageStatsreadMbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN</code><em class="property"> = 'storageStorageStatsreadMbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS</code><em class="property"> = 'storageStorageStatswriteIops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG</code><em class="property"> = 'storageStorageStatswriteIopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX</code><em class="property"> = 'storageStorageStatswriteIopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN</code><em class="property"> = 'storageStorageStatswriteIopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS</code><em class="property"> = 'storageStorageStatswriteMbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG</code><em class="property"> = 'storageStorageStatswriteMbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX</code><em class="property"> = 'storageStorageStatswriteMbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN</code><em class="property"> = 'storageStorageStatswriteMbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Definition.StatsThr64DefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -13984,7 +13295,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThr64Value.</code><code class="descname">StatsThr64Value</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>direction</em>, <em>severity</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThr64Value.html#StatsThr64Value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThr64Value class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.consts">
@@ -13993,7 +13304,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -14008,7 +13319,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f4890&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f4bd0&gt;, 'direction': &lt;ucscoremeta.MoPropertyMeta object at 0x1689b1950&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f4950&gt;, 'prop_type': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e9150&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f4dd0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1689b1f90&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f4cd0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1689b15d0&gt;, 'deescalating': &lt;ucscoremeta.MoPropertyMeta object at 0x1689b1fd0&gt;, 'severity': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f41d0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e9390&gt;, 'escalating': &lt;ucscoremeta.MoPropertyMeta object at 0x16c0f4ed0&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e9c10&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1691e9e10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169767f50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746490&gt;, 'direction': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169767ed0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746390&gt;, 'prop_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746290&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746090&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169767a90&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746110&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169767e50&gt;, 'deescalating': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169767dd0&gt;, 'severity': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746410&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746210&gt;, 'escalating': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169767fd0&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746190&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x169746310&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThr64Value.StatsThr64Value.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -14105,7 +13416,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThrFloatDefinition.</code><code class="descname">StatsThrFloatDefinition</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>prop_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThrFloatDefinition.html#StatsThrFloatDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThrFloatDefinition class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.consts">
@@ -14114,7 +13425,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -14129,7 +13440,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaa350&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x164411210&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x164411e50&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaa610&gt;, 'auto_recovery': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaaf50&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x164411c10&gt;, 'auto_recovery_time': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaa210&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x164411150&gt;, 'normal_value': &lt;ucscoremeta.MoPropertyMeta object at 0x164411b10&gt;, 'prop_type': &lt;ucscoremeta.MoPropertyMeta object at 0x164411450&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x164411e10&gt;, 'prop_id': &lt;ucscoremeta.MoPropertyMeta object at 0x164411a10&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x164411750&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x164411890&gt;, 'error_disable_fi_port': &lt;ucscoremeta.MoPropertyMeta object at 0x164411810&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x169eaaed0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d2d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d850&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d450&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d250&gt;, 'auto_recovery': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d0d0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d7d0&gt;, 'auto_recovery_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d150&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d5d0&gt;, 'normal_value': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d4d0&gt;, 'prop_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d6d0&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d550&gt;, 'prop_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d650&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d3d0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d750&gt;, 'error_disable_fi_port': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d350&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168e1d1d0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinition.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -16873,66 +16184,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsfrontTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSFRONT_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsleftRearTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSLEFT_REAR_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTemp'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN">
-<code class="descname">PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN</code><em class="property"> = 'computeStorageBladeMbTempStatsrightRearTempMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATSRIGHT_REAR_TEMP_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER">
 <code class="descname">PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER</code><em class="property"> = 'equipmentChassisStatsinputPower'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_EQUIPMENT_CHASSIS_STATSINPUT_POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -19173,46 +18424,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE</code><em class="property"> = 'memoryNvDimmEnvStatstemperature'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN</code><em class="property"> = 'memoryNvDimmEnvStatstemperatureMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSTEMPERATURE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE</code><em class="property"> = 'memoryNvDimmEnvStatsvoltage'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN">
-<code class="descname">PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN</code><em class="property"> = 'memoryNvDimmEnvStatsvoltageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_NV_DIMM_ENV_STATSVOLTAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_RUNTIMEAVAILABLE">
 <code class="descname">PROP_ID_MEMORY_RUNTIMEAVAILABLE</code><em class="property"> = 'memoryRuntimeavailable'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_MEMORY_RUNTIMEAVAILABLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -19398,46 +18609,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD</code><em class="property"> = 'storageCtrlStorageStatscpuLoad'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG</code><em class="property"> = 'storageCtrlStorageStatscpuLoadAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX</code><em class="property"> = 'storageCtrlStorageStatscpuLoadMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN</code><em class="property"> = 'storageCtrlStorageStatscpuLoadMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSCPU_LOAD_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsage'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN">
-<code class="descname">PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN</code><em class="property"> = 'storageCtrlStorageStatsmemoryUsageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_CTRL_STORAGE_STATSMEMORY_USAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE">
 <code class="descname">PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE</code><em class="property"> = 'storageDiskEnvStatstemperature'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSTEMPERATURE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -19475,146 +18646,6 @@
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN">
 <code class="descname">PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN</code><em class="property"> = 'storageDiskEnvStatswearPercentageMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_DISK_ENV_STATSWEAR_PERCENTAGE_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS</code><em class="property"> = 'storageStorageStatsiops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG</code><em class="property"> = 'storageStorageStatsiopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX</code><em class="property"> = 'storageStorageStatsiopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN</code><em class="property"> = 'storageStorageStatsiopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSIOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY</code><em class="property"> = 'storageStorageStatslatency'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG</code><em class="property"> = 'storageStorageStatslatencyAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX</code><em class="property"> = 'storageStorageStatslatencyMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN</code><em class="property"> = 'storageStorageStatslatencyMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSLATENCY_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS</code><em class="property"> = 'storageStorageStatsmbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG</code><em class="property"> = 'storageStorageStatsmbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX</code><em class="property"> = 'storageStorageStatsmbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN</code><em class="property"> = 'storageStorageStatsmbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSMBPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS</code><em class="property"> = 'storageStorageStatsreadIops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG</code><em class="property"> = 'storageStorageStatsreadIopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX</code><em class="property"> = 'storageStorageStatsreadIopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN</code><em class="property"> = 'storageStorageStatsreadIopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_IOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS</code><em class="property"> = 'storageStorageStatsreadMbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG</code><em class="property"> = 'storageStorageStatsreadMbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX</code><em class="property"> = 'storageStorageStatsreadMbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN</code><em class="property"> = 'storageStorageStatsreadMbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSREAD_MBPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS</code><em class="property"> = 'storageStorageStatswriteIops'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG</code><em class="property"> = 'storageStorageStatswriteIopsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX</code><em class="property"> = 'storageStorageStatswriteIopsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN</code><em class="property"> = 'storageStorageStatswriteIopsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_IOPS_MIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS</code><em class="property"> = 'storageStorageStatswriteMbps'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG</code><em class="property"> = 'storageStorageStatswriteMbpsAvg'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_AVG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX</code><em class="property"> = 'storageStorageStatswriteMbpsMax'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MAX" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN">
-<code class="descname">PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN</code><em class="property"> = 'storageStorageStatswriteMbpsMin'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatDefinition.StatsThrFloatDefinitionConsts.PROP_ID_STORAGE_STORAGE_STATSWRITE_MBPS_MIN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -20046,7 +19077,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThrFloatValue.</code><code class="descname">StatsThrFloatValue</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>direction</em>, <em>severity</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThrFloatValue.html#StatsThrFloatValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThrFloatValue class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.consts">
@@ -20055,7 +19086,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -20070,7 +19101,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x166a01910&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570750&gt;, 'direction': &lt;ucscoremeta.MoPropertyMeta object at 0x166a017d0&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570810&gt;, 'prop_type': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570290&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x166a01650&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x166a01e10&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x166a01c50&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x166a01290&gt;, 'deescalating': &lt;ucscoremeta.MoPropertyMeta object at 0x166a018d0&gt;, 'severity': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570e50&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570a90&gt;, 'escalating': &lt;ucscoremeta.MoPropertyMeta object at 0x166a01c90&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570790&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x16c570090&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348590&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348190&gt;, 'direction': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348ed0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348350&gt;, 'prop_type': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348dd0&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348ad0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17dc09e90&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348510&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348890&gt;, 'deescalating': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17dc09a10&gt;, 'severity': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348550&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348210&gt;, 'escalating': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348bd0&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348b10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x179348f10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThrFloatValue.StatsThrFloatValue.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -20167,7 +19198,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThresholdClass.</code><code class="descname">StatsThresholdClass</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>stats_class_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThresholdClass.html#StatsThresholdClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThresholdClass class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.consts">
@@ -20176,7 +19207,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -20191,7 +19222,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2690&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2950&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2ed0&gt;, 'stats_class_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2b90&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2890&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2750&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2f50&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2310&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2210&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2990&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1681d2410&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f45350&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168b17210&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168b17710&gt;, 'stats_class_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168b17890&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f456d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f45150&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f45f10&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f45c10&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f45110&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x167f45810&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x168b17d90&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClass.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -20385,11 +19416,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATS">
-<code class="descname">STATS_CLASS_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATS</code><em class="property"> = 'computeStorageBladeMbTempStats'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_COMPUTE_STORAGE_BLADE_MB_TEMP_STATS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_EQUIPMENT_CHASSIS_STATS">
 <code class="descname">STATS_CLASS_ID_EQUIPMENT_CHASSIS_STATS</code><em class="property"> = 'equipmentChassisStats'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_EQUIPMENT_CHASSIS_STATS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -20520,11 +19546,6 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_MEMORY_NV_DIMM_ENV_STATS">
-<code class="descname">STATS_CLASS_ID_MEMORY_NV_DIMM_ENV_STATS</code><em class="property"> = 'memoryNvDimmEnvStats'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_MEMORY_NV_DIMM_ENV_STATS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_MEMORY_RUNTIME">
 <code class="descname">STATS_CLASS_ID_MEMORY_RUNTIME</code><em class="property"> = 'memoryRuntime'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_MEMORY_RUNTIME" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -20555,18 +19576,8 @@
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_STORAGE_CTRL_STORAGE_STATS">
-<code class="descname">STATS_CLASS_ID_STORAGE_CTRL_STORAGE_STATS</code><em class="property"> = 'storageCtrlStorageStats'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_STORAGE_CTRL_STORAGE_STATS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_STORAGE_DISK_ENV_STATS">
 <code class="descname">STATS_CLASS_ID_STORAGE_DISK_ENV_STATS</code><em class="property"> = 'storageDiskEnvStats'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_STORAGE_DISK_ENV_STATS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_STORAGE_STORAGE_STATS">
-<code class="descname">STATS_CLASS_ID_STORAGE_STORAGE_STATS</code><em class="property"> = 'storageStorageStats'</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdClass.StatsThresholdClassConsts.STATS_CLASS_ID_STORAGE_STORAGE_STATS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -20598,7 +19609,7 @@
 <dl class="class">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy">
 <em class="property">class </em><code class="descclassname">ucsmsdk.mometa.stats.StatsThresholdPolicy.</code><code class="descname">StatsThresholdPolicy</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/stats/StatsThresholdPolicy.html#StatsThresholdPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ucsmo.ManagedObject</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
 <p>This is StatsThresholdPolicy class.</p>
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.consts">
@@ -20607,7 +19618,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.mo_meta">
-<code class="descname">mo_meta</code><em class="property"> = &lt;ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.mo_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -20622,7 +19633,7 @@
 
 <dl class="attribute">
 <dt id="ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.prop_meta">
-<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucscoremeta.MoPropertyMeta object at 0x164ac3310&gt;, 'status': &lt;ucscoremeta.MoPropertyMeta object at 0x164c36710&gt;, 'sacl': &lt;ucscoremeta.MoPropertyMeta object at 0x166da6a10&gt;, 'default_thresholds_added': &lt;ucscoremeta.MoPropertyMeta object at 0x164ac3590&gt;, 'int_id': &lt;ucscoremeta.MoPropertyMeta object at 0x164ac36d0&gt;, 'child_action': &lt;ucscoremeta.MoPropertyMeta object at 0x167999cd0&gt;, 'name': &lt;ucscoremeta.MoPropertyMeta object at 0x162679fd0&gt;, 'descr': &lt;ucscoremeta.MoPropertyMeta object at 0x164ac31d0&gt;, 'policy_owner': &lt;ucscoremeta.MoPropertyMeta object at 0x1775e3b50&gt;, 'policy_level': &lt;ucscoremeta.MoPropertyMeta object at 0x1775e3d50&gt;, 'rn': &lt;ucscoremeta.MoPropertyMeta object at 0x1775e3dd0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735c490&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735c850&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735c1d0&gt;, 'default_thresholds_added': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735cd50&gt;, 'int_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735cd90&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735c4d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735cf10&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735c090&gt;, 'policy_owner': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735cb10&gt;, 'policy_level': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735cc10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x17735cd10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.stats.StatsThresholdPolicy.StatsThresholdPolicy.prop_meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -20679,71 +19690,80 @@
 </div>
 
 
-           </div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ucsmsdk.mometa.storage.html" class="btn btn-neutral float-right" title="ucsmsdk.mometa.storage package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ucsmsdk.mometa.sol.html" class="btn btn-neutral" title="ucsmsdk.mometa.sol package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2015, Cisco.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.stats package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsCollectionPolicy">ucsmsdk.mometa.stats.StatsCollectionPolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsCollectionPolicyFsm">ucsmsdk.mometa.stats.StatsCollectionPolicyFsm module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage">ucsmsdk.mometa.stats.StatsCollectionPolicyFsmStage module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask">ucsmsdk.mometa.stats.StatsCollectionPolicyFsmTask module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsHolder">ucsmsdk.mometa.stats.StatsHolder module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThr32Definition">ucsmsdk.mometa.stats.StatsThr32Definition module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThr32Value">ucsmsdk.mometa.stats.StatsThr32Value module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThr64Definition">ucsmsdk.mometa.stats.StatsThr64Definition module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThr64Value">ucsmsdk.mometa.stats.StatsThr64Value module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThrFloatDefinition">ucsmsdk.mometa.stats.StatsThrFloatDefinition module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThrFloatValue">ucsmsdk.mometa.stats.StatsThrFloatValue module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThresholdClass">ucsmsdk.mometa.stats.StatsThresholdClass module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats.StatsThresholdPolicy">ucsmsdk.mometa.stats.StatsThresholdPolicy module</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.stats">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.sol.html" title="previous chapter">ucsmsdk.mometa.sol package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.storage.html" title="next chapter">ucsmsdk.mometa.storage package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.stats.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.stats.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-    </section>
+    
 
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    
+  </body>
 </html>
