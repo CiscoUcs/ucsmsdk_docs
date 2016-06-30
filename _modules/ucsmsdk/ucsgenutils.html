@@ -152,45 +152,53 @@
     <span class="k">return</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rn_array</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Progress"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.Progress">[docs]</a><span class="k">class</span> <span class="nc">Progress</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Internal class to show the progress of upload/download file.&quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_seen</span> <span class="o">=</span> <span class="mf">0.0</span>
-
-<div class="viewcode-block" id="Progress.update"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.Progress.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Internal method to show the progress of upload/download file.&quot;&quot;&quot;</span>
-
-        <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdout</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_seen</span> <span class="o">+=</span> <span class="n">size</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="s2">r&quot;</span><span class="si">%10d</span><span class="s2">  [</span><span class="si">%3.2f%%</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_seen</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seen</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">total</span><span class="p">)</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="n">status</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">status</span><span class="p">)</span>
-        <span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div></div>
-
-
-<div class="viewcode-block" id="FileWithCallback"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.FileWithCallback">[docs]</a><span class="k">class</span> <span class="nc">FileWithCallback</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="FileReadStream"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.FileReadStream">[docs]</a><span class="k">class</span> <span class="nc">FileReadStream</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Internal class to show the progress while reading file.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file_handle</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_handle</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file_handle</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span> <span class="o">=</span> <span class="n">callback</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="n">args</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">progress_cb</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fhandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+        <span class="c1"># Set the seek positin to the end of the file</span>
+        <span class="c1"># and calcualte the total file size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fhandle</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">SEEK_END</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tsize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fhandle</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+
+        <span class="c1"># Reset the position to the beginning of the file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fhandle</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_cb</span> <span class="o">=</span> <span class="n">progress_cb</span>
 
     <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_total</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tsize</span>
 
-<div class="viewcode-block" id="FileWithCallback.read"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.FileWithCallback.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_handle</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_total</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">)</span>
+<div class="viewcode-block" id="FileReadStream.read"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.FileReadStream.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fhandle</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_cb</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_tsize</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">data</span></div></div>
 
 
-<div class="viewcode-block" id="download_file"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.download_file">[docs]</a><span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">file_url</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+<div class="viewcode-block" id="Progress"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.Progress">[docs]</a><span class="k">class</span> <span class="nc">Progress</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Internal class to show the progress in chunks of custom percentage &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_seen</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span> <span class="o">=</span> <span class="n">interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_percent</span> <span class="o">=</span> <span class="n">interval</span>
+
+<div class="viewcode-block" id="Progress.update"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.Progress.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdout</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_seen</span> <span class="o">+=</span> <span class="n">size</span>
+        <span class="n">percent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seen</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">total</span>
+        <span class="k">if</span> <span class="n">percent</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_percent</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s2">r&quot;</span><span class="si">%10d</span><span class="s2">  [</span><span class="si">%3.2f%%</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_seen</span><span class="p">,</span> <span class="n">percent</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">status</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">status</span><span class="p">)</span>
+        <span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_percent</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span></div></div>
+
+
+<div class="viewcode-block" id="download_file"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.download_file">[docs]</a><span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">file_url</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">Progress</span><span class="p">()):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Downloads the file from web server</span>
 
@@ -209,7 +217,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdout</span>
 
     <span class="n">destination_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="n">file_url</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
@@ -221,33 +228,22 @@
         <span class="c1"># Python 2 code in this block</span>
         <span class="n">file_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">info</span><span class="p">()</span><span class="o">.</span><span class="n">getheaders</span><span class="p">(</span><span class="s2">&quot;Content-Length&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 
-
-    <span class="c1"># meta = response.info()</span>
-    <span class="c1"># log.debug(meta)</span>
-    <span class="c1"># file_size = int(meta.getheaders(&quot;Content-Length&quot;)[0])</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Downloading: </span><span class="si">%s</span><span class="s2"> Bytes: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">file_size</span><span class="p">))</span>
 
     <span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">destination_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
-    <span class="n">file_size_dl</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="c1">#block_sz = 64L</span>
     <span class="n">block_sz</span> <span class="o">=</span> <span class="mi">64</span>
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
         <span class="n">r_buffer</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">128</span> <span class="o">*</span> <span class="n">block_sz</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">r_buffer</span><span class="p">:</span>
             <span class="k">break</span>
 
-        <span class="n">file_size_dl</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">r_buffer</span><span class="p">)</span>
         <span class="n">file_handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r_buffer</span><span class="p">)</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="s2">r&quot;</span><span class="si">%10d</span><span class="s2">  [</span><span class="si">%3.2f%%</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="p">(</span>
-            <span class="n">file_size_dl</span><span class="p">,</span> <span class="n">file_size_dl</span> <span class="o">*</span> <span class="mf">100.</span> <span class="o">/</span> <span class="n">file_size</span><span class="p">)</span>
-        <span class="n">status</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">status</span><span class="p">)</span>
-        <span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">file_size</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">r_buffer</span><span class="p">))</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Downloading Finished.&#39;</span><span class="p">)</span>
     <span class="n">file_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="upload_file"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.upload_file">[docs]</a><span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+<div class="viewcode-block" id="upload_file"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.upload_file">[docs]</a><span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">Progress</span><span class="p">()):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Uploads the file on web server</span>
 
@@ -264,17 +260,10 @@
 <span class="sd">        driver = UcsDriver()\n</span>
 <span class="sd">        upload_file(driver=UcsDriver(), uri=&quot;http://fileurl&quot;, file_dir=&#39;/home/user/backup&#39;, file_name=&#39;my_config_backup.xml&#39;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">progress</span> <span class="o">=</span> <span class="n">Progress</span><span class="p">()</span>
-    <span class="n">full_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
-    <span class="n">stream</span> <span class="o">=</span> <span class="n">FileWithCallback</span><span class="p">(</span><span class="n">full_path</span><span class="p">,</span>
-                              <span class="s1">&#39;rb&#39;</span><span class="p">,</span>
-                              <span class="n">progress</span><span class="o">.</span><span class="n">update</span><span class="p">,</span>
-                              <span class="n">full_path</span><span class="p">)</span>
-
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">FileReadStream</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">),</span> <span class="n">progress</span><span class="o">.</span><span class="n">update</span><span class="p">)</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">stream</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">response</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;failed to upload.&quot;</span><span class="p">)</span></div>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;File upload failed.&quot;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="check_registry_key"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.check_registry_key">[docs]</a><span class="k">def</span> <span class="nf">check_registry_key</span><span class="p">(</span><span class="n">java_key</span><span class="p">):</span>
@@ -556,6 +545,7 @@
 
     <span class="n">decrypted_password</span> <span class="o">=</span> <span class="n">password_stream</span><span class="o">.</span><span class="n">tostring</span><span class="p">()[:</span><span class="n">cipher_len</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">decrypted_password</span></div>
+
 
 <div class="viewcode-block" id="iteritems"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsgenutils.iteritems">[docs]</a><span class="k">def</span> <span class="nf">iteritems</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>

@@ -1,0 +1,1914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ucsmsdk.mometa.moref package &mdash; ucsmsdk 0.9.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.network package" href="ucsmsdk.mometa.network.html" />
+    <link rel="prev" title="ucsmsdk.mometa.mgmt package" href="ucsmsdk.mometa.mgmt.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ucsmsdk-mometa-moref-package">
+<h1>ucsmsdk.mometa.moref package<a class="headerlink" href="#ucsmsdk-mometa-moref-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-ucsmsdk.mometa.moref.MorefFruRef">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-ucsmsdk.mometa.moref.MorefFruRef" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for MorefFruRef ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefFruRef.</code><code class="descname">MorefFruRef</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>class_name</em>, <em>vendor</em>, <em>model</em>, <em>serial</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefFruRef.html#MorefFruRef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefFruRef class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefFruRef.MorefFruRefConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'className', u'model', u'vendor', u'serial'])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'className': 'class_name', 'dn': 'dn', 'status': 'status', 'vendor': 'vendor', 'sacl': 'sacl', 'model': 'model', 'rn': 'rn', 'serial': 'serial', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851d90&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x147465690&gt;, 'vendor': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x147465450&gt;, 'class_name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851890&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14d1a7450&gt;, 'model': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851810&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14d1a7c90&gt;, 'serial': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1474653d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851210&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRef.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefFruRef.MorefFruRefConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefFruRef.</code><code class="descname">MorefFruRefConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefFruRef.html#MorefFruRefConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefFruRef.MorefFruRefConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.moref.MorefImportRoot"></span><p>This module contains the general information for MorefImportRoot ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRoot.</code><code class="descname">MorefImportRoot</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRoot.html#MorefImportRoot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefImportRoot class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'fsmPrev': 'fsm_prev', 'fsmStatus': 'fsm_status', 'fsmRmtInvErrCode': 'fsm_rmt_inv_err_code', 'fsmTry': 'fsm_try', 'sacl': 'sacl', 'fsmStageDescr': 'fsm_stage_descr', 'fsmDescr': 'fsm_descr', 'fsmStamp': 'fsm_stamp', 'fsmProgr': 'fsm_progr', 'childAction': 'child_action', 'fsmRmtInvErrDescr': 'fsm_rmt_inv_err_descr', 'rn': 'rn', 'fsmRmtInvRslt': 'fsm_rmt_inv_rslt'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14d1aeb90&gt;, 'fsm_stage_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146a952d0&gt;, 'fsm_try': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14c1d8050&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14c1d8850&gt;, 'fsm_rmt_inv_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146b62550&gt;, 'fsm_prev': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14c19eed0&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14a35b050&gt;, 'fsm_rmt_inv_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146a95e50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14d1ae4d0&gt;, 'fsm_stamp': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146a95a10&gt;, 'fsm_progr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146b62d10&gt;, 'fsm_rmt_inv_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146b62510&gt;, 'fsm_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14c19ec10&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14c1d8e10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x14c1d8b50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRoot.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRoot.</code><code class="descname">MorefImportRootConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRoot.html#MorefImportRootConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_APPLY_MO_PROPS">
+<code class="descname">FSM_PREV_APPLY_MO_REFS_APPLY_MO_PROPS</code><em class="property"> = 'ApplyMoRefsApplyMoProps'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_APPLY_MO_PROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_BEGIN">
+<code class="descname">FSM_PREV_APPLY_MO_REFS_BEGIN</code><em class="property"> = 'ApplyMoRefsBegin'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_BEGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_DELETE_ALL_MO_REFS">
+<code class="descname">FSM_PREV_APPLY_MO_REFS_DELETE_ALL_MO_REFS</code><em class="property"> = 'ApplyMoRefsDeleteAllMoRefs'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_DELETE_ALL_MO_REFS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_FAIL">
+<code class="descname">FSM_PREV_APPLY_MO_REFS_FAIL</code><em class="property"> = 'ApplyMoRefsFail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_SUCCESS">
+<code class="descname">FSM_PREV_APPLY_MO_REFS_SUCCESS</code><em class="property"> = 'ApplyMoRefsSuccess'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_APPLY_MO_REFS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_NOP">
+<code class="descname">FSM_PREV_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_PREV_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_2FA_AUTH_RETRY">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_2FA_AUTH_RETRY</code><em class="property"> = 'ERR-2fa-auth-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_2FA_AUTH_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR</code><em class="property"> = 'ERR-aaa-config-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACCT_REALM_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ACCT_REALM_SET_ERROR</code><em class="property"> = 'ERR-acct-realm-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACCT_REALM_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_FAILED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_FAILED</code><em class="property"> = 'ERR-ACTIVATE-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS</code><em class="property"> = 'ERR-ACTIVATE-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_RETRY">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_RETRY</code><em class="property"> = 'ERR-ACTIVATE-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ACTIVATE_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ADMIN_PASSWD_SET">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ADMIN_PASSWD_SET</code><em class="property"> = 'ERR-admin-passwd-set'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ADMIN_PASSWD_SET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTHENTICATION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_AUTHENTICATION</code><em class="property"> = 'ERR-authentication'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTHENTICATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTHORIZATION_REQUIRED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_AUTHORIZATION_REQUIRED</code><em class="property"> = 'ERR-authorization-required'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTHORIZATION_REQUIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTH_ISSUE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_AUTH_ISSUE</code><em class="property"> = 'ERR-auth-issue'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTH_ISSUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTH_REALM_GET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_AUTH_REALM_GET_ERROR</code><em class="property"> = 'ERR-auth-realm-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTH_REALM_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTH_REALM_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_AUTH_REALM_SET_ERROR</code><em class="property"> = 'ERR-auth-realm-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_AUTH_REALM_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND</code><em class="property"> = 'ERR-BIOS-network-boot-order-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS</code><em class="property"> = 'ERR-BIOS-TOKENS-OLD-BIOS'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC</code><em class="property"> = 'ERR-BIOS-TOKENS-OLD-CIMC'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE</code><em class="property"> = 'ERR-BOARDCTRLUPDATE-ignore'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED</code><em class="property"> = 'ERR-cli-session-limit-reached'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_KEYRING">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_CREATE_KEYRING</code><em class="property"> = 'ERR-create-keyring'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_KEYRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_LOCALE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_CREATE_LOCALE</code><em class="property"> = 'ERR-create-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_ROLE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_CREATE_ROLE</code><em class="property"> = 'ERR-create-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_TP">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_CREATE_TP</code><em class="property"> = 'ERR-create-tp'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_TP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_USER">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_CREATE_USER</code><em class="property"> = 'ERR-create-user'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_CREATE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_LOCALE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DELETE_LOCALE</code><em class="property"> = 'ERR-delete-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_ROLE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DELETE_ROLE</code><em class="property"> = 'ERR-delete-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_SESSION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DELETE_SESSION</code><em class="property"> = 'ERR-delete-session'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_SESSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_USER">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DELETE_USER</code><em class="property"> = 'ERR-delete-user'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DELETE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-memtest-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-network-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAG_CANCELLED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DIAG_CANCELLED</code><em class="property"> = 'ERR-DIAG-cancelled'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAG_CANCELLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAG_FSM_RESTARTED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DIAG_FSM_RESTARTED</code><em class="property"> = 'ERR-DIAG-fsm-restarted'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAG_FSM_RESTARTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAG_TEST_FAILED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DIAG_TEST_FAILED</code><em class="property"> = 'ERR-DIAG-test-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DIAG_TEST_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE</code><em class="property"> = 'ERR-DNLD-authentication-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH</code><em class="property"> = 'ERR-DNLD-hostkey-mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_INVALID_IMAGE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNLD_INVALID_IMAGE</code><em class="property"> = 'ERR-DNLD-invalid-image'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_INVALID_IMAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_NO_FILE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNLD_NO_FILE</code><em class="property"> = 'ERR-DNLD-no-file'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_NO_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_NO_SPACE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNLD_NO_SPACE</code><em class="property"> = 'ERR-DNLD-no-space'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_NO_SPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_USB_UNMOUNTED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNLD_USB_UNMOUNTED</code><em class="property"> = 'ERR-DNLD-usb-unmounted'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNLD_USB_UNMOUNTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNS_DELETE_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNS_DELETE_ERROR</code><em class="property"> = 'ERR-DNS-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNS_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNS_GET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNS_GET_ERROR</code><em class="property"> = 'ERR-DNS-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNS_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DNS_SET_ERROR</code><em class="property"> = 'ERR-DNS-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DNS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DOWNGRADE_FAIL">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_DOWNGRADE_FAIL</code><em class="property"> = 'ERR-downgrade-fail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_DOWNGRADE_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS</code><em class="property"> = 'ERR-efi-Diagnostics--in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ENABLE_MGMT_CONN">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ENABLE_MGMT_CONN</code><em class="property"> = 'ERR-enable-mgmt-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ENABLE_MGMT_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_EP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_EP_SET_ERROR</code><em class="property"> = 'ERR-ep-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_EP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT</code><em class="property"> = 'ERR-FILTER-illegal-format'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_FSM_NO_SUCH_STATE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_FSM_NO_SUCH_STATE</code><em class="property"> = 'ERR-FSM-no-such-state'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_FSM_NO_SUCH_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS</code><em class="property"> = 'ERR-get-max-http-user-sessions'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH</code><em class="property"> = 'ERR-HOST-fru-identity-mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HTTPS_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_HTTPS_SET_ERROR</code><em class="property"> = 'ERR-HTTPS-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HTTPS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HTTP_INITIALIZING">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_HTTP_INITIALIZING</code><em class="property"> = 'ERR-http-initializing'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HTTP_INITIALIZING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HTTP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_HTTP_SET_ERROR</code><em class="property"> = 'ERR-HTTP-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_HTTP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS</code><em class="property"> = 'ERR-IBMC-analyze-results'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR</code><em class="property"> = 'ERR-IBMC-connector-info-retrieval-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_CONNECT_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_IBMC_CONNECT_ERROR</code><em class="property"> = 'ERR-IBMC-connect-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_CONNECT_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR</code><em class="property"> = 'ERR-IBMC-fru-retrieval-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG</code><em class="property"> = 'ERR-IBMC-invalid-end-point-config'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY</code><em class="property"> = 'ERR-IBMC-results-not-ready'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED</code><em class="property"> = 'ERR-insufficiently-equipped'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_INTERNAL_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_INTERNAL_ERROR</code><em class="property"> = 'ERR-internal-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_INTERNAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_DELETE_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_LDAP_DELETE_ERROR</code><em class="property"> = 'ERR-ldap-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_GET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_LDAP_GET_ERROR</code><em class="property"> = 'ERR-ldap-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR</code><em class="property"> = 'ERR-ldap-group-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR</code><em class="property"> = 'ERR-ldap-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_LDAP_SET_ERROR</code><em class="property"> = 'ERR-ldap-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LDAP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LOCALE_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_LOCALE_SET_ERROR</code><em class="property"> = 'ERR-locale-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_LOCALE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR</code><em class="property"> = 'ERR-MAX-subscriptions-allowed-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED</code><em class="property"> = 'ERR-max-userid-sessions-reached'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MISSING_METHOD">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MISSING_METHOD</code><em class="property"> = 'ERR-missing-method'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MISSING_METHOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_LOCALE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MODIFY_LOCALE</code><em class="property"> = 'ERR-modify-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_ROLE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MODIFY_ROLE</code><em class="property"> = 'ERR-modify-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER</code><em class="property"> = 'ERR-modify-user'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER_LOCALE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER_LOCALE</code><em class="property"> = 'ERR-modify-user-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER_ROLE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER_ROLE</code><em class="property"> = 'ERR-modify-user-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MODIFY_USER_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ACCESS_DENIED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_ACCESS_DENIED</code><em class="property"> = 'ERR-MO-access-denied'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ACCESS_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED</code><em class="property"> = 'ERR-MO-CONFIG-child-object-cant-be-configured'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION</code><em class="property"> = 'ERR-MO-deletion-rule-violation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_DUPLICATE_OBJECT">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_DUPLICATE_OBJECT</code><em class="property"> = 'ERR-MO-duplicate-object'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_DUPLICATE_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT</code><em class="property"> = 'ERR-MO-illegal-containment'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_CREATION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_CREATION</code><em class="property"> = 'ERR-MO-illegal-creation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_CREATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE</code><em class="property"> = 'ERR-MO-illegal-iterator-state'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION</code><em class="property"> = 'ERR-MO-illegal-object-lifecycle-transition'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS</code><em class="property"> = 'ERR-MO-META-no-such-object-class'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION</code><em class="property"> = 'ERR-MO-naming-rule-violation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND</code><em class="property"> = 'ERR-MO-object-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY</code><em class="property"> = 'ERR-MO-PROPERTY-no-such-property'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE</code><em class="property"> = 'ERR-MO-PROPERTY-value-out-of-range'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION</code><em class="property"> = 'ERR-MO-resource-allocation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_NTP_DELETE_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_NTP_DELETE_ERROR</code><em class="property"> = 'ERR-NTP-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_NTP_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_NTP_GET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_NTP_GET_ERROR</code><em class="property"> = 'ERR-NTP-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_NTP_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_NTP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_NTP_SET_ERROR</code><em class="property"> = 'ERR-NTP-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_NTP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED</code><em class="property"> = 'ERR-POWER-CAP-UNSUPPORTED'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS</code><em class="property"> = 'ERR-POWER-PROFILE-IN-PROGRESS'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR</code><em class="property"> = 'ERR-provider-group-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR</code><em class="property"> = 'ERR-provider-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GET_ERROR</code><em class="property"> = 'ERR-radius-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR</code><em class="property"> = 'ERR-radius-global-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR</code><em class="property"> = 'ERR-radius-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_RADIUS_SET_ERROR</code><em class="property"> = 'ERR-radius-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RADIUS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_REQUEST_TIMEOUT">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_REQUEST_TIMEOUT</code><em class="property"> = 'ERR-request-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_REQUEST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RESET_ADAPTER">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_RESET_ADAPTER</code><em class="property"> = 'ERR-reset-adapter'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_RESET_ADAPTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ROLE_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_ROLE_SET_ERROR</code><em class="property"> = 'ERR-role-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_ROLE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SECONDARY_NODE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SECONDARY_NODE</code><em class="property"> = 'ERR-secondary-node'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SECONDARY_NODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SERVER_MIS_CONNECT">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SERVER_MIS_CONNECT</code><em class="property"> = 'ERR-SERVER-mis-connect'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SERVER_MIS_CONNECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SERVICE_NOT_READY">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SERVICE_NOT_READY</code><em class="property"> = 'ERR-service-not-ready'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SERVICE_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SESSION_CACHE_FULL">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SESSION_CACHE_FULL</code><em class="property"> = 'ERR-session-cache-full'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SESSION_CACHE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SESSION_NOT_FOUND">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SESSION_NOT_FOUND</code><em class="property"> = 'ERR-session-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SESSION_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_MIN_PASSPHRASE_LENGTH">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SET_MIN_PASSPHRASE_LENGTH</code><em class="property"> = 'ERR-set-min-passphrase-length'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_MIN_PASSPHRASE_LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_NETWORK">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SET_NETWORK</code><em class="property"> = 'ERR-set-network'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK</code><em class="property"> = 'ERR-set-password-strength-check'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_PORT_CHANNEL">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SET_PORT_CHANNEL</code><em class="property"> = 'ERR-set-port-channel'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SET_PORT_CHANNEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG</code><em class="property"> = 'ERR-store-pre-login-banner-msg'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG</code><em class="property"> = 'ERR-SWITCH-invalid-if-config'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_ENABLE_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TACACS_ENABLE_ERROR</code><em class="property"> = 'ERR-tacacs-enable-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_ENABLE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR</code><em class="property"> = 'ERR-tacacs-global-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR</code><em class="property"> = 'ERR-tacacs-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR</code><em class="property"> = 'ERR-tacacs-plus-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TACACS_SET_ERROR</code><em class="property"> = 'ERR-tacacs-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TACACS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TEST_ERROR_1">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TEST_ERROR_1</code><em class="property"> = 'ERR-test-error-1'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TEST_ERROR_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TEST_ERROR_2">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TEST_ERROR_2</code><em class="property"> = 'ERR-test-error-2'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TEST_ERROR_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TIMEZONE_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TIMEZONE_SET_ERROR</code><em class="property"> = 'ERR-timezone-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TIMEZONE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TOKEN_REQUEST_DENIED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_TOKEN_REQUEST_DENIED</code><em class="property"> = 'ERR-TOKEN-request-denied'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_TOKEN_REQUEST_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS</code><em class="property"> = 'ERR-UNABLE-TO-FETCH-BIOS-SETTINGS'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UPDATE_FAILED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_UPDATE_FAILED</code><em class="property"> = 'ERR-UPDATE-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UPDATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UPDATE_IN_PROGRESS">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_UPDATE_IN_PROGRESS</code><em class="property"> = 'ERR-UPDATE-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UPDATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UPDATE_RETRY">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_UPDATE_RETRY</code><em class="property"> = 'ERR-UPDATE-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_UPDATE_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED</code><em class="property"> = 'ERR-user-account-expired'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_USER_SET_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_USER_SET_ERROR</code><em class="property"> = 'ERR-user-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_USER_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_XML_PARSE_ERROR">
+<code class="descname">FSM_RMT_INV_ERR_CODE_ERR_XML_PARSE_ERROR</code><em class="property"> = 'ERR-xml-parse-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_ERR_XML_PARSE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_NONE">
+<code class="descname">FSM_RMT_INV_ERR_CODE_NONE</code><em class="property"> = 'none'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_RMT_INV_ERR_CODE_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STAMP_NEVER">
+<code class="descname">FSM_STAMP_NEVER</code><em class="property"> = 'never'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STAMP_NEVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_APPLY_MO_PROPS">
+<code class="descname">FSM_STATUS_APPLY_MO_REFS_APPLY_MO_PROPS</code><em class="property"> = 'ApplyMoRefsApplyMoProps'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_APPLY_MO_PROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_BEGIN">
+<code class="descname">FSM_STATUS_APPLY_MO_REFS_BEGIN</code><em class="property"> = 'ApplyMoRefsBegin'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_BEGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_DELETE_ALL_MO_REFS">
+<code class="descname">FSM_STATUS_APPLY_MO_REFS_DELETE_ALL_MO_REFS</code><em class="property"> = 'ApplyMoRefsDeleteAllMoRefs'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_DELETE_ALL_MO_REFS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_FAIL">
+<code class="descname">FSM_STATUS_APPLY_MO_REFS_FAIL</code><em class="property"> = 'ApplyMoRefsFail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_SUCCESS">
+<code class="descname">FSM_STATUS_APPLY_MO_REFS_SUCCESS</code><em class="property"> = 'ApplyMoRefsSuccess'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_APPLY_MO_REFS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_NOP">
+<code class="descname">FSM_STATUS_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRoot.MorefImportRootConsts.FSM_STATUS_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.moref.MorefImportRootFsm"></span><p>This module contains the general information for MorefImportRootFsm ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRootFsm.</code><code class="descname">MorefImportRootFsm</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRootFsm.html#MorefImportRootFsm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefImportRootFsm class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'fsmStatus': 'fsm_status', 'instanceId': 'instance_id', 'sacl': 'sacl', 'completionTime': 'completion_time', 'rn': 'rn', 'childAction': 'child_action', 'descr': 'descr', 'currentFsm': 'current_fsm', 'rmtErrCode': 'rmt_err_code', 'rmtRslt': 'rmt_rslt', 'progress': 'progress', 'rmtErrDescr': 'rmt_err_descr'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1224705d0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470f50&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470bd0&gt;, 'rmt_err_descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1224708d0&gt;, 'completion_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1224701d0&gt;, 'fsm_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1224700d0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470310&gt;, 'rmt_rslt': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470250&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470c10&gt;, 'current_fsm': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1224704d0&gt;, 'rmt_err_code': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470710&gt;, 'instance_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470090&gt;, 'progress': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470390&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x122470490&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsm.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRootFsm.</code><code class="descname">MorefImportRootFsmConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRootFsm.html#MorefImportRootFsmConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.COMPLETION_TIME_">
+<code class="descname">COMPLETION_TIME_</code><em class="property"> = ''</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.COMPLETION_TIME_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.CURRENT_FSM_APPLY_MO_REFS">
+<code class="descname">CURRENT_FSM_APPLY_MO_REFS</code><em class="property"> = 'ApplyMoRefs'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.CURRENT_FSM_APPLY_MO_REFS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.CURRENT_FSM_NOP">
+<code class="descname">CURRENT_FSM_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.CURRENT_FSM_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_FAIL">
+<code class="descname">FSM_STATUS_FAIL</code><em class="property"> = 'fail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_IN_PROGRESS">
+<code class="descname">FSM_STATUS_IN_PROGRESS</code><em class="property"> = 'inProgress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_NOP">
+<code class="descname">FSM_STATUS_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_PENDING">
+<code class="descname">FSM_STATUS_PENDING</code><em class="property"> = 'pending'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_PENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_SKIP">
+<code class="descname">FSM_STATUS_SKIP</code><em class="property"> = 'skip'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_SKIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_SUCCESS">
+<code class="descname">FSM_STATUS_SUCCESS</code><em class="property"> = 'success'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_THROTTLED">
+<code class="descname">FSM_STATUS_THROTTLED</code><em class="property"> = 'throttled'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.FSM_STATUS_THROTTLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_2FA_AUTH_RETRY">
+<code class="descname">RMT_ERR_CODE_ERR_2FA_AUTH_RETRY</code><em class="property"> = 'ERR-2fa-auth-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_2FA_AUTH_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR</code><em class="property"> = 'ERR-aaa-config-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AAA_CONFIG_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACCT_REALM_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_ACCT_REALM_SET_ERROR</code><em class="property"> = 'ERR-acct-realm-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACCT_REALM_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_FAILED">
+<code class="descname">RMT_ERR_CODE_ERR_ACTIVATE_FAILED</code><em class="property"> = 'ERR-ACTIVATE-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS</code><em class="property"> = 'ERR-ACTIVATE-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_RETRY">
+<code class="descname">RMT_ERR_CODE_ERR_ACTIVATE_RETRY</code><em class="property"> = 'ERR-ACTIVATE-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ACTIVATE_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ADMIN_PASSWD_SET">
+<code class="descname">RMT_ERR_CODE_ERR_ADMIN_PASSWD_SET</code><em class="property"> = 'ERR-admin-passwd-set'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ADMIN_PASSWD_SET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTHENTICATION">
+<code class="descname">RMT_ERR_CODE_ERR_AUTHENTICATION</code><em class="property"> = 'ERR-authentication'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTHENTICATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTHORIZATION_REQUIRED">
+<code class="descname">RMT_ERR_CODE_ERR_AUTHORIZATION_REQUIRED</code><em class="property"> = 'ERR-authorization-required'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTHORIZATION_REQUIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTH_ISSUE">
+<code class="descname">RMT_ERR_CODE_ERR_AUTH_ISSUE</code><em class="property"> = 'ERR-auth-issue'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTH_ISSUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_AUTH_REALM_GET_ERROR</code><em class="property"> = 'ERR-auth-realm-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_AUTH_REALM_SET_ERROR</code><em class="property"> = 'ERR-auth-realm-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_AUTH_REALM_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND">
+<code class="descname">RMT_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND</code><em class="property"> = 'ERR-BIOS-network-boot-order-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BIOS_NETWORK_BOOT_ORDER_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS">
+<code class="descname">RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS</code><em class="property"> = 'ERR-BIOS-TOKENS-OLD-BIOS'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_BIOS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC">
+<code class="descname">RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC</code><em class="property"> = 'ERR-BIOS-TOKENS-OLD-CIMC'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BIOS_TOKENS_OLD_CIMC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE">
+<code class="descname">RMT_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE</code><em class="property"> = 'ERR-BOARDCTRLUPDATE-ignore'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_BOARDCTRLUPDATE_IGNORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED">
+<code class="descname">RMT_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED</code><em class="property"> = 'ERR-cli-session-limit-reached'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CLI_SESSION_LIMIT_REACHED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_KEYRING">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_KEYRING</code><em class="property"> = 'ERR-create-keyring'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_KEYRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_LOCALE</code><em class="property"> = 'ERR-create-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_ROLE</code><em class="property"> = 'ERR-create-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_TP">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_TP</code><em class="property"> = 'ERR-create-tp'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_TP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_USER">
+<code class="descname">RMT_ERR_CODE_ERR_CREATE_USER</code><em class="property"> = 'ERR-create-user'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_CREATE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_LOCALE</code><em class="property"> = 'ERR-delete-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_ROLE</code><em class="property"> = 'ERR-delete-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_SESSION">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_SESSION</code><em class="property"> = 'ERR-delete-session'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_SESSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_USER">
+<code class="descname">RMT_ERR_CODE_ERR_DELETE_USER</code><em class="property"> = 'ERR-delete-user'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DELETE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-memtest-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_MEMTEST_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS</code><em class="property"> = 'ERR-Diagnostics-network-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAGNOSTICS_NETWORK_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAG_CANCELLED">
+<code class="descname">RMT_ERR_CODE_ERR_DIAG_CANCELLED</code><em class="property"> = 'ERR-DIAG-cancelled'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAG_CANCELLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAG_FSM_RESTARTED">
+<code class="descname">RMT_ERR_CODE_ERR_DIAG_FSM_RESTARTED</code><em class="property"> = 'ERR-DIAG-fsm-restarted'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAG_FSM_RESTARTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAG_TEST_FAILED">
+<code class="descname">RMT_ERR_CODE_ERR_DIAG_TEST_FAILED</code><em class="property"> = 'ERR-DIAG-test-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DIAG_TEST_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE</code><em class="property"> = 'ERR-DNLD-authentication-failure'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_AUTHENTICATION_FAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH</code><em class="property"> = 'ERR-DNLD-hostkey-mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_HOSTKEY_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_INVALID_IMAGE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_INVALID_IMAGE</code><em class="property"> = 'ERR-DNLD-invalid-image'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_INVALID_IMAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_FILE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_NO_FILE</code><em class="property"> = 'ERR-DNLD-no-file'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_SPACE">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_NO_SPACE</code><em class="property"> = 'ERR-DNLD-no-space'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_NO_SPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_USB_UNMOUNTED">
+<code class="descname">RMT_ERR_CODE_ERR_DNLD_USB_UNMOUNTED</code><em class="property"> = 'ERR-DNLD-usb-unmounted'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNLD_USB_UNMOUNTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNS_DELETE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_DNS_DELETE_ERROR</code><em class="property"> = 'ERR-DNS-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNS_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNS_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_DNS_GET_ERROR</code><em class="property"> = 'ERR-DNS-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_DNS_SET_ERROR</code><em class="property"> = 'ERR-DNS-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DNS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DOWNGRADE_FAIL">
+<code class="descname">RMT_ERR_CODE_ERR_DOWNGRADE_FAIL</code><em class="property"> = 'ERR-downgrade-fail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_DOWNGRADE_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS</code><em class="property"> = 'ERR-efi-Diagnostics--in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_EFI_DIAGNOSTICS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ENABLE_MGMT_CONN">
+<code class="descname">RMT_ERR_CODE_ERR_ENABLE_MGMT_CONN</code><em class="property"> = 'ERR-enable-mgmt-conn'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ENABLE_MGMT_CONN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_EP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_EP_SET_ERROR</code><em class="property"> = 'ERR-ep-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_EP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT">
+<code class="descname">RMT_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT</code><em class="property"> = 'ERR-FILTER-illegal-format'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_FILTER_ILLEGAL_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_FSM_NO_SUCH_STATE">
+<code class="descname">RMT_ERR_CODE_ERR_FSM_NO_SUCH_STATE</code><em class="property"> = 'ERR-FSM-no-such-state'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_FSM_NO_SUCH_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS">
+<code class="descname">RMT_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS</code><em class="property"> = 'ERR-get-max-http-user-sessions'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_GET_MAX_HTTP_USER_SESSIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH">
+<code class="descname">RMT_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH</code><em class="property"> = 'ERR-HOST-fru-identity-mismatch'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HOST_FRU_IDENTITY_MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HTTPS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_HTTPS_SET_ERROR</code><em class="property"> = 'ERR-HTTPS-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HTTPS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HTTP_INITIALIZING">
+<code class="descname">RMT_ERR_CODE_ERR_HTTP_INITIALIZING</code><em class="property"> = 'ERR-http-initializing'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HTTP_INITIALIZING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HTTP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_HTTP_SET_ERROR</code><em class="property"> = 'ERR-HTTP-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_HTTP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS</code><em class="property"> = 'ERR-IBMC-analyze-results'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_ANALYZE_RESULTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR</code><em class="property"> = 'ERR-IBMC-connector-info-retrieval-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECTOR_INFO_RETRIEVAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECT_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_CONNECT_ERROR</code><em class="property"> = 'ERR-IBMC-connect-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_CONNECT_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR</code><em class="property"> = 'ERR-IBMC-fru-retrieval-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_FRU_RETRIEVAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG</code><em class="property"> = 'ERR-IBMC-invalid-end-point-config'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_INVALID_END_POINT_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY">
+<code class="descname">RMT_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY</code><em class="property"> = 'ERR-IBMC-results-not-ready'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_IBMC_RESULTS_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED">
+<code class="descname">RMT_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED</code><em class="property"> = 'ERR-insufficiently-equipped'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_INSUFFICIENTLY_EQUIPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_INTERNAL_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_INTERNAL_ERROR</code><em class="property"> = 'ERR-internal-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_INTERNAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_DELETE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_DELETE_ERROR</code><em class="property"> = 'ERR-ldap-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_GET_ERROR</code><em class="property"> = 'ERR-ldap-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR</code><em class="property"> = 'ERR-ldap-group-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR</code><em class="property"> = 'ERR-ldap-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LDAP_SET_ERROR</code><em class="property"> = 'ERR-ldap-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LDAP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LOCALE_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_LOCALE_SET_ERROR</code><em class="property"> = 'ERR-locale-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_LOCALE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR</code><em class="property"> = 'ERR-MAX-subscriptions-allowed-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MAX_SUBSCRIPTIONS_ALLOWED_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED">
+<code class="descname">RMT_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED</code><em class="property"> = 'ERR-max-userid-sessions-reached'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MAX_USERID_SESSIONS_REACHED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MISSING_METHOD">
+<code class="descname">RMT_ERR_CODE_ERR_MISSING_METHOD</code><em class="property"> = 'ERR-missing-method'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MISSING_METHOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_LOCALE</code><em class="property"> = 'ERR-modify-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_ROLE</code><em class="property"> = 'ERR-modify-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_USER</code><em class="property"> = 'ERR-modify-user'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_LOCALE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_USER_LOCALE</code><em class="property"> = 'ERR-modify-user-locale'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_LOCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_ROLE">
+<code class="descname">RMT_ERR_CODE_ERR_MODIFY_USER_ROLE</code><em class="property"> = 'ERR-modify-user-role'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MODIFY_USER_ROLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ACCESS_DENIED">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ACCESS_DENIED</code><em class="property"> = 'ERR-MO-access-denied'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ACCESS_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED">
+<code class="descname">RMT_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED</code><em class="property"> = 'ERR-MO-CONFIG-child-object-cant-be-configured'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_CONFIG_CHILD_OBJECT_CANT_BE_CONFIGURED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION</code><em class="property"> = 'ERR-MO-deletion-rule-violation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_DELETION_RULE_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_DUPLICATE_OBJECT">
+<code class="descname">RMT_ERR_CODE_ERR_MO_DUPLICATE_OBJECT</code><em class="property"> = 'ERR-MO-duplicate-object'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_DUPLICATE_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT</code><em class="property"> = 'ERR-MO-illegal-containment'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CONTAINMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CREATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_CREATION</code><em class="property"> = 'ERR-MO-illegal-creation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_CREATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE</code><em class="property"> = 'ERR-MO-illegal-iterator-state'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_ITERATOR_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION</code><em class="property"> = 'ERR-MO-illegal-object-lifecycle-transition'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_ILLEGAL_OBJECT_LIFECYCLE_TRANSITION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS">
+<code class="descname">RMT_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS</code><em class="property"> = 'ERR-MO-META-no-such-object-class'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_META_NO_SUCH_OBJECT_CLASS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION</code><em class="property"> = 'ERR-MO-naming-rule-violation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_NAMING_RULE_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND">
+<code class="descname">RMT_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND</code><em class="property"> = 'ERR-MO-object-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_OBJECT_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY">
+<code class="descname">RMT_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY</code><em class="property"> = 'ERR-MO-PROPERTY-no-such-property'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_NO_SUCH_PROPERTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE">
+<code class="descname">RMT_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE</code><em class="property"> = 'ERR-MO-PROPERTY-value-out-of-range'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_PROPERTY_VALUE_OUT_OF_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION">
+<code class="descname">RMT_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION</code><em class="property"> = 'ERR-MO-resource-allocation'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_MO_RESOURCE_ALLOCATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_NTP_DELETE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_NTP_DELETE_ERROR</code><em class="property"> = 'ERR-NTP-delete-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_NTP_DELETE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_NTP_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_NTP_GET_ERROR</code><em class="property"> = 'ERR-NTP-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_NTP_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_NTP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_NTP_SET_ERROR</code><em class="property"> = 'ERR-NTP-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_NTP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED">
+<code class="descname">RMT_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED</code><em class="property"> = 'ERR-POWER-CAP-UNSUPPORTED'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_POWER_CAP_UNSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS</code><em class="property"> = 'ERR-POWER-PROFILE-IN-PROGRESS'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_POWER_PROFILE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR</code><em class="property"> = 'ERR-provider-group-modify-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_MODIFY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR</code><em class="property"> = 'ERR-provider-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_PROVIDER_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_GET_ERROR</code><em class="property"> = 'ERR-radius-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR</code><em class="property"> = 'ERR-radius-global-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GLOBAL_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR</code><em class="property"> = 'ERR-radius-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_RADIUS_SET_ERROR</code><em class="property"> = 'ERR-radius-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RADIUS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_REQUEST_TIMEOUT">
+<code class="descname">RMT_ERR_CODE_ERR_REQUEST_TIMEOUT</code><em class="property"> = 'ERR-request-timeout'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_REQUEST_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RESET_ADAPTER">
+<code class="descname">RMT_ERR_CODE_ERR_RESET_ADAPTER</code><em class="property"> = 'ERR-reset-adapter'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_RESET_ADAPTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ROLE_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_ROLE_SET_ERROR</code><em class="property"> = 'ERR-role-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_ROLE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SECONDARY_NODE">
+<code class="descname">RMT_ERR_CODE_ERR_SECONDARY_NODE</code><em class="property"> = 'ERR-secondary-node'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SECONDARY_NODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SERVER_MIS_CONNECT">
+<code class="descname">RMT_ERR_CODE_ERR_SERVER_MIS_CONNECT</code><em class="property"> = 'ERR-SERVER-mis-connect'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SERVER_MIS_CONNECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SERVICE_NOT_READY">
+<code class="descname">RMT_ERR_CODE_ERR_SERVICE_NOT_READY</code><em class="property"> = 'ERR-service-not-ready'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SERVICE_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SESSION_CACHE_FULL">
+<code class="descname">RMT_ERR_CODE_ERR_SESSION_CACHE_FULL</code><em class="property"> = 'ERR-session-cache-full'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SESSION_CACHE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SESSION_NOT_FOUND">
+<code class="descname">RMT_ERR_CODE_ERR_SESSION_NOT_FOUND</code><em class="property"> = 'ERR-session-not-found'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SESSION_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_MIN_PASSPHRASE_LENGTH">
+<code class="descname">RMT_ERR_CODE_ERR_SET_MIN_PASSPHRASE_LENGTH</code><em class="property"> = 'ERR-set-min-passphrase-length'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_MIN_PASSPHRASE_LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_NETWORK">
+<code class="descname">RMT_ERR_CODE_ERR_SET_NETWORK</code><em class="property"> = 'ERR-set-network'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK">
+<code class="descname">RMT_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK</code><em class="property"> = 'ERR-set-password-strength-check'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_PASSWORD_STRENGTH_CHECK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_PORT_CHANNEL">
+<code class="descname">RMT_ERR_CODE_ERR_SET_PORT_CHANNEL</code><em class="property"> = 'ERR-set-port-channel'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SET_PORT_CHANNEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG">
+<code class="descname">RMT_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG</code><em class="property"> = 'ERR-store-pre-login-banner-msg'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_STORE_PRE_LOGIN_BANNER_MSG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG">
+<code class="descname">RMT_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG</code><em class="property"> = 'ERR-SWITCH-invalid-if-config'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_SWITCH_INVALID_IF_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_ENABLE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_ENABLE_ERROR</code><em class="property"> = 'ERR-tacacs-enable-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_ENABLE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR</code><em class="property"> = 'ERR-tacacs-global-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_GLOBAL_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR</code><em class="property"> = 'ERR-tacacs-group-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_GROUP_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR</code><em class="property"> = 'ERR-tacacs-plus-get-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_PLUS_GET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TACACS_SET_ERROR</code><em class="property"> = 'ERR-tacacs-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TACACS_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_1">
+<code class="descname">RMT_ERR_CODE_ERR_TEST_ERROR_1</code><em class="property"> = 'ERR-test-error-1'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_2">
+<code class="descname">RMT_ERR_CODE_ERR_TEST_ERROR_2</code><em class="property"> = 'ERR-test-error-2'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TEST_ERROR_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TIMEZONE_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_TIMEZONE_SET_ERROR</code><em class="property"> = 'ERR-timezone-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TIMEZONE_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TOKEN_REQUEST_DENIED">
+<code class="descname">RMT_ERR_CODE_ERR_TOKEN_REQUEST_DENIED</code><em class="property"> = 'ERR-TOKEN-request-denied'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_TOKEN_REQUEST_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS">
+<code class="descname">RMT_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS</code><em class="property"> = 'ERR-UNABLE-TO-FETCH-BIOS-SETTINGS'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UNABLE_TO_FETCH_BIOS_SETTINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UPDATE_FAILED">
+<code class="descname">RMT_ERR_CODE_ERR_UPDATE_FAILED</code><em class="property"> = 'ERR-UPDATE-failed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UPDATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UPDATE_IN_PROGRESS">
+<code class="descname">RMT_ERR_CODE_ERR_UPDATE_IN_PROGRESS</code><em class="property"> = 'ERR-UPDATE-in-progress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UPDATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UPDATE_RETRY">
+<code class="descname">RMT_ERR_CODE_ERR_UPDATE_RETRY</code><em class="property"> = 'ERR-UPDATE-retry'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_UPDATE_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED">
+<code class="descname">RMT_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED</code><em class="property"> = 'ERR-user-account-expired'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_USER_ACCOUNT_EXPIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_USER_SET_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_USER_SET_ERROR</code><em class="property"> = 'ERR-user-set-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_USER_SET_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_XML_PARSE_ERROR">
+<code class="descname">RMT_ERR_CODE_ERR_XML_PARSE_ERROR</code><em class="property"> = 'ERR-xml-parse-error'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_ERR_XML_PARSE_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_NONE">
+<code class="descname">RMT_ERR_CODE_NONE</code><em class="property"> = 'none'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsm.MorefImportRootFsmConsts.RMT_ERR_CODE_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.moref.MorefImportRootFsmStage"></span><p>This module contains the general information for MorefImportRootFsmStage ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRootFsmStage.</code><code class="descname">MorefImportRootFsmStage</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRootFsmStage.html#MorefImportRootFsmStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefImportRootFsmStage class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'lastUpdateTime': 'last_update_time', 'sacl': 'sacl', 'childAction': 'child_action', 'retry': 'retry', 'name': 'name', 'descr': 'descr', 'stageStatus': 'stage_status', 'rn': 'rn', 'order': 'order'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13437dad0&gt;, 'last_update_time': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x119303490&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11d839390&gt;, 'stage_status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11d839fd0&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13437d3d0&gt;, 'retry': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11d839590&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1139b18d0&gt;, 'descr': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x13437d190&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12a005810&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11d839690&gt;, 'order': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x11d839c10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStage.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRootFsmStage.</code><code class="descname">MorefImportRootFsmStageConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRootFsmStage.html#MorefImportRootFsmStageConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.LAST_UPDATE_TIME_">
+<code class="descname">LAST_UPDATE_TIME_</code><em class="property"> = ''</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.LAST_UPDATE_TIME_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_APPLY_MO_PROPS">
+<code class="descname">NAME_APPLY_MO_REFS_APPLY_MO_PROPS</code><em class="property"> = 'ApplyMoRefsApplyMoProps'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_APPLY_MO_PROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_BEGIN">
+<code class="descname">NAME_APPLY_MO_REFS_BEGIN</code><em class="property"> = 'ApplyMoRefsBegin'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_BEGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_DELETE_ALL_MO_REFS">
+<code class="descname">NAME_APPLY_MO_REFS_DELETE_ALL_MO_REFS</code><em class="property"> = 'ApplyMoRefsDeleteAllMoRefs'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_DELETE_ALL_MO_REFS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_FAIL">
+<code class="descname">NAME_APPLY_MO_REFS_FAIL</code><em class="property"> = 'ApplyMoRefsFail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_SUCCESS">
+<code class="descname">NAME_APPLY_MO_REFS_SUCCESS</code><em class="property"> = 'ApplyMoRefsSuccess'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_APPLY_MO_REFS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_NOP">
+<code class="descname">NAME_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.NAME_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_FAIL">
+<code class="descname">STAGE_STATUS_FAIL</code><em class="property"> = 'fail'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_IN_PROGRESS">
+<code class="descname">STAGE_STATUS_IN_PROGRESS</code><em class="property"> = 'inProgress'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_NOP">
+<code class="descname">STAGE_STATUS_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_PENDING">
+<code class="descname">STAGE_STATUS_PENDING</code><em class="property"> = 'pending'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_PENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_SKIP">
+<code class="descname">STAGE_STATUS_SKIP</code><em class="property"> = 'skip'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_SKIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_SUCCESS">
+<code class="descname">STAGE_STATUS_SUCCESS</code><em class="property"> = 'success'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_THROTTLED">
+<code class="descname">STAGE_STATUS_THROTTLED</code><em class="property"> = 'throttled'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmStage.MorefImportRootFsmStageConsts.STAGE_STATUS_THROTTLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.moref.MorefImportRootFsmTask"></span><p>This module contains the general information for MorefImportRootFsmTask ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRootFsmTask.</code><code class="descname">MorefImportRootFsmTask</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>item</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRootFsmTask.html#MorefImportRootFsmTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefImportRootFsmTask class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'item'])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'completion': 'completion', 'dn': 'dn', 'seqId': 'seq_id', 'flags': 'flags', 'item': 'item', 'sacl': 'sacl', 'rn': 'rn', 'status': 'status', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'completion': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1319cc610&gt;, 'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1319cce90&gt;, 'flags': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1319cc910&gt;, 'item': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12471a850&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12471ae10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12471a150&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12471a290&gt;, 'seq_id': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12471a390&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1206c4910&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTask.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefImportRootFsmTask.</code><code class="descname">MorefImportRootFsmTaskConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefImportRootFsmTask.html#MorefImportRootFsmTaskConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_CANCELLED">
+<code class="descname">COMPLETION_CANCELLED</code><em class="property"> = 'cancelled'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_CANCELLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_COMPLETED">
+<code class="descname">COMPLETION_COMPLETED</code><em class="property"> = 'completed'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_COMPLETED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_PROCESSING">
+<code class="descname">COMPLETION_PROCESSING</code><em class="property"> = 'processing'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_PROCESSING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_SCHEDULED">
+<code class="descname">COMPLETION_SCHEDULED</code><em class="property"> = 'scheduled'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.COMPLETION_SCHEDULED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.ITEM_APPLY_MO_REFS">
+<code class="descname">ITEM_APPLY_MO_REFS</code><em class="property"> = 'ApplyMoRefs'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.ITEM_APPLY_MO_REFS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.ITEM_NOP">
+<code class="descname">ITEM_NOP</code><em class="property"> = 'nop'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefImportRootFsmTask.MorefImportRootFsmTaskConsts.ITEM_NOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.moref.MorefProp"></span><p>This module contains the general information for MorefProp ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefProp">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefProp.</code><code class="descname">MorefProp</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefProp.html#MorefProp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefProp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefProp class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefProp.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefProp.MorefPropConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefProp.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefProp.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefProp.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefProp.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'name'])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefProp.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefProp.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'adminState': 'admin_state', 'name': 'name', 'sacl': 'sacl', 'rn': 'rn', 'value': 'value', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefProp.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefProp.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e22bd0&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e22350&gt;, 'admin_state': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x12e3939d0&gt;, 'name': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e22750&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e22410&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e226d0&gt;, 'value': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e22850&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x118e22890&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefProp.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefPropConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefProp.</code><code class="descname">MorefPropConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefProp.html#MorefPropConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefPropConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefPropConsts.ADMIN_STATE_APPLIED">
+<code class="descname">ADMIN_STATE_APPLIED</code><em class="property"> = 'applied'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefPropConsts.ADMIN_STATE_APPLIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefPropConsts.ADMIN_STATE_DELETED">
+<code class="descname">ADMIN_STATE_DELETED</code><em class="property"> = 'deleted'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefPropConsts.ADMIN_STATE_DELETED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefProp.MorefPropConsts.ADMIN_STATE_UNAPPLIED">
+<code class="descname">ADMIN_STATE_UNAPPLIED</code><em class="property"> = 'unapplied'</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefProp.MorefPropConsts.ADMIN_STATE_UNAPPLIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.moref.MorefRef"></span><p>This module contains the general information for MorefRef ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRef">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefRef.</code><code class="descname">MorefRef</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>mo_rn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefRef.html#MorefRef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is MorefRef class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRef.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.moref.MorefRef.MorefRefConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRef.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRef.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRef.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRef.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'moRn'])</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRef.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRef.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'moRn': 'mo_rn', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRef.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRef.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851250&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x145e19250&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851e10&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851850&gt;, 'mo_rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851110&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x146851290&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRef.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.moref.MorefRef.MorefRefConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.moref.MorefRef.</code><code class="descname">MorefRefConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/moref/MorefRef.html#MorefRefConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.moref.MorefRef.MorefRefConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.moref">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.moref" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.moref package</a><ul>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.moref.MorefFruRef">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.moref">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.mgmt.html" title="previous chapter">ucsmsdk.mometa.mgmt package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.network.html" title="next chapter">ucsmsdk.mometa.network package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.moref.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.moref.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

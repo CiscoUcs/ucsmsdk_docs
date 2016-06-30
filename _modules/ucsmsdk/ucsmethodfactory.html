@@ -293,6 +293,27 @@
     <span class="k">return</span> <span class="n">xml_request</span></div>
 
 
+<div class="viewcode-block" id="ape_get_ape_firmware_active_side"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_get_ape_firmware_active_side">[docs]</a><span class="k">def</span> <span class="nf">ape_get_ape_firmware_active_side</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_field_name</span><span class="p">,</span> <span class="n">in_ip_addr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeGetApeFirmwareActiveSide&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_field_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">in_field_name</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_ip_addr</span> <span class="o">=</span> <span class="n">in_ip_addr</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="ape_get_mc_stats"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_get_mc_stats">[docs]</a><span class="k">def</span> <span class="nf">ape_get_mc_stats</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_equipment_serial</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeGetMcStats&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_equipment_serial</span> <span class="o">=</span> <span class="n">in_equipment_serial</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
 <div class="viewcode-block" id="ape_get_next_id"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_get_next_id">[docs]</a><span class="k">def</span> <span class="nf">ape_get_next_id</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_chassis_id</span><span class="p">,</span> <span class="n">in_mo_type</span><span class="p">,</span> <span class="n">in_server_instance_id</span><span class="p">,</span> <span class="n">in_slot_id</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
     <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeGetNextId&quot;</span><span class="p">)</span>
@@ -575,6 +596,16 @@
     <span class="k">return</span> <span class="n">xml_request</span></div>
 
 
+<div class="viewcode-block" id="ape_remove_device"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_remove_device">[docs]</a><span class="k">def</span> <span class="nf">ape_remove_device</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_serial</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeRemoveDevice&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_serial</span> <span class="o">=</span> <span class="n">in_serial</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
 <div class="viewcode-block" id="ape_set_adaptor_firmware_version"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_set_adaptor_firmware_version">[docs]</a><span class="k">def</span> <span class="nf">ape_set_adaptor_firmware_version</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_adaptor_fw_version</span><span class="p">,</span> <span class="n">in_adaptor_serial</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
     <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeSetAdaptorFirmwareVersion&quot;</span><span class="p">)</span>
@@ -636,6 +667,18 @@
     <span class="k">return</span> <span class="n">xml_request</span></div>
 
 
+<div class="viewcode-block" id="ape_set_mc_stats"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_set_mc_stats">[docs]</a><span class="k">def</span> <span class="nf">ape_set_mc_stats</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_equipment_serial</span><span class="p">,</span> <span class="n">in_mc_stats</span><span class="p">,</span> <span class="n">in_stat_ids</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeSetMcStats&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_equipment_serial</span> <span class="o">=</span> <span class="n">in_equipment_serial</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_mc_stats</span> <span class="o">=</span> <span class="n">in_mc_stats</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_stat_ids</span> <span class="o">=</span> <span class="n">in_stat_ids</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
 <div class="viewcode-block" id="ape_set_server_life_cycle"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_set_server_life_cycle">[docs]</a><span class="k">def</span> <span class="nf">ape_set_server_life_cycle</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_fru_model</span><span class="p">,</span> <span class="n">in_fru_serial</span><span class="p">,</span> <span class="n">in_fru_vendor</span><span class="p">,</span> <span class="n">in_server_lc</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
     <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeSetServerLifeCycle&quot;</span><span class="p">)</span>
@@ -682,6 +725,18 @@
     <span class="n">method</span><span class="o">.</span><span class="n">in_serial</span> <span class="o">=</span> <span class="n">in_serial</span>
     <span class="n">method</span><span class="o">.</span><span class="n">in_sw_id</span> <span class="o">=</span> <span class="n">in_sw_id</span>
     <span class="n">method</span><span class="o">.</span><span class="n">in_vendor</span> <span class="o">=</span> <span class="n">in_vendor</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="ape_update_ape_firmware_active_side"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.ape_update_ape_firmware_active_side">[docs]</a><span class="k">def</span> <span class="nf">ape_update_ape_firmware_active_side</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_field_name</span><span class="p">,</span> <span class="n">in_ip_addr</span><span class="p">,</span> <span class="n">in_side</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;ApeUpdateApeFirmwareActiveSide&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_field_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">in_field_name</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_ip_addr</span> <span class="o">=</span> <span class="n">in_ip_addr</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_side</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">in_side</span><span class="p">)</span>
 
     <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">xml_request</span></div>
@@ -1161,6 +1216,89 @@
     <span class="k">return</span> <span class="n">xml_request</span></div>
 
 
+<div class="viewcode-block" id="equipment_clone"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.equipment_clone">[docs]</a><span class="k">def</span> <span class="nf">equipment_clone</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">in_chassis_profile_name</span><span class="p">,</span> <span class="n">in_target_org</span><span class="p">,</span> <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EquipmentClone&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_chassis_profile_name</span> <span class="o">=</span> <span class="n">in_chassis_profile_name</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_hierarchical</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)[</span><span class="n">in_hierarchical</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">])</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="equipment_instantiate_n_named_template"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.equipment_instantiate_n_named_template">[docs]</a><span class="k">def</span> <span class="nf">equipment_instantiate_n_named_template</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">in_error_on_existing</span><span class="p">,</span> <span class="n">in_name_set</span><span class="p">,</span> <span class="n">in_target_org</span><span class="p">,</span> <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EquipmentInstantiateNNamedTemplate&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_error_on_existing</span> <span class="o">=</span> <span class="n">in_error_on_existing</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_hierarchical</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)[</span><span class="n">in_hierarchical</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">])</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_name_set</span> <span class="o">=</span> <span class="n">in_name_set</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="equipment_instantiate_n_template"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.equipment_instantiate_n_template">[docs]</a><span class="k">def</span> <span class="nf">equipment_instantiate_n_template</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">in_chassis_profile_name_prefix_or_empty</span><span class="p">,</span> <span class="n">in_number_of</span><span class="p">,</span> <span class="n">in_target_org</span><span class="p">,</span> <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EquipmentInstantiateNTemplate&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_chassis_profile_name_prefix_or_empty</span> <span class="o">=</span> <span class="n">in_chassis_profile_name_prefix_or_empty</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_hierarchical</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)[</span><span class="n">in_hierarchical</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">])</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_number_of</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">in_number_of</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="equipment_instantiate_template"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.equipment_instantiate_template">[docs]</a><span class="k">def</span> <span class="nf">equipment_instantiate_template</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">in_chassis_profile_name</span><span class="p">,</span> <span class="n">in_error_on_existing</span><span class="p">,</span> <span class="n">in_target_org</span><span class="p">,</span> <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EquipmentInstantiateTemplate&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_chassis_profile_name</span> <span class="o">=</span> <span class="n">in_chassis_profile_name</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_error_on_existing</span> <span class="o">=</span> <span class="n">in_error_on_existing</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_hierarchical</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)[</span><span class="n">in_hierarchical</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">])</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="equipment_resolve_templates"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.equipment_resolve_templates">[docs]</a><span class="k">def</span> <span class="nf">equipment_resolve_templates</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">in_exclude_if_bound</span><span class="p">,</span> <span class="n">in_filter</span><span class="p">,</span> <span class="n">in_type</span><span class="p">,</span> <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EquipmentResolveTemplates&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_exclude_if_bound</span> <span class="o">=</span> <span class="n">in_exclude_if_bound</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_filter</span> <span class="o">=</span> <span class="n">in_filter</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_hierarchical</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)[</span><span class="n">in_hierarchical</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">])</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_type</span> <span class="o">=</span> <span class="n">in_type</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="equipment_templatise"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.equipment_templatise">[docs]</a><span class="k">def</span> <span class="nf">equipment_templatise</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">dn</span><span class="p">,</span> <span class="n">in_target_org</span><span class="p">,</span> <span class="n">in_template_name</span><span class="p">,</span> <span class="n">in_template_type</span><span class="p">,</span> <span class="n">in_hierarchical</span><span class="o">=</span><span class="n">YesOrNo</span><span class="o">.</span><span class="n">FALSE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EquipmentTemplatise&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_hierarchical</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)[</span><span class="n">in_hierarchical</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">])</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_template_name</span> <span class="o">=</span> <span class="n">in_template_name</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_template_type</span> <span class="o">=</span> <span class="n">in_template_type</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
 <div class="viewcode-block" id="event_register_event_channel"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.event_register_event_channel">[docs]</a><span class="k">def</span> <span class="nf">event_register_event_channel</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_dn</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
     <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;EventRegisterEventChannel&quot;</span><span class="p">)</span>
@@ -1364,6 +1502,18 @@
     <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
     <span class="n">method</span><span class="o">.</span><span class="n">in_template_name</span> <span class="o">=</span> <span class="n">in_template_name</span>
     <span class="n">method</span><span class="o">.</span><span class="n">in_template_type</span> <span class="o">=</span> <span class="n">in_template_type</span>
+
+    <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xml_request</span></div>
+
+
+<div class="viewcode-block" id="lstorage_create_zoning_from_inv"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmethodfactory.lstorage_create_zoning_from_inv">[docs]</a><span class="k">def</span> <span class="nf">lstorage_create_zoning_from_inv</span><span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="n">in_chassis_dn</span><span class="p">,</span> <span class="n">in_disk_zoning_policy_name</span><span class="p">,</span> <span class="n">in_target_org</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Auto-generated UCS XML API Method. &quot;&quot;&quot;</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">ExternalMethod</span><span class="p">(</span><span class="s2">&quot;LstorageCreateZoningFromInv&quot;</span><span class="p">)</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_chassis_dn</span> <span class="o">=</span> <span class="n">in_chassis_dn</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_disk_zoning_policy_name</span> <span class="o">=</span> <span class="n">in_disk_zoning_policy_name</span>
+    <span class="n">method</span><span class="o">.</span><span class="n">in_target_org</span> <span class="o">=</span> <span class="n">in_target_org</span>
 
     <span class="n">xml_request</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">to_xml</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="n">WriteXmlOption</span><span class="o">.</span><span class="n">DIRTY</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">xml_request</span></div>

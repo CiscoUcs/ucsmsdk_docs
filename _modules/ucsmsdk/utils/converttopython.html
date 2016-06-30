@@ -1261,7 +1261,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">doc</span> <span class="o">=</span> <span class="n">xml</span><span class="o">.</span><span class="n">dom</span><span class="o">.</span><span class="n">minidom</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="n">xml_string</span><span class="p">)</span>
-
     <span class="n">cmdlet</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_display_xml</span><span class="p">,</span> <span class="n">_outfile_path</span>
     <span class="k">if</span> <span class="n">_display_xml</span><span class="p">:</span>
@@ -1353,7 +1352,8 @@
             <span class="n">_extract_xml</span><span class="p">(</span><span class="n">file_stream</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
         <span class="k">elif</span> <span class="s2">&quot;[------------- Sending Request to Server ------------&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
             <span class="n">line</span> <span class="o">=</span> <span class="n">file_stream</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">line</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">line</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">_check_if_any_list_value_in_string</span><span class="p">(</span>
+                    <span class="n">_multi_line_method</span><span class="p">,</span><span class="n">line</span><span class="p">):</span>
                 <span class="c1"># print &quot;[%s]&quot; %(line)</span>
                 <span class="n">_extract_xml</span><span class="p">(</span><span class="n">file_stream</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
         <span class="n">line</span> <span class="o">=</span> <span class="n">file_stream</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>

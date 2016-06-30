@@ -347,7 +347,7 @@
     <span class="k">return</span> <span class="n">mo_list</span></div>
 
 
-<div class="viewcode-block" id="write_mo_tree"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.write_mo_tree">[docs]</a><span class="k">def</span> <span class="nf">write_mo_tree</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[],</span>
+<div class="viewcode-block" id="write_mo_tree"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.write_mo_tree">[docs]</a><span class="k">def</span> <span class="nf">write_mo_tree</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[],</span>
                   <span class="n">print_tree</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">tree_dict</span><span class="o">=</span><span class="p">{},</span> <span class="n">dn</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Prints tree structure of any managed object</span>
@@ -355,7 +355,7 @@
 <span class="sd">    Args:</span>
 <span class="sd">        mo (object): ManagedObject</span>
 <span class="sd">        level (int): by default zero</span>
-<span class="sd">        break_level (int or None): last level to process</span>
+<span class="sd">        depth (int or None): last level to process</span>
 <span class="sd">        show_level (int list): levels to display</span>
 <span class="sd">        print_tree (bool): if True, print mo tree</span>
 <span class="sd">        tree_dict (dict): by default {}</span>
@@ -366,7 +366,7 @@
 
 <span class="sd">    Example:</span>
 <span class="sd">        mo=handle.query_dn(&quot;org-root&quot;)\n</span>
-<span class="sd">        tree_dict = write_mo_tree(mo, break_level=3, show_level=[1, 3])\n</span>
+<span class="sd">        tree_dict = write_mo_tree(mo, depth=3, show_level=[1, 3])\n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">:</span>
@@ -410,12 +410,12 @@
     <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">mo</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
         <span class="n">child</span><span class="o">.</span><span class="n">mark_clean</span><span class="p">()</span>
         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="n">break_level</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
+        <span class="k">if</span> <span class="n">depth</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span>
                                       <span class="n">show_level</span><span class="p">,</span> <span class="n">print_tree</span><span class="p">,</span>
                                       <span class="n">tree_dict</span><span class="p">,</span> <span class="n">dn</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">level</span> <span class="o">&lt;=</span> <span class="n">break_level</span><span class="p">:</span>
-            <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="o">&lt;=</span> <span class="n">depth</span><span class="p">:</span>
+            <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span>
                                       <span class="n">show_level</span><span class="p">,</span> <span class="n">print_tree</span><span class="p">,</span>
                                       <span class="n">tree_dict</span><span class="p">,</span> <span class="n">dn</span><span class="p">)</span>
         <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
@@ -424,7 +424,7 @@
 
 
 <div class="viewcode-block" id="extract_mo_tree_from_config_method_response"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.extract_mo_tree_from_config_method_response">[docs]</a><span class="k">def</span> <span class="nf">extract_mo_tree_from_config_method_response</span><span class="p">(</span><span class="n">method_response</span><span class="p">,</span>
-                                                <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                                <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                                                 <span class="n">show_level</span><span class="o">=</span><span class="p">[],</span>
                                                 <span class="n">print_tree</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
                                                 <span class="n">tree_dict</span><span class="o">=</span><span class="p">{}):</span>
@@ -433,7 +433,7 @@
 
 <span class="sd">    Args:</span>
 <span class="sd">        method_response (object): ExternalMethod</span>
-<span class="sd">        break_level (int or None): last level to process</span>
+<span class="sd">        depth (int or None): last level to process</span>
 <span class="sd">        show_level (int list): levels to display</span>
 <span class="sd">        print_tree (bool): if True, print mo tree</span>
 <span class="sd">        tree_dict (dict): by default {}</span>
@@ -443,26 +443,26 @@
 
 <span class="sd">    Example:</span>
 <span class="sd">        response=handle.query_dn(&quot;org-root&quot;, need_response=True)\n</span>
-<span class="sd">        tree_dict = write_mo_tree(response, break_level=3, show_level=[1, 3])\n</span>
+<span class="sd">        tree_dict = write_mo_tree(response, depth=3, show_level=[1, 3])\n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">current_mo_list</span> <span class="o">=</span> <span class="n">method_response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span>
     <span class="k">for</span> <span class="n">current_mo</span> <span class="ow">in</span> <span class="n">current_mo_list</span><span class="p">:</span>
         <span class="n">level</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">current_mo</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
+        <span class="n">tree_dict</span> <span class="o">=</span> <span class="n">write_mo_tree</span><span class="p">(</span><span class="n">current_mo</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span>
                                   <span class="n">show_level</span><span class="p">,</span> <span class="n">print_tree</span><span class="p">,</span>
                                   <span class="n">tree_dict</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">tree_dict</span></div>
 
 
-<div class="viewcode-block" id="print_mo_hierarchy"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.print_mo_hierarchy">[docs]</a><span class="k">def</span> <span class="nf">print_mo_hierarchy</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[]):</span>
+<div class="viewcode-block" id="print_mo_hierarchy"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.print_mo_hierarchy">[docs]</a><span class="k">def</span> <span class="nf">print_mo_hierarchy</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    print hierarchy of class_id</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        class_id (str): class id</span>
 <span class="sd">        level (int): by default zero</span>
-<span class="sd">        break_level (int or None): last level to process</span>
+<span class="sd">        depth (int or None): last level to process</span>
 <span class="sd">        show_level (int list): levels to display</span>
 
 <span class="sd">    Returns:</span>
@@ -470,7 +470,7 @@
 
 <span class="sd">    Example:</span>
 <span class="sd">        response=handle.query_dn(&quot;org-root&quot;, need_response=True)\n</span>
-<span class="sd">        tree_dict = write_mo_tree(response, break_level=3, show_level=[1, 3])\n</span>
+<span class="sd">        tree_dict = write_mo_tree(response, depth=3, show_level=[1, 3])\n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">indent</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
@@ -488,12 +488,12 @@
     <span class="n">children</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">class_id</span><span class="p">]</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
 
     <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">break_level</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&lt;=</span> <span class="n">break_level</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">depth</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&lt;=</span> <span class="n">depth</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">ch_</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
             <span class="n">child</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">ch_</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">child</span> <span class="o">==</span> <span class="n">class_id</span><span class="p">:</span>
                 <span class="k">continue</span>
-            <span class="n">print_mo_hierarchy</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
+            <span class="n">print_mo_hierarchy</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span>
                                <span class="n">show_level</span><span class="p">)</span>
     <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span></div>
 
@@ -526,7 +526,12 @@
 
 <div class="viewcode-block" id="ClassIdMeta"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.ClassIdMeta">[docs]</a><span class="k">class</span> <span class="nc">ClassIdMeta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">class_id</span><span class="p">,</span>
+            <span class="n">include_prop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">show_tree</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span> <span class="o">=</span> <span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">class_id</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">class_id</span> <span class="o">=</span> <span class="n">class_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">xml_attribute</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">xml_attribute</span>
@@ -538,17 +543,28 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mo_meta</span><span class="o">.</span><span class="n">children</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">props</span> <span class="o">=</span> <span class="p">{}</span>
 
-<div class="viewcode-block" id="ClassIdMeta.get_prop_dict"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.ClassIdMeta.get_prop_dict">[docs]</a>    <span class="k">def</span> <span class="nf">get_prop_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">class_obj</span> <span class="o">=</span> <span class="n">load_class</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">props</span> <span class="o">=</span> <span class="n">class_obj</span><span class="o">.</span><span class="n">prop_meta</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_str_tree</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_str_props</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="k">if</span> <span class="n">show_tree</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_str_tree</span> <span class="o">=</span> <span class="n">_show_tree</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">include_prop</span><span class="p">:</span>
+            <span class="n">class_obj</span> <span class="o">=</span> <span class="n">load_class</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">props</span> <span class="o">=</span> <span class="n">class_obj</span><span class="o">.</span><span class="n">prop_meta</span>
+            <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_str_props</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="n">prop</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
 
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method to return string representation.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-
         <span class="n">ts</span> <span class="o">=</span> <span class="mi">8</span>
-        <span class="n">out_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">out_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_str_tree</span>
+
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;ClassId&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">out_str</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;ClassId&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">class_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -565,31 +581,34 @@
             <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">out_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;children&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
 
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_str_props</span>
+
         <span class="k">return</span> <span class="n">out_str</span></div>
 
 
-<span class="k">def</span> <span class="nf">_show_tree</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ancestor_str</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="k">def</span> <span class="nf">_show_tree</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ancestor_str</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
                <span class="n">ancestor</span><span class="o">=</span><span class="p">[],</span> <span class="n">last_child</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
 
     <span class="n">meta_class_id</span> <span class="o">=</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span>
 
+    <span class="n">out_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">ancestor</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">meta_class_id</span><span class="p">]</span><span class="o">.</span><span class="n">parents</span><span class="p">):</span>
-            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
+            <span class="n">out_str</span> <span class="o">+=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">word_u</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
 
     <span class="n">index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ancestor</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 
     <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="k">if</span> <span class="n">meta_class_id</span> <span class="ow">in</span> <span class="n">ancestor</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">  |-</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ancestor_str</span><span class="p">,</span> <span class="n">meta_class_id</span><span class="p">))</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="n">ancestor_str</span> <span class="o">+</span> <span class="s2">&quot;  |-&quot;</span> <span class="o">+</span> <span class="n">meta_class_id</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">ancestor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meta_class_id</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">  |-</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ancestor_str</span><span class="p">,</span> <span class="n">meta_class_id</span><span class="p">))</span>
+        <span class="n">out_str</span> <span class="o">+=</span> <span class="n">ancestor_str</span> <span class="o">+</span> <span class="s2">&quot;  |-&quot;</span> <span class="o">+</span> <span class="n">meta_class_id</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">children</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MO_CLASS_META</span><span class="p">[</span><span class="n">meta_class_id</span><span class="p">]</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
         <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
         <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="n">break_level</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="n">break_level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">depth</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
                 <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 
@@ -598,10 +617,11 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">ancestor_str_</span> <span class="o">=</span> <span class="n">ancestor_str</span> <span class="o">+</span> <span class="s2">&quot;  |&quot;</span>
 
-                <span class="n">_show_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">ancestor_str_</span><span class="p">,</span> <span class="n">ancestor</span><span class="p">,</span>
-                           <span class="n">total</span> <span class="o">==</span> <span class="n">count</span><span class="p">)</span>
+                <span class="n">out_str</span> <span class="o">+=</span> <span class="n">_show_tree</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                                      <span class="n">ancestor_str_</span><span class="p">,</span> <span class="n">ancestor</span><span class="p">,</span> <span class="n">total</span> <span class="o">==</span> <span class="n">count</span><span class="p">)</span>
 
         <span class="n">ancestor</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out_str</span>
 
 
 <div class="viewcode-block" id="search_class_id"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.search_class_id">[docs]</a><span class="k">def</span> <span class="nf">search_class_id</span><span class="p">(</span><span class="n">class_id</span><span class="p">):</span>
@@ -641,7 +661,7 @@
 
 
 <div class="viewcode-block" id="get_meta_info"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucscoreutils.get_meta_info">[docs]</a><span class="k">def</span> <span class="nf">get_meta_info</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">include_prop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                  <span class="n">show_tree</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+                  <span class="n">show_tree</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gets class id meta information</span>
 
@@ -649,7 +669,7 @@
 <span class="sd">        class_id (str): string matching class_id.(case insensitive)</span>
 <span class="sd">        include_prop (bool): by default True. If False, excludes property.</span>
 <span class="sd">        show_tree (bool): by default True. If False will not display mo tree.</span>
-<span class="sd">        break_level (int): display the hierarchy till respective level.</span>
+<span class="sd">        depth (int): depth to which hierarchy is displayed.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        None: If class_id is not present in meta.</span>
@@ -667,7 +687,7 @@
 
 <span class="sd">    Example:</span>
 <span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;)</span>
-<span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, break_level=2)</span>
+<span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, depth=2)</span>
 <span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, include_prop=False)</span>
 <span class="sd">        meta = get_meta_info(class_id=&quot;lsserver&quot;, show_tree=False)</span>
 
@@ -680,22 +700,7 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="n">meta_class_id</span><span class="p">:</span>
         <span class="k">return</span>
 
-    <span class="k">if</span> <span class="n">show_tree</span><span class="p">:</span>
-        <span class="n">_show_tree</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="n">meta_class_id</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="n">break_level</span><span class="p">)</span>
-
-    <span class="n">class_id_meta</span> <span class="o">=</span> <span class="n">ClassIdMeta</span><span class="p">(</span><span class="n">meta_class_id</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">class_id_meta</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">include_prop</span><span class="p">:</span>
-        <span class="n">class_id_meta</span><span class="o">.</span><span class="n">get_prop_dict</span><span class="p">()</span>
-        <span class="n">props</span> <span class="o">=</span> <span class="n">class_id_meta</span><span class="o">.</span><span class="n">props</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">props</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">No property info available for </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">class_id</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">class_id_meta</span>
-        <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">props</span><span class="p">):</span>
-            <span class="k">print</span><span class="p">(</span><span class="n">props</span><span class="p">[</span><span class="n">prop</span><span class="p">])</span>
-
-    <span class="k">return</span> <span class="n">class_id_meta</span></div>
+    <span class="k">return</span> <span class="n">ClassIdMeta</span><span class="p">(</span><span class="n">meta_class_id</span><span class="p">,</span> <span class="n">include_prop</span><span class="p">,</span> <span class="n">show_tree</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span></div>
 </pre></div>
 
           </div>

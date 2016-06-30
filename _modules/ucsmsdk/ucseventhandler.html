@@ -68,6 +68,7 @@
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Condition</span><span class="p">,</span> <span class="n">Lock</span><span class="p">,</span> <span class="n">Thread</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsmo</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucscoreutils</span>
@@ -313,6 +314,8 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__prop_val_exist</span><span class="p">(</span><span class="n">mce</span><span class="o">.</span><span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">success_value</span><span class="p">,</span> <span class="n">failure_value</span><span class="p">,</span>
                                  <span class="n">transient_value</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">watch_block</span><span class="o">.</span><span class="n">callback</span><span class="p">:</span>
+                <span class="n">ctxt</span> <span class="o">=</span> <span class="n">watch_block</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;context&#39;</span><span class="p">]</span>
+                <span class="n">ctxt</span><span class="p">[</span><span class="s2">&quot;done&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
                 <span class="n">watch_block</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="n">mce</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__wb_to_remove</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">watch_block</span><span class="p">)</span>
 
@@ -387,6 +390,9 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">__wbs_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
 
                 <span class="k">for</span> <span class="n">wb</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wb_to_remove</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="s2">&quot;context&quot;</span> <span class="ow">in</span> <span class="n">wb</span><span class="o">.</span><span class="n">params</span><span class="p">:</span>
+                        <span class="n">ctxt</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;context&#39;</span><span class="p">]</span>
+                        <span class="n">ctxt</span><span class="p">[</span><span class="s2">&quot;done&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">watch_block_remove</span><span class="p">(</span><span class="n">wb</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">__wb_to_remove</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -442,8 +448,8 @@
 
     <span class="k">def</span> <span class="nf">_add_class_id_watch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_id</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">ucscoreutils</span><span class="o">.</span><span class="n">find_class_id_in_mo_meta_ignore_case</span><span class="p">(</span><span class="n">class_id</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
-                    <span class="s2">&quot;Invalid ClassId </span><span class="si">%s</span><span class="s2"> specified.&quot;</span> <span class="o">%</span> <span class="n">class_id</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span>
+                <span class="s2">&quot;Invalid ClassId </span><span class="si">%s</span><span class="s2"> specified.&quot;</span> <span class="o">%</span> <span class="n">class_id</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">watch__type_filter</span><span class="p">(</span><span class="n">mce</span><span class="p">):</span>
             <span class="sd">&quot;&quot;&quot;</span>
@@ -501,7 +507,8 @@
             <span class="n">transient_value</span><span class="o">=</span><span class="p">[],</span>
             <span class="n">poll_sec</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
             <span class="n">timeout_sec</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-            <span class="n">call_back</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+            <span class="n">call_back</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+            <span class="n">context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds an event handler.</span>
 
@@ -547,7 +554,8 @@
                       <span class="s1">&#39;poll_sec&#39;</span><span class="p">:</span> <span class="n">poll_sec</span><span class="p">,</span>
                       <span class="s1">&#39;timeout_sec&#39;</span><span class="p">:</span> <span class="n">timeout_sec</span><span class="p">,</span>
                       <span class="s1">&#39;call_back&#39;</span><span class="p">:</span> <span class="n">call_back</span><span class="p">,</span>
-                      <span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()}</span>
+                      <span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+                      <span class="s1">&#39;context&#39;</span><span class="p">:</span> <span class="n">context</span><span class="p">}</span>
 
         <span class="k">if</span> <span class="n">filter_callback</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">UcsValidationException</span><span class="p">(</span><span class="s2">&quot;Error adding WatchBlock...&quot;</span><span class="p">)</span>
@@ -590,6 +598,46 @@
 <span class="sd">        Returns the list of event handlers.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wbs</span></div></div>
+
+
+<div class="viewcode-block" id="wait"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucseventhandler.wait">[docs]</a><span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Waits for `mo.prop == value`</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        handle(UcsHandle): connection handle to the server</span>
+<span class="sd">        mo (Managed Object): managed object to watch</span>
+<span class="sd">        prop (str): property to watch</span>
+<span class="sd">        value (str): property value to wait for</span>
+<span class="sd">        cb(function): callback on success</span>
+<span class="sd">        timeout_sec (int): timeout</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        This method is called from UcsHandle class,</span>
+<span class="sd">        wait_for_event method</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># create a new event handler</span>
+    <span class="n">ueh</span> <span class="o">=</span> <span class="n">UcsEventHandle</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">context</span><span class="p">[</span><span class="s2">&quot;done&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">success_value</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">success_value</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>
+
+    <span class="c1"># create a watch block</span>
+    <span class="n">ueh</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">managed_object</span><span class="o">=</span><span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="n">prop</span><span class="p">,</span> <span class="n">success_value</span><span class="o">=</span><span class="n">success_value</span><span class="p">,</span>
+            <span class="n">call_back</span><span class="o">=</span><span class="n">cb</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="n">timeout_sec</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+
+    <span class="c1"># wait for the event to occur</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">context</span><span class="p">[</span><span class="s2">&quot;done&quot;</span><span class="p">]:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
 </pre></div>
 
           </div>

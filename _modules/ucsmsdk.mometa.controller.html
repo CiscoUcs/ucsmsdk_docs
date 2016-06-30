@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ucsmsdk.mometa.controller package &mdash; ucsmsdk 0.9.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="up" title="ucsmsdk.mometa package" href="ucsmsdk.mometa.html" />
+    <link rel="next" title="ucsmsdk.mometa.cpmaint package" href="ucsmsdk.mometa.cpmaint.html" />
+    <link rel="prev" title="ucsmsdk.mometa.config package" href="ucsmsdk.mometa.config.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ucsmsdk-mometa-controller-package">
+<h1>ucsmsdk.mometa.controller package<a class="headerlink" href="#ucsmsdk-mometa-controller-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-ucsmsdk.mometa.controller.ControllerHaController">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-ucsmsdk.mometa.controller.ControllerHaController" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the general information for ControllerHaController ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.controller.ControllerHaController.</code><code class="descname">ControllerHaController</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/controller/ControllerHaController.html#ControllerHaController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is ControllerHaController class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([])</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'trigElectionFlag': 'trig_election_flag', 'rn': 'rn', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x133c07e50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1345d3410&gt;, 'trig_election_flag': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x1345d3950&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x133bc1950&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x133bb0c10&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x133c07d10&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaController.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.controller.ControllerHaController.</code><code class="descname">ControllerHaControllerConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/controller/ControllerHaController.html#ControllerHaControllerConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_FALSE">
+<code class="descname">TRIG_ELECTION_FLAG_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_NO">
+<code class="descname">TRIG_ELECTION_FLAG_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_TRUE">
+<code class="descname">TRIG_ELECTION_FLAG_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_YES">
+<code class="descname">TRIG_ELECTION_FLAG_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerHaController.ControllerHaControllerConsts.TRIG_ELECTION_FLAG_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.controller.ControllerOperationalVersionHolder"></span><p>This module contains the general information for ControllerOperationalVersionHolder ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.</code><code class="descname">ControllerOperationalVersionHolder</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>serial</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/controller/ControllerOperationalVersionHolder.html#ControllerOperationalVersionHolder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is ControllerOperationalVersionHolder class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolderConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'serial'])</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'sacl': 'sacl', 'rn': 'rn', 'serial': 'serial', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136b0d350&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136b0d050&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136b0d450&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136b0dd10&gt;, 'serial': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136b0d390&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x136b0dc50&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolder.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolderConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.</code><code class="descname">ControllerOperationalVersionHolderConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/controller/ControllerOperationalVersionHolder.html#ControllerOperationalVersionHolderConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerOperationalVersionHolder.ControllerOperationalVersionHolderConsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-ucsmsdk.mometa.controller.ControllerPreferedVersionHolder"></span><p>This module contains the general information for ControllerPreferedVersionHolder ManagedObject.</p>
+<dl class="class">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.</code><code class="descname">ControllerPreferedVersionHolder</code><span class="sig-paren">(</span><em>parent_mo_or_dn</em>, <em>serial</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ucsmsdk/mometa/controller/ControllerPreferedVersionHolder.html#ControllerPreferedVersionHolder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject" title="ucsmsdk.ucsmo.ManagedObject"><code class="xref py py-class docutils literal"><span class="pre">ucsmsdk.ucsmo.ManagedObject</span></code></a></p>
+<p>This is ControllerPreferedVersionHolder class.</p>
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.consts">
+<code class="descname">consts</code><em class="property"> = &lt;ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts instance&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.consts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.mo_meta">
+<code class="descname">mo_meta</code><em class="property"> = &lt;ucsmsdk.ucscoremeta.MoMeta object&gt;</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.mo_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.naming_props">
+<code class="descname">naming_props</code><em class="property"> = set([u'serial'])</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.naming_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.prop_map">
+<code class="descname">prop_map</code><em class="property"> = {'dn': 'dn', 'status': 'status', 'inUse': 'in_use', 'sacl': 'sacl', 'rn': 'rn', 'serial': 'serial', 'childAction': 'child_action'}</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.prop_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.prop_meta">
+<code class="descname">prop_meta</code><em class="property"> = {'dn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311b50&gt;, 'status': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311dd0&gt;, 'in_use': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311bd0&gt;, 'sacl': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311cd0&gt;, 'rn': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311c50&gt;, 'serial': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311d50&gt;, 'child_action': &lt;ucsmsdk.ucscoremeta.MoPropertyMeta object at 0x129311ad0&gt;}</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolder.prop_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts">
+<em class="property">class </em><code class="descclassname">ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.</code><code class="descname">ControllerPreferedVersionHolderConsts</code><a class="reference internal" href="_modules/ucsmsdk/mometa/controller/ControllerPreferedVersionHolder.html#ControllerPreferedVersionHolderConsts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_FALSE">
+<code class="descname">IN_USE_FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_NO">
+<code class="descname">IN_USE_NO</code><em class="property"> = 'no'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_TRUE">
+<code class="descname">IN_USE_TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_YES">
+<code class="descname">IN_USE_YES</code><em class="property"> = 'yes'</em><a class="headerlink" href="#ucsmsdk.mometa.controller.ControllerPreferedVersionHolder.ControllerPreferedVersionHolderConsts.IN_USE_YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ucsmsdk.mometa.controller">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ucsmsdk.mometa.controller" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ucsmsdk.mometa.controller package</a><ul>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.controller.ControllerHaController">Submodules</a></li>
+<li><a class="reference internal" href="#module-ucsmsdk.mometa.controller">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="ucsmsdk.html">ucsmsdk package</a><ul>
+  <li><a href="ucsmsdk.mometa.html">ucsmsdk.mometa package</a><ul>
+      <li>Previous: <a href="ucsmsdk.mometa.config.html" title="previous chapter">ucsmsdk.mometa.config package</a></li>
+      <li>Next: <a href="ucsmsdk.mometa.cpmaint.html" title="next chapter">ucsmsdk.mometa.cpmaint package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk.mometa.controller.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk.mometa.controller.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

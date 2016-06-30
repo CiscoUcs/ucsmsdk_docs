@@ -55,6 +55,7 @@
 
 
 <span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">threading</span>
 
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucsgenutils</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ucscoreutils</span>
@@ -91,7 +92,9 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">secure</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                  <span class="n">proxy</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="n">UcsSession</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">secure</span><span class="p">,</span> <span class="n">proxy</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__threaded</span> <span class="o">=</span> <span class="bp">False</span>
 
 <div class="viewcode-block" id="UcsHandle.set_dump_xml"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.set_dump_xml">[docs]</a>    <span class="k">def</span> <span class="nf">set_dump_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -106,6 +109,31 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_unset_dump_xml</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="UcsHandle.set_mode_threading"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.set_mode_threading">[docs]</a>    <span class="k">def</span> <span class="nf">set_mode_threading</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Indicates that the application is utlising handle in</span>
+<span class="sd">        thread context.</span>
+<span class="sd">        Calling this method internally ensures that the commit_buffers</span>
+<span class="sd">        are separated based on the name of the threads.</span>
+<span class="sd">        This makes every thread a separate transaction that does not</span>
+<span class="sd">        interfere with other threads.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__threaded</span> <span class="o">=</span> <span class="bp">True</span></div>
+
+<div class="viewcode-block" id="UcsHandle.unset_mode_threading"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.unset_mode_threading">[docs]</a>    <span class="k">def</span> <span class="nf">unset_mode_threading</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Unsets the threaded mode of operation.</span>
+<span class="sd">        Applications use the common common_buffer in this mode.</span>
+<span class="sd">        Only one simultaneous transaction is possible here on</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__threaded</span> <span class="o">=</span> <span class="bp">False</span></div>
+
+<div class="viewcode-block" id="UcsHandle.is_threading_enabled"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.is_threading_enabled">[docs]</a>    <span class="k">def</span> <span class="nf">is_threading_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns if threading mode is set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__threaded</span></div>
 
 <div class="viewcode-block" id="UcsHandle.login"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.login">[docs]</a>    <span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_refresh</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -558,7 +586,38 @@
 
         <span class="k">return</span> <span class="n">out_mo_list</span></div>
 
-<div class="viewcode-block" id="UcsHandle.add_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.add_mo">[docs]</a>    <span class="k">def</span> <span class="nf">add_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">modify_present</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_get_commit_buf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_update_commit_buf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span><span class="p">[</span><span class="n">tag</span><span class="p">][</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span>
+
+    <span class="k">def</span> <span class="nf">_auto_set_tag_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sets the tag automatically to the thread name</span>
+<span class="sd">        when threading mode is enabled</span>
+<span class="sd">        This makes sure that every thread gets it&#39;s own</span>
+<span class="sd">        commit buffer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># if the user already specified a tag, return the same</span>
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">tag</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_threading_enabled</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">None</span>
+
+        <span class="k">return</span> <span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span>
+
+<div class="viewcode-block" id="UcsHandle.add_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.add_mo">[docs]</a>    <span class="k">def</span> <span class="nf">add_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">modify_present</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds a managed object to the UcsHandle commit buffer.</span>
 <span class="sd">        This method does not trigger a commit by itself.</span>
@@ -578,14 +637,16 @@
 <span class="sd">            handle.commit()\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_set_tag_context</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
         <span class="k">if</span> <span class="n">modify_present</span> <span class="ow">in</span> <span class="n">ucsgenutils</span><span class="o">.</span><span class="n">AFFIRMATIVE_LIST</span><span class="p">:</span>
             <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;created,modified&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;created&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_commit_buf</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UcsHandle.set_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.set_mo">[docs]</a>    <span class="k">def</span> <span class="nf">set_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">):</span>
+<div class="viewcode-block" id="UcsHandle.set_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.set_mo">[docs]</a>    <span class="k">def</span> <span class="nf">set_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Modifies a managed object and adds it to UcsHandle commit buffer (if</span>
 <span class="sd">         not already in it).</span>
@@ -605,10 +666,12 @@
 <span class="sd">            handle.commit()\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;modified&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span></div>
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_set_tag_context</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
 
-<div class="viewcode-block" id="UcsHandle.remove_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.remove_mo">[docs]</a>    <span class="k">def</span> <span class="nf">remove_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">):</span>
+        <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;modified&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_commit_buf</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="UcsHandle.remove_mo"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.remove_mo">[docs]</a>    <span class="k">def</span> <span class="nf">remove_mo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Removes a managed object.</span>
 <span class="sd">        This method does not trigger a commit by itself.</span>
@@ -627,13 +690,15 @@
 <span class="sd">            handle.commit()\n</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_set_tag_context</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
         <span class="n">mo</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;deleted&quot;</span>
         <span class="k">if</span> <span class="n">mo</span><span class="o">.</span><span class="n">parent_mo</span><span class="p">:</span>
             <span class="n">mo</span><span class="o">.</span><span class="n">parent_mo</span><span class="o">.</span><span class="n">child_remove</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span><span class="p">[</span><span class="n">mo</span><span class="o">.</span><span class="n">dn</span><span class="p">]</span> <span class="o">=</span> <span class="n">mo</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_commit_buf</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UcsHandle.commit"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.commit">[docs]</a>    <span class="k">def</span> <span class="nf">commit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UcsHandle.commit"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.commit">[docs]</a>    <span class="k">def</span> <span class="nf">commit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Commit the buffer to the server. Pushes all the configuration changes</span>
 <span class="sd">        so far to the server.</span>
@@ -654,10 +719,12 @@
         <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_resolve_dns</span>
         <span class="kn">from</span> <span class="nn">.ucsmethodfactory</span> <span class="kn">import</span> <span class="n">config_conf_mos</span>
 
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_set_tag_context</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
         <span class="n">refresh_dict</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">mo_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span>
+        <span class="n">mo_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_commit_buf</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">mo_dict</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;No Mo to be Committed&quot;</span><span class="p">)</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Commit Buffer is Empty&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="bp">None</span>
 
         <span class="n">config_map</span> <span class="o">=</span> <span class="n">ConfigMap</span><span class="p">()</span>
@@ -681,6 +748,7 @@
                                <span class="bp">False</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">commit_buffer_discard</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">UcsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">error_descr</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">pair_</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
@@ -704,9 +772,9 @@
             <span class="k">for</span> <span class="n">out_mo</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">out_configs</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
                 <span class="n">out_mo</span><span class="o">.</span><span class="n">sync_mo</span><span class="p">(</span><span class="n">refresh_dict</span><span class="p">[</span><span class="n">out_mo</span><span class="o">.</span><span class="n">dn</span><span class="p">])</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span> <span class="o">=</span> <span class="p">{}</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commit_buffer_discard</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UcsHandle.commit_buffer_discard"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.commit_buffer_discard">[docs]</a>    <span class="k">def</span> <span class="nf">commit_buffer_discard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UcsHandle.commit_buffer_discard"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.commit_buffer_discard">[docs]</a>    <span class="k">def</span> <span class="nf">commit_buffer_discard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Discard the configuration changes in the commit buffer.</span>
 
@@ -720,7 +788,40 @@
 <span class="sd">            handle.commit_buffer_discard()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">__to_commit</span> <span class="o">=</span> <span class="p">{}</span></div></div>
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_set_tag_context</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commit_buf_tagged</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="UcsHandle.wait_for_event"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucshandle.UcsHandle.wait_for_event">[docs]</a>    <span class="k">def</span> <span class="nf">wait_for_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Waits for `mo.prop == value` and invokes the passed callback</span>
+<span class="sd">        when the condition is met. The callback is called with one</span>
+<span class="sd">        argument which is a mo change event. It also contains the Mo</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mo (Managed Object): managed object to watch</span>
+<span class="sd">            prop (str): property to watch</span>
+<span class="sd">            value (str): property value to wait for</span>
+<span class="sd">            cb(function): callback on success</span>
+<span class="sd">            timeout (int): timeout</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            def cb(mce):</span>
+<span class="sd">                print mce.mo</span>
+
+<span class="sd">            sp_mo = handle.query_dn(&quot;org-root/ls-demoSP&quot;)</span>
+<span class="sd">            wait_for_event(sp_mo, &#39;descr&#39;, &#39;demo_description&#39;, cb)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">ucseventhandler</span> <span class="kn">import</span> <span class="n">wait</span>
+
+        <span class="n">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span></div></div>
 </pre></div>
 
           </div>

@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Table of Contents &mdash; ucsmsdk 0.9.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ucsmsdk 0.9.1.0 documentation" href="index.html" />
+    <link rel="next" title="ucsmsdk package" href="ucsmsdk.html" />
+    <link rel="prev" title="Welcome to ucsmsdk’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="table-of-contents">
+<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><a class="reference external" href="#overview">Overview</a></li>
+<li><a class="reference external" href="#management-information-model">Management Information Model</a><ol class="arabic">
+<li><a class="reference external" href="#managed-objects">Managed Objects</a></li>
+<li><a class="reference external" href="#references-to-managed-objects">References To Managed
+Objects</a></li>
+<li><a class="reference external" href="#properties-of-managed-objects">Properties Of Managed
+Objects</a></li>
+<li><a class="reference external" href="#methods">Methods</a></li>
+</ol>
+</li>
+<li><a class="reference external" href="#installation">Installation</a><ol class="arabic">
+<li><a class="reference external" href="#pre-install-checklist">Pre-install Checklist</a></li>
+<li><a class="reference external" href="#installation-steps">Installation Steps</a></li>
+</ol>
+</li>
+<li><a class="reference external" href="#uninstallation">Uninstallation</a><ol class="arabic">
+<li><a class="reference external" href="#uninstallation-steps">Uninstallation Steps</a></li>
+</ol>
+</li>
+<li><a class="reference external" href="#getting-started">Getting Started</a><ol class="arabic">
+<li><a class="reference external" href="#connecting-disconnecting">Connecting Disconnecting</a></li>
+<li><a class="reference external" href="#basic-apis">Base APIs</a></li>
+<li><a class="reference external" href="#creating-objects">Creating Objects</a></li>
+<li><a class="reference external" href="#querying-objects">Querying Objects</a></li>
+<li><a class="reference external" href="#querying-objects-with-filters">Querying Objects With
+Filters</a></li>
+<li><a class="reference external" href="#modifying-objects">Modifying Objects</a></li>
+<li><a class="reference external" href="#deleting-objects">Deleting Objects</a></li>
+<li><a class="reference external" href="#transaction">Transaction</a></li>
+</ol>
+</li>
+<li><a class="reference external" href="#convert-to-ucs-python">Convert To Ucs Python</a></li>
+<li><a class="reference external" href="#retrieving-meta-information">Retrieving Meta Information</a></li>
+<li><a class="reference external" href="#watch-ucs-events">Watch Ucs Events</a><ol class="arabic">
+<li><a class="reference external" href="#wait-until-condition">Wait Until Condition</a></li>
+</ol>
+</li>
+<li><a class="reference external" href="#backup-and-import">Backup And Import</a><ol class="arabic">
+<li><a class="reference external" href="#backup-ucs">Backup Ucs</a></li>
+<li><a class="reference external" href="#import-ucs">Import Ucs</a></li>
+</ol>
+</li>
+<li><a class="reference external" href="#start-gui-session">Start GUI Session</a></li>
+<li><a class="reference external" href="#start-kvm-session">Start KVM Session</a></li>
+<li><a class="reference external" href="#advanced-features">Advanced Features</a><ol class="arabic">
+<li><a class="reference external" href="#compare-and-sync-ucs">Compare And Sync UCS</a></li>
+<li><a class="reference external" href="#multiple-parallel-transactions">Multiple Parallel
+Transactions</a></li>
+<li><a class="reference external" href="#threading-mode">Threading Mode</a></li>
+</ol>
+</li>
+</ol>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Cisco UCS Python SDK is a python module which helps automate all aspects
+of Cisco UCS management including server, network, storage and
+hypervisor management.</p>
+<p>Bulk of the Cisco UCS Python SDK work on the UCS Manager’s Management
+Information Tree (MIT), performing create, modify or delete actions on
+the Managed Objects (MO) in the tree. The next chapter provides an
+overview of the Cisco UCS Management Information Model (MIM).</p>
+<p>One of the easiest ways to learn UCS configuration through UCS Python
+SDK is to automatically generate python script, for configuration
+actions performed with the UCSM GUI, using API described in <a class="reference external" href="#convert-to-ucs-python">Convert To
+Ucs Python</a>.</p>
+</div>
+<div class="section" id="management-information-model">
+<h2>Management Information Model<a class="headerlink" href="#management-information-model" title="Permalink to this headline">¶</a></h2>
+<p>All the physical and logical components that comprise Cisco UCS are
+represented in a hierarchical Management Information Model, referred to
+as the Management Information Tree (MIT). Each node in the tree
+represents a Managed Object (MO), uniquely identified by its
+Distinguished Name. (DN)</p>
+<p>The figure below illustrates a sample (partial) MIT for three chassis.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Tree (topRoot)              Distinguished Name
+|— sys                      sys
+|— chassis-1                    sys/chassis-1
+|— chassis-2                    sys/chassis-2
+|— chassis-3                    sys/chassis-3
+    |— blade-1              sys/chassis-3/blade-1
+    |       |— adaptor-1        sys/chassis-3/blade-1/adaptor-1
+    |— blade-2              sys/chassis-3/blade-2
+            |— adaptor-1        sys/chassis-3/blade-2/adaptor-1
+            |— adaptor-2        sys/chassis-3/blade-2/adaptor-2
+</pre></div>
+</div>
+<div class="section" id="managed-objects">
+<h3>Managed Objects<a class="headerlink" href="#managed-objects" title="Permalink to this headline">¶</a></h3>
+<p>Managed Objects (MO) are abstractions of Cisco UCS resources, such as
+fabric interconnects, chassis, blades, and rack-mounted servers. Managed
+Objects represent any physical or logical entity that is configured /
+managed in the Cisco UCS MIT. For example, physical entities such as
+Servers, Chassis, I/O cards, Processors and logical entities such as
+Resource pools, User roles, Service profiles, and Policies are
+represented as Managed Objects.</p>
+<p>Every Managed Object is uniquely identified in the tree with its
+Distinguished Name (Dn) and can be uniquely identified within the
+context of its parent with its Relative Name (Rn). The Dn identifies the
+place of the MO in the MIT. A Dn is a concatenation of all the relative
+names starting from the root to the MO itself. Essentially, Dn =
+[Rn]/[Rn]/[Rn]/…/[Rn].</p>
+<p>In the example below, Dn provides a fully qualified name for adaptor-1
+in the model.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;dn = “sys/chassis-5/blade-2/adaptor-1” /&gt;
+</pre></div>
+</div>
+<p>The above written Dn is composed of the following Rn:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">topSystem</span> <span class="n">MO</span><span class="p">:</span> <span class="n">rn</span><span class="o">=</span><span class="s2">&quot;sys&quot;</span>
+<span class="n">equipmentChassis</span> <span class="n">MO</span><span class="p">:</span> <span class="n">rn</span><span class="o">=</span><span class="s2">&quot;chassis-[id]&quot;</span>
+<span class="n">computeBlade</span> <span class="n">MO</span><span class="p">:</span> <span class="n">rn</span> <span class="o">=</span><span class="s2">&quot;blade-[slotId]&quot;</span>
+<span class="n">adaptorUnit</span> <span class="n">MO</span><span class="p">:</span> <span class="n">rn</span><span class="o">=</span><span class="s2">&quot;adaptor-[id]&quot;</span>
+</pre></div>
+</div>
+<p>A Relative Name (Rn) may have the value of one or more of the MO’s
+properties embedded in it. This allows in differentiating multiple MOs
+of the same type within the context of the parent. Any properties that
+form part of the Rn as described earlier are referred to as Naming
+properties.</p>
+<p>For instance, multiple blade MOs reside under a chassis MO. The blade MO
+contains the blade identifier as part of its Rn (blade-[Id]), thereby
+uniquely identifying each blade MO in the context of a chassis.</p>
+</div>
+<div class="section" id="references-to-managed-objects">
+<h3>References To Managed Objects<a class="headerlink" href="#references-to-managed-objects" title="Permalink to this headline">¶</a></h3>
+<p>The contents of the Managed Objects are referred to during the operation
+of UCS. Some of the MOs are referred to implicitly (PreLoginBanner
+during login) or as part of deployment of another MO (The Service
+Profile MO may refer to a template or a VNIC refers to a number of VLAN
+MOs).</p>
+<p>A singleton MO type is found utmost once in the entire MIT and is
+typically referred to implicitly.</p>
+<p>Non-Singleton MO type may be instantiated one or more times in the MIT.
+In many cases, when an MO refers to another, the reference is made by
+name. Depending on the type of the referenced MO, the resolution may be
+hierarchical. For instance, a service profile template is defined under
+an Org. Since an org may contain sub-orgs, a sub org may have a service
+profile template defined with the same name. Now, when a service profile
+instance refers to a service profile template (by name), the name is
+looked up hierarchically from the org of the service profile instance up
+until the root org. The first match is used. If no match is found, then
+the name “default” is looked up in the similar way and the first match
+is used.</p>
+</div>
+<div class="section" id="properties-of-managed-objects">
+<h3>Properties of Managed Objects<a class="headerlink" href="#properties-of-managed-objects" title="Permalink to this headline">¶</a></h3>
+<p>Properties of Managed Objects can be classified as Configuration or
+Operational.</p>
+<p>Configuration properties may be classified as:</p>
+<ul class="simple">
+<li>Naming properties: Form part of the Rn. <strong>Needs</strong> to be specified
+only during MO creation and cannot be modified later.</li>
+<li>Create-Only properties: <strong>May</strong> be specified only during MO creation
+and cannot be modified later. If the property is not specified, a
+default value is assumed.</li>
+<li>Read / Write properties: <strong>May</strong> be specified during MO creation and
+can also be modified subsequently.</li>
+</ul>
+<p>Operational properties indicate the current status of the MO / system
+and are hence read-only.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<p>Methods are Cisco UCS XML APIs, used to manage and monitor the system.
+There are methods supported for:</p>
+<ul class="simple">
+<li>Authentication<ul>
+<li>AaaLogin</li>
+<li>AaaRefresh</li>
+<li>AaaLogout</li>
+</ul>
+</li>
+<li>Configuration<ul>
+<li>ConfigConfMo(s)</li>
+<li>LsClone</li>
+<li>LsInstantiate*</li>
+<li>FaultAckFaults</li>
+</ul>
+</li>
+<li>Query<ul>
+<li>ConfigResolveDn(s)</li>
+<li>ConfigResolveClass(es)</li>
+<li>ConfigResolveChildren</li>
+</ul>
+</li>
+<li>Event Monitor<ul>
+<li>EventSubscribe</li>
+</ul>
+</li>
+</ul>
+<p>The class query methods (ConfigResolveClass(es), ConfigResolveChildren)
+allow a filter to be specified so that a specific set of MOs are matched
+and returned by the method.</p>
+<p>The supported filters are:</p>
+<ul class="simple">
+<li>allbits – Match if all specified values are present in a multi-valued
+property</li>
+<li>anybit – Match if any of the specified values are present in a
+multi-valued property</li>
+<li>bw – Match if the property’s value lies between the two values
+specified</li>
+<li>eq – Match if property’s value is the same as the specified value</li>
+<li>ge – Match if property’s value is greater than or equal to the
+specified value</li>
+<li>gt - Match if property’s value is greater than the specified value</li>
+<li>le – Match if property’s value is lesser than or equal to the
+specified value</li>
+<li>lt – Match if property’s value is lesser than the specified value</li>
+<li>ne – Match if property’s value is not equal to the specified value</li>
+<li>wcard – Match if property’s value matches the pattern specified</li>
+</ul>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pre-install-checklist">
+<h3>Pre-install Checklist<a class="headerlink" href="#pre-install-checklist" title="Permalink to this headline">¶</a></h3>
+<p>Ensure the following are available</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">&gt;=</span> <span class="mf">2.7</span>
+<span class="n">pip</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-steps">
+<h3>Installation Steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Installing the last released version of the SDK from pypi</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ucsmsdk</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Installing the latest developer version from github</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">CiscoUcs</span><span class="o">/</span><span class="n">ucsmsdk</span><span class="o">/</span>
+<span class="n">cd</span> <span class="n">ucsmsdk</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="uninstallation">
+<h2>Uninstallation<a class="headerlink" href="#uninstallation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="uninstallation-steps">
+<h3>Uninstallation Steps<a class="headerlink" href="#uninstallation-steps" title="Permalink to this headline">¶</a></h3>
+<p>Irrespective of the method that was used to install the SDK, it can be
+uninstalled using the below command,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">ucsmsdk</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="connecting-disconnecting">
+<h3>Connecting Disconnecting<a class="headerlink" href="#connecting-disconnecting" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.ucshandle</span> <span class="k">import</span> <span class="n">UcsHandle</span>
+
+<span class="c1"># Create a connection handle</span>
+<span class="n">handle</span> <span class="o">=</span> <span class="n">UcsHandle</span><span class="p">(</span><span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span>
+
+<span class="c1"># Login to the server</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+
+<span class="c1"># Logout from the server</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Refer <a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html#module-ucsmsdk.ucshandle">UcsHandle API
+Reference</a>
+for detailed parameter sets to <code class="docutils literal"><span class="pre">UcsHandle</span></code></p>
+</div>
+<div class="section" id="base-apis">
+<h3>Base APIs<a class="headerlink" href="#base-apis" title="Permalink to this headline">¶</a></h3>
+<p>The SDK provides APIs to enable CRUD operations.</p>
+<ul class="simple">
+<li><strong>C</strong>reate an object - <code class="docutils literal"><span class="pre">add_mo</span></code></li>
+<li><strong>R</strong>etrieve an object -
+<code class="docutils literal"><span class="pre">query_dn</span></code>,<code class="docutils literal"><span class="pre">query_classid</span></code>,<code class="docutils literal"><span class="pre">query_dns</span></code>,<code class="docutils literal"><span class="pre">query_classids</span></code></li>
+<li><strong>U</strong>pdate an object - <code class="docutils literal"><span class="pre">set_mo</span></code></li>
+<li><strong>D</strong>elete an object - <code class="docutils literal"><span class="pre">delete_mo</span></code></li>
+</ul>
+<p>The above APIs can be bunched together in a transaction (All or None).
+<code class="docutils literal"><span class="pre">commit_mo</span></code> commits the changes made using the above APIs.</p>
+<p>All these methods are invoked on a <code class="docutils literal"><span class="pre">UcsHandle</span></code> instance. We refer it
+by <code class="docutils literal"><span class="pre">handle</span></code> in all the examples here-after. Refer to the <a class="reference external" href="#connecting-disconnecting">Connecting
+Disconnecting</a> to create a new handle.</p>
+</div>
+<div class="section" id="creating-objects">
+<h3>Creating Objects<a class="headerlink" href="#creating-objects" title="Permalink to this headline">¶</a></h3>
+<p>Creating managed objects is done via <code class="docutils literal"><span class="pre">add_mo</span></code> API.</p>
+<p>Example:</p>
+<p>The below example creates a new Service Profile(<code class="docutils literal"><span class="pre">LsServer</span></code>) Object
+under the parent <code class="docutils literal"><span class="pre">org-root</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.mometa.ls.LsServer</span> <span class="k">import</span> <span class="n">LsServer</span>
+
+<span class="n">sp</span> <span class="o">=</span> <span class="n">LsServer</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="s2">&quot;org-root&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sp_demo&quot;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>note</strong>: the changes will only be sent to server when
+<code class="docutils literal"><span class="pre">handle.commit()</span></code> is called.</p>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.add_mo">Add Mo API
+reference</a></p>
+</div>
+<div class="section" id="querying-objects">
+<h3>Querying Objects<a class="headerlink" href="#querying-objects" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Querying Objects via Distinguished Name (DN)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">object</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="s2">&quot;org-root/ls-sp_demo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Querying Multiple Objects via Multiple Distinguished Names (DN)</p>
+<p>The returned object is a dictionary in <code class="docutils literal"><span class="pre">{dn:object}</span></code> format</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">object_dict</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="s2">&quot;org-root/ls-sp_demo1&quot;</span><span class="p">,</span> <span class="s2">&quot;org-root&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Querying Objects via class Id</p>
+<p>The below returns all objects of type <code class="docutils literal"><span class="pre">orgOrg</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">object_array</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_classid</span><span class="p">(</span><span class="s2">&quot;orgOrg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Querying Objects via multiple class Ids</p>
+<p>The below returns all objects of type <code class="docutils literal"><span class="pre">orgOrg</span></code> and <code class="docutils literal"><span class="pre">fabricVlan</span></code>.
+The output is a dictionary of format <code class="docutils literal"><span class="pre">{classId:</span> <span class="pre">[objects]}</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">object_dict</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_classid</span><span class="p">(</span><span class="s2">&quot;orgOrg&quot;</span><span class="p">,</span> <span class="s2">&quot;fabricVlan&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.query_dn">Query DN API
+reference</a></p>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.query_dns">Query DNs API
+reference</a></p>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.query_classid">Query Class Id API
+reference</a></p>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.query_classids">Query Class Ids API
+reference</a></p>
+</div>
+<div class="section" id="querying-objects-with-filters">
+<h3>Querying Objects With Filters<a class="headerlink" href="#querying-objects-with-filters" title="Permalink to this headline">¶</a></h3>
+<p>Filter is passed as string parameter to
+<code class="docutils literal"><span class="pre">query_dn</span></code>,<code class="docutils literal"><span class="pre">query_dns</span></code>,<code class="docutils literal"><span class="pre">query_classid</span></code>,<code class="docutils literal"><span class="pre">query_classids</span></code>
+methods</p>
+<ul>
+<li><p class="first">Basic usage:</p>
+<p>A basic filter string is of <code class="docutils literal"><span class="pre">(prop_name,</span> <span class="pre">prop_value)</span></code> format,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">filter_str</span> <span class="o">=</span> <span class="s1">&#39;(name, &quot;demo_1&quot;)&#39;</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_classid</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="s2">&quot;LsServer&quot;</span><span class="p">,</span> <span class="n">filter_str</span><span class="o">=</span><span class="n">filter_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Specific usage:</p>
+<p>To have more control on the filter behaviour use the extended filter
+format, <code class="docutils literal"><span class="pre">(prop_name,</span> <span class="pre">prop_value,</span> <span class="pre">filter_type)</span></code></p>
+<p><strong>filter_type</strong>:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">re</span></code>: Default, regex match.</li>
+<li><code class="docutils literal"><span class="pre">eq</span></code>: equal, exact match.</li>
+<li><code class="docutils literal"><span class="pre">ne</span></code>: not equal</li>
+<li><code class="docutils literal"><span class="pre">ge</span></code>: greater than and equal to</li>
+<li><code class="docutils literal"><span class="pre">gt</span></code>: greater than</li>
+<li><code class="docutils literal"><span class="pre">le</span></code>: less than and equal to</li>
+<li><code class="docutils literal"><span class="pre">lt</span></code>: less than</li>
+</ul>
+<p>An example of an exact match,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">filter_str</span> <span class="o">=</span> <span class="s1">&#39;(name, &quot;demo_1&quot;, type=&quot;eq&quot;)&#39;</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_classid</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="s2">&quot;LsServer&quot;</span><span class="p">,</span> <span class="n">filter_str</span><span class="o">=</span><span class="n">filter_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Complex filters - combination of multiple conditions:</p>
+<p>The below checks for <code class="docutils literal"><span class="pre">(name</span> <span class="pre">==</span> <span class="pre">&quot;demo&quot;)</span></code> or
+<code class="docutils literal"><span class="pre">(name</span> <span class="pre">==</span> <span class="pre">*demo_1*</span> <span class="pre">and</span> <span class="pre">name</span> <span class="pre">==</span> <span class="pre">[0-9]_1)</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">filter_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;(name, &quot;demo&quot;, type=&quot;eq&quot;) or ((name, &quot;demo_1&quot;) and</span>
+<span class="s1">                                            (name, &quot;[0-9]_1&quot;))&#39;&#39;&#39;</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_classid</span><span class="p">(</span><span class="n">class_id</span><span class="o">=</span><span class="s2">&quot;LsServer&quot;</span><span class="p">,</span> <span class="n">filter_str</span><span class="o">=</span><span class="n">filter_str</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>note</strong>: <code class="docutils literal"><span class="pre">'''</span></code> here is used as a multiline string</p>
+</li>
+</ul>
+</div>
+<div class="section" id="modifying-objects">
+<h3>Modifying Objects<a class="headerlink" href="#modifying-objects" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">set_mo</span></code> is used for updating an existing object</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Query for an existing Mo</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="s2">&quot;org-root/ls-sp_demo&quot;</span><span class="p">)</span>
+
+<span class="c1"># Update description of the service profile</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">descr</span> <span class="o">=</span> <span class="s2">&quot;demo_descr&quot;</span>
+
+<span class="c1"># Add it to the on-going transaction</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">set_mo</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>note</strong>: The changes will not be sent to the server until a
+<code class="docutils literal"><span class="pre">commit()</span></code> is invoked.</p>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.set_mo">Set Mo API
+reference</a></p>
+</div>
+<div class="section" id="deleting-objects">
+<h3>Deleting Objects<a class="headerlink" href="#deleting-objects" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">remove_mo</span></code> is used for removing an object</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Query for an existing Mo</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="s2">&quot;org-root/ls-sp_demo&quot;</span><span class="p">)</span>
+
+<span class="c1"># Remove the object</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">remove_mo</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>note</strong>: The changes will not be sent to the server until a
+<code class="docutils literal"><span class="pre">commit()</span></code> is invoked.</p>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.html?highlight=add_mo#ucsmsdk.ucshandle.UcsHandle.remove_mo">Remove Mo API
+reference</a></p>
+</div>
+<div class="section" id="transaction">
+<h3>Transaction<a class="headerlink" href="#transaction" title="Permalink to this headline">¶</a></h3>
+<p>API operations are batched together by default until a <code class="docutils literal"><span class="pre">commit()</span></code> is
+invoked.</p>
+<p>In the below code, the objects are created only when <code class="docutils literal"><span class="pre">commit</span></code> is
+invoked. If there is a failure in one of the steps, then no changes are
+committed to the server.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.mometa.ls.LsServer</span> <span class="k">import</span> <span class="n">LsServer</span>
+
+<span class="n">sp1</span> <span class="o">=</span> <span class="n">LsServer</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="s2">&quot;org-root&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sp_demo1&quot;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">sp1</span><span class="p">)</span>
+
+<span class="n">sp2</span> <span class="o">=</span> <span class="n">LsServer</span><span class="p">(</span><span class="n">parent_mo_or_dn</span><span class="o">=</span><span class="s2">&quot;org-root&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sp_demo2&quot;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">sp2</span><span class="p">)</span>
+
+<span class="c1"># commit the changes to server</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="convert-to-ucs-python">
+<h2>Convert To Ucs Python<a class="headerlink" href="#convert-to-ucs-python" title="Permalink to this headline">¶</a></h2>
+<p>Wouldn&#8217;t it be cool if you did not have to know the SDK much to be able
+to automate operations based off it?</p>
+<p>Welcome the <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code> API.</p>
+<p><strong>Assumption</strong>:</p>
+<ul class="simple">
+<li>User knows to do an operation via the JAVA based UCSM GUI</li>
+<li>UCSM UI and <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code> should be launched on the same
+client machine.</li>
+</ul>
+<p><strong>Basic Idea</strong>:</p>
+<ul class="simple">
+<li>launch the JAVA based UCSM UI</li>
+<li>launch the python shell and invoke <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code></li>
+<li>perform the desired operation on the UI</li>
+<li><code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code> monitors the operation and generates
+equivalent python script for the same.</li>
+</ul>
+<p><strong>How it works</strong>:</p>
+<ul class="simple">
+<li>UCSM GUI logs all the activities that are performed via it, and the
+python shell monitors that log to generate the equivalent python
+script. Since the logging is local to the machine where the UI is
+running, <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code> also must run on the same machine.</li>
+</ul>
+<p><strong>Sample Usage</strong>:</p>
+<p>Step 1 - Launch the UCSM GUI.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.ucsguilaunch</span> <span class="k">import</span> <span class="n">ucs_gui_launch</span>
+<span class="kn">from</span> <span class="nn">ucsmsdk.ucshandle</span> <span class="k">import</span> <span class="n">UcsHandle</span>
+
+<span class="c1"># Login to the server</span>
+<span class="n">handle</span> <span class="o">=</span> <span class="n">UcsHandle</span><span class="p">(</span><span class="o">&lt;</span><span class="n">ip</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+
+<span class="c1"># launch the UCSM GUI</span>
+<span class="n">ucs_gui_launch</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Step 2 - Run <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code></p>
+<p>The CLI will go into a listen mode until <code class="docutils literal"><span class="pre">Ctrl+C</span></code> is pressed again.
+Until then it prints equivalent script for operations done on the UI.</p>
+<ul class="simple">
+<li>Print the equivalent script to console</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.converttopython</span> <span class="k">import</span> <span class="n">convert_to_ucs_python</span>
+
+<span class="n">convert_to_ucs_python</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Print the equivalent script to console, also print the XMLs that the
+UI sends out</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.converttopython</span> <span class="k">import</span> <span class="n">convert_to_ucs_python</span>
+
+<span class="n">convert_to_ucs_python</span><span class="p">(</span><span class="n">dump_xml</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Output the script to a file</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span>from ucsmsdk.utils.converttopython import convert_to_ucs_python
+
+file_path = r”/home/user/pythoncode.py”
+
+convert_to_ucs_python(dump_to_file=True, dump_file_path=file_path)
+</pre></div>
+</div>
+<ul class="simple">
+<li>XML to python</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span>xml_str=’‘’&lt;configConfRename
+                dn=”org-root/ls-ra1”
+                inNewName=”ra2”
+                inHierarchical=”false”&gt;
+                &lt;/configConfRename&gt;’‘’
+
+convert_to_ucs_python(xml=True, request=xml_str)
+</pre></div>
+</div>
+<p>API documentation: <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code></p>
+<p><strong>note</strong>:</p>
+<p>The path of UCSM UI logs differs based on the OS and so sometimes the
+<code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code> API may not be able to autodetect the path.
+The following workaround can be applied in such cases,</p>
+<ul class="simple">
+<li>Manually find the path to UCSM UI logs</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo find / -name &#39;.ucsm&#39;
+./Library/Application Support/Oracle/Java/Deployment/log/.ucsm
+$
+</pre></div>
+</div>
+<ul class="simple">
+<li>Run <code class="docutils literal"><span class="pre">convert_to_ucs_python</span></code> by specifying the <code class="docutils literal"><span class="pre">path</span></code></li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.converttopython</span> <span class="k">import</span> <span class="n">convert_to_ucs_python</span>
+
+<span class="n">convert_to_ucs_python</span><span class="p">(</span><span class="n">gui_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">path</span><span class="o">=&lt;</span><span class="n">path</span> <span class="n">that</span> <span class="n">was</span> <span class="n">found</span> <span class="n">above</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="retrieving-meta-information">
+<h2>Retrieving Meta Information<a class="headerlink" href="#retrieving-meta-information" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">get_meta_info</span></code> is useful for getting information about a Managed
+object.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.ucscoreutils</span> <span class="k">import</span> <span class="n">get_meta_info</span>
+
+<span class="n">class_meta</span> <span class="o">=</span> <span class="n">get_meta_info</span><span class="p">(</span><span class="s2">&quot;FabricVlan&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">class_meta</span>
+</pre></div>
+</div>
+<p>The below sample output starts with a tree view of where FabricVlan
+fits, its parents and childrens, followed by MO information. It then
+shows information about properties of the MO.</p>
+<ul class="simple">
+<li>Mo Property information:<ul>
+<li><code class="docutils literal"><span class="pre">xml_attribute</span></code> - the name of the property as expected by the
+server.</li>
+<li><code class="docutils literal"><span class="pre">field_type</span></code> - type of the field</li>
+<li><code class="docutils literal"><span class="pre">min_version</span></code> - Ucs server release in which the property was
+first introduced</li>
+<li><code class="docutils literal"><span class="pre">access</span></code> - defines if a property is
+interal/user-readable/user-writable</li>
+<li>property restrictions:<ul>
+<li><code class="docutils literal"><span class="pre">min_length</span></code> - minimum length for string property type</li>
+<li><code class="docutils literal"><span class="pre">max_length</span></code> - maximum length for string property type</li>
+<li><code class="docutils literal"><span class="pre">pattern</span></code> - allowed patterns, regexs</li>
+<li><code class="docutils literal"><span class="pre">value_set</span></code> - set of allowed values for this property</li>
+<li><code class="docutils literal"><span class="pre">range_val</span></code> - range for int/uint values</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>sample output: (truncated)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">FabricEthEstc</span><span class="p">]</span>
+<span class="p">[</span><span class="n">FabricEthEstcCloud</span><span class="p">]</span>
+<span class="p">[</span><span class="n">FabricEthLan</span><span class="p">]</span>
+<span class="p">[</span><span class="n">FabricLanCloud</span><span class="p">]</span>
+  <span class="o">|-</span><span class="n">FabricVlan</span>
+     <span class="o">|-</span><span class="n">FabricEthMonFiltEp</span>
+     <span class="o">|-</span><span class="n">FabricEthMonSrcEp</span>
+     <span class="o">|-</span><span class="n">FabricEthVlanPc</span>
+     <span class="o">|</span>  <span class="o">|-</span><span class="n">FaultInst</span>
+     <span class="o">|-</span><span class="n">FabricEthVlanPortEp</span>
+     <span class="o">|</span>  <span class="o">|-</span><span class="n">FaultInst</span>
+     <span class="o">|-</span><span class="n">FabricPoolableVlan</span>
+     <span class="o">|-</span><span class="n">FabricSwSubGroup</span>
+     <span class="o">|</span>  <span class="o">|-</span><span class="n">FabricEthVlanPortEp</span>
+     <span class="o">|</span>  <span class="o">|</span>  <span class="o">|-</span><span class="n">FaultInst</span>
+     <span class="o">|</span>  <span class="o">|-</span><span class="n">FabricFcoeVsanPortEp</span>
+     <span class="o">|</span>     <span class="o">|-</span><span class="n">FaultInst</span>
+     <span class="o">|-</span><span class="n">FaultInst</span>
+
+<span class="n">ClassId</span>                         <span class="n">FabricVlan</span>
+<span class="o">-------</span>                         <span class="o">----------</span>
+<span class="n">xml_attribute</span>                   <span class="p">:</span><span class="n">fabricVlan</span>
+<span class="n">rn</span>                              <span class="p">:</span><span class="n">net</span><span class="o">-</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="n">min_version</span>                     <span class="p">:</span><span class="mf">1.0</span><span class="p">(</span><span class="mi">1</span><span class="n">e</span><span class="p">)</span>
+<span class="n">access</span>                          <span class="p">:</span><span class="n">InputOutput</span>
+<span class="n">access_privilege</span>                <span class="p">:[</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;ext-lan-config&#39;</span><span class="p">,</span> <span class="s1">&#39;ext-lan-policy&#39;</span><span class="p">]</span>
+<span class="n">parents</span>                         <span class="p">:[</span><span class="s1">u&#39;fabricEthEstc&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricEthEstcCloud&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricEthLan&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricLanCloud&#39;</span><span class="p">]</span>
+<span class="n">children</span>                        <span class="p">:[</span><span class="s1">u&#39;fabricEthMonFiltEp&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricEthMonSrcEp&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricEthVlanPc&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricEthVlanPortEp&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricPoolableVlan&#39;</span><span class="p">,</span> <span class="s1">u&#39;fabricSwSubGroup&#39;</span><span class="p">,</span> <span class="s1">u&#39;faultInst&#39;</span><span class="p">]</span>
+
+<span class="n">Property</span>                        <span class="n">assoc_primary_vlan_state</span>
+<span class="o">--------</span>                        <span class="o">------------------------</span>
+<span class="n">xml_attribute</span>                   <span class="p">:</span><span class="n">assocPrimaryVlanState</span>
+<span class="n">field_type</span>                      <span class="p">:</span><span class="n">string</span>
+<span class="n">min_version</span>                     <span class="p">:</span><span class="mf">2.2</span><span class="p">(</span><span class="mi">2</span><span class="n">c</span><span class="p">)</span>
+<span class="n">access</span>                          <span class="p">:</span><span class="n">READ_ONLY</span>
+<span class="n">min_length</span>                      <span class="p">:</span><span class="kc">None</span>
+<span class="n">max_length</span>                      <span class="p">:</span><span class="kc">None</span>
+<span class="n">pattern</span>                         <span class="p">:</span><span class="kc">None</span>
+<span class="n">value_set</span>                       <span class="p">:[</span><span class="s1">&#39;does-not-exists&#39;</span><span class="p">,</span> <span class="s1">&#39;is-empty&#39;</span><span class="p">,</span> <span class="s1">&#39;is-in-error-state&#39;</span><span class="p">,</span> <span class="s1">&#39;is-not-primary-type&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">]</span>
+<span class="n">range_val</span>                       <span class="p">:[]</span>
+
+<span class="n">Property</span>                        <span class="n">assoc_primary_vlan_switch_id</span>
+<span class="o">--------</span>                        <span class="o">----------------------------</span>
+<span class="n">xml_attribute</span>                   <span class="p">:</span><span class="n">assocPrimaryVlanSwitchId</span>
+<span class="n">field_type</span>                      <span class="p">:</span><span class="n">string</span>
+<span class="n">min_version</span>                     <span class="p">:</span><span class="mf">2.2</span><span class="p">(</span><span class="mi">2</span><span class="n">c</span><span class="p">)</span>
+<span class="n">access</span>                          <span class="p">:</span><span class="n">READ_ONLY</span>
+<span class="n">min_length</span>                      <span class="p">:</span><span class="kc">None</span>
+<span class="n">max_length</span>                      <span class="p">:</span><span class="kc">None</span>
+<span class="n">pattern</span>                         <span class="p">:</span><span class="kc">None</span>
+<span class="n">value_set</span>                       <span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;NONE&#39;</span><span class="p">]</span>
+<span class="n">range_val</span>                       <span class="p">:[]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="watch-ucs-events">
+<h2>Watch Ucs Events<a class="headerlink" href="#watch-ucs-events" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wait-until-condition">
+<h3>Wait Until Condition<a class="headerlink" href="#wait-until-condition" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">wait_for_event</span></code> is used to wait until a specific condition.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li>mo: object that is monitored</li>
+<li>prop: prop to check</li>
+<li>value: success value</li>
+<li>cb: done callback</li>
+<li>timeout: (Optional) timeout in seconds</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">done_callback</span><span class="p">(</span><span class="n">mo_change_event</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">mo_change_event</span><span class="o">.</span><span class="n">mo</span>
+
+
+<span class="n">sp_mo</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">query_dn</span><span class="p">(</span><span class="s2">&quot;org-root/ls-sp_demo&quot;</span><span class="p">)</span>
+
+<span class="c1"># call done_callback when (sp_mo.descr == &quot;demo&quot;)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">wait_for_event</span><span class="p">(</span><span class="n">sp_mo</span><span class="p">,</span> <span class="s2">&quot;descr&quot;</span><span class="p">,</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">done_callback</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="backup-and-import">
+<h2>Backup And Import<a class="headerlink" href="#backup-and-import" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="backup-ucs">
+<h3>Backup Ucs<a class="headerlink" href="#backup-ucs" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">backup_ucs</span></code> is used to take backup of a Ucs server</p>
+<p>Type of backups:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">fullstate</span></code></li>
+<li><code class="docutils literal"><span class="pre">config-logical</span></code></li>
+<li><code class="docutils literal"><span class="pre">config-system</span></code></li>
+<li><code class="docutils literal"><span class="pre">config-all</span></code></li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span>from ucsmsdk.utils.ucsbackup import backup_ucs
+
+backup_dir = “/home/user/backup”
+backup_filename = “config_backup.xml”
+
+backup_ucs(handle,
+             backup_type=”config-logical”,
+             file_dir= backup_dir,
+             file_name= backup_filename)
+</pre></div>
+</div>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.utils.html?highlight=backup_ucs#ucsmsdk.utils.ucsbackup.backup_ucs">Backup Ucs API
+Reference</a></p>
+</div>
+<div class="section" id="import-ucs">
+<h3>Import Ucs<a class="headerlink" href="#import-ucs" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">import_ucs_backup</span></code> is used to import an existing backup to a Ucs
+server</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>from ucsmsdk.utils.ucsbackup import import_ucs_backup
+
+import_dir = “/home/user/backup”
+import_filename = “config_backup.xml”
+
+import_ucs_backup(handle,
+                     file_dir=import_dir,
+                     file_name=import_filename)
+</pre></div>
+</div>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.utils.html?highlight=backup_ucs#ucsmsdk.utils.ucsbackup.import_ucs_backup">Import Ucs API
+Reference</a></p>
+</div>
+</div>
+<div class="section" id="start-gui-session">
+<h2>Start GUI Session<a class="headerlink" href="#start-gui-session" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">ucs_gui_launch</span></code> is used to launch UCSM JAVA GUI.</p>
+<p>This method assumes that the required JAVA installation for UCSM UI is
+already present.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.ucsguilaunch</span> <span class="k">import</span> <span class="n">ucs_gui_launch</span>
+
+<span class="n">ucs_gui_launch</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.utils.html?highlight=ucs_gui_launch#ucsmsdk.utils.ucsguilaunch.ucs_gui_launch">Start UCS GUI API
+Reference</a></p>
+<p><strong>note</strong>: This method is specific to launching UCSM JAVA GUI. It does
+not work for UCSM HTML UI</p>
+</div>
+<div class="section" id="start-kvm-session">
+<h2>Start KVM Session<a class="headerlink" href="#start-kvm-session" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">ucs_kvm_launch</span></code> is used to launch KVM for a service profile or a
+server(blade/rack)</p>
+<ul class="simple">
+<li>Launch KVM for a specified service profile MO</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.ucskvmlaunch</span> <span class="k">import</span> <span class="n">ucs_kvm_launch</span>
+
+<span class="c1"># sp_mo is of type LsServer</span>
+<span class="n">ucs_kvm_launch</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">service_profile</span><span class="o">=</span><span class="n">sp_mo</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Launch KVM for a specified Blade server</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.ucskvmlaunch</span> <span class="k">import</span> <span class="n">ucs_kvm_launch</span>
+
+<span class="c1"># blade_mo is of type ComputeBlade</span>
+<span class="n">ucs_kvm_launch</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">blade</span><span class="o">=</span><span class="n">blade_mo</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>launch KVM for a specified Rack server</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucsmsdk.utils.ucskvmlaunch</span> <span class="k">import</span> <span class="n">ucs_kvm_launch</span>
+
+<span class="c1"># rack_mo is of type ComputeRackUnit</span>
+<span class="n">ucs_kvm_launch</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">rack_unit</span><span class="o">=</span><span class="n">rack_mo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://ciscoucs.github.io/ucsmsdk_docs/ucsmsdk.utils.html?highlight=ucs_kvm_launch#ucsmsdk.utils.ucskvmlaunch.ucs_kvm_launch">Start KVM Session API
+Reference</a></p>
+</div>
+<div class="section" id="advanced-features">
+<h2>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compare-and-sync-ucs">
+<h3>Compare And Sync UCS<a class="headerlink" href="#compare-and-sync-ucs" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">compare_ucs_mo</span></code> is used to compare objects with same <code class="docutils literal"><span class="pre">dn</span></code> across
+different Ucs Domains.</p>
+<p>Compare objects with same DN on different domains</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>dn_to_compare = ”org-root/ls-sp”
+ref_mo = [ref_handle.query_dn(dn=dn_to_compare)]
+diff_mo = [diff_handle.query_dn(dn=dn_to_compare)]
+
+difference = compare_ucs_mo(ref_mo, diff_mo)
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">sync_ucs_mo</span></code> is used to sync changes that are found using
+<code class="docutils literal"><span class="pre">compare_ucs_mo</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># difference parameter is the output of compare_ucs_mo</span>
+<span class="n">sync_ucs_mo</span><span class="p">(</span><span class="n">ref_handle</span><span class="p">,</span>
+              <span class="n">difference</span><span class="o">=</span><span class="n">difference</span><span class="p">,</span>
+              <span class="n">delete_not_present</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiple-parallel-transactions">
+<h3>Multiple Parallel Transactions<a class="headerlink" href="#multiple-parallel-transactions" title="Permalink to this headline">¶</a></h3>
+<p>Optional <code class="docutils literal"><span class="pre">tag</span></code> parameter in <code class="docutils literal"><span class="pre">add_mo</span></code>, <code class="docutils literal"><span class="pre">set_mo</span></code>, <code class="docutils literal"><span class="pre">remove_mo</span></code>,
+<code class="docutils literal"><span class="pre">commit</span></code> provides a scope to transaction.</p>
+<p>This enables multiple parallel transactions,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">mo1</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_1&quot;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">mo2</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_2&quot;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">mo3</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_1&quot;</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">remove_mo</span><span class="p">(</span><span class="n">mo4</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_2&quot;</span><span class="p">)</span>
+
+<span class="c1"># Commit transaction #2</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_2&quot;</span><span class="p">)</span>
+
+<span class="n">handle</span><span class="o">.</span><span class="n">add_mo</span><span class="p">(</span><span class="n">mo5</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_1&quot;</span><span class="p">)</span>
+
+<span class="c1"># Commit transaction #1</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="s2">&quot;trans_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="threading-mode">
+<h3>Threading Mode<a class="headerlink" href="#threading-mode" title="Permalink to this headline">¶</a></h3>
+<p>This mode is useful, when the application that uses the SDK is threaded
+and it intends to use the SDK using its multiple threads.</p>
+<ul>
+<li><p class="first">Enable threaded mode</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">set_mode_threading</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Disable threaded mode</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">unset_mode_threading</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>When threading mode is enabled the transaction context isolation is
+automatically provided on a thread level (even when the <code class="docutils literal"><span class="pre">tag</span></code>
+parameter is not explicitly specified). Thread names are automatically
+used as <code class="docutils literal"><span class="pre">tag</span></code> parameter internally.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Table of Contents</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#management-information-model">Management Information Model</a><ul>
+<li><a class="reference internal" href="#managed-objects">Managed Objects</a></li>
+<li><a class="reference internal" href="#references-to-managed-objects">References To Managed Objects</a></li>
+<li><a class="reference internal" href="#properties-of-managed-objects">Properties of Managed Objects</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#pre-install-checklist">Pre-install Checklist</a></li>
+<li><a class="reference internal" href="#installation-steps">Installation Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uninstallation">Uninstallation</a><ul>
+<li><a class="reference internal" href="#uninstallation-steps">Uninstallation Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li><a class="reference internal" href="#connecting-disconnecting">Connecting Disconnecting</a></li>
+<li><a class="reference internal" href="#base-apis">Base APIs</a></li>
+<li><a class="reference internal" href="#creating-objects">Creating Objects</a></li>
+<li><a class="reference internal" href="#querying-objects">Querying Objects</a></li>
+<li><a class="reference internal" href="#querying-objects-with-filters">Querying Objects With Filters</a></li>
+<li><a class="reference internal" href="#modifying-objects">Modifying Objects</a></li>
+<li><a class="reference internal" href="#deleting-objects">Deleting Objects</a></li>
+<li><a class="reference internal" href="#transaction">Transaction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#convert-to-ucs-python">Convert To Ucs Python</a></li>
+<li><a class="reference internal" href="#retrieving-meta-information">Retrieving Meta Information</a></li>
+<li><a class="reference internal" href="#watch-ucs-events">Watch Ucs Events</a><ul>
+<li><a class="reference internal" href="#wait-until-condition">Wait Until Condition</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backup-and-import">Backup And Import</a><ul>
+<li><a class="reference internal" href="#backup-ucs">Backup Ucs</a></li>
+<li><a class="reference internal" href="#import-ucs">Import Ucs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#start-gui-session">Start GUI Session</a></li>
+<li><a class="reference internal" href="#start-kvm-session">Start KVM Session</a></li>
+<li><a class="reference internal" href="#advanced-features">Advanced Features</a><ul>
+<li><a class="reference internal" href="#compare-and-sync-ucs">Compare And Sync UCS</a></li>
+<li><a class="reference internal" href="#multiple-parallel-transactions">Multiple Parallel Transactions</a></li>
+<li><a class="reference internal" href="#threading-mode">Threading Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to ucsmsdk&#8217;s documentation!</a></li>
+      <li>Next: <a href="ucsmsdk.html" title="next chapter">ucsmsdk package</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ucsmsdk_ug.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Cisco.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ucsmsdk_ug.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

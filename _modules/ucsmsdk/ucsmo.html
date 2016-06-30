@@ -443,14 +443,14 @@
             <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="bp">None</span></div>
 
-<div class="viewcode-block" id="ManagedObject.show_hierarchy"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject.show_hierarchy">[docs]</a>    <span class="k">def</span> <span class="nf">show_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">break_level</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[]):</span>
+<div class="viewcode-block" id="ManagedObject.show_hierarchy"><a class="viewcode-back" href="../../ucsmsdk.html#ucsmsdk.ucsmo.ManagedObject.show_hierarchy">[docs]</a>    <span class="k">def</span> <span class="nf">show_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show_level</span><span class="o">=</span><span class="p">[]):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method to return string representation of a managed object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="kn">from</span> <span class="nn">.ucscoreutils</span> <span class="kn">import</span> <span class="n">print_mo_hierarchy</span>
 
-        <span class="n">print_mo_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_class_id</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">break_level</span><span class="p">,</span>
+        <span class="n">print_mo_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_class_id</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span>
                            <span class="n">show_level</span><span class="p">)</span></div></div>
 
 
